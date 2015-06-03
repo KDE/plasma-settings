@@ -1,6 +1,6 @@
 /***************************************************************************
  *                                                                         *
- *   Copyright 2011 Sebastian Kügler <sebas@kde.org>                       *
+ *   Copyright 2011-2014 Sebastian Kügler <sebas@kde.org>                  *
  *                                                                         *
  *   This program is free software; you can redistribute it and/or modify  *
  *   it under the terms of the GNU General Public License as published by  *
@@ -18,31 +18,49 @@
  *   51 Franklin Street, Fifth Floor, Boston, MA  02110-1301  USA .        *
  ***************************************************************************/
 
+import QtQuick 2.2
+import org.kde.plasma.components 2.0 as PlasmaComponents
+import org.kde.plasma.mobilecomponents 0.2 as MobileComponents
+import org.kde.active.settings 2.0 as ActiveSettings
 
-#ifndef ACTIVESETTINGS_H
-#define ACTIVESETTINGS_H
+ActiveSettings.SettingsComponent {
+    id: settingsComponent
 
-#include <KApplication>
+    property alias status: settingsLoader.status
 
-class KCmdLineArgs;
+    signal moduleLoaded
 
-/**
- * This class serves as the main application for the Active Webbrowser.
- *
- * @short Active Webbrowser browser application class, managing browser windows
- * @author Sebastian Kügler <sebas@kde.org>
- * @version 0.1
- */
-class ActiveSettings : public KApplication
-{
-    Q_OBJECT
-public:
-    ActiveSettings(const KCmdLineArgs *args);
-    virtual ~ActiveSettings();
 
-public Q_SLOTS:
-    void newWindow(const QString &module);
+    Loader {
+        id: settingsLoader
+        anchors.fill: parent
+    }
 
-};
+    MobileComponents.Package {
+        id: switcherPackage
+    }
 
-#endif // ACTIVESETTINGS_H
+    Connections {
+        target: rootItem
+        onCurrentModuleChanged: {
+            print("reacting to onCurrentModuleChanged " + rootItem.currentModule);
+            module = rootItem.currentModule;
+            if (module != "") {
+                switcherPackage.name = module
+                var mainscript = switcherPackage.filePath("mainscript");
+                if (!valid) {
+                    print("Failed to load module: " + module);
+                }
+                settingsLoader.source = mainscript;
+                moduleLoaded();
+            }
+        }
+    }
+
+    PlasmaComponents.Label {
+        anchors.fill: parent
+        text: i18n("The module \"" + currentModule + "\" failed to load.")
+        wrapMode: Text.WordWrap
+        visible: !valid
+    }
+}

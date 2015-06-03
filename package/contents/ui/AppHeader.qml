@@ -1,6 +1,6 @@
 /***************************************************************************
  *                                                                         *
- *   Copyright 2011 Sebastian Kügler <sebas@kde.org>                       *
+ *   Copyright 2011-2014 Sebastian Kügler <sebas@kde.org>                  *
  *                                                                         *
  *   This program is free software; you can redistribute it and/or modify  *
  *   it under the terms of the GNU General Public License as published by  *
@@ -18,37 +18,47 @@
  *   51 Franklin Street, Fifth Floor, Boston, MA  02110-1301  USA .        *
  ***************************************************************************/
 
+import QtQuick 2.2
 
-#ifndef ACTIVESETTINGSWINDOW_H
-#define ACTIVESETTINGSWINDOW_H
+import org.kde.plasma.core 2.0 as PlasmaCore
+import org.kde.plasma.components 2.0 as PlasmaComponents
+import org.kde.plasma.extras 2.0 as PlasmaExtras
 
-#include <QMainWindow>
+import org.kde.plasma.mobilecomponents 0.2 as MobileComponents
+import org.kde.active.settings 2.0 as ActiveSettings
 
-class View;
+Item {
+    id: header
+    height: childrenRect.height
 
-/**
- * This class serves as the main window for Active Settings.
- *
- * @short Active Settings main window class
- * @author Sebastian Kügler <sebas@kde.org>
- * @version 0.1
- */
-class ActiveSettingsWindow : public QMainWindow
-{
-    Q_OBJECT
-public:
-    explicit ActiveSettingsWindow(const QString &url, QWidget *parent = 0);
-    virtual ~ActiveSettingsWindow();
-    QString name();
-    QIcon icon();
-
-    View* view();
-
-protected:
-    void closeEvent(QCloseEvent *);
-
-private:
-    View *m_widget;
-};
-
-#endif // ACTIVESETTINGSWINDOW_H
+    PlasmaCore.IconItem {
+        id: topIcon
+        width: units.gridUnit * 2
+        height: width
+        source: settingsItem.icon
+        anchors {
+            verticalCenter: title.verticalCenter
+            right: parent.right
+            margins: units.gridUnit
+            rightMargin: 0
+        }
+    }
+    PlasmaExtras.Title {
+        id: title
+        anchors {
+            left: parent.left
+            right: topIcon.left
+        }
+        elide: Text.ElideRight
+        text: settingsItem.name
+    }
+    PlasmaComponents.Label {
+        id: descriptionLabel
+        anchors {
+            left: parent.left
+            right: topIcon.left
+            top: title.bottom
+        }
+        text: settingsItem.description
+    }
+}
