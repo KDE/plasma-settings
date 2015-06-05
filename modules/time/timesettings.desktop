@@ -1,0 +1,18 @@
+[Desktop Entry]
+Name=Time and Date
+Comment=Timezone, Date Display
+
+Icon=preferences-system-time
+Exec=kcmshell5 timesettings
+
+Type=Service
+X-KDE-ServiceTypes=KCModule
+
+X-KDE-Library=kcm_mobile_time
+X-KDE-ParentApp=kcontrol
+
+X-KDE-System-Settings-Parent-Category=regionalsettings
+X-KDE-Weight=70
+
+X-KDE-Keywords=theme, look, feel
+Categories=Qt;KDE;X-KDE-settings-system;
