@@ -8,10 +8,9 @@ if("${CMAKE_SOURCE_DIR}" STREQUAL "${CMAKE_BINARY_DIR}")
    message(FATAL_ERROR "plasma-mobile requires an out of source build. Please create a separate build directory and run 'cmake path_to_plasma-mobile [options]' there.")
 endif()
 
-# Make CPack available to easy generate binary packages
 include(CPack)
-
 include(FeatureSummary)
+find_package(PkgConfig)
 
 ################# set KDE specific information #################
 
@@ -37,29 +36,10 @@ endif()
 set (QT_MIN_VERSION "5.4.0")
 
 find_package(KF5 REQUIRED COMPONENTS
-    WindowSystem Codecs Archive CoreAddons Solid
-    Config Auth DBusAddons Sonnet
-    I18n Service Notifications IconThemes Completion
-    Bookmarks )
-
-find_package(KF5Plasma REQUIRED NO_MODULE)
-find_package(KF5PlasmaQuick REQUIRED NO_MODULE)
-find_package(KF5Declarative REQUIRED NO_MODULE)
-find_package(KF5KIO REQUIRED NO_MODULE)
-find_package(KF5KDELibs4Support NO_MODULE)
-find_package(KF5Activities REQUIRED NO_MODULE)
-find_package(KF5Baloo NO_MODULE)
-find_package(KF5Declarative REQUIRED NO_MODULE)
-find_package(PkgConfig)
-#########################################################################
-
-add_definitions(-DQT_USE_FAST_CONCATENATION -DQT_USE_FAST_OPERATOR_PLUS)
-add_definitions(-DQT_NO_URL_CAST_FROM_STRING)
-
-remove_definitions(-DQT_NO_CAST_FROM_ASCII -DQT_STRICT_ITERATORS -DQT_NO_CAST_FROM_BYTEARRAY -DQT_NO_KEYWORDS)
-
-
-find_package(PkgConfig)
+    WindowSystem CoreAddons Solid Config Auth DBusAddons
+    I18n Service IconThemes Bookmarks
+    Plasma PlasmaQuick Declarative KIO
+    )
 
 add_subdirectory(src)
 add_subdirectory(import)
