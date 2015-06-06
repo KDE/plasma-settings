@@ -33,6 +33,7 @@
 #include <KAboutData>
 #include <KConfigGroup>
 #include <KLocalizedString>
+#include <KPackage/PackageLoader>
 #include <KPluginMetaData>
 #include <KService>
 #include <KServiceTypeTrader>
@@ -122,13 +123,30 @@ int main(int argc, char **argv)
                       << description.toLocal8Bit().data() << std::endl;
         }
 
-        for (auto plugin : KPluginLoader::findPlugins("kcms")) {
+
+        for (auto plugin : KPackage::PackageLoader::self()->listPackages(QStringLiteral("Active/SettingsModule"), "kpackage/kcms/")) {
+            if (seen.contains(plugin.pluginId())) {
+                continue;
+            }
+            seen << plugin.pluginId();
             std::cout << plugin.pluginId().toLocal8Bit().data()
             << ' '
             << std::setw(nameWidth - plugin.pluginId().length() + 2)
             << '.' << ' '
             << plugin.description().toLocal8Bit().data() << std::endl;
         }
+
+        for (auto plugin : KPluginLoader::findPlugins("kcms")) {
+            if (seen.contains(plugin.pluginId())) {
+                continue;
+            }
+            std::cout << plugin.pluginId().toLocal8Bit().data()
+            << ' '
+            << std::setw(nameWidth - plugin.pluginId().length() + 2)
+            << '.' << ' '
+            << plugin.description().toLocal8Bit().data() << std::endl;
+        }
+
         return 0;
     }
 
