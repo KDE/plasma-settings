@@ -26,6 +26,7 @@
 #include <QQmlEngine>
 #include <QTimer>
 
+#include <KPackage/PackageLoader>
 #include <KPluginInfo>
 #include <KService>
 #include <KServiceTypeTrader>
@@ -174,7 +175,16 @@ void SettingsModulesModel::populate()
         d->settingsModules.append(item);
     }
 
-    for (auto plugin : KPluginLoader::findPlugins("kcms")) {
+    auto plugins = KPluginLoader::findPlugins("kcms");
+
+    for (auto plugin : KPackage::PackageLoader::self()->listPackages(QStringLiteral("Active/SettingsModule"), "kpackage/kcms/")) {
+        plugins << plugin;
+    }
+
+    for (auto plugin : plugins) {
+        if (seen.contains(plugin.pluginId())) {
+            continue;
+        }
         SettingsModule* item = new SettingsModule(this);
 
         item->setName(plugin.name());
@@ -183,6 +193,7 @@ void SettingsModulesModel::populate()
         item->setModule(plugin.pluginId());
         item->setCategory(plugin.category());
         d->settingsModules.append(item);
+        seen.insert(plugin.pluginId());
     }
 
     qStableSort(d->settingsModules.begin(), d->settingsModules.end(), compareModules);
