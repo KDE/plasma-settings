@@ -19,5 +19,5 @@ add_subdirectory(powermanagement)
 # ConfigTest
 #install(DIRECTORY configtest/ DESTINATION ${DATA_INSTALL_DIR}/plasma/packages/org.kde.active.settings.configtest)
 #install(FILES configtest/metadata.desktop DESTINATION ${SERVICES_INSTALL_DIR} RENAME org.kde.active.settings.configtest.desktop)
-plasma_install_package(configtest org.kde.active.settings.configtest packages package)
+kpackage_install_package(configtest org.kde.active.settings.configtest kcms)
 
