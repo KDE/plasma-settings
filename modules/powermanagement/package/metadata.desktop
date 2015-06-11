@@ -83,4 +83,5 @@ X-KDE-PluginInfo-Category=Power management
 X-KDE-PluginInfo-Depends=
 X-KDE-PluginInfo-License=GPL
 X-KDE-PluginInfo-EnabledByDefault=true
+X-KDE-FormFactors=handset,tablet,mediacenter
 X-Plasma-MainScript=ui/Power.qml
