@@ -63,6 +63,7 @@ int main(int argc, char **argv)
     const static auto _m = QStringLiteral("module");
     const static auto _f = QStringLiteral("fullscreen");
     const static auto _ui = QStringLiteral("layout");
+    const static auto _ff = QStringLiteral("formfactor");
 
     QCommandLineOption _list = QCommandLineOption(QStringList() << QStringLiteral("l") << _l,
                                i18n("List available settings modules"));
@@ -72,9 +73,12 @@ int main(int argc, char **argv)
                                 i18n("Start window fullscreen"));
     QCommandLineOption _layout = QCommandLineOption(QStringList() << _ui,
                                 i18n("Package to use for the UI (default org.kde.active.settings)"), i18n("packagename"));
+    QCommandLineOption _formfactor = QCommandLineOption(QStringList() << QStringLiteral("x") << _ff,
+                                                  i18n("Limit to modules suitable for <formfactor>, e.g. handset, tablet, mediacenter, desktop"), i18n("formfactor"));
 
     QCommandLineParser parser;
     parser.addOption(_list);
+    parser.addOption(_formfactor);
     parser.addOption(_module);
     parser.addOption(_fullscreen);
     parser.addOption(_layout);

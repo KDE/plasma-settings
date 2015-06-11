@@ -98,7 +98,7 @@ Item {
 
     ActiveSettings.SettingsModulesModel {
         id: settingsModulesModel
-        formFactor: rootItem.formFactor
+        formFactor: rootItem.formFactor // overridden by --formfactor argument!
         onSettingsModulesChanged: {
             // when the modules are loaded, we need to ensure that
             // the list has the correct item loaded
