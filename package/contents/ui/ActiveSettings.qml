@@ -34,7 +34,8 @@ Rectangle {
     height: 600
     color: theme.backgroundColor
 
-    property string formFactor: "handset"
+    property string formFactor: startFormFactor != "" ? startFormFactor : "handset" // overridden by --formfactor argument!
+
 
     property bool loading: false
     property bool compactMode: width < units.gridUnit * 30
@@ -290,4 +291,7 @@ Rectangle {
         }
     ]
 
+    Component.onCompleted: {
+        print("ff +++++ : " + startFormFactor);
+    }
 }

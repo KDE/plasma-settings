@@ -41,6 +41,7 @@ View::View(const QCommandLineParser &parser, QWindow *parent)
     const QString package = parser.value("layout");
     const QString module = parser.value("module");
     const QString formFactor = parser.value("formfactor");
+
     setResizeMode(QQuickView::SizeRootObjectToView);
     QQuickWindow::setDefaultAlphaBuffer(true);
 
@@ -63,7 +64,7 @@ View::View(const QCommandLineParser &parser, QWindow *parent)
     setTitle(m_package.metadata().name());
 
     rootContext()->setContextProperty("startModule", module);
-    rootContext()->setContextProperty("formFactor", module);
+    rootContext()->setContextProperty("startFormFactor", formFactor);
 
     const QString qmlFile = m_package.filePath("mainscript");
     //qDebug() << "mainscript: " << QUrl::fromLocalFile(m_package.filePath("mainscript"));
@@ -107,7 +108,6 @@ void View::onStatusChanged(QQuickView::Status status)
 
 void View::setupKDBus()
 {
-    qDebug() << "setupKDBus";
     QCoreApplication::setOrganizationDomain("kde.org");
     KDBusService* service = new KDBusService(KDBusService::Unique, this);
 

@@ -167,7 +167,7 @@ int main(int argc, char **argv)
     theme.setUseGlobalSettings(false);
     theme.setThemeName(themeName); // nees to happen after setUseGlobalSettings, since that clears themeName
 
-    auto settingsapp = new View(module, ui);
+    auto settingsapp = new View(parser);
     settingsapp->parser = &parser;
     if (parser.isSet(_fullscreen)) {
         settingsapp->setVisibility(QWindow::FullScreen);
