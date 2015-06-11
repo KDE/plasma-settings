@@ -34,10 +34,13 @@
 #include <KWindowSystem>
 
 
-View::View(const QString &module, const QString &package, QWindow *parent)
+View::View(const QCommandLineParser &parser, QWindow *parent)
     : QQuickView(parent),
     m_settingsRoot(0)
 {
+    const QString package = parser.value("layout");
+    const QString module = parser.value("module");
+    const QString formFactor = parser.value("formfactor");
     setResizeMode(QQuickView::SizeRootObjectToView);
     QQuickWindow::setDefaultAlphaBuffer(true);
 
@@ -60,6 +63,7 @@ View::View(const QString &module, const QString &package, QWindow *parent)
     setTitle(m_package.metadata().name());
 
     rootContext()->setContextProperty("startModule", module);
+    rootContext()->setContextProperty("formFactor", module);
 
     const QString qmlFile = m_package.filePath("mainscript");
     //qDebug() << "mainscript: " << QUrl::fromLocalFile(m_package.filePath("mainscript"));

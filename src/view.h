@@ -31,7 +31,7 @@ class View : public QQuickView
     Q_OBJECT
 
 public:
-    explicit View(const QString &url, const QString &package, QWindow *parent = 0 );
+    explicit View(const QCommandLineParser &parser, QWindow *parent = 0 );
     ~View();
     QCommandLineParser *parser;
 
