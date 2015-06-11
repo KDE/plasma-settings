@@ -37,11 +37,9 @@ class SettingsModulesModelPrivate {
 
 public:
     SettingsModulesModelPrivate(SettingsModulesModel *parent)
-        : isPopulated(false),
-          populateTimer(new QTimer(parent))
+        : populateTimer(new QTimer(parent))
     {}
 
-    bool isPopulated;
     QList<SettingsModule*> settingsModules;
     QTimer *populateTimer;
     QString appName;
@@ -81,10 +79,12 @@ void SettingsModulesModel::setApplication(const QString &appName)
     qDebug() << "setting application to" << appName;
     if (d->appName != appName) {
         d->appName = appName;
-        emit applicationChanged();
+        for (auto m: d->settingsModules) {
+            m->deleteLater();
+        }
         d->settingsModules.clear();
+        emit applicationChanged();
         emit settingsModulesChanged();
-        d->isPopulated = false;
         d->populateTimer->start();
     }
 }
@@ -131,12 +131,10 @@ bool compareModules(const SettingsModule *l, const SettingsModule *r)
 
 void SettingsModulesModel::populate()
 {
-    if (d->isPopulated) {
-        qDebug() << "already populated.";
-        return;
+    for (auto m: d->settingsModules) {
+        m->deleteLater();
     }
-
-    d->isPopulated = true;
+    d->settingsModules.clear();
 
     QString constraint;
     if (d->appName.isEmpty()) {
@@ -170,7 +168,7 @@ void SettingsModulesModel::populate()
 
         auto kp = info.toMetaData().rawData()["KPlugin"].toObject();
         QStringList formFactors = KPluginMetaData::readStringList(kp, QStringLiteral("FormFactors"));
-        if (!formFactors.contains("handset")) {
+        if (!formFactor().isEmpty() && !formFactors.contains(formFactor())) {
             continue;
         }
 
@@ -199,7 +197,7 @@ void SettingsModulesModel::populate()
         // Filter out modules that are not explicitely suitable for the "handset" formfactor
         auto kp = plugin.rawData()["KPlugin"].toObject();
         QStringList formFactors = KPluginMetaData::readStringList(kp, QStringLiteral("FormFactors"));
-        if (!formFactors.contains("handset")) {
+        if (!formFactor().isEmpty() && !formFactors.contains(formFactor())) {
             continue;
         }
 
