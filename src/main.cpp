@@ -74,7 +74,7 @@ int main(int argc, char **argv)
     QCommandLineOption _layout = QCommandLineOption(QStringList() << _ui,
                                 i18n("Package to use for the UI (default org.kde.active.settings)"), i18n("packagename"));
     QCommandLineOption _formfactor = QCommandLineOption(QStringList() << QStringLiteral("x") << _ff,
-                                                  i18n("Limit to modules suitable for <formfactor>, e.g. handset, tablet, mediacenter, desktop"), i18n("formfactor"));
+                                                  i18n("Limit to modules suitable for <formfactor>, e.g. handset, tablet, mediacenter, desktop, all (default handset)"), i18n("formfactor"));
 
     QCommandLineParser parser;
     parser.addOption(_list);

@@ -168,7 +168,7 @@ void SettingsModulesModel::populate()
 
         auto kp = info.toMetaData().rawData()["KPlugin"].toObject();
         QStringList formFactors = KPluginMetaData::readStringList(kp, QStringLiteral("FormFactors"));
-        if (!formFactor().isEmpty() && !formFactors.contains(formFactor())) {
+        if (!formFactor().isEmpty() && !formFactors.contains(formFactor()) && formFactor() != QStringLiteral("all")) {
             continue;
         }
 
@@ -197,7 +197,7 @@ void SettingsModulesModel::populate()
         // Filter out modules that are not explicitely suitable for the "handset" formfactor
         auto kp = plugin.rawData()["KPlugin"].toObject();
         QStringList formFactors = KPluginMetaData::readStringList(kp, QStringLiteral("FormFactors"));
-        if (!formFactor().isEmpty() && !formFactors.contains(formFactor())) {
+        if (!formFactor().isEmpty() && !formFactors.contains(formFactor()) && formFactor() != QStringLiteral("all")) {
             continue;
         }
 
