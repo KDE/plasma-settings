@@ -34,6 +34,8 @@ Rectangle {
     height: 600
     color: theme.backgroundColor
 
+    property string formFactor: "handset"
+
     property bool loading: false
     property bool compactMode: width < units.gridUnit * 30
 
@@ -147,6 +149,22 @@ Rectangle {
                     }
                     elide: Text.ElideRight
                     text: i18n("Settings")
+                    /*
+                    // This is used for testing formfactor formfactor changes
+                    // if it annoys you, kill it. :P
+                    MouseArea {
+                        anchors.fill: parent
+                        onClicked: {
+                            if (rootItem.formFactor == "") {
+                                rootItem.formFactor = "handset"
+                            } else {
+                                rootItem.formFactor = "";
+                            }
+                            print("formfactor is now " + rootItem.formFactor)
+                        }
+                    }
+                    */
+
                 }
 
                 PlasmaCore.SvgItem {
