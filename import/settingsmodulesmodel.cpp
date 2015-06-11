@@ -165,6 +165,15 @@ void SettingsModulesModel::populate()
         } else if (!service->comment().isEmpty()) {
             description = service->comment();
         }
+
+        // Filter out modules that are not explicitely suitable for the "handset" formfactor
+
+        auto kp = info.toMetaData().rawData()["KPlugin"].toObject();
+        QStringList formFactors = KPluginMetaData::readStringList(kp, QStringLiteral("FormFactors"));
+        if (!formFactors.contains("handset")) {
+            continue;
+        }
+
         SettingsModule* item = new SettingsModule(this);
 
         item->setName(service->name());
@@ -185,6 +194,16 @@ void SettingsModulesModel::populate()
         if (seen.contains(plugin.pluginId())) {
             continue;
         }
+
+
+        // Filter out modules that are not explicitely suitable for the "handset" formfactor
+        auto kp = plugin.rawData()["KPlugin"].toObject();
+        QStringList formFactors = KPluginMetaData::readStringList(kp, QStringLiteral("FormFactors"));
+        if (!formFactors.contains("handset")) {
+            continue;
+        }
+
+        qDebug() << "Formafactors;" << plugin.pluginId() << formFactors;
         SettingsModule* item = new SettingsModule(this);
 
         item->setName(plugin.name());
