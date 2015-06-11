@@ -10,6 +10,7 @@ X-KDE-ServiceTypes=KCModule
 
 X-KDE-Library=kcm_mobile_time
 X-KDE-ParentApp=kcontrol
+X-KDE-FormFactors=handset,tablet,mediacenter
 
 X-KDE-System-Settings-Parent-Category=regionalsettings
 X-KDE-Weight=70
