@@ -18,8 +18,6 @@
  *   51 Franklin Street, Fifth Floor, Boston, MA  02110-1301  USA .        *
  ***************************************************************************/
 
-//#define KDE_DEPRECATED 1
-
 #include "settingsmodulesmodel.h"
 
 #include <QQmlContext>
@@ -47,6 +45,7 @@ public:
     QList<SettingsModule*> settingsModules;
     QTimer *populateTimer;
     QString appName;
+    QString formFactor;
 };
 
 
@@ -59,6 +58,7 @@ SettingsModulesModel::SettingsModulesModel(QQmlComponent *parent)
     d->populateTimer->setSingleShot(true);
     connect(d->populateTimer, &QTimer::timeout, this, &SettingsModulesModel::populate);
     d->populateTimer->start();
+    connect(this, &SettingsModulesModel::formFactorChanged, this, &SettingsModulesModel::populate);
 }
 
 SettingsModulesModel::~SettingsModulesModel()
@@ -199,6 +199,19 @@ void SettingsModulesModel::populate()
     qStableSort(d->settingsModules.begin(), d->settingsModules.end(), compareModules);
     //emit dataChanged();
     emit settingsModulesChanged();
+}
+
+QString SettingsModulesModel::formFactor() const
+{
+    return d->formFactor;
+}
+
+void SettingsModulesModel::setFormFactor(const QString& f)
+{
+    if (d->formFactor != f) {
+        d->formFactor = f;
+        emit formFactorChanged();
+    }
 }
 
 #include "settingsmodulesmodel.moc"

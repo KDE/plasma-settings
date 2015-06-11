@@ -35,6 +35,7 @@ class SettingsModulesModel : public QQmlComponent
     Q_OBJECT
     Q_PROPERTY(QQmlListProperty<SettingsModule> settingsModules READ settingsModules NOTIFY settingsModulesChanged)
     Q_PROPERTY(QString application READ application WRITE setApplication NOTIFY applicationChanged)
+    Q_PROPERTY(QString formFactor READ formFactor WRITE setFormFactor NOTIFY formFactorChanged)
 
 public:
     SettingsModulesModel(QQmlComponent* parent = 0);
@@ -45,6 +46,9 @@ public:
     QString application() const;
     void setApplication(const QString &appname);
 
+    QString formFactor() const;
+    void setFormFactor(const QString &f);
+
 public Q_SLOTS:
     void populate();
 
@@ -52,6 +56,7 @@ Q_SIGNALS:
     void dataChanged();
     void settingsModulesChanged();
     void applicationChanged();
+    void formFactorChanged();
 
 private:
     SettingsModulesModelPrivate * const d;
