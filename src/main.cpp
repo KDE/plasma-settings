@@ -103,12 +103,20 @@ int main(int argc, char **argv)
         QSet<QString> seen;
         std::cout << std::setfill('.');
 
+        auto formfactor = parser.value("formfactor");
+
         foreach (const KService::Ptr &service, services) {
             if (service->noDisplay()) {
                 continue;
             }
 
             KPluginInfo info(service);
+            auto kp = info.toMetaData().rawData()["KPlugin"].toObject();
+            QStringList formFactors = KPluginMetaData::readStringList(kp, QStringLiteral("FormFactors"));
+            if (!formfactor.isEmpty() && !formFactors.contains(formfactor) && formfactor != QStringLiteral("all")) {
+                continue;
+            }
+
             if (seen.contains(info.pluginName())) {
                 continue;
             }
@@ -132,6 +140,13 @@ int main(int argc, char **argv)
             if (seen.contains(plugin.pluginId())) {
                 continue;
             }
+            // Filter out modules that are not explicitely suitable for the "handset" formfactor
+            auto kp = plugin.rawData()["KPlugin"].toObject();
+            QStringList formFactors = KPluginMetaData::readStringList(kp, QStringLiteral("FormFactors"));
+            if (!formfactor.isEmpty() && !formFactors.contains(formfactor) && formfactor != QStringLiteral("all")) {
+                continue;
+            }
+
             seen << plugin.pluginId();
             std::cout << plugin.pluginId().toLocal8Bit().data()
             << ' '
@@ -142,6 +157,11 @@ int main(int argc, char **argv)
 
         for (auto plugin : KPluginLoader::findPlugins("kcms")) {
             if (seen.contains(plugin.pluginId())) {
+                continue;
+            }
+            auto kp = plugin.rawData()["KPlugin"].toObject();
+            QStringList formFactors = KPluginMetaData::readStringList(kp, QStringLiteral("FormFactors"));
+            if (!formfactor.isEmpty() && !formFactors.contains(formfactor) && formfactor != QStringLiteral("all")) {
                 continue;
             }
             std::cout << plugin.pluginId().toLocal8Bit().data()
