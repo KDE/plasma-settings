@@ -20,49 +20,17 @@
 #ifndef DEVELSETTINGSPLUGIN_H
 #define DEVELSETTINGSPLUGIN_H
 
-#include <QObject>
-#include <QVariantList>
+#include <QQmlEngine>
+#include <QQmlExtensionPlugin>
 
-class DevelSettings : public QObject
+
+class DevelSettingsPlugin : public QQmlExtensionPlugin
 {
     Q_OBJECT
-    Q_PROPERTY(bool sshEnabled READ sshEnabled WRITE enableSsh NOTIFY enableSshChanged)
-    Q_PROPERTY(bool integrationEnabled READ isIntegrationEnabled WRITE setIntegrationEnabled NOTIFY enableIntegrationChanged)
-    Q_PROPERTY(bool showTerminal READ terminalShown WRITE setShowTerminal NOTIFY showTerminalChanged)
+    Q_PLUGIN_METADATA(IID "org.qt-project.Qt.QQmlExtensionInterface")
 
 public:
-    DevelSettings(QObject *parent = 0);
-
-    bool sshEnabled() const;
-    void enableSsh(bool enable);
-
-    bool terminalShown() const;
-    void setShowTerminal(bool show);
-
-    void setIntegrationEnabled(bool enable);
-    bool isIntegrationEnabled();
-
-Q_SIGNALS:
-    void enableSshChanged(bool enabled);
-    void showTerminalChanged(bool shown);
-    void enableIntegrationChanged(bool enable);
-
-private:
-
-    bool m_sshEnabled;
-    bool m_terminalShown;
-    bool m_integrationEnabled;
-    bool m_cursorVisible;
-    QString m_terminalApp;
-};
-
-class DevelSettingsPlugin : public QObject
-{
-    Q_OBJECT
-
-public:
-    explicit DevelSettingsPlugin(QObject *parent, const QVariantList &list = QVariantList());
-    ~DevelSettingsPlugin();
+    void registerTypes(const char *uri);
 };
 
 #endif // DEVELSETTINGSPLUGIN_H

@@ -58,13 +58,6 @@ class TimeSettings : public KQuickAddons::ConfigModule
 
     public:
         /**
-         * @name Plugin Constructor
-         *
-         * @arg parent The parent object
-         * @arg list Arguments, currently unused
-         */
-//         explicit TimeSettings(QObject *parent, const QVariantList &list = QVariantList());
-        /**
          * @name Settings Module Constructor
          *
          * @arg parent The parent object
