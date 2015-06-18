@@ -38,11 +38,9 @@ ActionReply IntegrationHelper::enable(const QVariantMap &args)
     int rv = QProcess::execute("zypper", enableArgs);
 
     if (rv == 0) {
-        return ActionReply::SuccessReply;
+        return ActionReply::SuccessReply();
     } else {
-        ActionReply reply(ActionReply::HelperError);
-        reply.setErrorCode(rv);
-        return reply;
+        return ActionReply::HelperErrorReply();
     }
 }
 
@@ -55,12 +53,10 @@ ActionReply IntegrationHelper::disable(const QVariantMap &args)
     int rv = QProcess::execute("zypper", disableArgs);
 
     if (rv == 0) {
-        return ActionReply::SuccessReply;
+        return ActionReply::SuccessReply();
     } else {
-        ActionReply reply(ActionReply::HelperError);
-        reply.setErrorCode(rv);
-        return reply;
+        return ActionReply::HelperErrorReply();
     }
 }
 
-KDE4_AUTH_HELPER_MAIN("org.kde.active.integration", IntegrationHelper)
+KAUTH_HELPER_MAIN("org.kde.active.integration", IntegrationHelper)

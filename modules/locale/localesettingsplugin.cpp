@@ -20,7 +20,7 @@
 
 #include <QDeclarativeComponent>
 
-#include <KDebug>
+#include <QDebug>
 #include <KPluginFactory>
 
 K_PLUGIN_FACTORY(LocaleSettingsFactory, registerPlugin<LocaleSettingsPlugin>();)
@@ -31,7 +31,7 @@ LocaleSettingsPlugin::LocaleSettingsPlugin(QObject *parent, const QVariantList &
 {
     Q_UNUSED(list)
 
-    kDebug() << "LocaleSettingsPlugin created:)";
+    qDebug() << "LocaleSettingsPlugin created:)";
     qmlRegisterType<LocaleSettings>();
     qmlRegisterType<LocaleSettings>("org.kde.active.settings", 0, 1, "LocaleSettings");
 }

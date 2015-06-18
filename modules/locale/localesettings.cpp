@@ -18,7 +18,7 @@
 #include "localesettings.h"
 #include "languagesmodel.h"
 
-#include <KDebug>
+#include <QDebug>
 #include <KConfigGroup>
 #include <KGlobal>
 #include <KGlobalSettings>
@@ -45,12 +45,12 @@ LocaleSettings::LocaleSettings()
 
     d->initLanguages();
 
-    kDebug() << "LocaleSettings module loaded.";
+    qDebug() << "LocaleSettings module loaded.";
 }
 
 LocaleSettings::~LocaleSettings()
 {
-    kDebug() << "========================== LocaleSettings destroyed";
+    qDebug() << "========================== LocaleSettings destroyed";
     delete d;
 }
 
@@ -61,7 +61,7 @@ void LocaleSettingsPrivate::initLanguages()
 
     QStandardItemModel * _languagesModel = new LanguagesModel(q);
 
-    //kDebug() << "Language list" << KGlobal::locale()->languageList();
+    //qDebug() << "Language list" << KGlobal::locale()->languageList();
 
     //foreach (const QString &langCode, KGlobal::locale()->allLanguagesList()) {
     foreach (const QString &langCode, KGlobal::locale()->installedLanguages()) {
@@ -93,7 +93,7 @@ void LocaleSettings::setLanguage(const QString &language)
     //d->language = d->localeConfigGroup.readEntry("Language", QString()).split(':').first();
     //d->language = KGlobal::locale()->languageCodeToName(d->language);
     d->language = KGlobal::locale()->languageCodeToName(language);
-    //kDebug() << "new language" << d->language;
+    //qDebug() << "new language" << d->language;
 
     // signal other KDE programs that locale settings has changed.
     KGlobalSettings::self()->emitChange(KGlobalSettings::SettingsChanged, KGlobalSettings::SETTINGS_LOCALE);
