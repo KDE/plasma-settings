@@ -1,5 +1,6 @@
 /*
  *  Copyright 2012 Aaron Seigo <aseigo@kde.org>
+ *  Copyright 2015 Sebastian Kügler <sebas@kde.org>
  *
  *  This program is free software; you can redistribute it and/or modify
  *  it under the terms of the GNU General Public License as published by
@@ -44,8 +45,6 @@ const QString terminalApp("");
 DevelSettings::DevelSettings(QObject *parent)
     : QObject(parent)
 {
-    m_cursorVisible = (cursorTheme() != noCursorTheme);
-
     // TODO: should probably not rely on systemctl, but be put into a platform specific backend?
     const int rv = QProcess::execute("systemctl is-enabled sshd.service");
     m_sshEnabled = rv == 0;
@@ -124,20 +123,6 @@ void DevelSettings::setShowTerminal(bool show)
     }
 }
 
-bool DevelSettings::isCursorVisible() const
-{
-    return m_cursorVisible;
-}
-
-void DevelSettings::setCursorVisible(bool visible)
-{
-    if (m_cursorVisible != visible) {
-        m_cursorVisible = visible;
-        applyCursorTheme(m_cursorVisible ? visibleCursorTheme : noCursorTheme);
-        emit cursorVisibleChanged(m_cursorVisible);
-    }
-}
-
 void DevelSettings::setIntegrationEnabled(bool enable)
 {
     if (m_integrationEnabled != enable) {
@@ -181,6 +166,5 @@ DevelSettingsPlugin::~DevelSettingsPlugin()
 }
 
 K_PLUGIN_FACTORY(DevelSettingsFactory, registerPlugin<DevelSettingsPlugin>();)
-K_EXPORT_PLUGIN(DevelSettingsFactory("active_settings_devel"))
 
 #include "develsettingsplugin.moc"

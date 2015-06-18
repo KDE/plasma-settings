@@ -6,6 +6,8 @@ add_library(kcm_settings_devel MODULE ${developmentsettings_SRCS})
 
 target_link_libraries(kcm_settings_devel
     Qt5::Core
+    Qt5::Qml
+    Qt5::Quick
     Qt5::DBus
     KF5::Auth
     KF5::Plasma

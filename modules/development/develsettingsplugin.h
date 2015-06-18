@@ -1,5 +1,6 @@
 /*
  *  Copyright 2012 Aaron Seigo <aseigo@kde.org>
+ *  Copyright 2015 Sebastian Kügler <sebas@kde.org>
  *
  *  This program is free software; you can redistribute it and/or modify
  *  it under the terms of the GNU General Public License as published by
@@ -28,7 +29,6 @@ class DevelSettings : public QObject
     Q_PROPERTY(bool sshEnabled READ sshEnabled WRITE enableSsh NOTIFY enableSshChanged)
     Q_PROPERTY(bool integrationEnabled READ isIntegrationEnabled WRITE setIntegrationEnabled NOTIFY enableIntegrationChanged)
     Q_PROPERTY(bool showTerminal READ terminalShown WRITE setShowTerminal NOTIFY showTerminalChanged)
-    Q_PROPERTY(bool visibleCursor READ isCursorVisible WRITE setCursorVisible NOTIFY cursorVisibleChanged)
 
 public:
     DevelSettings(QObject *parent = 0);
@@ -39,22 +39,15 @@ public:
     bool terminalShown() const;
     void setShowTerminal(bool show);
 
-    bool isCursorVisible() const;
-    void setCursorVisible(bool visible);
-
     void setIntegrationEnabled(bool enable);
     bool isIntegrationEnabled();
 
 Q_SIGNALS:
     void enableSshChanged(bool enabled);
     void showTerminalChanged(bool shown);
-    void cursorVisibleChanged(bool visible);
     void enableIntegrationChanged(bool enable);
 
 private:
-    // platform specific
-    void applyCursorTheme(const QByteArray &themeName);
-    QString cursorTheme() const;
 
     bool m_sshEnabled;
     bool m_terminalShown;
