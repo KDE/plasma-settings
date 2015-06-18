@@ -33,9 +33,10 @@ ActionReply IntegrationHelper::enable(const QVariantMap &args)
 {
     Q_UNUSED(args)
     QStringList enableArgs;
-    enableArgs << "ar" << "-r" << "http://repo.merproject.org/obs/kde:/devel:/ux:/integration/latest_i586/kde:devel:ux:integration.repo";
+    // add-apt-repository ppa:kubuntu-ci/unstable
+    enableArgs << "ppa:kubuntu-ci/unstable";
 
-    int rv = QProcess::execute("zypper", enableArgs);
+    int rv = QProcess::execute("add-apt-repository", enableArgs);
 
     if (rv == 0) {
         return ActionReply::SuccessReply();
@@ -48,9 +49,9 @@ ActionReply IntegrationHelper::disable(const QVariantMap &args)
 {
     Q_UNUSED(args)
     QStringList disableArgs;
-    disableArgs << "rr" << "Project_KDE_Integration";
+    disableArgs << "-r" << "ppa:kubuntu-ci/unstable";
 
-    int rv = QProcess::execute("zypper", disableArgs);
+    int rv = QProcess::execute("add-apt-repository", disableArgs);
 
     if (rv == 0) {
         return ActionReply::SuccessReply();
