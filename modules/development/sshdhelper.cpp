@@ -42,11 +42,9 @@ ActionReply SshdHelper::start(const QVariantMap &args)
     }
 
     if (rv == 0) {
-        return ActionReply::SuccessReply;
+        return ActionReply::SuccessReply();
     } else {
-        ActionReply reply(ActionReply::HelperError);
-        reply.setErrorCode(rv);
-        return reply;
+        return ActionReply::HelperErrorReply();
     }
 }
 
@@ -60,12 +58,10 @@ ActionReply SshdHelper::stop(const QVariantMap &args)
     }
 
     if (rv == 0) {
-        return ActionReply::SuccessReply;
+        return ActionReply::SuccessReply();
     } else {
-        ActionReply reply(ActionReply::HelperError);
-        reply.setErrorCode(rv);
-        return reply;
+        return ActionReply::HelperErrorReply();
     }
 }
 
-KDE4_AUTH_HELPER_MAIN("org.kde.active.sshdcontrol", SshdHelper)
+KAUTH_HELPER_MAIN("org.kde.active.sshdcontrol", SshdHelper)

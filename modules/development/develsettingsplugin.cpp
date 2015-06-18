@@ -18,6 +18,7 @@
 
 #include "develsettingsplugin.h"
 
+#include <QDebug>
 #include <QDBusInterface>
 #include <QFile>
 #include <QProcess>
@@ -25,12 +26,14 @@
 #include <QTimer>
 
 #include <KAuthAction>
+#include <KAuthExecuteJob>
+
 #include <KConfig>
 #include <KConfigGroup>
-#include <KDebug>
 #include <KDesktopFile>
-#include <KGlobal>
+
 #include <KPluginFactory>
+#include <KSharedConfig>
 #include <KService>
 #include <KSycoca>
 
@@ -48,11 +51,11 @@ DevelSettings::DevelSettings(QObject *parent)
     m_sshEnabled = rv == 0;
 
     m_terminalShown = false;
-    KConfigGroup confGroup(KGlobal::config(), "General");
+    KConfigGroup confGroup(KSharedConfig::openConfig(), "General");
 
     m_terminalApp = confGroup.readPathEntry("TerminalApplication", QString::fromLatin1("konsole"));
     KService::Ptr service = KService::serviceByStorageId(m_terminalApp);
-    kDebug() << "showing?" << service->noDisplay();
+    qDebug() << "showing?" << service->noDisplay();
     m_terminalShown = service && !service->noDisplay();
 
     m_integrationEnabled = confGroup.readEntry("IntegrationEnabled", false);
@@ -72,14 +75,14 @@ void DevelSettings::enableSsh(bool enable)
         //TODO: this really should be non-blocking ...
         KAuth::Action action(m_sshEnabled ? "org.kde.active.sshdcontrol.start"
                                           : "org.kde.active.sshdcontrol.stop");
-        action.setHelperID("org.kde.active.sshdcontrol");
+        action.setHelperId("org.kde.active.sshdcontrol");
 
-        kDebug() << "Action" << action.name() << action.details() << "valid:" << action.isValid();
+        qDebug() << "Action" << action.name() << action.details() << "valid:" << action.isValid();
 
-        KAuth::ActionReply reply = action.execute();
-        if (reply.failed()) {
+        auto reply = action.execute();
+        if (reply->error()) {
             m_sshEnabled = !m_sshEnabled;
-            kWarning()<< "KAuth returned an error code:" << reply.errorCode() << m_sshEnabled;
+            qWarning()<< "KAuth returned an error code:" << reply->errorString() << m_sshEnabled;
         }
 
         if (was != m_sshEnabled) {
@@ -144,17 +147,17 @@ void DevelSettings::setIntegrationEnabled(bool enable)
         //TODO: this really should be non-blocking ...
         KAuth::Action action(m_integrationEnabled ? "org.kde.active.integration.enable"
                                           : "org.kde.active.integration.disable");
-        action.setHelperID("org.kde.active.integration");
+        action.setHelperId("org.kde.active.integration");
 
-        kDebug() << "Action" << action.name() << action.details() << "valid:" << action.isValid();
-        KAuth::ActionReply reply = action.execute();
-        if (reply.failed()) {
+        qDebug() << "Action" << action.name() << action.details() << "valid:" << action.isValid();
+        auto job = action.execute();
+        if (job->error()) {
             m_integrationEnabled = !m_integrationEnabled;
-            kWarning()<< "KAuth returned an error code:" << reply.errorCode()  << reply.errorDescription() << "enabled" << m_integrationEnabled;
+            qWarning()<< "KAuth returned an error code:" << job->errorString() << "enabled" << m_integrationEnabled;
         }
 
         if (was != m_integrationEnabled) {
-            KConfigGroup confGroup(KGlobal::config(), "General");
+            KConfigGroup confGroup(KSharedConfig::openConfig(), "General");
             confGroup.writeEntry("IntegrationEnabled", m_integrationEnabled);
             emit enableIntegrationChanged(m_integrationEnabled);
         }
