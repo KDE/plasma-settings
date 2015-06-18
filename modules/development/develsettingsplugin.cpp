@@ -24,7 +24,7 @@
 #include <QtDeclarative/QDeclarativeItem>
 #include <QTimer>
 
-#include <KAuth/Action>
+#include <KAuthAction>
 #include <KConfig>
 #include <KConfigGroup>
 #include <KDebug>

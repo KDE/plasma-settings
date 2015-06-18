@@ -19,8 +19,8 @@
 #ifndef DEVELSETTINGSPLUGIN_H
 #define DEVELSETTINGSPLUGIN_H
 
-#include <QtCore/QObject>
-#include <QtCore/QVariantList>
+#include <QObject>
+#include <QVariantList>
 
 class DevelSettings : public QObject
 {
