@@ -1,15 +1,6 @@
 project(kcm_settings_devel)
-# find_package(KDE4 REQUIRED)
-# include(KDE4Defaults)
-# add_definitions(${QT_DEFINITIONS} ${KDE4_DEFINITIONS})
-#
-# include_directories(${KDE4_INCLUDES} ../../../../components/settings)
 
 set(developmentsettings_SRCS develsettingsplugin.cpp)
-
-# if(Q_WS_X11)
-#     set(developmentsettings_SRCS ${developmentsettings_SRCS} cursors_x11.cpp)
-# endif(Q_WS_X11)
 
 add_library(kcm_settings_devel MODULE ${developmentsettings_SRCS})
 
@@ -19,10 +10,6 @@ target_link_libraries(kcm_settings_devel
     KF5::Auth
     KF5::Plasma
 )
-
-# if(Q_WS_X11)
-#    target_link_libraries(kcm_settings_devel ${X11_Xfixes_LIB} ${X11_Xrender_LIB} ${X11_X11_LIB} ${X11_Xcursor_LIB})
-# endif(Q_WS_X11)
 
 install(TARGETS kcm_settings_devel DESTINATION ${PLUGIN_INSTALL_DIR})
 
