@@ -69,7 +69,7 @@ public:
     QTime currentTime;
     QDate currentDate;
     QTimer *timer;
-    QString ntpServer;
+    bool useNtp;
 
     void initSettings();
     void initTimeZones();
@@ -166,17 +166,19 @@ void TimeSettingsPrivate::initSettings()
     //setTimeFormat(d->localeSettings.readEntry("TimeFormat", QString(FORMAT12H)));
     q->setTimeFormat( localeSettings.readEntry( "TimeFormat", QString(FORMAT24H) ) ); // FIXME?!
 
+    /*
     KConfig _config( "kcmclockrc", KConfig::NoGlobals );
     KConfigGroup config(&_config, "NTP");
     QStringList servers = config.readEntry("servers",
         QString()).split(',', QString::SkipEmptyParts);
     if (!servers.isEmpty()) {
-        ntpServer = servers.first();
+        useNtp = servers.first();
     }
     //FIXME: why?
-    if (ntpServer.length() < 3) {
-        ntpServer.clear();
+    if (useNtp.length() < 3) {
+        useNtp.clear();
     }
+    */
 }
 
 
@@ -219,70 +221,34 @@ void TimeSettings::setCurrentDate(const QDate &currentDate)
     }
 }
 
-QString TimeSettings::ntpServer() const
+bool TimeSettings::useNtp() const
 {
-    return d->ntpServer;
+    return d->useNtp;
 }
 
-void TimeSettings::setNtpServer(const QString &server)
+void TimeSettings::setUseNtp(bool ntp)
 {
-    if (d->ntpServer != server) {
-        d->ntpServer = server;
-        emit ntpServerChanged();
+    if (d->useNtp != ntp) {
+        d->useNtp = ntp;
+        emit useNtpChanged();
     }
-}
-
-QStringList TimeSettings::availableNtpServers() const
-{
-    QStringList servers;
-    servers << QStringLiteral("pool.ntp.org")
-            << QStringLiteral("asia.pool.ntp.org")
-            << QStringLiteral("europe.pool.ntp.org")
-            << QStringLiteral("north-america.pool.ntp.org")
-            << QStringLiteral("oceania.pool.ntp.org");
-    return servers;
-}
-
-QString TimeSettings::findNtpUtility()
-{
-    QByteArray envpath = qgetenv("PATH");
-    if (!envpath.isEmpty() && envpath[0] == ':') {
-        envpath = envpath.mid(1);
-    }
-
-    QString path = QStringLiteral("/sbin:/usr/sbin:");
-    if (!envpath.isEmpty()) {
-        path += QString::fromLocal8Bit(envpath);
-    } else {
-        path += QStringLiteral("/bin:/usr/bin");
-    }
-
-    QString ntpUtility;
-    foreach (const QString &possible_ntputility, QStringList() << "ntpdate" << "rdate" ) {
-        if (!((ntpUtility = KStandardDirs::findExe(possible_ntputility, path)).isEmpty())) {
-        qDebug() << "ntpUtility = " << ntpUtility;
-        return ntpUtility;
-        }
-    }
-
-    qDebug() << "ntpUtility not found!";
-    return QString();
 }
 
 void TimeSettings::saveTime()
 {
+    /*
     QVariantMap helperargs;
 
 
     //TODO: enable NTP
     // Save the order, but don't duplicate!
     QStringList list;
-    list << d->ntpServer;
+    list << d->useNtp;
     helperargs["ntp"] = true;
-    helperargs["ntpServers"] = list;
-    helperargs["ntpEnabled"] = !d->ntpServer.isEmpty();
+    helperargs["useNtps"] = list;
+    helperargs["ntpEnabled"] = !d->useNtp.isEmpty();
 
-    if (!d->ntpServer.isEmpty()) {
+    if (!d->useNtp.isEmpty()) {
         // NTP Time setting - done in helper
         qDebug() << "Setting date from time server " << list;
     } else {
@@ -296,7 +262,7 @@ void TimeSettings::saveTime()
         helperargs["olddate"] = QString::number(::time(0));
     }
 
-    /*TODO: enable timeZones
+    / * TODO: enable timeZones
     QStringList selectedZones(tzonelist->selection());
 
     if (selectedZones.count() > 0) {
@@ -305,7 +271,7 @@ void TimeSettings::saveTime()
         helperargs["tzone"] = selectedzone;
     } else {
         helperargs["tzreset"] = true; // // make the helper reset the timezone
-    }*/
+    }* /
 
     KAuth::Action writeAction("org.kde.active.clockconfig.save");
     writeAction.setHelperId("org.kde.active.clockconfig");
@@ -315,6 +281,7 @@ void TimeSettings::saveTime()
     if (!job->exec()) {
         qWarning()<< "KAuth returned an error code:" << job->errorString();
     }
+    */
 }
 
 QString TimeSettings::timeFormat()

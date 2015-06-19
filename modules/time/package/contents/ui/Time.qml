@@ -32,160 +32,146 @@ Item {
     id: timeModule
     objectName: "timeModule"
 
-    ScrollView {
+    GridLayout {
+        id: formLayout
 
-        anchors {
-            top: parent.top
-            left: parent.left
-            right: parent.right
-            //horizontalCenter: parent.horizontalCenter
-            topMargin: units.gridUnit
-            bottom: parent.bottom
+        property int gridspacing: units.gridUnit
+
+        //height: implicitHeight
+        width: parent.width
+        columns: 2
+        //rows: 4
+        anchors.fill: parent
+        //anchors.margins: gridspacing
+        //rowSpacing: gridspacing
+        columnSpacing: gridspacing
+
+        PlasmaComponents.Label {
+            text: i18n("Use 24-hour clock:")
+            Layout.fillWidth: true
         }
 
-        //width: contentItem.width
+        PlasmaComponents.Switch {
+            id: twentyFourSwitch
+            checked: kcm.twentyFour
 
-        //Rectangle { color: "orange"; anchors.fill: parent; opacity: 0.4 }
-
-        GridLayout {
-            id: formLayout
-
-            property int gridspacing: units.gridUnit
-            Rectangle { color: "blue"; anchors.fill: parent; opacity: 0.4 }
-
-            //height: implicitHeight
-            width: parent.width
-            columns: 2
-            //rows: 4
-            anchors.fill: parent
-            //anchors.margins: gridspacing
-            //rowSpacing: gridspacing
-            columnSpacing: gridspacing
-
-            PlasmaComponents.Label {
-                text: i18n("Use 24-hour clock:")
+            onClicked : {
+                kcm.twentyFour = checked
+                print(kcm.timeZone);
             }
+        }
 
+
+        PlasmaComponents.Label {
+            id: timeZoneLabel
+            text: i18n("Timezone:")
+            Layout.fillWidth: true
+        }
+
+        PlasmaComponents.Button {
+            id: timeZoneButton
+            text: kcm.timeZone
+            onClicked: timeZonePickerDialog.open()
+        }
+
+        PlasmaComponents.Label {
+            id: ntpLabel
+            text: i18n("Set time automatically:")
+            Layout.fillWidth: true
+        }
+
+        Row {
+            spacing: units.gridUnit
+            //Layout.columnSpan: 2
             PlasmaComponents.Switch {
-                id: twentyFourSwitch
-                checked: kcm.twentyFour
-
-                onClicked : {
-                    kcm.twentyFour = checked
-                    print(kcm.timeZone);
-                }
-            }
-
-
-            PlasmaComponents.Label {
-                id: timeZoneLabel
-                text: i18n("Timezone:")
-            }
-
-            PlasmaComponents.Button {
-                id: timeZoneButton
-                text: kcm.timeZone
-                onClicked: timeZonePickerDialog.open()
-            }
-
-            PlasmaComponents.Label {
-                id: ntpLabel
-                text: i18n("Set time automatically:")
-            }
-
-            Row {
-                spacing: units.gridUnit
-                //Layout.columnSpan: 2
-                PlasmaComponents.Switch {
-                    id: ntpCheckBox
-                    checked: kcm.ntpServer != ""
-                    onCheckedChanged: {
-                        if (!checked) {
-                            kcm.ntpServer = ""
-                            kcm.saveTime()
-                        }
+                id: ntpCheckBox
+                checked: kcm.ntpServer != ""
+                onCheckedChanged: {
+                    if (!checked) {
+                        kcm.ntpServer = ""
+                        kcm.saveTime()
                     }
                 }
-                PlasmaComponents.Button {
-                    id: ntpButton
-                    text: kcm.ntpServer == "" ? i18n("Pick a server") : kcm.ntpServer
-                    onClicked: ntpServerPickerDialog.open()
-                    enabled: ntpCheckBox.checked
-                }
             }
+            PlasmaComponents.Button {
+                id: ntpButton
+                text: kcm.ntpServer == "" ? i18n("Pick a server") : kcm.ntpServer
+                onClicked: ntpServerPickerDialog.open()
+                enabled: ntpCheckBox.checked
+            }
+        }
 
 
-            TimePicker {
-                id: timePicker
-                enabled: !ntpCheckBox.checked
-                twentyFour: twentyFourSwitch.checked
+        TimePicker {
+            id: timePicker
+            enabled: !ntpCheckBox.checked
+            twentyFour: twentyFourSwitch.checked
 
-                Layout.columnSpan: 2
-                Layout.preferredHeight: timePicker.childrenRect.height + timePicker.margins.top + timePicker.margins.bottom
-                Layout.preferredWidth: timePicker.childrenRect.width + timePicker.margins.left + timePicker.margins.right
+            Layout.columnSpan: 2
+            Layout.preferredHeight: timePicker.childrenRect.height + timePicker.margins.top + timePicker.margins.bottom
+            Layout.preferredWidth: timePicker.childrenRect.width + timePicker.margins.left + timePicker.margins.right
 
-                Component.onCompleted: {
+            Component.onCompleted: {
+                //var date = new Date("January 1, 1971 "+kcm.currentTime)
+                var date = new Date(kcm.currentTime)
+                print("CurrentTime: "  + kcm.currentTime);
+                print("Date: "  + date);
+                print("hours:   "  + date.getHours());
+                print("minutes: "  + date.getMinutes());
+                print("seconds: "  + date.getSeconds());
+                timePicker.hours = date.getHours()
+                timePicker.minutes = date.getMinutes()
+                timePicker.seconds = date.getSeconds()
+            }
+            Connections {
+                target: kcm
+                onCurrentTimeChanged: {
+                    if (timePicker.userConfiguring) {
+                        return
+                    }
+
                     //var date = new Date("January 1, 1971 "+kcm.currentTime)
                     var date = new Date(kcm.currentTime)
-                    print("CurrentTime: "  + kcm.currentTime);
-                    print("Date: "  + date);
-                    print("hours:   "  + date.getHours());
-                    print("minutes: "  + date.getMinutes());
-                    print("seconds: "  + date.getSeconds());
                     timePicker.hours = date.getHours()
                     timePicker.minutes = date.getMinutes()
                     timePicker.seconds = date.getSeconds()
                 }
-                Connections {
-                    target: kcm
-                    onCurrentTimeChanged: {
-                        if (timePicker.userConfiguring) {
-                            return
-                        }
-
-                        //var date = new Date("January 1, 1971 "+kcm.currentTime)
-                        var date = new Date(kcm.currentTime)
-                        timePicker.hours = date.getHours()
-                        timePicker.minutes = date.getMinutes()
-                        timePicker.seconds = date.getSeconds()
-                    }
-                }
-                onUserConfiguringChanged: {
-                    kcm.currentTime = timeString
-                    kcm.saveTime()
-                }
             }
+            onUserConfiguringChanged: {
+                kcm.currentTime = timeString
+                kcm.saveTime()
+            }
+        }
 
-            DatePicker {
-                id: datePicker
-                enabled: !ntpCheckBox.checked
-                Layout.columnSpan: 2
-                Layout.preferredHeight: datePicker.childrenRect.height + datePicker.margins.top + datePicker.margins.bottom
-                Layout.preferredWidth: datePicker.childrenRect.width + datePicker.margins.left + datePicker.margins.right
-                Component.onCompleted: {
+        DatePicker {
+            id: datePicker
+            enabled: !ntpCheckBox.checked
+            Layout.columnSpan: 2
+            Layout.preferredHeight: datePicker.childrenRect.height + datePicker.margins.top + datePicker.margins.bottom
+            Layout.preferredWidth: datePicker.childrenRect.width + datePicker.margins.left + datePicker.margins.right
+            Component.onCompleted: {
+                var date = new Date(kcm.currentDate)
+                datePicker.day = date.getDate()
+                datePicker.month = date.getMonth()+1
+                datePicker.year = date.getFullYear()
+            }
+            Connections {
+                target: kcm
+                onCurrentDateChanged: {
+                    if (datePicker.userConfiguring) {
+                        return
+                    }
+
                     var date = new Date(kcm.currentDate)
+
                     datePicker.day = date.getDate()
                     datePicker.month = date.getMonth()+1
                     datePicker.year = date.getFullYear()
                 }
-                Connections {
-                    target: kcm
-                    onCurrentDateChanged: {
-                        if (datePicker.userConfiguring) {
-                            return
-                        }
-
-                        var date = new Date(kcm.currentDate)
-
-                        datePicker.day = date.getDate()
-                        datePicker.month = date.getMonth()+1
-                        datePicker.year = date.getFullYear()
-                    }
-                }
-                onUserConfiguringChanged: {
-                    kcm.currentDate = isoDate
-                    kcm.saveTime()
-                }
+            }
+            onUserConfiguringChanged: {
+                kcm.currentDate = isoDate
+                kcm.saveTime()
             }
         }
     }
@@ -206,29 +192,5 @@ Item {
                 timeZonePickerLoader.item.focusTextInput()
             }
         }
-    }
-
-    PlasmaComponents.SelectionDialog {
-        id: ntpServerPickerDialog
-        titleText: i18n("Pick a time server")
-        selectedIndex: -1
-        model: kcm.availableNtpServers
-        delegate: PlasmaComponents.ListItem {
-            enabled: true
-            //visible: modelData.search(RegExp(filterField.filterText, "i")) != -1
-            height: visible ? label.paintedHeight*2 : 0
-            checked: kcm.ntpServer == modelData
-            PlasmaComponents.Label {
-                id: label
-                anchors.verticalCenter: parent.verticalCenter
-                text: modelData
-            }
-            onClicked: {
-                kcm.ntpServer = modelData
-                kcm.saveTime()
-                ntpServerPickerDialog.close()
-            }
-        }
-        onRejected: selectedIndex = -1
     }
 }
