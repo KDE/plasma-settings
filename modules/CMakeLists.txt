@@ -1,5 +1,7 @@
 # Install the packages, also make it known to the system
 
+
+add_subdirectory(theme)
 add_subdirectory(development)
 if (${KF5KDELibs4Support_FOUND})
     add_subdirectory(time)

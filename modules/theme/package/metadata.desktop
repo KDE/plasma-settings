@@ -1,0 +1,20 @@
+[Desktop Entry]
+Name=Appearance
+Comment=Look and Feel
+Encoding=UTF-8
+Type=Service
+Icon=preferences-desktop-theme
+X-KDE-ServiceTypes=KCModule
+X-KDE-Library=kcm_mobile_theme
+X-KDE-PluginInfo-Author=Sebastian Kügler
+X-KDE-PluginInfo-Email=sebas@kde.org
+X-KDE-PluginInfo-Name=kcm_mobile_theme
+X-KDE-PluginInfo-Version=1.0
+X-KDE-PluginInfo-Website=http://plasma-mobile.org
+X-KDE-PluginInfo-Category=
+X-KDE-PluginInfo-Depends=
+X-KDE-PluginInfo-License=GPL
+X-KDE-PluginInfo-EnabledByDefault=true
+X-KDE-FormFactors=handset,tablet,mediacenter
+X-Plasma-Package=kcm_mobile_theme
+X-Plasma-MainScript=ui/Theme.qml
