@@ -20,11 +20,11 @@
  */
 
 import QtQuick 2.2
+import QtQuick.Layouts 1.1
+
 import org.kde.plasma.core 2.0 as PlasmaCore
 import org.kde.plasma.components 2.0 as PlasmaComponents
 import org.kde.plasma.extras 2.0 as PlasmaExtras
-import org.kde.plasma.mobilecomponents 0.2 as MobileComponents
-//import org.kde.active.settings 2.0 as ActiveSettings
 
 Item {
     id: develModule
@@ -36,114 +36,83 @@ Item {
 //         id: settings
 //     }
 
-    Column {
-        id: titleCol
-        anchors.top: parent.top
-        anchors.left: parent.left
-        anchors.right: parent.right
-        PlasmaExtras.Title {
-            text: settingsComponent.name
-            opacity: 1
-        }
-        PlasmaComponents.Label {
-            id: descriptionLabel
-            text: settingsComponent.description
-            opacity: .4
-        }
-    }
-
-    Grid {
+    GridLayout {
         id: formLayout
         columns: 2
-        rows: 4
-        spacing: theme.mSize(theme.defaultFont).height
+        //rows: 4
+        columnSpacing: units.gridUnit
+        rowSpacing: units.gridUnit
+
         anchors {
-            top: titleCol.bottom
-            horizontalCenter: parent.horizontalCenter
-            topMargin: theme.mSize(theme.defaultFont).height
+            fill: parent
+
         }
-
-        PlasmaComponents.Label {
-            text: i18n("Visible pointer:")
-            anchors {
-                right: visibleCursor.left
-                rightMargin: theme.mSize(theme.defaultFont).width
-            }
-        }
-
-        PlasmaComponents.Switch {
-            id: visibleCursor
-            checked: settings.visibleCursor
-
-            onClicked: settings.visibleCursor = checked
-        }
-
 
         PlasmaComponents.Label {
             id: timeZoneLabel
             text: i18n("Allow remote SSH access:")
-            anchors {
-                right: ssh.left
-                rightMargin: theme.mSize(theme.defaultFont).width
-            }
+            Layout.fillWidth: true
         }
 
         PlasmaComponents.Switch {
             id: ssh
-            checked: settings.sshEnabled
+            checked: kcm.sshEnabled
             onClicked: {
-                settings.sshEnabled = checked;
+                kcm.sshEnabled = checked;
                 // we have to check to se if it failed
-                checked = settings.sshEnabled;
+                checked = kcm.sshEnabled;
             }
         }
 
         PlasmaComponents.Label {
             text: i18n("Show terminal app:")
-            anchors {
-                right: terminal.left
-                rightMargin: theme.mSize(theme.defaultFont).width
-            }
+            Layout.fillWidth: true
         }
 
         PlasmaComponents.Switch {
             id: terminal
-            checked: settings.showTerminal
-            onClicked: settings.showTerminal = checked
+            checked: kcm.showTerminal
+            onClicked: kcm.showTerminal = checked
         }
 
         PlasmaComponents.Label {
             text: i18n("Enable integration repository:")
-            anchors {
-                right: integration.left
-                rightMargin: theme.mSize(theme.defaultFont).width
-            }
+            Layout.fillWidth: true
         }
 
         PlasmaComponents.Switch {
             id: integration
-            checked: settings.integrationEnabled
+            checked: kcm.integrationEnabled
             onClicked: {
-                dialog.open()
+                kcm.integrationEnabled = integration.checked;
+                dialog.opacity = 1;
+                dlghidetimer.start();
             }
         }
-    }
-    PlasmaComponents.QueryDialog {
-        id: dialog
-        visualParent: integration
-        message: i18n("This will add the integration repository. You will have to do \"zypper refresh\" and \"zypper up\" to use the new packages from Integration.")
-        acceptButtonText: integration.checked ? i18n("Enable") : i18n("Disable")
-        onAccepted: {
-            settings.integrationEnabled = integration.checked;
-            // we have to check to se if it failed
-            integration.checked = settings.integrationEnabled;
+
+        Timer {
+            id: dlghidetimer
+            interval: 20000
+            running: false
+            onTriggered: dialog.opacity = 0
         }
-        onRejected: {
-            //reset
-            integration.checked = settings.integrationEnabled;
+
+        PlasmaComponents.Label {
+            id: dialog
+            text: i18n("This will add the integration repository. You will have to do \"sudo apt-get update\" and \"apt-get dist-upgrade\" to use the new packages from Integration.")
+//             text: "yadda"
+            wrapMode: Text.WordWrap
+            opacity: 0
+            Layout.fillWidth: true
+            Layout.fillHeight: true
+
+            Behavior on opacity { NumberAnimation {} }
+
         }
-        onClickedOutside: {
-            integration.checked = settings.integrationEnabled;
+
+        Item {
+            width: terminal.width
+            Layout.fillHeight: true
         }
     }
 }
