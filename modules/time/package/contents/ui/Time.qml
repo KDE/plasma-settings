@@ -80,27 +80,16 @@ Item {
             Layout.fillWidth: true
         }
 
-        Row {
-            spacing: units.gridUnit
-            //Layout.columnSpan: 2
-            PlasmaComponents.Switch {
-                id: ntpCheckBox
-                checked: kcm.ntpServer != ""
-                onCheckedChanged: {
-                    if (!checked) {
-                        kcm.ntpServer = ""
-                        kcm.saveTime()
-                    }
+        PlasmaComponents.Switch {
+            id: ntpCheckBox
+            checked: kcm.ntpServer != ""
+            onCheckedChanged: {
+                if (!checked) {
+                    kcm.ntpServer = ""
+                    kcm.saveTime()
                 }
             }
-            PlasmaComponents.Button {
-                id: ntpButton
-                text: kcm.ntpServer == "" ? i18n("Pick a server") : kcm.ntpServer
-                onClicked: ntpServerPickerDialog.open()
-                enabled: ntpCheckBox.checked
-            }
         }
-
 
         TimePicker {
             id: timePicker

@@ -1,14 +1,17 @@
 project( kcm_mobile_time )
 
-include_directories(../../../../components/settings)
+#include_directories(../../../../components/settings)
 
-configure_file(config.h.cmake ${CMAKE_CURRENT_BINARY_DIR}/config.h )
+#configure_file(config.h.cmake ${CMAKE_CURRENT_BINARY_DIR}/config.h )
+
 
 set(timesettings_SRCS
     timesettings.cpp
     timezone.cpp
     timezonesmodel.cpp
 )
+
+qt5_add_dbus_interface(timesettings_SRCS ${CMAKE_CURRENT_SOURCE_DIR}/timedated1.xml timedated_interface)
 
 add_library(kcm_mobile_time MODULE ${timesettings_SRCS})
 

@@ -57,7 +57,7 @@ Item {
     Text {
         anchors.left: parent.horizontalCenter
         anchors.verticalCenter: timeZoneLabel.verticalCenter
-        text: timeSettings.timeZone
+        text: kcm.timeZone
     }
 
     PlasmaComponents.TextField {
@@ -74,14 +74,14 @@ Item {
         }
         onTextChanged: {
             //print("update filter" + text);
-            timeSettings.timeZoneFilterChanged(text);
+            kcm.timeZoneFilterChanged(text);
             filterModel.filterRegExp = ".*"+text+".*"
         }
     }
 
     PlasmaCore.SortFilterModel {
         id: filterModel
-        sourceModel: timeSettings.timeZonesModel
+        sourceModel: kcm.timeZonesModel
         filterRole: "display"
         filterRegExp: ".*"+tzFilter.text+".*"
         sortRole: "display"
@@ -123,7 +123,7 @@ Item {
         }
 
         model: filterModel
-        //model: timeSettings.timeZonesModel
+//         model: kcm.timeZonesModel
 
         delegate: timeZoneDelegate
         highlight: PlasmaCore.FrameSvgItem {
@@ -145,10 +145,10 @@ Item {
                 text: display
             }
             enabled: true
-            checked: timeSettings.timeZone == display
+            checked: kcm.timeZone == display
             onClicked: {
                 print (" save: " + display);
-                timeSettings.saveTimeZone(display)
+                kcm.saveTimeZone(display)
                 timeZonePickerDialog.close()
             }
         }

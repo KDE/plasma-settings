@@ -88,7 +88,7 @@ class TimeSettings : public KQuickAddons::ConfigModule
         void setTimeFormat(const QString &timeFormat);
         void setTwentyFour(bool t);
         void timeout();
-        void saveTime();
+        bool saveTime();
         Q_INVOKABLE void timeZoneFilterChanged(const QString &filter);
         Q_INVOKABLE void saveTimeZone(const QString &newtimezone);
 

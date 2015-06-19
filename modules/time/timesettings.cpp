@@ -52,6 +52,9 @@
 
 #include <QtCore/QDate>
 
+#include "timedated_interface.h"
+
+
 #define FORMAT24H "HH:mm:ss"
 #define FORMAT12H "h:mm:ss ap"
 
@@ -140,6 +143,7 @@ void TimeSettingsPrivate::initTimeZones()
         const KTimeZone zone = it.value();
         if (timeZoneFilter.isEmpty() || zone.name().contains(timeZoneFilter, Qt::CaseInsensitive)) {
             TimeZone *_zone = new TimeZone(zone);
+            qDebug() << "Zone: " << _zone->name();
             _zones.append(_zone);
             QStandardItem *item = new QStandardItem(_zone->name());
             item->setData(_zone->name().split('/').first(), Qt::UserRole+1);
@@ -234,54 +238,54 @@ void TimeSettings::setUseNtp(bool ntp)
     }
 }
 
-void TimeSettings::saveTime()
+bool TimeSettings::saveTime()
 {
-    /*
-    QVariantMap helperargs;
 
+    OrgFreedesktopTimedate1Interface timedateIface("org.freedesktop.timedate1", "/org/freedesktop/timedate1", QDBusConnection::systemBus());
 
-    //TODO: enable NTP
-    // Save the order, but don't duplicate!
-    QStringList list;
-    list << d->useNtp;
-    helperargs["ntp"] = true;
-    helperargs["useNtps"] = list;
-    helperargs["ntpEnabled"] = !d->useNtp.isEmpty();
+    bool rc = true;
+    //final arg in each method is "user-interaction" i.e whether it's OK for polkit to ask for auth
 
-    if (!d->useNtp.isEmpty()) {
-        // NTP Time setting - done in helper
-        qDebug() << "Setting date from time server " << list;
-    } else {
-        // User time setting
-        QDateTime dt(d->currentDate, d->currentTime);
+    //we cannot send requests up front then block for all replies as we need NTP to be disabled before we can make a call to SetTime
+    //timedated processes these in parallel and will return an error otherwise
 
-        qDebug() << "Set date " << dt;
-
-        helperargs["date"] = true;
-        helperargs["newdate"] = QString::number(dt.toTime_t());
-        helperargs["olddate"] = QString::number(::time(0));
+    auto reply = timedateIface.SetNTP(useNtp(), true);
+    reply.waitForFinished();
+    if (reply.isError()) {
+        //KMessageBox::error(this, i18n("Unable to change NTP settings"));
+        qWarning() << "Failed to enable NTP" << reply.error().name() << reply.error().message();
+        rc = false;
     }
 
-    / * TODO: enable timeZones
-    QStringList selectedZones(tzonelist->selection());
 
-    if (selectedZones.count() > 0) {
-        QString selectedzone(selectedZones[0]);
-        helperargs["tz"] = true;
-        helperargs["tzone"] = selectedzone;
-    } else {
-        helperargs["tzreset"] = true; // // make the helper reset the timezone
-    }* /
-
-    KAuth::Action writeAction("org.kde.active.clockconfig.save");
-    writeAction.setHelperId("org.kde.active.clockconfig");
-    writeAction.setArguments(helperargs);
-
-    auto job = writeAction.execute();
-    if (!job->exec()) {
-        qWarning()<< "KAuth returned an error code:" << job->errorString();
+    if (!useNtp()) {
+        QDateTime userTime;
+        userTime.setTime(currentTime());
+        userTime.setDate(currentDate());
+        qDebug() << "Setting userTime: " << userTime;
+        qint64 timeDiff = userTime.toMSecsSinceEpoch() - QDateTime::currentMSecsSinceEpoch();
+        //*1000 for milliseconds -> microseconds
+        auto reply = timedateIface.SetTime(timeDiff * 1000, true, true);
+        reply.waitForFinished();
+        if (reply.isError()) {
+            //KMessageBox::error(this, i18n("Unable to set current time"));
+            qWarning() << "Failed to set current time" << reply.error().name() << reply.error().message();
+            rc = false;
+        }
     }
-    */
+    QString selectedTimeZone = timeZone();
+    if (!selectedTimeZone.isEmpty()) {
+        qDebug() << "Setting timezone: " << selectedTimeZone;
+        auto reply = timedateIface.SetTimezone(selectedTimeZone, true);
+        reply.waitForFinished();
+        if (reply.isError()) {
+            //KMessageBox::error(this, i18n("Unable to set timezone"));
+            qWarning() << "Failed to set timezone" << reply.error().name() << reply.error().message();
+            rc = false;
+        }
+    }
+
+    return rc;
 }
 
 QString TimeSettings::timeFormat()
