@@ -18,8 +18,6 @@ add_library(kcm_mobile_time MODULE ${timesettings_SRCS})
 target_link_libraries(kcm_mobile_time
     Qt5::Quick
     Qt5::Qml
-    KF5::Plasma
-    KF5::Auth
     KF5::KDELibs4Support
     KF5::QuickAddons
     )

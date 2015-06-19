@@ -65,6 +65,7 @@ public:
     QDate currentDate;
     QTimer *timer;
     bool useNtp;
+    QString errorString;
 
     void initSettings();
     void initTimeZones();
@@ -246,7 +247,8 @@ bool TimeSettings::saveTime()
     auto reply = timedateIface.SetNTP(useNtp(), true);
     reply.waitForFinished();
     if (reply.isError()) {
-        //KMessageBox::error(this, i18n("Unable to change NTP settings"));
+        d->errorString = i18n("Unable to change NTP settings");
+        emit errorStringChanged();
         qWarning() << "Failed to enable NTP" << reply.error().name() << reply.error().message();
         rc = false;
     }
@@ -262,7 +264,8 @@ bool TimeSettings::saveTime()
         auto reply = timedateIface.SetTime(timeDiff * 1000, true, true);
         reply.waitForFinished();
         if (reply.isError()) {
-            //KMessageBox::error(this, i18n("Unable to set current time"));
+            d->errorString = i18n("Unable to set current time");
+            emit errorStringChanged();
             qWarning() << "Failed to set current time" << reply.error().name() << reply.error().message();
             rc = false;
         }
@@ -277,16 +280,14 @@ void TimeSettings::saveTimeZone(const QString &newtimezone)
     qDebug() << "Saving timezone to config: " << newtimezone;
     OrgFreedesktopTimedate1Interface timedateIface("org.freedesktop.timedate1", "/org/freedesktop/timedate1", QDBusConnection::systemBus());
 
-    bool rc = true;
-
     if (!newtimezone.isEmpty()) {
         qDebug() << "Setting timezone: " << newtimezone;
         auto reply = timedateIface.SetTimezone(newtimezone, true);
         reply.waitForFinished();
         if (reply.isError()) {
-            //KMessageBox::error(this, i18n("Unable to set timezone"));
+            d->errorString = i18n("Unable to set timezone");
+            emit errorStringChanged();
             qWarning() << "Failed to set timezone" << reply.error().name() << reply.error().message();
-            rc = false;
         }
     }
 
@@ -391,6 +392,11 @@ void TimeSettings::setTwentyFour(bool t)
         emit currentTimeChanged();
         timeout();
     }
+}
+
+QString TimeSettings::errorString()
+{
+    return d->errorString;
 }
 
 

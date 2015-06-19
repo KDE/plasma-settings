@@ -54,6 +54,8 @@ class TimeSettings : public KQuickAddons::ConfigModule
     Q_PROPERTY(QDate currentDate READ currentDate WRITE setCurrentDate NOTIFY currentDateChanged)
     Q_PROPERTY(bool useNtp READ useNtp WRITE setUseNtp NOTIFY useNtpChanged)
     Q_PROPERTY(QString currentTimeText READ currentTimeText NOTIFY currentTimeTextChanged)
+    Q_PROPERTY(QString errorString READ errorString NOTIFY errorStringChanged)
+
 
     public:
         /**
@@ -81,6 +83,8 @@ class TimeSettings : public KQuickAddons::ConfigModule
         QObject* timeZonesModel();
         bool twentyFour();
 
+        QString errorString();
+
     public Q_SLOTS:
         void setTimeZone(const QString &timezone);
         void setTimeZones(const QList<QObject*> timezones);
@@ -102,6 +106,7 @@ class TimeSettings : public KQuickAddons::ConfigModule
         void timeZonesChanged();
         void timeZonesModelChanged();
         void useNtpChanged();
+        void errorStringChanged();
 
     protected:
         QString findNtpUtility();
