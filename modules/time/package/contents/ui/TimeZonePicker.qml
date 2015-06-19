@@ -64,18 +64,11 @@ Item {
         id: tzFilter
         width: parent.width
         placeholderText: "Filter..."
-        clearButtonShown: true
+//         clearButtonShown: true // FIXME: screws up text layout inside filter field
         //Keys.onTabPressed: tf2.forceActiveFocus();
         anchors {
             //verticalCenter: parent.verticalCenter
             top: timeZoneLabel.bottom
-            //topMargin: 32;
-            //bottom: parent.bottom
-        }
-        onTextChanged: {
-            //print("update filter" + text);
-            kcm.timeZoneFilterChanged(text);
-            filterModel.filterRegExp = ".*"+text+".*"
         }
     }
 
@@ -86,21 +79,13 @@ Item {
         filterRegExp: ".*"+tzFilter.text+".*"
         sortRole: "display"
         sortOrder: "AscendingOrder"
-
-//         {
-// 
-//             f = "s/" + tzFilter.text + "\.*/g"
-//             print(" New regex: :" + f);
-//             return f
-//         }
-
     }
 
     ListView {
         id: timeZonesList
         currentIndex: -1
         clip: true
-        cacheBuffer: 90000
+        //cacheBuffer: 90000
         anchors {
             //verticalCenter: parent.verticalCenter
             top: tzFilter.bottom
@@ -123,7 +108,6 @@ Item {
         }
 
         model: filterModel
-//         model: kcm.timeZonesModel
 
         delegate: timeZoneDelegate
         highlight: PlasmaCore.FrameSvgItem {
@@ -153,7 +137,4 @@ Item {
             }
         }
     }
-    //Rectangle { anchors.fill: timeZonePicker; color: "green"; opacity: 0.1; }
-    //Rectangle { anchors.fill: timeZonesList; color: "blue"; opacity: 0.1; p
-
 }

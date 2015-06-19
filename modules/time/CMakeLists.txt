@@ -30,18 +30,3 @@ kcoreaddons_desktop_to_json(kcm_mobile_time "timesettings.desktop")
 install(FILES timesettings.desktop DESTINATION ${SERVICES_INSTALL_DIR})
 install(TARGETS kcm_mobile_time DESTINATION ${PLUGIN_INSTALL_DIR}/kcms)
 kpackage_install_package(package kcm_mobile_time kcms)
-
-
-########### helper ###############
-
-add_executable(activedatetimehelper helper.cpp ${helper_mocs})
-target_link_libraries(activedatetimehelper
-    KF5::Auth
-    KF5::ConfigCore
-    KF5::KDELibs4Support
-)
-install(TARGETS activedatetimehelper DESTINATION ${KAUTH_HELPER_INSTALL_DIR})
-
-kauth_install_helper_files(activedatetimehelper org.kde.active.clockconfig root)
-kauth_install_actions(org.kde.active.clockconfig clockconfig_actions.actions)
-

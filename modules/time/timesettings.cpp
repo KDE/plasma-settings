@@ -3,6 +3,7 @@
 *   Copyright 2005 S.R.Haque <srhaque@iee.org>.                           *
 *   Copyright 2009 David Faure <faure@kde.org>                            *
 *   Copyright 2011-2015 Sebastian Kügler <sebas@kde.org>                  *
+*   Copyright (C) 2015 David Edmundson <davidedmundson@kde.org>           *
 *                                                                         *
 *   This program is free software; you can redistribute it and/or modify  *
 *   it under the terms of the GNU General Public License as published by  *
@@ -25,8 +26,8 @@
 #include "timezonesmodel.h"
 
 #include <QDebug>
-#include <KIcon>
-#include <KLocale>
+#include <QtCore/QDate>
+
 
 #include <QStandardItemModel>
 #include <QDBusConnection>
@@ -34,23 +35,14 @@
 #include <QTimer>
 #include <QVariant>
 
-#include <kauthaction.h>
 
-#include <kauthexecutejob.h>
-
-#include <kdemacros.h>
 #include <KAboutData>
 #include <KPluginFactory>
-#include <KPluginLoader>
 #include <KSharedConfig>
-#include <KStandardDirs>
 #include <KConfigGroup>
-#include <KGlobalSettings>
-#include <KGlobal>
 #include <KSystemTimeZone>
 #include <KTimeZone>
-
-#include <QtCore/QDate>
+#include <KLocalizedString>
 
 #include "timedated_interface.h"
 
@@ -109,7 +101,7 @@ TimeSettings::TimeSettings(QObject* parent, const QVariantList& args)
     connect(d->timer, &QTimer::timeout, this, &TimeSettings::timeout);
     d->timer->start();
 
-    qDebug() << "TimeSettings module loaded.";
+    qDebug() << "TimeSettings module loadedddd.";
 }
 
 TimeSettings::~TimeSettings()
@@ -143,7 +135,6 @@ void TimeSettingsPrivate::initTimeZones()
         const KTimeZone zone = it.value();
         if (timeZoneFilter.isEmpty() || zone.name().contains(timeZoneFilter, Qt::CaseInsensitive)) {
             TimeZone *_zone = new TimeZone(zone);
-            qDebug() << "Zone: " << _zone->name();
             _zones.append(_zone);
             QStandardItem *item = new QStandardItem(_zone->name());
             item->setData(_zone->name().split('/').first(), Qt::UserRole+1);
@@ -158,7 +149,7 @@ void TimeSettingsPrivate::initTimeZones()
 
 QString TimeSettingsPrivate::displayName( const KTimeZone &zone )
 {
-    return i18n( zone.name().toUtf8() ).replace( '_', ' ' );
+    return zone.name().toUtf8().replace( '_', ' ' );
 }
 
 void TimeSettingsPrivate::initSettings()
@@ -166,9 +157,12 @@ void TimeSettingsPrivate::initSettings()
     localeConfig = KSharedConfig::openConfig("kdeglobals", KConfig::SimpleConfig);
     localeSettings = KConfigGroup(localeConfig, "Locale");
 
-    //setTimeFormat(d->localeSettings.readEntry("TimeFormat", QString(FORMAT24H)));
-    //setTimeFormat(d->localeSettings.readEntry("TimeFormat", QString(FORMAT12H)));
     q->setTimeFormat( localeSettings.readEntry( "TimeFormat", QString(FORMAT24H) ) ); // FIXME?!
+
+    OrgFreedesktopTimedate1Interface timeDatedIface("org.freedesktop.timedate1", "/org/freedesktop/timedate1", QDBusConnection::systemBus());
+    //the server list is not relevant for timesyncd, it fetches it from the network
+    q->setUseNtp(timeDatedIface.nTP());
+
 
     /*
     KConfig _config( "kcmclockrc", KConfig::NoGlobals );
@@ -273,10 +267,21 @@ bool TimeSettings::saveTime()
             rc = false;
         }
     }
-    QString selectedTimeZone = timeZone();
-    if (!selectedTimeZone.isEmpty()) {
-        qDebug() << "Setting timezone: " << selectedTimeZone;
-        auto reply = timedateIface.SetTimezone(selectedTimeZone, true);
+    saveTimeZone(timeZone());
+
+    return rc;
+}
+
+void TimeSettings::saveTimeZone(const QString &newtimezone)
+{
+    qDebug() << "Saving timezone to config: " << newtimezone;
+    OrgFreedesktopTimedate1Interface timedateIface("org.freedesktop.timedate1", "/org/freedesktop/timedate1", QDBusConnection::systemBus());
+
+    bool rc = true;
+
+    if (!newtimezone.isEmpty()) {
+        qDebug() << "Setting timezone: " << newtimezone;
+        auto reply = timedateIface.SetTimezone(newtimezone, true);
         reply.waitForFinished();
         if (reply.isError()) {
             //KMessageBox::error(this, i18n("Unable to set timezone"));
@@ -285,8 +290,10 @@ bool TimeSettings::saveTime()
         }
     }
 
-    return rc;
+    setTimeZone(newtimezone);
+    emit timeZoneChanged();
 }
+
 
 QString TimeSettings::timeFormat()
 {
@@ -364,27 +371,6 @@ void TimeSettings::timeZoneFilterChanged(const QString &filter)
     d->timeZoneFilter.replace(' ', '_');
     d->initTimeZones();
     emit timeZonesChanged();
-}
-
-void TimeSettings::saveTimeZone(const QString &newtimezone)
-{
-    qDebug() << "Saving timezone to config: " << newtimezone;
-
-    QVariantMap helperargs;
-    helperargs["tz"] = true;
-    helperargs["tzone"] = newtimezone;
-
-    KAuth::Action writeAction("org.kde.active.clockconfig.save");
-    writeAction.setHelperId("org.kde.active.clockconfig");
-    writeAction.setArguments(helperargs);
-
-    auto job = writeAction.execute();
-    if (!job->exec()) {
-        qWarning()<< "KAuth returned an error code:" << job->errorString();
-    }
-
-    setTimeZone(newtimezone);
-    emit timeZoneChanged();
 }
 
 bool TimeSettings::twentyFour()

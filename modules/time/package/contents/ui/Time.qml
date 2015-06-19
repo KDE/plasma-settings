@@ -54,13 +54,30 @@ Item {
         PlasmaComponents.Switch {
             id: twentyFourSwitch
             checked: kcm.twentyFour
-
+            Layout.alignment : Qt.AlignRight
             onClicked : {
                 kcm.twentyFour = checked
                 print(kcm.timeZone);
             }
         }
 
+        PlasmaComponents.Label {
+            id: ntpLabel
+            text: i18n("Set time automatically:")
+            Layout.fillWidth: true
+        }
+
+        PlasmaComponents.Switch {
+            id: ntpCheckBox
+            Layout.alignment : Qt.AlignRight
+            checked: kcm.ntpServer != ""
+            onCheckedChanged: {
+                if (!checked) {
+                    kcm.ntpServer = ""
+                    kcm.saveTime()
+                }
+            }
+        }
 
         PlasmaComponents.Label {
             id: timeZoneLabel
@@ -72,23 +89,6 @@ Item {
             id: timeZoneButton
             text: kcm.timeZone
             onClicked: timeZonePickerDialog.open()
-        }
-
-        PlasmaComponents.Label {
-            id: ntpLabel
-            text: i18n("Set time automatically:")
-            Layout.fillWidth: true
-        }
-
-        PlasmaComponents.Switch {
-            id: ntpCheckBox
-            checked: kcm.ntpServer != ""
-            onCheckedChanged: {
-                if (!checked) {
-                    kcm.ntpServer = ""
-                    kcm.saveTime()
-                }
-            }
         }
 
         TimePicker {
