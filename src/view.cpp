@@ -28,6 +28,7 @@
 #include <KDBusService>
 #include <Plasma/Package>
 #include <Plasma/PluginLoader>
+#include <Plasma/Theme>
 
 #include <KDeclarative/KDeclarative>
 #include <KLocalizedString>
@@ -38,6 +39,9 @@ View::View(const QCommandLineParser &parser, QWindow *parent)
     : QQuickView(parent),
     m_settingsRoot(0)
 {
+    Plasma::Theme theme(this);
+    theme.setUseGlobalSettings(true);
+
     const QString package = parser.value("layout");
     const QString module = parser.value("module");
     const QString formFactor = parser.value("formfactor");
