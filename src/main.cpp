@@ -35,8 +35,6 @@
 #include <KLocalizedString>
 #include <KPackage/PackageLoader>
 #include <KPluginMetaData>
-#include <KService>
-#include <KServiceTypeTrader>
 #include <Plasma/Theme>
 
 // Own
@@ -88,24 +86,13 @@ int main(int argc, char **argv)
     aboutData.processCommandLine(&parser);
 
     if (parser.isSet(_list)) {
-        QString query;
-        KService::List services = KServiceTypeTrader::self()->query("Active/SettingsModule", query);
-
-        int nameWidth = 0;
-        foreach (const KService::Ptr &service, services) {
-            KPluginInfo info(service);
-            const int len = info.pluginName().length();
-            if (len > nameWidth) {
-                nameWidth = len;
-            }
-        }
-
+        int nameWidth = 24;
         QSet<QString> seen;
         std::cout << std::setfill('.');
 
         auto formfactor = parser.value("formfactor");
 
-        for (auto plugin : KPackage::PackageLoader::self()->listPackages(QStringLiteral("Active/SettingsModule"), "kpackage/kcms/")) {
+        for (auto plugin : KPackage::PackageLoader::self()->listPackages(QString(), "kpackage/kcms/")) {
             if (seen.contains(plugin.pluginId())) {
                 continue;
             }
@@ -114,6 +101,10 @@ int main(int argc, char **argv)
             QStringList formFactors = KPluginMetaData::readStringList(kp, QStringLiteral("FormFactors"));
             if (!formfactor.isEmpty() && !formFactors.contains(formfactor) && formfactor != QStringLiteral("all")) {
                 continue;
+            }
+            const int len = plugin.pluginId().length();
+            if (len > nameWidth) {
+                nameWidth = len;
             }
 
             seen << plugin.pluginId();
@@ -132,6 +123,10 @@ int main(int argc, char **argv)
             QStringList formFactors = KPluginMetaData::readStringList(kp, QStringLiteral("FormFactors"));
             if (!formfactor.isEmpty() && !formFactors.contains(formfactor) && formfactor != QStringLiteral("all")) {
                 continue;
+            }
+            const int len = plugin.pluginId().length();
+            if (len > nameWidth) {
+                nameWidth = len;
             }
             std::cout << plugin.pluginId().toLocal8Bit().data()
             << ' '
