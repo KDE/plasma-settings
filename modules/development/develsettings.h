@@ -30,7 +30,6 @@ class DevelSettings : public KQuickAddons::ConfigModule
     Q_OBJECT
     Q_PROPERTY(bool sshEnabled READ sshEnabled WRITE enableSsh NOTIFY enableSshChanged)
     Q_PROPERTY(bool integrationEnabled READ isIntegrationEnabled WRITE setIntegrationEnabled NOTIFY enableIntegrationChanged)
-    Q_PROPERTY(bool showTerminal READ terminalShown WRITE setShowTerminal NOTIFY showTerminalChanged)
 
 public:
     DevelSettings(QObject* parent, const QVariantList& args);
@@ -38,9 +37,6 @@ public:
 
     bool sshEnabled() const;
     void enableSsh(bool enable);
-
-    bool terminalShown() const;
-    void setShowTerminal(bool show);
 
     void setIntegrationEnabled(bool enable);
     bool isIntegrationEnabled();

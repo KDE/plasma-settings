@@ -44,23 +44,12 @@
 
 K_PLUGIN_FACTORY_WITH_JSON(DevelSettingsFactory, "develsettings.json", registerPlugin<DevelSettings>();)
 
-const QString terminalApp("");
-
-
 DevelSettings::DevelSettings(QObject* parent, const QVariantList& args)
 : KQuickAddons::ConfigModule(parent, args)
 {
     // TODO: should probably not rely on systemctl, but be put into a platform specific backend?
     const int rv = QProcess::execute("systemctl is-enabled sshd.service");
     m_sshEnabled = rv == 0;
-
-    m_terminalShown = false;
-    KConfigGroup confGroup(KSharedConfig::openConfig(), "General");
-
-    m_terminalApp = confGroup.readPathEntry("TerminalApplication", QString::fromLatin1("konsole"));
-    KService::Ptr service = KService::serviceByStorageId(m_terminalApp);
-//     qDebug() << "showing?" << service->noDisplay();
-//     m_terminalShown = service && !service->noDisplay();
 
     KAboutData* about = new KAboutData("kcm_settings_devel", i18n("Developer Settings"),
                                        "1.0", QString(), KAboutLicense::LGPL);
@@ -69,6 +58,7 @@ DevelSettings::DevelSettings(QObject* parent, const QVariantList& args)
     setButtons(Apply | Default);
 
 
+    KConfigGroup confGroup(KSharedConfig::openConfig(), "General");
     m_integrationEnabled = confGroup.readEntry("IntegrationEnabled", false);
 }
 
@@ -103,39 +93,6 @@ void DevelSettings::enableSsh(bool enable)
         if (was != m_sshEnabled) {
             emit enableSshChanged(m_sshEnabled);
         }
-    }
-}
-
-bool DevelSettings::terminalShown() const
-{
-    return m_terminalShown;
-}
-
-void DevelSettings::setShowTerminal(bool show)
-{
-    if (m_terminalShown != show) {
-        m_terminalShown = show;
-        KService::Ptr service = KService::serviceByStorageId(m_terminalApp);
-        if (!service) {
-            //TODO: if not installed, install it
-            return;
-        }
-
-        if (show) {
-            QFile::remove(service->locateLocal());
-        } else {
-            KDesktopFile file(service->locateLocal());
-            KConfigGroup dg = file.desktopGroup();
-            dg.writeEntry("Exec", m_terminalApp);
-            dg.writeEntry("NoDisplay", !show);
-        }
-
-        if (KSycoca::isAvailable()) {
-            QDBusInterface dbus("org.kde.kded", "/kbuildsycoca", "org.kde.kbuildsycoca");
-            dbus.call(QDBus::NoBlock, "recreate");
-        }
-
-        emit showTerminalChanged(m_terminalShown);
     }
 }
 

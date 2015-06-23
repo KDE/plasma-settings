@@ -1,10 +1,6 @@
 project(kcm_settings_devel)
 
-find_package(KF5 REQUIRED COMPONENTS Service)
-
-
 set(developmentsettings_SRCS
-    #develsettingsplugin.cpp
     develsettings.cpp
 )
 

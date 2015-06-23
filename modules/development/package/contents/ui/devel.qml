@@ -65,17 +65,6 @@ Item {
         }
 
         PlasmaComponents.Label {
-            text: i18n("Show terminal app:")
-            Layout.fillWidth: true
-        }
-
-        PlasmaComponents.Switch {
-            id: terminal
-            checked: kcm.showTerminal
-            onClicked: kcm.showTerminal = checked
-        }
-
-        PlasmaComponents.Label {
             text: i18n("Enable integration repository:")
             Layout.fillWidth: true
         }
