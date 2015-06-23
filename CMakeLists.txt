@@ -25,12 +25,6 @@ include(KDECompilerSettings)
 
 find_package(Qt5 REQUIRED NO_MODULE COMPONENTS Core Quick Test Gui)
 
-################# Enable C++11 features for clang and gcc #################
-
-if(UNIX)
-   set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -Wall -std=c++0x")
-endif()
-
 ################# now find all used packages #################
 
 set (QT_MIN_VERSION "5.4.0")
