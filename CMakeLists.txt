@@ -45,9 +45,6 @@ add_subdirectory(src)
 add_subdirectory(import)
 add_subdirectory(modules)
 
-# Install plugin definition
-install(FILES active-settingsmodule.desktop DESTINATION ${SERVICETYPES_INSTALL_DIR})
-
 plasma_install_package(package org.kde.active.settings packages package)
 
 
