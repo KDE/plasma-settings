@@ -136,52 +136,7 @@ void SettingsModulesModel::populate()
     }
     d->settingsModules.clear();
 
-    QString constraint;
-    if (d->appName.isEmpty()) {
-        constraint.append("not exist [X-KDE-ParentApp]");
-    } else {
-        constraint.append("[X-KDE-ParentApp] == '").append(d->appName).append("'");
-    }
-
-    KService::List services = KServiceTypeTrader::self()->query("Active/SettingsModule", constraint);
-    QSet<QString> seen;
-    //qDebug() << "Found " << services.count() << " modules";
-    foreach (const KService::Ptr &service, services) {
-        if (service->noDisplay()) {
-            continue;
-        }
-
-        KPluginInfo info(service);
-        if (seen.contains(info.pluginName())) {
-            continue;
-        }
-
-        seen.insert(info.pluginName());
-        QString description;
-        if (!service->genericName().isEmpty() && service->genericName() != service->name()) {
-            description = service->genericName();
-        } else if (!service->comment().isEmpty()) {
-            description = service->comment();
-        }
-
-        // Filter out modules that are not explicitely suitable for the "handset" formfactor
-
-        auto kp = info.toMetaData().rawData()["KPlugin"].toObject();
-        QStringList formFactors = KPluginMetaData::readStringList(kp, QStringLiteral("FormFactors"));
-        if (!formFactor().isEmpty() && !formFactors.contains(formFactor()) && formFactor() != QStringLiteral("all")) {
-            continue;
-        }
-
-        SettingsModule* item = new SettingsModule(this);
-
-        item->setName(service->name());
-        item->setDescription(description);
-        item->setIconName(service->icon());
-        item->setModule(info.pluginName());
-        item->setCategory(info.category());
-        d->settingsModules.append(item);
-    }
-
+    QSet<QString> seen; // track dupes
     auto plugins = KPluginLoader::findPlugins("kcms");
 
     for (auto plugin : KPackage::PackageLoader::self()->listPackages(QStringLiteral("Active/SettingsModule"), "kpackage/kcms/")) {
