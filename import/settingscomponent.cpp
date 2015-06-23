@@ -24,8 +24,6 @@
 #include <QQmlComponent>
 
 #include <KPluginTrader>
-#include <KService>
-#include <KServiceTypeTrader>
 #include <QDebug>
 #include <KPluginMetaData>
 
