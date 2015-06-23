@@ -105,37 +105,6 @@ int main(int argc, char **argv)
 
         auto formfactor = parser.value("formfactor");
 
-        foreach (const KService::Ptr &service, services) {
-            if (service->noDisplay()) {
-                continue;
-            }
-
-            KPluginInfo info(service);
-            auto kp = info.toMetaData().rawData()["KPlugin"].toObject();
-            QStringList formFactors = KPluginMetaData::readStringList(kp, QStringLiteral("FormFactors"));
-            if (!formfactor.isEmpty() && !formFactors.contains(formfactor) && formfactor != QStringLiteral("all")) {
-                continue;
-            }
-
-            if (seen.contains(info.pluginName())) {
-                continue;
-            }
-            seen.insert(info.pluginName());
-
-            QString description;
-            if (!service->genericName().isEmpty() && service->genericName() != service->name()) {
-                description = service->genericName();
-            } else if (!service->comment().isEmpty()) {
-                description = service->comment();
-            }
-            std::cout << info.pluginName().toLocal8Bit().data()
-                      << ' '
-                      << std::setw(nameWidth - info.pluginName().length() + 2)
-                      << '.' << ' '
-                      << description.toLocal8Bit().data() << std::endl;
-        }
-
-
         for (auto plugin : KPackage::PackageLoader::self()->listPackages(QStringLiteral("Active/SettingsModule"), "kpackage/kcms/")) {
             if (seen.contains(plugin.pluginId())) {
                 continue;
