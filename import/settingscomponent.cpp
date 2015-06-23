@@ -78,64 +78,6 @@ void SettingsComponent::loadModule(const QString &name)
         qDebug() << "Not loading plugin ..." << pluginName;
         return;
     }
-    query = QString("[X-KDE-PluginInfo-Name] == '%1'").arg(pluginName);
-    KService::List offers = KServiceTypeTrader::self()->query("Active/SettingsModule", query);
-    KService::List::const_iterator iter;
-    for(iter = offers.constBegin(); iter < offers.constEnd(); ++iter) {
-        QString error;
-        KService::Ptr service = *iter;
-
-        //KPluginFactory *factory = KPluginLoader(service->library()).factory();
-
-        QString description;
-        if (!service->genericName().isEmpty() && service->genericName() != service->name()) {
-            description = service->genericName();
-        } else if (!service->comment().isEmpty()) {
-            description = service->comment();
-        }
-        qDebug() << "Found plugin" << description << service->library();
-
-
-        d->settingsModule = new SettingsModule(this);
-
-        if (!service->library().isEmpty()) {
-            // Load binary plugin
-            qDebug() << "\n\nloading binary plugin from query: " << service->name();
-            KPluginLoader loader(KPluginLoader::findPlugin("active/settingsmodule/"+service->library()));
-            KPluginFactory* factory = loader.factory();
-            if (!factory) {
-                qWarning() << "Error loading plugin:" << loader.errorString();
-            } else {
-                QObject* obj = factory->create<QObject>();
-                if (!obj) {
-                    qWarning() << "Error creating object from plugin" << loader.fileName();
-                    d->valid = true;
-                }
-            }
-        } else {
-            qDebug() << "QML only plugin";
-        }
-
-        connect(d->settingsModule, &SettingsModule::nameChanged, this, &SettingsComponent::nameChanged);
-        connect(d->settingsModule, &SettingsModule::descriptionChanged,
-                this, &SettingsComponent::descriptionChanged);
-
-        d->settingsModule->setName(service->name());
-        setIcon(service->icon());
-        d->settingsModule->setDescription(description);
-        d->settingsModule->setModule(pluginName);
-
-       if (d->settingsModule) {
-           //qDebug() << "Successfully loaded plugin:" << service->name();
-           //emit pluginLoaded(plugin);
-       } else {
-           qDebug() << error;
-       }
-    }
-
-   /* if (!d->settingsModule) {
-        return;
-    }*/
 
     const QString plugin = KPluginLoader::findPlugin(QLatin1String("kcms/") + name);
 
