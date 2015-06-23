@@ -26,8 +26,6 @@
 
 #include <KPackage/PackageLoader>
 #include <KPluginInfo>
-#include <KService>
-#include <KServiceTypeTrader>
 #include <KSharedConfig>
 #include <KPluginMetaData>
 

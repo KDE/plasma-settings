@@ -19,9 +19,6 @@
 
 #include "settingsmodule.h"
 
-#include <KService>
-#include <KServiceTypeTrader>
-
 class SettingsModulePrivate {
 
 public:

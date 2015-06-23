@@ -31,8 +31,7 @@ set (QT_MIN_VERSION "5.4.0")
 
 find_package(KF5 REQUIRED COMPONENTS
     WindowSystem CoreAddons Solid Config Auth DBusAddons
-    I18n Service IconThemes Bookmarks
-    Plasma PlasmaQuick Declarative KIO KDELibs4Support
+    I18n Plasma PlasmaQuick Declarative KIO
     )
 
 add_subdirectory(src)
