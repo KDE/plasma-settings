@@ -31,49 +31,32 @@ Item {
     id: timeModule
     objectName: "timeModule"
 
-    GridLayout {
-        id: formLayout
-
-        anchors.fill: parent
-
-        columns: 2
-        rowSpacing: units.gridUnit / 2
-
-        ExclusiveGroup { id: themeGroup }
-
-
-        PlasmaComponents.Label {
-            text: i18n("Light")
-            Layout.fillWidth: true
+    ExclusiveGroup { id: themeGroup }
+    ColumnLayout {
+        anchors {
+            left: parent.left
+            top: parent.top
+            right: parent.right
         }
-        RadioButton {
-            checked: kcm.themeName == "default"
-            exclusiveGroup: themeGroup
-            onCheckedChanged: {
-                if (checked) {
-                    kcm.themeName = "default";
+        spacing: units.gridUnit / 2
+        Repeater {
+            model: kcm.themeListModel
+            delegate: RowLayout {
+                PlasmaComponents.Label {
+                    text: model.display
+                    Layout.fillWidth: true
+                }
+                RadioButton {
+                    exclusiveGroup: themeGroup
+                    checked: kcm.themeName == model.packageNameRole
+                    onCheckedChanged: {
+                        if (checked) {
+                            kcm.themeName = model.packageNameRole;
+                        }
+                    }
                 }
             }
         }
-
-
-        PlasmaComponents.Label {
-            text: i18n("Dark")
-            Layout.fillWidth: true
-        }
-        RadioButton {
-            exclusiveGroup: themeGroup
-            onCheckedChanged: {
-                if (checked) {
-                    kcm.themeName = "breeze-dark";
-                }
-            }
-        }
-
-        Item {
-            Layout.fillHeight: true
-        }
-
     }
 
 }

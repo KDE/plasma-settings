@@ -19,6 +19,7 @@
  ***************************************************************************/
 
 #include "themesettings.h"
+#include "themelistmodel.h"
 #include <KPluginFactory>
 #include <KLocalizedString>
 #include <KAboutData>
@@ -39,6 +40,8 @@ ThemeSettings::ThemeSettings(QObject* parent, const QVariantList& args)
 
     qDebug() << "ThemeSettings module loaded.";
 
+    qmlRegisterType<ThemeListModel>();
+    m_themeListModel = new ThemeListModel(this);
     m_theme = new Plasma::Theme(this);
     m_theme->setUseGlobalSettings(true);
     m_themeName = m_theme->themeName();
@@ -64,6 +67,11 @@ void ThemeSettings::setThemeName(const QString& theme)
 QString ThemeSettings::themeName()
 {
     return m_themeName;
+}
+
+ThemeListModel *ThemeSettings::themeListModel()
+{
+    return m_themeListModel;
 }
 
 

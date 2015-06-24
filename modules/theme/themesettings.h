@@ -23,18 +23,20 @@
 
 #include <QObject>
 #include <QVariant>
+#include <KQuickAddons/ConfigModule>
 
 namespace Plasma {
     class Theme;
 }
 
-#include <KQuickAddons/ConfigModule>
+class ThemeListModel;
 
 class ThemeSettings : public KQuickAddons::ConfigModule
 {
     Q_OBJECT
 
     Q_PROPERTY(QString themeName READ themeName WRITE setThemeName NOTIFY themeNameChanged)
+    Q_PROPERTY(ThemeListModel *themeListModel READ themeListModel CONSTANT)
 
     public:
         ThemeSettings(QObject* parent, const QVariantList& args);
@@ -43,12 +45,15 @@ class ThemeSettings : public KQuickAddons::ConfigModule
         QString themeName();
         void setThemeName(const  QString &theme);
 
+        ThemeListModel *themeListModel();
+
     Q_SIGNALS:
         void themeNameChanged();
 
     private:
         Plasma::Theme *m_theme;
         QString m_themeName;
+        ThemeListModel *m_themeListModel;
 };
 
 #endif // THEMESETTINGS_H
