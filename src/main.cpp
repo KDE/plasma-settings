@@ -97,9 +97,8 @@ int main(int argc, char **argv)
                 continue;
             }
             // Filter out modules that are not explicitely suitable for the "handset" formfactor
-            auto kp = plugin.rawData()["KPlugin"].toObject();
-            QStringList formFactors = KPluginMetaData::readStringList(kp, QStringLiteral("FormFactors"));
-            if (!formfactor.isEmpty() && !formFactors.contains(formfactor) && formfactor != QStringLiteral("all")) {
+            //const QStringList &formFactors = plugin.formFactors();
+            if (!formfactor.isEmpty() && !plugin.formFactors().contains(formfactor) && formfactor != QStringLiteral("all")) {
                 continue;
             }
             const int len = plugin.pluginId().length();
@@ -113,15 +112,15 @@ int main(int argc, char **argv)
             << std::setw(nameWidth - plugin.pluginId().length() + 2)
             << '.' << ' '
             << plugin.description().toLocal8Bit().data() << std::endl;
+
+            //qDebug() << "Formafactors: " << formFactors;
         }
 
         for (auto plugin : KPluginLoader::findPlugins("kcms")) {
             if (seen.contains(plugin.pluginId())) {
                 continue;
             }
-            auto kp = plugin.rawData()["KPlugin"].toObject();
-            QStringList formFactors = KPluginMetaData::readStringList(kp, QStringLiteral("FormFactors"));
-            if (!formfactor.isEmpty() && !formFactors.contains(formfactor) && formfactor != QStringLiteral("all")) {
+            if (!formfactor.isEmpty() && !plugin.formFactors().contains(formfactor) && formfactor != QStringLiteral("all")) {
                 continue;
             }
             const int len = plugin.pluginId().length();

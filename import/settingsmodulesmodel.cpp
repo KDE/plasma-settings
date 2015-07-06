@@ -137,7 +137,7 @@ void SettingsModulesModel::populate()
     QSet<QString> seen; // track dupes
     auto plugins = KPluginLoader::findPlugins("kcms");
 
-    for (auto plugin : KPackage::PackageLoader::self()->listPackages(QStringLiteral("Active/SettingsModule"), "kpackage/kcms/")) {
+    for (auto plugin : KPackage::PackageLoader::self()->listPackages(QString(), "kpackage/kcms/")) {
         plugins << plugin;
     }
 
@@ -148,13 +148,10 @@ void SettingsModulesModel::populate()
 
 
         // Filter out modules that are not explicitely suitable for the "handset" formfactor
-        auto kp = plugin.rawData()["KPlugin"].toObject();
-        QStringList formFactors = KPluginMetaData::readStringList(kp, QStringLiteral("FormFactors"));
-        if (!formFactor().isEmpty() && !formFactors.contains(formFactor()) && formFactor() != QStringLiteral("all")) {
+        if (!formFactor().isEmpty() && !plugin.formFactors().contains(formFactor()) && formFactor() != QStringLiteral("all")) {
             continue;
         }
 
-        qDebug() << "Formafactors;" << plugin.pluginId() << formFactors;
         SettingsModule* item = new SettingsModule(this);
 
         item->setName(plugin.name());
