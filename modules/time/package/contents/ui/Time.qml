@@ -70,8 +70,8 @@ Item {
         PlasmaComponents.Switch {
             id: ntpCheckBox
             Layout.alignment : Qt.AlignRight
-            checked: kcm.ntpServer != ""
-            onCheckedChanged: {
+            checked: kcm.useNtp
+            onClicked: {
                 kcm.useNtp = checked;
                 if (!checked) {
                     kcm.ntpServer = ""

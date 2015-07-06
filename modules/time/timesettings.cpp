@@ -67,6 +67,7 @@ public:
     bool useNtp;
     QString errorString;
 
+
     void initSettings();
     void initTimeZones();
     QString displayName(const KTimeZone &zone);
@@ -162,7 +163,7 @@ void TimeSettingsPrivate::initSettings()
 
     OrgFreedesktopTimedate1Interface timeDatedIface("org.freedesktop.timedate1", "/org/freedesktop/timedate1", QDBusConnection::systemBus());
     //the server list is not relevant for timesyncd, it fetches it from the network
-    q->setUseNtp(timeDatedIface.nTP());
+    useNtp = timeDatedIface.nTP();
 
 
     /*
