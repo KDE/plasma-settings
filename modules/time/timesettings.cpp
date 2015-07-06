@@ -3,7 +3,7 @@
 *   Copyright 2005 S.R.Haque <srhaque@iee.org>.                           *
 *   Copyright 2009 David Faure <faure@kde.org>                            *
 *   Copyright 2011-2015 Sebastian Kügler <sebas@kde.org>                  *
-*   Copyright (C) 2015 David Edmundson <davidedmundson@kde.org>           *
+*   Copyright 2015 David Edmundson <davidedmundson@kde.org>               *
 *                                                                         *
 *   This program is free software; you can redistribute it and/or modify  *
 *   it under the terms of the GNU General Public License as published by  *
@@ -103,7 +103,7 @@ TimeSettings::TimeSettings(QObject* parent, const QVariantList& args)
     connect(d->timer, &QTimer::timeout, this, &TimeSettings::timeout);
     d->timer->start();
 
-    qDebug() << "TimeSettings module loadedddd.";
+    qDebug() << "TimeSettings module loaded.";
 }
 
 TimeSettings::~TimeSettings()
@@ -164,21 +164,6 @@ void TimeSettingsPrivate::initSettings()
     OrgFreedesktopTimedate1Interface timeDatedIface("org.freedesktop.timedate1", "/org/freedesktop/timedate1", QDBusConnection::systemBus());
     //the server list is not relevant for timesyncd, it fetches it from the network
     useNtp = timeDatedIface.nTP();
-
-
-    /*
-    KConfig _config( "kcmclockrc", KConfig::NoGlobals );
-    KConfigGroup config(&_config, "NTP");
-    QStringList servers = config.readEntry("servers",
-        QString()).split(',', QString::SkipEmptyParts);
-    if (!servers.isEmpty()) {
-        useNtp = servers.first();
-    }
-    //FIXME: why?
-    if (useNtp.length() < 3) {
-        useNtp.clear();
-    }
-    */
 }
 
 
@@ -346,10 +331,8 @@ QList<QObject*> TimeSettings::timeZones()
 
 void TimeSettings::setTimeZones(QList<QObject*> timezones)
 {
-    //if (d->timezones != timezones) {
-        d->timezones = timezones;
-        emit timeZonesChanged();
-    //}
+    d->timezones = timezones;
+    emit timeZonesChanged();
 }
 
 QObject* TimeSettings::timeZonesModel()
@@ -362,15 +345,12 @@ QObject* TimeSettings::timeZonesModel()
 
 void TimeSettings::setTimeZonesModel(QObject* timezones)
 {
-    //if (d->timezones != timezones) {
-        d->timeZonesModel = timezones;
-        emit timeZonesModelChanged();
-    //}
+    d->timeZonesModel = timezones;
+    emit timeZonesModelChanged();
 }
 
 void TimeSettings::timeZoneFilterChanged(const QString &filter)
 {
-    qDebug() << "new filter: " << filter;
     d->timeZoneFilter = filter;
     d->timeZoneFilter.replace(' ', '_');
     d->initTimeZones();
