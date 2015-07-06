@@ -185,6 +185,7 @@ void TimeSettings::timeout()
 {
     setCurrentTime(QTime::currentTime());
     setCurrentDate(QDate::currentDate());
+    notify();
 }
 
 
@@ -229,6 +230,7 @@ void TimeSettings::setUseNtp(bool ntp)
 {
     if (d->useNtp != ntp) {
         d->useNtp = ntp;
+        saveTime();
         emit useNtpChanged();
     }
 }
@@ -252,7 +254,6 @@ bool TimeSettings::saveTime()
         qWarning() << "Failed to enable NTP" << reply.error().name() << reply.error().message();
         rc = false;
     }
-
 
     if (!useNtp()) {
         QDateTime userTime;
@@ -293,6 +294,7 @@ void TimeSettings::saveTimeZone(const QString &newtimezone)
 
     setTimeZone(newtimezone);
     emit timeZoneChanged();
+    notify();
 }
 
 
@@ -397,6 +399,13 @@ void TimeSettings::setTwentyFour(bool t)
 QString TimeSettings::errorString()
 {
     return d->errorString;
+}
+
+void TimeSettings::notify()
+{
+    QDBusMessage msg = QDBusMessage::createSignal("/org/kde/kcmshell_clock", "org.kde.kcmshell_clock", "clockUpdated");
+    QDBusConnection::sessionBus().send(msg);
+
 }
 
 

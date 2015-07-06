@@ -72,6 +72,7 @@ Item {
             Layout.alignment : Qt.AlignRight
             checked: kcm.ntpServer != ""
             onCheckedChanged: {
+                kcm.useNtp = checked;
                 if (!checked) {
                     kcm.ntpServer = ""
                     kcm.saveTime()
