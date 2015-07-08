@@ -35,7 +35,7 @@ Item {
         id: settingsModuleDelegate
         PlasmaComponents.ListItem {
             id: delegateItem
-            height: units.gridUnit * 3
+            height: units.gridUnit * 3.5
             width: parent ? parent.width : units.gridUnit * 15
             anchors.margins: units.gridUnit
             enabled: true

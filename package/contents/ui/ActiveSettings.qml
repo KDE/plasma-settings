@@ -25,8 +25,6 @@ import org.kde.plasma.components 2.0 as PlasmaComponents
 import org.kde.plasma.extras 2.0 as PlasmaExtras
 import org.kde.kquickcontrolsaddons 2.0
 
-import org.kde.active.settings 2.0 as ActiveSettings
-
 Rectangle {
     id: rootItem
 
@@ -60,11 +58,9 @@ Rectangle {
         settingsItem.module = mod;
     }
 
-    Image {
+    Item {
         id: appBackground
-        source: "image://appbackgrounds/standard"
-        fillMode: Image.Tile
-        asynchronous: true
+
         anchors {
             top: parent.top
             bottom: toolBar.top
@@ -102,14 +98,6 @@ Rectangle {
             Item {
                 id: navheader
                 visible: compactMode
-
-//                 Rectangle {
-//                     color: "orange";
-//                     opacity: 0.3
-//                     height: 60;
-//                     anchors { left: parent.left; right: parent.right }
-//                 }
-
 
                 height: childrenRect.height
                 anchors {
@@ -183,10 +171,8 @@ Rectangle {
                 }
             }
 
-            Image {
+            Item {
                 id: modulesList
-                source: "image://appbackgrounds/contextarea"
-                fillMode: Image.Tile
                 z: 800
 
                 property alias currentIndex: mlist.currentIndex
@@ -195,17 +181,6 @@ Rectangle {
                 anchors.bottom: parent.bottom
                 anchors.left: parent.left
                 width: rootItem.compactMode ? rootItem.width : Math.min(units.gridUnit * 15, parent.width/3)
-
-                Image {
-                    source: "image://appbackgrounds/shadow-left"
-                    fillMode: Image.Tile
-                    anchors {
-                        right: parent.right
-                        top: parent.top
-                        bottom: parent.bottom
-                        rightMargin: -1
-                    }
-                }
 
                 ModulesList {
                     id: mlist
@@ -242,7 +217,6 @@ Rectangle {
         }
 
         Component.onCompleted: {
-            print("ActiveSettings Completed.");
             if (startModule != "") {
                 loadModule(startModule);
             }
@@ -272,26 +246,15 @@ Rectangle {
         }
     }
 
-    onStateChanged: {
-        print("state: " + state);
-    }
-
     states: [
         State {
             name: "navigation"
             when: (compactMode && appBackground.x == 0) || (rootItem.currentModule == "")
-            //PropertyChanges { target: rootItem; currentModule: "" }
-//             PropertyChanges { target: moduleItem; opacity: 0.0 }
         },
         State {
             name: "module"
             when: (compactMode && appBackground.x != 0) || (rootItem.currentModule != "")
-//             PropertyChanges { target: modulesList; opacity: 0.0}
-//             PropertyChanges { target: moduleItem; opacity: 1.0 }
         }
     ]
 
-    Component.onCompleted: {
-        print("ff +++++ : " + startFormFactor);
-    }
 }
