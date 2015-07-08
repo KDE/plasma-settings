@@ -133,9 +133,10 @@ Item {
         id: listView
         currentIndex: -1
         anchors.fill: parent
+        anchors.topMargin: Math.round(units.gridUnit/10)
         clip: true
         interactive: contentHeight > height
-        spacing: units.gridUnit / 2
+        //spacing: units.gridUnit / 2
         model: settingsModulesModel.settingsModules
         delegate: settingsModuleDelegate
 
