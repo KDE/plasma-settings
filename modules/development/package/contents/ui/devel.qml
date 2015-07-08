@@ -45,7 +45,7 @@ Item {
 
         anchors {
             fill: parent
-
+            margins: units.gridUnit
         }
 
         PlasmaComponents.Label {

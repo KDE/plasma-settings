@@ -37,6 +37,7 @@ Item {
             left: parent.left
             top: parent.top
             right: parent.right
+            margins: units.gridUnit
         }
         spacing: units.gridUnit / 2
         Repeater {
