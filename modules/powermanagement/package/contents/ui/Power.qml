@@ -108,7 +108,7 @@ Item {
         spacing: units.gridUnit / 2
 
         PlasmaExtras.Heading {
-            text: i18n("Brightness")
+            text: i18n("Screen Brightness")
             level: 3
         }
         Row {
