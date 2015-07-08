@@ -20,14 +20,11 @@
 import QtQuick 2.1
 import org.kde.plasma.core 2.0 as PlasmaCore
 import org.kde.plasma.components 2.0 as PlasmaComponents
-//import org.kde.locale 2.0 as KLocale
 import org.kde.active.settings 2.0
-//import org.kde.active.settings.time 2.0
-//import "private"
 
 
 //FIXME: shouldn't be a FrameSvgItem
-PlasmaCore.FrameSvgItem {
+Item {
     id: root
     clip: true
 
@@ -39,7 +36,12 @@ PlasmaCore.FrameSvgItem {
     property bool userConfiguring: false
     property bool twentyFour: true
 
+    property int fontSize: 14
+    property int _margin: units.gridUnit
+
     property string timeString: clockRow.twoDigitString(hours) + ":" + clockRow.twoDigitString(minutes) + ":" +  clockRow.twoDigitString(seconds)
+
+    opacity: enabled ? 1.0 : 0.5
 
     Connections {
         target: root
@@ -65,9 +67,9 @@ PlasmaCore.FrameSvgItem {
 //         id: locale
 //     }
 
-    imagePath: "widgets/picker"
-    width: clockRow.width + margins.left + margins.right
-    height: clockRow.height + margins.top + margins.bottom
+    //imagePath: "widgets/picker"
+    width: clockRow.width + root._margin
+    height: clockRow.height + root._margin * 2
 
     Timer {
         id: userConfiguringTimer
@@ -82,11 +84,19 @@ PlasmaCore.FrameSvgItem {
         }
     }
 
+    Rectangle {
+        color: "transparent"
+        opacity: 0.3
+        border.color: theme.textColor
+        border.width: 1
+        anchors.fill: parent
+    }
+
     Row {
         id: clockRow
-        spacing: 3
-        x: parent.margins.left
-        y: parent.margins.top
+        spacing: units.gridUnit
+        x: root._margin
+        y: root._margin
 
         property int hours
         property int minutes
@@ -106,8 +116,8 @@ PlasmaCore.FrameSvgItem {
                 width: hoursDigit.width
                 property int ownIndex: index
                 text: (!root.twentyFour && index == 0) ? "12" : clockRow.twoDigitString(index)
-                font.pointSize: 20
-                //opacity: PathView.itemOpacity
+                font.pointSize: root.fontSize
+                opacity: PathView.itemOpacity
             }
             onSelectedIndexChanged: {
                 print("Bah");
@@ -191,10 +201,10 @@ PlasmaCore.FrameSvgItem {
             }
             delegate: Text {
                 width: meridiaeDigit.width
-                horizontalAlignment: Text.AlignHCenter
+                horizontalAlignment: Text.AlignLeft
                 property int ownIndex: index
                 text: meridiae
-                font.pointSize: 20
+                font.pointSize: root.fontSize
                 //opacity: PathView.itemOpacity
             }
             currentIndex: hours > 12 ? 1 : 0
@@ -209,11 +219,11 @@ PlasmaCore.FrameSvgItem {
                     }
                 }
             }
-            width: meridiaePlaceHolder.width*1.3
+            width: meridiaePlaceHolder.width + root._margin
             Text {
                 id: meridiaePlaceHolder
                 visible: false
-                font.pointSize: 20
+                font.pointSize: root.fontSize
                 text: "00"
             }
             Behavior on opacity {

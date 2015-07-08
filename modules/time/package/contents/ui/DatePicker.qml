@@ -24,7 +24,7 @@ import org.kde.plasma.components 2.0 as PlasmaComponents
 //import "private"
 
 //FIXME: shouldn't be a FrameSvgItem
-PlasmaCore.FrameSvgItem {
+Item {
     id: root
     clip: true
 
@@ -37,6 +37,18 @@ PlasmaCore.FrameSvgItem {
 
     property string isoDate: year + "-" + clockRow.twoDigitString(month) + "-" + clockRow.twoDigitString(day)
 
+    property int fontSize: 14
+    property int _margin: units.gridUnit
+
+    opacity: enabled ? 1.0 : 0.5
+
+    Rectangle {
+        color: "transparent"
+        border.width: 1
+        border.color: theme.textColor
+        anchors.fill: parent
+        opacity: 0.3
+    }
 
     /////// Implementation
     Connections {
@@ -47,9 +59,9 @@ PlasmaCore.FrameSvgItem {
     }
 
 
-    imagePath: "widgets/picker"
-    width: clockRow.width + margins.left + margins.right
-    height: clockRow.height + margins.top + margins.bottom
+    //imagePath: "widgets/picker"
+    width: clockRow.width + root._margin * 2
+    height: clockRow.height + root._margin * 2
 
 
     Timer {
@@ -68,8 +80,8 @@ PlasmaCore.FrameSvgItem {
     Row {
         id: clockRow
         spacing: 3
-        x: parent.margins.left
-        y: parent.margins.top
+        x: root._margin
+        y: root._margin
 
         property int day
         property int month
@@ -97,7 +109,7 @@ PlasmaCore.FrameSvgItem {
                 width: dayDigit.width
                 property int ownIndex: index
                 text: index+1
-                font.pointSize: 20
+                font.pointSize: root.fontSize
                 opacity: PathView.itemOpacity
             }
         }
@@ -125,14 +137,14 @@ PlasmaCore.FrameSvgItem {
                 property int ownIndex: index
                 property variant months: Array(i18n("Jan"), i18n("Feb"), i18n("Mar"), i18n("Apr"), i18n("May"),     i18n("Jun"), i18n("Jul"), i18n("Aug"), i18n("Sep"), i18n("Oct"), i18n("Nov"), i18n("Dec"))
                 text: months[index]
-                font.pointSize: 20
+                font.pointSize: root.fontSize
                 opacity: PathView.itemOpacity
             }
             width: monthPlaceHolder.width
             Text {
                 id: monthPlaceHolder
                 visible: false
-                font.pointSize: 20
+                font.pointSize: root.fontSize
                 text: "0000"
             }
         }
@@ -159,7 +171,7 @@ PlasmaCore.FrameSvgItem {
             Text {
                 id: yearPlaceHolder
                 visible: false
-                font.pointSize: 20
+                font.pointSize: root.fontSize
                 text: "0000"
             }
         }

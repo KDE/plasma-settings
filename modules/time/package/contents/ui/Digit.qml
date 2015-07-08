@@ -32,6 +32,7 @@ Item {
     property alias delegate: spinnerView.delegate
     property alias moving: spinnerView.moving
     property int selectedIndex: -1
+    property int fontSize: 14
 
     width: placeHolder.width*1.3
     height: placeHolder.height*3
@@ -39,7 +40,7 @@ Item {
     Text {
         id: placeHolder
         visible: false
-        font.pointSize: 20
+        font.pointSize: root.fontSize
         text: "00"
     }
 
@@ -57,8 +58,8 @@ Item {
             width: spinnerView.width
             property int ownIndex: index
             text: index < 10 ? "0"+index : index
-            font.pointSize: 20
-            //opacity: PathView.itemOpacity
+            font.pointSize: root.fontSize
+            opacity: PathView.itemOpacity
         }
 
         onMovingChanged: {

@@ -42,9 +42,16 @@ Item {
         columns: 2
         //rows: 4
         anchors.fill: parent
-        //anchors.margins: gridspacing
+        anchors.margins: gridspacing
         //rowSpacing: gridspacing
         columnSpacing: gridspacing
+
+        PlasmaExtras.Heading {
+            Layout.columnSpan: 2
+            //             Layout.rowSpacing: units.gridUnit * 4
+            text: i18n("Time Display")
+            level: 4
+        }
 
         PlasmaComponents.Label {
             text: i18n("Use 24-hour clock:")
@@ -59,6 +66,29 @@ Item {
                 kcm.twentyFour = checked
                 print(kcm.timeZone);
             }
+        }
+
+        PlasmaComponents.Label {
+            id: timeZoneLabel
+            text: i18n("Timezone:")
+            Layout.fillWidth: true
+        }
+
+        PlasmaComponents.Button {
+            id: timeZoneButton
+            text: kcm.timeZone
+            onClicked: timeZonePickerDialog.open()
+        }
+
+        Item {
+            height: units.gridUnit
+        }
+
+        PlasmaExtras.Heading {
+            Layout.columnSpan: 2
+//             Layout.rowSpacing: units.gridUnit * 4
+            text: i18n("Set Time and Date")
+            level: 4
         }
 
         PlasmaComponents.Label {
@@ -80,51 +110,41 @@ Item {
             }
         }
 
-        PlasmaComponents.Label {
-            id: timeZoneLabel
-            text: i18n("Timezone:")
-            Layout.fillWidth: true
-        }
-
-        PlasmaComponents.Button {
-            id: timeZoneButton
-            text: kcm.timeZone
-            onClicked: timeZonePickerDialog.open()
-        }
-
         TimePicker {
             id: timePicker
             enabled: !ntpCheckBox.checked
             twentyFour: twentyFourSwitch.checked
 
             Layout.columnSpan: 2
-            Layout.preferredHeight: timePicker.childrenRect.height + timePicker.margins.top + timePicker.margins.bottom
-            Layout.preferredWidth: timePicker.childrenRect.width + timePicker.margins.left + timePicker.margins.right
+            Layout.preferredHeight: timePicker.childrenRect.height + timePicker.margin * 2
+            //Layout.preferredWidth: timePicker.childrenRect.width + timePicker._margin * 2
+//             Layout.alignment: Qt.AlignHCenter
+            Layout.alignment: Qt.AlignLeft
 
             Component.onCompleted: {
                 //var date = new Date("January 1, 1971 "+kcm.currentTime)
-                var date = new Date(kcm.currentTime)
-                print("CurrentTime: "  + kcm.currentTime);
-                print("Date: "  + date);
-                print("hours:   "  + date.getHours());
-                print("minutes: "  + date.getMinutes());
-                print("seconds: "  + date.getSeconds());
-                timePicker.hours = date.getHours()
-                timePicker.minutes = date.getMinutes()
-                timePicker.seconds = date.getSeconds()
+                var date = new Date(kcm.currentTime);
+//                 print("CurrentTime: "  + kcm.currentTime);
+//                 print("Date: "  + date);
+//                 print("hours:   "  + date.getHours());
+//                 print("minutes: "  + date.getMinutes());
+//                 print("seconds: "  + date.getSeconds());
+                timePicker.hours = date.getHours();
+                timePicker.minutes = date.getMinutes();
+                timePicker.seconds = date.getSeconds();
             }
             Connections {
                 target: kcm
                 onCurrentTimeChanged: {
                     if (timePicker.userConfiguring) {
-                        return
+                        return;
                     }
 
                     //var date = new Date("January 1, 1971 "+kcm.currentTime)
-                    var date = new Date(kcm.currentTime)
-                    timePicker.hours = date.getHours()
-                    timePicker.minutes = date.getMinutes()
-                    timePicker.seconds = date.getSeconds()
+                    var date = new Date(kcm.currentTime);
+                    timePicker.hours = date.getHours();
+                    timePicker.minutes = date.getMinutes();
+                    timePicker.seconds = date.getSeconds();
                 }
             }
             onUserConfiguringChanged: {
@@ -137,8 +157,10 @@ Item {
             id: datePicker
             enabled: !ntpCheckBox.checked
             Layout.columnSpan: 2
-            Layout.preferredHeight: datePicker.childrenRect.height + datePicker.margins.top + datePicker.margins.bottom
-            Layout.preferredWidth: datePicker.childrenRect.width + datePicker.margins.left + datePicker.margins.right
+            //Layout.preferredHeight: datePicker.childrenRect.height + datePicker._margin * 2
+            //Layout.preferredWidth: datePicker.childrenRect.width + datePicker._margin * 2
+            Layout.alignment: Qt.AlignLeft
+
             Component.onCompleted: {
                 var date = new Date(kcm.currentDate)
                 datePicker.day = date.getDate()
