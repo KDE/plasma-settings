@@ -219,7 +219,7 @@ Item {
 
     PlasmaComponents.CommonDialog {
         id: timeZonePickerDialog
-        titleText: i18n("Timezones")
+        titleText: i18n("Pick Timezone... (%1)", kcm.timeZone)
         buttonTexts: [i18n("Close")]
         onButtonClicked: close()
         content: Loader {

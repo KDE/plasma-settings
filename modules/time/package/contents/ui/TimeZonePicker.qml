@@ -21,6 +21,7 @@
 import QtQuick 2.2
 import org.kde.plasma.core 2.0 as PlasmaCore
 import org.kde.plasma.components 2.0 as PlasmaComponents
+import org.kde.plasma.extras 2.0 as PlasmaExtras
 import org.kde.plasma.mobilecomponents 0.2 as MobileComponents
 import org.kde.active.settings 2.0
 import org.kde.kquickcontrolsaddons 2.0
@@ -44,21 +45,6 @@ Item {
             tzFilter.forceActiveFocus()
         }
     }
-    Text {
-        id: timeZoneLabel
-        color: theme.textColor
-        anchors.right: parent.horizontalCenter
-        anchors.top: parent.top
-        text: i18n("Timezone:")
-        anchors.rightMargin: 12
-        //opacity: 1
-    }
-
-    Text {
-        anchors.left: parent.horizontalCenter
-        anchors.verticalCenter: timeZoneLabel.verticalCenter
-        text: kcm.timeZone
-    }
 
     PlasmaComponents.TextField {
         id: tzFilter
@@ -68,7 +54,10 @@ Item {
         //Keys.onTabPressed: tf2.forceActiveFocus();
         anchors {
             //verticalCenter: parent.verticalCenter
-            top: timeZoneLabel.bottom
+            topMargin: units.smallSpacing
+            top: parent.top
+            left: parent.left
+            right: parent.right
         }
     }
 
@@ -89,7 +78,7 @@ Item {
         anchors {
             //verticalCenter: parent.verticalCenter
             top: tzFilter.bottom
-            topMargin: 8
+            topMargin: units.gridUnit / 2
             bottom: parent.bottom
             left: parent.left
             right: parent.right
@@ -99,10 +88,11 @@ Item {
             criteria: ViewSection.FullString
             delegate: PlasmaComponents.ListItem {
                 sectionDelegate: true
-                PlasmaComponents.Label {
+                PlasmaExtras.Heading {
                     text: section
+                    level: 4
                     horizontalAlignment: Text.AlignLeft
-                    font { bold: true; }
+                    //font { bold: true; }
                 }
             }
         }
