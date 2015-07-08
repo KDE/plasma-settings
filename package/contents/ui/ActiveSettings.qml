@@ -217,7 +217,7 @@ Rectangle {
                 id: initial_page
                 Item {
                     visible: startModule == ""
-                    anchors { fill: parent; margins: 80; }
+                    anchors { fill: parent; margins: units.gridUnit * 4; }
                     PlasmaCore.IconItem {
                         source: "preferences-desktop"
                         anchors { top: parent.top; right: parent.right; }
@@ -232,7 +232,7 @@ Rectangle {
                 id: settingsItem
 
                 anchors {
-                    margins: 20
+                    //margins: units.gridUnit
                     top: header.bottom
                     bottom: parent.bottom
                     left: modulesList.right
