@@ -98,8 +98,13 @@ Item {
 
     Column {
         id: mainItem
-        anchors.fill: parent
-        anchors.margins: units.gridUnit
+
+        anchors {
+            fill: parent
+            margins: units.gridUnit
+            leftMargin: 0
+        }
+
         spacing: units.gridUnit / 2
 
         PlasmaExtras.Heading {

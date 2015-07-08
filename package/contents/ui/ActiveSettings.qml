@@ -232,7 +232,7 @@ Rectangle {
                 id: settingsItem
 
                 anchors {
-                    //margins: units.gridUnit
+                    leftMargin: units.gridUnit
                     top: header.bottom
                     bottom: parent.bottom
                     left: modulesList.right

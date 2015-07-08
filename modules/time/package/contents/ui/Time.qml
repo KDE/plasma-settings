@@ -42,7 +42,7 @@ Item {
         columns: 2
         //rows: 4
         anchors.fill: parent
-        anchors.margins: gridspacing
+        anchors.rightMargin: gridspacing
         //rowSpacing: gridspacing
         columnSpacing: gridspacing
 
