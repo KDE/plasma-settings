@@ -10,6 +10,7 @@ set(themesettings_SRCS
 add_library(kcm_mobile_theme MODULE ${themesettings_SRCS})
 
 target_link_libraries(kcm_mobile_theme
+    Qt5::DBus
     Qt5::Gui
     Qt5::Quick
     Qt5::Qml

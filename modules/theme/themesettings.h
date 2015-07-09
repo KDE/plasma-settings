@@ -22,6 +22,7 @@
 #define THEMESETTINGS_H
 
 #include <QObject>
+#include <QFont>
 #include <QVariant>
 #include <KQuickAddons/ConfigModule>
 
@@ -37,23 +38,30 @@ class ThemeSettings : public KQuickAddons::ConfigModule
 
     Q_PROPERTY(QString themeName READ themeName WRITE setThemeName NOTIFY themeNameChanged)
     Q_PROPERTY(ThemeListModel *themeListModel READ themeListModel CONSTANT)
+    Q_PROPERTY(int fontSize READ fontSize WRITE setFontSize NOTIFY fontSizeChanged)
 
     public:
         ThemeSettings(QObject* parent, const QVariantList& args);
         virtual ~ThemeSettings();
 
-        QString themeName();
+        QString themeName() const;
         void setThemeName(const  QString &theme);
+
+        int fontSize() const;
+        void setFontSize(int pointSize);
 
         ThemeListModel *themeListModel();
 
     Q_SIGNALS:
         void themeNameChanged();
+        void fontSizeChanged();
 
     private:
         Plasma::Theme *m_theme;
         QString m_themeName;
         ThemeListModel *m_themeListModel;
+
+        QFont m_font;
 };
 
 #endif // THEMESETTINGS_H

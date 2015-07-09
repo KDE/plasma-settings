@@ -20,6 +20,10 @@
 
 #include "themesettings.h"
 #include "themelistmodel.h"
+
+#include <QDBusConnection>
+#include <QDBusMessage>
+
 #include <KPluginFactory>
 #include <KLocalizedString>
 #include <KAboutData>
@@ -47,6 +51,11 @@ ThemeSettings::ThemeSettings(QObject* parent, const QVariantList& args)
     m_themeName = m_theme->themeName();
 
     qDebug() << "Current theme: " << m_themeName;
+
+    auto kdeglobals = KSharedConfig::openConfig("kdeglobals");
+    KConfigGroup cfg(kdeglobals, "General");
+    m_font = cfg.readEntry("font", QFont());
+    qDebug() << "Font: " << m_font << m_font.pointSize();
 }
 
 ThemeSettings::~ThemeSettings()
@@ -64,7 +73,7 @@ void ThemeSettings::setThemeName(const QString& theme)
     }
 }
 
-QString ThemeSettings::themeName()
+QString ThemeSettings::themeName() const
 {
     return m_themeName;
 }
@@ -73,6 +82,31 @@ ThemeListModel *ThemeSettings::themeListModel()
 {
     return m_themeListModel;
 }
+
+int ThemeSettings::fontSize() const
+{
+    return m_font.pointSize();
+}
+
+void ThemeSettings::setFontSize(int pointSize)
+{
+    m_font.setPointSize(pointSize);
+    qDebug() << "Font size set to : " << m_font.pointSize();
+
+    auto kdeglobals = KSharedConfig::openConfig("kdeglobals");
+    KConfigGroup cfg(kdeglobals, "General");
+    cfg.writeEntry("font", m_font);
+
+    kdeglobals->sync();
+
+    QDBusMessage message = QDBusMessage::createSignal("/KDEPlatformTheme", "org.kde.KDEPlatformTheme", "refreshFonts");
+    QDBusConnection::sessionBus().send(message);
+
+    //qApp->processEvents(); // Process font change ourselves
+
+}
+
+
 
 
 #include "themesettings.moc"

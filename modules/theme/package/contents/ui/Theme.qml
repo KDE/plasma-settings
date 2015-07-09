@@ -40,6 +40,34 @@ Item {
             rightMargin: units.gridUnit
         }
         spacing: units.gridUnit / 2
+
+        PlasmaExtras.Heading {
+            text: i18n("Font")
+            level: 3
+        }
+
+        PlasmaComponents.Slider {
+            id: fontSizeSlider
+            Layout.preferredWidth: timeModule.width - units.gridUnit
+            stepSize: 1.0
+            minimumValue: 3
+            maximumValue: 12
+            value: kcm.fontSize
+
+            onValueChanged: {
+                if (pressed) {
+                    print("Setting font size to " + value);
+                    kcm.fontSize = value;
+                }
+
+            }
+        }
+
+        PlasmaExtras.Heading {
+            text: i18n("Theme")
+            level: 3
+        }
+
         Repeater {
             model: kcm.themeListModel
             delegate: RowLayout {
@@ -58,6 +86,10 @@ Item {
                 }
             }
         }
+    }
+
+    Component.onCompleted: {
+        print("KCM.fontSize: " + kcm.fontSize);
     }
 
 }
