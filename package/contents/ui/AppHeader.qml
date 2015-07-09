@@ -59,6 +59,7 @@ Item {
             right: topIcon.left
             top: title.bottom
         }
+        opacity: 0.6
         text: settingsItem.description
     }
 }

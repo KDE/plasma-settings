@@ -61,6 +61,11 @@ Item {
             //rowSpacing: gridspacing
             columnSpacing: gridspacing
 
+            Item {
+                Layout.preferredHeight: units.gridUnit / 3
+                Layout.columnSpan: 2
+            }
+
             PlasmaExtras.Heading {
                 Layout.columnSpan: 2
                 //             Layout.rowSpacing: units.gridUnit * 4
