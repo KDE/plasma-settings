@@ -23,3 +23,5 @@ add_subdirectory(powermanagement)
 #install(FILES configtest/metadata.desktop DESTINATION ${SERVICES_INSTALL_DIR} RENAME org.kde.active.settings.configtest.desktop)
 kpackage_install_package(configtest kcm_configtest kcms)
 
+#Accounts
+add_subdirectory(accounts)
