@@ -34,6 +34,16 @@ find_package(KF5 REQUIRED COMPONENTS
     I18n Plasma PlasmaQuick Declarative KIO KDELibs4Support
     )
 
+find_package(KAccounts)
+find_package(AccountsQt5 1.10 CONFIG)
+find_package(SignOnQt5 8.55 CONFIG)
+
+if (KAccounts_FOUND AND AccountsQt5_FOUND AND SignOnQt5_FOUND)
+    find_package(KF5GAPI REQUIRED)
+    find_package(Qt5WebKitWidgets REQUIRED) #needed for kgapi apparently
+    include_directories(${ACCOUNTSQT_INCLUDE_DIRS} ${SIGNONQT_INCLUDE_DIRS})
+endif()
+
 add_subdirectory(src)
 add_subdirectory(import)
 add_subdirectory(modules)

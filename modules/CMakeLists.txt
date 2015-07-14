@@ -24,4 +24,6 @@ add_subdirectory(powermanagement)
 kpackage_install_package(configtest kcm_configtest kcms)
 
 #Accounts
-add_subdirectory(accounts)
+if (KAccounts_FOUND AND AccountsQt5_FOUND AND SignOnQt5_FOUND)
+    add_subdirectory(accounts)
+endif()
