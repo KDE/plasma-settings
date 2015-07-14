@@ -38,32 +38,54 @@ Item {
         id: mainView
         anchors.fill: parent
 
-        initialItem: ListView {
+        initialItem: ColumnLayout {
             Layout.fillWidth: true
             Layout.fillHeight: true
-            spacing: units.smallSpacing
 
-            footer:  PlasmaComponents.Button {
-                text: "Add new Account"
-                onClicked: mainView.push(availableAccounts)
-            }
+            ListView {
+                Layout.fillWidth: true
+                Layout.fillHeight: true
+                spacing: units.smallSpacing
 
-            model: OA.AccountServiceModel {
-                id: accountsModel
-                service: "global"
-                includeDisabled: true
-            }
-
-            delegate: PlasmaComponents.Button {
-                width: parent.width
-                text: model.displayName
-//                 icon: model.iconName
-
-                onClicked: {
-                    mainView.push(availableServices)
-                    servicesModel.accountId = model.accountId
+                model: OA.AccountServiceModel {
+                    id: accountsModel
+                    service: "global"
+                    includeDisabled: true
                 }
 
+                delegate: RowLayout {
+                    anchors {
+                        left: parent.left
+                        right: parent.right
+                    }
+                    PlasmaComponents.Button {
+                        Layout.fillWidth: true
+                        text: model.displayName
+
+                        onClicked: {
+                            mainView.push(availableServices)
+                            servicesModel.accountId = model.accountId
+                        }
+                    }
+                    PlasmaComponents.Button {
+                        iconSource: "list-remove"
+                        
+                        OA.Account {
+                            id: account
+                            objectHandle: model.accountHandle
+                        }
+
+                        onClicked: {
+                            account.remove();
+                        }
+                    }
+                }
+            }
+            
+            PlasmaComponents.Button {
+                Layout.fillWidth: true
+                text: "Add new Account"
+                onClicked: mainView.push(availableAccounts)
             }
         }
     }
