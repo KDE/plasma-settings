@@ -81,10 +81,10 @@ Item {
                     }
                 }
             }
-            
+
             PlasmaComponents.Button {
                 Layout.fillWidth: true
-                text: "Add new Account"
+                text: i18n("Add new Account")
                 onClicked: mainView.push(availableAccounts)
             }
         }
@@ -105,7 +105,7 @@ Item {
 
                 PlasmaComponents.Label {
                     Layout.fillWidth: true
-                    text: "Available Accounts"
+                    text: i18n("Available Accounts")
                 }
             }
 
@@ -178,7 +178,7 @@ Item {
 
                 PlasmaComponents.Label {
                     Layout.fillWidth: true
-                    text: "Available Services"
+                    text: i18n("Available Services")
                 }
             }
 
