@@ -123,6 +123,9 @@ void GoogleContactsPlugin::slotFetchJobFinished(KGAPI2::Job *job)
 
     KContacts::VCardConverter exporter;
 
+    QDir vcardsDir(*vcardsLocation);
+    vcardsDir.mkpath(*vcardsLocation);
+
     Q_FOREACH (const KGAPI2::ObjectPtr &object, objects) {
         const KGAPI2::ContactPtr contact = object.dynamicCast<KGAPI2::Contact>();
         QStringList splits = contact->uid().split("/");
