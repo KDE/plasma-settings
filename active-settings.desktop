@@ -8,3 +8,4 @@ Icon=preferences-desktop
 Type=Application
 X-KDE-PluginInfo-Website=http://plasma-active.org
 X-DBUS-StartupType=Unique
+X-DBUS-ServiceName=org.kde.activesettings
