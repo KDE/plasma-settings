@@ -58,6 +58,7 @@ public:
     Private() {};
 
     KGAPI2::AccountPtr account;
+    Accounts::AccountId accountId;
 };
 
 
@@ -80,6 +81,7 @@ void GoogleContactsPlugin::onAccountCreated(const Accounts::AccountId accountId,
 {
     Q_UNUSED(serviceList);
     qDebug() << "New account created";
+    d->accountId = accountId;
 
     Accounts::Account *acc = Accounts::Account::fromId(KAccounts::accountsManager(), accountId);
     if (acc && acc->providerName() == QLatin1String("google")) {
@@ -123,7 +125,7 @@ void GoogleContactsPlugin::slotFetchJobFinished(KGAPI2::Job *job)
 
     KContacts::VCardConverter exporter;
 
-    QDir vcardsDir(*vcardsLocation);
+    QDir vcardsDir(*vcardsLocation + "/" + QString::number(d->accountId));
     vcardsDir.mkpath(*vcardsLocation);
 
     Q_FOREACH (const KGAPI2::ObjectPtr &object, objects) {
