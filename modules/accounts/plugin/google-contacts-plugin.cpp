@@ -118,20 +118,22 @@ void GoogleContactsPlugin::slotFetchJobFinished(KGAPI2::Job *job)
         return;
     }
 
-    qDebug() << "All set, starting vcards import into" << (*vcardsLocation);
-
     /* Get all items the job has retrieved */
     const KGAPI2::ObjectsList objects = fetchJob->items();
 
     KContacts::VCardConverter exporter;
 
-    QDir vcardsDir(*vcardsLocation + "/" + QString::number(d->accountId));
-    vcardsDir.mkpath(*vcardsLocation);
+    const QString vcardsPath = *vcardsLocation + "/" + QString::number(d->accountId);
+
+    qDebug() << "All set, starting vcards import into" << vcardsPath;
+
+    QDir vcardsDir(vcardsPath);
+    vcardsDir.mkpath(vcardsPath);
 
     Q_FOREACH (const KGAPI2::ObjectPtr &object, objects) {
         const KGAPI2::ContactPtr contact = object.dynamicCast<KGAPI2::Contact>();
         QStringList splits = contact->uid().split("/");
-        QFile file(*vcardsLocation + "/" + splits.last() + ".vcard");
+        QFile file(vcardsPath + "/" + splits.last() + ".vcard");
         qDebug() << "Writing to location" << file.fileName();
 
         bool opened = file.open(QIODevice::WriteOnly | QIODevice::Append);
@@ -148,6 +150,8 @@ void GoogleContactsPlugin::slotFetchJobFinished(KGAPI2::Job *job)
 void GoogleContactsPlugin::onAccountRemoved(const Accounts::AccountId accountId)
 {
     Q_UNUSED(accountId);
+
+    //TODO: remove the vcards
 }
 
 void GoogleContactsPlugin::onServiceEnabled(const Accounts::AccountId accountId, const Accounts::Service &service)
