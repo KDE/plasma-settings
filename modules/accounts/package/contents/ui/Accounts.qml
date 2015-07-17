@@ -144,7 +144,11 @@ Item {
 
                         Component {
                             id: jobComponent
-                            CreateAccount {}
+                            CreateAccount {
+                                onFinished: {
+                                    mainView.push(mainView.initialItem);
+                                }
+                            }
                         }
 
                         onClicked: {
