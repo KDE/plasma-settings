@@ -55,10 +55,13 @@
 
 class GoogleContactsPlugin::Private {
 public:
-    Private() {};
+    Private() {
+        retries = 0;
+    };
 
     KGAPI2::AccountPtr account;
     Accounts::AccountId accountId;
+    uint retries;
 };
 
 
@@ -120,6 +123,17 @@ void GoogleContactsPlugin::slotFetchJobFinished(KGAPI2::Job *job)
 
     /* Get all items the job has retrieved */
     const KGAPI2::ObjectsList objects = fetchJob->items();
+
+    if (objects.size() == 0) {
+        if (d->retries < 3) {
+            QTimer::singleShot(3000, this, [=]{onAccountCreated(d->accountId, Accounts::ServiceList());});
+            d->retries++;
+        } else {
+            qWarning() << "Retrieved 0 contacts 3 times, giving up";
+            d->retries = 0;
+        }
+        return;
+    }
 
     KContacts::VCardConverter exporter;
 
