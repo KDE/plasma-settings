@@ -149,9 +149,15 @@ void GoogleContactsPlugin::slotFetchJobFinished(KGAPI2::Job *job)
 
 void GoogleContactsPlugin::onAccountRemoved(const Accounts::AccountId accountId)
 {
-    Q_UNUSED(accountId);
+    QDir vcardsDir(*vcardsLocation + "/" + QString::number(accountId));
 
-    //TODO: remove the vcards
+    if (vcardsDir.exists()) {
+        if (vcardsDir.removeRecursively()) {
+            qDebug() << "VCards from account" << accountId << "removed successfully";
+        } else {
+            qWarning() << "Failed to remove VCards for account" << accountId;
+        }
+    }
 }
 
 void GoogleContactsPlugin::onServiceEnabled(const Accounts::AccountId accountId, const Accounts::Service &service)
