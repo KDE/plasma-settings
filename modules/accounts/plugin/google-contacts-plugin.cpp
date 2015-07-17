@@ -137,7 +137,7 @@ void GoogleContactsPlugin::slotFetchJobFinished(KGAPI2::Job *job)
 
     KContacts::VCardConverter exporter;
 
-    const QString vcardsPath = *vcardsLocation + "/" + QString::number(d->accountId);
+    const QString vcardsPath = *vcardsLocation + "/kaccounts_" + QString::number(d->accountId);
 
     qDebug() << "All set, starting vcards import into" << vcardsPath;
 
@@ -163,7 +163,7 @@ void GoogleContactsPlugin::slotFetchJobFinished(KGAPI2::Job *job)
 
 void GoogleContactsPlugin::onAccountRemoved(const Accounts::AccountId accountId)
 {
-    QDir vcardsDir(*vcardsLocation + "/" + QString::number(accountId));
+    QDir vcardsDir(*vcardsLocation + "/kaccounts_" + QString::number(accountId));
 
     if (vcardsDir.exists()) {
         if (vcardsDir.removeRecursively()) {
