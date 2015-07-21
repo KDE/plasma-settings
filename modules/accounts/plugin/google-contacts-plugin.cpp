@@ -53,6 +53,31 @@
 #include <Accounts/Manager>
 #include <KContacts/VCardConverter>
 
+void myMessageOutput(QtMsgType type, const QMessageLogContext &context, const QString &msg)
+{
+    // TODO: print it on stdout too?
+    QFile file(QDir::homePath() + "/google-contacts-import.log");
+
+    bool opened = file.open(QIODevice::WriteOnly | QIODevice::Append);
+    Q_ASSERT(opened);
+
+    QTextStream out(&file);
+    out << QTime::currentTime().toString("hh:mm:ss.zzz ");
+    out << context.function << ":" << context.line << " ";
+
+    switch (type) {
+        case QtDebugMsg:	out << "DBG"; break;
+        case QtWarningMsg:  out << "WRN"; break;
+        case QtCriticalMsg: out << "CRT"; break;
+        case QtFatalMsg:    out << "FTL"; break;
+    }
+
+    out << " " << msg << '\n';
+    out.flush();
+}
+
+//---------------------------------------------------------------------------------------
+
 class GoogleContactsPlugin::Private {
 public:
     Private() {
@@ -73,7 +98,7 @@ GoogleContactsPlugin::GoogleContactsPlugin(QObject *parent)
     : KAccountsDPlugin(parent),
       d(new Private())
 {
-
+    qInstallMessageHandler(myMessageOutput);
 }
 
 GoogleContactsPlugin::~GoogleContactsPlugin()
