@@ -51,5 +51,5 @@ add_subdirectory(modules)
 plasma_install_package(package org.kde.active.settings packages package)
 
 
-install(FILES org.kde.active-settings.desktop DESTINATION ${XDG_APPS_INSTALL_DIR})
+install(FILES org.kde.mobile.plasmasettings.desktop DESTINATION ${XDG_APPS_INSTALL_DIR})
 

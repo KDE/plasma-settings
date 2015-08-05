@@ -9,3 +9,5 @@ Type=Application
 X-KDE-PluginInfo-Website=http://plasma-active.org
 X-DBUS-StartupType=Unique
 X-DBUS-ServiceName=org.kde.activesettings
+Categories=Qt;KDE;Settings;
+X-KDE-FormFactors=tablet,handset

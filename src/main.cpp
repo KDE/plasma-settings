@@ -40,15 +40,15 @@
 // Own
 #include "view.h"
 
-static const char description[] = I18N_NOOP("Plasma Active Settings");
+static const char description[] = I18N_NOOP("Plasma Mobile Settings");
 static const char version[] = "2.0";
-static const char HOME_URL[] = "http://plasma-active.org";
+static const char HOME_URL[] = "http://plasma-mobile.org";
 
 int main(int argc, char **argv)
 {
     QGuiApplication app(argc, argv);
 
-    KLocalizedString::setApplicationDomain("active-settings");
+    KLocalizedString::setApplicationDomain("plasma-settings");
 
     // About data
     KAboutData aboutData("activesettings", i18n("Settings"), version, i18n("Touch-friendly settings application."), KAboutLicense::GPL, i18n("Copyright 2011-2015, Sebastian Kügler"));
@@ -140,7 +140,7 @@ int main(int argc, char **argv)
     const QString module = parser.value(_m);
     QString ui = parser.value(_ui);
 
-    KConfigGroup cg(KSharedConfig::openConfig("plasmarc"), "Theme-active-settings");
+    KConfigGroup cg(KSharedConfig::openConfig("plasmarc"), "Theme-plasma-settings");
 
     const QString themeName = cg.readEntry("name", "default");
     ui = cg.readEntry("package", ui);
