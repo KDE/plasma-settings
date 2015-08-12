@@ -2,7 +2,7 @@
 Name=Settings
 GenericName=Settings
 Comment=Settings for Plasma
-Exec=active-settings -x all %u
+Exec=plasma-settings -x all %u
 Terminal=false
 Icon=preferences-desktop
 Type=Application

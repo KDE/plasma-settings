@@ -3,7 +3,7 @@ Name=Appearance
 Comment=Look and Feel
 
 Icon=preferences-desktop-theme
-Exec=active-settings -m kcm_mobile_theme
+Exec=plasma-settings -m kcm_mobile_theme
 
 Type=Service
 X-KDE-ServiceTypes=KCModule

@@ -98,7 +98,7 @@ void LocaleSettings::setLanguage(const QString &language)
     // signal other KDE programs that locale settings has changed.
     KGlobalSettings::self()->emitChange(KGlobalSettings::SettingsChanged, KGlobalSettings::SETTINGS_LOCALE);
 
-    // signal the QML part of active-settings that the language has changed.
+    // signal the QML part of plasma-settings that the language has changed.
     emit languageChanged();
 }
 

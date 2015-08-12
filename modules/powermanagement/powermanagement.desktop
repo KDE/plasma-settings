@@ -3,7 +3,7 @@ Name=Screen
 Comment=Lock, Sleep, Timeout
 
 Icon=preferences-system-power-management
-Exec=active-settings -m kcm_mobile_power
+Exec=plasma-settings -m kcm_mobile_power
 
 Type=Service
 X-KDE-ServiceTypes=KCModule

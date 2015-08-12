@@ -4,7 +4,7 @@ Comment=Settings for developers
 Icon=applications-development
 
 Encoding=UTF-8
-Exec=active-settings -m kcm_settings_devel
+Exec=plasma-settings -m kcm_settings_devel
 
 Type=Service
 X-KDE-Library=kcm_settings_devel

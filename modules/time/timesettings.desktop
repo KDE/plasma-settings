@@ -3,7 +3,7 @@ Name=Time and Date
 Comment=Timezone, Date Display
 
 Icon=preferences-system-time
-Exec=active-settings -m kcm_mobile_time
+Exec=plasma-settings -m kcm_mobile_time
 
 Type=Service
 X-KDE-ServiceTypes=KCModule

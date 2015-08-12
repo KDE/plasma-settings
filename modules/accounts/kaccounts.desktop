@@ -3,8 +3,8 @@ Name=Accounts
 Comment=Add Your Online Accounts
 
 Icon=applications-internet
-Exec=active-settings -m kaccounts
-#Exec=active-settings -m kcm_mobile_power
+Exec=plasma-settings -m kaccounts
+#Exec=plasma-settings -m kcm_mobile_power
 
 Type=Service
 X-KDE-ServiceTypes=KCModule
