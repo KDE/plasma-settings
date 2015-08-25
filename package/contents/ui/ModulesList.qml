@@ -39,7 +39,7 @@ Item {
             width: parent ? parent.width : units.gridUnit * 15
             anchors.margins: units.gridUnit
             enabled: true
-            //checked: listView.currentIndex == index
+            checked: listView.currentIndex == index && !rootItem.compactMode
 
             PlasmaCore.IconItem {
                 id: iconItem
@@ -78,8 +78,7 @@ Item {
                 print("Clicked index: " + index + " current: " + listView.currentIndex + " " + module + " curr: " + rootItem.currentModule);
                 loading = true;
                 rootItem.currentModule = module;
-
-//                 listView.currentIndex = index;
+                listView.currentIndex = index;
 //                 if (settingsItem.module == module) {
 //                     settingsRoot.state = "module"
 //                 } else {
