@@ -28,4 +28,4 @@ install (TARGETS kaccounts_google_contacts_plugin
          DESTINATION ${PLUGIN_INSTALL_DIR}/kaccounts/daemonplugins
 )
 
-
+add_subdirectory(carddav)
