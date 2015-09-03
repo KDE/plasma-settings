@@ -57,8 +57,16 @@ KAccountsCardDavPlugin::~KAccountsCardDavPlugin()
 
 void KAccountsCardDavPlugin::onAccountCreated(const Accounts::AccountId accountId, const Accounts::ServiceList &serviceList)
 {
+    Accounts::Account *account = KAccounts::accountsManager()->account(accountId);
+
+    if (!account) {
+        qWarning() << "Invalid account for id" << accountId;
+        return;
+    }
+
     Q_FOREACH (const Accounts::Service &service, serviceList) {
-        if (service.serviceType() == QLatin1String("dav-contacts")) {
+        account->selectService(service);
+        if (service.serviceType() == QLatin1String("dav-contacts") && account->isEnabled()) {
             qDebug() << "Starting carddav contacts import for account" << accountId << "and service" << service.serviceType();
             getCredentials(accountId);
         }
