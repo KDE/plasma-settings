@@ -41,7 +41,6 @@ Item {
         }
         spacing: units.gridUnit / 2
 
-        /*
         PlasmaExtras.Heading {
             text: i18n("Font")
             level: 3
@@ -63,7 +62,7 @@ Item {
 
             }
         }
-        */
+
         PlasmaExtras.Heading {
             text: i18n("Theme")
             level: 3
