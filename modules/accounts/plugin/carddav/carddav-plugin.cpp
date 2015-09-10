@@ -24,6 +24,8 @@
 // #include <KConfigGroup>
 
 #include <KJob>
+#include <KConfigCore/KSharedConfig>
+#include <KConfigCore/KConfigGroup>
 
 // #include <QTimer>
 
@@ -31,6 +33,7 @@
 #include <Accounts/Manager>
 #include <Accounts/Account>
 #include <Accounts/AccountService>
+#include <QTimer>
 
 #include <KAccounts/getcredentialsjob.h>
 #include <KAccounts/core.h>
@@ -40,6 +43,8 @@ public:
     Private(KAccountsCardDavPlugin *qq) { q = qq; };
 
     KAccountsCardDavPlugin *q;
+    KSharedConfig::Ptr config;
+    QTimer *syncTimer;
 };
 
 
@@ -49,10 +54,31 @@ KAccountsCardDavPlugin::KAccountsCardDavPlugin(QObject *parent)
     : KAccountsDPlugin(parent),
       d(new Private(this))
 {
+    d->config = KSharedConfig::openConfig(QStringLiteral("kaccounts-carddavrc"));
+    d->syncTimer = new QTimer(this);
+    d->syncTimer->setInterval(1000 * 60 *30);
+
+    connect(d->syncTimer, &QTimer::timeout, this, &KAccountsCardDavPlugin::syncAllAccounts);
+
+    syncAllAccounts();
 }
 
 KAccountsCardDavPlugin::~KAccountsCardDavPlugin()
 {
+}
+
+void KAccountsCardDavPlugin::syncAllAccounts()
+{
+    KConfigGroup global = d->config->group("Global");
+    QList<quint32> syncedAccounts = global.readEntry("syncedAccounts", QList<quint32>());
+
+    Q_FOREACH (const quint32 accountId, syncedAccounts) {
+        KConfigGroup currentAccount = d->config->group("account" + accountId);
+        QDateTime lastSync = QDateTime::fromString(currentAccount.readEntry("lastSync", QString()), Qt::ISODate);
+        if (QDateTime::currentDateTime() > lastSync) {
+            getCredentials(accountId);
+        }
+    }
 }
 
 void KAccountsCardDavPlugin::onAccountCreated(const Accounts::AccountId accountId, const Accounts::ServiceList &serviceList)
@@ -113,6 +139,7 @@ void KAccountsCardDavPlugin::importContacts(KJob *job)
     qDebug() << "Using: host:" << carddavUrl.host() << "path:" << carddavUrl.path();
 
     Syncer *s = new Syncer(0);
+    s->setProperty("accountId", credentialsJob->accountId());
 
     const QString &userName = data.value("AccountUsername").toString();
 
@@ -128,6 +155,23 @@ void KAccountsCardDavPlugin::importContacts(KJob *job)
                      s, SLOT(syncFinished()));
     QObject::connect(m_cardDav, SIGNAL(error(int)),
                      s, SLOT(cardDavError(int)));
+
+    QObject::connect(s, &Syncer::syncSucceeded, [=] {
+        d->syncTimer->start();
+        quint32 accountId = s->property("accountId").toUInt();
+
+        KConfigGroup global = d->config->group("Global");
+        QList<quint32> syncedAccounts = global.readEntry("syncedAccounts", QList<quint32>());
+        if (!syncedAccounts.contains(accountId)) {
+            syncedAccounts.append(accountId);
+        }
+        global.writeEntry("syncedAccounts", syncedAccounts);
+        global.sync();
+
+        KConfigGroup currentAccount = d->config->group("account" + accountId);
+        currentAccount.writeEntry("lastSync", QDateTime::currentDateTime().toString(Qt::ISODate));
+        currentAccount.sync();
+    });
 
     m_cardDav->determineRemoteAMR();
 }

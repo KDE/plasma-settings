@@ -23,6 +23,7 @@ target_link_libraries(kaccounts_carddav_plugin
                       Qt5::Xml
                       KF5::CoreAddons
                       KF5::Contacts
+                      KF5::ConfigCore
                       KAccounts
                       ${ACCOUNTSQT_LIBRARIES}
                       ${SIGNONQT_LIBRARIES}

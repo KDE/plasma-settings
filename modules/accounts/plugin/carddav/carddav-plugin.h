@@ -46,6 +46,7 @@ public Q_SLOTS:
 private Q_SLOTS:
     void importContacts(KJob *job);
     void getCredentials(const Accounts::AccountId accountId);
+    void syncAllAccounts();
 
 private:
     class Private;
