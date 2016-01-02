@@ -66,7 +66,7 @@ PlasmaComponents.PageStack {
         }
     }
 
-    MobileComponents.Package {
+    ActiveSettings.Package {
         id: switcherPackage
     }
 }

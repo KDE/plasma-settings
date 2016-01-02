@@ -1,6 +1,7 @@
 project(settings)
 
 set(settings_SRCS
+    package.cpp
     settingsplugin.cpp
     settingsmodule.cpp
     settingsmodulesmodel.cpp

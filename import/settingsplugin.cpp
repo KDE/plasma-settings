@@ -27,6 +27,7 @@
 #include "settingsmodulesmodel.h"
 #include "settingscomponent.h"
 #include "configgroup.h"
+#include "package.h"
 
 void SettingsPlugin::registerTypes(const char *uri)
 {
@@ -36,6 +37,7 @@ void SettingsPlugin::registerTypes(const char *uri)
     qmlRegisterType<SettingsModulesModel>(uri, major, minor, "SettingsModulesModel");
     qmlRegisterType<SettingsModule>(uri, major, minor, "SettingsModule");
     qmlRegisterType<SettingsComponent>(uri, major, minor, "SettingsComponent");
+    qmlRegisterType<Package>(uri, major, minor, "Package");
     qmlRegisterType<Plasma::ConfigGroup>(uri, major, minor, "ConfigGroup");
 }
 
