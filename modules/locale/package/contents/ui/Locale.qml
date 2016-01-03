@@ -32,7 +32,7 @@ Item {
 
     width: 800; height: 500
 
-    MobileComponents.Package {
+    Package {
         id: localePackage
         name: "org.kde.active.settings.locale"
     }

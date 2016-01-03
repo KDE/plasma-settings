@@ -36,7 +36,7 @@ ActiveSettings.SettingsComponent {
         anchors.fill: parent
     }
 
-    MobileComponents.Package {
+    ActiveSettings.Package {
         id: switcherPackage
     }
 
