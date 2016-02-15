@@ -39,7 +39,7 @@ ActionReply DeveloperModeHelper::enable(const QVariantMap &args)
     int rv = QProcess::execute("setprop", enableArgs);
 
     QFile file("/userdata/.adb_onlock");
-    bool created = file.open(QIODevice::WriteOnly);
+    const bool created = file.open(QIODevice::WriteOnly);
     file.close();
 
     if (rv == 0 && created) {

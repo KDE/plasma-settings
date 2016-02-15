@@ -63,6 +63,19 @@ Item {
         }
 
         PlasmaComponents.Label {
+            text: i18n("Writable filesystem:")
+            Layout.fillWidth: true
+        }
+
+        PlasmaComponents.Switch {
+            id: writableFilesystem
+            checked: kcm.writableFilesystemEnabled
+            onClicked: {
+                kcm.writableFilesystemEnabled = writableFilesystem.checked;
+            }
+        }
+
+        PlasmaComponents.Label {
             id: timeZoneLabel
             text: i18n("Allow remote SSH access:")
             Layout.fillWidth: true
@@ -76,41 +89,6 @@ Item {
                 // we have to check to se if it failed
                 checked = kcm.sshEnabled;
             }
-        }
-
-        PlasmaComponents.Label {
-            text: i18n("Enable integration repository:")
-            Layout.fillWidth: true
-        }
-
-        PlasmaComponents.Switch {
-            id: integration
-            checked: kcm.integrationEnabled
-            onClicked: {
-                kcm.integrationEnabled = integration.checked;
-                dialog.opacity = 1;
-                dlghidetimer.start();
-            }
-        }
-
-        Timer {
-            id: dlghidetimer
-            interval: 20000
-            running: false
-            onTriggered: dialog.opacity = 0
-        }
-
-        PlasmaComponents.Label {
-            id: dialog
-            text: i18n("This will add the integration repository. You will have to do \"sudo apt-get update\" and \"apt-get dist-upgrade\" to use the new packages from Integration.")
-//             text: "yadda"
-            wrapMode: Text.WordWrap
-            opacity: 0
-            Layout.fillWidth: true
-            Layout.fillHeight: true
-
-            Behavior on opacity { NumberAnimation {} }
-
         }
 
         Item {

@@ -59,8 +59,7 @@ DevelSettings::DevelSettings(QObject* parent, const QVariantList& args)
 
 
     KConfigGroup confGroup(KSharedConfig::openConfig(), "General");
-    m_integrationEnabled = confGroup.readEntry("IntegrationEnabled", false);
-
+    m_writableFilesystemEnabled = QFile::exists("/userdata/.writable_image");
 
     QStringList getPropArgs;
     getPropArgs << "persist.sys.usb.config";
@@ -84,9 +83,9 @@ void DevelSettings::setDeveloperModeEnabled(bool enable)
         m_developerModeEnabled = enable;
 
         //TODO: this really should be non-blocking ...
-        KAuth::Action action(m_developerModeEnabled ? "org.kde.active.developerMode.enable"
-        : "org.kde.active.developerMode.disable");
-        action.setHelperId("org.kde.active.developerMode");
+        KAuth::Action action(m_developerModeEnabled ? "org.kde.active.developermode.enable"
+        : "org.kde.active.developermode.disable");
+        action.setHelperId("org.kde.active.developermode");
 
         qDebug() << "Action" << action.name() << action.details() << "valid:" << action.isValid();
         auto job = action.execute();
@@ -138,35 +137,35 @@ void DevelSettings::enableSsh(bool enable)
     }
 }
 
-void DevelSettings::setIntegrationEnabled(bool enable)
+void DevelSettings::setWritableFilesystemEnabled(bool enable)
 {
-    if (m_integrationEnabled != enable) {
-        const bool was = m_integrationEnabled;
-        m_integrationEnabled = enable;
+    if (m_writableFilesystemEnabled != enable) {
+        const bool was = m_writableFilesystemEnabled;
+        m_writableFilesystemEnabled = enable;
 
         //TODO: this really should be non-blocking ...
-        KAuth::Action action(m_integrationEnabled ? "org.kde.active.integration.enable"
-        : "org.kde.active.integration.disable");
-        action.setHelperId("org.kde.active.integration");
+        KAuth::Action action(m_writableFilesystemEnabled ? "org.kde.active.writablefilesystem.enable"
+        : "org.kde.active.writablefilesystem.disable");
+        action.setHelperId("org.kde.active.writablefilesystem");
 
         qDebug() << "Action" << action.name() << action.details() << "valid:" << action.isValid();
         auto job = action.execute();
         if (job->error()) {
-            m_integrationEnabled = !m_integrationEnabled;
-            qWarning()<< "KAuth returned an error code:" << job->errorString() << "enabled" << m_integrationEnabled;
+            m_writableFilesystemEnabled = !m_writableFilesystemEnabled;
+            qWarning()<< "KAuth returned an error code:" << job->errorString() << "enabled" << m_writableFilesystemEnabled;
         }
 
-        if (was != m_integrationEnabled) {
+        if (was != m_writableFilesystemEnabled) {
             KConfigGroup confGroup(KSharedConfig::openConfig(), "General");
-            confGroup.writeEntry("IntegrationEnabled", m_integrationEnabled);
-            emit enableIntegrationChanged(m_integrationEnabled);
+            confGroup.writeEntry("WritableFilesystemEnabled", m_writableFilesystemEnabled);
+            emit enableWritableFilesystemChanged(m_writableFilesystemEnabled);
         }
     }
 }
 
-bool DevelSettings::isIntegrationEnabled()
+bool DevelSettings::isWritableFilesystemEnabled()
 {
-    return m_integrationEnabled;
+    return m_writableFilesystemEnabled;
 }
 
 #include "develsettings.moc"

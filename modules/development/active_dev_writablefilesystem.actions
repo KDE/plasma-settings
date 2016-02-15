@@ -1,0 +1,15 @@
+[Domain]
+Name=Writable filesystem
+
+Icon=drive-harddisk
+
+[org.kde.active.writablefilesystem.enable]
+Name=Enable writable filesystem
+Description=Makes the root filesystem writable
+
+Policy=yes
+
+[org.kde.active.writablefilesystem.disable]
+Name=Disable writable filesystem
+Description=Makes the root filesystem read only
+Policy=yes

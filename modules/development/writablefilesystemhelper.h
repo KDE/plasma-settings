@@ -1,6 +1,6 @@
 /*
  *  Copyright 2012 Aaron Seigo <aseigo@kde.org>
- *  Copyright 2012 Marco Martin <mart@kde.org>
+ *  Copyright 2016 Marco Martin <mart@kde.org>
  *
  *  This program is free software; you can redistribute it and/or modify
  *  it under the terms of the GNU General Public License as published by
@@ -17,19 +17,19 @@
  *  Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.
  */
 
-#ifndef INTEGRATION_HELPER_H
-#define INTEGRATION_HELPER_H
+#ifndef WRITABLEFILESYSTEM_HELPER_H
+#define WRITABLEFILESYSTEM_HELPER_H
 
 #include <kauth.h>
 
 using namespace KAuth;
 
-class IntegrationHelper : public QObject
+class WritableFilesystemHelper : public QObject
 {
     Q_OBJECT
 
 public:
-    IntegrationHelper(QObject *parent = 0);
+    WritableFilesystemHelper(QObject *parent = 0);
 
 public slots:
     ActionReply enable(const QVariantMap &map);

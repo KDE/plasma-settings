@@ -17,8 +17,8 @@
  *  Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.
  */
 
-#ifndef INTEGRATION_HELPER_H
-#define INTEGRATION_HELPER_H
+#ifndef DEVELOPERMODE_HELPER_H
+#define DEVELOPERMODE_HELPER_H
 
 #include <kauth.h>
 

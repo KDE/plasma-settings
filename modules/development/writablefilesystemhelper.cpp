@@ -1,6 +1,6 @@
 /*
  *  Copyright 2012 Aaron Seigo <aseigo@kde.org>
- *  Copyright 2012 Marco Martin <mart@kde.org>
+ *  Copyright 2015 Marco Martin <mart@kde.org>
  *
  *  This program is free software; you can redistribute it and/or modify
  *  it under the terms of the GNU General Public License as published by
@@ -17,47 +17,47 @@
  *  Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.
  */
 
-#include "integrationhelper.h"
+#include "writablefilesystemhelper.h"
 
 #include <QProcess>
 #include <QFile>
 #include <QDebug>
 
 
-IntegrationHelper::IntegrationHelper(QObject *parent)
+WritableFilesystemHelper::WritableFilesystemHelper(QObject *parent)
     : QObject(parent)
 {
 }
 
-ActionReply IntegrationHelper::enable(const QVariantMap &args)
+ActionReply WritableFilesystemHelper::enable(const QVariantMap &args)
 {
     Q_UNUSED(args)
-    QStringList enableArgs;
-    // add-apt-repository ppa:kubuntu-ci/unstable
-    enableArgs << "ppa:kubuntu-ci/unstable";
 
-    int rv = QProcess::execute("add-apt-repository", enableArgs);
+    QFile file("/userdata/.writable_image");
+    const bool created = file.open(QIODevice::WriteOnly);
+    file.close();
 
-    if (rv == 0) {
+    if (created) {
         return ActionReply::SuccessReply();
     } else {
         return ActionReply::HelperErrorReply();
     }
 }
 
-ActionReply IntegrationHelper::disable(const QVariantMap &args)
+ActionReply WritableFilesystemHelper::disable(const QVariantMap &args)
 {
     Q_UNUSED(args)
-    QStringList disableArgs;
-    disableArgs << "-r" << "ppa:kubuntu-ci/unstable";
 
-    int rv = QProcess::execute("add-apt-repository", disableArgs);
+    bool deleted = true;
+    if (QFile::exists("/userdata/.writable_image")) {
+        deleted = QFile::remove("/userdata/.writable_image");
+    }
 
-    if (rv == 0) {
+    if (deleted) {
         return ActionReply::SuccessReply();
     } else {
         return ActionReply::HelperErrorReply();
     }
 }
 
-KAUTH_HELPER_MAIN("org.kde.active.integration", IntegrationHelper)
+KAUTH_HELPER_MAIN("org.kde.active.integration", WritableFilesystemHelper)

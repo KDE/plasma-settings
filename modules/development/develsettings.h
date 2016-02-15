@@ -31,7 +31,7 @@ class DevelSettings : public KQuickAddons::ConfigModule
     Q_OBJECT
     Q_PROPERTY(bool developerModeEnabled READ isDeveloperModeEnabled WRITE setDeveloperModeEnabled NOTIFY enableDeveloperModeChanged)
     Q_PROPERTY(bool sshEnabled READ sshEnabled WRITE enableSsh NOTIFY enableSshChanged)
-    Q_PROPERTY(bool integrationEnabled READ isIntegrationEnabled WRITE setIntegrationEnabled NOTIFY enableIntegrationChanged)
+    Q_PROPERTY(bool writableFilesystemEnabled READ isWritableFilesystemEnabled WRITE setWritableFilesystemEnabled NOTIFY enableWritableFilesystemChanged)
 
 public:
     DevelSettings(QObject* parent, const QVariantList& args);
@@ -43,20 +43,20 @@ public:
     bool sshEnabled() const;
     void enableSsh(bool enable);
 
-    void setIntegrationEnabled(bool enable);
-    bool isIntegrationEnabled();
+    void setWritableFilesystemEnabled(bool enable);
+    bool isWritableFilesystemEnabled();
 
 Q_SIGNALS:
     void enableDeveloperModeChanged(bool enable);
     void enableSshChanged(bool enabled);
     void showTerminalChanged(bool shown);
-    void enableIntegrationChanged(bool enable);
+    void enableWritableFilesystemChanged(bool enable);
 
 private:
     bool m_developerModeEnabled;
     bool m_sshEnabled;
     bool m_terminalShown;
-    bool m_integrationEnabled;
+    bool m_writableFilesystemEnabled;
     bool m_cursorVisible;
     QString m_terminalApp;
     QProcess m_getpropProcess;

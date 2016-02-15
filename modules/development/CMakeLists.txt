@@ -52,14 +52,14 @@ kauth_install_helper_files(active-sshd-helper org.kde.active.sshdcontrol root)
 kauth_install_actions(org.kde.active.sshdcontrol active_dev_sshd.actions)
 
 
-###INTEGRATION
-add_executable(active-integration-helper integrationhelper.cpp ${helper_mocs})
-target_link_libraries(active-integration-helper
+###Writable Filesystem
+add_executable(active-writablefilesystem-helper writablefilesystemhelper.cpp ${helper_mocs})
+target_link_libraries(active-writablefilesystem-helper
     Qt5::Core
     KF5::Auth
 
 )
-install(TARGETS active-integration-helper DESTINATION ${KAUTH_HELPER_INSTALL_DIR})
+install(TARGETS active-writablefilesystem-helper DESTINATION ${KAUTH_HELPER_INSTALL_DIR})
 
-kauth_install_helper_files(active-integration-helper org.kde.active.integration root)
-kauth_install_actions(org.kde.active.integration active_dev_integration.actions)
+kauth_install_helper_files(active-writablefilesystem-helper org.kde.active.writablefilesystem root)
+kauth_install_actions(org.kde.active.writablefilesystem active_dev_writablefilesystem.actions)
