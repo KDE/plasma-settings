@@ -21,6 +21,7 @@
 #define DEVELSETTINGS_H
 
 #include <QObject>
+#include <QProcess>
 #include <QVariantList>
 #include <KQuickAddons/ConfigModule>
 
@@ -28,12 +29,16 @@
 class DevelSettings : public KQuickAddons::ConfigModule
 {
     Q_OBJECT
+    Q_PROPERTY(bool developerModeEnabled READ isDeveloperModeEnabled WRITE setDeveloperModeEnabled NOTIFY enableDeveloperModeChanged)
     Q_PROPERTY(bool sshEnabled READ sshEnabled WRITE enableSsh NOTIFY enableSshChanged)
     Q_PROPERTY(bool integrationEnabled READ isIntegrationEnabled WRITE setIntegrationEnabled NOTIFY enableIntegrationChanged)
 
 public:
     DevelSettings(QObject* parent, const QVariantList& args);
     virtual ~DevelSettings();
+
+    void setDeveloperModeEnabled(bool enable);
+    bool isDeveloperModeEnabled();
 
     bool sshEnabled() const;
     void enableSsh(bool enable);
@@ -42,17 +47,19 @@ public:
     bool isIntegrationEnabled();
 
 Q_SIGNALS:
+    void enableDeveloperModeChanged(bool enable);
     void enableSshChanged(bool enabled);
     void showTerminalChanged(bool shown);
     void enableIntegrationChanged(bool enable);
 
 private:
-
+    bool m_developerModeEnabled;
     bool m_sshEnabled;
     bool m_terminalShown;
     bool m_integrationEnabled;
     bool m_cursorVisible;
     QString m_terminalApp;
+    QProcess m_getpropProcess;
 };
 
 #endif

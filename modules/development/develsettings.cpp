@@ -22,7 +22,6 @@
 #include <QDebug>
 #include <QDBusInterface>
 #include <QFile>
-#include <QProcess>
 #include <QTimer>
 #include <QtQml>
 
@@ -45,7 +44,8 @@
 K_PLUGIN_FACTORY_WITH_JSON(DevelSettingsFactory, "develsettings.json", registerPlugin<DevelSettings>();)
 
 DevelSettings::DevelSettings(QObject* parent, const QVariantList& args)
-: KQuickAddons::ConfigModule(parent, args)
+    : KQuickAddons::ConfigModule(parent, args),
+      m_developerModeEnabled(false)
 {
     // TODO: should probably not rely on systemctl, but be put into a platform specific backend?
     const int rv = QProcess::execute("systemctl is-enabled sshd.service");
@@ -60,10 +60,52 @@ DevelSettings::DevelSettings(QObject* parent, const QVariantList& args)
 
     KConfigGroup confGroup(KSharedConfig::openConfig(), "General");
     m_integrationEnabled = confGroup.readEntry("IntegrationEnabled", false);
+
+
+    QStringList getPropArgs;
+    getPropArgs << "persist.sys.usb.config";
+
+    m_getpropProcess.start("getprop", getPropArgs);
+    connect(&m_getpropProcess, &QProcess::readyReadStandardOutput, this, [this]() {
+        QString output = m_getpropProcess.readAllStandardOutput();
+        m_developerModeEnabled = output.contains("adb");
+        emit enableDeveloperModeChanged(m_developerModeEnabled);
+    });
 }
 
 DevelSettings::~DevelSettings()
 {
+}
+
+void DevelSettings::setDeveloperModeEnabled(bool enable)
+{
+    if (m_developerModeEnabled != enable) {
+        const bool was = m_developerModeEnabled;
+        m_developerModeEnabled = enable;
+
+        //TODO: this really should be non-blocking ...
+        KAuth::Action action(m_developerModeEnabled ? "org.kde.active.developerMode.enable"
+        : "org.kde.active.developerMode.disable");
+        action.setHelperId("org.kde.active.developerMode");
+
+        qDebug() << "Action" << action.name() << action.details() << "valid:" << action.isValid();
+        auto job = action.execute();
+        if (job->error()) {
+            m_developerModeEnabled = !m_developerModeEnabled;
+            qWarning()<< "KAuth returned an error code:" << job->errorString() << "enabled" << m_developerModeEnabled;
+        }
+
+        if (was != m_developerModeEnabled) {
+            KConfigGroup confGroup(KSharedConfig::openConfig(), "General");
+            confGroup.writeEntry("DeveloperModeEnabled", m_developerModeEnabled);
+            emit enableDeveloperModeChanged(m_developerModeEnabled);
+        }
+    }
+}
+
+bool DevelSettings::isDeveloperModeEnabled()
+{
+    return m_developerModeEnabled;
 }
 
 bool DevelSettings::sshEnabled() const

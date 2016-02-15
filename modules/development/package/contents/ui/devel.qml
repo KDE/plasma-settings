@@ -50,6 +50,19 @@ Item {
         }
 
         PlasmaComponents.Label {
+            text: i18n("Enable Developer mode:")
+            Layout.fillWidth: true
+        }
+
+        PlasmaComponents.Switch {
+            id: developerMode
+            checked: kcm.developerModeEnabled
+            onClicked: {
+                kcm.developerModeEnabled = developerMode.checked;
+            }
+        }
+
+        PlasmaComponents.Label {
             id: timeZoneLabel
             text: i18n("Allow remote SSH access:")
             Layout.fillWidth: true
