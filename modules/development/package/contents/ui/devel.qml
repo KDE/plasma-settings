@@ -92,7 +92,7 @@ Item {
         }
 
         Item {
-            width: terminal.width
+            width: 2
             Layout.fillHeight: true
         }
     }

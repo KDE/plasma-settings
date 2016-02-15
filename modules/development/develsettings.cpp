@@ -89,6 +89,7 @@ void DevelSettings::setDeveloperModeEnabled(bool enable)
 
         qDebug() << "Action" << action.name() << action.details() << "valid:" << action.isValid();
         auto job = action.execute();
+        job->exec();
         if (job->error()) {
             m_developerModeEnabled = !m_developerModeEnabled;
             qWarning()<< "KAuth returned an error code:" << job->errorString() << "enabled" << m_developerModeEnabled;
@@ -126,6 +127,7 @@ void DevelSettings::enableSsh(bool enable)
         qDebug() << "Action" << action.name() << action.details() << "valid:" << action.isValid();
 
         auto reply = action.execute();
+        reply->exec();
         if (reply->error()) {
             m_sshEnabled = !m_sshEnabled;
             qWarning()<< "KAuth returned an error code:" << reply->errorString() << m_sshEnabled;
@@ -150,6 +152,7 @@ void DevelSettings::setWritableFilesystemEnabled(bool enable)
 
         qDebug() << "Action" << action.name() << action.details() << "valid:" << action.isValid();
         auto job = action.execute();
+        job->exec();
         if (job->error()) {
             m_writableFilesystemEnabled = !m_writableFilesystemEnabled;
             qWarning()<< "KAuth returned an error code:" << job->errorString() << "enabled" << m_writableFilesystemEnabled;
