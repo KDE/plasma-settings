@@ -3,10 +3,14 @@ Name=Writable filesystem
 
 Icon=drive-harddisk
 
+[org.kde.active.writablefilesystem.detect]
+Name=Detect if filesystem is writable
+Description=Detects if the root filesystem writable
+Policy=yes
+
 [org.kde.active.writablefilesystem.enable]
 Name=Enable writable filesystem
 Description=Makes the root filesystem writable
-
 Policy=yes
 
 [org.kde.active.writablefilesystem.disable]

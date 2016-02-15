@@ -58,8 +58,12 @@ DevelSettings::DevelSettings(QObject* parent, const QVariantList& args)
     setButtons(Apply | Default);
 
 
-    KConfigGroup confGroup(KSharedConfig::openConfig(), "General");
-    m_writableFilesystemEnabled = QFile::exists("/userdata/.writable_image");
+    KAuth::Action action("org.kde.active.writablefilesystem.detect");
+    action.setHelperId("org.kde.active.writablefilesystem");
+    qDebug() << "Action" << action.name() << action.details() << "valid:" << action.isValid();
+    auto reply = action.execute();
+    reply->exec();
+    m_writableFilesystemEnabled = reply->data().value("writable").toBool();
 
     QStringList getPropArgs;
     getPropArgs << "persist.sys.usb.config";

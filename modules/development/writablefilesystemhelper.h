@@ -32,6 +32,7 @@ public:
     WritableFilesystemHelper(QObject *parent = 0);
 
 public slots:
+    ActionReply detect(const QVariantMap &map);
     ActionReply enable(const QVariantMap &map);
     ActionReply disable(const QVariantMap &map);
 };

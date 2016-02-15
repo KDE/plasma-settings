@@ -29,6 +29,16 @@ WritableFilesystemHelper::WritableFilesystemHelper(QObject *parent)
 {
 }
 
+ActionReply WritableFilesystemHelper::detect(const QVariantMap &args)
+{
+    Q_UNUSED(args)
+
+    ActionReply reply = ActionReply::SuccessReply();
+    reply.addData("writable", QFile::exists("/userdata/.writable_image"));
+
+    return reply;
+}
+
 ActionReply WritableFilesystemHelper::enable(const QVariantMap &args)
 {
     Q_UNUSED(args)
