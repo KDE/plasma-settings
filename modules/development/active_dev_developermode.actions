@@ -1,0 +1,14 @@
+[Domain]
+Name=Developer mode
+
+Icon=applications-development
+
+[org.kde.active.developermode.enable]
+Name=Activate the developer mode
+Description=Enable shell and debug access via USB
+Policy=yes
+
+[org.kde.active.developermode.disable]
+Name=Deactivate the developer mode
+Description=Disables shell and debug access via USB
+Policy=yes
