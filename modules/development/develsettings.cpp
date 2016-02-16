@@ -45,7 +45,8 @@ K_PLUGIN_FACTORY_WITH_JSON(DevelSettingsFactory, "develsettings.json", registerP
 
 DevelSettings::DevelSettings(QObject* parent, const QVariantList& args)
     : KQuickAddons::ConfigModule(parent, args),
-      m_developerModeEnabled(false)
+      m_developerModeEnabled(false),
+      m_writableFilesystemEnabled(false)
 {
     // TODO: should probably not rely on systemctl, but be put into a platform specific backend?
     const int rv = QProcess::execute("systemctl is-enabled sshd.service");
@@ -57,13 +58,7 @@ DevelSettings::DevelSettings(QObject* parent, const QVariantList& args)
     setAboutData(about);
     setButtons(Apply | Default);
 
-
-    KAuth::Action action("org.kde.active.writablefilesystem.detect");
-    action.setHelperId("org.kde.active.writablefilesystem");
-    qDebug() << "Action" << action.name() << action.details() << "valid:" << action.isValid();
-    auto reply = action.execute();
-    reply->exec();
-    m_writableFilesystemEnabled = reply->data().value("writable").toBool();
+    QTimer::singleShot(0, this, &DevelSettings::checkWritableFilesystem);
 
     QStringList getPropArgs;
     getPropArgs << "persist.sys.usb.config";
@@ -78,6 +73,16 @@ DevelSettings::DevelSettings(QObject* parent, const QVariantList& args)
 
 DevelSettings::~DevelSettings()
 {
+}
+
+void DevelSettings::checkWritableFilesystem()
+{
+    KAuth::Action action("org.kde.active.writablefilesystem.detect");
+    action.setHelperId("org.kde.active.writablefilesystem");
+    qDebug() << "Action" << action.name() << action.details() << "valid:" << action.isValid();
+    auto reply = action.execute();
+    reply->exec();
+    m_writableFilesystemEnabled = reply->data().value("writable").toBool();
 }
 
 void DevelSettings::setDeveloperModeEnabled(bool enable)

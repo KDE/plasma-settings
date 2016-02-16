@@ -46,6 +46,9 @@ public:
     void setWritableFilesystemEnabled(bool enable);
     bool isWritableFilesystemEnabled();
 
+private Q_SLOTS:
+    void checkWritableFilesystem();
+
 Q_SIGNALS:
     void enableDeveloperModeChanged(bool enable);
     void enableSshChanged(bool enabled);
