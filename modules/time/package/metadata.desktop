@@ -71,7 +71,6 @@ Comment[uk]=Параметри показу часового поясу і да�
 Comment[wa]=Coisse ås eures, håynaedje del date
 Comment[x-test]=xxTimezone, Date Displayxx
 Comment[zh_TW]=時區，日期顯示
-Encoding=UTF-8
 Type=Service
 Icon=preferences-system-time
 X-KDE-ServiceTypes=Active/SettingsModule
