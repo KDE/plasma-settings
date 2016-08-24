@@ -18,12 +18,9 @@ add_subdirectory(powermanagement)
 #install(DIRECTORY powermanagement/ DESTINATION ${DATA_INSTALL_DIR}/plasma/packages/org.kde.active.settings.powermanagement)
 #install(FILES powermanagement/metadata.desktop DESTINATION ${SERVICES_INSTALL_DIR} RENAME org.kde.active.settings.powermanagement.desktop)
 
-# ConfigTest
-#install(DIRECTORY configtest/ DESTINATION ${DATA_INSTALL_DIR}/plasma/packages/org.kde.active.settings.configtest)
-#install(FILES configtest/metadata.desktop DESTINATION ${SERVICES_INSTALL_DIR} RENAME org.kde.active.settings.configtest.desktop)
-kpackage_install_package(configtest kcm_configtest kcms)
-
 #Accounts
 if (KAccounts_FOUND AND AccountsQt5_FOUND AND SignOnQt5_FOUND)
     add_subdirectory(accounts)
 endif()
+
+add_subdirectory(about)
