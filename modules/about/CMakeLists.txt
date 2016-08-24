@@ -1,1 +1,0 @@
-kpackage_install_package(package aboutphone kcms)
