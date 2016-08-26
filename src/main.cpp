@@ -53,6 +53,7 @@ int main(int argc, char **argv)
     // About data
     KAboutData aboutData("activesettings", i18n("Settings"), version, i18n("Touch-friendly settings application."), KAboutLicense::GPL, i18n("Copyright 2011-2015, Sebastian Kügler"));
     aboutData.addAuthor(i18n("Sebastian Kügler"), i18n("Maintainer"), "sebas@kde.org");
+    aboutData.setDesktopFileName("org.kde.mobile.plasmasettings");
     KAboutData::setApplicationData(aboutData);
 
     app.setWindowIcon(QIcon::fromTheme("preferences-system"));
