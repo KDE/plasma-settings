@@ -195,6 +195,7 @@ Item {
 
                     PlasmaComponents.CheckBox {
                         text: model.serviceName
+                        checked: model.enabled
                     }
                 }
             }
