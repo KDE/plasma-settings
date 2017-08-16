@@ -1,6 +1,13 @@
 [Desktop Entry]
 Name=Time and Date
+Name[nl]=Datum en tijd
+Name[sv]=Tid och datum
+Name[uk]=Час і дата
+Name[x-test]=xxTime and Datexx
 Comment=Timezone, Date Display
+Comment[sv]=Tidszon, datumvisning
+Comment[uk]=Часовий пояс, показ дати
+Comment[x-test]=xxTimezone, Date Displayxx
 
 Icon=preferences-system-time
 Exec=plasma-settings -m kcm_mobile_time
@@ -16,4 +23,8 @@ X-KDE-System-Settings-Parent-Category=regionalsettings
 X-KDE-Weight=70
 
 X-KDE-Keywords=theme, look, feel
+X-KDE-Keywords[nl]=thema, uiterlijk, gedrag
+X-KDE-Keywords[sv]=tema, utseende, känsla
+X-KDE-Keywords[uk]=theme,look,feel,тема,вигляд,поведінка
+X-KDE-Keywords[x-test]=xxthemexx,xx lookxx,xx feelxx
 Categories=Qt;KDE;X-KDE-settings-system;

@@ -1,6 +1,13 @@
 [Desktop Entry]
 Name=Time and Date
+Name[nl]=Datum en tijd
+Name[sv]=Tid och datum
+Name[uk]=Час і дата
+Name[x-test]=xxTime and Datexx
 Comment=Timezone, Date Display
+Comment[sv]=Tidszon, datumvisning
+Comment[uk]=Часовий пояс, показ дати
+Comment[x-test]=xxTimezone, Date Displayxx
 Type=Service
 Icon=preferences-system-time
 X-KDE-ServiceTypes=Active/SettingsModule

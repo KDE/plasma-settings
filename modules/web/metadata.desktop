@@ -1,6 +1,12 @@
 [Desktop Entry]
 Name=Web and Browser
+Name[sv]=Webb och webbläsare
+Name[uk]=Інтернет і браузер
+Name[x-test]=xxWeb and Browserxx
 Comment=Text Size, History, Adblock, Homepage
+Comment[sv]=Textstorlek, historik, reklamblockering, hemsida
+Comment[uk]=Розмір тексту, журнал, блокування реклами, домашня сторінка
+Comment[x-test]=xxText Size, History, Adblock, Homepagexx
 Encoding=UTF-8
 Type=Service
 Icon=preferences-system-network

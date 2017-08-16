@@ -1,6 +1,14 @@
 [Desktop Entry]
 Name=Accounts
+Name[nl]=Accounts
+Name[sv]=Konton
+Name[uk]=Облікові записи
+Name[x-test]=xxAccountsxx
 Comment=Add Your Online Accounts
+Comment[nl]=Uw online accounts toevoegen
+Comment[sv]=Lägg till dina nätkonton
+Comment[uk]=Додавання ваших облікових записів
+Comment[x-test]=xxAdd Your Online Accountsxx
 
 Encoding=UTF-8
 Type=Service

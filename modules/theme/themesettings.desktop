@@ -1,6 +1,14 @@
 [Desktop Entry]
 Name=Appearance
+Name[nl]=Uiterlijk
+Name[sv]=Utseende
+Name[uk]=Вигляд
+Name[x-test]=xxAppearancexx
 Comment=Look and Feel
+Comment[nl]=Uiterlijk en gedrag
+Comment[sv]=Utseende och känsla
+Comment[uk]=Вигляд і поведінка
+Comment[x-test]=xxLook and Feelxx
 
 Icon=preferences-desktop-theme
 Exec=plasma-settings -m kcm_mobile_theme
@@ -16,4 +24,8 @@ X-KDE-System-Settings-Parent-Category=regionalsettings
 X-KDE-Weight=70
 
 X-KDE-Keywords=theme, look, feel
+X-KDE-Keywords[nl]=thema, uiterlijk, gedrag
+X-KDE-Keywords[sv]=tema, utseende, känsla
+X-KDE-Keywords[uk]=theme,look,feel,тема,вигляд,поведінка
+X-KDE-Keywords[x-test]=xxthemexx,xx lookxx,xx feelxx
 Categories=Qt;KDE;X-KDE-settings-system;

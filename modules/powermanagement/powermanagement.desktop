@@ -1,6 +1,13 @@
 [Desktop Entry]
 Name=Screen
+Name[nl]=Scherm
+Name[sv]=Bildskärm
+Name[uk]=Екран
+Name[x-test]=xxScreenxx
 Comment=Lock, Sleep, Timeout
+Comment[sv]=Lås, viloläge, tidsgräns
+Comment[uk]=Блокування, присипляння, час очікування
+Comment[x-test]=xxLock, Sleep, Timeoutxx
 
 Icon=preferences-system-power-management
 Exec=plasma-settings -m kcm_mobile_power
@@ -16,5 +23,8 @@ X-KDE-System-Settings-Parent-Category=display
 X-KDE-Weight=70
 
 X-KDE-Keywords=video, monitor, graphics, timeout, sleep, lock, screenlocker, screensaver
+X-KDE-Keywords[sv]=video, bildskärm, grafik, tidsgräns, viloläge, låsning, skärmlåsning, skärmsläckare
+X-KDE-Keywords[uk]=video, monitor, graphics, timeout, sleep, lock, screenlocker, screensaver, відео, монітор, графіка, час очікування, присипляння, блокування, збереження, екран
+X-KDE-Keywords[x-test]=xxvideoxx,xx monitorxx,xx graphicsxx,xx timeoutxx,xx sleepxx,xx lockxx,xx screenlockerxx,xx screensaverxx
 Categories=Qt;KDE;X-KDE-settings-system;
 

@@ -1,14 +1,31 @@
 [Domain]
 Name=Developer mode
+Name[nl]=Modus ontwikkelaar
+Name[sv]=Utvecklingsläge
+Name[uk]=Режим розробника
+Name[x-test]=xxDeveloper modexx
 
 Icon=applications-development
 
 [org.kde.active.developermode.enable]
 Name=Activate the developer mode
+Name[nl]=De modus ontwikkelaar activeren
+Name[sv]=Aktivera utvecklingsläge
+Name[uk]=Задіяти режим розробника
+Name[x-test]=xxActivate the developer modexx
 Description=Enable shell and debug access via USB
+Description[sv]=Aktiverar skal och felsökningsåtkomst via USB
+Description[uk]=Увімкнути оболонку і діагностичний доступ за допомогою USB
+Description[x-test]=xxEnable shell and debug access via USBxx
 Policy=yes
 
 [org.kde.active.developermode.disable]
 Name=Deactivate the developer mode
+Name[sv]=Inaktivera utvecklingsläge
+Name[uk]=Вимкнути режим розробника
+Name[x-test]=xxDeactivate the developer modexx
 Description=Disables shell and debug access via USB
+Description[sv]=Inaktiverar skal och felsökningsåtkomst via USB
+Description[uk]=Вимкнути оболонку і діагностичний доступ за допомогою USB
+Description[x-test]=xxDisables shell and debug access via USBxx
 Policy=yes

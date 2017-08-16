@@ -1,19 +1,40 @@
 [Domain]
 Name=Writable filesystem
+Name[sv]=Skrivbart filsystem
+Name[uk]=Запис для файлової системи
+Name[x-test]=xxWritable filesystemxx
 
 Icon=drive-harddisk
 
 [org.kde.active.writablefilesystem.detect]
 Name=Detect if filesystem is writable
+Name[sv]=Detektera om filsystem är skrivbart
+Name[uk]=Визначити, чи можливий запис для файлової системи
+Name[x-test]=xxDetect if filesystem is writablexx
 Description=Detects if the root filesystem writable
+Description[sv]=Detekterar om rotfilsystemet är skrivbart
+Description[uk]=Визначити, чи є коренева файлова система придатною до запису
+Description[x-test]=xxDetects if the root filesystem writablexx
 Policy=yes
 
 [org.kde.active.writablefilesystem.enable]
 Name=Enable writable filesystem
+Name[sv]=Aktivera skrivbart filsystem
+Name[uk]=Увімкнути запис для файлової системи
+Name[x-test]=xxEnable writable filesystemxx
 Description=Makes the root filesystem writable
+Description[sv]=Gör rotfilsystemet skrivbart
+Description[uk]=Зробити файлову систему доступною для запису
+Description[x-test]=xxMakes the root filesystem writablexx
 Policy=yes
 
 [org.kde.active.writablefilesystem.disable]
 Name=Disable writable filesystem
+Name[sv]=Inaktivera skrivbart filsystem
+Name[uk]=Вимкнути запис для файлової системи
+Name[x-test]=xxDisable writable filesystemxx
 Description=Makes the root filesystem read only
+Description[sv]=Gör rotfilsystemet skrivskyddat
+Description[uk]=Зробити кореневу файлову систему придатною лише для читання
+Description[x-test]=xxMakes the root filesystem read onlyxx
 Policy=yes

@@ -1,6 +1,13 @@
 [Desktop Entry]
 Name=Appearance
+Name[nl]=Uiterlijk
+Name[sv]=Utseende
+Name[uk]=Вигляд
+Name[x-test]=xxAppearancexx
 Comment=Font and Theme
+Comment[sv]=Teckensnitt och tema
+Comment[uk]=Шрифт і тема
+Comment[x-test]=xxFont and Themexx
 Encoding=UTF-8
 Type=Service
 Icon=preferences-desktop-theme
