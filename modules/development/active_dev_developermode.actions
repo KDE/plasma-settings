@@ -14,6 +14,7 @@ Name[sv]=Aktivera utvecklingsläge
 Name[uk]=Задіяти режим розробника
 Name[x-test]=xxActivate the developer modexx
 Description=Enable shell and debug access via USB
+Description[nl]=Toegang tot shell en debug via USB inschakelen
 Description[sv]=Aktiverar skal och felsökningsåtkomst via USB
 Description[uk]=Увімкнути оболонку і діагностичний доступ за допомогою USB
 Description[x-test]=xxEnable shell and debug access via USBxx
@@ -21,10 +22,12 @@ Policy=yes
 
 [org.kde.active.developermode.disable]
 Name=Deactivate the developer mode
+Name[nl]=De modus ontwikkelaar deactiveren
 Name[sv]=Inaktivera utvecklingsläge
 Name[uk]=Вимкнути режим розробника
 Name[x-test]=xxDeactivate the developer modexx
 Description=Disables shell and debug access via USB
+Description[nl]=Toegang tot shell en debug via USB uitschakelen
 Description[sv]=Inaktiverar skal och felsökningsåtkomst via USB
 Description[uk]=Вимкнути оболонку і діагностичний доступ за допомогою USB
 Description[x-test]=xxDisables shell and debug access via USBxx

@@ -5,6 +5,7 @@ Name[sv]=Bildskärm
 Name[uk]=Екран
 Name[x-test]=xxScreenxx
 Comment=Lock, Sleep, Timeout
+Comment[nl]=Vergrendelen, onderbreken, tijdslimiet
 Comment[sv]=Lås, viloläge, tidsgräns
 Comment[uk]=Блокування, присипляння, час очікування
 Comment[x-test]=xxLock, Sleep, Timeoutxx

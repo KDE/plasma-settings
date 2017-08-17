@@ -1,9 +1,11 @@
 [Desktop Entry]
 Name=Mobile Settings
+Name[nl]=Instellingen voor mobiel
 Name[sv]=Mobilinställningar
 Name[uk]=Параметри мобільного
 Name[x-test]=xxMobile Settingsxx
 Comment=Touchscreen friendly settings UI for Active
+Comment[nl]=Aanraakschermvriendelijke instellingen van UI voor Active
 Comment[sv]=Pekskärmsvänliga inställningar av användargränssnitt för Active
 Comment[uk]=Інтерфейс параметрів сенсорного доступу для мобільного режиму
 Comment[x-test]=xxTouchscreen friendly settings UI for Activexx
