@@ -1,11 +1,15 @@
 [Desktop Entry]
 Name=Web and Browser
+Name[fr]=Web et Navigateur
 Name[nl]=Web en browser
+Name[pt]=Web e Navegador
 Name[sv]=Webb och webbläsare
 Name[uk]=Інтернет і браузер
 Name[x-test]=xxWeb and Browserxx
 Comment=Text Size, History, Adblock, Homepage
+Comment[fr]=Taille du texte, historique, blocage des bandeaux publicitaires, page d'accueil
 Comment[nl]=Tekstgrootte, geschiedenis, adblock, homepage
+Comment[pt]=Tamanho do Texto, Histórico, AdBlock, Página Inicial
 Comment[sv]=Textstorlek, historik, reklamblockering, hemsida
 Comment[uk]=Розмір тексту, журнал, блокування реклами, домашня сторінка
 Comment[x-test]=xxText Size, History, Adblock, Homepagexx

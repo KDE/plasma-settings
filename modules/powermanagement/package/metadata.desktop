@@ -1,11 +1,16 @@
 [Desktop Entry]
 Name=Screen
+Name[fr]=Écran
 Name[nl]=Scherm
+Name[pt]=Ecrã
+Name[sk]=Obrazovka
 Name[sv]=Bildskärm
 Name[uk]=Екран
 Name[x-test]=xxScreenxx
 Comment=Lock, Sleep, Timeout
+Comment[fr]=Verrou, mise en sommeil, temps imparti
 Comment[nl]=Vergrendelen, onderbreken, tijdslimiet
+Comment[pt]=Bloquear, Suspender, Tempo-Limite
 Comment[sv]=Lås, viloläge, tidsgräns
 Comment[uk]=Блокування, присипляння, час очікування
 Comment[x-test]=xxLock, Sleep, Timeoutxx

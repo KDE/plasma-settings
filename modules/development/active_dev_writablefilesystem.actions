@@ -1,6 +1,7 @@
 [Domain]
 Name=Writable filesystem
 Name[nl]=Beschrijfbaar bestandssysteem
+Name[pt]=Sistema de ficheiros para escrita
 Name[sv]=Skrivbart filsystem
 Name[uk]=Запис для файлової системи
 Name[x-test]=xxWritable filesystemxx
@@ -10,11 +11,13 @@ Icon=drive-harddisk
 [org.kde.active.writablefilesystem.detect]
 Name=Detect if filesystem is writable
 Name[nl]=Detecteer of bestandssysteem beschrijfbaar is
+Name[pt]=Detecta se é possível escrever no sistema de ficheiros
 Name[sv]=Detektera om filsystem är skrivbart
 Name[uk]=Визначити, чи можливий запис для файлової системи
 Name[x-test]=xxDetect if filesystem is writablexx
 Description=Detects if the root filesystem writable
 Description[nl]=Detecteert of rootbestandssysteem beschrijfbaar is
+Description[pt]=Detecta se é possível escrever no sistema de ficheiros de raiz
 Description[sv]=Detekterar om rotfilsystemet är skrivbart
 Description[uk]=Визначити, чи є коренева файлова система придатною до запису
 Description[x-test]=xxDetects if the root filesystem writablexx
@@ -23,11 +26,13 @@ Policy=yes
 [org.kde.active.writablefilesystem.enable]
 Name=Enable writable filesystem
 Name[nl]=Beschrijfbaar bestandssysteem inschakelen
+Name[pt]=Activar o sistema de ficheiros para escrita
 Name[sv]=Aktivera skrivbart filsystem
 Name[uk]=Увімкнути запис для файлової системи
 Name[x-test]=xxEnable writable filesystemxx
 Description=Makes the root filesystem writable
 Description[nl]=Maakt het rootbestandssysteem beschrijfbaar
+Description[pt]=Permite escrever no sistema de ficheiros de raiz
 Description[sv]=Gör rotfilsystemet skrivbart
 Description[uk]=Зробити файлову систему доступною для запису
 Description[x-test]=xxMakes the root filesystem writablexx
@@ -36,11 +41,13 @@ Policy=yes
 [org.kde.active.writablefilesystem.disable]
 Name=Disable writable filesystem
 Name[nl]=Beschrijfbaar bestandssysteem uitschakelen
+Name[pt]=Desactivar o sistema de ficheiros para escrita
 Name[sv]=Inaktivera skrivbart filsystem
 Name[uk]=Вимкнути запис для файлової системи
 Name[x-test]=xxDisable writable filesystemxx
 Description=Makes the root filesystem read only
 Description[nl]=Maakt het rootbestandssysteem alleen-lezen
+Description[pt]=Impede de escrever no sistema de ficheiros de raiz
 Description[sv]=Gör rotfilsystemet skrivskyddat
 Description[uk]=Зробити кореневу файлову систему придатною лише для читання
 Description[x-test]=xxMakes the root filesystem read onlyxx

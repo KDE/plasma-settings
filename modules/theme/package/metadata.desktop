@@ -1,11 +1,15 @@
 [Desktop Entry]
 Name=Appearance
+Name[fr]=Apparence
 Name[nl]=Uiterlijk
+Name[pt]=Aparência
+Name[sk]=Vzhľad
 Name[sv]=Utseende
 Name[uk]=Вигляд
 Name[x-test]=xxAppearancexx
 Comment=Font and Theme
 Comment[nl]=Lettertype en thema
+Comment[pt]=Tipo de Letra e Tema
 Comment[sv]=Teckensnitt och tema
 Comment[uk]=Шрифт і тема
 Comment[x-test]=xxFont and Themexx

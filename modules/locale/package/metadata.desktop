@@ -1,11 +1,17 @@
 [Desktop Entry]
 Name=Language
+Name[fr]=Langue
 Name[nl]=Taal
+Name[pt]=Língua
+Name[sk]=Jazyk
 Name[sv]=Språk
 Name[uk]=Мова
 Name[x-test]=xxLanguagexx
 Comment=Locale settings
+Comment[fr]=Configuration des paramètres régionaux
 Comment[nl]=Lokale instellingen
+Comment[pt]=Configuração regional
+Comment[sk]=Miestne nastavenia
 Comment[sv]=Landsinställningar
 Comment[uk]=Параметри локалі
 Comment[x-test]=xxLocale settingsxx

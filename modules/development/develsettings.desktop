@@ -1,11 +1,16 @@
 [Desktop Entry]
 Name=Development
+Name[fr]=Développement
 Name[nl]=Ontwikkeling
+Name[pt]=Desenvolvimento
+Name[sk]=Vývoj
 Name[sv]=Utveckling
 Name[uk]=Розробка
 Name[x-test]=xxDevelopmentxx
 Comment=Settings for developers
+Comment[fr]=Paramètres pour les développeurs
 Comment[nl]=Instellingen voor ontwikkelaars
+Comment[pt]=Definições para programadores
 Comment[sv]=Inställningar för utvecklare
 Comment[uk]=Параметри для розробників
 Comment[x-test]=xxSettings for developersxx

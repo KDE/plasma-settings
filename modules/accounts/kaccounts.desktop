@@ -1,11 +1,15 @@
 [Desktop Entry]
 Name=Accounts
+Name[fr]=Comptes
 Name[nl]=Accounts
+Name[pt]=Contas
+Name[sk]=Účty
 Name[sv]=Konton
 Name[uk]=Облікові записи
 Name[x-test]=xxAccountsxx
 Comment=Add Your Online Accounts
 Comment[nl]=Uw online accounts toevoegen
+Comment[pt]=Adicionar as Suas Contas 'Online'
 Comment[sv]=Lägg till dina nätkonton
 Comment[uk]=Додавання ваших облікових записів
 Comment[x-test]=xxAdd Your Online Accountsxx
@@ -25,6 +29,7 @@ X-KDE-Weight=70
 
 X-KDE-Keywords=accounts, online
 X-KDE-Keywords[nl]=accounts, online
+X-KDE-Keywords[pt]=contas, online
 X-KDE-Keywords[sv]=konton, uppkoppling
 X-KDE-Keywords[uk]=облікові записи,мережа,accounts,online
 X-KDE-Keywords[x-test]=xxaccountsxx,xx onlinexx

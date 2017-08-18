@@ -1,16 +1,23 @@
 [Desktop Entry]
 Name=Settings
+Name[fr]=Configuration
 Name[nl]=Instellingen
+Name[pt]=Configuração
+Name[sk]=Nastavenia
 Name[sv]=Inställningar
 Name[uk]=Параметри
 Name[x-test]=xxSettingsxx
 GenericName=Settings
+GenericName[fr]=Paramètres
 GenericName[nl]=Instellingen
+GenericName[pt]=Configuração
+GenericName[sk]=Nastavenia
 GenericName[sv]=Inställningar
 GenericName[uk]=Параметри
 GenericName[x-test]=xxSettingsxx
 Comment=Settings for Plasma
 Comment[nl]=Instellingen voor Plasma
+Comment[pt]=Configuração do Plasma
 Comment[sv]=Inställningar för Plasma
 Comment[uk]=Параметри Плазми
 Comment[x-test]=xxSettings for Plasmaxx

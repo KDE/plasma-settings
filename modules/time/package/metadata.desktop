@@ -1,11 +1,16 @@
 [Desktop Entry]
 Name=Time and Date
+Name[fr]=Heure et Date
 Name[nl]=Datum en tijd
+Name[pt]=Hora e Data
+Name[sk]=Čas a dátum
 Name[sv]=Tid och datum
 Name[uk]=Час і дата
 Name[x-test]=xxTime and Datexx
 Comment=Timezone, Date Display
+Comment[fr]=Fuseau horaire, affichage de la date
 Comment[nl]=Tijdzone, datumweergave
+Comment[pt]=Fuso-Horário, Visualização das Datas
 Comment[sv]=Tidszon, datumvisning
 Comment[uk]=Часовий пояс, показ дати
 Comment[x-test]=xxTimezone, Date Displayxx
