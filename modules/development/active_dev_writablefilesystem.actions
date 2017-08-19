@@ -1,5 +1,6 @@
 [Domain]
 Name=Writable filesystem
+Name[ca]=Sistema de fitxers amb escriptura
 Name[nl]=Beschrijfbaar bestandssysteem
 Name[pt]=Sistema de ficheiros para escrita
 Name[sv]=Skrivbart filsystem
@@ -10,12 +11,14 @@ Icon=drive-harddisk
 
 [org.kde.active.writablefilesystem.detect]
 Name=Detect if filesystem is writable
+Name[ca]=Detecta si es pot escriure al sistema de fitxers
 Name[nl]=Detecteer of bestandssysteem beschrijfbaar is
 Name[pt]=Detecta se é possível escrever no sistema de ficheiros
 Name[sv]=Detektera om filsystem är skrivbart
 Name[uk]=Визначити, чи можливий запис для файлової системи
 Name[x-test]=xxDetect if filesystem is writablexx
 Description=Detects if the root filesystem writable
+Description[ca]=Detecta si es pot escriure al sistema de fitxers arrel
 Description[nl]=Detecteert of rootbestandssysteem beschrijfbaar is
 Description[pt]=Detecta se é possível escrever no sistema de ficheiros de raiz
 Description[sv]=Detekterar om rotfilsystemet är skrivbart
@@ -25,12 +28,14 @@ Policy=yes
 
 [org.kde.active.writablefilesystem.enable]
 Name=Enable writable filesystem
+Name[ca]=Activa el poder escriure al sistema de fitxers
 Name[nl]=Beschrijfbaar bestandssysteem inschakelen
 Name[pt]=Activar o sistema de ficheiros para escrita
 Name[sv]=Aktivera skrivbart filsystem
 Name[uk]=Увімкнути запис для файлової системи
 Name[x-test]=xxEnable writable filesystemxx
 Description=Makes the root filesystem writable
+Description[ca]=Fa que es pugui escriure al sistema de fitxers arrel
 Description[nl]=Maakt het rootbestandssysteem beschrijfbaar
 Description[pt]=Permite escrever no sistema de ficheiros de raiz
 Description[sv]=Gör rotfilsystemet skrivbart
@@ -40,12 +45,14 @@ Policy=yes
 
 [org.kde.active.writablefilesystem.disable]
 Name=Disable writable filesystem
+Name[ca]=Desactiva el poder escriure al sistema de fitxers
 Name[nl]=Beschrijfbaar bestandssysteem uitschakelen
 Name[pt]=Desactivar o sistema de ficheiros para escrita
 Name[sv]=Inaktivera skrivbart filsystem
 Name[uk]=Вимкнути запис для файлової системи
 Name[x-test]=xxDisable writable filesystemxx
 Description=Makes the root filesystem read only
+Description[ca]=Fa que el sistema de fitxers arrel sigui de només lectura
 Description[nl]=Maakt het rootbestandssysteem alleen-lezen
 Description[pt]=Impede de escrever no sistema de ficheiros de raiz
 Description[sv]=Gör rotfilsystemet skrivskyddat

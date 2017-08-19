@@ -1,11 +1,13 @@
 [Desktop Entry]
 Name=Mobile Settings
+Name[ca]=Ajustaments per al mòbil
 Name[nl]=Instellingen voor mobiel
 Name[pt]=Configuração Móvel
 Name[sv]=Mobilinställningar
 Name[uk]=Параметри мобільного
 Name[x-test]=xxMobile Settingsxx
 Comment=Touchscreen friendly settings UI for Active
+Comment[ca]=Ajustaments fàcils de la pantalla tàctil per a Active
 Comment[fr]=Interface de configuration conviviale avec écran tactile pour Active
 Comment[nl]=Aanraakschermvriendelijke instellingen van UI voor Active
 Comment[pt]=UI de configuração do Active amigável para ecrãs tácteis

@@ -1,5 +1,6 @@
 [Desktop Entry]
 Name=Accounts
+Name[ca]=Comptes
 Name[fr]=Comptes
 Name[nl]=Accounts
 Name[pt]=Contas
@@ -8,6 +9,7 @@ Name[sv]=Konton
 Name[uk]=Облікові записи
 Name[x-test]=xxAccountsxx
 Comment=Add Your Online Accounts
+Comment[ca]=Afegiu els vostres comptes en línia
 Comment[nl]=Uw online accounts toevoegen
 Comment[pt]=Adicionar as Suas Contas 'Online'
 Comment[sv]=Lägg till dina nätkonton

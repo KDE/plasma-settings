@@ -1,5 +1,6 @@
 [Desktop Entry]
 Name=Appearance
+Name[ca]=Aparença
 Name[fr]=Apparence
 Name[nl]=Uiterlijk
 Name[pt]=Aparência
@@ -8,6 +9,7 @@ Name[sv]=Utseende
 Name[uk]=Вигляд
 Name[x-test]=xxAppearancexx
 Comment=Look and Feel
+Comment[ca]=Aspecte i comportament
 Comment[nl]=Uiterlijk en gedrag
 Comment[pt]=Aparência e Comportamento
 Comment[sk]=Vzhľad a nastavenie
@@ -29,6 +31,7 @@ X-KDE-System-Settings-Parent-Category=regionalsettings
 X-KDE-Weight=70
 
 X-KDE-Keywords=theme, look, feel
+X-KDE-Keywords[ca]=tema, aspecte, comportament
 X-KDE-Keywords[fr]=thème, apparence, comportement, graphique
 X-KDE-Keywords[nl]=thema, uiterlijk, gedrag
 X-KDE-Keywords[pt]=tema, aparência, comportamento

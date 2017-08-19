@@ -1,5 +1,6 @@
 [Desktop Entry]
 Name=Screen
+Name[ca]=Pantalla
 Name[fr]=Écran
 Name[nl]=Scherm
 Name[pt]=Ecrã
@@ -8,6 +9,7 @@ Name[sv]=Bildskärm
 Name[uk]=Екран
 Name[x-test]=xxScreenxx
 Comment=Lock, Sleep, Timeout
+Comment[ca]=Bloqueja, adorm, Temps d'espera
 Comment[fr]=Verrou, mise en sommeil, temps imparti
 Comment[nl]=Vergrendelen, onderbreken, tijdslimiet
 Comment[pt]=Bloquear, Suspender, Tempo-Limite
@@ -29,6 +31,7 @@ X-KDE-System-Settings-Parent-Category=display
 X-KDE-Weight=70
 
 X-KDE-Keywords=video, monitor, graphics, timeout, sleep, lock, screenlocker, screensaver
+X-KDE-Keywords[ca]=vídeo, monitor, gràfics, temps d'espera, adorm, bloqueja, bloqueig de la pantalla, salvapantalles
 X-KDE-Keywords[nl]=video, monitor, grafisch, tijdslimiet, onderbreken, vergrendelen, schermvergrendelaar, schermbeveiliging
 X-KDE-Keywords[pt]=vídeo, monitor, gráfica, tempo-limite, suspender, bloquear, bloqueio de ecrã, protector de ecrã
 X-KDE-Keywords[sv]=video, bildskärm, grafik, tidsgräns, viloläge, låsning, skärmlåsning, skärmsläckare

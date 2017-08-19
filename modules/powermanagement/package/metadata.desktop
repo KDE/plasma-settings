@@ -1,5 +1,6 @@
 [Desktop Entry]
 Name=Screen
+Name[ca]=Pantalla
 Name[fr]=Écran
 Name[nl]=Scherm
 Name[pt]=Ecrã
@@ -8,6 +9,7 @@ Name[sv]=Bildskärm
 Name[uk]=Екран
 Name[x-test]=xxScreenxx
 Comment=Lock, Sleep, Timeout
+Comment[ca]=Bloqueja, adorm, Temps d'espera
 Comment[fr]=Verrou, mise en sommeil, temps imparti
 Comment[nl]=Vergrendelen, onderbreken, tijdslimiet
 Comment[pt]=Bloquear, Suspender, Tempo-Limite
