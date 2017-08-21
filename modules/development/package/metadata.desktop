@@ -1,6 +1,7 @@
 [Desktop Entry]
 Name=Development
 Name[ca]=Desenvolupament
+Name[ca@valencia]=Desenvolupament
 Name[fr]=Développement
 Name[nl]=Ontwikkeling
 Name[pt]=Desenvolvimento
@@ -10,6 +11,7 @@ Name[uk]=Розробка
 Name[x-test]=xxDevelopmentxx
 Comment=Settings for developers
 Comment[ca]=Ajustaments per a desenvolupadors
+Comment[ca@valencia]=Ajustaments per a desenvolupadors
 Comment[fr]=Paramètres pour les développeurs
 Comment[nl]=Instellingen voor ontwikkelaars
 Comment[pt]=Definições para programadores

@@ -1,6 +1,7 @@
 [Desktop Entry]
 Name=Time and Date
 Name[ca]=Hora i data
+Name[ca@valencia]=Hora i data
 Name[fr]=Heure et Date
 Name[nl]=Datum en tijd
 Name[pt]=Hora e Data
@@ -10,6 +11,7 @@ Name[uk]=Час і дата
 Name[x-test]=xxTime and Datexx
 Comment=Timezone, Date Display
 Comment[ca]=Zona horària, Mostra la data
+Comment[ca@valencia]=Zona horària, Mostra la data
 Comment[fr]=Fuseau horaire, affichage de la date
 Comment[nl]=Tijdzone, datumweergave
 Comment[pt]=Fuso-Horário, Visualização das Datas
@@ -32,6 +34,7 @@ X-KDE-Weight=70
 
 X-KDE-Keywords=theme, look, feel
 X-KDE-Keywords[ca]=tema, aspecte, comportament
+X-KDE-Keywords[ca@valencia]=tema, aspecte, comportament
 X-KDE-Keywords[fr]=thème, apparence, comportement, graphique
 X-KDE-Keywords[nl]=thema, uiterlijk, gedrag
 X-KDE-Keywords[pt]=tema, aparência, comportamento

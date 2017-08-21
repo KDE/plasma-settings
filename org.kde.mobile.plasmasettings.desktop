@@ -1,6 +1,7 @@
 [Desktop Entry]
 Name=Settings
 Name[ca]=Ajustaments
+Name[ca@valencia]=Ajustaments
 Name[fr]=Configuration
 Name[nl]=Instellingen
 Name[pt]=Configuração
@@ -10,6 +11,7 @@ Name[uk]=Параметри
 Name[x-test]=xxSettingsxx
 GenericName=Settings
 GenericName[ca]=Ajustaments
+GenericName[ca@valencia]=Ajustaments
 GenericName[fr]=Paramètres
 GenericName[nl]=Instellingen
 GenericName[pt]=Configuração
@@ -19,6 +21,7 @@ GenericName[uk]=Параметри
 GenericName[x-test]=xxSettingsxx
 Comment=Settings for Plasma
 Comment[ca]=Ajustaments per al Plasma
+Comment[ca@valencia]=Ajustaments per al Plasma
 Comment[nl]=Instellingen voor Plasma
 Comment[pt]=Configuração do Plasma
 Comment[sv]=Inställningar för Plasma
