@@ -2,6 +2,7 @@
 Name=Time and Date
 Name[ca]=Hora i data
 Name[ca@valencia]=Hora i data
+Name[es]=Fecha y hora
 Name[fr]=Heure et Date
 Name[nl]=Datum en tijd
 Name[pt]=Hora e Data
@@ -12,6 +13,7 @@ Name[x-test]=xxTime and Datexx
 Comment=Timezone, Date Display
 Comment[ca]=Zona horària, Mostra la data
 Comment[ca@valencia]=Zona horària, Mostra la data
+Comment[es]=Zona horaria, mostrar la fecha
 Comment[fr]=Fuseau horaire, affichage de la date
 Comment[nl]=Tijdzone, datumweergave
 Comment[pt]=Fuso-Horário, Visualização das Datas

@@ -2,6 +2,7 @@
 Name=Mobile Settings
 Name[ca]=Ajustaments per al mòbil
 Name[ca@valencia]=Ajustaments per al mòbil
+Name[es]=Preferencias del móvil
 Name[nl]=Instellingen voor mobiel
 Name[pt]=Configuração Móvel
 Name[sv]=Mobilinställningar
@@ -10,6 +11,7 @@ Name[x-test]=xxMobile Settingsxx
 Comment=Touchscreen friendly settings UI for Active
 Comment[ca]=Ajustaments fàcils de la pantalla tàctil per a Active
 Comment[ca@valencia]=Ajustaments fàcils de la pantalla tàctil per a Active
+Comment[es]=Interfaz de preferencias amigables de pantalla táctil para Active
 Comment[fr]=Interface de configuration conviviale avec écran tactile pour Active
 Comment[nl]=Aanraakschermvriendelijke instellingen van UI voor Active
 Comment[pt]=UI de configuração do Active amigável para ecrãs tácteis

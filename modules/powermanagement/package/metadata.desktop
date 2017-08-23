@@ -2,6 +2,7 @@
 Name=Screen
 Name[ca]=Pantalla
 Name[ca@valencia]=Pantalla
+Name[es]=Pantalla
 Name[fr]=Écran
 Name[nl]=Scherm
 Name[pt]=Ecrã
@@ -12,6 +13,7 @@ Name[x-test]=xxScreenxx
 Comment=Lock, Sleep, Timeout
 Comment[ca]=Bloqueja, adorm, Temps d'espera
 Comment[ca@valencia]=Bloqueja, adorm, Temps d'espera
+Comment[es]=Bloquear, hibernar, tiempo de espera
 Comment[fr]=Verrou, mise en sommeil, temps imparti
 Comment[nl]=Vergrendelen, onderbreken, tijdslimiet
 Comment[pt]=Bloquear, Suspender, Tempo-Limite
