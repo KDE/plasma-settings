@@ -2,6 +2,7 @@
 Name=Time and Date
 Name[ca]=Hora i data
 Name[ca@valencia]=Hora i data
+Name[cs]=Datum a čas
 Name[es]=Fecha y hora
 Name[fr]=Heure et Date
 Name[nl]=Datum en tijd
@@ -38,6 +39,7 @@ X-KDE-Weight=70
 X-KDE-Keywords=theme, look, feel
 X-KDE-Keywords[ca]=tema, aspecte, comportament
 X-KDE-Keywords[ca@valencia]=tema, aspecte, comportament
+X-KDE-Keywords[cs]=motiv,vzhled,chování
 X-KDE-Keywords[es]=tema, aspecto, visual
 X-KDE-Keywords[fr]=thème, apparence, comportement, graphique
 X-KDE-Keywords[nl]=thema, uiterlijk, gedrag

@@ -2,6 +2,7 @@
 Name=Language
 Name[ca]=Idioma
 Name[ca@valencia]=Idioma
+Name[cs]=Jazyk
 Name[es]=Idioma
 Name[fr]=Langue
 Name[nl]=Taal
@@ -14,6 +15,7 @@ Name[zh_CN]=语言
 Comment=Locale settings
 Comment[ca]=Ajustaments de la configuració regional
 Comment[ca@valencia]=Ajustaments de la configuració regional
+Comment[cs]=Místní nastavení
 Comment[es]=Preferencias locales
 Comment[fr]=Configuration des paramètres régionaux
 Comment[nl]=Lokale instellingen
