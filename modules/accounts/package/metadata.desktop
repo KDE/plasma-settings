@@ -1,5 +1,6 @@
 [Desktop Entry]
 Name=Accounts
+Name[ast]=Cuentes
 Name[ca]=Comptes
 Name[ca@valencia]=Comptes
 Name[cs]=Účty
@@ -13,6 +14,7 @@ Name[sv]=Konton
 Name[uk]=Облікові записи
 Name[x-test]=xxAccountsxx
 Comment=Add Your Online Accounts
+Comment[ast]=Amiesta les tos cuentes en llinia
 Comment[ca]=Afegiu els vostres comptes en línia
 Comment[ca@valencia]=Afegiu els vostres comptes en línia
 Comment[cs]=Přidejte svoje účty online

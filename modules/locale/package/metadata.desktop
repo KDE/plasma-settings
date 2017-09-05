@@ -1,5 +1,6 @@
 [Desktop Entry]
 Name=Language
+Name[ast]=Llingua
 Name[ca]=Idioma
 Name[ca@valencia]=Idioma
 Name[cs]=Jazyk
@@ -14,6 +15,7 @@ Name[uk]=Мова
 Name[x-test]=xxLanguagexx
 Name[zh_CN]=语言
 Comment=Locale settings
+Comment[ast]=Axustes de locale
 Comment[ca]=Ajustaments de la configuració regional
 Comment[ca@valencia]=Ajustaments de la configuració regional
 Comment[cs]=Místní nastavení

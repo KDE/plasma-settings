@@ -1,5 +1,6 @@
 [Domain]
 Name=SSH Remote Access
+Name[ast]=Accesu remotu SSH
 Name[ca]=Accés remot amb SSH
 Name[ca@valencia]=Accés remot amb SSH
 Name[cs]=Vzdálený přístup SSH
@@ -15,6 +16,7 @@ Icon=utilities-terminal
 
 [org.kde.active.sshdcontrol.start]
 Name=Activate sshd
+Name[ast]=Activar sshd
 Name[ca]=Activa el «sshd»
 Name[ca@valencia]=Activa el «sshd»
 Name[cs]=Aktivovat sshd
@@ -27,6 +29,7 @@ Name[sv]=Aktivera sshd
 Name[uk]=Задіяти sshd
 Name[x-test]=xxActivate sshdxx
 Description=Starts sshd on device
+Description[ast]=Anicia sshd nel preséu
 Description[ca]=Inicia el «sshd» al dispositiu
 Description[ca@valencia]=Inicia el «sshd» al dispositiu
 Description[cs]=Spustí na zařízení sshd
@@ -42,6 +45,7 @@ Policy=yes
 
 [org.kde.active.sshdcontrol.stop]
 Name=Deactivate sshd
+Name[ast]=Desactivar sshd
 Name[ca]=Desactiva el «sshd»
 Name[ca@valencia]=Desactiva el «sshd»
 Name[cs]=Deaktivovat sshd
@@ -54,6 +58,7 @@ Name[sv]=Inaktivera sshd
 Name[uk]=Вимкнути sshd
 Name[x-test]=xxDeactivate sshdxx
 Description=Stops sshd on device
+Description[ast]=Para sshd nel preséu
 Description[ca]=Atura el «sshd» al dispositiu
 Description[ca@valencia]=Atura el «sshd» al dispositiu
 Description[cs]=Zastaví na zařízení sshd

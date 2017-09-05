@@ -1,5 +1,6 @@
 [Desktop Entry]
 Name=Settings
+Name[ast]=Axustes
 Name[ca]=Ajustaments
 Name[ca@valencia]=Ajustaments
 Name[cs]=Nastavení
@@ -14,6 +15,7 @@ Name[uk]=Параметри
 Name[x-test]=xxSettingsxx
 Name[zh_CN]=设置
 GenericName=Settings
+GenericName[ast]=Axustes
 GenericName[ca]=Ajustaments
 GenericName[ca@valencia]=Ajustaments
 GenericName[cs]=Nastavení
@@ -28,6 +30,7 @@ GenericName[uk]=Параметри
 GenericName[x-test]=xxSettingsxx
 GenericName[zh_CN]=设置
 Comment=Settings for Plasma
+Comment[ast]=Axustes pa Plasma
 Comment[ca]=Ajustaments per al Plasma
 Comment[ca@valencia]=Ajustaments per al Plasma
 Comment[cs]=Nastavení pro prostředí Plasma

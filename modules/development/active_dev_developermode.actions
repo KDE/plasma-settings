@@ -1,5 +1,6 @@
 [Domain]
 Name=Developer mode
+Name[ast]=Mou desendolcador
 Name[ca]=Mode desenvolupador
 Name[ca@valencia]=Mode desenvolupador
 Name[cs]=Vývojářský režim
@@ -15,6 +16,7 @@ Icon=applications-development
 
 [org.kde.active.developermode.enable]
 Name=Activate the developer mode
+Name[ast]=Activar el mou desendolcador
 Name[ca]=Activa el mode desenvolupador
 Name[ca@valencia]=Activa el mode desenvolupador
 Name[cs]=Aktivovat vývojářský režim
@@ -26,6 +28,7 @@ Name[sv]=Aktivera utvecklingsläge
 Name[uk]=Задіяти режим розробника
 Name[x-test]=xxActivate the developer modexx
 Description=Enable shell and debug access via USB
+Description[ast]=Activa l'accesu al shell y depuración per USB
 Description[ca]=Activa l'intèrpret d'ordres i depura l'accés mitjançant USB
 Description[ca@valencia]=Activa l'intèrpret d'ordes i depura l'accés mitjançant USB
 Description[es]=Activar el acceso a la consola y a la depuración vía USB
@@ -39,6 +42,7 @@ Policy=yes
 
 [org.kde.active.developermode.disable]
 Name=Deactivate the developer mode
+Name[ast]=Desactivar el mou desendolcador
 Name[ca]=Desactiva el mode desenvolupador
 Name[ca@valencia]=Desactiva el mode desenvolupador
 Name[cs]=Deaktivovat vývojářský režim
@@ -50,6 +54,7 @@ Name[sv]=Inaktivera utvecklingsläge
 Name[uk]=Вимкнути режим розробника
 Name[x-test]=xxDeactivate the developer modexx
 Description=Disables shell and debug access via USB
+Description[ast]=Desactiva l'accesu al shell y depuración per USB
 Description[ca]=Desactiva l'intèrpret d'ordres i depura l'accés mitjançant USB
 Description[ca@valencia]=Desactiva l'intèrpret d'ordes i depura l'accés mitjançant USB
 Description[es]=Desactivar el acceso a la consola y a la depuración vía USB

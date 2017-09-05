@@ -1,5 +1,6 @@
 [Desktop Entry]
 Name=Appearance
+Name[ast]=Aspeutu
 Name[ca]=Aparença
 Name[ca@valencia]=Aparença
 Name[cs]=Vzhled
@@ -14,6 +15,7 @@ Name[uk]=Вигляд
 Name[x-test]=xxAppearancexx
 Name[zh_CN]=外观
 Comment=Look and Feel
+Comment[ast]=Aspeutu y sentir
 Comment[ca]=Aspecte i comportament
 Comment[ca@valencia]=Aspecte i comportament
 Comment[cs]=Vzhled a dojem
@@ -41,6 +43,7 @@ X-KDE-System-Settings-Parent-Category=regionalsettings
 X-KDE-Weight=70
 
 X-KDE-Keywords=theme, look, feel
+X-KDE-Keywords[ast]=tema, aseputu, sentir
 X-KDE-Keywords[ca]=tema, aspecte, comportament
 X-KDE-Keywords[ca@valencia]=tema, aspecte, comportament
 X-KDE-Keywords[cs]=motiv,vzhled,chování

@@ -1,5 +1,6 @@
 [Desktop Entry]
 Name=Appearance
+Name[ast]=Aspeutu
 Name[ca]=Aparença
 Name[ca@valencia]=Aparença
 Name[cs]=Vzhled
@@ -14,6 +15,7 @@ Name[uk]=Вигляд
 Name[x-test]=xxAppearancexx
 Name[zh_CN]=外观
 Comment=Font and Theme
+Comment[ast]=Fonte y tema
 Comment[ca]=Tipus de lletra i tema
 Comment[ca@valencia]=Tipus de lletra i tema
 Comment[es]=Tipo de letra y tema

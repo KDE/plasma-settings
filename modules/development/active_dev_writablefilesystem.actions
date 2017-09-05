@@ -1,5 +1,6 @@
 [Domain]
 Name=Writable filesystem
+Name[ast]=Sistema de ficheros escribibles
 Name[ca]=Sistema de fitxers amb escriptura
 Name[ca@valencia]=Sistema de fitxers amb escriptura
 Name[cs]=Zapisovatelný souborový systém
@@ -15,6 +16,7 @@ Icon=drive-harddisk
 
 [org.kde.active.writablefilesystem.detect]
 Name=Detect if filesystem is writable
+Name[ast]=Deteutar si'l sistema de ficheros ye escribible
 Name[ca]=Detecta si es pot escriure al sistema de fitxers
 Name[ca@valencia]=Detecta si es pot escriure al sistema de fitxers
 Name[cs]=Zjistit, zda lze na souborový systém zapisovat
@@ -26,6 +28,7 @@ Name[sv]=Detektera om filsystem är skrivbart
 Name[uk]=Визначити, чи можливий запис для файлової системи
 Name[x-test]=xxDetect if filesystem is writablexx
 Description=Detects if the root filesystem writable
+Description[ast]=Deteuta si'l sistema de ficheros raigañu ye escribible
 Description[ca]=Detecta si es pot escriure al sistema de fitxers arrel
 Description[ca@valencia]=Detecta si es pot escriure al sistema de fitxers arrel
 Description[cs]=Zjistí, zda lze do kořene souborového systému zapisovat
@@ -40,6 +43,7 @@ Policy=yes
 
 [org.kde.active.writablefilesystem.enable]
 Name=Enable writable filesystem
+Name[ast]=Activar sistema de ficheros escribible
 Name[ca]=Activa el poder escriure al sistema de fitxers
 Name[ca@valencia]=Activa el poder escriure al sistema de fitxers
 Name[cs]=Povolit zapisovatelný souborový systém
@@ -51,6 +55,7 @@ Name[sv]=Aktivera skrivbart filsystem
 Name[uk]=Увімкнути запис для файлової системи
 Name[x-test]=xxEnable writable filesystemxx
 Description=Makes the root filesystem writable
+Description[ast]=Fai que'l sistema de ficheros raigañu seya escribible
 Description[ca]=Fa que es pugui escriure al sistema de fitxers arrel
 Description[ca@valencia]=Fa que es puga escriure al sistema de fitxers arrel
 Description[cs]=Přepne kořen souborového systému do režimu pro zápis
@@ -65,6 +70,7 @@ Policy=yes
 
 [org.kde.active.writablefilesystem.disable]
 Name=Disable writable filesystem
+Name[ast]=Desactivar sistema de ficheros escribible
 Name[ca]=Desactiva el poder escriure al sistema de fitxers
 Name[ca@valencia]=Desactiva el poder escriure al sistema de fitxers
 Name[cs]=Vypnout zapisovatelný souborový systém
@@ -76,6 +82,7 @@ Name[sv]=Inaktivera skrivbart filsystem
 Name[uk]=Вимкнути запис для файлової системи
 Name[x-test]=xxDisable writable filesystemxx
 Description=Makes the root filesystem read only
+Description[ast]=Fai que'l sistema de ficheros raigañu seya de namái llectura
 Description[ca]=Fa que el sistema de fitxers arrel sigui de només lectura
 Description[ca@valencia]=Fa que el sistema de fitxers arrel siga de només lectura
 Description[cs]=Přepne kořen souborového systému do režimu pouze pro čtení

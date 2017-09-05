@@ -1,5 +1,6 @@
 [Desktop Entry]
 Name=Time and Date
+Name[ast]=Hora y data
 Name[ca]=Hora i data
 Name[ca@valencia]=Hora i data
 Name[cs]=Datum a čas
@@ -14,6 +15,7 @@ Name[uk]=Час і дата
 Name[x-test]=xxTime and Datexx
 Name[zh_CN]=时间和日期
 Comment=Timezone, Date Display
+Comment[ast]=Fusu horariu, Amuesa de data
 Comment[ca]=Zona horària, Mostra la data
 Comment[ca@valencia]=Zona horària, Mostra la data
 Comment[es]=Zona horaria, mostrar la fecha
@@ -39,6 +41,7 @@ X-KDE-System-Settings-Parent-Category=regionalsettings
 X-KDE-Weight=70
 
 X-KDE-Keywords=theme, look, feel
+X-KDE-Keywords[ast]=tema, aseputu, sentir
 X-KDE-Keywords[ca]=tema, aspecte, comportament
 X-KDE-Keywords[ca@valencia]=tema, aspecte, comportament
 X-KDE-Keywords[cs]=motiv,vzhled,chování
