@@ -14,6 +14,7 @@ Name[sk]=Vzhľad
 Name[sv]=Utseende
 Name[uk]=Вигляд
 Name[x-test]=xxAppearancexx
+Name[zh_CN]=外观
 Comment=Look and Feel
 Comment[ast]=Aspeutu y sentir
 Comment[ca]=Aspecte i comportament
@@ -28,6 +29,7 @@ Comment[sk]=Vzhľad a nastavenie
 Comment[sv]=Utseende och känsla
 Comment[uk]=Вигляд і поведінка
 Comment[x-test]=xxLook and Feelxx
+Comment[zh_CN]=观感
 
 Icon=preferences-desktop-theme
 Exec=plasma-settings -m kcm_mobile_theme
