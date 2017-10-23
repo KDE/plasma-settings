@@ -51,8 +51,9 @@ int main(int argc, char **argv)
     KLocalizedString::setApplicationDomain("plasma-settings");
 
     // About data
-    KAboutData aboutData("activesettings", i18n("Settings"), version, i18n("Touch-friendly settings application."), KAboutLicense::GPL, i18n("Copyright 2011-2015, Sebastian Kügler"));
+    KAboutData aboutData("plasmamobilesettings", i18n("Settings"), version, i18n("Touch-friendly settings application."), KAboutLicense::GPL, i18n("Copyright 2011-2015, Sebastian Kügler"));
     aboutData.addAuthor(i18n("Sebastian Kügler"), i18n("Maintainer"), "sebas@kde.org");
+    aboutData.addAuthor(i18n("Marco Martin"), i18n("Maintainer"), "mart@kde.org");
     aboutData.setDesktopFileName("org.kde.mobile.plasmasettings");
     KAboutData::setApplicationData(aboutData);
 
@@ -71,7 +72,7 @@ int main(int argc, char **argv)
     QCommandLineOption _fullscreen = QCommandLineOption(QStringList() << QStringLiteral("f") << _f,
                                 i18n("Start window fullscreen"));
     QCommandLineOption _layout = QCommandLineOption(QStringList() << _ui,
-                                i18n("Package to use for the UI (default org.kde.active.settings)"), i18n("packagename"));
+                                i18n("Package to use for the UI (default org.kde.mobile.settings)"), i18n("packagename"));
     QCommandLineOption _formfactor = QCommandLineOption(QStringList() << QStringLiteral("x") << _ff,
                                                   i18n("Limit to modules suitable for <formfactor>, e.g. handset, tablet, mediacenter, desktop, test, all (default handset)"), i18n("formfactor"));
 
