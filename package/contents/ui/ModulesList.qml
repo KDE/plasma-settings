@@ -24,12 +24,6 @@ import QtQuick.Controls 2.2 as Controls
 import org.kde.kirigami 2.2 as Kirigami
 import org.kde.active.settings 2.0 as ActiveSettings
 
-import org.kde.plasma.core 2.0 as PlasmaCore
-import org.kde.plasma.components 2.0 as PlasmaComponents
-import org.kde.plasma.extras 2.0 as PlasmaExtras
-import org.kde.kquickcontrolsaddons 2.0
-
-
 Kirigami.ScrollablePage {
     id: settingsRoot
 
@@ -80,7 +74,6 @@ Kirigami.ScrollablePage {
 
             onClicked: {
                 print("Clicked index: " + index + " current: " + listView.currentIndex + " " + module + " curr: " + rootItem.currentModule);
-                loading = true;
                 rootItem.currentModule = module;
                 listView.currentIndex = index;
             }

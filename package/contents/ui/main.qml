@@ -24,12 +24,26 @@ import QtQuick.Controls 2.2 as Controls
 import org.kde.kirigami 2.2 as Kirigami
 
 Kirigami.ApplicationWindow {
-    id: root
+    id: rootItem
+
+    property alias currentModule: moduleItem.module
 
     header: Kirigami.ApplicationHeader {}
     pageStack.initialPage: modulesList
 
+    onCurrentModuleChanged: {
+        if (currentModule.length > 0) {
+            pageStack.push(moduleItem);
+        }
+        pageStack.currentIndex = 1;
+    }
+
     ModulesList {
         id: modulesList
+    }
+
+    ModuleItem {
+        id: moduleItem
+        visible: false
     }
 }
