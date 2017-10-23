@@ -24,10 +24,11 @@
 
 
 // Qt
-#include <QGuiApplication>
+#include <QApplication>
 #include <QCommandLineParser>
 #include <QCommandLineOption>
 #include <QDebug>
+#include <QQmlApplicationEngine>
 
 // Frameworks
 #include <KAboutData>
@@ -36,6 +37,9 @@
 #include <KPackage/PackageLoader>
 #include <KPluginMetaData>
 #include <Plasma/Theme>
+
+#include <KPackage/Package>
+#include <KPackage/PackageLoader>
 
 // Own
 #include "view.h"
@@ -46,7 +50,7 @@ static const char HOME_URL[] = "http://plasma-mobile.org";
 
 int main(int argc, char **argv)
 {
-    QGuiApplication app(argc, argv);
+    QApplication app(argc, argv);
 
     KLocalizedString::setApplicationDomain("plasma-settings");
 
@@ -152,11 +156,17 @@ int main(int argc, char **argv)
     theme.setUseGlobalSettings(false);
     theme.setThemeName(themeName); // nees to happen after setUseGlobalSettings, since that clears themeName
 
+    KPackage::Package package = KPackage::PackageLoader::self()->loadPackage("KPackage/GenericQML");
+    package.setPath("org.kde.plasma.settings");
+
+    QQmlApplicationEngine engine;
+    engine.load(package.filePath("mainscript"));
+    /*
     auto settingsapp = new View(parser);
     settingsapp->parser = &parser;
     if (parser.isSet(_fullscreen)) {
         settingsapp->setVisibility(QWindow::FullScreen);
-    }
+    }*/
 
     return app.exec();
 }
