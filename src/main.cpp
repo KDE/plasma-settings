@@ -29,6 +29,8 @@
 #include <QCommandLineOption>
 #include <QDebug>
 #include <QQmlApplicationEngine>
+#include <QIcon>
+#include <QQmlContext>
 
 // Frameworks
 #include <KAboutData>
@@ -36,13 +38,11 @@
 #include <KLocalizedString>
 #include <KPackage/PackageLoader>
 #include <KPluginMetaData>
-#include <Plasma/Theme>
+#include <KPluginLoader>
 
 #include <KPackage/Package>
 #include <KPackage/PackageLoader>
-
-// Own
-#include "view.h"
+#include <kdeclarative/qmlobjectsharedengine.h>
 
 static const char description[] = I18N_NOOP("Plasma Mobile Settings");
 static const char version[] = "2.0";
@@ -144,29 +144,23 @@ int main(int argc, char **argv)
     }
 
     const QString module = parser.value(_m);
-    QString ui = parser.value(_ui);
-
-    KConfigGroup cg(KSharedConfig::openConfig("plasmarc"), "Theme-plasma-settings");
-
-    const QString themeName = cg.readEntry("name", "default");
-    ui = cg.readEntry("package", ui);
-
-    Plasma::Theme theme;
-    qDebug() << "Setting theme, package " << themeName << ui;
-    theme.setUseGlobalSettings(false);
-    theme.setThemeName(themeName); // nees to happen after setUseGlobalSettings, since that clears themeName
+    QString ui = parser.isSet(_ui) ? parser.value(_ui) : "org.kde.plasma.settings";
 
     KPackage::Package package = KPackage::PackageLoader::self()->loadPackage("KPackage/GenericQML");
-    package.setPath("org.kde.plasma.settings");
+    package.setPath(ui);
+/*
+    KDeclarative::QmlObjectSharedEngine qmlObject;
+    qmlObject.setInitializationDelayed(true);
 
+    qmlObject.setSource(QUrl::fromLocalFile(package.filePath("mainscript")));
+    qmlObject.engine()->rootContext()->setContextProperty("startModule", module);
+    qmlObject.completeInitialization();
+    */
     QQmlApplicationEngine engine;
+    engine.rootContext()->setContextProperty("startModule", module);
     engine.load(package.filePath("mainscript"));
-    /*
-    auto settingsapp = new View(parser);
-    settingsapp->parser = &parser;
-    if (parser.isSet(_fullscreen)) {
-        settingsapp->setVisibility(QWindow::FullScreen);
-    }*/
+    
+
 
     return app.exec();
 }

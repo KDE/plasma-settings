@@ -38,6 +38,11 @@ Kirigami.ApplicationWindow {
         pageStack.currentIndex = 1;
     }
 
+    Component.onCompleted: {
+        if (startModule.length > 0) {
+            rootItem.currentModule = startModule;
+        }
+    }
     ModulesList {
         id: modulesList
     }

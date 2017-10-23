@@ -4,7 +4,6 @@ find_package(Qt5 REQUIRED NO_MODULE COMPONENTS Gui)
 
 set(plasma-settings_SRCS
     main.cpp
-    view.cpp
 )
 
 add_executable(plasma-settings ${plasma-settings_SRCS})
@@ -12,7 +11,6 @@ add_executable(plasma-settings ${plasma-settings_SRCS})
 target_link_libraries(plasma-settings
     Qt5::Quick
     Qt5::Gui
-    KF5::Plasma
     KF5::Package
     KF5::DBusAddons
     KF5::Declarative

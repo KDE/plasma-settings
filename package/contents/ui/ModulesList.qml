@@ -83,27 +83,31 @@ Kirigami.ScrollablePage {
     ActiveSettings.SettingsModulesModel {
         id: settingsModulesModel
         formFactor: rootItem.formFactor // overridden by --formfactor argument!
-        onSettingsModulesChanged: {
+        onSettingsModulesChanged: currentTimer.restart()
+    }
+
+    //FIXME: this timer shouldn't be needed, problem in kirigami?
+    Timer {
+        id: currentTimer
+        onTriggered: {
             // when the modules are loaded, we need to ensure that
             // the list has the correct item loaded
-            if (startModule == "" && settingsItem.module == "") {
+            if (startModule == "") {
                 print("resetting index. doei")
                 listView.currentIndex = -1;
                 return;
             }
             var module;
-            if (settingsItem.module) {
-                module = settingsItem.module
-            } else if (typeof(startModule) != "undefined") {
+            if (typeof(startModule) != "undefined") {
                 module = startModule
             }
 
             if (module) {
                 var index = 0;
-                var numModules = settingsModules.length
+                var numModules = settingsModulesModel.settingsModules.length
                 var i = 0
                 while (i < numModules) {
-                    if (settingsModules[i].module == module) {
+                    if (settingsModulesModel.settingsModules[i].module == module) {
                         listView.currentIndex = i;
                         break
                     }
@@ -112,7 +116,6 @@ Kirigami.ScrollablePage {
             }
         }
     }
-
     ListView {
         id: listView
         currentIndex: -1
