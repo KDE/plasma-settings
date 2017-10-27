@@ -130,7 +130,7 @@ Item {
 
                     var service = pmSource.serviceForSource("PowerDevil");
                     var operation = service.operationDescription("setBrightness");
-
+                    operation.silent = true;
                     operation.brightness = Math.round(value*100);
                     service.startOperationCall(operation);
                 }
