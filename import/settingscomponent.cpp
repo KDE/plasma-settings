@@ -23,12 +23,10 @@
 #include <QQmlEngine>
 #include <QQmlComponent>
 
-#include <KPluginTrader>
 #include <QDebug>
 #include <KPluginMetaData>
-
-#include <Plasma/Package>
-#include <Plasma/PluginLoader>
+#include <KPluginLoader>
+#include <KPluginFactory>
 #include <kquickaddons/configmodule.h>
 
 #include <KPackage/Package>
@@ -42,7 +40,7 @@ public:
     SettingsModule *settingsModule;
     KQuickAddons::ConfigModule *kcm;
     bool valid : 1;
-    Plasma::Package package;
+    KPackage::Package package;
 };
 
 
@@ -50,7 +48,7 @@ SettingsComponent::SettingsComponent(QQuickItem *parent)
     : QQuickItem(parent)
 {
     d = new SettingsComponentPrivate;
-    d->package = Plasma::PluginLoader::self()->loadPackage(QStringLiteral("Plasma/Generic"));
+    d->package = KPackage::PackageLoader::self()->loadPackage(QStringLiteral("KPackage/GenericQML"));
     d->settingsModule = 0;
     d->kcm = 0;
     d->valid = false;
@@ -62,9 +60,9 @@ SettingsComponent::~SettingsComponent()
 
 void SettingsComponent::loadModule(const QString &name)
 {
-    delete d->settingsModule;
+    d->settingsModule->deleteLater();
     d->settingsModule = 0;
-    delete d->kcm;
+    d->kcm->deleteLater();
     d->kcm = 0;
 
     d->package.setPath(name);

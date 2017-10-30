@@ -46,8 +46,7 @@ add_subdirectory(src)
 add_subdirectory(import)
 add_subdirectory(modules)
 
-plasma_install_package(package org.kde.active.settings packages package)
-
+install(DIRECTORY package/ DESTINATION ${KDE_INSTALL_DATAROOTDIR}/kpackage/genericqml/org.kde.plasma.settings)
 
 install(FILES org.kde.mobile.plasmasettings.desktop DESTINATION ${XDG_APPS_INSTALL_DIR})
 

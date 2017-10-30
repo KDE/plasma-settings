@@ -22,10 +22,8 @@
 #include <QStandardPaths>
 
 #include <QDebug>
-#include <Plasma/Package>
-#include <Plasma/PackageStructure>
-#include <Plasma/PluginLoader>
 #include <KLocalizedString>
+#include <KPackage/PackageLoader>
 
 Package::Package(QObject *parent)
     : QObject(parent)
@@ -50,7 +48,7 @@ void Package::setName(const QString &name)
 
     m_name = name;
 
-    m_package = Plasma::PluginLoader::self()->loadPackage(QStringLiteral("Plasma/Generic"));
+    m_package = KPackage::PackageLoader::self()->loadPackage(QStringLiteral("KPackage/GenericQML"));
     m_package.setPath(name);
     QString domain = QStringLiteral("plasma_package_") + name;
     KLocalizedString::setApplicationDomain(domain.toLocal8Bit().data());

@@ -25,9 +25,10 @@
 #include <QTimer>
 
 #include <KPackage/PackageLoader>
-#include <KPluginInfo>
 #include <KSharedConfig>
+#include <KConfigGroup>
 #include <KPluginMetaData>
+#include <KPluginLoader>
 
 #include <QDebug>
 

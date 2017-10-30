@@ -21,12 +21,7 @@
 
 #include <QQuickItem>
 #include <QUrl>
-#include <Plasma/Package>
-
-namespace Plasma {
-    class Package;
-}
-
+#include <KPackage/Package>
 
 class QTimer;
 
@@ -54,7 +49,7 @@ Q_SIGNALS:
 
 private:
     QString m_name;
-    Plasma::Package m_package;
+    KPackage::Package m_package;
 };
 
 #endif

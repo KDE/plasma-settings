@@ -19,48 +19,53 @@
  ***************************************************************************/
 
 import QtQuick 2.2
-import org.kde.plasma.components 2.0 as PlasmaComponents
-import org.kde.plasma.mobilecomponents 0.2 as MobileComponents
+import QtQuick.Controls 2.2 as Controls
+import org.kde.kirigami 2.2 as Kirigami
 import org.kde.active.settings 2.0 as ActiveSettings
 
-ActiveSettings.SettingsComponent {
-    id: settingsComponent
+Kirigami.Page {
+    title: settingsComponent.name
+    property alias module: settingsComponent.module
 
-    property alias status: settingsLoader.status
+    contentItem: ActiveSettings.SettingsComponent {
+        id: settingsComponent
 
-    signal moduleLoaded
+        property alias status: settingsLoader.status
+
+        signal moduleLoaded
 
 
-    Loader {
-        id: settingsLoader
-        anchors.fill: parent
-    }
+        Loader {
+            id: settingsLoader
+            anchors.fill: parent
+        }
 
-    ActiveSettings.Package {
-        id: switcherPackage
-    }
+        ActiveSettings.Package {
+            id: switcherPackage
+        }
 
-    Connections {
-        target: rootItem
-        onCurrentModuleChanged: {
-            print("reacting to onCurrentModuleChanged " + rootItem.currentModule);
-            module = rootItem.currentModule;
-            if (module != "") {
-                switcherPackage.name = module
-                var mainscript = switcherPackage.filePath("mainscript");
-                if (!valid) {
-                    print("Failed to load module: " + module);
+        Connections {
+            target: rootItem
+            onCurrentModuleChanged: {
+                print("reacting to onCurrentModuleChanged " + rootItem.currentModule);
+                module = rootItem.currentModule;
+                if (module != "") {
+                    switcherPackage.name = module
+                    var mainscript = switcherPackage.filePath("mainscript");
+                    if (!settingsComponent.valid) {
+                        print("Failed to load module: " + module);
+                    }
+                    settingsLoader.source = mainscript;
+                    moduleLoaded();
                 }
-                settingsLoader.source = mainscript;
-                moduleLoaded();
             }
         }
-    }
 
-    PlasmaComponents.Label {
-        anchors.fill: parent
-        text: i18n("The module \"" + currentModule + "\" failed to load.")
-        wrapMode: Text.WordWrap
-        visible: !valid
+        Controls.Label {
+            anchors.fill: parent
+            text: i18n("The module \"" + currentModule + "\" failed to load.")
+            wrapMode: Text.WordWrap
+            visible: !settingsComponent.valid
+        }
     }
 }

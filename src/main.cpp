@@ -24,10 +24,13 @@
 
 
 // Qt
-#include <QGuiApplication>
+#include <QApplication>
 #include <QCommandLineParser>
 #include <QCommandLineOption>
 #include <QDebug>
+#include <QQmlApplicationEngine>
+#include <QIcon>
+#include <QQmlContext>
 
 // Frameworks
 #include <KAboutData>
@@ -35,10 +38,11 @@
 #include <KLocalizedString>
 #include <KPackage/PackageLoader>
 #include <KPluginMetaData>
-#include <Plasma/Theme>
+#include <KPluginLoader>
 
-// Own
-#include "view.h"
+#include <KPackage/Package>
+#include <KPackage/PackageLoader>
+#include <kdeclarative/qmlobjectsharedengine.h>
 
 static const char description[] = I18N_NOOP("Plasma Mobile Settings");
 static const char version[] = "2.0";
@@ -46,7 +50,7 @@ static const char HOME_URL[] = "http://plasma-mobile.org";
 
 int main(int argc, char **argv)
 {
-    QGuiApplication app(argc, argv);
+    QApplication app(argc, argv);
 
     KLocalizedString::setApplicationDomain("plasma-settings");
 
@@ -140,23 +144,23 @@ int main(int argc, char **argv)
     }
 
     const QString module = parser.value(_m);
-    QString ui = parser.value(_ui);
+    QString ui = parser.isSet(_ui) ? parser.value(_ui) : "org.kde.plasma.settings";
 
-    KConfigGroup cg(KSharedConfig::openConfig("plasmarc"), "Theme-plasma-settings");
+    KPackage::Package package = KPackage::PackageLoader::self()->loadPackage("KPackage/GenericQML");
+    package.setPath(ui);
+/*
+    KDeclarative::QmlObjectSharedEngine qmlObject;
+    qmlObject.setInitializationDelayed(true);
 
-    const QString themeName = cg.readEntry("name", "default");
-    ui = cg.readEntry("package", ui);
+    qmlObject.setSource(QUrl::fromLocalFile(package.filePath("mainscript")));
+    qmlObject.engine()->rootContext()->setContextProperty("startModule", module);
+    qmlObject.completeInitialization();
+    */
+    QQmlApplicationEngine engine;
+    engine.rootContext()->setContextProperty("startModule", module);
+    engine.load(package.filePath("mainscript"));
+    
 
-    Plasma::Theme theme;
-    qDebug() << "Setting theme, package " << themeName << ui;
-    theme.setUseGlobalSettings(false);
-    theme.setThemeName(themeName); // nees to happen after setUseGlobalSettings, since that clears themeName
-
-    auto settingsapp = new View(parser);
-    settingsapp->parser = &parser;
-    if (parser.isSet(_fullscreen)) {
-        settingsapp->setVisibility(QWindow::FullScreen);
-    }
 
     return app.exec();
 }

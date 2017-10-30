@@ -19,106 +19,95 @@
  ***************************************************************************/
 
 import QtQuick 2.2
-import org.kde.plasma.core 2.0 as PlasmaCore
-import org.kde.plasma.components 2.0 as PlasmaComponents
-import org.kde.plasma.extras 2.0 as PlasmaExtras
-import org.kde.kquickcontrolsaddons 2.0
+import QtQuick.Layouts 1.2
+import QtQuick.Controls 2.2 as Controls
+import org.kde.kirigami 2.2 as Kirigami
 import org.kde.active.settings 2.0 as ActiveSettings
 
-Item {
-
+Kirigami.ScrollablePage {
     id: settingsRoot
 
+    title: i18n("Settings")
     property alias currentIndex: listView.currentIndex
+
+    Kirigami.Theme.colorSet: Kirigami.Theme.View
+    background: Rectangle {
+        color: Kirigami.Theme.backgroundColor
+    }
 
     Component {
         id: settingsModuleDelegate
-        PlasmaComponents.ListItem {
+        Kirigami.AbstractListItem {
             id: delegateItem
-            height: units.gridUnit * 3.5
-            width: parent ? parent.width : units.gridUnit * 15
-            anchors.margins: units.gridUnit
+
             enabled: true
             checked: listView.currentIndex == index && !rootItem.compactMode
-
-            PlasmaCore.IconItem {
-                id: iconItem
-                width: units.gridUnit * 2
-                height: units.gridUnit * 2
-                source: iconName
-
-                anchors.verticalCenter: parent.verticalCenter
-                anchors.left: parent.left
-                anchors.rightMargin: 8
-            }
-
-            PlasmaExtras.Heading {
-                id: textItem
-                text: name
-                level: 4
-                elide: Text.ElideRight
-                anchors.bottom: parent.verticalCenter
-                anchors.left: iconItem.right
-                anchors.right: parent.right
-                anchors.leftMargin: units.gridUnit
-            }
-
-            PlasmaComponents.Label {
-                id: descriptionItem
-                text: description
-                font.pointSize: theme.defaultFont.pointSize -1
-                opacity: 0.6
-                elide: Text.ElideRight
-                anchors.top: parent.verticalCenter
-                anchors.left: textItem.left
-                anchors.right: parent.right
+            leftPadding: Kirigami.Units.largeSpacing
+            RowLayout {
+                id: bah
+                spacing: Kirigami.Units.largeSpacing
+                Kirigami.Icon {
+                    id: iconItem
+                    selected: delegateItem.down
+                    Layout.maximumWidth: Layout.preferredWidth
+                    Layout.preferredWidth: Kirigami.Units.iconSizes.medium
+                    Layout.preferredHeight: Layout.preferredWidth
+                    source: iconName
+                }
+                ColumnLayout {
+                    Layout.alignment: Qt.AlignLeft
+                    Layout.fillWidth: true
+                    Controls.Label {
+                        Layout.alignment: Qt.AlignLeft
+                        Layout.fillWidth: true
+                        text: name
+                    }
+                    Controls.Label {
+                        text: description
+                        Layout.fillWidth: true
+                        font.pointSize: theme.defaultFont.pointSize -1
+                        opacity: 0.6
+                        elide: Text.ElideRight
+                    }
+                }
             }
 
             onClicked: {
                 print("Clicked index: " + index + " current: " + listView.currentIndex + " " + module + " curr: " + rootItem.currentModule);
-                loading = true;
                 rootItem.currentModule = module;
                 listView.currentIndex = index;
-//                 if (settingsItem.module == module) {
-//                     settingsRoot.state = "module"
-//                 } else {
-//                     settingsItem.module = ""
-//                     settingsItem.module = module
-//                 }
-
             }
-
-//             onPressAndHold: {
-//                 listView.currentIndex = index
-//                 settingsItem.module = module
-//             }
         }
     }
 
     ActiveSettings.SettingsModulesModel {
         id: settingsModulesModel
         formFactor: rootItem.formFactor // overridden by --formfactor argument!
-        onSettingsModulesChanged: {
+        onSettingsModulesChanged: currentTimer.restart()
+    }
+
+    //FIXME: this timer shouldn't be needed, problem in kirigami?
+    Timer {
+        id: currentTimer
+        onTriggered: {
             // when the modules are loaded, we need to ensure that
             // the list has the correct item loaded
-            if (startModule == "" && settingsItem.module == "") {
+            if (startModule == "") {
                 print("resetting index. doei")
                 listView.currentIndex = -1;
                 return;
             }
             var module;
-            if (settingsItem.module) {
-                module = settingsItem.module
-            } else if (typeof(startModule) != "undefined") {
+            if (typeof(startModule) != "undefined") {
                 module = startModule
             }
 
             if (module) {
                 var index = 0;
-                var numModules = settingsModules.length
+                var numModules = settingsModulesModel.settingsModules.length
                 var i = 0
                 while (i < numModules) {
-                    if (settingsModules[i].module == module) {
+                    if (settingsModulesModel.settingsModules[i].module == module) {
                         listView.currentIndex = i;
                         break
                     }
@@ -127,26 +116,11 @@ Item {
             }
         }
     }
-
     ListView {
         id: listView
         currentIndex: -1
-        anchors.fill: parent
-        anchors.topMargin: Math.round(units.gridUnit/10)
-        clip: true
-        interactive: contentHeight > height
-        //spacing: units.gridUnit / 2
         model: settingsModulesModel.settingsModules
         delegate: settingsModuleDelegate
-
-//         Connections {
-//             target: settingsRoot
-//             onStateChanged: {
-//                 if (settingsRoot.state == "navigation") {
-//                     listView.currentIndex = -1;
-//                 }
-//             }
-//         }
     }
 
 }
