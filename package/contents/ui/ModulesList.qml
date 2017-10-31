@@ -65,9 +65,17 @@ Kirigami.ScrollablePage {
                     Controls.Label {
                         text: description
                         Layout.fillWidth: true
-                        font.pointSize: theme.defaultFont.pointSize -1
+                        font.pointSize: Kirigami.Theme.defaultFont.pointSize -1
                         opacity: 0.6
                         elide: Text.ElideRight
+                    }
+                }
+                Connections {
+                    target: settingsApp
+                    onModuleRequested: {
+                        if (rootItem.currentModule == model.module) {
+                            listView.currentIndex = index;
+                        }
                     }
                 }
             }

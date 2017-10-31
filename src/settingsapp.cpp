@@ -1,7 +1,7 @@
 /***************************************************************************
  *                                                                         *
- *   Copyright 2017 Marco Martin <mart@kde.org>                            *
  *   Copyright 2011-2014 Sebastian Kügler <sebas@kde.org>                  *
+ *   Copyright 2017 Marco Martin <mart@kde.org>                            *
  *                                                                         *
  *   This program is free software; you can redistribute it and/or modify  *
  *   it under the terms of the GNU General Public License as published by  *
@@ -19,44 +19,42 @@
  *   51 Franklin Street, Fifth Floor, Boston, MA  02110-1301  USA .        *
  ***************************************************************************/
 
-import QtQuick 2.6
-import QtQuick.Controls 2.2 as Controls
-import org.kde.kirigami 2.2 as Kirigami
+#include "settingsapp.h"
 
-Kirigami.ApplicationWindow {
-    id: rootItem
+#include <QDebug>
+#include <QQmlContext>
+#include <QQmlEngine>
 
-    property alias currentModule: moduleItem.module
+#include <KDBusService>
 
-    header: Kirigami.ApplicationHeader {}
-    pageStack.initialPage: modulesList
+#include <KLocalizedString>
 
-    Connections {
-        target: settingsApp
-        onActivateRequested: rootItem.requestActivate();
-        onModuleRequested: {
-            pageStack.currentIndex = 0;
-            rootItem.currentModule = module;
-        }
-    }
-    onCurrentModuleChanged: {
-        if (currentModule.length > 0) {
-            pageStack.push(moduleItem);
-        }
-        pageStack.currentIndex = 1;
-    }
 
-    Component.onCompleted: {
-        if (startModule.length > 0) {
-            rootItem.currentModule = startModule;
-        }
-    }
-    ModulesList {
-        id: modulesList
-    }
-
-    ModuleItem {
-        id: moduleItem
-        visible: false
-    }
+SettingsApp::SettingsApp(QCommandLineParser &parser, QObject *parent)
+    : QObject(parent),
+      m_parser(&parser)
+{
+    setupKDBus();
 }
+
+SettingsApp::~SettingsApp()
+{
+}
+
+void SettingsApp::setupKDBus()
+{
+    QCoreApplication::setOrganizationDomain("kde.org");
+    KDBusService* service = new KDBusService(KDBusService::Unique, this);
+
+    QObject::connect(service, &KDBusService::activateRequested, this, [this](const QStringList &arguments, const QString &workingDirectory) {
+        qDebug() << "activateRequested" << arguments;
+        m_parser->parse(arguments);
+        if (m_parser->isSet("module")) {
+            const QString module = m_parser->value("module");
+            qDebug() << "Loading module:" << module;
+            emit moduleRequested(module);
+        }
+        emit activateRequested();
+    } );
+}
+

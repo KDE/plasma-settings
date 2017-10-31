@@ -22,6 +22,8 @@
 #include <iostream>
 #include <iomanip>
 
+//own
+#include "settingsapp.h"
 
 // Qt
 #include <QApplication>
@@ -148,15 +150,11 @@ int main(int argc, char **argv)
 
     KPackage::Package package = KPackage::PackageLoader::self()->loadPackage("KPackage/GenericQML");
     package.setPath(ui);
-/*
-    KDeclarative::QmlObjectSharedEngine qmlObject;
-    qmlObject.setInitializationDelayed(true);
 
-    qmlObject.setSource(QUrl::fromLocalFile(package.filePath("mainscript")));
-    qmlObject.engine()->rootContext()->setContextProperty("startModule", module);
-    qmlObject.completeInitialization();
-    */
+    SettingsApp *settingsApp = new SettingsApp(parser);
+
     QQmlApplicationEngine engine;
+    engine.rootContext()->setContextProperty("settingsApp", settingsApp);
     engine.rootContext()->setContextProperty("startModule", module);
     engine.load(package.filePath("mainscript"));
     

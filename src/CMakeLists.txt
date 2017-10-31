@@ -4,6 +4,7 @@ find_package(Qt5 REQUIRED NO_MODULE COMPONENTS Gui)
 
 set(plasma-settings_SRCS
     main.cpp
+    settingsapp.cpp
 )
 
 add_executable(plasma-settings ${plasma-settings_SRCS})

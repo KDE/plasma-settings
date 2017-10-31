@@ -1,7 +1,7 @@
 /***************************************************************************
  *                                                                         *
- *   Copyright 2017 Marco Martin <mart@kde.org>                            *
  *   Copyright 2011-2014 Sebastian Kügler <sebas@kde.org>                  *
+ *   Copyright 2017 Marco Martin <mart@kde.org>                            *
  *                                                                         *
  *   This program is free software; you can redistribute it and/or modify  *
  *   it under the terms of the GNU General Public License as published by  *
@@ -19,44 +19,28 @@
  *   51 Franklin Street, Fifth Floor, Boston, MA  02110-1301  USA .        *
  ***************************************************************************/
 
-import QtQuick 2.6
-import QtQuick.Controls 2.2 as Controls
-import org.kde.kirigami 2.2 as Kirigami
+#ifndef SETTINGSAPP_H
+#define SETTINGSAPP_H
 
-Kirigami.ApplicationWindow {
-    id: rootItem
+#include <QObject>
+#include <QCommandLineParser>
 
-    property alias currentModule: moduleItem.module
+class SettingsApp : public QObject
+{
+    Q_OBJECT
 
-    header: Kirigami.ApplicationHeader {}
-    pageStack.initialPage: modulesList
+public:
+    explicit SettingsApp(QCommandLineParser &parser, QObject *parent = 0 );
+    ~SettingsApp();
 
-    Connections {
-        target: settingsApp
-        onActivateRequested: rootItem.requestActivate();
-        onModuleRequested: {
-            pageStack.currentIndex = 0;
-            rootItem.currentModule = module;
-        }
-    }
-    onCurrentModuleChanged: {
-        if (currentModule.length > 0) {
-            pageStack.push(moduleItem);
-        }
-        pageStack.currentIndex = 1;
-    }
+Q_SIGNALS:
+    void moduleRequested(const QString &module);
+    void activateRequested();
 
-    Component.onCompleted: {
-        if (startModule.length > 0) {
-            rootItem.currentModule = startModule;
-        }
-    }
-    ModulesList {
-        id: modulesList
-    }
 
-    ModuleItem {
-        id: moduleItem
-        visible: false
-    }
-}
+private:
+    void setupKDBus();
+    QCommandLineParser *m_parser;
+};
+
+#endif // SettingsApp_H
