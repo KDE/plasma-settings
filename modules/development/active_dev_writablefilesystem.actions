@@ -56,7 +56,7 @@ Policy=yes
 [org.kde.active.writablefilesystem.enable]
 Name=Enable writable filesystem
 Name[ast]=Activar sistema de ficheros escribible
-Name[ca]=Activa el poder escriure al sistema de fitxers
+Name[ca]=Activa poder escriure al sistema de fitxers
 Name[ca@valencia]=Activa el poder escriure al sistema de fitxers
 Name[cs]=Povolit zapisovatelný souborový systém
 Name[da]=Aktivér skrivbart filsystem
@@ -90,7 +90,7 @@ Policy=yes
 [org.kde.active.writablefilesystem.disable]
 Name=Disable writable filesystem
 Name[ast]=Desactivar sistema de ficheros escribible
-Name[ca]=Desactiva el poder escriure al sistema de fitxers
+Name[ca]=Desactiva poder escriure al sistema de fitxers
 Name[ca@valencia]=Desactiva el poder escriure al sistema de fitxers
 Name[cs]=Vypnout zapisovatelný souborový systém
 Name[da]=Deaktivér skrivbart filsystem
