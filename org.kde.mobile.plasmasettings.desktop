@@ -59,6 +59,6 @@ Icon=preferences-desktop
 Type=Application
 X-KDE-PluginInfo-Website=http://plasma-active.org
 X-DBUS-StartupType=Unique
-X-DBUS-ServiceName=org.kde.activesettings
+X-DBUS-ServiceName=org.kde.mobile.plasmasettings
 Categories=Qt;KDE;Settings;
 X-KDE-FormFactors=tablet,handset
