@@ -22,6 +22,7 @@ set(CMAKE_MODULE_PATH ${CMAKE_MODULE_PATH} ${ECM_MODULE_PATH} ${ECM_KDE_MODULE_D
 include(KDEInstallDirs)
 include(KDECMakeSettings)
 include(KDECompilerSettings)
+include(ECMQMLModules)
 
 find_package(Qt5 REQUIRED NO_MODULE COMPONENTS Core Quick Test Gui)
 
@@ -37,6 +38,8 @@ find_package(KF5 REQUIRED COMPONENTS
 find_package(KAccounts)
 find_package(AccountsQt5 1.10 CONFIG)
 find_package(SignOnQt5 8.55 CONFIG)
+
+ecm_find_qmlmodule(org.kde.kcm 1.0)
 
 if (KAccounts_FOUND AND AccountsQt5_FOUND AND SignOnQt5_FOUND)
     include_directories(${ACCOUNTSQT_INCLUDE_DIRS} ${SIGNONQT_INCLUDE_DIRS})
