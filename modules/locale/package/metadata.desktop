@@ -37,6 +37,7 @@ Comment[sk]=Miestne nastavenia
 Comment[sv]=Landsinställningar
 Comment[uk]=Параметри локалі
 Comment[x-test]=xxLocale settingsxx
+Comment[zh_CN]=区域设置
 Encoding=UTF-8
 Type=Service
 Icon=preferences-desktop-locale

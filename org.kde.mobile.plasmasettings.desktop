@@ -53,6 +53,7 @@ Comment[pt]=Configuração do Plasma
 Comment[sv]=Inställningar för Plasma
 Comment[uk]=Параметри Плазми
 Comment[x-test]=xxSettings for Plasmaxx
+Comment[zh_CN]=Plasma 设置
 Exec=plasma-settings -x all %u
 Terminal=false
 Icon=preferences-desktop

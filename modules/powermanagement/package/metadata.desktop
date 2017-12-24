@@ -32,6 +32,7 @@ Comment[pt]=Bloquear, Suspender, Tempo-Limite
 Comment[sv]=Lås, viloläge, tidsgräns
 Comment[uk]=Блокування, присипляння, час очікування
 Comment[x-test]=xxLock, Sleep, Timeoutxx
+Comment[zh_CN]=锁屏，睡眠，超时
 
 Encoding=UTF-8
 Type=Service

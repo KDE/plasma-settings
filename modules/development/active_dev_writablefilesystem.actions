@@ -16,6 +16,7 @@ Name[pt]=Sistema de ficheiros para escrita
 Name[sv]=Skrivbart filsystem
 Name[uk]=Запис для файлової системи
 Name[x-test]=xxWritable filesystemxx
+Name[zh_CN]=可写入的文件系统
 
 Icon=drive-harddisk
 
@@ -36,6 +37,7 @@ Name[pt]=Detecta se é possível escrever no sistema de ficheiros
 Name[sv]=Detektera om filsystem är skrivbart
 Name[uk]=Визначити, чи можливий запис для файлової системи
 Name[x-test]=xxDetect if filesystem is writablexx
+Name[zh_CN]=检测文件系统是否可写
 Description=Detects if the root filesystem writable
 Description[ast]=Deteuta si'l sistema de ficheros raigañu ye escribible
 Description[ca]=Detecta si es pot escriure al sistema de fitxers arrel
@@ -51,6 +53,7 @@ Description[pt]=Detecta se é possível escrever no sistema de ficheiros de raiz
 Description[sv]=Detekterar om rotfilsystemet är skrivbart
 Description[uk]=Визначити, чи є коренева файлова система придатною до запису
 Description[x-test]=xxDetects if the root filesystem writablexx
+Description[zh_CN]=检测根文件系统是否可写
 Policy=yes
 
 [org.kde.active.writablefilesystem.enable]
@@ -70,6 +73,7 @@ Name[pt]=Activar o sistema de ficheiros para escrita
 Name[sv]=Aktivera skrivbart filsystem
 Name[uk]=Увімкнути запис для файлової системи
 Name[x-test]=xxEnable writable filesystemxx
+Name[zh_CN]=开启可写入文件系统
 Description=Makes the root filesystem writable
 Description[ast]=Fai que'l sistema de ficheros raigañu seya escribible
 Description[ca]=Fa que es pugui escriure al sistema de fitxers arrel
@@ -85,6 +89,7 @@ Description[pt]=Permite escrever no sistema de ficheiros de raiz
 Description[sv]=Gör rotfilsystemet skrivbart
 Description[uk]=Зробити файлову систему доступною для запису
 Description[x-test]=xxMakes the root filesystem writablexx
+Description[zh_CN]=使根文件系统可写
 Policy=yes
 
 [org.kde.active.writablefilesystem.disable]
@@ -104,6 +109,7 @@ Name[pt]=Desactivar o sistema de ficheiros para escrita
 Name[sv]=Inaktivera skrivbart filsystem
 Name[uk]=Вимкнути запис для файлової системи
 Name[x-test]=xxDisable writable filesystemxx
+Name[zh_CN]=禁止可写入文件系统
 Description=Makes the root filesystem read only
 Description[ast]=Fai que'l sistema de ficheros raigañu seya de namái llectura
 Description[ca]=Fa que el sistema de fitxers arrel sigui de només lectura
@@ -119,4 +125,5 @@ Description[pt]=Impede de escrever no sistema de ficheiros de raiz
 Description[sv]=Gör rotfilsystemet skrivskyddat
 Description[uk]=Зробити кореневу файлову систему придатною лише для читання
 Description[x-test]=xxMakes the root filesystem read onlyxx
+Description[zh_CN]=使根文件系统只读
 Policy=yes

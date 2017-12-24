@@ -32,6 +32,7 @@ Comment[pt]=Bloquear, Suspender, Tempo-Limite
 Comment[sv]=Lås, viloläge, tidsgräns
 Comment[uk]=Блокування, присипляння, час очікування
 Comment[x-test]=xxLock, Sleep, Timeoutxx
+Comment[zh_CN]=锁屏，睡眠，超时
 
 Icon=preferences-system-power-management
 Exec=plasma-settings -m kcm_mobile_power
@@ -59,5 +60,6 @@ X-KDE-Keywords[pt]=vídeo, monitor, gráfica, tempo-limite, suspender, bloquear,
 X-KDE-Keywords[sv]=video, bildskärm, grafik, tidsgräns, viloläge, låsning, skärmlåsning, skärmsläckare
 X-KDE-Keywords[uk]=video, monitor, graphics, timeout, sleep, lock, screenlocker, screensaver, відео, монітор, графіка, час очікування, присипляння, блокування, збереження, екран
 X-KDE-Keywords[x-test]=xxvideoxx,xx monitorxx,xx graphicsxx,xx timeoutxx,xx sleepxx,xx lockxx,xx screenlockerxx,xx screensaverxx
+X-KDE-Keywords[zh_CN]=video, monitor, graphics, timeout, sleep, lock, screenlocker, screensaver, 视频, 显示器, 监视器, 图形, 图像, 超时, 睡眠, 锁屏, 屏幕保护, 屏幕锁定, 屏保, 锁定
 Categories=Qt;KDE;X-KDE-settings-system;
 

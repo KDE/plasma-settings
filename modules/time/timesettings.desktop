@@ -33,6 +33,7 @@ Comment[pt]=Fuso-Horário, Visualização das Datas
 Comment[sv]=Tidszon, datumvisning
 Comment[uk]=Часовий пояс, показ дати
 Comment[x-test]=xxTimezone, Date Displayxx
+Comment[zh_CN]=时区，日期显示
 
 Icon=preferences-system-time
 Exec=plasma-settings -m kcm_mobile_time
