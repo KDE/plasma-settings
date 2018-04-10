@@ -140,7 +140,17 @@ void SettingsComponent::loadModule(const QString &name)
     d->settingsModule->setModule(info.pluginId());
     d->valid = true;
 
+    emit mainUiChanged();
     emit validChanged();
+}
+
+QQuickItem *SettingsComponent::mainUi() const
+{
+    if (d->kcm) {
+        return d->kcm->mainUi();
+    }
+
+    return nullptr;
 }
 
 bool SettingsComponent::isValid() const

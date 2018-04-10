@@ -26,6 +26,11 @@ import org.kde.active.settings 2.0 as ActiveSettings
 Kirigami.Page {
     title: settingsComponent.name
     property alias module: settingsComponent.module
+    readonly property bool hasOwnPadding: settingsComponent.mainUi && (settingsComponent.mainUi.hasOwnProperty("leftPadding") || settingsComponent.mainUi.hasOwnProperty("contentItem"))
+    leftPadding: hasOwnPadding ? 0 : Kirigami.Units.gridUnit
+    topPadding: hasOwnPadding ? 0 : Kirigami.Units.gridUnit
+    rightPadding: hasOwnPadding ? 0 : Kirigami.Units.gridUnit
+    bottomPadding: hasOwnPadding ? 0 : Kirigami.Units.gridUnit
 
     contentItem: ActiveSettings.SettingsComponent {
         id: settingsComponent
@@ -33,7 +38,6 @@ Kirigami.Page {
         property alias status: settingsLoader.status
 
         signal moduleLoaded
-
 
         Loader {
             id: settingsLoader
