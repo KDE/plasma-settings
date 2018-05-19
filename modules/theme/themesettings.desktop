@@ -41,7 +41,7 @@ Comment[sl]=Videz in občutek
 Comment[sv]=Utseende och känsla
 Comment[uk]=Вигляд і поведінка
 Comment[x-test]=xxLook and Feelxx
-Comment[zh_CN]=观感
+Comment[zh_CN]=外貌和观感
 
 Icon=preferences-desktop-theme
 Exec=plasma-settings -m kcm_mobile_theme
