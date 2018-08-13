@@ -19,9 +19,11 @@
  */
 
 import QtQuick 2.2
-import org.kde.plasma.core 2.0 as PlasmaCore
+import QtQuick.Controls 2.0 as Controls
+
+import org.kde.kirigami 2.1 as Kirigami
 import org.kde.plasma.components 2.0 as PlasmaComponents
-import org.kde.plasma.extras 2.0 as PlasmaExtras
+import org.kde.plasma.core 2.0 as PlasmaCore
 import org.kde.active.settings 2.0 as ActiveSettings
 
 Item {
@@ -107,20 +109,20 @@ Item {
 
         spacing: units.gridUnit / 2
 
-        PlasmaExtras.Heading {
+        Kirigami.Heading {
             text: i18n("Screen Brightness")
             level: 3
         }
         Row {
             spacing: units.gridUnit
-            PlasmaComponents.Label {
+            Controls.Label {
                 width: screensaverEnabledSwitch.width
                 text: i18n("0%")
             }
             property int brightness: pmSource.data["PowerDevil"]["Screen Brightness"]
             onBrightnessChanged: brightnessSlider.value = brightness/100
 
-            PlasmaComponents.Slider {
+            Controls.Slider {
                 id: brightnessSlider
                 width: mainItem.width * 0.6
                 onValueChanged: {
@@ -135,28 +137,28 @@ Item {
                     service.startOperationCall(operation);
                 }
             }
-            PlasmaComponents.Label {
+            Controls.Label {
                 text: i18n("100%")
             }
         }
 
 
-        PlasmaExtras.Heading {
+        Kirigami.Heading {
             text: i18n("Lock screen and Sleep")
             level: 3
         }
         Row {
             spacing: units.gridUnit
-            PlasmaComponents.Switch {
+            Controls.Switch {
                 id: screensaverEnabledSwitch
                 onCheckedChanged: screensaverConfig.writeEntry("Enabled", checked ? "true" : "false")
                 Component.onCompleted: checked = screensaverConfig.readEntry("Enabled") == "true"
             }
-            PlasmaComponents.Slider {
+            Controls.Slider {
                 id: screensaverTimeSlider
                 enabled: screensaverEnabledSwitch.checked
-                minimumValue: 1
-                maximumValue: 60
+                from: 1
+                to: 60
                 width: mainItem.width * 0.6
                 onValueChanged: {
                     if (screensaverEnabledSwitch.checked) {
@@ -165,20 +167,20 @@ Item {
                 }
                 Component.onCompleted: value = screensaverConfig.readEntry("Timeout")/60
             }
-            PlasmaComponents.Label {
+            Controls.Label {
                 enabled: screensaverEnabledSwitch.checked
                 opacity: enabled ? 1 : 0.6
                 text: i18np("%1 minute", "%1 minutes", screensaverTimeSlider.value)
             }
         }
 
-        PlasmaExtras.Heading {
+        Kirigami.Heading {
             text: i18n("Turn off the screen")
             level: 3
         }
         Row {
             spacing: units.gridUnit
-            PlasmaComponents.Switch {
+            Controls.Switch {
                 id: dpmsSwitch
                 onCheckedChanged: {
                     if (checked) {
@@ -193,12 +195,12 @@ Item {
                 }
                 Component.onCompleted: checked = batteryDpmsConfig.readEntry("idleTime") > 0
             }
-            PlasmaComponents.Slider {
+            Controls.Slider {
                 id: dpmsTimeSlider
                 enabled: dpmsSwitch.checked
                 width: mainItem.width * 0.6
-                minimumValue: 1
-                maximumValue: 60
+                from: 1
+                to: 60
                 onValueChanged: {
                     if (dpmsSwitch.checked) {
                         batteryDpmsConfig.writeEntry("idleTime", Math.round(value)*60)
@@ -208,7 +210,7 @@ Item {
                 }
                 Component.onCompleted: value = batteryDpmsConfig.readEntry("idleTime")/60
             }
-            PlasmaComponents.Label {
+            Controls.Label {
                 enabled: dpmsTimeSlider.checked
                 opacity: enabled ? 1 : 0.6
                 text: i18np("%1 minute", "%1 minutes", dpmsTimeSlider.value)
