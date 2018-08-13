@@ -19,19 +19,15 @@
 
 import QtQuick 2.2
 import QtQuick.Layouts 1.1
-import QtQuick.Controls 1.1
+import QtQuick.Controls 2.0 as Controls
 
-import org.kde.plasma.core 2.0 as PlasmaCore
-import org.kde.plasma.components 2.0 as PlasmaComponents
-import org.kde.plasma.extras 2.0 as PlasmaExtras
-
+import org.kde.kirigami 2.1 as Kirigami
 import org.kde.kcm 1.0
 
 Item {
     id: timeModule
     objectName: "timeModule"
 
-    ExclusiveGroup { id: themeGroup }
     ColumnLayout {
         anchors {
             left: parent.left
@@ -41,17 +37,17 @@ Item {
         }
         spacing: units.gridUnit / 2
 
-        PlasmaExtras.Heading {
+        Kirigami.Heading {
             text: i18n("Font")
             level: 3
         }
 
-        PlasmaComponents.Slider {
+        Controls.Slider {
             id: fontSizeSlider
             Layout.preferredWidth: timeModule.width - units.gridUnit
             stepSize: 1.0
-            minimumValue: 3
-            maximumValue: 12
+            from: 3
+            to: 12
             value: kcm.fontSize
 
             onValueChanged: {
@@ -63,7 +59,7 @@ Item {
             }
         }
 
-        PlasmaExtras.Heading {
+        Kirigami.Heading {
             text: i18n("Theme")
             level: 3
         }
@@ -71,12 +67,11 @@ Item {
         Repeater {
             model: kcm.themeListModel
             delegate: RowLayout {
-                PlasmaComponents.Label {
+                Controls.Label {
                     text: model.display
                     Layout.fillWidth: true
                 }
-                RadioButton {
-                    exclusiveGroup: themeGroup
+                Controls.RadioButton {
                     checked: kcm.themeName == model.packageNameRole
                     onCheckedChanged: {
                         if (checked) {
