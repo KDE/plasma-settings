@@ -5,7 +5,7 @@ cmake_minimum_required(VERSION 2.8.10.1)
 ################# Disallow in-source build #################
 
 if("${CMAKE_SOURCE_DIR}" STREQUAL "${CMAKE_BINARY_DIR}")
-   message(FATAL_ERROR "plasma-mobile requires an out of source build. Please create a separate build directory and run 'cmake path_to_plasma-mobile [options]' there.")
+   message(FATAL_ERROR "plasma-settings requires an out of source build. Please create a separate build directory and run 'cmake path_to_plasma-settings [options]' there.")
 endif()
 
 include(CPack)
@@ -31,9 +31,19 @@ find_package(Qt5 REQUIRED NO_MODULE COMPONENTS Core Quick Test Gui)
 set (QT_MIN_VERSION "5.4.0")
 
 find_package(KF5 REQUIRED COMPONENTS
-    WindowSystem CoreAddons Solid Config Auth DBusAddons
-    I18n Plasma PlasmaQuick Declarative KIO
-    )
+    WindowSystem
+    CoreAddons
+    Solid
+    Config
+    Auth
+    DBusAddons
+    I18n
+    Plasma
+    PlasmaQuick
+    Declarative
+    KIO
+    KDELibs4Support
+)
 
 find_package(KAccounts)
 find_package(AccountsQt5 1.10 CONFIG)
