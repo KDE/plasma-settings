@@ -22,15 +22,11 @@
 import QtQuick 2.2
 import QtQuick.Layouts 1.1
 
-import org.kde.plasma.core 2.0 as PlasmaCore
-import org.kde.plasma.components 2.0 as PlasmaComponents
-import org.kde.plasma.extras 2.0 as PlasmaExtras
+import QtQuick.Controls 2.0 as Controls
 
 Item {
     id: develModule
     objectName: "develModule"
-
-    width: 800; height: 500
 
 //     ActiveSettings.DevelSettings {
 //         id: settings
@@ -49,39 +45,13 @@ Item {
             leftMargin: 0
         }
 
-        PlasmaComponents.Label {
-            text: i18n("Enable Developer mode:")
-            Layout.fillWidth: true
-        }
-
-        PlasmaComponents.Switch {
-            id: developerMode
-            checked: kcm.developerModeEnabled
-            onClicked: {
-                kcm.developerModeEnabled = developerMode.checked;
-            }
-        }
-
-        PlasmaComponents.Label {
-            text: i18n("Writable filesystem:")
-            Layout.fillWidth: true
-        }
-
-        PlasmaComponents.Switch {
-            id: writableFilesystem
-            checked: kcm.writableFilesystemEnabled
-            onClicked: {
-                kcm.writableFilesystemEnabled = writableFilesystem.checked;
-            }
-        }
-
-        PlasmaComponents.Label {
+        Controls.Label {
             id: timeZoneLabel
             text: i18n("Allow remote SSH access:")
             Layout.fillWidth: true
         }
 
-        PlasmaComponents.Switch {
+        Controls.Switch {
             id: ssh
             checked: kcm.sshEnabled
             onClicked: {
