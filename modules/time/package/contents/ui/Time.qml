@@ -20,12 +20,10 @@
 
 import QtQuick 2.2
 import QtQuick.Layouts 1.1
-import QtQuick.Controls 1.1
+import QtQuick.Controls 2.3 as Controls
 
-import org.kde.plasma.core 2.0 as PlasmaCore
+import org.kde.kirigami 2.4 as Kirigami
 import org.kde.plasma.components 2.0 as PlasmaComponents
-import org.kde.plasma.extras 2.0 as PlasmaExtras
-import org.kde.plasma.mobilecomponents 0.2 as MobileComponents
 import org.kde.kcm 1.0
 
 Item {
@@ -33,15 +31,12 @@ Item {
     objectName: "timeModule"
 
 
-    ScrollView {
+    Controls.ScrollView {
         id: scrollView
 
         anchors {
             fill: parent
         }
-
-        horizontalScrollBarPolicy: Qt.ScrollBarAlwaysOff
-        flickableItem.flickableDirection: Flickable.VerticalFlick
 
         GridLayout {
             id: formLayout
@@ -66,19 +61,19 @@ Item {
                 Layout.columnSpan: 2
             }
 
-            PlasmaExtras.Heading {
+            Kirigami.Heading {
                 Layout.columnSpan: 2
                 //             Layout.rowSpacing: units.gridUnit * 4
                 text: i18n("Time Display")
                 level: 3
             }
 
-            PlasmaComponents.Label {
+            Controls.Label {
                 text: i18n("Use 24-hour clock:")
                 Layout.fillWidth: true
             }
 
-            PlasmaComponents.Switch {
+            Controls.Switch {
                 id: twentyFourSwitch
                 checked: kcm.twentyFour
                 Layout.alignment : Qt.AlignRight
@@ -88,13 +83,13 @@ Item {
                 }
             }
 
-            PlasmaComponents.Label {
+            Controls.Label {
                 id: timeZoneLabel
                 text: i18n("Timezone:")
                 Layout.fillWidth: true
             }
 
-            PlasmaComponents.Button {
+            Controls.Button {
                 id: timeZoneButton
                 text: kcm.timeZone
                 onClicked: timeZonePickerDialog.open()
@@ -104,20 +99,20 @@ Item {
                 height: units.gridUnit
             }
 
-            PlasmaExtras.Heading {
+            Kirigami.Heading {
                 Layout.columnSpan: 2
     //             Layout.rowSpacing: units.gridUnit * 4
                 text: i18n("Set Time and Date")
                 level: 3
             }
 
-            PlasmaComponents.Label {
+            Controls.Label {
                 id: ntpLabel
                 text: i18n("Set time automatically:")
                 Layout.fillWidth: true
             }
 
-            PlasmaComponents.Switch {
+            Controls.Switch {
                 id: ntpCheckBox
                 Layout.alignment : Qt.AlignRight
                 checked: kcm.useNtp
@@ -129,7 +124,7 @@ Item {
                     }
                 }
             }
-            PlasmaExtras.Heading {
+            Kirigami.Heading {
                 Layout.columnSpan: 2
                 //             Layout.rowSpacing: units.gridUnit * 4
                 text: i18n("Set Time")
@@ -179,7 +174,7 @@ Item {
                 }
             }
 
-            PlasmaExtras.Heading {
+            Kirigami.Heading {
                 Layout.columnSpan: 2
                 //             Layout.rowSpacing: units.gridUnit * 4
                 text: i18n("Set Date")
