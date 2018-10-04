@@ -21,6 +21,7 @@
 import QtQuick 2.2
 import QtQuick.Layouts 1.1
 import QtQuick.Controls 2.3 as Controls
+import QtQuick.Controls 1.3 as QQC1
 
 import org.kde.kirigami 2.4 as Kirigami
 import org.kde.plasma.components 2.0 as PlasmaComponents
@@ -30,22 +31,18 @@ Item {
     id: timeModule
     objectName: "timeModule"
 
-
-    Controls.ScrollView {
+    QQC1.ScrollView {
         id: scrollView
-
-        anchors {
-            fill: parent
-        }
+        anchors.fill: parent
 
         GridLayout {
             id: formLayout
 
-            property int gridspacing: units.gridUnit
+            property int gridspacing: Kirigami.Units.gridUnit
 
             //anchors.fill: parent
             //height: implicitHeight
-            width: scrollView.width - units.gridUnit
+            width: scrollView.width - Kirigami.Units.gridUnit
             //Rectangle { color: "orange"; opacity: 0.3; anchors.fill: parent}
 
             columns: 2
@@ -57,13 +54,13 @@ Item {
             columnSpacing: gridspacing
 
             Item {
-                Layout.preferredHeight: units.gridUnit / 3
+                Layout.preferredHeight: Kirigami.Units.gridUnit / 3
                 Layout.columnSpan: 2
             }
 
             Kirigami.Heading {
                 Layout.columnSpan: 2
-                //             Layout.rowSpacing: units.gridUnit * 4
+                //             Layout.rowSpacing: Kirigami.Units.gridUnit * 4
                 text: i18n("Time Display")
                 level: 3
             }
@@ -96,12 +93,12 @@ Item {
             }
 
             Item {
-                height: units.gridUnit
+                height: Kirigami.Units.gridUnit
             }
 
             Kirigami.Heading {
                 Layout.columnSpan: 2
-    //             Layout.rowSpacing: units.gridUnit * 4
+    //             Layout.rowSpacing: Kirigami.Units.gridUnit * 4
                 text: i18n("Set Time and Date")
                 level: 3
             }
@@ -126,7 +123,7 @@ Item {
             }
             Kirigami.Heading {
                 Layout.columnSpan: 2
-                //             Layout.rowSpacing: units.gridUnit * 4
+                //             Layout.rowSpacing: Kirigami.Units.gridUnit * 4
                 text: i18n("Set Time")
                 level: 4
             }
@@ -176,7 +173,7 @@ Item {
 
             Kirigami.Heading {
                 Layout.columnSpan: 2
-                //             Layout.rowSpacing: units.gridUnit * 4
+                //             Layout.rowSpacing: Kirigami.Units.gridUnit * 4
                 text: i18n("Set Date")
                 level: 4
             }
@@ -224,8 +221,8 @@ Item {
         onButtonClicked: close()
         content: Loader {
             id: timeZonePickerLoader
-            width: units.gridUnit * 22
-            height: units.gridUnit * 25
+            width: Kirigami.Units.gridUnit * 22
+            height: Kirigami.Units.gridUnit * 25
         }
         onStatusChanged: {
             if (status == PlasmaComponents.DialogStatus.Open) {
