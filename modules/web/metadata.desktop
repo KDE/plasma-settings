@@ -1,6 +1,5 @@
 [Desktop Entry]
 Name=Web and Browser
-Name[ast]=Web y restolador
 Name[ca]=Web i navegador
 Name[ca@valencia]=Web i navegador
 Name[cs]=Web a prohlížeč
@@ -24,7 +23,6 @@ Name[uk]=Інтернет і браузер
 Name[x-test]=xxWeb and Browserxx
 Name[zh_CN]=网络与浏览器
 Comment=Text Size, History, Adblock, Homepage
-Comment[ast]=Tamañu de estu, Historial, Bloquéu d'anuncios, Páxina d'aniciu
 Comment[ca]=Mida del text, Historial, Bloqueig publicitari, Pàgina d'inici
 Comment[ca@valencia]=Mida del text, Historial, Bloqueig publicitari, Pàgina d'inici
 Comment[da]=Tekststørrelse, historik, reklameblokering, hjemmeside

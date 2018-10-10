@@ -1,6 +1,5 @@
 [Desktop Entry]
 Name=Accounts
-Name[ast]=Cuentes
 Name[ca]=Comptes
 Name[ca@valencia]=Comptes
 Name[cs]=Účty
@@ -26,7 +25,6 @@ Name[uk]=Облікові записи
 Name[x-test]=xxAccountsxx
 Name[zh_CN]=帐户
 Comment=Add Your Online Accounts
-Comment[ast]=Amiesta les tos cuentes en llinia
 Comment[ca]=Afegiu els vostres comptes en línia
 Comment[ca@valencia]=Afegiu els vostres comptes en línia
 Comment[cs]=Přidejte svoje účty online
@@ -65,7 +63,6 @@ X-KDE-System-Settings-Parent-Category=display
 X-KDE-Weight=70
 
 X-KDE-Keywords=accounts, online
-X-KDE-Keywords[ast]=cuentes, en llinia
 X-KDE-Keywords[ca]=comptes,en línia
 X-KDE-Keywords[ca@valencia]=comptes,en línia
 X-KDE-Keywords[cs]=účty, online
