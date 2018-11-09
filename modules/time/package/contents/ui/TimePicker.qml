@@ -117,6 +117,7 @@ Item {
                 property int ownIndex: index
                 text: (!root.twentyFour && index == 0) ? "12" : clockRow.twoDigitString(index)
                 font.pointSize: root.fontSize
+                color: theme.textColor
                 opacity: PathView.itemOpacity
             }
             onSelectedIndexChanged: {
@@ -204,6 +205,7 @@ Item {
                 horizontalAlignment: Text.AlignLeft
                 property int ownIndex: index
                 text: meridiae
+                color: theme.textColor
                 font.pointSize: root.fontSize
                 //opacity: PathView.itemOpacity
             }

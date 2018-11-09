@@ -57,6 +57,7 @@ Item {
             width: spinnerView.width
             property int ownIndex: index
             text: index < 10 ? "0"+index : index
+            color: theme.textColor
             font.pointSize: root.fontSize
             opacity: PathView.itemOpacity
         }
