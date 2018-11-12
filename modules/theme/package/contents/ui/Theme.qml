@@ -66,17 +66,13 @@ Item {
 
         Repeater {
             model: kcm.themeListModel
-            delegate: RowLayout {
-                Controls.Label {
-                    text: model.display
-                    Layout.fillWidth: true
-                }
-                Controls.RadioButton {
-                    checked: kcm.themeName == model.packageNameRole
-                    onCheckedChanged: {
-                        if (checked) {
-                            kcm.themeName = model.packageNameRole;
-                        }
+            delegate: Controls.RadioDelegate {
+                Layout.fillWidth: true
+                text: model.display
+                checked: kcm.themeName == model.packageNameRole
+                onCheckedChanged: {
+                    if (checked) {
+                        kcm.themeName = model.packageNameRole;
                     }
                 }
             }
