@@ -141,6 +141,7 @@ void SettingsComponent::loadModule(const QString &name)
     d->valid = true;
 
     emit mainUiChanged();
+    emit kcmChanged();
     emit validChanged();
 }
 
@@ -151,6 +152,11 @@ QQuickItem *SettingsComponent::mainUi() const
     }
 
     return nullptr;
+}
+
+KQuickAddons::ConfigModule *SettingsComponent::kcm() const
+{
+    return d->kcm;
 }
 
 bool SettingsComponent::isValid() const

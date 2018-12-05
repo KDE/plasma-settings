@@ -32,13 +32,37 @@ Kirigami.Page {
     rightPadding: hasOwnPadding ? 0 : Kirigami.Units.gridUnit
     bottomPadding: hasOwnPadding ? 0 : Kirigami.Units.gridUnit
 
-    contentItem: ActiveSettings.SettingsComponent {
+    ActiveSettings.SettingsComponent {
         id: settingsComponent
 
+        anchors.fill: parent
         property alias status: settingsLoader.status
 
         signal moduleLoaded
 
+        Connections {
+            target: settingsComponent.kcm
+            onPagePushed: {
+                applicationWindow().pageStack.push(kcmWrapperComponent, {"page": page})
+            }
+        }
+        Component {
+            id: kcmWrapperComponent
+            Kirigami.Page {
+                id: wrapper
+                property Item page
+                title: page ? page.title : ""
+                leftPadding: 0
+                topPadding: 0
+                rightPadding: 0
+                bottomPadding: 0
+                onPageChanged: {
+                    page.visible = true;
+                    page.parent = wrapper.contentItem;
+                    page.anchors.fill = wrapper.contentItem;
+                }
+            }
+        }
         Loader {
             id: settingsLoader
             anchors.fill: parent

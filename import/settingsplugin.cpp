@@ -23,6 +23,8 @@
 #include <QQmlContext>
 //#include <QScriptEngine>
 
+#include <kquickaddons/configmodule.h>
+
 //#include "settingsmoduleloader.h"
 #include "settingsmodulesmodel.h"
 #include "settingscomponent.h"
@@ -39,5 +41,6 @@ void SettingsPlugin::registerTypes(const char *uri)
     qmlRegisterType<SettingsComponent>(uri, major, minor, "SettingsComponent");
     qmlRegisterType<Package>(uri, major, minor, "Package");
     qmlRegisterType<Plasma::ConfigGroup>(uri, major, minor, "ConfigGroup");
+    qmlRegisterType<KQuickAddons::ConfigModule>();
 }
 
