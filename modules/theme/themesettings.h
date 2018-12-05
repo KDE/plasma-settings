@@ -42,7 +42,7 @@ class ThemeSettings : public KQuickAddons::ConfigModule
 
     public:
         ThemeSettings(QObject* parent, const QVariantList& args);
-        virtual ~ThemeSettings();
+        ~ThemeSettings() override;
 
         QString themeName() const;
         void setThemeName(const  QString &theme);

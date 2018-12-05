@@ -30,7 +30,7 @@ class SettingsPlugin : public QQmlExtensionPlugin
 
 public:
     //void initializeEngine(QQmlEngine *engine, const char *uri);
-    void registerTypes(const char *uri);
+    void registerTypes(const char *uri) override;
 };
 
 #endif

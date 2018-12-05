@@ -28,7 +28,7 @@ class TimeZonesModel: public QStandardItemModel
     Q_PROPERTY(int count READ count NOTIFY countChanged)
 
 public:
-    TimeZonesModel(QObject *parent=0);
+    TimeZonesModel(QObject *parent=nullptr);
 
     Q_INVOKABLE QVariantHash get(int i) const;
     int count() const {return rowCount();}

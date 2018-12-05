@@ -28,7 +28,7 @@ class SshdHelper : public QObject
     Q_OBJECT
 
 public:
-    SshdHelper(QObject *parent = 0);
+    SshdHelper(QObject *parent = nullptr);
 
 public slots:
     ActionReply start(const QVariantMap &map);

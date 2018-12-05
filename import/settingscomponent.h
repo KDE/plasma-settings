@@ -39,8 +39,8 @@ class SettingsComponent : public QQuickItem
     Q_PROPERTY(KQuickAddons::ConfigModule *kcm READ kcm NOTIFY kcmChanged)
 
 public:
-    SettingsComponent(QQuickItem *parent = 0);
-    ~SettingsComponent();
+    SettingsComponent(QQuickItem *parent = nullptr);
+    ~SettingsComponent() override;
 
     QString description() const;
 

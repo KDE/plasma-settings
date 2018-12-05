@@ -32,8 +32,8 @@ class Package : public QObject
     Q_PROPERTY(QString visibleName READ visibleName NOTIFY visibleNameChanged)
 
 public:
-    Package(QObject *parent = 0);
-    ~Package();
+    Package(QObject *parent = nullptr);
+    ~Package() override;
 
     QString name() const;
     void setName(const QString &name);

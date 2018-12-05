@@ -33,7 +33,7 @@ class DevelSettings : public KQuickAddons::ConfigModule
 
 public:
     DevelSettings(QObject* parent, const QVariantList& args);
-    virtual ~DevelSettings();
+    ~DevelSettings() override;
     bool sshEnabled() const;
     void enableSsh(bool enable);
 

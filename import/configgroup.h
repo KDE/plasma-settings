@@ -40,8 +40,8 @@ class ConfigGroup : public QQuickItem
     Q_PROPERTY(QStringList groupList READ groupList NOTIFY groupListChanged)
 
 public:
-    ConfigGroup(QQuickItem* parent=0);
-    ~ConfigGroup();
+    ConfigGroup(QQuickItem* parent=nullptr);
+    ~ConfigGroup() override;
 
     KConfigGroup* configGroup();
 

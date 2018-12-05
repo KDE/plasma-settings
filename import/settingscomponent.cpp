@@ -49,8 +49,8 @@ SettingsComponent::SettingsComponent(QQuickItem *parent)
 {
     d = new SettingsComponentPrivate;
     d->package = KPackage::PackageLoader::self()->loadPackage(QStringLiteral("KPackage/GenericQML"));
-    d->settingsModule = 0;
-    d->kcm = 0;
+    d->settingsModule = nullptr;
+    d->kcm = nullptr;
     d->valid = false;
 }
 
@@ -61,9 +61,9 @@ SettingsComponent::~SettingsComponent()
 void SettingsComponent::loadModule(const QString &name)
 {
     d->settingsModule->deleteLater();
-    d->settingsModule = 0;
+    d->settingsModule = nullptr;
     d->kcm->deleteLater();
-    d->kcm = 0;
+    d->kcm = nullptr;
 
     d->package.setPath(name);
     //KGlobal::locale()->insertCatalog("plasma_package_" + name);

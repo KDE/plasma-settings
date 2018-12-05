@@ -65,7 +65,7 @@ class TimeSettings : public KQuickAddons::ConfigModule
          * @arg list Arguments, currently unused
          */
         TimeSettings(QObject* parent, const QVariantList& args);
-        virtual ~TimeSettings();
+        ~TimeSettings() override;
 
         QString currentTimeText();
         QTime currentTime() const;

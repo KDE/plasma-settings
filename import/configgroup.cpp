@@ -34,8 +34,8 @@ class ConfigGroupPrivate {
 public:
     ConfigGroupPrivate(ConfigGroup *q)
         : q(q),
-          config(0),
-          configGroup(0)
+          config(nullptr),
+          configGroup(nullptr)
     {}
 
     ~ConfigGroupPrivate()
@@ -127,7 +127,7 @@ QStringList ConfigGroup::groupList() const
 bool ConfigGroup::readConfigFile()
 {
     // Find parent ConfigGroup
-    ConfigGroup* parentGroup = 0;
+    ConfigGroup* parentGroup = nullptr;
     QObject* current = parent();
     while (current) {
         parentGroup = qobject_cast<ConfigGroup*>(current);
@@ -138,7 +138,7 @@ bool ConfigGroup::readConfigFile()
     }
 
     delete d->configGroup;
-    d->configGroup = 0;
+    d->configGroup = nullptr;
 
     if (parentGroup) {
         d->configGroup = new KConfigGroup(parentGroup->configGroup(), d->group);

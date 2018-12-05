@@ -38,8 +38,8 @@ class SettingsModulesModel : public QQmlComponent
     Q_PROPERTY(QString formFactor READ formFactor WRITE setFormFactor NOTIFY formFactorChanged)
 
 public:
-    SettingsModulesModel(QQmlComponent* parent = 0);
-    ~SettingsModulesModel();
+    SettingsModulesModel(QQmlComponent* parent = nullptr);
+    ~SettingsModulesModel() override;
 
     QQmlListProperty<SettingsModule> settingsModules();
 

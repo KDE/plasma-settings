@@ -85,8 +85,8 @@ TimeSettings::TimeSettings(QObject* parent, const QVariantList& args)
     qDebug() << "time settings init";
     d = new TimeSettingsPrivate;
     d->q = this;
-    d->timeZones = 0;
-    d->timeZonesModel = 0;
+    d->timeZones = nullptr;
+    d->timeZonesModel = nullptr;
     setTimeZone(KSystemTimeZones::local().name());
 
     KAboutData* about = new KAboutData("kcm_mobile_time", i18n("Configure Date and Time"),

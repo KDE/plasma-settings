@@ -43,8 +43,8 @@ class SettingsModule : public QObject
     Q_PROPERTY(QString category READ category WRITE setCategory NOTIFY categoryChanged)
 
     public:
-        explicit SettingsModule(QObject *parent = 0, const QVariantList &v = QVariantList());
-        virtual ~SettingsModule();
+        explicit SettingsModule(QObject *parent = nullptr, const QVariantList &v = QVariantList());
+        ~SettingsModule() override;
 
         QString name() const;
         QString description() const;

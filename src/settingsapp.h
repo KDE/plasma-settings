@@ -30,8 +30,8 @@ class SettingsApp : public QObject
     Q_OBJECT
 
 public:
-    explicit SettingsApp(QCommandLineParser &parser, QObject *parent = 0 );
-    ~SettingsApp();
+    explicit SettingsApp(QCommandLineParser &parser, QObject *parent = nullptr );
+    ~SettingsApp() override;
 
 Q_SIGNALS:
     void moduleRequested(const QString &module);
