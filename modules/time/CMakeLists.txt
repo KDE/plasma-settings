@@ -1,4 +1,4 @@
-project( kcm_mobile_time )
+project(kcm_mobile_time)
 
 #include_directories(../../../../components/settings)
 

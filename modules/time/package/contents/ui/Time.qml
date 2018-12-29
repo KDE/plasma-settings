@@ -18,100 +18,62 @@
  *   51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.
  */
 
-import QtQuick 2.2
-import QtQuick.Layouts 1.1
+import QtQuick 2.7
+import QtQuick.Layouts 1.3
 import QtQuick.Controls 2.3 as Controls
-import QtQuick.Controls 1.3 as QQC1
 
 import org.kde.kirigami 2.4 as Kirigami
-import org.kde.plasma.components 2.0 as PlasmaComponents
-import org.kde.kcm 1.0
+import org.kde.active.settings 2.0
+import org.kde.kcm 1.2
 
-Item {
+SimpleKCM {
     id: timeModule
     objectName: "timeModule"
 
-    QQC1.ScrollView {
-        id: scrollView
-        anchors.fill: parent
+    ColumnLayout {
+        width: parent.width
+        spacing: 0
+        id: formLayout
 
-        GridLayout {
-            id: formLayout
+        Kirigami.Heading {
+            Layout.bottomMargin: Kirigami.Units.gridUnit * 0.5
+            text: i18n("Time Display")
+            level: 3
+        }
 
-            property int gridspacing: Kirigami.Units.gridUnit
-
-            //anchors.fill: parent
-            //height: implicitHeight
-            width: scrollView.width - Kirigami.Units.gridUnit
-            //Rectangle { color: "orange"; opacity: 0.3; anchors.fill: parent}
-
-            columns: 2
-            //rows: 4
-            //anchors.fill: parent
-            //anchors.rightMargin: gridspacing
-
-            //rowSpacing: gridspacing
-            columnSpacing: gridspacing
-
-            Item {
-                Layout.preferredHeight: Kirigami.Units.gridUnit / 3
-                Layout.columnSpan: 2
-            }
-
-            Kirigami.Heading {
-                Layout.columnSpan: 2
-                //             Layout.rowSpacing: Kirigami.Units.gridUnit * 4
-                text: i18n("Time Display")
-                level: 3
-            }
-
-            Controls.Label {
-                text: i18n("Use 24-hour clock:")
-                Layout.fillWidth: true
-            }
-
+        Kirigami.BasicListItem {
+            label: i18n("Use 24-hour clock:")
+            icon: "clock"
             Controls.Switch {
                 id: twentyFourSwitch
                 checked: kcm.twentyFour
-                Layout.alignment : Qt.AlignRight
                 onClicked : {
                     kcm.twentyFour = checked
                     print(kcm.timeZone);
                 }
             }
+        }
 
-            Controls.Label {
-                id: timeZoneLabel
-                text: i18n("Timezone:")
-                Layout.fillWidth: true
-            }
-
-            Controls.Button {
+        Kirigami.BasicListItem {
+            label: "Timezone:"
+            Controls.ToolButton {
                 id: timeZoneButton
                 text: kcm.timeZone
                 onClicked: timeZonePickerDialog.open()
             }
+        }
 
-            Item {
-                height: Kirigami.Units.gridUnit
-            }
+        Kirigami.Heading {
+            Layout.topMargin: Kirigami.Units.gridUnit
+            Layout.bottomMargin: Kirigami.Units.gridUnit * 0.5
+            text: i18n("Set Time and Date")
+            level: 3
+        }
 
-            Kirigami.Heading {
-                Layout.columnSpan: 2
-    //             Layout.rowSpacing: Kirigami.Units.gridUnit * 4
-                text: i18n("Set Time and Date")
-                level: 3
-            }
-
-            Controls.Label {
-                id: ntpLabel
-                text: i18n("Set time automatically:")
-                Layout.fillWidth: true
-            }
-
+        Kirigami.BasicListItem {
+            label: i18n("Set time automatically:")
             Controls.Switch {
                 id: ntpCheckBox
-                Layout.alignment : Qt.AlignRight
                 checked: kcm.useNtp
                 onClicked: {
                     kcm.useNtp = checked;
@@ -121,113 +83,136 @@ Item {
                     }
                 }
             }
-            Kirigami.Heading {
-                Layout.columnSpan: 2
-                //             Layout.rowSpacing: Kirigami.Units.gridUnit * 4
-                text: i18n("Set Time")
-                level: 4
-            }
+        }
 
-            TimePicker {
-                id: timePicker
-                enabled: !ntpCheckBox.checked
-                twentyFour: twentyFourSwitch.checked
-
-                Layout.columnSpan: 2
-                Layout.preferredHeight: timePicker.childrenRect.height + timePicker.margin * 2
-                //Layout.preferredWidth: timePicker.childrenRect.width + timePicker._margin * 2
-    //             Layout.alignment: Qt.AlignHCenter
-                Layout.alignment: Qt.AlignLeft
-
-                Component.onCompleted: {
-                    //var date = new Date("January 1, 1971 "+kcm.currentTime)
+        Kirigami.BasicListItem {
+            label: i18n("Time")
+            icon: "clock"
+            Controls.ToolButton {
+                text: {
                     var date = new Date(kcm.currentTime);
-    //                 print("CurrentTime: "  + kcm.currentTime);
-    //                 print("Date: "  + date);
-    //                 print("hours:   "  + date.getHours());
-    //                 print("minutes: "  + date.getMinutes());
-    //                 print("seconds: "  + date.getSeconds());
-                    timePicker.hours = date.getHours();
-                    timePicker.minutes = date.getMinutes();
-                    timePicker.seconds = date.getSeconds();
+                    return date.toTimeString()
                 }
-                Connections {
-                    target: kcm
-                    onCurrentTimeChanged: {
-                        if (timePicker.userConfiguring) {
-                            return;
-                        }
-
-                        //var date = new Date("January 1, 1971 "+kcm.currentTime)
-                        var date = new Date(kcm.currentTime);
-                        timePicker.hours = date.getHours();
-                        timePicker.minutes = date.getMinutes();
-                        timePicker.seconds = date.getSeconds();
-                    }
-                }
-                onUserConfiguringChanged: {
-                    kcm.currentTime = timeString
-                    kcm.saveTime()
-                }
+                onClicked: timePickerDialog.open()
             }
+        }
 
-            Kirigami.Heading {
-                Layout.columnSpan: 2
-                //             Layout.rowSpacing: Kirigami.Units.gridUnit * 4
-                text: i18n("Set Date")
-                level: 4
-            }
-
-            DatePicker {
-                id: datePicker
-                enabled: !ntpCheckBox.checked
-                Layout.columnSpan: 2
-                //Layout.preferredHeight: datePicker.childrenRect.height + datePicker._margin * 2
-                //Layout.preferredWidth: datePicker.childrenRect.width + datePicker._margin * 2
-                Layout.alignment: Qt.AlignLeft
-
-                Component.onCompleted: {
-                    var date = new Date(kcm.currentDate)
-                    datePicker.day = date.getDate()
-                    datePicker.month = date.getMonth()+1
-                    datePicker.year = date.getFullYear()
+        Kirigami.BasicListItem {
+            label: i18n("Date")
+            icon: "office-calendar"
+            Controls.ToolButton {
+                text: {
+                    var date = new Date(kcm.currentDate);
+                    return date.toDateString()
                 }
-                Connections {
-                    target: kcm
-                    onCurrentDateChanged: {
-                        if (datePicker.userConfiguring) {
-                            return
-                        }
-
-                        var date = new Date(kcm.currentDate)
-
-                        datePicker.day = date.getDate()
-                        datePicker.month = date.getMonth()+1
-                        datePicker.year = date.getFullYear()
-                    }
-                }
-                onUserConfiguringChanged: {
-                    kcm.currentDate = isoDate
-                    kcm.saveTime()
-                }
+                onClicked: datePickerDialog.open()
             }
         }
     }
 
-    PlasmaComponents.CommonDialog {
+    Controls.Dialog {
         id: timeZonePickerDialog
-        titleText: i18n("Pick Timezone... (%1)", kcm.timeZone)
-        buttonTexts: [i18n("Close")]
-        onButtonClicked: close()
-        content: Loader {
-            id: timeZonePickerLoader
-            width: Kirigami.Units.gridUnit * 22
-            height: Kirigami.Units.gridUnit * 25
+        title: i18n("Pick Timezone... (%1)", kcm.timeZone)
+        modal: true
+        standardButtons: Controls.Dialog.Ok
+        x: (parent.width - width) / 2
+        y: (parent.height - height) / 2
+        onAccepted: close()
+        width: Kirigami.Units.gridUnit * 20
+        height: Kirigami.Units.gridUnit * 25
+        ListView {
+            clip: true
+            anchors.fill: parent
+            delegate: Kirigami.BasicListItem {
+                text: display
+
+                onClicked: {
+                    kcm.saveTimeZone(display)
+                    timeZonePickerDialog.accept()
+                }
+            }
+            model: kcm.timeZonesModel
         }
-        onStatusChanged: {
-            if (status == PlasmaComponents.DialogStatus.Open) {
-                timeZonePickerLoader.source = "TimeZonePicker.qml"
-                timeZonePickerLoader.item.focusTextInput()
+    }
+
+    Controls.Dialog {
+        id: timePickerDialog
+        title: i18n("Pick Time")
+        modal: true
+        standardButtons: Controls.Dialog.Ok
+        x: (parent.width - width) / 2
+        y: (parent.height - height) / 2
+        onAccepted: close()
+        width: Kirigami.Units.gridUnit * 20
+        height: Kirigami.Units.gridUnit * 15
+        contentItem: TimePicker {
+            id: timePicker
+            enabled: !ntpCheckBox.checked
+            twentyFour: twentyFourSwitch.checked
+
+            Component.onCompleted: {
+                var date = new Date(kcm.currentTime);
+                timePicker.hours = date.getHours();
+                timePicker.minutes = date.getMinutes();
+                timePicker.seconds = date.getSeconds();
+            }
+            Connections {
+                target: kcm
+                onCurrentTimeChanged: {
+                    if (timePicker.userConfiguring) {
+                        return;
+                    }
+
+                    var date = new Date(kcm.currentTime);
+                    timePicker.hours = date.getHours();
+                    timePicker.minutes = date.getMinutes();
+                    timePicker.seconds = date.getSeconds();
+                }
+            }
+            onUserConfiguringChanged: {
+                kcm.currentTime = timeString
+                kcm.saveTime()
+            }
+        }
+    }
+
+    Controls.Dialog {
+        id: datePickerDialog
+        title: i18n("Pick Date")
+        modal: true
+        standardButtons: Controls.Dialog.Ok
+        x: (parent.width - width) / 2
+        y: (parent.height - height) / 2
+        onAccepted: close()
+        width: Kirigami.Units.gridUnit * 20
+        height: Kirigami.Units.gridUnit * 15
+        contentItem: DatePicker {
+            id: datePicker
+            enabled: !ntpCheckBox.checked
+
+            Component.onCompleted: {
+                var date = new Date(kcm.currentDate)
+                datePicker.day = date.getDate()
+                datePicker.month = date.getMonth()+1
+                datePicker.year = date.getFullYear()
+            }
+            Connections {
+                target: kcm
+                onCurrentDateChanged: {
+                    if (datePicker.userConfiguring) {
+                        return
+                    }
+
+                    var date = new Date(kcm.currentDate)
+
+                    datePicker.day = date.getDate()
+                    datePicker.month = date.getMonth()+1
+                    datePicker.year = date.getFullYear()
+                }
+            }
+            onUserConfiguringChanged: {
+                kcm.currentDate = isoDate
+                kcm.saveTime()
             }
         }
     }

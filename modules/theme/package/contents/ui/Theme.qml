@@ -22,20 +22,15 @@ import QtQuick.Layouts 1.1
 import QtQuick.Controls 2.0 as Controls
 
 import org.kde.kirigami 2.1 as Kirigami
-import org.kde.kcm 1.0
+import org.kde.kcm 1.2
 
-Item {
-    id: timeModule
-    objectName: "timeModule"
+SimpleKCM {
+    id: themeModule
+    objectName: "themeModule"
 
     ColumnLayout {
-        anchors {
-            left: parent.left
-            top: parent.top
-            right: parent.right
-            rightMargin: units.gridUnit
-        }
-        spacing: units.gridUnit / 2
+        width: parent.width
+        spacing: Kirigami.Units.gridUnit * 0.5
 
         Kirigami.Heading {
             text: i18n("Font")
@@ -44,7 +39,7 @@ Item {
 
         Controls.Slider {
             id: fontSizeSlider
-            Layout.preferredWidth: timeModule.width - units.gridUnit
+            Layout.preferredWidth: parent.width - Kirigami.Units.gridUnit * 2
             stepSize: 1.0
             from: 3
             to: 12
@@ -69,7 +64,7 @@ Item {
             delegate: Controls.RadioDelegate {
                 Layout.fillWidth: true
                 text: model.display
-                checked: kcm.themeName == model.packageNameRole
+                checked: kcm.themeName === model.packageNameRole
                 onCheckedChanged: {
                     if (checked) {
                         kcm.themeName = model.packageNameRole;
@@ -78,9 +73,7 @@ Item {
             }
         }
     }
-
     Component.onCompleted: {
         print("KCM.fontSize: " + kcm.fontSize);
     }
-
 }
