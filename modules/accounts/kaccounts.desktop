@@ -50,8 +50,7 @@ Comment[x-test]=xxAdd Your Online Accountsxx
 Comment[zh_CN]=添加您的在线帐号
 
 Icon=applications-internet
-Exec=plasma-settings -m kaccounts
-#Exec=plasma-settings -m kcm_mobile_power
+Exec=plasma-settings -m kcm_mobile_kaccounts
 
 Type=Service
 X-KDE-ServiceTypes=KCModule
@@ -87,4 +86,3 @@ X-KDE-Keywords[uk]=облікові записи,мережа,accounts,online
 X-KDE-Keywords[x-test]=xxaccountsxx,xx onlinexx
 X-KDE-Keywords[zh_CN]=accounts, online, 账户, 在线
 Categories=Qt;KDE;X-KDE-settings-system;
-
