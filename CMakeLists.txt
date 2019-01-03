@@ -1,6 +1,7 @@
 project(plasma-settings)
 
 cmake_minimum_required(VERSION 2.8.12)
+cmake_policy(SET CMP0063 NEW)
 
 ################# Disallow in-source build #################
 
@@ -62,4 +63,3 @@ add_subdirectory(modules)
 install(DIRECTORY package/ DESTINATION ${KDE_INSTALL_DATAROOTDIR}/kpackage/genericqml/org.kde.plasma.settings)
 
 install(FILES org.kde.mobile.plasmasettings.desktop DESTINATION ${XDG_APPS_INSTALL_DIR})
-
