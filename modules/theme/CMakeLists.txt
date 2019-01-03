@@ -1,4 +1,4 @@
-project( kcm_mobile_theme )
+project(kcm_mobile_theme)
 
 
 set(themesettings_SRCS
@@ -22,6 +22,6 @@ kcoreaddons_desktop_to_json(kcm_mobile_theme "themesettings.desktop")
 
 # Time and Date
 
-install(FILES themesettings.desktop DESTINATION ${SERVICES_INSTALL_DIR})
-install(TARGETS kcm_mobile_theme DESTINATION ${PLUGIN_INSTALL_DIR}/kcms)
+install(FILES themesettings.desktop DESTINATION ${KDE_INSTALL_KSERVICES5DIR})
+install(TARGETS kcm_mobile_theme DESTINATION ${KDE_INSTALL_PLUGINDIR}/kcms)
 kpackage_install_package(package kcm_mobile_theme kcms)

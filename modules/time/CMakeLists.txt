@@ -25,6 +25,6 @@ kcoreaddons_desktop_to_json(kcm_mobile_time "timesettings.desktop")
 
 # Time and Date
 
-install(FILES timesettings.desktop DESTINATION ${SERVICES_INSTALL_DIR})
-install(TARGETS kcm_mobile_time DESTINATION ${PLUGIN_INSTALL_DIR}/kcms)
+install(FILES timesettings.desktop DESTINATION ${KDE_INSTALL_KSERVICES5DIR})
+install(TARGETS kcm_mobile_time DESTINATION ${KDE_INSTALL_QTPLUGINDIR}/kcms)
 kpackage_install_package(package kcm_mobile_time kcms)
