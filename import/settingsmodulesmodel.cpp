@@ -181,5 +181,3 @@ void SettingsModulesModel::setFormFactor(const QString& f)
         emit formFactorChanged();
     }
 }
-
-#include "settingsmodulesmodel.moc"

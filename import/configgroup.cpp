@@ -194,4 +194,3 @@ void ConfigGroup::sync()
 }
 
 } // namespace Plasma
-#include "configgroup.moc"

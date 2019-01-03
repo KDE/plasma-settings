@@ -41,6 +41,3 @@ QVariantHash TimeZonesModel::get(int i) const
     hash["continent"] = data(idx, Qt::UserRole+1);
     return hash;
 }
-
-#include "timezonesmodel.moc"
-

@@ -60,5 +60,3 @@ void TimeZone::setName(const QString &n)
     d->name = n;
     emit nameChanged();
 }
-
-#include "timezone.moc"

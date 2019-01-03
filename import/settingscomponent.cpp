@@ -223,7 +223,3 @@ void SettingsComponent::setName(const QString &name)
         emit nameChanged();
     }
 }
-
-
-#include "settingscomponent.moc"
-

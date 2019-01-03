@@ -105,5 +105,3 @@ void SettingsModule::setCategory(const QString &category)
         emit categoryChanged();
     }
 }
-
-#include "settingsmodule.moc"

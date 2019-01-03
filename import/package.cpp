@@ -87,6 +87,3 @@ QString Package::filePath(const QString &fileType) const
 
     return m_package.filePath(fileType.toLatin1());
 }
-
-#include "package.moc"
-
