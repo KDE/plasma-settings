@@ -19,51 +19,30 @@
  *   51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.
  */
 
-import QtQuick 2.2
-import QtQuick.Layouts 1.1
-
+import QtQuick 2.7
+import QtQuick.Layouts 1.11
 import QtQuick.Controls 2.0 as Controls
 
-Item {
+import org.kde.kirigami 2.4 as Kirigami
+import org.kde.kcm 1.2
+
+SimpleKCM {
     id: develModule
     objectName: "develModule"
 
-//     ActiveSettings.DevelSettings {
-//         id: settings
-//     }
-
-    GridLayout {
+    ColumnLayout {
         id: formLayout
-        columns: 2
-        //rows: 4
-        columnSpacing: units.gridUnit
-        rowSpacing: units.gridUnit
 
-        anchors {
-            fill: parent
-            margins: units.gridUnit
-            leftMargin: 0
-        }
-
-        Controls.Label {
-            id: timeZoneLabel
-            text: i18n("Allow remote SSH access:")
-            Layout.fillWidth: true
-        }
-
-        Controls.Switch {
+        Controls.SwitchDelegate {
             id: ssh
+            text: i18n("Allow remote SSH access:")
             checked: kcm.sshEnabled
+            Layout.fillWidth: true
             onClicked: {
                 kcm.sshEnabled = checked;
                 // we have to check to se if it failed
                 checked = kcm.sshEnabled;
             }
-        }
-
-        Item {
-            width: 2
-            Layout.fillHeight: true
         }
     }
 }

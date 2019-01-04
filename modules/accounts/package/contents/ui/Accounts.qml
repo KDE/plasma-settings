@@ -17,144 +17,98 @@
  *   51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.
  */
 
-import QtQuick 2.2
-import QtQuick.Layouts 1.1
-import QtQuick.Controls 1.2
-import org.kde.plasma.core 2.0 as PlasmaCore
-import org.kde.plasma.components 2.0 as PlasmaComponents
-import org.kde.plasma.extras 2.0 as PlasmaExtras
+
+
+import QtQuick 2.7
+import QtQuick.Layouts 1.11
+import QtQuick.Controls 2.0 as Controls
+
+import org.kde.kirigami 2.4 as Kirigami
+
 import org.kde.active.settings 2.0 as ActiveSettings
 import org.kde.kaccounts 1.0
+import org.kde.kcm 1.2
+
 import Ubuntu.OnlineAccounts 0.1 as OA
 
-Item {
+ScrollViewKCM {
     id: kaccountsRoot
     objectName: "kaccountsModule"
 
-    width: 800; height: 500
+    // Existing accounts
+    view: ListView {
+        Layout.fillWidth: true
+        Layout.fillHeight: true
 
-    StackView {
-        id: mainView
-        anchors.fill: parent
+        model: OA.AccountServiceModel {
+            id: accountsModel
+            service: "global"
+            includeDisabled: true
+        }
 
-        initialItem: ColumnLayout {
+        delegate: Kirigami.SwipeListItem {
             Layout.fillWidth: true
-            Layout.fillHeight: true
 
-            ListView {
-                Layout.fillWidth: true
-                Layout.fillHeight: true
-                spacing: units.smallSpacing
+            Controls.Label {
+                text: model.displayName + " (" + providerName + ")"
 
-                model: OA.AccountServiceModel {
-                    id: accountsModel
-                    service: "global"
-                    includeDisabled: true
-                }
-
-                delegate: RowLayout {
-                    anchors {
-                        left: parent.left
-                        right: parent.right
-                    }
-                    PlasmaComponents.Button {
-                        Layout.fillWidth: true
-                        text: model.displayName
-
-                        onClicked: {
-                            mainView.push(availableServices)
-                            servicesModel.accountId = model.accountId
-                        }
-                    }
-                    PlasmaComponents.Button {
-                        iconSource: "list-remove"
-                        
-                        OA.Account {
-                            id: account
-                            objectHandle: model.accountHandle
-                        }
-
-                        onClicked: {
-                            account.remove();
-                        }
-                    }
+                OA.Account {
+                    id: account
+                    objectHandle: model.accountHandle
                 }
             }
-
-            PlasmaComponents.Button {
-                Layout.fillWidth: true
-                text: i18n("Add new Account")
-                onClicked: mainView.push(availableAccounts)
+            actions: [
+                Kirigami.Action {
+                    iconName: "bookmark-remove"
+                    onTriggered: {
+                        account.remove()
+                    }
+                }
+            ]
+            onClicked: {
+                availableServicesSheet.open()
+                servicesModel.accountId = model.accountId
             }
         }
     }
 
-    Component {
-        id: availableAccounts
+    footer: RowLayout {
+        Controls.Button {
+            Layout.alignment: Qt.AlignRight
+            text: i18n("Add new Account")
+            icon.name: "contact-new"
+            onClicked: {
+                availableAccountsSheet.open()
+            }
+        }
+    }
 
-        ColumnLayout {
-            RowLayout {
-                PlasmaComponents.Button {
-                    text: "<"
+    Kirigami.OverlaySheet {
+        id: availableAccountsSheet
+        parent: kaccountsRoot.parent
 
-                    onClicked: {
-                        mainView.push(mainView.initialItem);
-                    }
-                }
+        ListView {
+            Layout.fillWidth: true
+            Layout.fillHeight: true
 
-                PlasmaComponents.Label {
-                    Layout.fillWidth: true
-                    text: i18n("Available Accounts")
+            model: OA.ProviderModel {}
+
+            delegate: Kirigami.BasicListItem {
+                icon: model.iconName
+                label: model.displayName
+                Layout.fillWidth: true
+
+                onClicked: {
+                    var job = jobComponent.createObject(kaccountsRoot, { "providerName": providerId })
+                    job.start()
                 }
             }
-
-            GridLayout {
-                Layout.fillWidth: true
-                Layout.fillHeight: true
-                columns: 3
-
-                Repeater {
-                    model: OA.ProviderModel {}
-
-                    // We don't have a button that has text under icon _and_ looks like a button
-                    // so this creates one
-                    PlasmaComponents.Button {
-                        Layout.fillWidth: true
-                        Layout.fillHeight: true
-
-                        ColumnLayout {
-                            anchors.fill: parent
-                            anchors.margins: units.smallSpacing
-
-                            PlasmaCore.IconItem {
-                                Layout.fillWidth: true
-                                Layout.fillHeight: true
-                                source: model.iconName
-                            }
-
-                            PlasmaComponents.Label {
-                                Layout.fillWidth: true
-                                Layout.alignment: Qt.AlignHCenter
-                                horizontalAlignment: Text.AlignHCenter
-
-                                text: model.displayName
-                            }
-                        }
-
-                        Component {
-                            id: jobComponent
-                            CreateAccount {
-                                onFinished: {
-                                    mainView.push(mainView.initialItem);
-                                }
-                            }
-                        }
-
-                        onClicked: {
-                            var job = jobComponent.createObject(mainView, { providerName: providerId})
-                            job.start()
-                        }
-                    }
+        }
+        Component {
+            id: jobComponent
+            CreateAccount {
+                onFinished: {
+                    availableAccountsSheet.close()
                 }
             }
         }
@@ -164,43 +118,31 @@ Item {
         id: servicesModel
     }
 
-    Component {
-        id: availableServices
+    Kirigami.OverlaySheet {
+        id: availableServicesSheet
+        parent: kaccountsRoot.parent
 
         ColumnLayout {
-            RowLayout {
-                Layout.maximumHeight: backButton.height
-                PlasmaComponents.Button {
-                    id: backButton
-                    text: "<"
-
-                    onClicked: {
-                        mainView.push(mainView.initialItem);
-                    }
-                }
-
-                PlasmaComponents.Label {
-                    Layout.fillWidth: true
-                    text: i18n("Available Services")
-                }
+            Kirigami.Heading {
+                Layout.fillWidth: true
+                text: i18n("Available Services")
             }
 
             ColumnLayout {
                 Layout.fillHeight: true
                 Layout.fillWidth: true
-                spacing: units.smallSpacing
+                spacing: Kirigami.Units.smallSpacing
 
                 Repeater {
+                    Layout.fillWidth: true
                     model: servicesModel
 
-                    PlasmaComponents.CheckBox {
+                    Controls.CheckDelegate {
+                        Layout.fillWidth: true
                         text: model.serviceName
                         checked: model.enabled
                     }
                 }
-            }
-            Item {
-                Layout.fillHeight: true
             }
         }
     }

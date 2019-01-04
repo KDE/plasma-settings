@@ -20,17 +20,17 @@
 
 import QtQuick 2.2
 import QtQuick.Controls 2.0 as Controls
+import QtQuick.Layouts 1.11
 
 import org.kde.kirigami 2.1 as Kirigami
 import org.kde.plasma.components 2.0 as PlasmaComponents
 import org.kde.plasma.core 2.0 as PlasmaCore
 import org.kde.active.settings 2.0 as ActiveSettings
+import org.kde.kcm 1.2
 
-Item {
+SimpleKCM {
     id: powermanagementModule
     objectName: "powermanagementModule"
-
-    width: 800; height: 500
 
     ActiveSettings.ConfigGroup {
         id: screensaverConfig
@@ -98,23 +98,17 @@ Item {
         connectedSources: ["PowerDevil"]
     }
 
-    Column {
+    ColumnLayout {
         id: mainItem
 
-        anchors {
-            fill: parent
-            margins: units.gridUnit
-            leftMargin: 0
-        }
-
-        spacing: units.gridUnit / 2
+        spacing: Kirigami.Units.gridUnit * 0.5
 
         Kirigami.Heading {
             text: i18n("Screen Brightness")
             level: 3
         }
         Row {
-            spacing: units.gridUnit
+            spacing: Kirigami.Units.gridUnit * 0.5
             Controls.Label {
                 width: screensaverEnabledSwitch.width
                 text: i18n("0%")
