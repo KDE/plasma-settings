@@ -19,8 +19,8 @@ target_link_libraries(kcm_settings_devel
 
 kcoreaddons_desktop_to_json(kcm_settings_devel "develsettings.desktop")
 
-install(TARGETS kcm_settings_devel DESTINATION ${PLUGIN_INSTALL_DIR}/kcms)
-install(FILES develsettings.desktop DESTINATION ${SERVICES_INSTALL_DIR})
+install(TARGETS kcm_settings_devel DESTINATION ${KDE_INSTALL_QTPLUGINDIR}/kcms)
+install(FILES develsettings.desktop DESTINATION ${KDE_INSTALL_KSERVICES5DIR})
 
 kpackage_install_package(package kcm_settings_devel kcms)
 
@@ -31,7 +31,7 @@ target_link_libraries(active-sshd-helper
     KF5::Auth
 )
 
-install(TARGETS active-sshd-helper DESTINATION ${KAUTH_HELPER_INSTALL_DIR})
+install(TARGETS active-sshd-helper DESTINATION ${KDE_INSTALL_LIBEXECDIR}/kauth)
 
 kauth_install_helper_files(active-sshd-helper org.kde.active.sshdcontrol root)
 kauth_install_actions(org.kde.active.sshdcontrol active_dev_sshd.actions)
