@@ -24,6 +24,7 @@ Name[sv]=Bildskärm
 Name[uk]=Екран
 Name[x-test]=xxScreenxx
 Name[zh_CN]=屏幕
+Name[zh_TW]=螢幕
 Comment=Lock, Sleep, Timeout
 Comment[ca]=Bloqueja, adorm, Temps d'espera
 Comment[ca@valencia]=Bloqueja, adorm, Temps d'espera
@@ -46,6 +47,7 @@ Comment[sv]=Lås, viloläge, tidsgräns
 Comment[uk]=Блокування, присипляння, час очікування
 Comment[x-test]=xxLock, Sleep, Timeoutxx
 Comment[zh_CN]=锁屏，睡眠，超时
+Comment[zh_TW]=鎖定、休眠與逾時
 
 Encoding=UTF-8
 Type=Service

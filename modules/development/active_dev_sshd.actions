@@ -23,6 +23,7 @@ Name[sv]=SSH-fjärråtkomst
 Name[uk]=Віддалений доступ з SSH
 Name[x-test]=xxSSH Remote Accessxx
 Name[zh_CN]=SSH 远程访问
+Name[zh_TW]=SSH 遠端存取
 Icon=utilities-terminal
 
 [org.kde.active.sshdcontrol.start]
@@ -50,6 +51,7 @@ Name[sv]=Aktivera sshd
 Name[uk]=Задіяти sshd
 Name[x-test]=xxActivate sshdxx
 Name[zh_CN]=激活 sshd
+Name[zh_TW]=啟用 sshd
 Description=Starts sshd on device
 Description[ca]=Inicia el «sshd» al dispositiu
 Description[ca@valencia]=Inicia el «sshd» al dispositiu
@@ -74,6 +76,7 @@ Description[sv]=Startar sshd på enheten
 Description[uk]=Запустити sshd на пристрої
 Description[x-test]=xxStarts sshd on devicexx
 Description[zh_CN]=在设备上启动 sshd
+Description[zh_TW]=在裝置上啟動 sshd
 Policy=yes
 
 [org.kde.active.sshdcontrol.stop]
@@ -101,6 +104,7 @@ Name[sv]=Inaktivera sshd
 Name[uk]=Вимкнути sshd
 Name[x-test]=xxDeactivate sshdxx
 Name[zh_CN]=关闭 sshd
+Name[zh_TW]=停用 sshd
 Description=Stops sshd on device
 Description[ca]=Atura el «sshd» al dispositiu
 Description[ca@valencia]=Atura el «sshd» al dispositiu
@@ -125,4 +129,5 @@ Description[sv]=Stoppar sshd på enheten
 Description[uk]=Зупинити sshd на пристрої
 Description[x-test]=xxStops sshd on devicexx
 Description[zh_CN]=停止设备上的 sshd
+Description[zh_TW]=在裝置上停用 sshd
 Policy=yes
