@@ -1,4 +1,3 @@
-
 # These are only needed here, consider porting away from both!
 find_package(Qt5 REQUIRED NO_MODULE COMPONENTS Gui)
 

@@ -151,7 +151,7 @@ int main(int argc, char **argv)
     KPackage::Package package = KPackage::PackageLoader::self()->loadPackage("KPackage/GenericQML");
     package.setPath(ui);
 
-    SettingsApp *settingsApp = new SettingsApp(parser);
+    auto *settingsApp = new SettingsApp(parser);
 
     QQmlApplicationEngine engine;
     engine.rootContext()->setContextProperty("settingsApp", settingsApp);
