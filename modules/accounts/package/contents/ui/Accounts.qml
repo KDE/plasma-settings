@@ -31,15 +31,13 @@ import org.kde.kcm 1.2
 
 import Ubuntu.OnlineAccounts 0.1 as OA
 
-ScrollViewKCM {
+SimpleKCM {
     id: kaccountsRoot
     objectName: "kaccountsModule"
 
     // Existing accounts
-    view: ListView {
-        Layout.fillWidth: true
-        Layout.fillHeight: true
-
+    ListView {
+        clip: true
         model: OA.AccountServiceModel {
             id: accountsModel
             service: "global"
@@ -47,8 +45,6 @@ ScrollViewKCM {
         }
 
         delegate: Kirigami.SwipeListItem {
-            Layout.fillWidth: true
-
             Controls.Label {
                 text: model.displayName + " (" + providerName + ")"
 
