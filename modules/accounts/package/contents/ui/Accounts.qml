@@ -31,12 +31,12 @@ import org.kde.kcm 1.2
 
 import Ubuntu.OnlineAccounts 0.1 as OA
 
-SimpleKCM {
+ScrollViewKCM {
     id: kaccountsRoot
     objectName: "kaccountsModule"
 
     // Existing accounts
-    ListView {
+    view: ListView {
         clip: true
         model: OA.AccountServiceModel {
             id: accountsModel
@@ -45,7 +45,9 @@ SimpleKCM {
         }
 
         delegate: Kirigami.SwipeListItem {
-            Controls.Label {
+            width: ListView.view.width
+
+            contentItem: Controls.Label {
                 text: model.displayName + " (" + providerName + ")"
 
                 OA.Account {
@@ -79,6 +81,15 @@ SimpleKCM {
         }
     }
 
+    Component {
+        id: jobComponent
+        CreateAccount {
+            onFinished: {
+                availableAccountsSheet.close()
+            }
+        }
+    }
+
     Kirigami.OverlaySheet {
         id: availableAccountsSheet
         parent: kaccountsRoot.parent
@@ -97,14 +108,6 @@ SimpleKCM {
                 onClicked: {
                     var job = jobComponent.createObject(kaccountsRoot, { "providerName": providerId })
                     job.start()
-                }
-            }
-        }
-        Component {
-            id: jobComponent
-            CreateAccount {
-                onFinished: {
-                    availableAccountsSheet.close()
                 }
             }
         }
