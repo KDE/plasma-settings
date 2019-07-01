@@ -101,7 +101,6 @@ Kirigami.ScrollablePage {
             // when the modules are loaded, we need to ensure that
             // the list has the correct item loaded
             if (startModule == "") {
-                print("resetting index. doei")
                 listView.currentIndex = -1;
                 return;
             }
