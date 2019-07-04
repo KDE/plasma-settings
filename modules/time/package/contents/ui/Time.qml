@@ -36,7 +36,7 @@ SimpleKCM {
         id: formLayout
 
         Kirigami.Heading {
-            Layout.bottomMargin: Kirigami.Units.gridUnit * 0.5
+            leftPadding: Kirigami.Units.smallSpacing
             text: i18n("Time Display")
             level: 3
         }
@@ -64,8 +64,7 @@ SimpleKCM {
         }
 
         Kirigami.Heading {
-            Layout.topMargin: Kirigami.Units.gridUnit
-            Layout.bottomMargin: Kirigami.Units.gridUnit * 0.5
+            leftPadding: Kirigami.Units.smallSpacing
             text: i18n("Set Time and Date")
             level: 3
         }
