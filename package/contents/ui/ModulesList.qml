@@ -90,7 +90,6 @@ Kirigami.ScrollablePage {
 
     ActiveSettings.SettingsModulesModel {
         id: settingsModulesModel
-        formFactor: rootItem.formFactor // overridden by --formfactor argument!
         onSettingsModulesChanged: currentTimer.restart()
     }
 
