@@ -19,7 +19,6 @@
 
 import QtQuick 2.1
 import org.kde.plasma.core 2.0 as PlasmaCore
-//import org.kde.active.settings.time 2.0
 //import "private"
 
 //FIXME: shouldn't be a FrameSvgItem

@@ -25,7 +25,6 @@ import QtQuick.Controls 2.0 as Controls
 
 import org.kde.kirigami 2.4 as Kirigami
 
-import org.kde.active.settings 2.0 as ActiveSettings
 import org.kde.kaccounts 1.0
 import org.kde.kcm 1.2
 

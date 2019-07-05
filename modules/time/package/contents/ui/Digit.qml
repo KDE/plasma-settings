@@ -18,7 +18,6 @@
  */
 
 import QtQuick 2.7
-// import org.kde.active.settings.time 2.0
 
 
 Item {
