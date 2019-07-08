@@ -57,7 +57,6 @@ if (KAccounts_FOUND AND AccountsQt5_FOUND AND SignOnQt5_FOUND)
 endif()
 
 add_subdirectory(src)
-add_subdirectory(import)
 add_subdirectory(modules)
 
 install(DIRECTORY package/ DESTINATION ${KDE_INSTALL_DATAROOTDIR}/kpackage/genericqml/org.kde.plasma.settings)
