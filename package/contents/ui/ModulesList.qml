@@ -104,6 +104,8 @@ Kirigami.ScrollablePage {
             rightPadding: 0
             bottomPadding: 0
             flickable: internalPage.flickable
+            actions.main: internalPage.actions.main
+            actions.contextualActions: internalPage.contextualActions
 
             onInternalPageChanged: {
                 internalPage.parent = contentItem;

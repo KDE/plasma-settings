@@ -33,6 +33,10 @@ Kirigami.ApplicationWindow {
     pageStack.initialPage: modulesList
     pageStack.globalToolBar.style: Kirigami.ApplicationHeaderStyle.Breadcrumb
 
+    contextDrawer: Kirigami.ContextDrawer {
+        id: contextDrawer
+    }
+
     Connections {
         target: settingsApp
         onActivateRequested: rootItem.requestActivate();
