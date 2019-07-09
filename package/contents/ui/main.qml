@@ -31,6 +31,7 @@ Kirigami.ApplicationWindow {
     property alias currentModule: moduleItem.module
 
     pageStack.initialPage: modulesList
+    pageStack.globalToolBar.style: Kirigami.ApplicationHeaderStyle.Breadcrumb
 
     Connections {
         target: settingsApp
