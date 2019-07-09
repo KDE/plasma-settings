@@ -21,7 +21,7 @@
 import QtQuick 2.2
 import QtQuick.Layouts 1.2
 import QtQuick.Controls 2.2 as Controls
-import org.kde.kirigami 2.2 as Kirigami
+import org.kde.kirigami 2.8 as Kirigami
 import org.kde.active.settings 2.0 as ActiveSettings
 
 import org.kde.plasma.settings 0.1
@@ -84,11 +84,52 @@ Kirigami.ScrollablePage {
 
             onClicked: {
                 print("Clicked ndex: " + index + " current: " + listView.currentIndex + " " + name + " curr: " + rootItem.currentModule);
-                pageStack.push(mainUi, {})
+                // Only the first main page has a kcm property
+                var container = kcmContainer.createObject(pageStack, {"kcm": model.kcm, "internalPage": model.kcm.mainUi});
+                print(container.internalPage)
+                pageStack.push(container);
             }
         }
     }
 
+    // This is pretty much a placeholder of what will be the sandboxing mechanism: this element will be a wayland compositor that will contain off-process kcm pages
+    Component {
+        id: kcmContainer
+        Kirigami.Page {
+            id: container
+            title: internalPage.title
+            property QtObject kcm
+            property Item internalPage
+            topPadding: 0
+            leftPadding: 0
+            rightPadding: 0
+            bottomPadding: 0
+            flickable: internalPage.flickable
+
+            onInternalPageChanged: {
+                internalPage.parent = contentItem;
+                internalPage.anchors.fill = contentItem;
+            }
+
+            data: [
+                Connections {
+                    target: kcm
+                    onPagePushed: {
+                        pageStack.push(kcmContainer.createObject(pageStack, {"internalPage": page}));
+                    }
+                    onPageRemoved: pageStack.pop();
+                },
+                Connections {
+                    target: pageStack
+                    onPageRemoved: {
+                        if (page == container) {
+                            page.destroy();
+                        }
+                    }
+                }
+            ]
+        }
+    }
     ListView {
         id: listView
         model: ModulesModel{}

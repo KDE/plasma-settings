@@ -9,7 +9,7 @@
 
 struct Data {
     KPluginMetaData plugin;
-    KQuickAddons::ConfigModule* kcm = nullptr;
+    QPointer<KQuickAddons::ConfigModule> kcm;
 };
 
 class ModulesModel : public QAbstractListModel
@@ -22,7 +22,7 @@ public:
         NameRole = Qt::DisplayRole,
         IconNameRole = Qt::DecorationRole,
         DescriptionRole = Qt::UserRole + 1,
-        MainUiRole
+        KcmRole
     };
 
 public:

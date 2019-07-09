@@ -34,7 +34,9 @@ QVariant ModulesModel::data(const QModelIndex& index, int role) const
         return QVariant();
     }
 
-    Data d = m_plugins[index.row()];
+    // NOTE: as the kcm is lazy loading, this needs to not be const
+    // a cleaner alternative, would be a ConfigModule *loadKcm(pluginId) method, which also wouldn't risk erroneous kcm instantiation when it shouldn't
+    Data &d = const_cast<ModulesModel *>(this)->m_plugins[index.row()];
 
     switch (role) {
         case NameRole:
@@ -43,13 +45,13 @@ QVariant ModulesModel::data(const QModelIndex& index, int role) const
             return d.plugin.description();
         case IconNameRole:
             return d.plugin.iconName();
-        case MainUiRole: {
+        case KcmRole: {
 
             if(!d.kcm) {
                 d.kcm = instantiateKcm(d.plugin.pluginId());
             }
 
-            return QVariant::fromValue(d.kcm->mainUi());
+            return QVariant::fromValue(d.kcm.data());
         }
         default:
              return QVariant();
@@ -67,7 +69,7 @@ QHash<int, QByteArray> ModulesModel::roleNames() const
     names.insert(NameRole, "name");
     names.insert(DescriptionRole, "description");
     names.insert(IconNameRole, "iconName");
-    names.insert(MainUiRole, "mainUi");
+    names.insert(KcmRole, "kcm");
     return names;
 }
 
