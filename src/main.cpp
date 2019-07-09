@@ -24,6 +24,7 @@
 
 //own
 #include "settingsapp.h"
+#include "modulesmodel.h"
 
 // Qt
 #include <QApplication>
@@ -36,7 +37,6 @@
 
 // Frameworks
 #include <KAboutData>
-#include <KConfigGroup>
 #include <KLocalizedString>
 #include <KPackage/PackageLoader>
 #include <KPluginMetaData>
@@ -152,6 +152,8 @@ int main(int argc, char **argv)
     package.setPath(ui);
 
     auto *settingsApp = new SettingsApp(parser);
+
+    qmlRegisterType<ModulesModel>("org.kde.plasma.settings", 0, 1, "ModulesModel");
 
     QQmlApplicationEngine engine;
     engine.rootContext()->setContextProperty("settingsApp", settingsApp);

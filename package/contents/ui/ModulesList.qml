@@ -24,6 +24,8 @@ import QtQuick.Controls 2.2 as Controls
 import org.kde.kirigami 2.2 as Kirigami
 import org.kde.active.settings 2.0 as ActiveSettings
 
+import org.kde.plasma.settings 0.1
+
 Kirigami.ScrollablePage {
     id: settingsRoot
 
@@ -81,52 +83,15 @@ Kirigami.ScrollablePage {
             }
 
             onClicked: {
-                print("Clicked index: " + index + " current: " + listView.currentIndex + " " + module + " curr: " + rootItem.currentModule);
-                rootItem.currentModule = module;
-                listView.currentIndex = index;
+                print("Clicked ndex: " + index + " current: " + listView.currentIndex + " " + name + " curr: " + rootItem.currentModule);
+                pageStack.push(mainUi, {})
             }
         }
     }
 
-    ActiveSettings.SettingsModulesModel {
-        id: settingsModulesModel
-        onSettingsModulesChanged: currentTimer.restart()
-    }
-
-    //FIXME: this timer shouldn't be needed, problem in kirigami?
-    Timer {
-        id: currentTimer
-        onTriggered: {
-            // when the modules are loaded, we need to ensure that
-            // the list has the correct item loaded
-            if (startModule == "") {
-                listView.currentIndex = -1;
-                return;
-            }
-            var module;
-            if (typeof(startModule) != "undefined") {
-                module = startModule
-            }
-
-            if (module) {
-                var index = 0;
-                var numModules = settingsModulesModel.settingsModules.length
-                var i = 0
-                while (i < numModules) {
-                    if (settingsModulesModel.settingsModules[i].module == module) {
-                        listView.currentIndex = i;
-                        break
-                    }
-                    ++i
-                }
-            }
-        }
-    }
     ListView {
         id: listView
-        currentIndex: -1
-        model: settingsModulesModel.settingsModules
+        model: ModulesModel{}
         delegate: settingsModuleDelegate
     }
-
 }

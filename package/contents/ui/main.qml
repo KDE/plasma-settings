@@ -23,6 +23,8 @@ import QtQuick 2.6
 import QtQuick.Controls 2.2 as Controls
 import org.kde.kirigami 2.5 as Kirigami
 
+import org.kde.plasma.settings 0.1
+
 Kirigami.ApplicationWindow {
     id: rootItem
 
