@@ -22,5 +22,3 @@ target_link_libraries(settingsplugin
 
 install(TARGETS settingsplugin DESTINATION ${QML_INSTALL_DIR}/org/kde/active/settings)
 install(FILES qmldir DESTINATION ${QML_INSTALL_DIR}/org/kde/active/settings)
-install(FILES SettingsItem.qml DESTINATION ${QML_INSTALL_DIR}/org/kde/active/settings)
-
