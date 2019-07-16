@@ -17,6 +17,7 @@ target_link_libraries(plasma-settings
     KF5::QuickAddons
     KF5::I18n
     KF5::WindowSystem
+    KF5::Declarative
 )
 
 install( TARGETS plasma-settings ${INSTALL_TARGETS_DEFAULT_ARGS} )

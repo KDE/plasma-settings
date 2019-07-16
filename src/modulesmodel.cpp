@@ -7,21 +7,31 @@
 #include <KPluginLoader>
 #include <KPluginFactory>
 
+#include <KDeclarative/KDeclarative>
+
 #include <QDebug>
 
 ModulesModel::ModulesModel(QObject* parent)
     : QAbstractListModel(parent)
     , m_plugins()
 {
+    qDebug() << "Current platform is " << KDeclarative::KDeclarative::runtimePlatform();
     for (KPluginMetaData pluginMetaData : KPackage::PackageLoader::self()->listPackages(QString(), "kpackage/kcms/")) {
         KPackage::Package package = KPackage::PackageLoader::self()->loadPackage(QStringLiteral("KPackage/GenericQML"));
         package.setDefaultPackageRoot("kpackage/kcms");
         package.setPath(pluginMetaData.pluginId());
-
-        Data d;
-        d.plugin = pluginMetaData;
-
-        m_plugins.append(d);
+        bool isCurrentPlatform = false;
+        for (QString platform : KDeclarative::KDeclarative::runtimePlatform()) {
+            if (pluginMetaData.formFactors().contains(platform)) {
+                qDebug() << "Platform for " << pluginMetaData.name() << " is " << pluginMetaData.formFactors();
+                isCurrentPlatform = true;
+            }
+        }
+        if (isCurrentPlatform) {
+            Data d;
+            d.plugin = pluginMetaData;
+            m_plugins.append(d);
+        }
     }
 }
 
