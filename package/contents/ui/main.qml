@@ -28,7 +28,7 @@ import org.kde.plasma.settings 0.1
 Kirigami.ApplicationWindow {
     id: rootItem
 
-    property alias currentModule: moduleItem.module
+    property Item currentModule
 
     pageStack.initialPage: modulesList
     pageStack.globalToolBar.style: Kirigami.ApplicationHeaderStyle.Breadcrumb
@@ -59,10 +59,5 @@ Kirigami.ApplicationWindow {
     }
     ModulesList {
         id: modulesList
-    }
-
-    ModuleItem {
-        id: moduleItem
-        visible: false
     }
 }

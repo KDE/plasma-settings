@@ -22,7 +22,6 @@ import QtQuick 2.2
 import QtQuick.Layouts 1.2
 import QtQuick.Controls 2.2 as Controls
 import org.kde.kirigami 2.8 as Kirigami
-import org.kde.active.settings 2.0 as ActiveSettings
 
 import org.kde.plasma.settings 0.1
 
