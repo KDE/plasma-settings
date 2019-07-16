@@ -1,6 +1,3 @@
-project(kcm_mobile_theme)
-
-
 set(themesettings_SRCS
     themesettings.cpp
     themelistmodel.cpp

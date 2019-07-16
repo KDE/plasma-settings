@@ -1,10 +1,3 @@
-project(kcm_mobile_time)
-
-#include_directories(../../../../components/settings)
-
-#configure_file(config.h.cmake ${CMAKE_CURRENT_BINARY_DIR}/config.h )
-
-
 set(timesettings_SRCS
     timesettings.cpp
     timezone.cpp
