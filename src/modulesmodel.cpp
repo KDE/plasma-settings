@@ -21,10 +21,14 @@ ModulesModel::ModulesModel(QObject* parent)
         package.setDefaultPackageRoot("kpackage/kcms");
         package.setPath(pluginMetaData.pluginId());
         bool isCurrentPlatform = false;
-        for (QString platform : KDeclarative::KDeclarative::runtimePlatform()) {
-            if (pluginMetaData.formFactors().contains(platform)) {
-                qDebug() << "Platform for " << pluginMetaData.name() << " is " << pluginMetaData.formFactors();
-                isCurrentPlatform = true;
+        if (KDeclarative::KDeclarative::runtimePlatform().isEmpty()) {
+            isCurrentPlatform = true;
+        } else {
+            for (QString platform : KDeclarative::KDeclarative::runtimePlatform()) {
+                if (pluginMetaData.formFactors().contains(platform)) {
+                    qDebug() << "Platform for " << pluginMetaData.name() << " is " << pluginMetaData.formFactors();
+                    isCurrentPlatform = true;
+                }
             }
         }
         if (isCurrentPlatform) {
