@@ -23,7 +23,6 @@ import QtQuick.Layouts 1.3
 import QtQuick.Controls 2.3 as Controls
 
 import org.kde.kirigami 2.4 as Kirigami
-import org.kde.active.settings 2.0
 import org.kde.kcm 1.2
 
 SimpleKCM {

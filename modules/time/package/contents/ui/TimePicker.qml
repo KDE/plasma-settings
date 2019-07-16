@@ -20,7 +20,6 @@
 import QtQuick 2.1
 import org.kde.plasma.core 2.0 as PlasmaCore
 import org.kde.plasma.components 2.0 as PlasmaComponents
-import org.kde.active.settings 2.0
 
 
 //FIXME: shouldn't be a FrameSvgItem
