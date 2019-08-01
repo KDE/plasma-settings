@@ -29,6 +29,19 @@ SimpleKCM {
     id: timeModule
     objectName: "timeModule"
 
+    Component {
+        id: listDelegateComponent
+
+        Kirigami.BasicListItem {
+            text: display
+
+            onClicked: {
+                kcm.saveTimeZone(display)
+                close()
+            }
+        }
+    }
+
     ColumnLayout {
         width: parent.width
         spacing: 0
@@ -58,7 +71,7 @@ SimpleKCM {
             Controls.ToolButton {
                 id: timeZoneButton
                 text: kcm.timeZone
-                onClicked: timeZonePickerDialog.open()
+                onClicked: timeZonePickerSheet.open()
             }
         }
 
@@ -91,7 +104,7 @@ SimpleKCM {
                     var date = new Date(kcm.currentTime);
                     return date.toTimeString()
                 }
-                onClicked: timePickerDialog.open()
+                onClicked: timePickerSheet.open()
             }
         }
 
@@ -103,50 +116,46 @@ SimpleKCM {
                     var date = new Date(kcm.currentDate);
                     return date.toDateString()
                 }
-                onClicked: datePickerDialog.open()
+                onClicked: datePickerSheet.open()
             }
         }
     }
 
-    Controls.Dialog {
-        id: timeZonePickerDialog
-        title: i18n("Pick Timezone... (%1)", kcm.timeZone)
-        modal: true
-        standardButtons: Controls.Dialog.Ok
-        x: (parent.width - width) / 2
-        y: (parent.height - height) / 2
-        onAccepted: close()
-        width: Kirigami.Units.gridUnit * 20
-        height: Kirigami.Units.gridUnit * 25
+    Kirigami.OverlaySheet {
+        id: timeZonePickerSheet
+        header: Kirigami.Heading { text: i18nc("@title:window", "Pick Timezone") }
+
+        footer: RowLayout {
+            Controls.Button {
+                Layout.alignment: Qt.AlignHCenter
+
+                text: i18nc("@action:button", "Close")
+
+                onClicked: timePickerSheet.close()
+            }
+        }
         ListView {
             clip: true
             anchors.fill: parent
-            delegate: Kirigami.BasicListItem {
-                text: display
-
-                onClicked: {
-                    kcm.saveTimeZone(display)
-                    timeZonePickerDialog.accept()
-                }
-            }
+            implicitWidth: 18 * Kirigami.Units.gridUnit
             model: kcm.timeZonesModel
+            delegate: Kirigami.DelegateRecycler {
+                width: parent.width
+
+                sourceComponent: listDelegateComponent
+            }
         }
     }
 
-    Controls.Dialog {
-        id: timePickerDialog
-        title: i18n("Pick Time")
-        modal: true
-        standardButtons: Controls.Dialog.Ok
-        x: (parent.width - width) / 2
-        y: (parent.height - height) / 2
-        onAccepted: close()
-        width: Kirigami.Units.gridUnit * 20
-        height: Kirigami.Units.gridUnit * 15
-        contentItem: TimePicker {
+    Kirigami.OverlaySheet {
+        id: timePickerSheet
+        header:  Kirigami.Heading { text: i18n("Pick Time") }
+        TimePicker {
             id: timePicker
             enabled: !ntpCheckBox.checked
             twentyFour: twentyFourSwitch.checked
+
+            implicitWidth: width > Kirigami.Units.gridUnit * 15 ? width : Kirigami.Units.gridUnit * 15
 
             Component.onCompleted: {
                 var date = new Date(kcm.currentTime);
@@ -172,21 +181,25 @@ SimpleKCM {
                 kcm.saveTime()
             }
         }
+        footer: RowLayout {
+            Controls.Button {
+                Layout.alignment: Qt.AlignRight
+
+                text: i18nc("@action:button", "Close")
+
+                onClicked: timePickerSheet.close()
+            }
+        }
     }
 
-    Controls.Dialog {
-        id: datePickerDialog
-        title: i18n("Pick Date")
-        modal: true
-        standardButtons: Controls.Dialog.Ok
-        x: (parent.width - width) / 2
-        y: (parent.height - height) / 2
-        onAccepted: close()
-        width: Kirigami.Units.gridUnit * 20
-        height: Kirigami.Units.gridUnit * 15
-        contentItem: DatePicker {
+    Kirigami.OverlaySheet {
+        id: datePickerSheet
+        header: Kirigami.Heading { text: i18n("Pick Date") }
+        DatePicker {
             id: datePicker
             enabled: !ntpCheckBox.checked
+
+            implicitWidth: width > Kirigami.Units.gridUnit * 15 ? width : Kirigami.Units.gridUnit * 15
 
             Component.onCompleted: {
                 var date = new Date(kcm.currentDate)
@@ -211,6 +224,15 @@ SimpleKCM {
             onUserConfiguringChanged: {
                 kcm.currentDate = isoDate
                 kcm.saveTime()
+            }
+        }
+        footer: RowLayout {
+            Controls.Button {
+                Layout.alignment: Qt.AlignRight
+
+                text: i18nc("@action:button", "Close")
+
+                onClicked: timePickerSheet.close()
             }
         }
     }
