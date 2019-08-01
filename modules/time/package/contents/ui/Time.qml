@@ -97,7 +97,7 @@ SimpleKCM {
 
         Kirigami.BasicListItem {
             label: i18n("Date")
-            icon: "office-calendar"
+            icon: "view-calendar"
             Controls.ToolButton {
                 text: {
                     var date = new Date(kcm.currentDate);
