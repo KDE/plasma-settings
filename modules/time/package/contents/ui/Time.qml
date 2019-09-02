@@ -22,7 +22,7 @@ import QtQuick 2.7
 import QtQuick.Layouts 1.3
 import QtQuick.Controls 2.3 as Controls
 
-import org.kde.kirigami 2.4 as Kirigami
+import org.kde.kirigami 2.10 as Kirigami
 import org.kde.kcm 1.2
 
 SimpleKCM {
@@ -47,10 +47,8 @@ SimpleKCM {
         spacing: 0
         id: formLayout
 
-        Kirigami.Heading {
-            leftPadding: Kirigami.Units.smallSpacing
-            text: i18n("Time Display")
-            level: 3
+        Kirigami.ListSectionHeader {
+            label: i18n("Time Display")
         }
 
         Kirigami.BasicListItem {
@@ -75,10 +73,8 @@ SimpleKCM {
             }
         }
 
-        Kirigami.Heading {
-            leftPadding: Kirigami.Units.smallSpacing
-            text: i18n("Set Time and Date")
-            level: 3
+        Kirigami.ListSectionHeader {
+            label: i18n("Set Time and Date")
         }
 
         Kirigami.BasicListItem {
