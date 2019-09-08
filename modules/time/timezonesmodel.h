@@ -31,6 +31,7 @@ public:
     TimeZonesModel(QObject *parent=nullptr);
 
     Q_INVOKABLE QVariantHash get(int i) const;
+    QHash<int, QByteArray> roleNames() const override;
     int count() const {return rowCount();}
 
 Q_SIGNALS:

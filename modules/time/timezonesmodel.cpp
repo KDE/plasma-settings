@@ -23,15 +23,17 @@
 TimeZonesModel::TimeZonesModel(QObject *parent)
     : QStandardItemModel(parent)
 {
+    connect(this, &QAbstractItemModel::modelReset, this, &TimeZonesModel::countChanged);
+    connect(this, &QAbstractItemModel::rowsInserted, this, &TimeZonesModel::countChanged);
+    connect(this, &QAbstractItemModel::rowsRemoved, this, &TimeZonesModel::countChanged);
+}
+
+QHash<int, QByteArray> TimeZonesModel::roleNames() const {
     QHash<int, QByteArray> roleNames;
     roleNames[Qt::DisplayRole] = "display";
     roleNames[Qt::UserRole+1] = "continent";
-    setRoleNames(roleNames);
-    connect(this, SIGNAL(modelReset()), this, SIGNAL(countChanged()));
-    connect(this, SIGNAL(rowsInserted(QModelIndex,int,int)), this, SIGNAL(countChanged()));
-    connect(this, SIGNAL(rowsRemoved(QModelIndex,int,int)), this, SIGNAL(countChanged()));
+    return roleNames;
 }
-
 
 QVariantHash TimeZonesModel::get(int i) const
 {
