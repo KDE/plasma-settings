@@ -1,7 +1,6 @@
 /***************************************************************************
  *                                                                         *
- *   Copyright 2017 Marco Martin <mart@kde.org>                            *
- *   Copyright 2011-2014 Sebastian Kügler <sebas@kde.org>                  *
+ *   Copyright 2019 Nicolas Fella <nicolas.fella@gmx.de>                   *
  *                                                                         *
  *   This program is free software; you can redistribute it and/or modify  *
  *   it under the terms of the GNU General Public License as published by  *
@@ -19,41 +18,27 @@
  *   51 Franklin Street, Fifth Floor, Boston, MA  02110-1301  USA .        *
  ***************************************************************************/
 
-import QtQuick 2.6
-import QtQuick.Controls 2.2 as Controls
-import org.kde.kirigami 2.5 as Kirigami
+#pragma once
 
-import org.kde.plasma.settings 0.1
+#include <QObject>
+#include <KQuickAddons/ConfigModule>
 
-Kirigami.ApplicationWindow {
-    id: rootItem
+class Module : public QObject
+{
+    Q_OBJECT
+    Q_PROPERTY(KQuickAddons::ConfigModule* kcm READ kcm NOTIFY kcmChanged)
+    Q_PROPERTY(QString name READ name WRITE setName NOTIFY nameChanged)
 
-    pageStack.initialPage: modulesList
-    pageStack.globalToolBar.style: Kirigami.ApplicationHeaderStyle.Breadcrumb
+public:
+    KQuickAddons::ConfigModule *kcm() const;
+    QString name() const;
+    void setName(const QString &name);
 
-    contextDrawer: Kirigami.ContextDrawer {
-        id: contextDrawer
-    }
+Q_SIGNALS:
+    void kcmChanged();
+    void nameChanged();
 
-    Component.onCompleted: {
-        if (startModule.length > 0) {
-            module.name = startModule
-            var container = kcmContainer.createObject(pageStack, {"kcm": module.kcm, "internalPage": module.kcm.mainUi});
-            pageStack.push(container);
-        }
-    }
-
-    Module {
-        id: module
-    }
-
-    ModulesList {
-        id: modulesList
-    }
-
-    Component {
-        id: kcmContainer
-
-        KCMContainer {}
-    }
-}
+private:
+    KQuickAddons::ConfigModule *m_kcm = nullptr;
+    QString m_name;
+};

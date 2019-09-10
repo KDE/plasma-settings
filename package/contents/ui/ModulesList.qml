@@ -93,43 +93,10 @@ Kirigami.ScrollablePage {
     // This is pretty much a placeholder of what will be the sandboxing mechanism: this element will be a wayland compositor that will contain off-process kcm pages
     Component {
         id: kcmContainer
-        Kirigami.Page {
-            id: container
-            title: internalPage.title
-            property QtObject kcm
-            property Item internalPage
-            topPadding: 0
-            leftPadding: 0
-            rightPadding: 0
-            bottomPadding: 0
-            flickable: internalPage.flickable
-            actions.main: internalPage.actions.main
-            actions.contextualActions: internalPage.contextualActions
 
-            onInternalPageChanged: {
-                internalPage.parent = contentItem;
-                internalPage.anchors.fill = contentItem;
-            }
-
-            data: [
-                Connections {
-                    target: kcm
-                    onPagePushed: {
-                        pageStack.push(kcmContainer.createObject(pageStack, {"internalPage": page}));
-                    }
-                    onPageRemoved: pageStack.pop();
-                },
-                Connections {
-                    target: pageStack
-                    onPageRemoved: {
-                        if (page == container) {
-                            page.destroy();
-                        }
-                    }
-                }
-            ]
-        }
+        KCMContainer {}
     }
+
     ListView {
         id: listView
         model: ModulesModel{}

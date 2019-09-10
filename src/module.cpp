@@ -1,7 +1,6 @@
 /***************************************************************************
  *                                                                         *
- *   Copyright 2017 Marco Martin <mart@kde.org>                            *
- *   Copyright 2011-2014 Sebastian Kügler <sebas@kde.org>                  *
+ *   Copyright 2019 Nicolas Fella <nicolas.fella@gmx.de>                   *
  *                                                                         *
  *   This program is free software; you can redistribute it and/or modify  *
  *   it under the terms of the GNU General Public License as published by  *
@@ -19,41 +18,44 @@
  *   51 Franklin Street, Fifth Floor, Boston, MA  02110-1301  USA .        *
  ***************************************************************************/
 
-import QtQuick 2.6
-import QtQuick.Controls 2.2 as Controls
-import org.kde.kirigami 2.5 as Kirigami
+#include "module.h"
 
-import org.kde.plasma.settings 0.1
+#include <KPluginLoader>
+#include <KPluginFactory>
 
-Kirigami.ApplicationWindow {
-    id: rootItem
+KQuickAddons::ConfigModule *Module::kcm() const
+{
+    return m_kcm;
+}
 
-    pageStack.initialPage: modulesList
-    pageStack.globalToolBar.style: Kirigami.ApplicationHeaderStyle.Breadcrumb
+QString Module::name() const
+{
+    return m_name;
+}
 
-    contextDrawer: Kirigami.ContextDrawer {
-        id: contextDrawer
+void Module::setName(const QString& name)
+{
+    if (m_name == name) {
+        return;
     }
 
-    Component.onCompleted: {
-        if (startModule.length > 0) {
-            module.name = startModule
-            var container = kcmContainer.createObject(pageStack, {"kcm": module.kcm, "internalPage": module.kcm.mainUi});
-            pageStack.push(container);
+    m_name = name;
+    Q_EMIT nameChanged();
+
+    const QString pluginPath = KPluginLoader::findPlugin(QLatin1String("kcms/") + name);
+
+    KPluginLoader loader(pluginPath);
+    KPluginFactory* factory = loader.factory();
+
+    if (!factory) {
+        qWarning() << "Error loading KCM plugin:" << loader.errorString();
+    } else {
+        m_kcm = factory->create<KQuickAddons::ConfigModule >();
+        if (!m_kcm) {
+            qWarning() << "Error creating object from plugin" << loader.fileName();
         }
     }
 
-    Module {
-        id: module
-    }
-
-    ModulesList {
-        id: modulesList
-    }
-
-    Component {
-        id: kcmContainer
-
-        KCMContainer {}
-    }
+    Q_EMIT kcmChanged();
 }
+

@@ -25,6 +25,7 @@
 //own
 #include "settingsapp.h"
 #include "modulesmodel.h"
+#include "module.h"
 
 // Qt
 #include <QApplication>
@@ -154,6 +155,7 @@ int main(int argc, char **argv)
     auto *settingsApp = new SettingsApp(parser);
 
     qmlRegisterType<ModulesModel>("org.kde.plasma.settings", 0, 1, "ModulesModel");
+    qmlRegisterType<Module>("org.kde.plasma.settings", 0, 1, "Module");
 
     QQmlApplicationEngine engine;
     engine.rootContext()->setContextProperty("settingsApp", settingsApp);
