@@ -23,9 +23,6 @@
 TimeZonesModel::TimeZonesModel(QObject *parent)
     : QStandardItemModel(parent)
 {
-    connect(this, &QAbstractItemModel::modelReset, this, &TimeZonesModel::countChanged);
-    connect(this, &QAbstractItemModel::rowsInserted, this, &TimeZonesModel::countChanged);
-    connect(this, &QAbstractItemModel::rowsRemoved, this, &TimeZonesModel::countChanged);
 }
 
 QHash<int, QByteArray> TimeZonesModel::roleNames() const {
