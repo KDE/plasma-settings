@@ -47,7 +47,7 @@ ScrollViewKCM {
             width: ListView.view.width
 
             contentItem: Controls.Label {
-                text: model.displayName + " (" + providerName + ")"
+                text: i18n("%1 (%2)", model.displayName, providerName)
 
                 OA.Account {
                     id: account
