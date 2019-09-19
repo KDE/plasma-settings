@@ -71,41 +71,7 @@ ScrollViewKCM {
             Layout.alignment: Qt.AlignRight
             text: i18n("Add new Account")
             icon.name: "contact-new"
-            onClicked: {
-                availableAccountsSheet.open()
-            }
-        }
-    }
-
-    Component {
-        id: jobComponent
-        CreateAccount {
-            onFinished: {
-                availableAccountsSheet.close()
-            }
-        }
-    }
-
-    Kirigami.OverlaySheet {
-        id: availableAccountsSheet
-        parent: kaccountsRoot.parent
-
-        ListView {
-            Layout.fillWidth: true
-            Layout.fillHeight: true
-
-            model: OA.ProviderModel {}
-
-            delegate: Kirigami.BasicListItem {
-                icon: model.iconName
-                label: model.displayName
-                Layout.fillWidth: true
-
-                onClicked: {
-                    var job = jobComponent.createObject(kaccountsRoot, { "providerName": providerId })
-                    job.start()
-                }
-            }
+            onClicked: kcm.push("AvailableAccounts.qml")
         }
     }
 }
