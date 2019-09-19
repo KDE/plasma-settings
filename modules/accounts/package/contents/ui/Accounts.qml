@@ -62,10 +62,7 @@ ScrollViewKCM {
                     }
                 }
             ]
-            onClicked: {
-                availableServicesSheet.open()
-                servicesModel.accountId = model.accountId
-            }
+            onClicked: kcm.push("AvailableServices.qml", {accountId: model.accountId})
         }
     }
 
@@ -107,39 +104,6 @@ ScrollViewKCM {
                 onClicked: {
                     var job = jobComponent.createObject(kaccountsRoot, { "providerName": providerId })
                     job.start()
-                }
-            }
-        }
-    }
-
-    OA.AccountServiceModel {
-        id: servicesModel
-    }
-
-    Kirigami.OverlaySheet {
-        id: availableServicesSheet
-        parent: kaccountsRoot.parent
-
-        ColumnLayout {
-            Kirigami.Heading {
-                Layout.fillWidth: true
-                text: i18n("Available Services")
-            }
-
-            ColumnLayout {
-                Layout.fillHeight: true
-                Layout.fillWidth: true
-                spacing: Kirigami.Units.smallSpacing
-
-                Repeater {
-                    Layout.fillWidth: true
-                    model: servicesModel
-
-                    Controls.CheckDelegate {
-                        Layout.fillWidth: true
-                        text: model.serviceName
-                        checked: model.enabled
-                    }
                 }
             }
         }
