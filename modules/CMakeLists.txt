@@ -8,7 +8,3 @@ endif()
 # Power
 add_subdirectory(powermanagement)
 
-# Accounts
-if (KAccounts_FOUND AND AccountsQt5_FOUND AND SignOnQt5_FOUND)
-    add_subdirectory(accounts)
-endif()
