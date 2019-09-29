@@ -34,7 +34,7 @@ public:
     ~SettingsApp() override;
 
 Q_SIGNALS:
-    void moduleRequested(const QString &module);
+    void moduleRequested(const QString &moduleName);
     void activateRequested();
 
 

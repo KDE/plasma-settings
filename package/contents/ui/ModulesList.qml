@@ -71,14 +71,6 @@ Kirigami.ScrollablePage {
                         elide: Text.ElideRight
                     }
                 }
-                Connections {
-                    target: settingsApp
-                    onModuleRequested: {
-                        if (rootItem.currentModule == model.module) {
-                            listView.currentIndex = index;
-                        }
-                    }
-                }
             }
 
             onClicked: {

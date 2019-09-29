@@ -43,6 +43,20 @@ Kirigami.ApplicationWindow {
         }
     }
 
+    Connections {
+        target: settingsApp
+        onModuleRequested: {
+            module.name = moduleName
+
+            while (pageStack.depth > 1) {
+                pageStack.pop()
+            }
+
+            var container = kcmContainer.createObject(pageStack, {"kcm": module.kcm, "internalPage": module.kcm.mainUi});
+            pageStack.push(container);
+        }
+    }
+
     Module {
         id: module
     }
