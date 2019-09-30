@@ -46,15 +46,7 @@ find_package(KF5 REQUIRED COMPONENTS
     KDELibs4Support
 )
 
-find_package(KAccounts)
-find_package(AccountsQt5 1.10 CONFIG)
-find_package(SignOnQt5 8.55 CONFIG)
-
 ecm_find_qmlmodule(org.kde.kcm 1.0)
-
-if (KAccounts_FOUND AND AccountsQt5_FOUND AND SignOnQt5_FOUND)
-    include_directories(${ACCOUNTSQT_INCLUDE_DIRS} ${SIGNONQT_INCLUDE_DIRS})
-endif()
 
 add_subdirectory(src)
 add_subdirectory(modules)
