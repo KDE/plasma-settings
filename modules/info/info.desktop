@@ -1,6 +1,6 @@
 [Desktop Entry]
-Name=Info
-Comment=About System
+Name=Information
+Comment=Software Versions
 Type=Service
 X-KDE-ServiceTypes=KCModule
 X-KDE-Library=kcm_mobile_info
