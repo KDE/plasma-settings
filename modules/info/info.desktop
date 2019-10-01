@@ -1,0 +1,11 @@
+[Desktop Entry]
+Name=Info
+Comment=About System
+Type=Service
+X-KDE-ServiceTypes=KCModule
+X-KDE-Library=kcm_mobile_info
+X-KDE-FormFactors=handset,tablet,mediacenter
+Categories=Qt;KDE;X-KDE-settings-system;
+X-KDE-Keywords=info, distro, system
+X-KDE-ParentApp=kcontrol
+Exec=plasma-settings -m kcm_mobile_info

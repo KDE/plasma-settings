@@ -1,0 +1,14 @@
+[Desktop Entry]
+Name=About System
+Comment=Software versions
+Encoding=UTF-8
+Type=Service
+Icon=documentinfo
+X-KDE-ServiceTypes=SettingsModule
+X-KDE-PluginInfo-Author=Jonah Brüchert
+X-KDE-PluginInfo-Email=jbb@kaidan.im
+X-KDE-PluginInfo-Name=kcm_mobile_info
+X-KDE-PluginInfo-Version=1.0
+X-KDE-PluginInfo-Website=http://plasma-mobile.org
+X-KDE-PluginInfo-License=GPL
+X-Plasma-MainScript=ui/main.qml

@@ -8,3 +8,5 @@ endif()
 # Power
 add_subdirectory(powermanagement)
 
+# Info
+add_subdirectory(info)
