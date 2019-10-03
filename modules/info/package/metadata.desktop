@@ -1,6 +1,22 @@
 [Desktop Entry]
 Name=Information
+Name[ca]=Informació
+Name[es]=Información
+Name[lt]=Informacija
+Name[nl]=Informatie
+Name[pt]=Informação
+Name[uk]=Інформація
+Name[x-test]=xxInformationxx
+Name[zh_TW]=資訊
 Comment=Software versions
+Comment[ca]=Versions de programari
+Comment[es]=Versiones de software
+Comment[lt]=Programinės įrangos versijos
+Comment[nl]=Softwareversies
+Comment[pt]=Versões do 'software'
+Comment[uk]=Версії програмного забезпечення
+Comment[x-test]=xxSoftware versionsxx
+Comment[zh_TW]=軟體版本
 Encoding=UTF-8
 Type=Service
 Icon=documentinfo
