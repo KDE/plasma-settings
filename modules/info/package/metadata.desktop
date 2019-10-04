@@ -32,4 +32,5 @@ X-KDE-PluginInfo-Name=kcm_mobile_info
 X-KDE-PluginInfo-Version=1.0
 X-KDE-PluginInfo-Website=http://plasma-mobile.org
 X-KDE-PluginInfo-License=GPL
+X-KDE-FormFactors=handset,tablet,mediacenter
 X-Plasma-MainScript=ui/main.qml
