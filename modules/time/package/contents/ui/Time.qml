@@ -236,7 +236,7 @@ SimpleKCM {
 
                 text: i18nc("@action:button", "Close")
 
-                onClicked: timePickerSheet.close()
+                onClicked: datePickerSheet.close()
             }
         }
     }
