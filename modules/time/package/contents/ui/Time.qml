@@ -135,7 +135,7 @@ SimpleKCM {
 
                 text: i18nc("@action:button", "Close")
 
-                onClicked: timePickerSheet.close()
+                onClicked: timeZonePickerSheet.close()
             }
         }
         ListView {
