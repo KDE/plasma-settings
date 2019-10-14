@@ -36,7 +36,7 @@ K_PLUGIN_FACTORY_WITH_JSON(ThemeSettingsFactory, "themesettings.json", registerP
 ThemeSettings::ThemeSettings(QObject* parent, const QVariantList& args)
     : KQuickAddons::ConfigModule(parent, args)
 {
-    KAboutData* about = new KAboutData("kcm_mobile_theme", i18n("Configure Appearance"),
+    KAboutData* about = new KAboutData("kcm_mobile_theme", i18n("Appearance"),
                                        "1.0", QString(), KAboutLicense::LGPL);
     about->addAuthor(i18n("Sebastian Kügler"), QString(), "sebas@kde.org");
     setAboutData(about);
