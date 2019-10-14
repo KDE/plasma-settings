@@ -30,7 +30,6 @@ import org.kde.kcm 1.2
 
 SimpleKCM {
     id: powermanagementModule
-    objectName: "powermanagementModule"
     leftPadding: Kirigami.Units.gridUnit
     rightPadding: Kirigami.Units.gridUnit
 

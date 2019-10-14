@@ -27,7 +27,6 @@ import org.kde.kcm 1.2
 
 SimpleKCM {
     id: timeModule
-    objectName: "timeModule"
 
     Component {
         id: listDelegateComponent
