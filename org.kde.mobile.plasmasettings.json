@@ -1,7 +1,7 @@
 {
     "id": "org.kde.mobile.plasmasettings",
     "runtime": "org.kde.Platform",
-    "runtime-version": "5.12",
+    "runtime-version": "5.13",
     "sdk": "org.kde.Sdk",
     "command": "plasma-settings",
     "tags": ["nightly"],
@@ -23,7 +23,7 @@
             "config-opts": [ "-DENABLE_TESTING=OFF" ],
             "buildsystem": "cmake-ninja",
             "builddir": true,
-            "sources": [ { "type": "git", "url": "git://anongit.kde.org/kdelibs4support.git", "branch": "v5.61.0" } ]
+            "sources": [ { "type": "git", "url": "git://anongit.kde.org/kdelibs4support.git", "branch": "v5.62.0" } ]
         },
         {
             "name": "plasma-settings",
