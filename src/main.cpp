@@ -69,6 +69,7 @@ int main(int argc, char **argv)
     const static auto _l = QStringLiteral("list");
     const static auto _m = QStringLiteral("module");
     const static auto _f = QStringLiteral("fullscreen");
+    const static auto _s = QStringLiteral("singleModule");
     const static auto _ui = QStringLiteral("layout");
     const static auto _ff = QStringLiteral("formfactor");
 
@@ -76,6 +77,8 @@ int main(int argc, char **argv)
                                i18n("List available settings modules"));
     QCommandLineOption _module = QCommandLineOption(QStringList() << QStringLiteral("m") << _m,
                                 i18n("Settings module to open"), i18n("modulename"));
+    QCommandLineOption _singleModule = QCommandLineOption(QStringList() << QStringLiteral("s") << _s,
+                                i18n("Only show a signle module, requires --module"));
     QCommandLineOption _fullscreen = QCommandLineOption(QStringList() << QStringLiteral("f") << _f,
                                 i18n("Start window fullscreen"));
     QCommandLineOption _layout = QCommandLineOption(QStringList() << _ui,
@@ -87,6 +90,7 @@ int main(int argc, char **argv)
     parser.addOption(_list);
     parser.addOption(_formfactor);
     parser.addOption(_module);
+    parser.addOption(_singleModule);
     parser.addOption(_fullscreen);
     parser.addOption(_layout);
     aboutData.setupCommandLine(&parser);
@@ -148,7 +152,13 @@ int main(int argc, char **argv)
 
     const QString module = parser.value(_m);
     QString ui = parser.isSet(_ui) ? parser.value(_ui) : "org.kde.plasma.settings";
+    const bool singleModule = parser.isSet(_s);
 
+    if (singleModule && module.isEmpty()) {
+        parser.showHelp();
+        return 0;
+    }
+    
     KPackage::Package package = KPackage::PackageLoader::self()->loadPackage("KPackage/GenericQML");
     package.setPath(ui);
 
@@ -160,6 +170,7 @@ int main(int argc, char **argv)
     QQmlApplicationEngine engine;
     engine.rootContext()->setContextProperty("settingsApp", settingsApp);
     engine.rootContext()->setContextProperty("startModule", module);
+    engine.rootContext()->setContextProperty("singleModule", singleModule);
     engine.load(package.filePath("mainscript"));
     
 

@@ -28,7 +28,7 @@ import org.kde.plasma.settings 0.1
 Kirigami.ApplicationWindow {
     id: rootItem
 
-    pageStack.initialPage: modulesList
+    pageStack.initialPage: singleModule ? null : modulesList
     pageStack.globalToolBar.style: Kirigami.ApplicationHeaderStyle.Breadcrumb
 
     contextDrawer: Kirigami.ContextDrawer {
