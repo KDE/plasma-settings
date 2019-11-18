@@ -18,7 +18,7 @@
  *   51 Franklin Street, Fifth Floor, Boston, MA  02110-1301  USA .        *
  ***************************************************************************/
 
-import QtQuick 2.2
+import QtQuick 2.12
 import QtQuick.Layouts 1.2
 import QtQuick.Controls 2.2 as Controls
 import org.kde.kirigami 2.8 as Kirigami
@@ -91,6 +91,9 @@ Kirigami.ScrollablePage {
 
     ListView {
         id: listView
+        focus: true
+        activeFocusOnTab: true
+        keyNavigationEnabled: true
         model: ModulesModel{}
         delegate: settingsModuleDelegate
     }
