@@ -78,7 +78,7 @@ int main(int argc, char **argv)
     QCommandLineOption _module = QCommandLineOption(QStringList() << QStringLiteral("m") << _m,
                                 i18n("Settings module to open"), i18n("modulename"));
     QCommandLineOption _singleModule = QCommandLineOption(QStringList() << QStringLiteral("s") << _s,
-                                i18n("Only show a signle module, requires --module"));
+                                i18n("Only show a single module, requires --module"));
     QCommandLineOption _fullscreen = QCommandLineOption(QStringList() << QStringLiteral("f") << _f,
                                 i18n("Start window fullscreen"));
     QCommandLineOption _layout = QCommandLineOption(QStringList() << _ui,
@@ -109,7 +109,7 @@ int main(int argc, char **argv)
             if (seen.contains(plugin.pluginId())) {
                 continue;
             }
-            // Filter out modules that are not explicitely suitable for the "handset" formfactor
+            // Filter out modules that are not explicitly suitable for the "handset" formfactor
             //const QStringList &formFactors = plugin.formFactors();
             if (!formfactor.isEmpty() && !plugin.formFactors().contains(formfactor) && formfactor != QStringLiteral("all")) {
                 continue;
