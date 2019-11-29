@@ -35,25 +35,27 @@ Kirigami.ApplicationWindow {
         id: contextDrawer
     }
 
+    function openModule(moduleName) {
+        module.name = moduleName
+        while (pageStack.depth > 1) {
+            pageStack.pop()
+        }
+
+        var container = kcmContainer.createObject(pageStack, {"kcm": module.kcm, "internalPage": module.kcm.mainUi});
+        container.kcm.load()
+        pageStack.push(container);
+    }
+
     Component.onCompleted: {
         if (startModule.length > 0) {
-            module.name = startModule
-            var container = kcmContainer.createObject(pageStack, {"kcm": module.kcm, "internalPage": module.kcm.mainUi});
-            pageStack.push(container);
+            openModule(startModule)
         }
     }
 
     Connections {
         target: settingsApp
         onModuleRequested: {
-            module.name = moduleName
-
-            while (pageStack.depth > 1) {
-                pageStack.pop()
-            }
-
-            var container = kcmContainer.createObject(pageStack, {"kcm": module.kcm, "internalPage": module.kcm.mainUi});
-            pageStack.push(container);
+            openModule(moduleName)
         }
     }
 
