@@ -74,7 +74,7 @@ QVariant ModulesModel::data(const QModelIndex& index, int role) const
 
 int ModulesModel::rowCount(const QModelIndex& parent) const
 {
-    return m_plugins.size();
+    return parent.isValid() ? 0 : m_plugins.size();
 }
 
 QHash<int, QByteArray> ModulesModel::roleNames() const
