@@ -76,9 +76,7 @@ Kirigami.ScrollablePage {
             onClicked: {
                 print("Clicked index: " + index + " current: " + listView.currentIndex + " " + name + " curr: " + rootItem.currentModule);
                 // Only the first main page has a kcm property
-                var container = kcmContainer.createObject(pageStack, {"kcm": model.kcm, "internalPage": model.kcm.mainUi});
-                container.kcm.load()
-                pageStack.push(container);
+                pageStack.push(kcmContainer.createObject(pageStack, {"kcm": model.kcm, "internalPage": model.kcm.mainUi}));
             }
         }
     }

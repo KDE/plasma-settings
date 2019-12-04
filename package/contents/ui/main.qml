@@ -41,9 +41,7 @@ Kirigami.ApplicationWindow {
             pageStack.pop()
         }
 
-        var container = kcmContainer.createObject(pageStack, {"kcm": module.kcm, "internalPage": module.kcm.mainUi});
-        container.kcm.load()
-        pageStack.push(container);
+        pageStack.push(kcmContainer.createObject(pageStack, {"kcm": module.kcm, "internalPage": module.kcm.mainUi}));
     }
 
     Component.onCompleted: {

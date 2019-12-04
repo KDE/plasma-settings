@@ -27,6 +27,10 @@ Kirigami.Page {
         }
     }
 
+    Component.onCompleted: {
+        kcm.load()
+    }
+
     data: [
         Connections {
             target: kcm
@@ -38,6 +42,9 @@ Kirigami.Page {
         Connections {
             target: pageStack
             onPageRemoved: {
+                if (kcm.needsSave) {
+                    kcm.save()
+                }
                 if (page == container) {
                     page.destroy();
                 }
