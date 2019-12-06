@@ -34,7 +34,7 @@ SoftwareInfo::SoftwareInfo()
 
 QString SoftwareInfo::kernelRelease() const
 {
-    struct utsname utsName;
+    struct utsname utsName{};
     uname(&utsName);
     return QString::fromLatin1(utsName.release);
 }

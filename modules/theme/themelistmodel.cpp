@@ -182,7 +182,7 @@ QModelIndex ThemeListModel::indexOf(const QString &name) const
         }
     }
 
-    return QModelIndex();
+    return {};
 }
 
 #include "moc_themelistmodel.cpp"

@@ -87,7 +87,7 @@ class TimeSettings : public KQuickAddons::ConfigModule
 
     public Q_SLOTS:
         void setTimeZone(const QString &timezone);
-        void setTimeZones(const QList<QObject*> timezones);
+        void setTimeZones(QList<QObject*> timezones);
         void setTimeZonesModel(QObject* timezones);
         void setTimeFormat(const QString &timeFormat);
         void setTwentyFour(bool t);

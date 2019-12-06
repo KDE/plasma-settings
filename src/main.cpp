@@ -64,7 +64,7 @@ int main(int argc, char **argv)
     aboutData.setDesktopFileName("org.kde.mobile.plasmasettings");
     KAboutData::setApplicationData(aboutData);
 
-    app.setWindowIcon(QIcon::fromTheme("preferences-system"));
+    QApplication::setWindowIcon(QIcon::fromTheme("preferences-system"));
 
     const static auto _l = QStringLiteral("list");
     const static auto _m = QStringLiteral("module");
@@ -105,7 +105,7 @@ int main(int argc, char **argv)
 
         auto formfactor = parser.value("formfactor");
 
-        for (auto plugin : KPackage::PackageLoader::self()->listPackages(QString(), "kpackage/kcms/")) {
+        for (const auto& plugin : KPackage::PackageLoader::self()->listPackages(QString(), "kpackage/kcms/")) {
             if (seen.contains(plugin.pluginId())) {
                 continue;
             }
@@ -129,7 +129,7 @@ int main(int argc, char **argv)
             //qDebug() << "Formafactors: " << formFactors;
         }
 
-        for (auto plugin : KPluginLoader::findPlugins("kcms")) {
+        for (const auto& plugin : KPluginLoader::findPlugins("kcms")) {
             if (seen.contains(plugin.pluginId())) {
                 continue;
             }

@@ -79,7 +79,7 @@ QString HardwareInfo::memory() const
 {
     qlonglong totalRam = -1;
 #ifdef Q_OS_LINUX
-    struct sysinfo info;
+    struct sysinfo info{};
     if (sysinfo(&info) == 0)
         // manpage "sizes are given as multiples of mem_unit bytes"
         totalRam = qlonglong(info.totalram) * info.mem_unit;

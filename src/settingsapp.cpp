@@ -38,8 +38,7 @@ SettingsApp::SettingsApp(QCommandLineParser &parser, QObject *parent)
 }
 
 SettingsApp::~SettingsApp()
-{
-}
+= default;
 
 void SettingsApp::setupKDBus()
 {

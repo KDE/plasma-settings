@@ -13,10 +13,9 @@
 
 ModulesModel::ModulesModel(QObject* parent)
     : QAbstractListModel(parent)
-    , m_plugins()
 {
     qDebug() << "Current platform is " << KDeclarative::KDeclarative::runtimePlatform();
-    for (KPluginMetaData pluginMetaData : KPackage::PackageLoader::self()->listPackages(QString(), "kpackage/kcms/")) {
+    for (const KPluginMetaData& pluginMetaData : KPackage::PackageLoader::self()->listPackages(QString(), "kpackage/kcms/")) {
         KPackage::Package package = KPackage::PackageLoader::self()->loadPackage(QStringLiteral("KPackage/GenericQML"));
         package.setDefaultPackageRoot("kpackage/kcms");
         package.setPath(pluginMetaData.pluginId());
@@ -24,7 +23,7 @@ ModulesModel::ModulesModel(QObject* parent)
         if (KDeclarative::KDeclarative::runtimePlatform().isEmpty()) {
             isCurrentPlatform = true;
         } else {
-            for (QString platform : KDeclarative::KDeclarative::runtimePlatform()) {
+            for (const QString& platform : KDeclarative::KDeclarative::runtimePlatform()) {
                 if (pluginMetaData.formFactors().contains(platform)) {
                     qDebug() << "Platform for " << pluginMetaData.name() << " is " << pluginMetaData.formFactors();
                     isCurrentPlatform = true;
@@ -87,7 +86,7 @@ QHash<int, QByteArray> ModulesModel::roleNames() const
     return names;
 }
 
-KQuickAddons::ConfigModule * ModulesModel::instantiateKcm(const QString name) const
+KQuickAddons::ConfigModule * ModulesModel::instantiateKcm(const QString& name) const
 {
     const QString pluginPath = KPluginLoader::findPlugin(QLatin1String("kcms/") + name);
 

@@ -45,7 +45,7 @@ Info::Info(QObject *parent, const QVariantList &args)
 
 }
 
-void Info::copyToClipboard(const QString text) const
+void Info::copyToClipboard(const QString& text) const
 {
     QGuiApplication::clipboard()->setText(text);
 }

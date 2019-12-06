@@ -43,6 +43,7 @@
 #include <KSystemTimeZone>
 #include <KTimeZone>
 #include <KLocalizedString>
+#include <utility>
 
 #include "timedated_interface.h"
 
@@ -55,16 +56,16 @@ K_PLUGIN_FACTORY_WITH_JSON(TimeSettingsFactory, "timesettings.json", registerPlu
 
 class TimeSettingsPrivate {
 public:
-    TimeSettings *q;
+    TimeSettings *q{};
     QString timeFormat;
     QString timezone;
-    QObject *timeZonesModel;
+    QObject *timeZonesModel{};
     QString timeZoneFilter;
     QString currentTimeText;
     QTime currentTime;
     QDate currentDate;
-    QTimer *timer;
-    bool useNtp;
+    QTimer *timer{};
+    bool useNtp{};
     QString errorString;
 
 
@@ -75,7 +76,7 @@ public:
 
     KSharedConfigPtr localeConfig;
     KConfigGroup localeSettings;
-    KTimeZones *timeZones;
+    KTimeZones *timeZones{};
     QList<QObject*> timezones;
 };
 
@@ -134,7 +135,7 @@ void TimeSettingsPrivate::initTimeZones()
     QStandardItemModel *_zonesModel = new TimeZonesModel(q);
 
     for ( KTimeZones::ZoneMap::ConstIterator it = zones.begin(); it != zones.end(); ++it ) {
-        const KTimeZone zone = it.value();
+        const KTimeZone& zone = it.value();
         if (timeZoneFilter.isEmpty() || zone.name().contains(timeZoneFilter, Qt::CaseInsensitive)) {
             auto *_zone = new TimeZone(zone);
             _zones.append(_zone);
@@ -331,7 +332,7 @@ QList<QObject*> TimeSettings::timeZones()
 
 void TimeSettings::setTimeZones(QList<QObject*> timezones)
 {
-    d->timezones = timezones;
+    d->timezones = std::move(timezones);
     emit timeZonesChanged();
 }
 

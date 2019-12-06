@@ -59,8 +59,7 @@ ThemeSettings::ThemeSettings(QObject* parent, const QVariantList& args)
 }
 
 ThemeSettings::~ThemeSettings()
-{
-}
+= default;
 
 void ThemeSettings::setThemeName(const QString& theme)
 {

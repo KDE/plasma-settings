@@ -30,7 +30,7 @@
 
 class TimeZonePrivate {
 public:
-    TimeZone *q;
+    TimeZone *q{};
     KTimeZone zone;
     QString name;
 };

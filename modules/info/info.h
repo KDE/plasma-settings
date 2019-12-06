@@ -40,7 +40,7 @@ class Info : public KQuickAddons::ConfigModule {
 public:
     Info(QObject* parent, const QVariantList& args);
 
-    Q_INVOKABLE void copyToClipboard(const QString text) const;
+    Q_INVOKABLE void copyToClipboard(const QString& text) const;
 
 Q_SIGNALS:
     void distroInfoChanged();
