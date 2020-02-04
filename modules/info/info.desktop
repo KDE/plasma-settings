@@ -1,6 +1,7 @@
 [Desktop Entry]
 Name=Information
 Name[ca]=Informació
+Name[ca@valencia]=Informació
 Name[cs]=Informace
 Name[en_GB]=Information
 Name[es]=Información
@@ -21,6 +22,7 @@ Name[x-test]=xxInformationxx
 Name[zh_TW]=資訊
 Comment=Software Versions
 Comment[ca]=Versions de programari
+Comment[ca@valencia]=Versions de programari
 Comment[cs]=Verze softwaru
 Comment[en_GB]=Software Versions
 Comment[es]=Versiones de software
@@ -45,6 +47,7 @@ X-KDE-FormFactors=handset,tablet,mediacenter
 Categories=Qt;KDE;X-KDE-settings-system;
 X-KDE-Keywords=info, distro, system
 X-KDE-Keywords[ca]=informació, distribució, sistema
+X-KDE-Keywords[ca@valencia]=informació, distribució, sistema
 X-KDE-Keywords[cs]=informace, distribuce, systém
 X-KDE-Keywords[en_GB]=info, distro, system
 X-KDE-Keywords[es]=información, distro, sistema
