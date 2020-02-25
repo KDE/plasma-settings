@@ -5,7 +5,7 @@ import QtQuick.Controls 2.2 as Controls
 import org.kde.kirigami 2.10 as Kirigami
 
 KCM.SimpleKCM {
-    title: i18n("Information About This System")
+    title: i18n("System Information")
 
     Kirigami.Theme.colorSet: Kirigami.Theme.Window
 
