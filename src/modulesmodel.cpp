@@ -98,7 +98,7 @@ KQuickAddons::ConfigModule * ModulesModel::instantiateKcm(const QString& name) c
     if (!factory) {
         qWarning() << "Error loading KCM plugin:" << loader.errorString();
     } else {
-        kcm = factory->create<KQuickAddons::ConfigModule >();
+        kcm = factory->create<KQuickAddons::ConfigModule >(const_cast<ModulesModel *>(this));
         if (!kcm) {
             qWarning() << "Error creating object from plugin" << loader.fileName();
         }
