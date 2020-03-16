@@ -50,7 +50,7 @@ void Module::setName(const QString& name)
     if (!factory) {
         qWarning() << "Error loading KCM plugin:" << loader.errorString();
     } else {
-        m_kcm = factory->create<KQuickAddons::ConfigModule >();
+        m_kcm = factory->create<KQuickAddons::ConfigModule >(this);
         if (!m_kcm) {
             qWarning() << "Error creating object from plugin" << loader.fileName();
         }
