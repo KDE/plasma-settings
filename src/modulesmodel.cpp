@@ -95,12 +95,12 @@ KQuickAddons::ConfigModule * ModulesModel::instantiateKcm(const QString& name) c
 
     KQuickAddons::ConfigModule *kcm = nullptr;
 
-    connect(qApp, &QCoreApplication::aboutToQuit, this, [this, kcm](){
+   /* connect(qApp, &QCoreApplication::aboutToQuit, this, [this, kcm](){
         QQuickItem *ui = kcm->mainUi();
         if (ui) {
             ui->setParentItem(nullptr);
         }
-    });
+    });*/
     if (!factory) {
         qWarning() << "Error loading KCM plugin:" << loader.errorString();
     } else {
