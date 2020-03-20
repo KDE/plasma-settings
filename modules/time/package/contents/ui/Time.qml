@@ -35,8 +35,8 @@ SimpleKCM {
             text: display
 
             onClicked: {
+                timeZonePickerSheet.close()
                 kcm.saveTimeZone(display)
-                close()
             }
         }
     }
