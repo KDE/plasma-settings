@@ -1,0 +1,17 @@
+[Desktop Entry]
+Name=Cellular Networks
+Name[x-test]=xxCellular Networksxx
+Comment=Management of cellular networks
+Comment[x-test]=xxManagement of cellular networksxx
+Encoding=UTF-8
+Type=Service
+Icon=
+X-KDE-ServiceTypes=SettingsModule
+X-KDE-PluginInfo-Author=Dimitris Kardarakos
+X-KDE-Library=kcm_mobile_cellularnetwork
+X-KDE-PluginInfo-Name=kcm_mobile_cellularnetwork
+X-KDE-PluginInfo-Version=1.0
+X-KDE-PluginInfo-Website=http://plasma-mobile.org
+X-KDE-PluginInfo-License=GPL
+X-KDE-FormFactors=handset,tablet
+X-Plasma-MainScript=ui/main.qml

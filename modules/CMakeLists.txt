@@ -11,3 +11,6 @@ endif()
 
 # Info
 add_subdirectory(info)
+
+# Cellular Network
+add_subdirectory(cellularnetwork)
