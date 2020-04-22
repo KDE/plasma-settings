@@ -24,11 +24,10 @@ include(KDECMakeSettings)
 include(KDECompilerSettings)
 include(ECMQMLModules)
 
-find_package(Qt5 REQUIRED NO_MODULE COMPONENTS Core Quick Test Gui)
-
 ################# now find all used packages #################
 
 set (QT_MIN_VERSION "5.4.0")
+find_package(Qt5 ${QT_MIN_VERSION} REQUIRED NO_MODULE COMPONENTS Core Quick Test Gui)
 
 find_package(KF5 REQUIRED COMPONENTS
     WindowSystem
