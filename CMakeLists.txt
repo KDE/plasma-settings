@@ -11,7 +11,6 @@ endif()
 
 include(CPack)
 include(FeatureSummary)
-find_package(PkgConfig)
 
 ################# set KDE specific information #################
 
