@@ -118,15 +118,7 @@ SimpleKCM {
 
     Kirigami.OverlaySheet {
         id: timeZonePickerSheet
-        header: ColumnLayout {
-            Kirigami.Heading { text: i18nc("@title:window", "Pick Timezone") }
-            Kirigami.SearchField {
-                Layout.fillWidth: true
-                onTextChanged: {
-                    kcm.timeZoneFilterChanged(text)
-                }
-            }
-        }
+        header: Kirigami.Heading { text: i18nc("@title:window", "Pick Timezone") }
 
         footer: RowLayout {
             Controls.Button {
@@ -138,6 +130,13 @@ SimpleKCM {
             }
         }
         ListView {
+            header: Kirigami.SearchField {
+                Layout.fillWidth: true
+                onTextChanged: {
+                    kcm.timeZoneFilterChanged(text)
+                }
+            }
+
             clip: true
             anchors.fill: parent
             implicitWidth: 18 * Kirigami.Units.gridUnit
