@@ -42,6 +42,7 @@ Comment[pt_BR]=Interface de configuração do Plasma Mobile amigável para telas
 Comment[sv]=Pekskärmsvänliga inställningar av användargränssnitt för Plasma mobil
 Comment[uk]=Інтерфейс параметрів сенсорного доступу для мобільної Плазми
 Comment[x-test]=xxTouchscreen friendly settings UI for Plasma Mobilexx
+Comment[zh_TW]=專為 Plasma Mobile 設計的觸控螢幕友好設定介面
 Encoding=UTF-8
 Type=Service
 Icon=preferences-desktop
