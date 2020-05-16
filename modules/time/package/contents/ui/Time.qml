@@ -132,6 +132,7 @@ SimpleKCM {
         ListView {
             header: Kirigami.SearchField {
                 Layout.fillWidth: true
+                width: parent.width
                 onTextChanged: {
                     kcm.timeZoneFilterChanged(text)
                 }
