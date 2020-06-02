@@ -6,7 +6,8 @@ if (${KF5KDELibs4Support_FOUND})
 endif()
 
 # Power
-add_subdirectory(powermanagement)
+# needs porting to C++ / QML KCM api or a rewrite
+#add_subdirectory(powermanagement)
 
 # Info
 add_subdirectory(info)
