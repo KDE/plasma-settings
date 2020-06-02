@@ -2,6 +2,7 @@
 Name=Mobile Settings
 Name[ca]=Ajustaments per al mòbil
 Name[ca@valencia]=Ajustaments per al mòbil
+Name[cs]=Mobilní nastavení
 Name[da]=Mobilindstillinger
 Name[el]=Ρυθμίσεις για κινητά
 Name[en_GB]=Mobile Settings
@@ -29,6 +30,7 @@ Name[zh_TW]=行動裝置設定
 Comment=Touchscreen friendly settings UI for Plasma Mobile
 Comment[ca]=Ajustaments fàcils d'usar de la pantalla tàctil per al Plasma Mobile
 Comment[ca@valencia]=Ajustaments fàcils d'usar de la pantalla tàctil per al Plasma Mobile
+Comment[cs]=Nastavení Plasma Mobile hodné pro dotykové obrazovky
 Comment[en_GB]=Touchscreen friendly settings UI for Plasma Mobile
 Comment[es]=Interfaz de preferencias amigables de la pantalla táctil para Plasma Mobile
 Comment[et]=Plasma Mobile puutesõbraliku seadistamise kasutajaliides
