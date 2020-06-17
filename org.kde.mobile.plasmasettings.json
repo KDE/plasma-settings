@@ -23,7 +23,7 @@
             "config-opts": [ "-DENABLE_TESTING=OFF" ],
             "buildsystem": "cmake-ninja",
             "builddir": true,
-            "sources": [ { "type": "git", "url": "git://anongit.kde.org/kdelibs4support.git", "branch": "v5.65.0" } ]
+            "sources": [ { "type": "git", "url": "https://invent.kde.org/frameworks/kdelibs4support.git", "branch": "v5.70.0" } ]
         },
         {
             "name": "plasma-settings",
