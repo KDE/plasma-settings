@@ -1,14 +1,11 @@
 [Desktop Entry]
 Name=Cellular Networks
-Name[x-test]=xxCellular Networksxx
 Comment=Management of cellular networks
-Comment[x-test]=xxManagement of cellular networksxx
 Type=Service
 X-KDE-ServiceTypes=KCModule
 X-KDE-Library=kcm_mobile_cellularnetwork
 X-KDE-FormFactors=handset,tablet,mediacenter
 Categories=Qt;KDE;X-KDE-settings-system;
 X-KDE-Keywords=info,cell,mobile
-X-KDE-Keywords[x-test]=xxinfoxx,xx cellxx,xx mobilemxx
 X-KDE-ParentApp=kcontrol
 Exec=plasma-settings -m kcm_mobile_cellularnetwork

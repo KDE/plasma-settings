@@ -27,7 +27,6 @@ Name[sk]=Obrazovka
 Name[sl]=Zaslon
 Name[sv]=Bildskärm
 Name[uk]=Екран
-Name[x-test]=xxScreenxx
 Name[zh_CN]=屏幕
 Name[zh_TW]=螢幕
 Comment=Lock, Sleep, Timeout
@@ -55,7 +54,6 @@ Comment[sk]=Zámok, Spánok, Prestávka
 Comment[sl]=Zaklep, spanje, časovna omejitev
 Comment[sv]=Lås, viloläge, tidsgräns
 Comment[uk]=Блокування, присипляння, час очікування
-Comment[x-test]=xxLock, Sleep, Timeoutxx
 Comment[zh_CN]=锁屏，睡眠，超时
 Comment[zh_TW]=鎖定、休眠與逾時
 

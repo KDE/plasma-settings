@@ -1,8 +1,6 @@
 [Desktop Entry]
 Name=Cellular Networks
-Name[x-test]=xxCellular Networksxx
 Comment=Management of cellular networks
-Comment[x-test]=xxManagement of cellular networksxx
 Encoding=UTF-8
 Type=Service
 Icon=
