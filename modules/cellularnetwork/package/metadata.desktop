@@ -2,6 +2,7 @@
 Name=Cellular Networks
 Name[ca]=Xarxes de telefonia mòbil
 Name[de]=Mobilfunknetze
+Name[es]=Redes móviles
 Name[eu]=Mugikor sareak
 Name[fi]=Matkapuhelinverkot
 Name[it]=Reti cellulari
@@ -15,6 +16,7 @@ Name[x-test]=xxCellular Networksxx
 Comment=Management of cellular networks
 Comment[ca]=Gestió de xarxes de telefonia mòbil
 Comment[de]=Verwaltung von Mobilfunknetzen
+Comment[es]=Gestión de redes móviles
 Comment[eu]=Mugikor sareen kudeaketa
 Comment[fi]=Matkapuhelinverkkojen hallinta
 Comment[it]=Gestione delle reti cellulari
