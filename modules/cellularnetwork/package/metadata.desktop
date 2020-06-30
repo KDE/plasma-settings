@@ -1,6 +1,7 @@
 [Desktop Entry]
 Name=Cellular Networks
 Name[ca]=Xarxes de telefonia mòbil
+Name[cs]=Mobilní sítě
 Name[de]=Mobilfunknetze
 Name[en_GB]=Cellular Networks
 Name[es]=Redes móviles
@@ -17,6 +18,7 @@ Name[uk]=Стільникові мережі
 Name[x-test]=xxCellular Networksxx
 Comment=Management of cellular networks
 Comment[ca]=Gestió de xarxes de telefonia mòbil
+Comment[cs]=Spravovat vaše mobilní sítě
 Comment[de]=Verwaltung von Mobilfunknetzen
 Comment[en_GB]=Management of cellular networks
 Comment[es]=Gestión de redes móviles
