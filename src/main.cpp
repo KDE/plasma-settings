@@ -43,10 +43,6 @@
 #include <KPluginMetaData>
 #include <KPluginLoader>
 
-#include <KPackage/Package>
-#include <KPackage/PackageLoader>
-#include <kdeclarative/qmlobjectsharedengine.h>
-
 static const char description[] = I18N_NOOP("Plasma Mobile Settings");
 static const char version[] = "2.0";
 static const char HOME_URL[] = "http://plasma-mobile.org";
@@ -70,7 +66,6 @@ int main(int argc, char **argv)
     const static auto _m = QStringLiteral("module");
     const static auto _f = QStringLiteral("fullscreen");
     const static auto _s = QStringLiteral("singleModule");
-    const static auto _ui = QStringLiteral("layout");
     const static auto _ff = QStringLiteral("formfactor");
 
     QCommandLineOption _list = QCommandLineOption(QStringList() << QStringLiteral("l") << _l,
@@ -81,8 +76,6 @@ int main(int argc, char **argv)
                                 i18n("Only show a single module, requires --module"));
     QCommandLineOption _fullscreen = QCommandLineOption(QStringList() << QStringLiteral("f") << _f,
                                 i18n("Start window fullscreen"));
-    QCommandLineOption _layout = QCommandLineOption(QStringList() << _ui,
-                                i18n("Package to use for the UI (default org.kde.mobile.settings)"), i18n("packagename"));
     QCommandLineOption _formfactor = QCommandLineOption(QStringList() << QStringLiteral("x") << _ff,
                                                   i18n("Limit to modules suitable for <formfactor>, e.g. handset, tablet, mediacenter, desktop, test, all (default handset)"), i18n("formfactor"));
 
@@ -92,7 +85,6 @@ int main(int argc, char **argv)
     parser.addOption(_module);
     parser.addOption(_singleModule);
     parser.addOption(_fullscreen);
-    parser.addOption(_layout);
     aboutData.setupCommandLine(&parser);
 
     parser.process(app);
@@ -151,16 +143,12 @@ int main(int argc, char **argv)
     }
 
     const QString module = parser.value(_m);
-    QString ui = parser.isSet(_ui) ? parser.value(_ui) : "org.kde.plasma.settings";
     const bool singleModule = parser.isSet(_s);
 
     if (singleModule && module.isEmpty()) {
         parser.showHelp();
         return 0;
     }
-    
-    KPackage::Package package = KPackage::PackageLoader::self()->loadPackage("KPackage/GenericQML");
-    package.setPath(ui);
 
     auto *settingsApp = new SettingsApp(parser);
 
@@ -171,9 +159,7 @@ int main(int argc, char **argv)
     engine.rootContext()->setContextProperty("settingsApp", settingsApp);
     engine.rootContext()->setContextProperty("startModule", module);
     engine.rootContext()->setContextProperty("singleModule", singleModule);
-    engine.load(package.filePath("mainscript"));
-    
-
+    engine.load("qrc:/qml/main.qml");
 
     return app.exec();
 }

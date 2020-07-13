@@ -3,6 +3,7 @@ set(plasma-settings_SRCS
     settingsapp.cpp
     modulesmodel.cpp
     module.cpp
+    resources.qrc
 )
 
 add_executable(plasma-settings ${plasma-settings_SRCS})

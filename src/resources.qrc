@@ -1,0 +1,7 @@
+<RCC>
+    <qresource prefix="/">
+        <file>qml/main.qml</file>
+        <file>qml/KCMContainer.qml</file>
+        <file>qml/ModulesList.qml</file>
+    </qresource>
+</RCC>
