@@ -31,11 +31,6 @@ Kirigami.ScrollablePage {
     title: i18n("Settings")
     property alias currentIndex: listView.currentIndex
 
-    Kirigami.Theme.colorSet: Kirigami.Theme.View
-    background: Rectangle {
-        color: Kirigami.Theme.backgroundColor
-    }
-
     Component {
         id: settingsModuleDelegate
         Kirigami.BasicListItem {
