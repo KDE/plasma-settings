@@ -49,6 +49,4 @@ ecm_find_qmlmodule(org.kde.kcm 1.0)
 add_subdirectory(src)
 add_subdirectory(modules)
 
-install(DIRECTORY package/ DESTINATION ${KDE_INSTALL_DATAROOTDIR}/kpackage/genericqml/org.kde.plasma.settings)
-
 install(FILES org.kde.mobile.plasmasettings.desktop DESTINATION ${KDE_INSTALL_APPDIR})
