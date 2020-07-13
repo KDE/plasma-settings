@@ -38,40 +38,14 @@ Kirigami.ScrollablePage {
 
     Component {
         id: settingsModuleDelegate
-        Kirigami.AbstractListItem {
+        Kirigami.BasicListItem {
             id: delegateItem
 
-            enabled: true
+            icon: model.iconName
+            iconSize: Kirigami.Units.iconSizes.medium
+            text: model.name
+            subtitle: model.description
             checked: listView.currentIndex == index && !rootItem.compactMode
-            leftPadding: Kirigami.Units.largeSpacing
-            RowLayout {
-                id: bah
-                spacing: Kirigami.Units.largeSpacing
-                Kirigami.Icon {
-                    id: iconItem
-                    selected: delegateItem.down
-                    Layout.maximumWidth: Layout.preferredWidth
-                    Layout.preferredWidth: Kirigami.Units.iconSizes.medium
-                    Layout.preferredHeight: Layout.preferredWidth
-                    source: iconName
-                }
-                ColumnLayout {
-                    Layout.alignment: Qt.AlignLeft
-                    Layout.fillWidth: true
-                    Controls.Label {
-                        Layout.alignment: Qt.AlignLeft
-                        Layout.fillWidth: true
-                        text: name
-                    }
-                    Controls.Label {
-                        text: description
-                        Layout.fillWidth: true
-                        font.pointSize: Kirigami.Theme.defaultFont.pointSize -1
-                        opacity: 0.6
-                        elide: Text.ElideRight
-                    }
-                }
-            }
 
             onClicked: {
                 print("Clicked index: " + index + " current: " + listView.currentIndex + " " + name + " curr: " + rootItem.currentModule);
