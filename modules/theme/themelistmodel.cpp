@@ -34,9 +34,7 @@
 #include <QStandardPaths>
 
 #include <KDesktopFile>
-
-#include <Plasma/Theme>
-#include <qstandardpaths.h>
+#include <KConfigGroup>
 
 #include <QDebug>
 

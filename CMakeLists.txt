@@ -14,7 +14,10 @@ include(FeatureSummary)
 
 ################# set KDE specific information #################
 
-find_package(ECM 0.0.8 REQUIRED NO_MODULE)
+set (QT_MIN_VERSION "5.14.0")
+set (KF5_MIN_VERSION "5.70")
+
+find_package(ECM ${KF5_MIN_VERSION} REQUIRED NO_MODULE)
 
 # where to look first for cmake modules, before ${CMAKE_ROOT}/Modules/ is checked
 set(CMAKE_MODULE_PATH ${CMAKE_MODULE_PATH} ${ECM_MODULE_PATH} ${ECM_KDE_MODULE_DIR})
@@ -26,11 +29,9 @@ include(ECMQMLModules)
 
 ################# now find all used packages #################
 
-set (QT_MIN_VERSION "5.4.0")
-find_package(Qt5 ${QT_MIN_VERSION} REQUIRED NO_MODULE COMPONENTS Core Quick Test Gui)
+find_package(Qt5 ${QT_MIN_VERSION} REQUIRED NO_MODULE COMPONENTS Core Quick Test Gui Widgets)
 
-find_package(KF5 REQUIRED COMPONENTS
-    WindowSystem
+find_package(KF5 ${KF5_MIN_VERSION} REQUIRED COMPONENTS
     CoreAddons
     Solid
     Config
@@ -38,7 +39,6 @@ find_package(KF5 REQUIRED COMPONENTS
     DBusAddons
     I18n
     Plasma
-    PlasmaQuick
     Declarative
     KIO
     KDELibs4Support

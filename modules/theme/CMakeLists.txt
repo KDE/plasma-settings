@@ -11,6 +11,7 @@ target_link_libraries(kcm_mobile_theme
     Qt5::Gui
     Qt5::Quick
     Qt5::Qml
+    KF5::ConfigCore
     KF5::Plasma
     KF5::I18n
     KF5::QuickAddons
