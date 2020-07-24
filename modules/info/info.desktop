@@ -1,5 +1,6 @@
 [Desktop Entry]
 Name=Information
+Name[az]=Məlumat
 Name[ca]=Informació
 Name[ca@valencia]=Informació
 Name[cs]=Informace
@@ -29,6 +30,7 @@ Name[x-test]=xxInformationxx
 Name[zh_CN]=信息
 Name[zh_TW]=資訊
 Comment=Software Versions
+Comment[az]=Proqram Təminatı Mərkəzinin Versiyası
 Comment[ca]=Versions de programari
 Comment[ca@valencia]=Versions de programari
 Comment[cs]=Verze softwaru
@@ -62,6 +64,7 @@ X-KDE-Library=kcm_mobile_info
 X-KDE-FormFactors=handset,tablet,mediacenter
 Categories=Qt;KDE;X-KDE-settings-system;
 X-KDE-Keywords=info, distro, system
+X-KDE-Keywords[az]=info, distro, system,məlumat,distribütor,sistem
 X-KDE-Keywords[ca]=informació, distribució, sistema
 X-KDE-Keywords[ca@valencia]=informació, distribució, sistema
 X-KDE-Keywords[cs]=informace, distribuce, systém

@@ -1,5 +1,6 @@
 [Desktop Entry]
 Name=Time and Date
+Name[az]=Vaxt və Tarixi ayarlamaq
 Name[ca]=Hora i data
 Name[ca@valencia]=Hora i data
 Name[cs]=Datum a čas
@@ -31,6 +32,7 @@ Name[x-test]=xxTime and Datexx
 Name[zh_CN]=时间和日期
 Name[zh_TW]=日期與時間
 Comment=Timezone, Date Display
+Comment[az]=Saat Qurşağı, Tarix göstərişi
 Comment[ca]=Zona horària, Mostra la data
 Comment[ca@valencia]=Zona horària, Mostra la data
 Comment[cs]=Zobrazení data a časového pásma
