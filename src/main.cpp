@@ -48,9 +48,7 @@
 #include <KPackage/PackageLoader>
 #include <kdeclarative/qmlobjectsharedengine.h>
 
-static const char description[] = I18N_NOOP("Plasma Mobile Settings");
-static const char version[] = "2.0";
-static const char HOME_URL[] = "http://plasma-mobile.org";
+static constexpr char version[] = "2.0";
 
 int main(int argc, char **argv)
 {
@@ -67,44 +65,35 @@ int main(int argc, char **argv)
 
     QApplication::setWindowIcon(QIcon::fromTheme("preferences-system"));
 
-    const static auto _l = QStringLiteral("list");
-    const static auto _m = QStringLiteral("module");
-    const static auto _f = QStringLiteral("fullscreen");
-    const static auto _s = QStringLiteral("singleModule");
-    const static auto _ui = QStringLiteral("layout");
-    const static auto _ff = QStringLiteral("formfactor");
-
-    QCommandLineOption _list = QCommandLineOption(QStringList() << QStringLiteral("l") << _l,
-                               i18n("List available settings modules"));
-    QCommandLineOption _module = QCommandLineOption(QStringList() << QStringLiteral("m") << _m,
-                                i18n("Settings module to open"), i18n("modulename"));
-    QCommandLineOption _singleModule = QCommandLineOption(QStringList() << QStringLiteral("s") << _s,
-                                i18n("Only show a single module, requires --module"));
-    QCommandLineOption _fullscreen = QCommandLineOption(QStringList() << QStringLiteral("f") << _f,
-                                i18n("Start window fullscreen"));
-    QCommandLineOption _layout = QCommandLineOption(QStringList() << _ui,
-                                i18n("Package to use for the UI (default org.kde.mobile.settings)"), i18n("packagename"));
-    QCommandLineOption _formfactor = QCommandLineOption(QStringList() << QStringLiteral("x") << _ff,
-                                                  i18n("Limit to modules suitable for <formfactor>, e.g. handset, tablet, mediacenter, desktop, test, all (default handset)"), i18n("formfactor"));
-
     QCommandLineParser parser;
-    parser.addOption(_list);
-    parser.addOption(_formfactor);
-    parser.addOption(_module);
-    parser.addOption(_singleModule);
-    parser.addOption(_fullscreen);
-    parser.addOption(_layout);
+
+    const QCommandLineOption listOption(QStringLiteral("l"), QStringLiteral("list"), i18n("List available settings modules"));
+    const QCommandLineOption formfactorOption(
+        QStringLiteral("x"), QStringLiteral("formfactor"),
+        i18n("Limit to modules suitable for <formfactor>, e.g. handset, tablet, mediacenter, desktop, test, all (default handset)"),
+        i18n("formfactor"));
+    const QCommandLineOption moduleOption(QStringLiteral("m"), QStringLiteral("module"), i18n("Settings module to open"), i18n("modulename"));
+    const QCommandLineOption singleModuleOption(QStringLiteral("s"), QStringLiteral("singleModule"), i18n("Only show a single module, requires --module"));
+    const QCommandLineOption fullscreenOption(QStringLiteral("f"), QStringLiteral("fullscreen"), i18n("Start window fullscreen"));
+    const QCommandLineOption layoutOption(QStringLiteral("layout"), i18n("Package to use for the UI (default org.kde.mobile.settings)"), i18n("packagename"));
+
+    parser.addOption(listOption);
+    parser.addOption(formfactorOption);
+    parser.addOption(moduleOption);
+    parser.addOption(singleModuleOption);
+    parser.addOption(fullscreenOption);
+    parser.addOption(layoutOption);
     aboutData.setupCommandLine(&parser);
 
     parser.process(app);
     aboutData.processCommandLine(&parser);
 
-    if (parser.isSet(_list)) {
+    if (parser.isSet(listOption)) {
         int nameWidth = 24;
         QSet<QString> seen;
         std::cout << std::setfill('.');
 
-        auto formfactor = parser.value("formfactor");
+        auto formfactor = parser.value(formfactorOption);
 
         for (const auto& plugin : KPackage::PackageLoader::self()->listPackages(QString(), "kpackage/kcms/")) {
             if (seen.contains(plugin.pluginId())) {
@@ -151,15 +140,15 @@ int main(int argc, char **argv)
         return 0;
     }
 
-    const QString module = parser.value(_m);
-    QString ui = parser.isSet(_ui) ? parser.value(_ui) : "org.kde.plasma.settings";
-    const bool singleModule = parser.isSet(_s);
+    const QString module = parser.value(moduleOption);
+    QString ui = parser.isSet(layoutOption) ? parser.value(layoutOption) : "org.kde.plasma.settings";
+    const bool singleModule = parser.isSet(singleModuleOption);
 
     if (singleModule && module.isEmpty()) {
         parser.showHelp();
         return 0;
     }
-    
+
     KPackage::Package package = KPackage::PackageLoader::self()->loadPackage("KPackage/GenericQML");
     package.setPath(ui);
 
@@ -174,8 +163,6 @@ int main(int argc, char **argv)
     QQmlApplicationEngine engine;
     engine.rootContext()->setContextObject(new KLocalizedContext(&engine));
     engine.load(package.filePath("mainscript"));
-    
-
 
     return app.exec();
 }

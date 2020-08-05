@@ -64,7 +64,7 @@ QVariant ModulesModel::data(const QModelIndex& index, int role) const
         || index.row() < 0
         || index.row() >= rowCount())
     {
-        return QVariant();
+        return {};
     }
 
     // NOTE: as the kcm is lazy loading, this needs to not be const
@@ -86,9 +86,9 @@ QVariant ModulesModel::data(const QModelIndex& index, int role) const
 
             return QVariant::fromValue(d.kcm.data());
         }
-        default:
-             return QVariant();
     }
+
+    return {};
 }
 
 int ModulesModel::rowCount(const QModelIndex& parent) const
@@ -98,15 +98,17 @@ int ModulesModel::rowCount(const QModelIndex& parent) const
 
 QHash<int, QByteArray> ModulesModel::roleNames() const
 {
-    QHash<int, QByteArray> names = QAbstractItemModel::roleNames();
-    names.insert(NameRole, "name");
-    names.insert(DescriptionRole, "description");
-    names.insert(IconNameRole, "iconName");
-    names.insert(KcmRole, "kcm");
+    auto names = QAbstractItemModel::roleNames();
+    names.insert({
+         {NameRole, "name"},
+         {DescriptionRole, "description"},
+         {IconNameRole, "iconName"},
+         {KcmRole, "kcm"}
+    });
     return names;
 }
 
-KQuickAddons::ConfigModule * ModulesModel::instantiateKcm(const QString& name) const
+KQuickAddons::ConfigModule *ModulesModel::instantiateKcm(const QString& name) const
 {
     const QString pluginPath = KPluginLoader::findPlugin(QLatin1String("kcms/") + name);
 

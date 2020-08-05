@@ -37,8 +37,7 @@ SettingsApp::SettingsApp(QCommandLineParser &parser, QObject *parent)
     setupKDBus();
 }
 
-SettingsApp::~SettingsApp()
-= default;
+SettingsApp::~SettingsApp() = default;
 
 void SettingsApp::setupKDBus()
 {
@@ -54,7 +53,7 @@ void SettingsApp::setupKDBus()
             emit moduleRequested(module);
         }
         emit activateRequested();
-    } );
+    });
 }
 
 void SettingsApp::setStartModule(const QString &startModule)

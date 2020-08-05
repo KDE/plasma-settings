@@ -36,8 +36,7 @@
 #include <sys/sysctl.h>
 #endif
 
-HardwareInfo::HardwareInfo()
-= default;
+HardwareInfo::HardwareInfo() = default;
 
 int HardwareInfo::processorCount() const {
     return Solid::Device::listFromType(Solid::DeviceInterface::Processor).count();

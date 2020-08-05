@@ -21,5 +21,4 @@
 
 #include "distroinfo.h"
 
-DistroInfo::DistroInfo()
-= default;
+DistroInfo::DistroInfo() = default;

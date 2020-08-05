@@ -46,7 +46,7 @@ public:
     };
 
 public:
-    ModulesModel(QObject *parent=nullptr);
+    ModulesModel(QObject *parent = nullptr);
 
     QVariant data(const QModelIndex& index, int role) const override;
     int rowCount(const QModelIndex& parent = QModelIndex()) const override;
