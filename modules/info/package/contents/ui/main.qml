@@ -116,6 +116,7 @@ KCM.SimpleKCM {
     // Only display when we can't use Kirigami Actions
     footer: Controls.Button {
         visible: !Kirigami.Settings.isMobile
+        implicitHeight: visible ? Kirigami.Units.gridUnit * 2 : 0
         Layout.alignment: Qt.AlignLeft | Qt.AlignBottom
 
         text: i18n("Copy to clipboard")
