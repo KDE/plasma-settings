@@ -164,14 +164,14 @@ int main(int argc, char **argv)
     package.setPath(ui);
 
     auto *settingsApp = new SettingsApp(parser);
+    settingsApp->setStartModule(module);
+    settingsApp->setSingleModule(singleModule);
 
     qmlRegisterType<ModulesModel>("org.kde.plasma.settings", 0, 1, "ModulesModel");
     qmlRegisterType<Module>("org.kde.plasma.settings", 0, 1, "Module");
+    qmlRegisterSingletonInstance<SettingsApp>("org.kde.plasma.settings", 0, 1, "SettingsApp", settingsApp);
 
     QQmlApplicationEngine engine;
-    engine.rootContext()->setContextProperty("settingsApp", settingsApp);
-    engine.rootContext()->setContextProperty("startModule", module);
-    engine.rootContext()->setContextProperty("singleModule", singleModule);
     engine.rootContext()->setContextObject(new KLocalizedContext(&engine));
     engine.load(package.filePath("mainscript"));
     

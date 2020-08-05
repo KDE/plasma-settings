@@ -57,3 +57,12 @@ void SettingsApp::setupKDBus()
     } );
 }
 
+void SettingsApp::setStartModule(const QString &startModule)
+{
+    m_startModule = startModule;
+}
+
+void SettingsApp::setSingleModule(const bool singleModule)
+{
+    m_singleModule = singleModule;
+}

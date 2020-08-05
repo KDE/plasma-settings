@@ -28,7 +28,7 @@ import org.kde.plasma.settings 0.1
 Kirigami.ApplicationWindow {
     id: rootItem
 
-    pageStack.initialPage: singleModule ? null : modulesList
+    pageStack.initialPage: SettingsApp.singleModule ? null : modulesList
     pageStack.globalToolBar.style: Kirigami.ApplicationHeaderStyle.Breadcrumb
 
     contextDrawer: Kirigami.ContextDrawer {
@@ -45,13 +45,13 @@ Kirigami.ApplicationWindow {
     }
 
     Component.onCompleted: {
-        if (startModule.length > 0) {
-            openModule(startModule)
+        if (SettingsApp.startModule.length > 0) {
+            openModule(SettingsApp.startModule)
         }
     }
 
     Connections {
-        target: settingsApp
+        target: SettingsApp
         onModuleRequested: {
             openModule(moduleName)
         }
