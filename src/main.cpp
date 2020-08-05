@@ -39,6 +39,7 @@
 // Frameworks
 #include <KAboutData>
 #include <KLocalizedString>
+#include <KLocalizedContext>
 #include <KPackage/PackageLoader>
 #include <KPluginMetaData>
 #include <KPluginLoader>
@@ -171,6 +172,7 @@ int main(int argc, char **argv)
     engine.rootContext()->setContextProperty("settingsApp", settingsApp);
     engine.rootContext()->setContextProperty("startModule", module);
     engine.rootContext()->setContextProperty("singleModule", singleModule);
+    engine.rootContext()->setContextObject(new KLocalizedContext(&engine));
     engine.load(package.filePath("mainscript"));
     
 
