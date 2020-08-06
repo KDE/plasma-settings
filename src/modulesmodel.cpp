@@ -98,14 +98,12 @@ int ModulesModel::rowCount(const QModelIndex& parent) const
 
 QHash<int, QByteArray> ModulesModel::roleNames() const
 {
-    auto names = QAbstractItemModel::roleNames();
-    names.insert({
+    return {
          {NameRole, "name"},
          {DescriptionRole, "description"},
          {IconNameRole, "iconName"},
          {KcmRole, "kcm"}
-    });
-    return names;
+    };
 }
 
 KQuickAddons::ConfigModule *ModulesModel::instantiateKcm(const QString& name) const
