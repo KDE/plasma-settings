@@ -67,14 +67,14 @@ int main(int argc, char **argv)
 
     QCommandLineParser parser;
 
-    const QCommandLineOption listOption(QStringLiteral("l"), QStringLiteral("list"), i18n("List available settings modules"));
+    const QCommandLineOption listOption({QStringLiteral("l"), QStringLiteral("list")}, i18n("List available settings modules"));
     const QCommandLineOption formfactorOption(
-        QStringLiteral("x"), QStringLiteral("formfactor"),
+        {QStringLiteral("x"), QStringLiteral("formfactor")},
         i18n("Limit to modules suitable for <formfactor>, e.g. handset, tablet, mediacenter, desktop, test, all (default handset)"),
         i18n("formfactor"));
-    const QCommandLineOption moduleOption(QStringLiteral("m"), QStringLiteral("module"), i18n("Settings module to open"), i18n("modulename"));
-    const QCommandLineOption singleModuleOption(QStringLiteral("s"), QStringLiteral("singleModule"), i18n("Only show a single module, requires --module"));
-    const QCommandLineOption fullscreenOption(QStringLiteral("f"), QStringLiteral("fullscreen"), i18n("Start window fullscreen"));
+    const QCommandLineOption moduleOption({QStringLiteral("m"), QStringLiteral("module")}, i18n("Settings module to open"), i18n("modulename"));
+    const QCommandLineOption singleModuleOption({QStringLiteral("s"), QStringLiteral("singleModule")}, i18n("Only show a single module, requires --module"));
+    const QCommandLineOption fullscreenOption({QStringLiteral("f"), QStringLiteral("fullscreen")}, i18n("Start window fullscreen"));
     const QCommandLineOption layoutOption(QStringLiteral("layout"), i18n("Package to use for the UI (default org.kde.mobile.settings)"), i18n("packagename"));
 
     parser.addOption(listOption);
