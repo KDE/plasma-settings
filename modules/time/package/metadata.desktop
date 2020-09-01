@@ -73,7 +73,6 @@ X-KDE-PluginInfo-Name=kcm_mobile_time
 X-KDE-PluginInfo-Version=1.0
 X-KDE-PluginInfo-Website=https://plasma-mobile.org
 X-KDE-PluginInfo-Category=Date and Time
-X-KDE-PluginInfo-Depends=
 X-KDE-PluginInfo-License=GPL
 X-KDE-PluginInfo-EnabledByDefault=true
 X-KDE-FormFactors=handset,tablet,mediacenter

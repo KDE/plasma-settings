@@ -75,7 +75,6 @@ X-KDE-PluginInfo-Name=kcm_mobile_theme
 X-KDE-PluginInfo-Version=1.0
 X-KDE-PluginInfo-Website=http://plasma-mobile.org
 X-KDE-PluginInfo-Category=
-X-KDE-PluginInfo-Depends=
 X-KDE-PluginInfo-License=GPL
 X-KDE-PluginInfo-EnabledByDefault=true
 X-KDE-FormFactors=handset,tablet,mediacenter
