@@ -14,26 +14,9 @@ KCM.SimpleKCM {
         Kirigami.Action {
             text: i18n("Copy to clipboard")
             icon.name: "edit-copy"
-            onTriggered: copyInfoToClipboard()
+            onTriggered: kcm.copyInfoToClipboard()
         }
     ]
-
-    function copyInfoToClipboard() {
-        var clipboardText = ""
-
-        clipboardText += "Operating System " + kcm.distroInfo.name + "\n"
-
-        clipboardText += "KDE Plasma Version: " + kcm.softwareInfo.plasmaVersion + "\n"
-        clipboardText += "KDE Frameworks Version: " + kcm.softwareInfo.frameworksVersion + "\n"
-        clipboardText += "Qt Version: " + kcm.softwareInfo.qtVersion + "\n"
-        clipboardText += "Kernel Version: " + kcm.softwareInfo.kernelRelease + "\n"
-        clipboardText += "OS-Type: " + kcm.softwareInfo.osType + "-bit\n"
-
-        clipboardText += "Processor: " + kcm.hardwareInfo.processors + "\n"
-        clipboardText += "Memory: " + kcm.hardwareInfo.memory + "\n"
-
-        kcm.copyToClipboard(clipboardText)
-    }
 
     ColumnLayout {
         width: parent.width
@@ -121,6 +104,6 @@ KCM.SimpleKCM {
 
         text: i18n("Copy to clipboard")
         icon.name: "edit-copy"
-        onClicked: copyInfoToClipboard()
+        onClicked: kcm.copyInfoToClipboard()
     }
 }

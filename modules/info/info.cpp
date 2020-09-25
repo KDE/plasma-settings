@@ -45,9 +45,27 @@ Info::Info(QObject *parent, const QVariantList &args)
 
 }
 
-void Info::copyToClipboard(const QString& text) const
+void Info::copyInfoToClipboard() const
 {
-    QGuiApplication::clipboard()->setText(text);
+    const QString clipboardText = QStringLiteral("Operating System: %1\n"
+                   "KDE Plasma Version: %2\n"
+                   "KDE Frameworks Version: %3\n"
+                   "Qt Version: %4\n"
+                   "Kernel Version: %5\n"
+                   "OS-Type: %6\n"
+                   "Processor: %7\n"
+                   "Memory: %8\n").arg(
+                    distroInfo()->name(),
+                    softwareInfo()->plasmaVersion(),
+                    softwareInfo()->frameworksVersion(),
+                    softwareInfo()->qtVersion(),
+                    softwareInfo()->kernelRelease(),
+                    softwareInfo()->osType(),
+                    hardwareInfo()->processors(),
+                    hardwareInfo()->memory()
+                );
+
+    QGuiApplication::clipboard()->setText(clipboardText);
 }
 
 DistroInfo* Info::distroInfo() const
