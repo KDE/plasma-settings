@@ -31,9 +31,9 @@ K_PLUGIN_CLASS_WITH_JSON(Info, "info.json")
 
 Info::Info(QObject *parent, const QVariantList &args)
     : KQuickAddons::ConfigModule(parent, args),
-    m_distroInfo(new DistroInfo),
-    m_softwareInfo(new SoftwareInfo),
-    m_hardwareInfo(new HardwareInfo)
+    m_distroInfo(new DistroInfo(this)),
+    m_softwareInfo(new SoftwareInfo(this)),
+    m_hardwareInfo(new HardwareInfo(this))
 {
     KAboutData* about = new KAboutData("kcm_mobile_info", i18n("Info"),
                                        "1.0", QString(), KAboutLicense::LGPL);

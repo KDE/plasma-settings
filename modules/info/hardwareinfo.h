@@ -37,7 +37,7 @@ class HardwareInfo : public QObject
     QString memory() const;
 
 public:
-    HardwareInfo();
+    HardwareInfo(QObject *parent = nullptr);
 };
 
 #endif // HARDWAREINFO_H

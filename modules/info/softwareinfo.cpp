@@ -29,8 +29,10 @@
 #include <KConfigGroup>
 #include <KLocalizedString>
 
-SoftwareInfo::SoftwareInfo()
-= default;
+SoftwareInfo::SoftwareInfo(QObject *parent)
+    : QObject(parent)
+{
+}
 
 QString SoftwareInfo::kernelRelease() const
 {

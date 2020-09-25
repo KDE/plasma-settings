@@ -86,7 +86,7 @@ class DistroInfo : public QObject
     PROPERTY(QString, logo)
 
 public:
-    DistroInfo();
+    DistroInfo(QObject *parent = nullptr);
 
 private:
     KOSRelease m_osrelease;

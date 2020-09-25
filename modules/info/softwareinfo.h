@@ -43,7 +43,7 @@ class SoftwareInfo : public QObject
     QString osType() const;
 
 public:
-    SoftwareInfo();
+    SoftwareInfo(QObject *parent = nullptr);
 };
 
 #endif // SOFTWAREINFO_H
