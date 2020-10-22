@@ -36,9 +36,6 @@ ModulesModel::ModulesModel(QObject* parent)
 {
     qDebug() << "Current platform is " << KDeclarative::KDeclarative::runtimePlatform();
     for (const KPluginMetaData& pluginMetaData : KPackage::PackageLoader::self()->listPackages(QString(), "kpackage/kcms/")) {
-        KPackage::Package package = KPackage::PackageLoader::self()->loadPackage(QStringLiteral("KPackage/GenericQML"));
-        package.setDefaultPackageRoot("kpackage/kcms");
-        package.setPath(pluginMetaData.pluginId());
         bool isCurrentPlatform = false;
         if (KDeclarative::KDeclarative::runtimePlatform().isEmpty()) {
             isCurrentPlatform = true;
