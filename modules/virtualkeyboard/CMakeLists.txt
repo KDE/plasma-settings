@@ -1,5 +1,3 @@
-include_directories(${GIO_INCLUDE_DIRS} ${GOBJECT_INCLUDE_DIRS} ${GLIB2_INCLUDE_DIRS})
-
 set(MALIIT_KEYBOARD_LANGUAGES_DIR "${CMAKE_INSTALL_LIBDIR}/maliit/keyboard2/languages" CACHE PATH "Directory containing maliit-keyboard data")
 
 add_definitions(-DQT_NO_KEYWORDS)
@@ -12,6 +10,7 @@ set(virtualkeyboard_SRCS
 
 add_library(kcm_mobile_virtualkeyboard MODULE ${virtualkeyboard_SRCS})
 
+target_include_directories(kcm_mobile_virtualkeyboard PRIVATE ${GIO_INCLUDE_DIRS} ${GOBJECT_INCLUDE_DIRS} ${GLIB2_INCLUDE_DIRS})
 target_compile_definitions(kcm_mobile_virtualkeyboard PRIVATE "MALIIT_KEYBOARD_LANGUAGES_DIR=\"${CMAKE_INSTALL_PREFIX}/${MALIIT_KEYBOARD_LANGUAGES_DIR}\"")
 
 target_link_libraries(kcm_mobile_virtualkeyboard
