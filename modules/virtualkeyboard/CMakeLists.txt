@@ -10,7 +10,6 @@ set(virtualkeyboard_SRCS
 
 add_library(kcm_mobile_virtualkeyboard MODULE ${virtualkeyboard_SRCS})
 
-target_include_directories(kcm_mobile_virtualkeyboard PRIVATE ${GIO_INCLUDE_DIRS} ${GOBJECT_INCLUDE_DIRS} ${GLIB2_INCLUDE_DIRS})
 target_compile_definitions(kcm_mobile_virtualkeyboard PRIVATE "MALIIT_KEYBOARD_LANGUAGES_DIR=\"${CMAKE_INSTALL_PREFIX}/${MALIIT_KEYBOARD_LANGUAGES_DIR}\"")
 
 target_link_libraries(kcm_mobile_virtualkeyboard
@@ -19,9 +18,8 @@ target_link_libraries(kcm_mobile_virtualkeyboard
     KF5::I18n
     KF5::QuickAddons
     KF5::ConfigCore
-    ${GIO_LIBRARIES}
-    ${GOBJECT_LDFLAGS}
-    GLIB2::GLIB2
+    PkgConfig::GIO
+    PkgConfig::GOBJECT
 )
 
 kcoreaddons_desktop_to_json(kcm_mobile_virtualkeyboard "package/metadata.desktop")
