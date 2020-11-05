@@ -29,7 +29,6 @@ Kirigami.ApplicationWindow {
     id: rootItem
 
     pageStack.initialPage: SettingsApp.singleModule ? null : modulesList
-    pageStack.globalToolBar.style: Kirigami.ApplicationHeaderStyle.Breadcrumb
 
     contextDrawer: Kirigami.ContextDrawer {
         id: contextDrawer
