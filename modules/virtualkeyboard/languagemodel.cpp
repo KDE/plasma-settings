@@ -1,0 +1,121 @@
+/*
+ * Copyright 2020  Bhushan Shah <bshah@kde.org>
+ *
+ * This program is free software; you can redistribute it and/or
+ * modify it under the terms of the GNU General Public License as
+ * published by the Free Software Foundation; either version 2 of
+ * the License or (at your option) version 3 or any later version
+ * accepted by the membership of KDE e.V. (or its successor approved
+ * by the membership of KDE e.V.), which shall act as a proxy
+ * defined in Section 14 of version 3 of the license.
+ *
+ * This program is distributed in the hope that it will be useful,
+ * but WITHOUT ANY WARRANTY; without even the implied warranty of
+ * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+ * GNU General Public License for more details.
+ *
+ * You should have received a copy of the GNU General Public License
+ * along with this program.  If not, see <http://www.gnu.org/licenses/>.
+ */
+
+#include <QDirIterator>
+#include <QDebug>
+#include <QPluginLoader>
+
+#include "languagemodel.h"
+#include "gsettingsitem.h"
+
+LanguageModel::LanguageModel(QObject *parent)
+    : QAbstractListModel(parent)
+    , m_gsettings(GSettingsItem("/org/maliit/keyboard/maliit/", parent))
+{
+    beginResetModel();
+    loadPlugins();
+    endResetModel();
+}
+
+void LanguageModel::loadPlugins()
+{
+    const QStringList enabledLangs = m_gsettings.value("enabled-languages").toStringList();
+
+    QStringList langPaths;
+    const QString prefix = qgetenv("MALIIT_KEYBOARD_LANGUAGES_PATH");
+    QDirIterator it(prefix, {"*plugin.so"}, QDir::NoFilter, QDirIterator::Subdirectories);
+    while (it.hasNext()) {
+        langPaths << it.next();
+    }
+
+    m_languages.clear();
+    for (const auto& langPath : qAsConst(langPaths)) {
+        QPluginLoader langPlugin(langPath);
+        const auto& metadata = langPlugin.metaData().value("MetaData").toObject();
+        Data lang;
+        lang.langName = metadata.value("Language").toString();
+        lang.langCode = metadata.value("LanguageId").toString();
+        lang.enabled = enabledLangs.contains(lang.langCode);
+        m_languages.append(lang);
+    }
+}
+
+QVariant LanguageModel::data(const QModelIndex &index, int role) const
+{
+    if (!index.isValid()) {
+        return QVariant();
+    }
+
+    if (index.row() >= m_languages.size()) {
+        return QVariant();
+    }
+
+    const Data data = m_languages.at(index.row());
+    switch (role) {
+    case EnabledRole:
+        return data.enabled;
+    case NameRole:
+        return data.langName;
+    case LanguageIdRole:
+        return data.langCode;
+    }
+
+    return QVariant();
+}
+
+bool LanguageModel::setData(const QModelIndex &index, const QVariant &value, int role)
+{
+    if (!index.isValid()) {
+        return QAbstractListModel::setData(index, value, role);
+    }
+
+    if (role == EnabledRole) {
+        Data &data = m_languages[index.row()];
+        if (data.enabled != value.toBool()) {
+            data.enabled = value.toBool();
+        }
+        Q_EMIT dataChanged(this->index(index.row(), 0), this->index(index.row(), 0));
+    }
+
+    QStringList enabledLangs;
+    for (const auto &data : m_languages)
+    {
+        if (data.enabled) {
+            enabledLangs << data.langCode;
+        }
+    }
+    m_gsettings.set("enabled-languages", enabledLangs);
+    return QAbstractListModel::setData(index, value, role);
+}
+
+int LanguageModel::rowCount(const QModelIndex &parent) const
+{
+    Q_UNUSED(parent)
+    return m_languages.size();
+}
+
+QHash<int, QByteArray> LanguageModel::roleNames() const
+{
+    return {
+         {NameRole, "name"},
+         {EnabledRole, "enabled"},
+         {LanguageIdRole, "langId"}
+    };
+}

@@ -14,13 +14,16 @@ include(FeatureSummary)
 
 ################# set KDE specific information #################
 
+set(CMAKE_CXX_STANDARD 17)
+set(CMAKE_CXX_STANDARD_REQUIRED ON)
+
 set (QT_MIN_VERSION "5.14.0")
 set (KF5_MIN_VERSION "5.70")
 
 find_package(ECM ${KF5_MIN_VERSION} REQUIRED NO_MODULE)
 
 # where to look first for cmake modules, before ${CMAKE_ROOT}/Modules/ is checked
-set(CMAKE_MODULE_PATH ${CMAKE_MODULE_PATH} ${ECM_MODULE_PATH} ${ECM_KDE_MODULE_DIR})
+set(CMAKE_MODULE_PATH ${CMAKE_CURRENT_SOURCE_DIR}/cmake/ ${ECM_MODULE_PATH})
 
 include(KDEInstallDirs)
 include(KDECMakeSettings)
@@ -42,6 +45,14 @@ find_package(KF5 ${KF5_MIN_VERSION} REQUIRED COMPONENTS
     Declarative
     KIO
     KDELibs4Support
+)
+
+find_package(GLIB2)
+find_package(GIO)
+pkg_check_modules(GOBJECT gobject-2.0)
+set_package_properties(GIO PROPERTIES
+    DESCRIPTION "Gnome Input/Output) library"
+    PURPOSE "Required for the maliit configuration"
 )
 
 ecm_find_qmlmodule(org.kde.kcm 1.0)

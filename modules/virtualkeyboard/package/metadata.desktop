@@ -1,0 +1,17 @@
+[Desktop Entry]
+Name=Virtual Keyboard
+Comment=Virtual Keyboard configuration
+Encoding=UTF-8
+Type=Service
+Icon=keyboard
+X-KDE-ServiceTypes=KCModule
+X-KDE-PluginInfo-Author=Bhushan Shah
+X-KDE-Library=kcm_mobile_virtualkeyboard
+X-KDE-PluginInfo-Name=kcm_mobile_virtualkeyboard
+X-KDE-PluginInfo-Version=1.0
+X-KDE-PluginInfo-Website=https://plasma-mobile.org
+X-KDE-PluginInfo-License=GPL
+X-KDE-FormFactors=handset,tablet
+X-KDE-Keywords=virtualkeyboard,keyboard
+X-Plasma-MainScript=ui/main.qml
+Exec=plasma-settings -m kcm_mobile_virtualkeyboard

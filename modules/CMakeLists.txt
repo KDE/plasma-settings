@@ -14,3 +14,6 @@ add_subdirectory(info)
 
 # Cellular Network
 add_subdirectory(cellularnetwork)
+
+# Virtual Keyboard (maliit)
+add_subdirectory(virtualkeyboard)
