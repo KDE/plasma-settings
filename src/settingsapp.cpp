@@ -59,9 +59,11 @@ void SettingsApp::setupKDBus()
 void SettingsApp::setStartModule(const QString &startModule)
 {
     m_startModule = startModule;
+    Q_EMIT startModuleChanged();
 }
 
 void SettingsApp::setSingleModule(const bool singleModule)
 {
     m_singleModule = singleModule;
+    Q_EMIT singleModuleChanged();
 }
