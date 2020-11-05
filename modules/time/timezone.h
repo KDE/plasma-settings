@@ -21,9 +21,9 @@
 #ifndef TIMEZONE_H
 #define TIMEZONE_H
 
+#include <KTimeZone>
 #include <QObject>
 #include <QString>
-#include <KTimeZone>
 
 class TimeZonePrivate;
 
@@ -33,19 +33,19 @@ class TimeZone : public QObject
 
     Q_PROPERTY(QString name READ name WRITE setName NOTIFY nameChanged)
 
-    public:
-        explicit TimeZone(const KTimeZone &zone, QObject *parent = nullptr);
-        ~TimeZone() override;
+public:
+    explicit TimeZone(const KTimeZone &zone, QObject *parent = nullptr);
+    ~TimeZone() override;
 
-        QString name();
-    public Q_SLOTS:
-        void setName(const QString &n);
+    QString name();
+public Q_SLOTS:
+    void setName(const QString &n);
 
-    Q_SIGNALS:
-        void nameChanged();
+Q_SIGNALS:
+    void nameChanged();
 
-    private:
-        TimeZonePrivate* d;
+private:
+    TimeZonePrivate *d;
 };
 
 #endif // TIMEZONE_H

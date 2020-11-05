@@ -20,8 +20,8 @@
 
 #include "module.h"
 
-#include <KPluginLoader>
 #include <KPluginFactory>
+#include <KPluginLoader>
 
 KQuickAddons::ConfigModule *Module::kcm() const
 {
@@ -33,7 +33,7 @@ QString Module::name() const
     return m_name;
 }
 
-void Module::setName(const QString& name)
+void Module::setName(const QString &name)
 {
     if (m_name == name) {
         return;
@@ -45,12 +45,12 @@ void Module::setName(const QString& name)
     const QString pluginPath = KPluginLoader::findPlugin(QLatin1String("kcms/") + name);
 
     KPluginLoader loader(pluginPath);
-    KPluginFactory* factory = loader.factory();
+    KPluginFactory *factory = loader.factory();
 
     if (!factory) {
         qWarning() << "Error loading KCM plugin:" << loader.errorString();
     } else {
-        m_kcm = factory->create<KQuickAddons::ConfigModule >(this);
+        m_kcm = factory->create<KQuickAddons::ConfigModule>(this);
         if (!m_kcm) {
             qWarning() << "Error creating object from plugin" << loader.fileName();
         }
@@ -58,4 +58,3 @@ void Module::setName(const QString& name)
 
     Q_EMIT kcmChanged();
 }
-

@@ -29,10 +29,9 @@
 
 #include <KLocalizedString>
 
-
 SettingsApp::SettingsApp(QCommandLineParser &parser, QObject *parent)
-    : QObject(parent),
-      m_parser(&parser)
+    : QObject(parent)
+    , m_parser(&parser)
 {
     setupKDBus();
 }
@@ -42,9 +41,9 @@ SettingsApp::~SettingsApp() = default;
 void SettingsApp::setupKDBus()
 {
     QCoreApplication::setOrganizationDomain("kde.org");
-    KDBusService* service = new KDBusService(KDBusService::Unique, this);
+    KDBusService *service = new KDBusService(KDBusService::Unique, this);
 
-    QObject::connect(service, &KDBusService::activateRequested, this, [this](const QStringList &arguments, const QString &/*workingDirectory*/) {
+    QObject::connect(service, &KDBusService::activateRequested, this, [this](const QStringList &arguments, const QString & /*workingDirectory*/) {
         qDebug() << "activateRequested" << arguments;
         m_parser->parse(arguments);
         if (m_parser->isSet("module")) {

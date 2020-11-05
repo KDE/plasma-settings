@@ -19,16 +19,16 @@
 
 #include "timezonesmodel.h"
 
-
 TimeZonesModel::TimeZonesModel(QObject *parent)
     : QStandardItemModel(parent)
 {
 }
 
-QHash<int, QByteArray> TimeZonesModel::roleNames() const {
+QHash<int, QByteArray> TimeZonesModel::roleNames() const
+{
     QHash<int, QByteArray> roleNames;
     roleNames[Qt::DisplayRole] = "display";
-    roleNames[Qt::UserRole+1] = "continent";
+    roleNames[Qt::UserRole + 1] = "continent";
     return roleNames;
 }
 
@@ -37,6 +37,6 @@ QVariantHash TimeZonesModel::get(int i) const
     QModelIndex idx = index(i, 0);
     QVariantHash hash;
     hash["display"] = data(idx, Qt::DisplayRole);
-    hash["continent"] = data(idx, Qt::UserRole+1);
+    hash["continent"] = data(idx, Qt::UserRole + 1);
     return hash;
 }

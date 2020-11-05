@@ -21,12 +21,12 @@
 #ifndef TIMESETTINGS_H
 #define TIMESETTINGS_H
 
-#include <QObject>
 #include <QDate>
-#include <QTime>
 #include <QIcon>
-#include <QVariant>
+#include <QObject>
 #include <QStringListModel>
+#include <QTime>
+#include <QVariant>
 
 #include <KQuickAddons/ConfigModule>
 
@@ -48,72 +48,71 @@ class TimeSettings : public KQuickAddons::ConfigModule
     Q_PROPERTY(QString timeFormat READ timeFormat WRITE setTimeFormat NOTIFY timeFormatChanged)
     Q_PROPERTY(bool twentyFour READ twentyFour WRITE setTwentyFour NOTIFY twentyFourChanged)
     Q_PROPERTY(QString timeZone READ timeZone WRITE setTimeZone NOTIFY timeZoneChanged)
-    Q_PROPERTY(QList<QObject*> timeZones READ timeZones WRITE setTimeZones NOTIFY timeZonesChanged)
-    Q_PROPERTY(QObject* timeZonesModel READ timeZonesModel WRITE setTimeZonesModel NOTIFY timeZonesModelChanged)
+    Q_PROPERTY(QList<QObject *> timeZones READ timeZones WRITE setTimeZones NOTIFY timeZonesChanged)
+    Q_PROPERTY(QObject *timeZonesModel READ timeZonesModel WRITE setTimeZonesModel NOTIFY timeZonesModelChanged)
     Q_PROPERTY(QTime currentTime READ currentTime WRITE setCurrentTime NOTIFY currentTimeChanged)
     Q_PROPERTY(QDate currentDate READ currentDate WRITE setCurrentDate NOTIFY currentDateChanged)
     Q_PROPERTY(bool useNtp READ useNtp WRITE setUseNtp NOTIFY useNtpChanged)
     Q_PROPERTY(QString currentTimeText READ currentTimeText NOTIFY currentTimeTextChanged)
     Q_PROPERTY(QString errorString READ errorString NOTIFY errorStringChanged)
 
+public:
+    /**
+     * @name Settings Module Constructor
+     *
+     * @arg parent The parent object
+     * @arg list Arguments, currently unused
+     */
+    TimeSettings(QObject *parent, const QVariantList &args);
+    ~TimeSettings() override;
 
-    public:
-        /**
-         * @name Settings Module Constructor
-         *
-         * @arg parent The parent object
-         * @arg list Arguments, currently unused
-         */
-        TimeSettings(QObject* parent, const QVariantList& args);
-        ~TimeSettings() override;
+    QString currentTimeText();
+    QTime currentTime() const;
+    void setCurrentTime(const QTime &time);
 
-        QString currentTimeText();
-        QTime currentTime() const;
-        void setCurrentTime(const QTime &time);
+    QDate currentDate() const;
+    void setCurrentDate(const QDate &date);
 
-        QDate currentDate() const;
-        void setCurrentDate(const QDate &date);
+    bool useNtp() const;
+    void setUseNtp(bool ntp);
 
-        bool useNtp() const;
-        void setUseNtp(bool ntp);
+    QString timeFormat();
+    QString timeZone();
+    QList<QObject *> timeZones();
+    QObject *timeZonesModel();
+    bool twentyFour();
 
-        QString timeFormat();
-        QString timeZone();
-        QList<QObject*> timeZones();
-        QObject* timeZonesModel();
-        bool twentyFour();
+    QString errorString();
 
-        QString errorString();
+public Q_SLOTS:
+    void setTimeZone(const QString &timezone);
+    void setTimeZones(QList<QObject *> timezones);
+    void setTimeZonesModel(QObject *timezones);
+    void setTimeFormat(const QString &timeFormat);
+    void setTwentyFour(bool t);
+    void timeout();
+    bool saveTime();
+    void notify();
+    Q_INVOKABLE void timeZoneFilterChanged(const QString &filter);
+    Q_INVOKABLE void saveTimeZone(const QString &newtimezone);
 
-    public Q_SLOTS:
-        void setTimeZone(const QString &timezone);
-        void setTimeZones(QList<QObject*> timezones);
-        void setTimeZonesModel(QObject* timezones);
-        void setTimeFormat(const QString &timeFormat);
-        void setTwentyFour(bool t);
-        void timeout();
-        bool saveTime();
-        void notify();
-        Q_INVOKABLE void timeZoneFilterChanged(const QString &filter);
-        Q_INVOKABLE void saveTimeZone(const QString &newtimezone);
+Q_SIGNALS:
+    void currentTimeTextChanged();
+    void currentTimeChanged();
+    void currentDateChanged();
+    void twentyFourChanged();
+    void timeFormatChanged();
+    void timeZoneChanged();
+    void timeZonesChanged();
+    void timeZonesModelChanged();
+    void useNtpChanged();
+    void errorStringChanged();
 
-    Q_SIGNALS:
-        void currentTimeTextChanged();
-        void currentTimeChanged();
-        void currentDateChanged();
-        void twentyFourChanged();
-        void timeFormatChanged();
-        void timeZoneChanged();
-        void timeZonesChanged();
-        void timeZonesModelChanged();
-        void useNtpChanged();
-        void errorStringChanged();
+protected:
+    QString findNtpUtility();
 
-    protected:
-        QString findNtpUtility();
-
-    private:
-        TimeSettingsPrivate* d;
+private:
+    TimeSettingsPrivate *d;
 };
 
 #endif // TIMESETTINGS_H

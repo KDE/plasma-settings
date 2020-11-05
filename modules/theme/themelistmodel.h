@@ -33,10 +33,10 @@
 
 namespace Plasma
 {
-    class FrameSvg;
+class FrameSvg;
 }
 
-//Theme selector code by Andre Duffeck (modified to add package description)
+// Theme selector code by Andre Duffeck (modified to add package description)
 class ThemeInfo
 {
 public:
@@ -51,12 +51,7 @@ class ThemeListModel : public QAbstractListModel
 {
     Q_OBJECT
 public:
-    enum { 
-        PackageNameRole = Qt::UserRole,
-        PackageDescriptionRole = Qt::UserRole + 1,
-        PackageAuthorRole = Qt::UserRole + 2,
-        PackageVersionRole = Qt::UserRole + 3
-    };
+    enum { PackageNameRole = Qt::UserRole, PackageDescriptionRole = Qt::UserRole + 1, PackageAuthorRole = Qt::UserRole + 2, PackageVersionRole = Qt::UserRole + 3 };
 
     ThemeListModel(QObject *parent = nullptr);
     ~ThemeListModel() override;
@@ -76,6 +71,5 @@ private:
 
     QMap<QString, ThemeInfo> m_themes;
 };
-
 
 #endif

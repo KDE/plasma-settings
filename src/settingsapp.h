@@ -22,8 +22,8 @@
 #ifndef SETTINGSAPP_H
 #define SETTINGSAPP_H
 
-#include <QObject>
 #include <QCommandLineParser>
+#include <QObject>
 
 class SettingsApp : public QObject
 {
@@ -32,7 +32,7 @@ class SettingsApp : public QObject
     Q_PROPERTY(bool singleModule MEMBER m_singleModule WRITE setSingleModule NOTIFY singleModuleChanged)
 
 public:
-    explicit SettingsApp(QCommandLineParser &parser, QObject *parent = nullptr );
+    explicit SettingsApp(QCommandLineParser &parser, QObject *parent = nullptr);
     ~SettingsApp() override;
 
     void setSingleModule(const bool singleModule);

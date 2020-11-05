@@ -19,30 +19,30 @@
  ***************************************************************************/
 
 // std
-#include <iostream>
 #include <iomanip>
+#include <iostream>
 
-//own
-#include "settingsapp.h"
-#include "modulesmodel.h"
+// own
 #include "module.h"
+#include "modulesmodel.h"
+#include "settingsapp.h"
 
 // Qt
 #include <QApplication>
-#include <QCommandLineParser>
 #include <QCommandLineOption>
+#include <QCommandLineParser>
 #include <QDebug>
-#include <QQmlApplicationEngine>
 #include <QIcon>
+#include <QQmlApplicationEngine>
 #include <QQmlContext>
 
 // Frameworks
 #include <KAboutData>
-#include <KLocalizedString>
 #include <KLocalizedContext>
+#include <KLocalizedString>
 #include <KPackage/PackageLoader>
-#include <KPluginMetaData>
 #include <KPluginLoader>
+#include <KPluginMetaData>
 
 #include <KPackage/Package>
 #include <KPackage/PackageLoader>
@@ -69,9 +69,7 @@ int main(int argc, char **argv)
 
     const QCommandLineOption listOption({QStringLiteral("l"), QStringLiteral("list")}, i18n("List available settings modules"));
     const QCommandLineOption formfactorOption(
-        {QStringLiteral("x"), QStringLiteral("formfactor")},
-        i18n("Limit to modules suitable for <formfactor>, e.g. handset, tablet, mediacenter, desktop, test, all (default handset)"),
-        i18n("formfactor"));
+        {QStringLiteral("x"), QStringLiteral("formfactor")}, i18n("Limit to modules suitable for <formfactor>, e.g. handset, tablet, mediacenter, desktop, test, all (default handset)"), i18n("formfactor"));
     const QCommandLineOption moduleOption({QStringLiteral("m"), QStringLiteral("module")}, i18n("Settings module to open"), i18n("modulename"));
     const QCommandLineOption singleModuleOption({QStringLiteral("s"), QStringLiteral("singleModule")}, i18n("Only show a single module, requires --module"));
     const QCommandLineOption fullscreenOption({QStringLiteral("f"), QStringLiteral("fullscreen")}, i18n("Start window fullscreen"));
@@ -95,12 +93,12 @@ int main(int argc, char **argv)
 
         auto formfactor = parser.value(formfactorOption);
 
-        for (const auto& plugin : KPackage::PackageLoader::self()->listPackages(QString(), "kpackage/kcms/")) {
+        for (const auto &plugin : KPackage::PackageLoader::self()->listPackages(QString(), "kpackage/kcms/")) {
             if (seen.contains(plugin.pluginId())) {
                 continue;
             }
             // Filter out modules that are not explicitly suitable for the "handset" formfactor
-            //const QStringList &formFactors = plugin.formFactors();
+            // const QStringList &formFactors = plugin.formFactors();
             if (!formfactor.isEmpty() && !plugin.formFactors().contains(formfactor) && formfactor != QStringLiteral("all")) {
                 continue;
             }
@@ -110,16 +108,12 @@ int main(int argc, char **argv)
             }
 
             seen << plugin.pluginId();
-            std::cout << plugin.pluginId().toLocal8Bit().data()
-            << ' '
-            << std::setw(nameWidth - plugin.pluginId().length() + 2)
-            << '.' << ' '
-            << plugin.description().toLocal8Bit().data() << std::endl;
+            std::cout << plugin.pluginId().toLocal8Bit().data() << ' ' << std::setw(nameWidth - plugin.pluginId().length() + 2) << '.' << ' ' << plugin.description().toLocal8Bit().data() << std::endl;
 
-            //qDebug() << "Formafactors: " << formFactors;
+            // qDebug() << "Formafactors: " << formFactors;
         }
 
-        for (const auto& plugin : KPluginLoader::findPlugins("kcms")) {
+        for (const auto &plugin : KPluginLoader::findPlugins("kcms")) {
             if (seen.contains(plugin.pluginId())) {
                 continue;
             }
@@ -130,11 +124,7 @@ int main(int argc, char **argv)
             if (len > nameWidth) {
                 nameWidth = len;
             }
-            std::cout << plugin.pluginId().toLocal8Bit().data()
-            << ' '
-            << std::setw(nameWidth - plugin.pluginId().length() + 2)
-            << '.' << ' '
-            << plugin.description().toLocal8Bit().data() << std::endl;
+            std::cout << plugin.pluginId().toLocal8Bit().data() << ' ' << std::setw(nameWidth - plugin.pluginId().length() + 2) << '.' << ' ' << plugin.description().toLocal8Bit().data() << std::endl;
         }
 
         return 0;

@@ -27,11 +27,11 @@
 
 K_PLUGIN_CLASS_WITH_JSON(VirtualKeyboard, "metadata.json")
 
-VirtualKeyboard::VirtualKeyboard(QObject *parent, const QVariantList &args) : KQuickAddons::ConfigModule(parent, args)
+VirtualKeyboard::VirtualKeyboard(QObject *parent, const QVariantList &args)
+    : KQuickAddons::ConfigModule(parent, args)
     , m_langModel(new LanguageModel(this))
 {
-    KAboutData* about = new KAboutData("kcm_mobile_virtualkeyboard", i18n("Virtual Keyboard"),
-                                       "1.0", QString(), KAboutLicense::GPL);
+    KAboutData *about = new KAboutData("kcm_mobile_virtualkeyboard", i18n("Virtual Keyboard"), "1.0", QString(), KAboutLicense::GPL);
     about->addAuthor(i18n("Bhushan Shah"), QString(), "bshah@kde.org");
     setAboutData(about);
 

@@ -21,8 +21,12 @@
 #include <KOSRelease>
 #include <QObject>
 
-#define PROPERTY(type, name) \
+// clang-format off
+
+#define PROPERTY(type, name)                                                                                                                                                                                                                   \
     type name() const { return m_osrelease.name(); }\
+
+// clang-format off
 
 #ifndef DISTROINFO_H
 #define DISTROINFO_H
@@ -74,7 +78,6 @@ public:
 
 private:
     KOSRelease m_osrelease;
-
 };
 
 #endif // DISTROINFO_H

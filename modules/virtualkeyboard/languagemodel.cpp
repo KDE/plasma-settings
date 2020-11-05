@@ -18,12 +18,12 @@
  * along with this program.  If not, see <http://www.gnu.org/licenses/>.
  */
 
-#include <QDirIterator>
 #include <QDebug>
+#include <QDirIterator>
 #include <QPluginLoader>
 
-#include "languagemodel.h"
 #include "gsettingsitem.h"
+#include "languagemodel.h"
 
 LanguageModel::LanguageModel(QObject *parent)
     : QAbstractListModel(parent)
@@ -44,9 +44,9 @@ void LanguageModel::loadPlugins()
         langPaths << it.next();
     }
     m_languages.clear();
-    for (const auto& langPath : qAsConst(langPaths)) {
+    for (const auto &langPath : qAsConst(langPaths)) {
         QPluginLoader langPlugin(langPath);
-        const auto& metadata = langPlugin.metaData().value("MetaData").toObject();
+        const auto &metadata = langPlugin.metaData().value("MetaData").toObject();
         Data lang;
         lang.langName = metadata.value("Language").toString();
         lang.langCode = metadata.value("LanguageId").toString();
@@ -93,8 +93,7 @@ bool LanguageModel::setData(const QModelIndex &index, const QVariant &value, int
     }
 
     QStringList enabledLangs;
-    for (const auto &data : m_languages)
-    {
+    for (const auto &data : m_languages) {
         if (data.enabled) {
             enabledLangs << data.langCode;
         }
@@ -111,9 +110,5 @@ int LanguageModel::rowCount(const QModelIndex &parent) const
 
 QHash<int, QByteArray> LanguageModel::roleNames() const
 {
-    return {
-         {NameRole, "name"},
-         {EnabledRole, "enabled"},
-         {LanguageIdRole, "langId"}
-    };
+    return {{NameRole, "name"}, {EnabledRole, "enabled"}, {LanguageIdRole, "langId"}};
 }

@@ -25,14 +25,13 @@
 
 K_PLUGIN_CLASS_WITH_JSON(CellularNetwork, "cellularnetwork.json")
 
-CellularNetwork::CellularNetwork(QObject *parent, const QVariantList &args) : KQuickAddons::ConfigModule(parent, args)
+CellularNetwork::CellularNetwork(QObject *parent, const QVariantList &args)
+    : KQuickAddons::ConfigModule(parent, args)
 {
-    KAboutData* about = new KAboutData("kcm_mobile_cellularnetwork", i18n("Cellular Networks"),
-                                       "1.0", QString(), KAboutLicense::GPL);
+    KAboutData *about = new KAboutData("kcm_mobile_cellularnetwork", i18n("Cellular Networks"), "1.0", QString(), KAboutLicense::GPL);
     about->addAuthor(i18n("Dimitris Kardarakos"), QString(), "dimkard@posteo.net");
     setAboutData(about);
 
     qDebug() << "Cellular Networks module loaded";
-
 }
 #include "cellularnetwork.moc"

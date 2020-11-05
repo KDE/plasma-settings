@@ -28,7 +28,7 @@ class CellularNetwork : public KQuickAddons::ConfigModule
     Q_OBJECT
 
 public:
-    CellularNetwork(QObject* parent, const QVariantList& args);
+    CellularNetwork(QObject *parent, const QVariantList &args);
 };
 
 #endif

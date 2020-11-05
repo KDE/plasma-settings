@@ -20,27 +20,27 @@
 
 #include "modulesmodel.h"
 
-#include <QSet>
 #include <QQuickItem>
+#include <QSet>
 
 #include <KPackage/PackageLoader>
-#include <KPluginLoader>
 #include <KPluginFactory>
+#include <KPluginLoader>
 
 #include <KDeclarative/KDeclarative>
 
 #include <QDebug>
 
-ModulesModel::ModulesModel(QObject* parent)
+ModulesModel::ModulesModel(QObject *parent)
     : QAbstractListModel(parent)
 {
     qDebug() << "Current platform is " << KDeclarative::KDeclarative::runtimePlatform();
-    for (const KPluginMetaData& pluginMetaData : KPackage::PackageLoader::self()->listPackages(QString(), "kpackage/kcms/")) {
+    for (const KPluginMetaData &pluginMetaData : KPackage::PackageLoader::self()->listPackages(QString(), "kpackage/kcms/")) {
         bool isCurrentPlatform = false;
         if (KDeclarative::KDeclarative::runtimePlatform().isEmpty()) {
             isCurrentPlatform = true;
         } else {
-            for (const QString& platform : KDeclarative::KDeclarative::runtimePlatform()) {
+            for (const QString &platform : KDeclarative::KDeclarative::runtimePlatform()) {
                 if (pluginMetaData.formFactors().contains(platform)) {
                     qDebug() << "Platform for " << pluginMetaData.name() << " is " << pluginMetaData.formFactors();
                     isCurrentPlatform = true;
@@ -55,12 +55,9 @@ ModulesModel::ModulesModel(QObject* parent)
     }
 }
 
-QVariant ModulesModel::data(const QModelIndex& index, int role) const
+QVariant ModulesModel::data(const QModelIndex &index, int role) const
 {
-    if (!index.isValid()
-        || index.row() < 0
-        || index.row() >= rowCount())
-    {
+    if (!index.isValid() || index.row() < 0 || index.row() >= rowCount()) {
         return {};
     }
 
@@ -69,63 +66,56 @@ QVariant ModulesModel::data(const QModelIndex& index, int role) const
     Data &d = const_cast<ModulesModel *>(this)->m_plugins[index.row()];
 
     switch (role) {
-        case NameRole:
-            return d.plugin.name();
-        case DescriptionRole:
-            return d.plugin.description();
-        case IconNameRole:
-            return d.plugin.iconName();
-        case KcmRole: {
-
-            if(!d.kcm) {
-                d.kcm = instantiateKcm(d.plugin.pluginId());
-            }
-
-            return QVariant::fromValue(d.kcm.data());
+    case NameRole:
+        return d.plugin.name();
+    case DescriptionRole:
+        return d.plugin.description();
+    case IconNameRole:
+        return d.plugin.iconName();
+    case KcmRole: {
+        if (!d.kcm) {
+            d.kcm = instantiateKcm(d.plugin.pluginId());
         }
+
+        return QVariant::fromValue(d.kcm.data());
+    }
     }
 
     return {};
 }
 
-int ModulesModel::rowCount(const QModelIndex& parent) const
+int ModulesModel::rowCount(const QModelIndex &parent) const
 {
     return parent.isValid() ? 0 : m_plugins.size();
 }
 
 QHash<int, QByteArray> ModulesModel::roleNames() const
 {
-    return {
-         {NameRole, "name"},
-         {DescriptionRole, "description"},
-         {IconNameRole, "iconName"},
-         {KcmRole, "kcm"}
-    };
+    return {{NameRole, "name"}, {DescriptionRole, "description"}, {IconNameRole, "iconName"}, {KcmRole, "kcm"}};
 }
 
-KQuickAddons::ConfigModule *ModulesModel::instantiateKcm(const QString& name) const
+KQuickAddons::ConfigModule *ModulesModel::instantiateKcm(const QString &name) const
 {
     const QString pluginPath = KPluginLoader::findPlugin(QLatin1String("kcms/") + name);
 
     KPluginLoader loader(pluginPath);
-    KPluginFactory* factory = loader.factory();
+    KPluginFactory *factory = loader.factory();
 
     KQuickAddons::ConfigModule *kcm = nullptr;
 
-   /* connect(qApp, &QCoreApplication::aboutToQuit, this, [this, kcm](){
-        QQuickItem *ui = kcm->mainUi();
-        if (ui) {
-            ui->setParentItem(nullptr);
-        }
-    });*/
+    /* connect(qApp, &QCoreApplication::aboutToQuit, this, [this, kcm](){
+         QQuickItem *ui = kcm->mainUi();
+         if (ui) {
+             ui->setParentItem(nullptr);
+         }
+     });*/
     if (!factory) {
         qWarning() << "Error loading KCM plugin:" << loader.errorString();
     } else {
-        kcm = factory->create<KQuickAddons::ConfigModule >(const_cast<ModulesModel *>(this));
+        kcm = factory->create<KQuickAddons::ConfigModule>(const_cast<ModulesModel *>(this));
         if (!kcm) {
             qWarning() << "Error creating object from plugin" << loader.fileName();
         }
     }
     return kcm;
 }
-

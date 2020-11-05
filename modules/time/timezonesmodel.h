@@ -22,12 +22,12 @@
 
 #include <QStandardItemModel>
 
-class TimeZonesModel: public QStandardItemModel
+class TimeZonesModel : public QStandardItemModel
 {
     Q_OBJECT
 
 public:
-    TimeZonesModel(QObject *parent=nullptr);
+    TimeZonesModel(QObject *parent = nullptr);
 
     Q_INVOKABLE QVariantHash get(int i) const;
     QHash<int, QByteArray> roleNames() const override;

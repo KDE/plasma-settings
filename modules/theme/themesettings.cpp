@@ -24,20 +24,18 @@
 #include <QDBusConnection>
 #include <QDBusMessage>
 
-#include <KPluginFactory>
-#include <KLocalizedString>
 #include <KAboutData>
+#include <KLocalizedString>
+#include <KPluginFactory>
 
 #include <Plasma/Theme>
 
 K_PLUGIN_FACTORY_WITH_JSON(ThemeSettingsFactory, "themesettings.json", registerPlugin<ThemeSettings>();)
 
-
-ThemeSettings::ThemeSettings(QObject* parent, const QVariantList& args)
+ThemeSettings::ThemeSettings(QObject *parent, const QVariantList &args)
     : KQuickAddons::ConfigModule(parent, args)
 {
-    KAboutData* about = new KAboutData("kcm_mobile_theme", i18n("Appearance"),
-                                       "1.0", QString(), KAboutLicense::LGPL);
+    KAboutData *about = new KAboutData("kcm_mobile_theme", i18n("Appearance"), "1.0", QString(), KAboutLicense::LGPL);
     about->addAuthor(i18n("Sebastian Kügler"), QString(), "sebas@kde.org");
     setAboutData(about);
     setButtons(Apply | Default);
@@ -58,10 +56,9 @@ ThemeSettings::ThemeSettings(QObject* parent, const QVariantList& args)
     qDebug() << "Font: " << m_font << m_font.pointSize();
 }
 
-ThemeSettings::~ThemeSettings()
-= default;
+ThemeSettings::~ThemeSettings() = default;
 
-void ThemeSettings::setThemeName(const QString& theme)
+void ThemeSettings::setThemeName(const QString &theme)
 {
     if (theme != m_themeName) {
         m_themeName = theme;
@@ -101,11 +98,7 @@ void ThemeSettings::setFontSize(int pointSize)
     QDBusMessage message = QDBusMessage::createSignal("/KDEPlatformTheme", "org.kde.KDEPlatformTheme", "refreshFonts");
     QDBusConnection::sessionBus().send(message);
 
-    //qApp->processEvents(); // Process font change ourselves
-
+    // qApp->processEvents(); // Process font change ourselves
 }
-
-
-
 
 #include "themesettings.moc"

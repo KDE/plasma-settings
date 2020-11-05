@@ -32,19 +32,15 @@ struct Data {
 
 class LanguageModel : public QAbstractListModel
 {
-    enum ModelRoles {
-        NameRole = Qt::DisplayRole,
-        EnabledRole = Qt::UserRole+1,
-        LanguageIdRole
-    };
+    enum ModelRoles { NameRole = Qt::DisplayRole, EnabledRole = Qt::UserRole + 1, LanguageIdRole };
 
     Q_OBJECT
 public:
     LanguageModel(QObject *parent);
 
-    QVariant data(const QModelIndex& index, int role) const override;
-    int rowCount(const QModelIndex& parent = QModelIndex()) const override;
-    bool setData(const QModelIndex& index, const QVariant &value, int role) override;
+    QVariant data(const QModelIndex &index, int role) const override;
+    int rowCount(const QModelIndex &parent = QModelIndex()) const override;
+    bool setData(const QModelIndex &index, const QVariant &value, int role) override;
 
     QHash<int, QByteArray> roleNames() const override;
 

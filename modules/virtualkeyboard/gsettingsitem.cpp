@@ -17,8 +17,8 @@
  *
  */
 
-#include <QString>
 #include <QDebug>
+#include <QString>
 
 #include "gsettingsitem.h"
 
@@ -44,9 +44,9 @@ QVariant GSettingsItem::value(const QString &key) const
             GVariantIter iter;
             QStringList list;
             const gchar *str;
-            g_variant_iter_init (&iter, gvalue);
-            while (g_variant_iter_next (&iter, "&s", &str)) {
-                list.append (str);
+            g_variant_iter_init(&iter, gvalue);
+            while (g_variant_iter_next(&iter, "&s", &str)) {
+                list.append(str);
             }
             return QVariant(list);
         }
@@ -86,7 +86,7 @@ void GSettingsItem::set(const QString &key, const QVariant &val)
             const QStringList list = val.toStringList();
             GVariantBuilder builder;
             g_variant_builder_init(&builder, G_VARIANT_TYPE_STRING_ARRAY);
-            for (const QString& string : list) {
+            for (const QString &string : list) {
                 g_variant_builder_add(&builder, "s", string.toUtf8().constData());
             }
 
@@ -110,7 +110,7 @@ bool GSettingsItem::isValid() const
 }
 
 GSettingsItem::GSettingsItem(const QString &key, QObject *parent)
-    : QObject (parent)
+    : QObject(parent)
 {
     const char schemaId[] = "org.maliit.keyboard.maliit";
 

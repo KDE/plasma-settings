@@ -27,13 +27,13 @@
 class VirtualKeyboard : public KQuickAddons::ConfigModule
 {
     Q_OBJECT
-    Q_PROPERTY(LanguageModel* languageModel MEMBER m_langModel CONSTANT)
+    Q_PROPERTY(LanguageModel *languageModel MEMBER m_langModel CONSTANT)
 
 public:
-    VirtualKeyboard(QObject* parent, const QVariantList& args);
+    VirtualKeyboard(QObject *parent, const QVariantList &args);
 
 private:
-    LanguageModel* m_langModel;
+    LanguageModel *m_langModel;
 };
 
 #endif

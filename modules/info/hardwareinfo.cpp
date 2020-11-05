@@ -18,7 +18,6 @@
  * along with this program.  If not, see <http://www.gnu.org/licenses/>.
  */
 
-
 #include "hardwareinfo.h"
 
 #include <KCoreAddons>
@@ -32,8 +31,8 @@
 #ifdef Q_OS_LINUX
 #include <sys/sysinfo.h>
 #elif defined(Q_OS_FREEBSD)
-#include <sys/types.h>
 #include <sys/sysctl.h>
+#include <sys/types.h>
 #endif
 
 HardwareInfo::HardwareInfo(QObject *parent)
@@ -41,11 +40,13 @@ HardwareInfo::HardwareInfo(QObject *parent)
 {
 }
 
-int HardwareInfo::processorCount() const {
+int HardwareInfo::processorCount() const
+{
     return Solid::Device::listFromType(Solid::DeviceInterface::Processor).count();
 }
 
-QString HardwareInfo::processors() const {
+QString HardwareInfo::processors() const
+{
     const auto list = Solid::Device::listFromType(Solid::DeviceInterface::Processor);
 
     // Format processor string
@@ -81,7 +82,8 @@ QString HardwareInfo::memory() const
 {
     qlonglong totalRam = -1;
 #ifdef Q_OS_LINUX
-    struct sysinfo info{};
+    struct sysinfo info {
+    };
     if (sysinfo(&info) == 0)
         // manpage "sizes are given as multiples of mem_unit bytes"
         totalRam = qlonglong(info.totalram) * info.mem_unit;

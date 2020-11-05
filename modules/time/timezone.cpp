@@ -22,27 +22,27 @@
 
 #include "timezone.h"
 
-#include <QDebug>
 #include <KLocale>
 #include <KSystemTimeZone>
 #include <KTimeZone>
+#include <QDebug>
 
-
-class TimeZonePrivate {
+class TimeZonePrivate
+{
 public:
-    TimeZone *q{};
+    TimeZone *q {};
     KTimeZone zone;
     QString name;
 };
 
-TimeZone::TimeZone(const KTimeZone &zone, QObject* parent)
+TimeZone::TimeZone(const KTimeZone &zone, QObject *parent)
     : QObject(parent)
 {
     d = new TimeZonePrivate;
     d->q = this;
     d->zone = zone;
     setName(zone.name());
-    //qDebug() << "new tz: " << d->name;
+    // qDebug() << "new tz: " << d->name;
 }
 
 TimeZone::~TimeZone()

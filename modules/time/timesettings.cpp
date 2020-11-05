@@ -1,25 +1,25 @@
 /**************************************************************************
-*                                                                         *
-*   Copyright 2005 S.R.Haque <srhaque@iee.org>.                           *
-*   Copyright 2009 David Faure <faure@kde.org>                            *
-*   Copyright 2011-2015 Sebastian Kügler <sebas@kde.org>                  *
-*   Copyright 2015 David Edmundson <davidedmundson@kde.org>               *
-*                                                                         *
-*   This program is free software; you can redistribute it and/or modify  *
-*   it under the terms of the GNU General Public License as published by  *
-*   the Free Software Foundation; either version 2 of the License, or     *
-*   (at your option) any later version.                                   *
-*                                                                         *
-*   This program is distributed in the hope that it will be useful,       *
-*   but WITHOUT ANY WARRANTY; without even the implied warranty of        *
-*   MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the         *
-*   GNU General Public License for more details.                          *
-*                                                                         *
-*   You should have received a copy of the GNU General Public License     *
-*   along with this program; if not, write to the                         *
-*   Free Software Foundation, Inc.,                                       *
-*   51 Franklin Street, Fifth Floor, Boston, MA  02110-1301  USA .        *
-***************************************************************************/
+ *                                                                         *
+ *   Copyright 2005 S.R.Haque <srhaque@iee.org>.                           *
+ *   Copyright 2009 David Faure <faure@kde.org>                            *
+ *   Copyright 2011-2015 Sebastian Kügler <sebas@kde.org>                  *
+ *   Copyright 2015 David Edmundson <davidedmundson@kde.org>               *
+ *                                                                         *
+ *   This program is free software; you can redistribute it and/or modify  *
+ *   it under the terms of the GNU General Public License as published by  *
+ *   the Free Software Foundation; either version 2 of the License, or     *
+ *   (at your option) any later version.                                   *
+ *                                                                         *
+ *   This program is distributed in the hope that it will be useful,       *
+ *   but WITHOUT ANY WARRANTY; without even the implied warranty of        *
+ *   MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the         *
+ *   GNU General Public License for more details.                          *
+ *                                                                         *
+ *   You should have received a copy of the GNU General Public License     *
+ *   along with this program; if not, write to the                         *
+ *   Free Software Foundation, Inc.,                                       *
+ *   51 Franklin Street, Fifth Floor, Boston, MA  02110-1301  USA .        *
+ ***************************************************************************/
 
 #include "timesettings.h"
 #include "timezone.h"
@@ -28,59 +28,54 @@
 #include <QDebug>
 #include <QtCore/QDate>
 
-
-#include <QStandardItemModel>
 #include <QDBusConnection>
 #include <QDBusMessage>
+#include <QStandardItemModel>
 #include <QTimer>
 #include <QVariant>
 
-
 #include <KAboutData>
+#include <KConfigGroup>
+#include <KLocalizedString>
 #include <KPluginFactory>
 #include <KSharedConfig>
-#include <KConfigGroup>
 #include <KSystemTimeZone>
 #include <KTimeZone>
-#include <KLocalizedString>
 #include <utility>
 
 #include "timedated_interface.h"
-
 
 #define FORMAT24H "HH:mm:ss"
 #define FORMAT12H "h:mm:ss ap"
 
 K_PLUGIN_FACTORY_WITH_JSON(TimeSettingsFactory, "timesettings.json", registerPlugin<TimeSettings>();)
 
-
-class TimeSettingsPrivate {
+class TimeSettingsPrivate
+{
 public:
-    TimeSettings *q{};
+    TimeSettings *q {};
     QString timeFormat;
     QString timezone;
-    QObject *timeZonesModel{};
+    QObject *timeZonesModel {};
     QString timeZoneFilter;
     QString currentTimeText;
     QTime currentTime;
     QDate currentDate;
-    QTimer *timer{};
-    bool useNtp{};
+    QTimer *timer {};
+    bool useNtp {};
     QString errorString;
-
 
     void initSettings();
     void initTimeZones();
     QString displayName(const KTimeZone &zone);
 
-
     KSharedConfigPtr localeConfig;
     KConfigGroup localeSettings;
-    KTimeZones *timeZones{};
-    QList<QObject*> timezones;
+    KTimeZones *timeZones {};
+    QList<QObject *> timezones;
 };
 
-TimeSettings::TimeSettings(QObject* parent, const QVariantList& args)
+TimeSettings::TimeSettings(QObject *parent, const QVariantList &args)
     : KQuickAddons::ConfigModule(parent, args)
 {
     qDebug() << "time settings init";
@@ -90,8 +85,7 @@ TimeSettings::TimeSettings(QObject* parent, const QVariantList& args)
     d->timeZonesModel = nullptr;
     setTimeZone(KSystemTimeZones::local().name());
 
-    KAboutData* about = new KAboutData("kcm_mobile_time", i18n("Date and Time"),
-                                       "0.1", QString(), KAboutLicense::LGPL);
+    KAboutData *about = new KAboutData("kcm_mobile_time", i18n("Date and Time"), "0.1", QString(), KAboutLicense::LGPL);
     about->addAuthor(i18n("Sebastian Kügler"), QString(), "sebas@kde.org");
     setAboutData(about);
     setButtons(Apply | Default);
@@ -127,32 +121,32 @@ void TimeSettingsPrivate::initTimeZones()
         cities.append(utc.name());
         zonesByCity.insert(utc.name(), utc);
     }
-    //qDebug() << " TZ: cities: " << cities;
+    // qDebug() << " TZ: cities: " << cities;
 
     const KTimeZones::ZoneMap zones = timeZones->zones();
 
-    QList<QObject*> _zones;
+    QList<QObject *> _zones;
     QStandardItemModel *_zonesModel = new TimeZonesModel(q);
 
-    for ( KTimeZones::ZoneMap::ConstIterator it = zones.begin(); it != zones.end(); ++it ) {
-        const KTimeZone& zone = it.value();
+    for (KTimeZones::ZoneMap::ConstIterator it = zones.begin(); it != zones.end(); ++it) {
+        const KTimeZone &zone = it.value();
         if (timeZoneFilter.isEmpty() || zone.name().contains(timeZoneFilter, Qt::CaseInsensitive)) {
             auto *_zone = new TimeZone(zone);
             _zones.append(_zone);
             QStandardItem *item = new QStandardItem(_zone->name());
-            item->setData(_zone->name().split('/').first(), Qt::UserRole+1);
+            item->setData(_zone->name().split('/').first(), Qt::UserRole + 1);
             _zonesModel->appendRow(item);
         }
     }
     qDebug() << "Found: " << _zones.count() << " timezones.";
-    //qSort( cities.begin(), cities.end(), localeLessThan );
+    // qSort( cities.begin(), cities.end(), localeLessThan );
     q->setTimeZones(_zones);
     q->setTimeZonesModel(_zonesModel);
 }
 
-QString TimeSettingsPrivate::displayName( const KTimeZone &zone )
+QString TimeSettingsPrivate::displayName(const KTimeZone &zone)
 {
-    return zone.name().toUtf8().replace( '_', ' ' );
+    return zone.name().toUtf8().replace('_', ' ');
 }
 
 void TimeSettingsPrivate::initSettings()
@@ -160,13 +154,12 @@ void TimeSettingsPrivate::initSettings()
     localeConfig = KSharedConfig::openConfig("kdeglobals", KConfig::SimpleConfig);
     localeSettings = KConfigGroup(localeConfig, "Locale");
 
-    q->setTimeFormat( localeSettings.readEntry( "TimeFormat", QString(FORMAT24H) ) ); // FIXME?!
+    q->setTimeFormat(localeSettings.readEntry("TimeFormat", QString(FORMAT24H))); // FIXME?!
 
     OrgFreedesktopTimedate1Interface timeDatedIface("org.freedesktop.timedate1", "/org/freedesktop/timedate1", QDBusConnection::systemBus());
-    //the server list is not relevant for timesyncd, it fetches it from the network
+    // the server list is not relevant for timesyncd, it fetches it from the network
     useNtp = timeDatedIface.nTP();
 }
-
 
 void TimeSettings::timeout()
 {
@@ -174,7 +167,6 @@ void TimeSettings::timeout()
     setCurrentDate(QDate::currentDate());
     notify();
 }
-
 
 QString TimeSettings::currentTimeText()
 {
@@ -224,14 +216,13 @@ void TimeSettings::setUseNtp(bool ntp)
 
 bool TimeSettings::saveTime()
 {
-
     OrgFreedesktopTimedate1Interface timedateIface("org.freedesktop.timedate1", "/org/freedesktop/timedate1", QDBusConnection::systemBus());
 
     bool rc = true;
-    //final arg in each method is "user-interaction" i.e whether it's OK for polkit to ask for auth
+    // final arg in each method is "user-interaction" i.e whether it's OK for polkit to ask for auth
 
-    //we cannot send requests up front then block for all replies as we need NTP to be disabled before we can make a call to SetTime
-    //timedated processes these in parallel and will return an error otherwise
+    // we cannot send requests up front then block for all replies as we need NTP to be disabled before we can make a call to SetTime
+    // timedated processes these in parallel and will return an error otherwise
 
     auto reply = timedateIface.SetNTP(useNtp(), true);
     reply.waitForFinished();
@@ -284,7 +275,6 @@ void TimeSettings::saveTimeZone(const QString &newtimezone)
     notify();
 }
 
-
 QString TimeSettings::timeFormat()
 {
     return d->timeFormat;
@@ -322,7 +312,7 @@ void TimeSettings::setTimeZone(const QString &timezone)
     }
 }
 
-QList<QObject*> TimeSettings::timeZones()
+QList<QObject *> TimeSettings::timeZones()
 {
     if (!d->timeZones) {
         d->initTimeZones();
@@ -330,13 +320,13 @@ QList<QObject*> TimeSettings::timeZones()
     return d->timezones;
 }
 
-void TimeSettings::setTimeZones(QList<QObject*> timezones)
+void TimeSettings::setTimeZones(QList<QObject *> timezones)
 {
     d->timezones = std::move(timezones);
     emit timeZonesChanged();
 }
 
-QObject* TimeSettings::timeZonesModel()
+QObject *TimeSettings::timeZonesModel()
 {
     if (!d->timeZones) {
         d->initTimeZones();
@@ -344,7 +334,7 @@ QObject* TimeSettings::timeZonesModel()
     return d->timeZonesModel;
 }
 
-void TimeSettings::setTimeZonesModel(QObject* timezones)
+void TimeSettings::setTimeZonesModel(QObject *timezones)
 {
     d->timeZonesModel = timezones;
     emit timeZonesModelChanged();
@@ -387,8 +377,6 @@ void TimeSettings::notify()
 {
     QDBusMessage msg = QDBusMessage::createSignal("/org/kde/kcmshell_clock", "org.kde.kcmshell_clock", "clockUpdated");
     QDBusConnection::sessionBus().send(msg);
-
 }
-
 
 #include "timesettings.moc"

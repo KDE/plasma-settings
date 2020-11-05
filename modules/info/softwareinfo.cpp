@@ -18,16 +18,15 @@
  * along with this program.  If not, see <http://www.gnu.org/licenses/>.
  */
 
-
 #include "softwareinfo.h"
 #include <sys/utsname.h>
 
+#include <KConfigGroup>
 #include <KCoreAddons>
+#include <KDesktopFile>
+#include <KLocalizedString>
 #include <QDebug>
 #include <QStandardPaths>
-#include <KDesktopFile>
-#include <KConfigGroup>
-#include <KLocalizedString>
 
 SoftwareInfo::SoftwareInfo(QObject *parent)
     : QObject(parent)
@@ -36,7 +35,8 @@ SoftwareInfo::SoftwareInfo(QObject *parent)
 
 QString SoftwareInfo::kernelRelease() const
 {
-    struct utsname utsName{};
+    struct utsname utsName {
+    };
     uname(&utsName);
 
     return QString::fromLatin1(utsName.release);
@@ -54,8 +54,7 @@ QString SoftwareInfo::qtVersion() const
 
 QString SoftwareInfo::plasmaVersion() const
 {
-    const QStringList &filePaths = QStandardPaths::locateAll(QStandardPaths::GenericDataLocation,
-                                                             QStringLiteral("xsessions/plasma.desktop"));
+    const QStringList &filePaths = QStandardPaths::locateAll(QStandardPaths::GenericDataLocation, QStringLiteral("xsessions/plasma.desktop"));
 
     if (filePaths.length() < 1) {
         return QString();
