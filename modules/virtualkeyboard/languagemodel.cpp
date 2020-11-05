@@ -39,12 +39,10 @@ void LanguageModel::loadPlugins()
     const QStringList enabledLangs = m_gsettings.value("enabled-languages").toStringList();
 
     QStringList langPaths;
-    const QString prefix = qgetenv("MALIIT_KEYBOARD_LANGUAGES_PATH");
-    QDirIterator it(prefix, {"*plugin.so"}, QDir::NoFilter, QDirIterator::Subdirectories);
+    QDirIterator it(QStringLiteral(MALIIT_KEYBOARD_LANGUAGES_DIR), {"*plugin.so"}, QDir::NoFilter, QDirIterator::Subdirectories);
     while (it.hasNext()) {
         langPaths << it.next();
     }
-
     m_languages.clear();
     for (const auto& langPath : qAsConst(langPaths)) {
         QPluginLoader langPlugin(langPath);
