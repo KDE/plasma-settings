@@ -24,22 +24,18 @@ import QtQuick.Layouts 1.1
 import QtQuick.Controls 2.14 as Controls
 import org.kde.kirigami 2.10 as Kirigami
 
-KCM.SimpleKCM {
+KCM.ScrollViewKCM {
 
     title: i18n("Virtual Keyboard")
-    ColumnLayout {
-        width: parent.width
-        spacing: Kirigami.Units.gridUnit * 0.5
 
-        Repeater {
-            model: kcm.languageModel
-            delegate: Controls.CheckDelegate {
-                Layout.fillWidth: true
-                text: model.name
-                checked: model.enabled
-                onCheckedChanged: {
-                    model.enabled = checked
-                }
+    view: ListView {
+        model: kcm.languageModel
+        delegate: Controls.CheckDelegate {
+            width: parent.width
+            text: model.name
+            checked: model.enabled
+            onCheckedChanged: {
+                model.enabled = checked
             }
         }
     }
