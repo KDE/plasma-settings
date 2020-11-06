@@ -25,9 +25,9 @@
 #include "gsettingsitem.h"
 #include "languagemodel.h"
 
-LanguageModel::LanguageModel(QObject *parent)
+LanguageModel::LanguageModel(QObject *parent, GSettingsItem *settings)
     : QAbstractListModel(parent)
-    , m_gsettings(GSettingsItem("/org/maliit/keyboard/maliit/", parent))
+    , m_gsettings(settings)
 {
     beginResetModel();
     loadPlugins();
@@ -36,7 +36,7 @@ LanguageModel::LanguageModel(QObject *parent)
 
 void LanguageModel::loadPlugins()
 {
-    const QStringList enabledLangs = m_gsettings.value("enabled-languages").toStringList();
+    const QStringList enabledLangs = m_gsettings->value("enabled-languages").toStringList();
 
     QStringList langPaths;
     QDirIterator it(QStringLiteral(MALIIT_KEYBOARD_LANGUAGES_DIR), {"*plugin.so"}, QDir::NoFilter, QDirIterator::Subdirectories);
@@ -98,7 +98,7 @@ bool LanguageModel::setData(const QModelIndex &index, const QVariant &value, int
             enabledLangs << data.langCode;
         }
     }
-    m_gsettings.set("enabled-languages", enabledLangs);
+    m_gsettings->set("enabled-languages", enabledLangs);
     return QAbstractListModel::setData(index, value, role);
 }
 

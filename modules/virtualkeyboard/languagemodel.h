@@ -36,7 +36,7 @@ class LanguageModel : public QAbstractListModel
 
     Q_OBJECT
 public:
-    LanguageModel(QObject *parent);
+    LanguageModel(QObject *parent, GSettingsItem *gsettingsItem);
 
     QVariant data(const QModelIndex &index, int role) const override;
     int rowCount(const QModelIndex &parent = QModelIndex()) const override;
@@ -47,7 +47,7 @@ public:
 private:
     QVector<Data> m_languages;
     void loadPlugins();
-    GSettingsItem m_gsettings;
+    GSettingsItem *m_gsettings;
 };
 
 #endif
