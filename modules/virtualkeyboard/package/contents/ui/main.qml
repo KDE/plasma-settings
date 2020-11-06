@@ -23,13 +23,18 @@ import QtQuick.Layouts 1.1
 
 import QtQuick.Controls 2.14 as Controls
 import org.kde.kirigami 2.10 as Kirigami
+import org.kde.kitemmodels 1.0 as KItemModel
 
 KCM.ScrollViewKCM {
 
     title: i18n("Virtual Keyboard")
 
     view: ListView {
-        model: kcm.languageModel
+        model: KItemModel.KSortFilterProxyModel {
+            sourceModel: kcm.languageModel
+            sortRole: "name"
+            sortOrder: Qt.Ascending
+        }
         delegate: Controls.CheckDelegate {
             width: parent.width
             text: model.name
