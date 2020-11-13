@@ -18,8 +18,8 @@
  */
 
 import QtQuick 2.1
-import org.kde.plasma.core 2.0 as PlasmaCore
-import org.kde.plasma.components 2.0 as PlasmaComponents
+
+import org.kde.kirigami 2.4 as Kirigami
 
 
 //FIXME: shouldn't be a FrameSvgItem
@@ -36,7 +36,7 @@ Item {
     property bool twentyFour: true
 
     property int fontSize: 14
-    property int _margin: units.gridUnit
+    property int _margin: Kirigami.Units.gridUnit
 
     property string timeString: clockRow.twoDigitString(hours) + ":" + clockRow.twoDigitString(minutes) + ":" +  clockRow.twoDigitString(seconds)
 
@@ -86,14 +86,14 @@ Item {
     Rectangle {
         color: "transparent"
         opacity: 0.3
-        border.color: theme.textColor
+        border.color: Kirigami.Theme.textColor
         border.width: 1
         anchors.fill: parent
     }
 
     Row {
         id: clockRow
-        spacing: units.gridUnit
+        spacing: Kirigami.Units.gridUnit
         x: root._margin
         y: root._margin
 
@@ -116,7 +116,7 @@ Item {
                 property int ownIndex: index
                 text: (!root.twentyFour && index == 0) ? "12" : clockRow.twoDigitString(index)
                 font.pointSize: root.fontSize
-                color: theme.textColor
+                color: Kirigami.Theme.textColor
                 opacity: PathView.itemOpacity
             }
             onSelectedIndexChanged: {
@@ -131,13 +131,10 @@ Item {
                 }
             }
         }
-        PlasmaCore.SvgItem {
-            svg: PlasmaCore.Svg {imagePath: "widgets/line"}
-            elementId: "vertical-line"
-            width: naturalSize.width
+        Kirigami.Separator {
             anchors {
                 top: parent.top
-                bottom:parent.bottom
+                bottom: parent.bottom
             }
         }
         Digit {
@@ -150,13 +147,10 @@ Item {
                 }
             }
         }
-        PlasmaCore.SvgItem {
-            svg: PlasmaCore.Svg {imagePath: "widgets/line"}
-            elementId: "vertical-line"
-            width: naturalSize.width
+        Kirigami.Separator {
             anchors {
                 top: parent.top
-                bottom:parent.bottom
+                bottom: parent.bottom
             }
         }
         Digit {
@@ -169,15 +163,12 @@ Item {
                 }
             }
         }
-        PlasmaCore.SvgItem {
+        Kirigami.Separator {
             opacity: meridiaeDigit.opacity == 0 ? 0 : 1
 
-            svg: PlasmaCore.Svg {imagePath: "widgets/line"}
-            elementId: "vertical-line"
-            width: naturalSize.width
             anchors {
                 top: parent.top
-                bottom:parent.bottom
+                bottom: parent.bottom
             }
             Behavior on opacity {
                 NumberAnimation {
@@ -204,7 +195,7 @@ Item {
                 horizontalAlignment: Text.AlignLeft
                 property int ownIndex: index
                 text: meridiae
-                color: theme.textColor
+                color: Kirigami.Theme.textColor
                 font.pointSize: root.fontSize
                 //opacity: PathView.itemOpacity
             }

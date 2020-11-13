@@ -18,6 +18,7 @@
  */
 
 import QtQuick 2.7
+import org.kde.kirigami 2.4 as Kirigami
 
 
 Item {
@@ -54,7 +55,7 @@ Item {
             width: spinnerView.width
             property int ownIndex: index
             text: index < 10 ? "0"+index : index
-            color: theme.textColor
+            color: Kirigami.Theme.textColor
             font.pointSize: root.fontSize
             opacity: PathView.itemOpacity
         }

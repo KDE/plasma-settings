@@ -18,7 +18,7 @@
  */
 
 import QtQuick 2.1
-import org.kde.plasma.core 2.0 as PlasmaCore
+import org.kde.kirigami 2.5 as Kirigami
 //import "private"
 
 //FIXME: shouldn't be a FrameSvgItem
@@ -36,7 +36,7 @@ Item {
     property string isoDate: year + "-" + clockRow.twoDigitString(month) + "-" + clockRow.twoDigitString(day)
 
     property int fontSize: 14
-    property int _margin: units.gridUnit
+    property int _margin: Kirigami.Units.gridUnit
 
     opacity: enabled ? 1.0 : 0.5
 
@@ -112,13 +112,10 @@ Item {
                 opacity: PathView.itemOpacity
             }
         }
-        PlasmaCore.SvgItem {
-            svg: PlasmaCore.Svg {imagePath: "widgets/line"}
-            elementId: "vertical-line"
-            width: naturalSize.width
+        Kirigami.Separator {
             anchors {
                 top: parent.top
-                bottom:parent.bottom
+                bottom: parent.bottom
             }
         }
         Digit {
@@ -148,10 +145,7 @@ Item {
                 text: "0000"
             }
         }
-        PlasmaCore.SvgItem {
-            svg: PlasmaCore.Svg {imagePath: "widgets/line"}
-            elementId: "vertical-line"
-            width: naturalSize.width
+        Kirigami.Separator {
             anchors {
                 top: parent.top
                 bottom: parent.bottom
