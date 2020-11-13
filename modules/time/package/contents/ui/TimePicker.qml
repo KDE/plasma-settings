@@ -86,7 +86,7 @@ Item {
     Rectangle {
         color: "transparent"
         opacity: 0.3
-        border.color: theme.textColor
+        border.color: Kirigami.Theme.textColor
         border.width: 1
         anchors.fill: parent
     }
@@ -116,7 +116,7 @@ Item {
                 property int ownIndex: index
                 text: (!root.twentyFour && index == 0) ? "12" : clockRow.twoDigitString(index)
                 font.pointSize: root.fontSize
-                color: theme.textColor
+                color: Kirigami.Theme.textColor
                 opacity: PathView.itemOpacity
             }
             onSelectedIndexChanged: {
@@ -195,7 +195,7 @@ Item {
                 horizontalAlignment: Text.AlignLeft
                 property int ownIndex: index
                 text: meridiae
-                color: theme.textColor
+                color: Kirigami.Theme.textColor
                 font.pointSize: root.fontSize
                 //opacity: PathView.itemOpacity
             }

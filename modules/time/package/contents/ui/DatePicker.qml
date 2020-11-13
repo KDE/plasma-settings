@@ -43,7 +43,7 @@ Item {
     Rectangle {
         color: "transparent"
         border.width: 1
-        border.color: theme.textColor
+        border.color: Kirigami.Theme.textColor
         anchors.fill: parent
         opacity: 0.3
     }
@@ -107,7 +107,7 @@ Item {
                 width: dayDigit.width
                 property int ownIndex: index
                 text: index+1
-                color: theme.textColor
+                color: Kirigami.Theme.textColor
                 font.pointSize: root.fontSize
                 opacity: PathView.itemOpacity
             }
@@ -134,7 +134,7 @@ Item {
                 property variant months: Array(i18n("Jan"), i18n("Feb"), i18n("Mar"), i18n("Apr"), i18n("May"),     i18n("Jun"), i18n("Jul"), i18n("Aug"), i18n("Sep"), i18n("Oct"), i18n("Nov"), i18n("Dec"))
                 text: months[index]
                 font.pointSize: root.fontSize
-                color: theme.textColor
+                color: Kirigami.Theme.textColor
                 opacity: PathView.itemOpacity
             }
             width: monthPlaceHolder.width
