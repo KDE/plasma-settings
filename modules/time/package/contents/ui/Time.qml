@@ -24,6 +24,7 @@ import QtQuick.Controls 2.3 as Controls
 
 import org.kde.kirigami 2.10 as Kirigami
 import org.kde.kcm 1.2
+import org.kde.timesettings 1.0
 
 SimpleKCM {
     id: timeModule
@@ -32,11 +33,10 @@ SimpleKCM {
         id: listDelegateComponent
 
         Kirigami.BasicListItem {
-            text: display
-
+            text: model && i18n("%1 / %2", model.region, model.city)
             onClicked: {
                 timeZonePickerSheet.close()
-                kcm.saveTimeZone(display)
+                kcm.saveTimeZone(model.timeZoneId)
             }
         }
     }
@@ -134,7 +134,7 @@ SimpleKCM {
                 Layout.fillWidth: true
                 width: parent.width
                 onTextChanged: {
-                    kcm.timeZoneFilterChanged(text)
+                    kcm.timeZonesModel.filterString = text
                 }
             }
 

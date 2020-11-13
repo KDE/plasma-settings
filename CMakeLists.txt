@@ -45,7 +45,6 @@ find_package(KF5 ${KF5_MIN_VERSION} REQUIRED COMPONENTS
     Plasma
     Declarative
     KIO
-    KDELibs4Support
 )
 
 find_package(PkgConfig)

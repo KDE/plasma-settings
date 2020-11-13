@@ -22,8 +22,7 @@
  ***************************************************************************/
 
 #include "timesettings.h"
-#include "timezone.h"
-#include "timezonesmodel.h"
+#include "timezonemodel.h"
 
 #include <QDebug>
 #include <QtCore/QDate>
@@ -39,8 +38,6 @@
 #include <KLocalizedString>
 #include <KPluginFactory>
 #include <KSharedConfig>
-#include <KSystemTimeZone>
-#include <KTimeZone>
 #include <utility>
 
 #include "timedated_interface.h"
@@ -50,115 +47,48 @@
 
 K_PLUGIN_FACTORY_WITH_JSON(TimeSettingsFactory, "timesettings.json", registerPlugin<TimeSettings>();)
 
-class TimeSettingsPrivate
-{
-public:
-    TimeSettings *q {};
-    QString timeFormat;
-    QString timezone;
-    QObject *timeZonesModel {};
-    QString timeZoneFilter;
-    QString currentTimeText;
-    QTime currentTime;
-    QDate currentDate;
-    QTimer *timer {};
-    bool useNtp {};
-    QString errorString;
-
-    void initSettings();
-    void initTimeZones();
-    QString displayName(const KTimeZone &zone);
-
-    KSharedConfigPtr localeConfig;
-    KConfigGroup localeSettings;
-    KTimeZones *timeZones {};
-    QList<QObject *> timezones;
-};
-
 TimeSettings::TimeSettings(QObject *parent, const QVariantList &args)
     : KQuickAddons::ConfigModule(parent, args)
+    , m_useNtp(true)
 {
     qDebug() << "time settings init";
-    d = new TimeSettingsPrivate;
-    d->q = this;
-    d->timeZones = nullptr;
-    d->timeZonesModel = nullptr;
-    setTimeZone(KSystemTimeZones::local().name());
+    m_timeZonesModel = nullptr;
+    setTimeZone(QTimeZone::systemTimeZone().id());
 
-    KAboutData *about = new KAboutData("kcm_mobile_time", i18n("Date and Time"), "0.1", QString(), KAboutLicense::LGPL);
-    about->addAuthor(i18n("Sebastian Kügler"), QString(), "sebas@kde.org");
+    KAboutData *about = new KAboutData(QStringLiteral("kcm_mobile_time"), i18n("Date and Time"), QStringLiteral("0.1"), QString(), KAboutLicense::LGPL);
+    about->addAuthor(i18n("Sebastian Kügler"), QString(), QStringLiteral("sebas@kde.org"));
     setAboutData(about);
     setButtons(Apply | Default);
 
-    d->initSettings();
+    qmlRegisterAnonymousType<TimeZoneModel>("org.kde.timesettings", 1);
+    qmlRegisterAnonymousType<TimeZoneFilterProxy>("org.kde.timesettings", 1);
 
-    // Just for testing that data gets through
-    d->timer = new QTimer(this);
-    d->timer->setInterval(1000);
-    connect(d->timer, &QTimer::timeout, this, &TimeSettings::timeout);
-    d->timer->start();
-
+    initSettings();
+    initTimeZones();
     qDebug() << "TimeSettings module loaded.";
 }
 
 TimeSettings::~TimeSettings()
 {
-    delete d;
 }
 
-void TimeSettingsPrivate::initTimeZones()
+void TimeSettings::initTimeZones()
 {
-    // Collect zones by localized city names, so that they can be sorted properly.
-    QStringList cities;
-    QStringList tz;
-    QHash<QString, KTimeZone> zonesByCity;
-
-    if (!timeZones) {
-        timeZones = KSystemTimeZones::timeZones();
-
-        // add UTC to the defaults default
-        KTimeZone utc = KTimeZone::utc();
-        cities.append(utc.name());
-        zonesByCity.insert(utc.name(), utc);
-    }
-    // qDebug() << " TZ: cities: " << cities;
-
-    const KTimeZones::ZoneMap zones = timeZones->zones();
-
-    QList<QObject *> _zones;
-    QStandardItemModel *_zonesModel = new TimeZonesModel(q);
-
-    for (KTimeZones::ZoneMap::ConstIterator it = zones.begin(); it != zones.end(); ++it) {
-        const KTimeZone &zone = it.value();
-        if (timeZoneFilter.isEmpty() || zone.name().contains(timeZoneFilter, Qt::CaseInsensitive)) {
-            auto *_zone = new TimeZone(zone);
-            _zones.append(_zone);
-            QStandardItem *item = new QStandardItem(_zone->name());
-            item->setData(_zone->name().split('/').first(), Qt::UserRole + 1);
-            _zonesModel->appendRow(item);
-        }
-    }
-    qDebug() << "Found: " << _zones.count() << " timezones.";
-    // qSort( cities.begin(), cities.end(), localeLessThan );
-    q->setTimeZones(_zones);
-    q->setTimeZonesModel(_zonesModel);
+    auto *filterModel = new TimeZoneFilterProxy(this);
+    filterModel->setSourceModel(new TimeZoneModel(filterModel));
+    setTimeZonesModel(filterModel);
 }
 
-QString TimeSettingsPrivate::displayName(const KTimeZone &zone)
+void TimeSettings::initSettings()
 {
-    return zone.name().toUtf8().replace('_', ' ');
-}
+    m_localeConfig = KSharedConfig::openConfig(QStringLiteral("kdeglobals"), KConfig::SimpleConfig);
+    m_localeSettings = KConfigGroup(m_localeConfig, "Locale");
 
-void TimeSettingsPrivate::initSettings()
-{
-    localeConfig = KSharedConfig::openConfig("kdeglobals", KConfig::SimpleConfig);
-    localeSettings = KConfigGroup(localeConfig, "Locale");
+    setTimeFormat(m_localeSettings.readEntry("TimeFormat", QStringLiteral(FORMAT24H))); // FIXME?!
 
-    q->setTimeFormat(localeSettings.readEntry("TimeFormat", QString(FORMAT24H))); // FIXME?!
-
-    OrgFreedesktopTimedate1Interface timeDatedIface("org.freedesktop.timedate1", "/org/freedesktop/timedate1", QDBusConnection::systemBus());
+    OrgFreedesktopTimedate1Interface timeDatedIface(QStringLiteral("org.freedesktop.timedate1"), QStringLiteral("/org/freedesktop/timedate1"), QDBusConnection::systemBus());
     // the server list is not relevant for timesyncd, it fetches it from the network
-    useNtp = timeDatedIface.nTP();
+    m_useNtp = timeDatedIface.nTP();
 }
 
 void TimeSettings::timeout()
@@ -170,45 +100,45 @@ void TimeSettings::timeout()
 
 QString TimeSettings::currentTimeText()
 {
-    return d->currentTimeText;
+    return m_currentTimeText;
 }
 
 QTime TimeSettings::currentTime() const
 {
-    return d->currentTime;
+    return m_currentTime;
 }
 
 void TimeSettings::setCurrentTime(const QTime &currentTime)
 {
-    if (d->currentTime != currentTime) {
-        d->currentTime = currentTime;
-        d->currentTimeText = QLocale().toString(QTime::currentTime(), d->timeFormat);
+    if (m_currentTime != currentTime) {
+        m_currentTime = currentTime;
+        m_currentTimeText = QLocale().toString(QTime::currentTime(), m_timeFormat);
         emit currentTimeChanged();
     }
 }
 
 QDate TimeSettings::currentDate() const
 {
-    return d->currentDate;
+    return m_currentDate;
 }
 
 void TimeSettings::setCurrentDate(const QDate &currentDate)
 {
-    if (d->currentDate != currentDate) {
-        d->currentDate = currentDate;
+    if (m_currentDate != currentDate) {
+        m_currentDate = currentDate;
         emit currentDateChanged();
     }
 }
 
 bool TimeSettings::useNtp() const
 {
-    return d->useNtp;
+    return m_useNtp;
 }
 
 void TimeSettings::setUseNtp(bool ntp)
 {
-    if (d->useNtp != ntp) {
-        d->useNtp = ntp;
+    if (m_useNtp != ntp) {
+        m_useNtp = ntp;
         saveTime();
         emit useNtpChanged();
     }
@@ -216,7 +146,7 @@ void TimeSettings::setUseNtp(bool ntp)
 
 bool TimeSettings::saveTime()
 {
-    OrgFreedesktopTimedate1Interface timedateIface("org.freedesktop.timedate1", "/org/freedesktop/timedate1", QDBusConnection::systemBus());
+    OrgFreedesktopTimedate1Interface timedateIface(QStringLiteral("org.freedesktop.timedate1"), QStringLiteral("/org/freedesktop/timedate1"), QDBusConnection::systemBus());
 
     bool rc = true;
     // final arg in each method is "user-interaction" i.e whether it's OK for polkit to ask for auth
@@ -224,10 +154,10 @@ bool TimeSettings::saveTime()
     // we cannot send requests up front then block for all replies as we need NTP to be disabled before we can make a call to SetTime
     // timedated processes these in parallel and will return an error otherwise
 
-    auto reply = timedateIface.SetNTP(useNtp(), true);
+    auto reply = timedateIface.SetNTP(m_useNtp, true);
     reply.waitForFinished();
     if (reply.isError()) {
-        d->errorString = i18n("Unable to change NTP settings");
+        m_errorString = i18n("Unable to change NTP settings");
         emit errorStringChanged();
         qWarning() << "Failed to enable NTP" << reply.error().name() << reply.error().message();
         rc = false;
@@ -243,13 +173,13 @@ bool TimeSettings::saveTime()
         auto reply = timedateIface.SetTime(timeDiff * 1000, true, true);
         reply.waitForFinished();
         if (reply.isError()) {
-            d->errorString = i18n("Unable to set current time");
+            m_errorString = i18n("Unable to set current time");
             emit errorStringChanged();
             qWarning() << "Failed to set current time" << reply.error().name() << reply.error().message();
             rc = false;
         }
     }
-    saveTimeZone(timeZone());
+    saveTimeZone(m_timezone);
 
     return rc;
 }
@@ -257,14 +187,14 @@ bool TimeSettings::saveTime()
 void TimeSettings::saveTimeZone(const QString &newtimezone)
 {
     qDebug() << "Saving timezone to config: " << newtimezone;
-    OrgFreedesktopTimedate1Interface timedateIface("org.freedesktop.timedate1", "/org/freedesktop/timedate1", QDBusConnection::systemBus());
+    OrgFreedesktopTimedate1Interface timedateIface(QStringLiteral("org.freedesktop.timedate1"), QStringLiteral("/org/freedesktop/timedate1"), QDBusConnection::systemBus());
 
     if (!newtimezone.isEmpty()) {
         qDebug() << "Setting timezone: " << newtimezone;
         auto reply = timedateIface.SetTimezone(newtimezone, true);
         reply.waitForFinished();
         if (reply.isError()) {
-            d->errorString = i18n("Unable to set timezone");
+            m_errorString = i18n("Unable to set timezone");
             emit errorStringChanged();
             qWarning() << "Failed to set timezone" << reply.error().name() << reply.error().message();
         }
@@ -277,21 +207,21 @@ void TimeSettings::saveTimeZone(const QString &newtimezone)
 
 QString TimeSettings::timeFormat()
 {
-    return d->timeFormat;
+    return m_timeFormat;
 }
 
 void TimeSettings::setTimeFormat(const QString &timeFormat)
 {
-    if (d->timeFormat != timeFormat) {
-        d->timeFormat = timeFormat;
+    if (m_timeFormat != timeFormat) {
+        m_timeFormat = timeFormat;
 
-        d->localeSettings.writeEntry("TimeFormat", timeFormat);
-        d->localeConfig->sync();
+        m_localeSettings.writeEntry("TimeFormat", timeFormat);
+        m_localeConfig->sync();
 
-        QDBusMessage msg = QDBusMessage::createSignal("/org/kde/kcmshell_clock", "org.kde.kcmshell_clock", "clockUpdated");
+        QDBusMessage msg = QDBusMessage::createSignal(QStringLiteral("/org/kde/kcmshell_clock"), QStringLiteral("org.kde.kcmshell_clock"), QStringLiteral("clockUpdated"));
         QDBusConnection::sessionBus().send(msg);
 
-        qDebug() << "time format is now: " << QLocale().toString(QTime::currentTime(), d->timeFormat);
+        qDebug() << "time format is now: " << QLocale().toString(QTime::currentTime(), m_timeFormat);
         emit timeFormatChanged();
         timeout();
     }
@@ -299,58 +229,33 @@ void TimeSettings::setTimeFormat(const QString &timeFormat)
 
 QString TimeSettings::timeZone()
 {
-    return d->timezone;
+    return m_timezone;
 }
 
 void TimeSettings::setTimeZone(const QString &timezone)
 {
-    if (d->timezone != timezone) {
-        d->timezone = timezone;
+    if (m_timezone != timezone) {
+        m_timezone = timezone;
         qDebug() << "timezone changed to: " << timezone;
         emit timeZoneChanged();
         timeout();
     }
 }
 
-QList<QObject *> TimeSettings::timeZones()
+TimeZoneFilterProxy *TimeSettings::timeZonesModel()
 {
-    if (!d->timeZones) {
-        d->initTimeZones();
-    }
-    return d->timezones;
+    return m_timeZonesModel;
 }
 
-void TimeSettings::setTimeZones(QList<QObject *> timezones)
+void TimeSettings::setTimeZonesModel(TimeZoneFilterProxy *timezones)
 {
-    d->timezones = std::move(timezones);
-    emit timeZonesChanged();
-}
-
-QObject *TimeSettings::timeZonesModel()
-{
-    if (!d->timeZones) {
-        d->initTimeZones();
-    }
-    return d->timeZonesModel;
-}
-
-void TimeSettings::setTimeZonesModel(QObject *timezones)
-{
-    d->timeZonesModel = timezones;
+    m_timeZonesModel = timezones;
     emit timeZonesModelChanged();
-}
-
-void TimeSettings::timeZoneFilterChanged(const QString &filter)
-{
-    d->timeZoneFilter = filter;
-    d->timeZoneFilter.replace(' ', '_');
-    d->initTimeZones();
-    emit timeZonesChanged();
 }
 
 bool TimeSettings::twentyFour()
 {
-    return timeFormat() == FORMAT24H;
+    return timeFormat() == QStringLiteral(FORMAT24H);
 }
 
 void TimeSettings::setTwentyFour(bool t)
@@ -361,7 +266,7 @@ void TimeSettings::setTwentyFour(bool t)
         } else {
             setTimeFormat(FORMAT12H);
         }
-        qDebug() << "T24 toggled: " << t << d->timeFormat;
+        qDebug() << "T24 toggled: " << t << m_timeFormat;
         emit twentyFourChanged();
         emit currentTimeChanged();
         timeout();
@@ -370,12 +275,12 @@ void TimeSettings::setTwentyFour(bool t)
 
 QString TimeSettings::errorString()
 {
-    return d->errorString;
+    return m_errorString;
 }
 
 void TimeSettings::notify()
 {
-    QDBusMessage msg = QDBusMessage::createSignal("/org/kde/kcmshell_clock", "org.kde.kcmshell_clock", "clockUpdated");
+    const QDBusMessage msg = QDBusMessage::createSignal(QStringLiteral("/org/kde/kcmshell_clock"), QStringLiteral("org.kde.kcmshell_clock"), QStringLiteral("clockUpdated"));
     QDBusConnection::sessionBus().send(msg);
 }
 

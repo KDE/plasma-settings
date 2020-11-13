@@ -28,7 +28,12 @@
 #include <QTime>
 #include <QVariant>
 
+#include <KConfigGroup>
+#include <KSharedConfig>
+
 #include <KQuickAddons/ConfigModule>
+
+class TimeZoneFilterProxy;
 
 //#include "settingsmodule.h"
 
@@ -48,8 +53,7 @@ class TimeSettings : public KQuickAddons::ConfigModule
     Q_PROPERTY(QString timeFormat READ timeFormat WRITE setTimeFormat NOTIFY timeFormatChanged)
     Q_PROPERTY(bool twentyFour READ twentyFour WRITE setTwentyFour NOTIFY twentyFourChanged)
     Q_PROPERTY(QString timeZone READ timeZone WRITE setTimeZone NOTIFY timeZoneChanged)
-    Q_PROPERTY(QList<QObject *> timeZones READ timeZones WRITE setTimeZones NOTIFY timeZonesChanged)
-    Q_PROPERTY(QObject *timeZonesModel READ timeZonesModel WRITE setTimeZonesModel NOTIFY timeZonesModelChanged)
+    Q_PROPERTY(TimeZoneFilterProxy *timeZonesModel READ timeZonesModel WRITE setTimeZonesModel NOTIFY timeZonesModelChanged)
     Q_PROPERTY(QTime currentTime READ currentTime WRITE setCurrentTime NOTIFY currentTimeChanged)
     Q_PROPERTY(QDate currentDate READ currentDate WRITE setCurrentDate NOTIFY currentDateChanged)
     Q_PROPERTY(bool useNtp READ useNtp WRITE setUseNtp NOTIFY useNtpChanged)
@@ -78,22 +82,19 @@ public:
 
     QString timeFormat();
     QString timeZone();
-    QList<QObject *> timeZones();
-    QObject *timeZonesModel();
+    TimeZoneFilterProxy *timeZonesModel();
     bool twentyFour();
 
     QString errorString();
 
 public Q_SLOTS:
     void setTimeZone(const QString &timezone);
-    void setTimeZones(QList<QObject *> timezones);
-    void setTimeZonesModel(QObject *timezones);
+    void setTimeZonesModel(TimeZoneFilterProxy *timezones);
     void setTimeFormat(const QString &timeFormat);
     void setTwentyFour(bool t);
     void timeout();
     bool saveTime();
     void notify();
-    Q_INVOKABLE void timeZoneFilterChanged(const QString &filter);
     Q_INVOKABLE void saveTimeZone(const QString &newtimezone);
 
 Q_SIGNALS:
@@ -112,7 +113,21 @@ protected:
     QString findNtpUtility();
 
 private:
-    TimeSettingsPrivate *d;
+    QString m_timeFormat;
+    QString m_timezone;
+    TimeZoneFilterProxy *m_timeZonesModel;
+    QString m_timeZoneFilter;
+    QString m_currentTimeText;
+    QTime m_currentTime;
+    QDate m_currentDate;
+    bool m_useNtp;
+    QString m_errorString;
+
+    void initSettings();
+    void initTimeZones();
+
+    KSharedConfig::Ptr m_localeConfig;
+    KConfigGroup m_localeSettings;
 };
 
 #endif // TIMESETTINGS_H
