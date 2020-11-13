@@ -9,7 +9,6 @@
  ***************************************************************************/
 
 #include "timesettings.h"
-#include "timezonemodel.h"
 
 #include <QDebug>
 #include <QtCore/QDate>
@@ -39,7 +38,6 @@ TimeSettings::TimeSettings(QObject *parent, const QVariantList &args)
     , m_useNtp(true)
 {
     qDebug() << "time settings init";
-    m_timeZonesModel = nullptr;
     setTimeZone(QTimeZone::systemTimeZone().id());
 
     KAboutData *about = new KAboutData(QStringLiteral("kcm_mobile_time"), i18n("Date and Time"), QStringLiteral("0.1"), QString(), KAboutLicense::LGPL);
@@ -47,23 +45,12 @@ TimeSettings::TimeSettings(QObject *parent, const QVariantList &args)
     setAboutData(about);
     setButtons(Apply | Default);
 
-    qmlRegisterAnonymousType<TimeZoneModel>("org.kde.timesettings", 1);
-    qmlRegisterAnonymousType<TimeZoneFilterProxy>("org.kde.timesettings", 1);
-
     initSettings();
-    initTimeZones();
     qDebug() << "TimeSettings module loaded.";
 }
 
 TimeSettings::~TimeSettings()
 {
-}
-
-void TimeSettings::initTimeZones()
-{
-    auto *filterModel = new TimeZoneFilterProxy(this);
-    filterModel->setSourceModel(new TimeZoneModel(filterModel));
-    setTimeZonesModel(filterModel);
 }
 
 void TimeSettings::initSettings()
@@ -227,17 +214,6 @@ void TimeSettings::setTimeZone(const QString &timezone)
         emit timeZoneChanged();
         timeout();
     }
-}
-
-TimeZoneFilterProxy *TimeSettings::timeZonesModel()
-{
-    return m_timeZonesModel;
-}
-
-void TimeSettings::setTimeZonesModel(TimeZoneFilterProxy *timezones)
-{
-    m_timeZonesModel = timezones;
-    emit timeZonesModelChanged();
 }
 
 bool TimeSettings::twentyFour()

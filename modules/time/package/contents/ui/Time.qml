@@ -10,8 +10,8 @@ import QtQuick.Layouts 1.3
 import QtQuick.Controls 2.3 as Controls
 
 import org.kde.kirigami 2.10 as Kirigami
+import org.kde.kirigamiaddons.dateandtime 0.1 as TimeAddons
 import org.kde.kcm 1.2
-import org.kde.timesettings 1.0
 
 SimpleKCM {
     id: timeModule
@@ -132,7 +132,7 @@ SimpleKCM {
                 Layout.fillWidth: true
                 width: parent.width
                 onTextChanged: {
-                    kcm.timeZonesModel.filterString = text
+                    timeZoneFilterModel.filterString = text
                 }
             }
         }
@@ -150,7 +150,10 @@ SimpleKCM {
             clip: true
             anchors.fill: parent
             implicitWidth: 18 * Kirigami.Units.gridUnit
-            model: kcm.timeZonesModel
+            model: TimeAddons.TimeZoneFilterModel {
+                id: timeZoneFilterModel
+                sourceModel: TimeAddons.TimeZoneModel {}
+            }
             delegate: Kirigami.DelegateRecycler {
                 width: parent.width
 

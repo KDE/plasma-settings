@@ -1,7 +1,5 @@
 set(timesettings_SRCS
     timesettings.cpp
-    timezonemodel.cpp
-    timezonesi18n.cpp
 )
 
 qt5_add_dbus_interface(timesettings_SRCS ${CMAKE_CURRENT_SOURCE_DIR}/timedated1.xml timedated_interface)
@@ -15,7 +13,7 @@ target_link_libraries(kcm_mobile_time
     KF5::QuickAddons
     KF5::ConfigCore
     KF5::I18n
-    )
+)
 kcoreaddons_desktop_to_json(kcm_mobile_time "timesettings.desktop")
 
 # Time and Date
