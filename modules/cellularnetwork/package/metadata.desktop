@@ -1,5 +1,6 @@
 [Desktop Entry]
 Name=Cellular Networks
+Name[ast]=Redes pa móviles
 Name[az]=Mobil Şəbəkələr
 Name[ca]=Xarxes de telefonia mòbil
 Name[ca@valencia]=Xarxes de telefonia mòbil
@@ -29,6 +30,7 @@ Name[sv]=Mobilnät
 Name[uk]=Стільникові мережі
 Name[x-test]=xxCellular Networksxx
 Comment=Management of cellular networks
+Comment[ast]=Xestión de redes pa móviles
 Comment[az]=Mobil Şəbəkələr Meneceri
 Comment[ca]=Gestió de xarxes de telefonia mòbil
 Comment[ca@valencia]=Gestió de xarxes de telefonia mòbil

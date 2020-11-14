@@ -1,5 +1,6 @@
 [Desktop Entry]
 Name=Appearance
+Name[ast]=Aspeutu
 Name[az]=Xarici görünüş
 Name[ca]=Aparença
 Name[ca@valencia]=Aparença
@@ -34,6 +35,7 @@ Name[x-test]=xxAppearancexx
 Name[zh_CN]=外观
 Name[zh_TW]=個人化
 Comment=Look and Feel
+Comment[ast]=Aspeutu y estilu
 Comment[az]=Plasma Xarici Görünüşü
 Comment[ca]=Aspecte i comportament
 Comment[ca@valencia]=Aspecte i comportament
@@ -82,6 +84,7 @@ X-KDE-System-Settings-Parent-Category=regionalsettings
 X-KDE-Weight=70
 
 X-KDE-Keywords=theme, look, feel
+X-KDE-Keywords[ast]=estilu, aspeutu
 X-KDE-Keywords[az]=theme, look, feel,mövzu,xarici görünüş,hissetmə
 X-KDE-Keywords[ca]=tema, aspecte, comportament
 X-KDE-Keywords[ca@valencia]=tema, aspecte, comportament

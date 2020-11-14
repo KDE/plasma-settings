@@ -1,5 +1,6 @@
 [Desktop Entry]
 Name=Screen
+Name[ast]=Pantalla
 Name[az]=Ekran
 Name[ca]=Pantalla
 Name[ca@valencia]=Pantalla
@@ -34,6 +35,7 @@ Name[x-test]=xxScreenxx
 Name[zh_CN]=屏幕
 Name[zh_TW]=螢幕
 Comment=Lock, Sleep, Timeout
+Comment[ast]=Bloquéu, dormición, tiempu d'espera
 Comment[az]=Kilid, Yuxu, Boşdayanma
 Comment[ca]=Bloqueja, Adorm, Temps d'espera
 Comment[ca@valencia]=Bloqueja, Adorm, Temps d'espera

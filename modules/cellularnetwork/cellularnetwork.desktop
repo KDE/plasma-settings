@@ -1,5 +1,6 @@
 [Desktop Entry]
 Name=Cellular Networks
+Name[ast]=Redes pa móviles
 Name[az]=Mobil Şəbəkələr
 Name[ca]=Xarxes de telefonia mòbil
 Name[ca@valencia]=Xarxes de telefonia mòbil
@@ -29,6 +30,7 @@ Name[sv]=Mobilnät
 Name[uk]=Стільникові мережі
 Name[x-test]=xxCellular Networksxx
 Comment=Management of cellular networks
+Comment[ast]=Xestión de redes pa móviles
 Comment[az]=Mobil Şəbəkələr Meneceri
 Comment[ca]=Gestió de xarxes de telefonia mòbil
 Comment[ca@valencia]=Gestió de xarxes de telefonia mòbil
@@ -63,6 +65,7 @@ X-KDE-Library=kcm_mobile_cellularnetwork
 X-KDE-FormFactors=handset,tablet,mediacenter
 Categories=Qt;KDE;X-KDE-settings-system;
 X-KDE-Keywords=info,cell,mobile
+X-KDE-Keywords[ast]=info,información,rede móvil,rede pa móviles
 X-KDE-Keywords[az]=info,cell,mobile, məlumat,xana,mobil
 X-KDE-Keywords[ca]=info,cel·la,mòbil
 X-KDE-Keywords[ca@valencia]=info,cel·la,mòbil

@@ -1,5 +1,6 @@
 [Desktop Entry]
 Name=Information
+Name[ast]=Información
 Name[az]=Məlumat
 Name[ca]=Informació
 Name[ca@valencia]=Informació
@@ -33,6 +34,7 @@ Name[x-test]=xxInformationxx
 Name[zh_CN]=信息
 Name[zh_TW]=資訊
 Comment=Software versions
+Comment[ast]=Versiones del software
 Comment[az]=Proqram Təminatı Mərkəzinin Versiyası
 Comment[ca]=Versions de programari
 Comment[ca@valencia]=Versions de programari

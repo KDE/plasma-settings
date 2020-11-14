@@ -1,5 +1,6 @@
 [Desktop Entry]
 Name=Screen
+Name[ast]=Pantalla
 Name[az]=Ekran
 Name[ca]=Pantalla
 Name[ca@valencia]=Pantalla
@@ -34,6 +35,7 @@ Name[x-test]=xxScreenxx
 Name[zh_CN]=屏幕
 Name[zh_TW]=螢幕
 Comment=Lock, Sleep, Timeout
+Comment[ast]=Bloquéu, dormición, tiempu d'espera
 Comment[az]=Kilid, Yuxu, Boşdayanma
 Comment[ca]=Bloqueja, Adorm, Temps d'espera
 Comment[ca@valencia]=Bloqueja, Adorm, Temps d'espera
@@ -80,6 +82,7 @@ X-KDE-System-Settings-Parent-Category=display
 X-KDE-Weight=70
 
 X-KDE-Keywords=video, monitor, graphics, timeout, sleep, lock, screenlocker, screensaver
+X-KDE-Keywords[ast]=videu,monitor,gráficos,dormir,dormición,bloquiar,bloquéu,curiapantalles,bloquiador de pantalla
 X-KDE-Keywords[az]=video, monitor, graphics, timeout, sleep, lock, screenlocker, screensaver,qrafiklər,boşdayanma,yuxu,kilid,ekran kilidləyici,ekran qoruyucu
 X-KDE-Keywords[ca]=vídeo, monitor, gràfics, temps d'espera, adorm, bloqueja, bloqueig de la pantalla, estalvi de pantalla
 X-KDE-Keywords[ca@valencia]=vídeo, monitor, gràfics, temps d'espera, adorm, bloqueja, bloqueig de la pantalla, estalvi de pantalla

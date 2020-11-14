@@ -1,5 +1,6 @@
 [Desktop Entry]
 Name=Settings
+Name[ast]=Axustes
 Name[az]=Ayarlar
 Name[ca]=Ajustaments
 Name[ca@valencia]=Ajustaments
@@ -34,6 +35,7 @@ Name[x-test]=xxSettingsxx
 Name[zh_CN]=设置
 Name[zh_TW]=設定
 GenericName=Settings
+GenericName[ast]=Axustes
 GenericName[az]=Ayarlar
 GenericName[ca]=Ajustaments
 GenericName[ca@valencia]=Ajustaments
@@ -68,6 +70,7 @@ GenericName[x-test]=xxSettingsxx
 GenericName[zh_CN]=设置
 GenericName[zh_TW]=設定
 Comment=Settings for Plasma
+Comment[ast]=Axustes de Plasma
 Comment[az]=Plasma üçün Ayarlar
 Comment[ca]=Ajustaments per al Plasma
 Comment[ca@valencia]=Ajustaments per al Plasma
