@@ -31,11 +31,10 @@ KCM.SimpleKCM {
     title: i18n("Virtual Keyboard")
 
     Kirigami.FormLayout {
-        Layout.fillHeight: true
-        anchors.margins: Kirigami.Units.largeSpacing
 
-        QQC2.Label {
-            text: i18n("Text correction:")
+        Item {
+            Kirigami.FormData.label: i18n("Text correction:")
+            Kirigami.FormData.isSection: true
         }
 
         QQC2.CheckBox {
@@ -79,11 +78,8 @@ KCM.SimpleKCM {
         }
 
         Item {
-            Layout.preferredHeight: Kirigami.Units.gridUnit
-        }
-
-        QQC2.Label {
-            text: i18n("Feedback:")
+            Kirigami.FormData.label: i18n("Feedback:")
+            Kirigami.FormData.isSection: true
         }
 
         QQC2.CheckBox {
@@ -103,35 +99,13 @@ KCM.SimpleKCM {
         }
 
         Item {
-            Layout.preferredHeight: Kirigami.Units.gridUnit
+            Kirigami.FormData.label: i18n("Languages:")
+            Kirigami.FormData.isSection: true
         }
 
-        QQC2.Label {
-            text: i18n("Keyboard Languages:")
-        }
-
-        QQC2.ScrollView {
-            id: bgObject
-            Component.onCompleted: bgObject.background.visible = true
-            Layout.fillWidth: true
-
-            ListView {
-                id: languageList
-
-                model: KItemModel.KSortFilterProxyModel {
-                    sourceModel: kcm.languageModel
-                    sortRole: "name"
-                    sortOrder: Qt.Ascending
-                }
-                delegate: QQC2.CheckDelegate {
-                    text: model.name
-                    width: languageList.width
-                    checked: model.enabled
-                    onCheckedChanged: {
-                        model.enabled = checked
-                    }
-                }
-            }
+        QQC2.Button {
+            text: i18n("Configure Languages")
+            onClicked: kcm.push("languages.qml")
         }
     }
 }
