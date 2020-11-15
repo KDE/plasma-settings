@@ -41,12 +41,13 @@ KCM.ScrollViewKCM {
             sortOrder: Qt.Ascending
         }
 
-        delegate: QQC2.CheckDelegate {
-            text: model.name
-            width: languageList.width
-            checked: model.enabled
-            onCheckedChanged: {
-                model.enabled = checked
+        delegate: Kirigami.AbstractListItem {
+            QQC2.CheckBox {
+                text: model.name
+                checked: model.enabled
+                onCheckedChanged: {
+                    model.enabled = checked
+                }
             }
         }
     }

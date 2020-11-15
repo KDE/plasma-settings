@@ -106,6 +106,7 @@ KCM.SimpleKCM {
         QQC2.Button {
             text: i18n("Configure Languages")
             onClicked: kcm.push("languages.qml")
+            icon.name: "set-language"
         }
     }
 }
