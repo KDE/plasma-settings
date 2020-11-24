@@ -53,10 +53,14 @@ SimpleKCM {
         Kirigami.BasicListItem {
             label: i18n("Use 24-hour clock:")
             icon: "clock"
+            onClicked: {
+                twentyFourSwitch.checked = !twentyFourSwitch.checked
+                twentyFourSwitch.clicked()
+            }
             Controls.Switch {
                 id: twentyFourSwitch
                 checked: kcm.twentyFour
-                onClicked : {
+                onClicked: {
                     kcm.twentyFour = checked
                     print(kcm.timeZone);
                 }
@@ -65,10 +69,10 @@ SimpleKCM {
 
         Kirigami.BasicListItem {
             label: "Timezone:"
-            Controls.ToolButton {
+            onClicked: timeZonePickerSheet.open()
+            Controls.Label {
                 id: timeZoneButton
                 text: kcm.timeZone
-                onClicked: timeZonePickerSheet.open()
             }
         }
 
@@ -78,6 +82,11 @@ SimpleKCM {
 
         Kirigami.BasicListItem {
             label: i18n("Set time automatically:")
+            onClicked: {
+                ntpCheckBox.checked = !ntpCheckBox.checked
+                ntpCheckBox.clicked()
+            }
+
             Controls.Switch {
                 id: ntpCheckBox
                 checked: kcm.useNtp
@@ -94,24 +103,23 @@ SimpleKCM {
         Kirigami.BasicListItem {
             label: i18n("Time")
             icon: "clock"
-            Controls.ToolButton {
+            onClicked: timePickerSheet.open()
+            Controls.Label {
                 text: {
-                    var date = new Date(kcm.currentTime);
-                    return date.toTimeString()
+                    Qt.formatDateTime(kcm.currentTime)
                 }
-                onClicked: timePickerSheet.open()
             }
         }
 
         Kirigami.BasicListItem {
             label: i18n("Date")
             icon: "view-calendar"
-            Controls.ToolButton {
+            onClicked: datePickerSheet.open()
+
+            Controls.Label {
                 text: {
-                    var date = new Date(kcm.currentDate);
-                    return date.toDateString()
+                    Qt.formatDate(kcm.currentDate);
                 }
-                onClicked: datePickerSheet.open()
             }
         }
     }
