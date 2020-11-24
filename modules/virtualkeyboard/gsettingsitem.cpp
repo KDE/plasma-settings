@@ -93,6 +93,8 @@ void GSettingsItem::set(const QString &key, const QVariant &val)
             newValue = g_variant_builder_end(&builder);
             break;
         }
+        qWarning() << "Unhandled variant array type in set()";
+        break;
     default:
         qWarning() << "Unhandled variant type in set()";
     }
