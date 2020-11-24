@@ -11,7 +11,6 @@ import org.kde.kirigami 2.10 as Kirigami
 import org.kde.kcm 1.2
 
 SimpleKCM {
-
     title: i18n("Change Lockscreen Pin")
 
     RegExpValidator {
@@ -24,7 +23,13 @@ SimpleKCM {
             type: Kirigami.MessageType.Information
             Layout.fillWidth: true
             text: i18n("Pin can only contain numbers")
-            visible: true
+            visible: !pin.acceptableInput && pin.text.length != 0
+        }
+        Kirigami.InlineMessage {
+            type: Kirigami.MessageType.Warning
+            Layout.fillWidth: true
+            text: i18n("Pins do not match")
+            visible: pin.text !== confirmPin.text
         }
 
         Kirigami.FormLayout {
@@ -44,7 +49,7 @@ SimpleKCM {
             }
             QQC2.Button {
                 text: i18n("Apply")
-                enabled: pin.text === confirmPin.text && pin.valid
+                enabled: pin.text === confirmPin.text && pin.acceptableInput
                 onClicked: kcm.setPassword(pin.text)
             }
         }
