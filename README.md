@@ -14,3 +14,23 @@ You can find documentation on creating such configuration modules on
 Modules only useful on mobile can be added to the `modules` directory of this
 repository, but if they are useful for devices of multiple form factors,
 they should go into the plasma-workspace repository.
+
+## Build and run from source
+
+This project uses `cmake` to find the dependencies and build the project.
+
+```sh
+cmake -S . -B build -DCMAKE_INSTALL_PREFIX=${PWD}/install
+cmake --build build --target install -j4
+```
+
+Defining the installation prefix (with `CMAKE_INSTALL_PREFIX`)
+generates a file in the build folder (`build/prefix.sh`) with
+environment variables for `plasma-settings` to find the freshly built modules.
+
+To run `plasma-settings` first source the environment variables and then start the binary.
+
+```sh
+source build/prefix.sh
+./install/bin/plasma-settings
+```
