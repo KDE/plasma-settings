@@ -33,7 +33,16 @@ SimpleKCM {
         id: listDelegateComponent
 
         Kirigami.BasicListItem {
-            text: model && i18n("%1 / %2", model.region, model.city)
+            text: {
+                if (model) {
+                    if (model.region) {
+                        return "%1 / %2".arg(model.region).arg(model.city)
+                    } else {
+                        return model.city
+                    }
+                }
+                return ""
+            }
             onClicked: {
                 timeZonePickerSheet.close()
                 kcm.saveTimeZone(model.timeZoneId)
