@@ -106,7 +106,7 @@ SimpleKCM {
             onClicked: timePickerSheet.open()
             Controls.Label {
                 text: {
-                    Qt.formatDateTime(kcm.currentTime)
+                    Qt.formatTime(kcm.currentTime)
                 }
             }
         }
