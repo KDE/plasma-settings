@@ -115,7 +115,7 @@ SimpleKCM {
             onClicked: timePickerSheet.open()
             Controls.Label {
                 text: {
-                    Qt.formatTime(kcm.currentTime)
+                    Qt.formatTime(kcm.currentTime, Locale.LongFormat)
                 }
             }
         }
@@ -127,7 +127,7 @@ SimpleKCM {
 
             Controls.Label {
                 text: {
-                    Qt.formatDate(kcm.currentDate);
+                    Qt.formatDate(kcm.currentDate, Locale.LongFormat);
                 }
             }
         }
