@@ -1,6 +1,20 @@
 [Desktop Entry]
 Name=Pin
+Name[ca]=PIN
+Name[nl]=PIN
+Name[nn]=Pin-nummer
+Name[pt]=PIN
+Name[sv]=PIN-kod
+Name[uk]=Код
+Name[x-test]=xxPinxx
 Comment=Set the Lockscreen PIN
+Comment[ca]=Estableix el PIN de la pantalla de bloqueig
+Comment[nl]=De PIN van schermvergrendeling instellen
+Comment[nn]=Vel pin-kode for låseskjerm
+Comment[pt]=Definir o PIN do Ecrã de Bloqueio
+Comment[sv]=Ställ in PIN-kod för skärmlåsning
+Comment[uk]=Встановлення коду блокування екрана
+Comment[x-test]=xxSet the Lockscreen PINxx
 Encoding=UTF-8
 Type=Service
 Icon=lock
