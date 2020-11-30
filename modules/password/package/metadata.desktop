@@ -1,6 +1,8 @@
 [Desktop Entry]
 Name=Pin
+Name[az]=Pin
 Name[ca]=PIN
+Name[es]=Pin
 Name[nl]=PIN
 Name[nn]=Pin-nummer
 Name[pt]=PIN
@@ -8,7 +10,9 @@ Name[sv]=PIN-kod
 Name[uk]=Код
 Name[x-test]=xxPinxx
 Comment=Set the Lockscreen PIN
+Comment[az]=Kilid ekranı üçün PİN təyin etmək
 Comment[ca]=Estableix el PIN de la pantalla de bloqueig
+Comment[es]=Definir el PIN de la pantalla de bloqueo
 Comment[nl]=De PIN van schermvergrendeling instellen
 Comment[nn]=Vel pin-kode for låseskjerm
 Comment[pt]=Definir o PIN do Ecrã de Bloqueio
