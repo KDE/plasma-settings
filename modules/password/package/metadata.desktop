@@ -2,6 +2,7 @@
 Name=Pin
 Name[az]=Pin
 Name[ca]=PIN
+Name[ca@valencia]=PIN
 Name[es]=Pin
 Name[it]=Pin
 Name[nl]=PIN
@@ -16,6 +17,7 @@ Name[x-test]=xxPinxx
 Comment=Set the Lockscreen PIN
 Comment[az]=Kilid ekranı üçün PİN təyin etmək
 Comment[ca]=Estableix el PIN de la pantalla de bloqueig
+Comment[ca@valencia]=Estableix el PIN de la pantalla de bloqueig
 Comment[es]=Definir el PIN de la pantalla de bloqueo
 Comment[it]=Imposta il PIN di blocco dello schermo
 Comment[nl]=De PIN van schermvergrendeling instellen
