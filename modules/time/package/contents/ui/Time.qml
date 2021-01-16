@@ -77,7 +77,7 @@ SimpleKCM {
         }
 
         Kirigami.BasicListItem {
-            label: "Timezone:"
+            label: i18n("Timezone:")
             onClicked: timeZonePickerSheet.open()
             Controls.Label {
                 id: timeZoneButton
