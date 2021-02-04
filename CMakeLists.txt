@@ -43,6 +43,7 @@ find_package(KF5 ${KF5_MIN_VERSION} REQUIRED COMPONENTS
     DBusAddons
     I18n
     Plasma
+    Service
     Declarative
     KIO
 )

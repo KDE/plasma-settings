@@ -80,7 +80,7 @@ Exec=plasma-settings -m kcm_mobile_power
 Type=Service
 X-KDE-ServiceTypes=KCModule
 
-#X-KDE-Library=kcm_mobile_power
+X-KDE-Library=kcm_mobile_power
 X-KDE-ParentApp=kcontrol
 X-KDE-FormFactors=handset,tablet,mediacenter
 

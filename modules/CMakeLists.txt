@@ -3,8 +3,10 @@
 add_subdirectory(time)
 
 # Power
-# needs porting to C++ / QML KCM api or a rewrite
-#add_subdirectory(powermanagement)
+# The port to C++ is happening, this is just
+# a quick and dirty hack so we have this fast
+# while the real powermanagement is being rewritten for plasma 5.22
+add_subdirectory(powermanagement)
 
 # Info
 add_subdirectory(info)
