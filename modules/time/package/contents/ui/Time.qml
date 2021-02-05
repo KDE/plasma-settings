@@ -112,6 +112,7 @@ SimpleKCM {
         Kirigami.BasicListItem {
             label: i18n("Time")
             icon: "clock"
+            enabled: !ntpCheckBox.checked
             onClicked: timePickerSheet.open()
             Controls.Label {
                 text: {
@@ -123,6 +124,7 @@ SimpleKCM {
         Kirigami.BasicListItem {
             label: i18n("Date")
             icon: "view-calendar"
+            enabled: !ntpCheckBox.checked
             onClicked: datePickerSheet.open()
 
             Controls.Label {
