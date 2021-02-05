@@ -93,7 +93,8 @@ int main(int argc, char **argv)
 
         auto formfactor = parser.value(formfactorOption);
 
-        for (const auto &plugin : KPackage::PackageLoader::self()->listPackages(QString(), "kpackage/kcms/")) {
+        const auto plugins = KPackage::PackageLoader::self()->listPackages(QString(), "kpackage/kcms/");
+        for (const auto &plugin : plugins) {
             if (seen.contains(plugin.pluginId())) {
                 continue;
             }
@@ -113,7 +114,8 @@ int main(int argc, char **argv)
             // qDebug() << "Formafactors: " << formFactors;
         }
 
-        for (const auto &plugin : KPluginLoader::findPlugins("kcms")) {
+        const auto kcmPlugin = KPluginLoader::findPlugins("kcms");
+        for (const auto &plugin : kcmPlugin) {
             if (seen.contains(plugin.pluginId())) {
                 continue;
             }

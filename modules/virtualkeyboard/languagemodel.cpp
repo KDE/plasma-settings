@@ -93,7 +93,7 @@ bool LanguageModel::setData(const QModelIndex &index, const QVariant &value, int
     }
 
     QStringList enabledLangs;
-    for (const auto &data : m_languages) {
+    for (const auto &data : qAsConst(m_languages)) {
         if (data.enabled) {
             enabledLangs << data.langCode;
         }

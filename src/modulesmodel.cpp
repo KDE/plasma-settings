@@ -35,12 +35,14 @@ ModulesModel::ModulesModel(QObject *parent)
     : QAbstractListModel(parent)
 {
     qDebug() << "Current platform is " << KDeclarative::KDeclarative::runtimePlatform();
-    for (const KPluginMetaData &pluginMetaData : KPackage::PackageLoader::self()->listPackages(QString(), "kpackage/kcms/")) {
+    const auto packages = KPackage::PackageLoader::self()->listPackages(QString(), "kpackage/kcms/");
+    for (const KPluginMetaData &pluginMetaData : packages) {
         bool isCurrentPlatform = false;
         if (KDeclarative::KDeclarative::runtimePlatform().isEmpty()) {
             isCurrentPlatform = true;
         } else {
-            for (const QString &platform : KDeclarative::KDeclarative::runtimePlatform()) {
+            const auto platforms = KDeclarative::KDeclarative::runtimePlatform();
+            for (const QString &platform : platforms) {
                 if (pluginMetaData.formFactors().contains(platform)) {
                     qDebug() << "Platform for " << pluginMetaData.name() << " is " << pluginMetaData.formFactors();
                     isCurrentPlatform = true;
