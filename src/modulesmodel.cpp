@@ -53,6 +53,7 @@ ModulesModel::ModulesModel(QObject *parent)
             m_plugins.append(d);
         }
     }
+    std::sort(m_plugins.begin(), m_plugins.end(), std::less<Data>());
 }
 
 QVariant ModulesModel::data(const QModelIndex &index, int role) const
