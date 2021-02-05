@@ -1,5 +1,6 @@
 /*
  * Copyright 2019  Jonah Brüchert <jbb@kaidan.im>
+ * Copyright 2012-2019 Harald Sitter <sitter@kde.org>
  *
  * This program is free software; you can redistribute it and/or
  * modify it under the terms of the GNU General Public License as
