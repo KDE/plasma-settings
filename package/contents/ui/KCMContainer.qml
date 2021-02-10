@@ -38,6 +38,11 @@ Kirigami.Page {
                 pageStack.push(kcmContainer.createObject(pageStack, {"internalPage": page}));
             }
             onPageRemoved: pageStack.pop();
+            onNeedsSaveChanged: {
+                if (kcm.needsSave) {
+                    kcm.save()
+                }
+            }
         },
         Connections {
             target: pageStack
