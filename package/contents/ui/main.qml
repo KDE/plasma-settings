@@ -50,6 +50,7 @@ Kirigami.ApplicationWindow {
         }
     }
 
+    //HACK: workaround for crash of some modules such as pulseaudio
     Timer {
         id: startupModuleTimer
         interval: 100
