@@ -1,3 +1,10 @@
+/***************************************************************************
+ *                                                                         *
+ *   SPDX-FileCopyrightText: 2019 Nicolas Fella <nicolas.fella@gmx.de>
+ *                                                                         *
+ *   SPDX-License-Identifier: GPL-2.0-or-later
+ ***************************************************************************/
+
 import QtQuick 2.6
 import QtQuick.Controls 2.2 as Controls
 import org.kde.kirigami 2.5 as Kirigami
