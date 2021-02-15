@@ -54,7 +54,7 @@ int main(int argc, char **argv)
 {
     QApplication app(argc, argv);
 
-    KLocalizedString::setApplicationDomain("plasma-settings");
+    KLocalizedString::setApplicationDomain("mobile.plasma-settings");
 
     // About data
     KAboutData aboutData("mobile.plasmasettings", i18n("Settings"), version, i18n("Touch-friendly settings application."), KAboutLicense::GPL, i18n("Copyright 2011-2015, Sebastian Kügler"));
