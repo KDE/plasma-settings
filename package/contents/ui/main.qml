@@ -46,9 +46,16 @@ Kirigami.ApplicationWindow {
 
     Component.onCompleted: {
         if (SettingsApp.startModule.length > 0) {
-            openModule(SettingsApp.startModule)
+            startupModuleTimer.restart()
         }
     }
+
+    Timer {
+        id: startupModuleTimer
+        interval: 100
+        onTriggered: openModule(SettingsApp.startModule)
+    }
+
 
     Connections {
         target: SettingsApp
