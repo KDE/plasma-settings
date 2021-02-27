@@ -1,6 +1,5 @@
 # Install the packages, also make it known to the system
 
-add_subdirectory(theme)
 add_subdirectory(time)
 
 # Power
