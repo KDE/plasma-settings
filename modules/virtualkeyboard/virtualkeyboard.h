@@ -7,6 +7,9 @@
 #include "languagemodel.h"
 #include <KQuickAddons/ConfigModule>
 
+#include <QList>
+#include <QString>
+
 #ifndef VIRTUALKEYBOARD_H
 #define VIRTUALKEYBOARD_H
 
@@ -23,6 +26,9 @@ class VirtualKeyboard : public KQuickAddons::ConfigModule
 
     Q_PROPERTY(bool soundFeedback MEMBER m_soundFeedback WRITE setSoundFeedback NOTIFY soundFeedbackChanged)
     Q_PROPERTY(bool vibrateFeedback MEMBER m_vibrateFeedback WRITE setVibrateFeedback NOTIFY vibrateFeedbackChanged)
+    
+    Q_PROPERTY(QString theme MEMBER m_theme WRITE setTheme NOTIFY themeChanged)
+    Q_PROPERTY(QStringList availableThemes MEMBER m_availableThemes NOTIFY availableThemesChanged)
 
 public:
     VirtualKeyboard(QObject *parent, const QVariantList &args);
@@ -36,6 +42,9 @@ public:
     void setSoundFeedback(bool enabled);
     void setVibrateFeedback(bool enabled);
 
+    void setTheme(QString theme);
+    QStringList availableThemes();
+    
 Q_SIGNALS:
     void spellCheckChanged();
     void autoCapitalizeChanged();
@@ -44,6 +53,8 @@ Q_SIGNALS:
     void fullStopOnDoubleSpaceChanged();
     void soundFeedbackChanged();
     void vibrateFeedbackChanged();
+    void themeChanged();
+    void availableThemesChanged();
 
 private:
     GSettingsItem *m_gsettings;
@@ -59,6 +70,10 @@ private:
     // feedback
     bool m_soundFeedback;
     bool m_vibrateFeedback;
+    
+    // theme
+    QString m_theme;
+    QStringList m_availableThemes;
 };
 
 #endif

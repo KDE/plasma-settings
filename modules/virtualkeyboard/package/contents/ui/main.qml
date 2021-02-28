@@ -84,6 +84,20 @@ KCM.SimpleKCM {
                 kcm.vibrateFeedback = checked;
             }
         }
+        
+        Item {
+            Kirigami.FormData.label: i18n("Other:")
+            Kirigami.FormData.isSection: true
+        }
+        
+        QQC2.ComboBox {
+            Kirigami.FormData.label: i18n("Theme:")
+            currentIndex: kcm.availableThemes.indexOf(kcm.theme)
+            model: kcm.availableThemes
+            onActivated: {
+                kcm.theme = currentText;
+            }
+        }
 
         Item {
             Kirigami.FormData.label: i18n("Languages:")
