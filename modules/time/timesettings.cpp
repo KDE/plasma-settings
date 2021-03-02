@@ -202,7 +202,7 @@ void TimeSettings::setTimeFormat(const QString &timeFormat)
     if (m_timeFormat != timeFormat) {
         m_timeFormat = timeFormat;
 
-        m_localeSettings.writeEntry("TimeFormat", timeFormat);
+        m_localeSettings.writeEntry("TimeFormat", timeFormat, KConfigGroup::Notify);
         m_localeConfig->sync();
 
         QDBusMessage msg = QDBusMessage::createSignal(QStringLiteral("/org/kde/kcmshell_clock"), QStringLiteral("org.kde.kcmshell_clock"), QStringLiteral("clockUpdated"));
