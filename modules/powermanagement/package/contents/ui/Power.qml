@@ -32,7 +32,7 @@ SimpleKCM {
 
         QQC2.ComboBox {
             id: sleepCombo
-            Kirigami.FormData.label: i18n("Part of a sentence like 'Turn off the Screen after 5 minutes'", "Turn off the Screen")
+            Kirigami.FormData.label: i18nc("Part of a sentence like 'Turn off the Screen after 5 minutes'", "Turn off the Screen")
             model: kcm.timeOptions()
             currentIndex: kcm.sleepScreenIdx
             onActivated: kcm.sleepScreenIdx = currentIndex
