@@ -23,7 +23,7 @@ target_link_libraries(kcm_mobile_power
     KF5::Service
 )
 
-kcoreaddons_desktop_to_json(kcm_mobile_power powermanagement.desktop SERVICE_TYPES kcmodule.desktop)
+kcoreaddons_desktop_to_json(kcm_mobile_power powermanagement.desktop)
 
 #this desktop file is installed only for retrocompatibility with sycoca
 install(FILES powermanagement.desktop DESTINATION ${SERVICES_INSTALL_DIR})
