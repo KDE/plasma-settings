@@ -158,7 +158,7 @@ void MobilePower::load()
         KConfigGroup dimSettings = batteryGroup.group("DimDisplay");
         d->sleepScreen = true;
 
-        // dimdisplayconfig.cpp - here we store time * 60 * 1000
+        // powerdevil/dimdisplayconfig.cpp - here we load time / 60 / 1000
         // We should really, really, stop doing that.
         d->sleepScreenTime = (dimSettings.readEntry("idleTime").toInt() / 60) / 1000;
     } else {
@@ -190,7 +190,7 @@ void MobilePower::save()
     } else {
         KConfigGroup dimDisplayGroup = batteryGroup.group("DimDisplay");
 
-        // dimdisplayconfig.cpp - here we store time * 60 * 1000
+        // powerdevil/dimdisplayconfig.cpp - here we store time * 60 * 1000
         // We should really, really, stop doing that.
         dimDisplayGroup.writeEntry("idleTime", d->sleepScreenTime * 60 * 1000);
     }
