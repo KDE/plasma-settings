@@ -157,7 +157,10 @@ void MobilePower::load()
         qDebug() << "Group is valid";
         KConfigGroup dimSettings = batteryGroup.group("DimDisplay");
         d->sleepScreen = true;
-        d->sleepScreenTime = dimSettings.readEntry("idleTime").toInt() / 60;
+
+        // dimdisplayconfig.cpp - here we store time * 60 * 1000
+        // We should really, really, stop doing that.
+        d->sleepScreenTime = (dimSettings.readEntry("idleTime").toInt() / 60) / 1000;
     } else {
         qDebug() << "Group is invalid, setting sleep screen to false";
         d->sleepScreen = false;
@@ -186,7 +189,10 @@ void MobilePower::save()
         batteryGroup.deleteGroup("DimDisplay");
     } else {
         KConfigGroup dimDisplayGroup = batteryGroup.group("DimDisplay");
-        dimDisplayGroup.writeEntry("idleTime", d->sleepScreenTime * 60);
+
+        // dimdisplayconfig.cpp - here we store time * 60 * 1000
+        // We should really, really, stop doing that.
+        dimDisplayGroup.writeEntry("idleTime", d->sleepScreenTime * 60 * 1000);
     }
 
     KConfigGroup lockScreenGroup = batteryGroup.group("SuspendSession");
