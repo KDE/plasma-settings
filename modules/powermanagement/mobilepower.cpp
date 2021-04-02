@@ -6,7 +6,6 @@
 #include <KAboutData>
 #include <KLocalizedString>
 #include <KPluginFactory>
-#include <KService/KServiceTypeTrader>
 #include <KSharedConfig>
 #include <KConfigGroup>
 

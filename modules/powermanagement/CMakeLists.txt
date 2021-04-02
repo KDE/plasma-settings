@@ -20,7 +20,6 @@ target_link_libraries(kcm_mobile_power
     KF5::I18n
     KF5::QuickAddons
     KF5::ConfigCore
-    KF5::Service
 )
 
 kcoreaddons_desktop_to_json(kcm_mobile_power powermanagement.desktop)
