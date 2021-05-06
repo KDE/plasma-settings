@@ -187,7 +187,8 @@ void MobilePower::save()
     KConfigGroup lockScreenGroup = batteryGroup.group("SuspendSession");
     lockScreenGroup.writeEntry<bool>("suspendThenHibernate", d->lockScreen);
     lockScreenGroup.writeEntry("idleTime", d->lockScreenTime * 60);
-    lockScreenGroup.writeEntry("suspendType", 32); // always lock screen.
+    // Do not mess with Suspend Type
+    // lockScreenGroup.writeEntry("suspendType", 32); // always lock screen.
 }
 
 QStringList MobilePower::timeOptions() const
