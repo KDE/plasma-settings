@@ -12,7 +12,6 @@
 K_PLUGIN_CLASS_WITH_JSON(MobilePower, "powermanagement.json")
 
 struct MobilePower::Private {
-    qreal brightness;
     int lockScreenTime;
     int sleepScreenTime;
     bool lockScreen;
@@ -53,21 +52,6 @@ MobilePower::MobilePower(QObject *parent, const QVariantList &args)
 }
 
 MobilePower::~MobilePower() = default;
-
-qreal MobilePower::brightness() const
-{
-    return d->brightness;
-}
-
-void MobilePower::setBrightness(qreal value)
-{
-    if (d->brightness == value) {
-        return;
-    }
-    d->brightness = value;
-    Q_EMIT brightnessChanged(value);
-    save();
-}
 
 bool MobilePower::lockScreen() const
 {
@@ -145,8 +129,6 @@ void MobilePower::setSleepScreenTime(int value)
 // idleTime=300000
 // Aparently KDE removes this group when it's false.
 //
-// [Battery][BrigthnessControl]
-// value = 30
 
 void MobilePower::load()
 {
@@ -169,10 +151,6 @@ void MobilePower::load()
     d->lockScreen = lockScreenGroup.readEntry<bool>("suspendThenHibernate", false);
     d->lockScreenTime = lockScreenGroup.readEntry<int>("idleTime", 300) / 60;
 
-    KConfigGroup brigthnessGroup = batteryGroup.group("BrightnessControl");
-    d->brightness = brigthnessGroup.readEntry<qreal>("value", 0.5) * 100;
-
-    Q_EMIT brightnessChanged(d->brightness);
     Q_EMIT lockScreenChanged(d->lockScreen);
     Q_EMIT lockScreenTimeChanged(d->sleepScreenTime);
     Q_EMIT sleepScreenChanged(d->sleepScreen);
@@ -198,11 +176,6 @@ void MobilePower::save()
     lockScreenGroup.writeEntry<bool>("suspendThenHibernate", d->lockScreen);
     lockScreenGroup.writeEntry("idleTime", d->lockScreenTime * 60);
     lockScreenGroup.writeEntry("suspendType", 32); // always lock screen.
-
-    KConfigGroup brigthnessGroup = batteryGroup.group("BrightnessControl");
-    brigthnessGroup.writeEntry("value", d->brightness / 100);
-
-    qDebug() << "Loaded the values" << d->lockScreen << d->sleepScreen;
 }
 
 QStringList MobilePower::timeOptions() const
