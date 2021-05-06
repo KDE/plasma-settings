@@ -11,9 +11,9 @@ class MobilePower : public KQuickAddons::ConfigModule
 {
     Q_OBJECT
     Q_PROPERTY(bool lockScreen READ lockScreen WRITE setLockScreen NOTIFY lockScreenChanged)
-    Q_PROPERTY(int lockScreenTime READ lockScreenTime WRITE setLockScreenTime NOTIFY lockScreenTimeChanged)
+    Q_PROPERTY(qreal lockScreenTime READ lockScreenTime WRITE setLockScreenTime NOTIFY lockScreenTimeChanged)
     Q_PROPERTY(bool sleepScreen READ sleepScreen WRITE setSleepScreen NOTIFY sleepScreenChanged)
-    Q_PROPERTY(int sleepScreenTime READ sleepScreenTime WRITE setSleepScreenTime NOTIFY sleepScreenTimeChanged)
+    Q_PROPERTY(qreal sleepScreenTime READ sleepScreenTime WRITE setSleepScreenTime NOTIFY sleepScreenTimeChanged)
     Q_PROPERTY(int sleepScreenIdx READ sleepScreenIdx WRITE setSleepScreenIdx NOTIFY sleepScreenIdxChanged)
     Q_PROPERTY(int lockScreenIdx READ lockScreenIdx WRITE setLockScreenIdx NOTIFY lockScreenIdxChanged)
 
@@ -35,17 +35,17 @@ public:
     Q_SLOT void setLockScreen(bool value);
     Q_SIGNAL void lockScreenChanged(bool value);
 
-    int lockScreenTime() const;
-    Q_SLOT void setLockScreenTime(int value);
-    Q_SIGNAL void lockScreenTimeChanged(int value);
+    qreal lockScreenTime() const;
+    Q_SLOT void setLockScreenTime(double value);
+    Q_SIGNAL void lockScreenTimeChanged(double value);
 
     bool sleepScreen() const;
     Q_SLOT void setSleepScreen(bool value);
     Q_SIGNAL void sleepScreenChanged(bool value);
 
-    int sleepScreenTime() const;
-    Q_SLOT void setSleepScreenTime(int value);
-    Q_SIGNAL void sleepScreenTimeChanged(int value);
+    qreal sleepScreenTime() const;
+    Q_SLOT void setSleepScreenTime(double value);
+    Q_SIGNAL void sleepScreenTimeChanged(double value);
 
     void load() override;
     void save() override;

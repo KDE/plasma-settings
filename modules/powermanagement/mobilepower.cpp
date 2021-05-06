@@ -12,12 +12,13 @@
 K_PLUGIN_CLASS_WITH_JSON(MobilePower, "powermanagement.json")
 
 struct MobilePower::Private {
-    int lockScreenTime;
-    int sleepScreenTime;
+    qreal lockScreenTime;
+    qreal sleepScreenTime;
     bool lockScreen;
     bool sleepScreen;
 
     QStringList timeValues = {
+        i18n("30 sec"),
         i18n("1 min"),
         i18n("2 min"),
         i18n("5 min"),
@@ -26,15 +27,26 @@ struct MobilePower::Private {
         i18n("Never"),
     };
 
+    enum {
+        THIRTY_SECONDS,
+        ONE_MINUTE,
+        TWO_MINUTES,
+        FIVE_MINUTES,
+        TEN_MINUTES,
+        FIFTEEN_MINUTES,
+        NEVER
+    };
+
     // Maps the indices of the timeValues indexes
     // to minutes.
-    QMap<int, int> idxToMinutes= {
-        {0, 1},
-        {1, 2},
-        {2, 5},
-        {3, 10},
-        {4, 15},
-        {5, 0}
+    QMap<int, qreal> idxToMinutes= {
+        {THIRTY_SECONDS, 0.5},
+        {ONE_MINUTE, 1},
+        {TWO_MINUTES, 2},
+        {FIVE_MINUTES, 5},
+        {TEN_MINUTES, 10},
+        {FIFTEEN_MINUTES, 15},
+        {NEVER, 0}
     };
 
     KSharedConfig::Ptr profilesConfig = KSharedConfig::openConfig("powermanagementprofilesrc", KConfig::SimpleConfig | KConfig::CascadeConfig);
@@ -69,14 +81,14 @@ void MobilePower::setLockScreen(bool value)
     save();
 }
 
-int MobilePower::lockScreenTime() const
+qreal MobilePower::lockScreenTime() const
 {
     return d->lockScreenTime;
 }
 
-void MobilePower::setLockScreenTime(int value)
+void MobilePower::setLockScreenTime(qreal value)
 {
-    if (d->lockScreenTime == value) {
+    if (qFuzzyCompare(d->lockScreenTime, value)) {
         return;
     }
     d->lockScreenTime = value;
@@ -100,14 +112,14 @@ void MobilePower::setSleepScreen(bool value)
     save();
 }
 
-int MobilePower::sleepScreenTime() const
+qreal MobilePower::sleepScreenTime() const
 {
     return d->sleepScreenTime;
 }
 
-void MobilePower::setSleepScreenTime(int value)
+void MobilePower::setSleepScreenTime(qreal value)
 {
-    if (d->sleepScreenTime == value) {
+    if (qFuzzyCompare(d->sleepScreenTime, value)) {
         return;
     }
     d->sleepScreenTime = value;
@@ -141,7 +153,7 @@ void MobilePower::load()
 
         // powerdevil/dimdisplayconfig.cpp - here we load time / 60 / 1000
         // We should really, really, stop doing that.
-        d->sleepScreenTime = (dimSettings.readEntry("idleTime").toInt() / 60) / 1000;
+        d->sleepScreenTime = (dimSettings.readEntry("idleTime").toDouble() / 60) / 1000;
     } else {
         qDebug() << "Group is invalid, setting sleep screen to false";
         d->sleepScreen = false;
@@ -149,7 +161,7 @@ void MobilePower::load()
 
     KConfigGroup lockScreenGroup = batteryGroup.group("SuspendSession");
     d->lockScreen = lockScreenGroup.readEntry<bool>("suspendThenHibernate", false);
-    d->lockScreenTime = lockScreenGroup.readEntry<int>("idleTime", 300) / 60;
+    d->lockScreenTime = lockScreenGroup.readEntry("idleTime").toDouble() / 60;
 
     Q_EMIT lockScreenChanged(d->lockScreen);
     Q_EMIT lockScreenTimeChanged(d->sleepScreenTime);
@@ -232,23 +244,36 @@ void MobilePower::setSleepScreenIdx(int idx)
 
 int MobilePower::lockScreenIdx()
 {
-    qDebug() << "lock screen is" << d->sleepScreen;
+    qDebug() << "lock screen is" << d->lockScreen;
 
     if (!d->lockScreen) {
-        return d->idxToMinutes.key(0);
+        return d->idxToMinutes.key(MobilePower::Private::NEVER);
     }
 
-    return d->idxToMinutes.key(d->lockScreenTime);
+    if (qFuzzyIsNull(d->lockScreenTime)) {
+        return d->idxToMinutes.key(MobilePower::Private::NEVER);
+    } else if (qFuzzyCompare(d->lockScreenTime, 0.5)) {
+        return d->idxToMinutes.key(MobilePower::Private::THIRTY_SECONDS);
+    }
+
+    return d->idxToMinutes.key(std::round(d->lockScreenTime));
 }
 
 int MobilePower::sleepScreenIdx()
 {
     qDebug() << "sleep screen is" << d->sleepScreen;
     if (!d->sleepScreen) {
-        return d->idxToMinutes.key(0);
+        return d->idxToMinutes.key(MobilePower::Private::NEVER);
     }
 
-    return d->idxToMinutes.key(d->sleepScreenTime);
+
+    if (qFuzzyIsNull(d->sleepScreenTime)) {
+        return d->idxToMinutes.key(MobilePower::Private::NEVER);
+    } else if (qFuzzyCompare(d->sleepScreenTime, 0.5)) {
+        return d->idxToMinutes.key(MobilePower::Private::THIRTY_SECONDS);
+    }
+
+    return d->idxToMinutes.key(std::round(d->sleepScreenTime));
 }
 
 #include "mobilepower.moc"
