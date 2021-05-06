@@ -10,7 +10,6 @@
 class MobilePower : public KQuickAddons::ConfigModule
 {
     Q_OBJECT
-    Q_PROPERTY(qreal brightness READ brightness WRITE setBrightness NOTIFY brightnessChanged)
     Q_PROPERTY(bool lockScreen READ lockScreen WRITE setLockScreen NOTIFY lockScreenChanged)
     Q_PROPERTY(int lockScreenTime READ lockScreenTime WRITE setLockScreenTime NOTIFY lockScreenTimeChanged)
     Q_PROPERTY(bool sleepScreen READ sleepScreen WRITE setSleepScreen NOTIFY sleepScreenChanged)
@@ -31,10 +30,6 @@ public:
     Q_SIGNAL void lockScreenIdxChanged();
 
     QString stringForValue(int value);
-
-    qreal brightness() const;
-    Q_SLOT void setBrightness(qreal value);
-    Q_SIGNAL void brightnessChanged(qreal value);
 
     bool lockScreen() const;
     Q_SLOT void setLockScreen(bool value);
