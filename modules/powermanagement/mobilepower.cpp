@@ -198,7 +198,7 @@ QStringList MobilePower::timeOptions() const
 
 void MobilePower::setLockScreenIdx(int idx)
 {
-    int value = d->idxToMinutes.value(idx);
+    qreal value = d->idxToMinutes.value(idx);
     qDebug() << "Got the value" << value;
 
     if (value == 0) {
@@ -223,7 +223,7 @@ void MobilePower::setLockScreenIdx(int idx)
 
 void MobilePower::setSleepScreenIdx(int idx)
 {
-    int value = d->idxToMinutes.value(idx);
+    qreal value = d->idxToMinutes.value(idx);
     qDebug() << "Got the value" << value;
     if (value == 0) {
         if (!d->sleepScreen) {
