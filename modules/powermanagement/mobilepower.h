@@ -11,11 +11,11 @@ class MobilePower : public KQuickAddons::ConfigModule
 {
     Q_OBJECT
     Q_PROPERTY(bool lockScreen READ lockScreen WRITE setLockScreen NOTIFY lockScreenChanged)
-    Q_PROPERTY(qreal lockScreenTime READ lockScreenTime WRITE setLockScreenTime NOTIFY lockScreenTimeChanged)
+    Q_PROPERTY(qreal suspendSessionTime READ suspendSessionTime WRITE setLockScreenTime NOTIFY suspendSessionTimeChanged)
     Q_PROPERTY(bool sleepScreen READ sleepScreen WRITE setSleepScreen NOTIFY sleepScreenChanged)
     Q_PROPERTY(qreal sleepScreenTime READ sleepScreenTime WRITE setSleepScreenTime NOTIFY sleepScreenTimeChanged)
     Q_PROPERTY(int sleepScreenIdx READ sleepScreenIdx WRITE setSleepScreenIdx NOTIFY sleepScreenIdxChanged)
-    Q_PROPERTY(int lockScreenIdx READ lockScreenIdx WRITE setLockScreenIdx NOTIFY lockScreenIdxChanged)
+    Q_PROPERTY(int suspendSessionIdx READ suspendSessionIdx WRITE setLockScreenIdx NOTIFY suspendSessionIdxChanged)
 
 public:
     MobilePower(QObject *parent,  const QVariantList &args);
@@ -25,9 +25,9 @@ public:
     Q_INVOKABLE void setLockScreenIdx(int idx);
     Q_INVOKABLE void setSleepScreenIdx(int idx);
     int sleepScreenIdx();
-    int lockScreenIdx();
+    int suspendSessionIdx();
     Q_SIGNAL void sleepScreenIdxChanged();
-    Q_SIGNAL void lockScreenIdxChanged();
+    Q_SIGNAL void suspendSessionIdxChanged();
 
     QString stringForValue(int value);
 
@@ -35,9 +35,9 @@ public:
     Q_SLOT void setLockScreen(bool value);
     Q_SIGNAL void lockScreenChanged(bool value);
 
-    qreal lockScreenTime() const;
+    qreal suspendSessionTime() const;
     Q_SLOT void setLockScreenTime(double value);
-    Q_SIGNAL void lockScreenTimeChanged(double value);
+    Q_SIGNAL void suspendSessionTimeChanged(double value);
 
     bool sleepScreen() const;
     Q_SLOT void setSleepScreen(bool value);

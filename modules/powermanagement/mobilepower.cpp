@@ -12,7 +12,7 @@
 K_PLUGIN_CLASS_WITH_JSON(MobilePower, "powermanagement.json")
 
 struct MobilePower::Private {
-    qreal lockScreenTime;
+    qreal suspendSessionTime;
     qreal sleepScreenTime;
     bool lockScreen;
     bool sleepScreen;
@@ -81,19 +81,19 @@ void MobilePower::setLockScreen(bool value)
     save();
 }
 
-qreal MobilePower::lockScreenTime() const
+qreal MobilePower::suspendSessionTime() const
 {
-    return d->lockScreenTime;
+    return d->suspendSessionTime;
 }
 
 void MobilePower::setLockScreenTime(qreal value)
 {
-    if (qFuzzyCompare(d->lockScreenTime, value)) {
+    if (qFuzzyCompare(d->suspendSessionTime, value)) {
         return;
     }
-    d->lockScreenTime = value;
+    d->suspendSessionTime = value;
 
-    Q_EMIT lockScreenTimeChanged(value);
+    Q_EMIT suspendSessionTimeChanged(value);
     save();
 }
 
@@ -159,12 +159,12 @@ void MobilePower::load()
         d->sleepScreen = false;
     }
 
-    KConfigGroup lockScreenGroup = batteryGroup.group("SuspendSession");
-    d->lockScreen = lockScreenGroup.readEntry<bool>("suspendThenHibernate", false);
-    d->lockScreenTime = lockScreenGroup.readEntry("idleTime").toDouble() / 60;
+    KConfigGroup suspendSessionGroup = batteryGroup.group("SuspendSession");
+    d->lockScreen = true;
+    d->suspendSessionTime = suspendSessionGroup.readEntry("idleTime").toDouble() / 60 / 1000;
 
     Q_EMIT lockScreenChanged(d->lockScreen);
-    Q_EMIT lockScreenTimeChanged(d->sleepScreenTime);
+    Q_EMIT suspendSessionTimeChanged(d->suspendSessionTime);
     Q_EMIT sleepScreenChanged(d->sleepScreen);
     Q_EMIT sleepScreenTimeChanged(d->sleepScreenTime);
     qDebug() << "Loaded the values" << d->lockScreen << d->sleepScreen;
@@ -184,11 +184,12 @@ void MobilePower::save()
         dimDisplayGroup.writeEntry("idleTime", d->sleepScreenTime * 60 * 1000);
     }
 
-    KConfigGroup lockScreenGroup = batteryGroup.group("SuspendSession");
-    lockScreenGroup.writeEntry<bool>("suspendThenHibernate", d->lockScreen);
-    lockScreenGroup.writeEntry("idleTime", d->lockScreenTime * 60);
+    KConfigGroup suspendSessionGroup = batteryGroup.group("SuspendSession");
+    suspendSessionGroup.writeEntry("idleTime", d->suspendSessionTime * 60 * 1000);
+
+    d->profilesConfig->sync();
     // Do not mess with Suspend Type
-    // lockScreenGroup.writeEntry("suspendType", 32); // always lock screen.
+    // suspendSessionGroup.writeEntry("suspendType", 32); // always lock screen.
 }
 
 QStringList MobilePower::timeOptions() const
@@ -210,14 +211,14 @@ void MobilePower::setLockScreenIdx(int idx)
         d->lockScreen = false;
     } else {
         d->lockScreen = true;
-        if (d->lockScreenTime == value) {
+        if (d->suspendSessionTime == value) {
             return;
         }
-        d->lockScreenTime = value;
+        d->suspendSessionTime = value;
         qDebug() << "SEtting to lock in " << value << "Minutes";
 
     }
-    Q_EMIT lockScreenIdxChanged();
+    Q_EMIT suspendSessionIdxChanged();
     save();
 }
 
@@ -243,35 +244,35 @@ void MobilePower::setSleepScreenIdx(int idx)
     save();
 }
 
-int MobilePower::lockScreenIdx()
+int MobilePower::suspendSessionIdx()
 {
     qDebug() << "lock screen is" << d->lockScreen;
 
     if (!d->lockScreen) {
-        return d->idxToMinutes.key(MobilePower::Private::NEVER);
+        return MobilePower::Private::NEVER;
     }
 
-    if (qFuzzyIsNull(d->lockScreenTime)) {
-        return d->idxToMinutes.key(MobilePower::Private::NEVER);
-    } else if (qFuzzyCompare(d->lockScreenTime, 0.5)) {
-        return d->idxToMinutes.key(MobilePower::Private::THIRTY_SECONDS);
+    if (qFuzzyIsNull(d->suspendSessionTime)) {
+        return MobilePower::Private::NEVER;
+    } else if (qFuzzyCompare(d->suspendSessionTime, 0.5)) {
+        return MobilePower::Private::THIRTY_SECONDS;
     }
 
-    return d->idxToMinutes.key(std::round(d->lockScreenTime));
+    return d->idxToMinutes.key(std::round(d->suspendSessionTime));
 }
 
 int MobilePower::sleepScreenIdx()
 {
-    qDebug() << "sleep screen is" << d->sleepScreen;
+    qDebug() << "sleep screen is" << d->sleepScreen << d->sleepScreenTime;
     if (!d->sleepScreen) {
-        return d->idxToMinutes.key(MobilePower::Private::NEVER);
+        return MobilePower::Private::NEVER;
     }
 
 
     if (qFuzzyIsNull(d->sleepScreenTime)) {
-        return d->idxToMinutes.key(MobilePower::Private::NEVER);
+        return MobilePower::Private::NEVER;
     } else if (qFuzzyCompare(d->sleepScreenTime, 0.5)) {
-        return d->idxToMinutes.key(MobilePower::Private::THIRTY_SECONDS);
+        return MobilePower::Private::THIRTY_SECONDS;
     }
 
     return d->idxToMinutes.key(std::round(d->sleepScreenTime));
