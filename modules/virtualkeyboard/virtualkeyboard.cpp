@@ -38,7 +38,7 @@ VirtualKeyboard::VirtualKeyboard(QObject *parent, const QVariantList &args)
     about->addAuthor(i18n("Bhushan Shah"), QString(), "bshah@kde.org");
     setAboutData(about);
 
-    qmlRegisterType<LanguageModel>();
+    qmlRegisterAnonymousType<LanguageModel>("org.kde.kcm.virtualkeyboard", 1);
 
     m_autoCapitalize = m_gsettings->value("auto-capitalization").toBool();
     m_autoCompleteOnSpace = m_gsettings->value("auto-completion").toBool();
