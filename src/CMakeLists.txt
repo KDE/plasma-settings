@@ -7,6 +7,8 @@ set(plasma-settings_SRCS
 
 add_executable(plasma-settings ${plasma-settings_SRCS})
 
+target_include_directories(plasma-settings PRIVATE ${CMAKE_BINARY_DIR})
+
 target_link_libraries(plasma-settings
     Qt5::Quick
     Qt5::Gui

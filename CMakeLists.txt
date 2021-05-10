@@ -1,5 +1,7 @@
 project(plasma-settings)
 
+set(PROJECT_VERSION "21.05")
+
 cmake_minimum_required(VERSION 2.8.12)
 cmake_policy(SET CMP0063 NEW)
 
@@ -29,8 +31,13 @@ include(KDEInstallDirs)
 include(KDECMakeSettings)
 include(KDECompilerSettings)
 include(ECMQMLModules)
+include(ECMSetupVersion)
 include(KDEClangFormat)
 
+ecm_setup_version(${PROJECT_VERSION}
+    VARIABLE_PREFIX PLASMA_SETTINGS
+    VERSION_HEADER ${CMAKE_CURRENT_BINARY_DIR}/version.h
+)
 ################# now find all used packages #################
 
 find_package(Qt5 ${QT_MIN_VERSION} REQUIRED NO_MODULE COMPONENTS Core Quick Test Gui Widgets)

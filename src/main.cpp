@@ -10,6 +10,7 @@
 #include <iostream>
 
 // own
+#include "version.h"
 #include "module.h"
 #include "modulesmodel.h"
 #include "settingsapp.h"
@@ -35,8 +36,6 @@
 #include <KPackage/PackageLoader>
 #include <kdeclarative/qmlobjectsharedengine.h>
 
-static constexpr char version[] = "2.0";
-
 int main(int argc, char **argv)
 {
     QApplication app(argc, argv);
@@ -44,7 +43,7 @@ int main(int argc, char **argv)
     KLocalizedString::setApplicationDomain("mobile.plasma-settings");
 
     // About data
-    KAboutData aboutData("mobile.plasmasettings", i18n("Settings"), version, i18n("Touch-friendly settings application."), KAboutLicense::GPL, i18n("Copyright 2011-2015, Sebastian Kügler"));
+    KAboutData aboutData("mobile.plasmasettings", i18n("Settings"), QStringLiteral(PLASMA_SETTINGS_VERSION_STRING), i18n("Touch-friendly settings application."), KAboutLicense::GPL, i18n("Copyright 2011-2015, Sebastian Kügler"));
     aboutData.addAuthor(i18n("Sebastian Kügler"), i18n("Maintainer"), "sebas@kde.org");
     aboutData.addAuthor(i18n("Marco Martin"), i18n("Maintainer"), "mart@kde.org");
     aboutData.setDesktopFileName("org.kde.mobile.plasmasettings");
