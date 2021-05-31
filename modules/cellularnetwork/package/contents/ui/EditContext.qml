@@ -29,7 +29,7 @@ KCM.SimpleKCM {
             ctx.accessPointName = apn.text;
             ctx.username = username.text;
             ctx.password = password.text;
-            ctx.authMethod = authMethod.currentText;
+            ctx.authMethod = authMethod.currentValue;
             addPage.addContext = false;
         }
     }
