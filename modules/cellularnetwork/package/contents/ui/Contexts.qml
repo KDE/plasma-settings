@@ -18,6 +18,14 @@ KCM.SimpleKCM {
         id: ofonoManager
     }
 
+    actions.contextualActions: [
+        Kirigami.Action {
+            text: i18n("Add Access Point")
+            icon.name: "list-add-symbolic"
+            onTriggered: kcm.push("EditContext.qml")
+        }
+    ]
+
     ListView {
         width: parent.width
         model: ofonoManager.modems.length
@@ -83,8 +91,14 @@ KCM.SimpleKCM {
 
                     OfonoContextConnection {
                         id: context
-
                         contextPath: ofonoConnManager.contexts[contextId]
+                    }
+
+                    onClicked: {
+                        kcm.push("EditContext.qml", {
+                            mode: "edit",
+                            ctx: context
+                        });
                     }
                 }
             }
