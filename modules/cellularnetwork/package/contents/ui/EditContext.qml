@@ -57,22 +57,26 @@ KCM.SimpleKCM {
             id: name
             Kirigami.FormData.label: i18n("Name:")
             text: mode == "edit" ? ctx.name : ""
+            placeholderText: "APN Name"
         }
         Controls.TextField {
             id: apn
             Kirigami.FormData.label: i18n("APN:")
             text: mode == "edit" ? ctx.accessPointName : ""
+            placeholderText: "www.example.com"
         }
         Controls.TextField {
             id: username
             Kirigami.FormData.label: i18n("Username:")
             text: mode == "edit" ? ctx.username : ""
+            placeholderText: "username"
         }
         Controls.TextField {
             id: password
             Kirigami.FormData.label: i18n("Password:")
             echoMode: TextInput.PasswordEchoOnEdit
             text: mode == "edit" ? ctx.password : ""
+            placeholderText: "password"
         }
         Controls.ComboBox {
             id: authMethod
@@ -95,6 +99,7 @@ KCM.SimpleKCM {
 
         Controls.Button {
             text: i18n("Apply")
+            enabled: name.text.length > 0 && apn.text.length > 0
             onClicked: {
                 if (mode == "add") {
                     addPage.addContext = true;
