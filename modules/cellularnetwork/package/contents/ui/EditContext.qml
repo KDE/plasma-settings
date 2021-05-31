@@ -46,6 +46,12 @@ KCM.SimpleKCM {
         }
     }
 
+    Component {
+        id: newContext
+        OfonoContextConnection {
+        }
+    }
+
     Kirigami.FormLayout {
         Controls.TextField {
             id: name
@@ -106,9 +112,4 @@ KCM.SimpleKCM {
         }
     }
 
-    Component {
-        id: newContext
-        OfonoContextConnection {
-        }
-    }
 }
