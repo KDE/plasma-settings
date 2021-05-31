@@ -77,7 +77,13 @@ KCM.SimpleKCM {
         Controls.ComboBox {
             id: authMethod
             Kirigami.FormData.label: i18n("Authentication Method:")
-            model: ["none", "pap", "chap"]
+            textRole: "text"
+            valueRole: "value"
+            model: [
+                { value: "none", text: i18n("None") },
+                { value: "pap", text: i18n("PAP") },
+                { value: "chap", text: i18n("CHAP") }
+            ]
             Component.onCompleted: {
                 if (mode == "edit") {
                     currentIndex = indexOfValue(ctx.authMethod);
