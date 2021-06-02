@@ -8,9 +8,9 @@
 #ifndef TIMEZONESI18N_H
 #define TIMEZONESI18N_H
 
-#include <QObject>
 #include <QHash>
 #include <QLocale>
+#include <QObject>
 
 class TimezonesI18n : public QObject
 {

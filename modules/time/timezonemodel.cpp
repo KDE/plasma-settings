@@ -8,9 +8,9 @@
 #include "timezonemodel.h"
 #include "timezonesi18n.h"
 
-#include <QTimeZone>
-#include <QStringMatcher>
 #include <KLocalizedString>
+#include <QStringMatcher>
+#include <QTimeZone>
 
 TimeZoneFilterProxy::TimeZoneFilterProxy(QObject *parent)
     : QSortFilterProxyModel(parent)
@@ -28,8 +28,7 @@ bool TimeZoneFilterProxy::filterAcceptsRow(int source_row, const QModelIndex &so
     const QString region = sourceModel()->index(source_row, 0, source_parent).data(TimeZoneModel::RegionRole).toString();
     const QString comment = sourceModel()->index(source_row, 0, source_parent).data(TimeZoneModel::CommentRole).toString();
 
-    if (m_stringMatcher.indexIn(city) != -1 || m_stringMatcher.indexIn(region) != -1 ||
-        m_stringMatcher.indexIn(comment) != -1) {
+    if (m_stringMatcher.indexIn(city) != -1 || m_stringMatcher.indexIn(region) != -1 || m_stringMatcher.indexIn(comment) != -1) {
         return true;
     }
 
@@ -47,8 +46,8 @@ void TimeZoneFilterProxy::setFilterString(const QString &filterString)
 //=============================================================================
 
 TimeZoneModel::TimeZoneModel(QObject *parent)
-    : QAbstractListModel(parent),
-      m_timezonesI18n(new TimezonesI18n(this))
+    : QAbstractListModel(parent)
+    , m_timezonesI18n(new TimezonesI18n(this))
 {
     update();
 }
@@ -68,7 +67,7 @@ QVariant TimeZoneModel::data(const QModelIndex &index, int role) const
     if (index.isValid()) {
         TimeZoneData currentData = m_data.at(index.row());
 
-        switch(role) {
+        switch (role) {
         case TimeZoneIdRole:
             return currentData.id;
         case RegionRole:
@@ -139,9 +138,7 @@ void TimeZoneModel::update()
         const QStringList splitted = QString::fromUtf8(zone.id()).split(QStringLiteral("/"));
 
         // CITY | COUNTRY | CONTINENT
-        const QString key = QStringLiteral("%1|%2|%3").arg(splitted.last(),
-                                                    QLocale::countryToString(zone.country()),
-                                                    splitted.first());
+        const QString key = QStringLiteral("%1|%2|%3").arg(splitted.last(), QLocale::countryToString(zone.country()), splitted.first());
 
         cities.append(key);
         zonesByCity.insert(key, zone);
@@ -152,17 +149,18 @@ void TimeZoneModel::update()
         const QTimeZone timeZone = zonesByCity.value(key);
         QString comment = timeZone.comment();
 
-        //FIXME - this was in the old code but makes no sense
-//         if (!comment.isEmpty()) {
-//             comment = i18n(comment.toUtf8());
-//         }
+        // FIXME - this was in the old code but makes no sense
+        //         if (!comment.isEmpty()) {
+        //             comment = i18n(comment.toUtf8());
+        //         }
 
         const QStringList cityCountryContinent = key.split(QLatin1Char('|'));
 
         TimeZoneData newData;
         newData.id = QString::fromUtf8(timeZone.id());
-        newData.region = timeZone.country() == QLocale::AnyCountry ? QString()
-                                                                   : m_timezonesI18n->i18nContinents(cityCountryContinent.at(2)) + QLatin1Char('/') + m_timezonesI18n->i18nCountry(timeZone.country());
+        newData.region = timeZone.country() == QLocale::AnyCountry
+            ? QString()
+            : m_timezonesI18n->i18nContinents(cityCountryContinent.at(2)) + QLatin1Char('/') + m_timezonesI18n->i18nCountry(timeZone.country());
         newData.city = m_timezonesI18n->i18nCity(cityCountryContinent.at(0));
         newData.comment = comment;
         newData.checked = false;
@@ -202,19 +200,13 @@ void TimeZoneModel::selectLocalTimeZone()
 
 QHash<int, QByteArray> TimeZoneModel::roleNames() const
 {
-    return QHash<int, QByteArray>({
-        {TimeZoneIdRole, "timeZoneId"},
-        {RegionRole, "region"},
-        {CityRole, "city"},
-        {CommentRole, "comment"},
-        {CheckedRole, "checked"}
-    });
+    return QHash<int, QByteArray>(
+        {{TimeZoneIdRole, "timeZoneId"}, {RegionRole, "region"}, {CityRole, "city"}, {CommentRole, "comment"}, {CheckedRole, "checked"}});
 }
 
 void TimeZoneModel::sortTimeZones()
 {
-    std::sort(m_selectedTimeZones.begin(), m_selectedTimeZones.end(),
-              [this](const QString &a, const QString &b) {
-                  return m_offsetData.value(a) < m_offsetData.value(b);
-              });
+    std::sort(m_selectedTimeZones.begin(), m_selectedTimeZones.end(), [this](const QString &a, const QString &b) {
+        return m_offsetData.value(a) < m_offsetData.value(b);
+    });
 }

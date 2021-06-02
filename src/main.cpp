@@ -10,10 +10,10 @@
 #include <iostream>
 
 // own
-#include "version.h"
 #include "module.h"
 #include "modulesmodel.h"
 #include "settingsapp.h"
+#include "version.h"
 
 // Qt
 #include <QApplication>
@@ -43,7 +43,12 @@ int main(int argc, char **argv)
     KLocalizedString::setApplicationDomain("mobile.plasma-settings");
 
     // About data
-    KAboutData aboutData("mobile.plasmasettings", i18n("Settings"), QStringLiteral(PLASMA_SETTINGS_VERSION_STRING), i18n("Touch-friendly settings application."), KAboutLicense::GPL, i18n("Copyright 2011-2015, Sebastian Kügler"));
+    KAboutData aboutData("mobile.plasmasettings",
+                         i18n("Settings"),
+                         QStringLiteral(PLASMA_SETTINGS_VERSION_STRING),
+                         i18n("Touch-friendly settings application."),
+                         KAboutLicense::GPL,
+                         i18n("Copyright 2011-2015, Sebastian Kügler"));
     aboutData.addAuthor(i18n("Sebastian Kügler"), i18n("Maintainer"), "sebas@kde.org");
     aboutData.addAuthor(i18n("Marco Martin"), i18n("Maintainer"), "mart@kde.org");
     aboutData.setDesktopFileName("org.kde.mobile.plasmasettings");
@@ -55,7 +60,9 @@ int main(int argc, char **argv)
 
     const QCommandLineOption listOption({QStringLiteral("l"), QStringLiteral("list")}, i18n("List available settings modules"));
     const QCommandLineOption formfactorOption(
-        {QStringLiteral("x"), QStringLiteral("formfactor")}, i18n("Limit to modules suitable for <formfactor>, e.g. handset, tablet, mediacenter, desktop, test, all (default handset)"), i18n("formfactor"));
+        {QStringLiteral("x"), QStringLiteral("formfactor")},
+        i18n("Limit to modules suitable for <formfactor>, e.g. handset, tablet, mediacenter, desktop, test, all (default handset)"),
+        i18n("formfactor"));
     const QCommandLineOption moduleOption({QStringLiteral("m"), QStringLiteral("module")}, i18n("Settings module to open"), i18n("modulename"));
     const QCommandLineOption singleModuleOption({QStringLiteral("s"), QStringLiteral("singleModule")}, i18n("Only show a single module, requires --module"));
     const QCommandLineOption fullscreenOption({QStringLiteral("f"), QStringLiteral("fullscreen")}, i18n("Start window fullscreen"));
@@ -95,7 +102,8 @@ int main(int argc, char **argv)
             }
 
             seen << plugin.pluginId();
-            std::cout << plugin.pluginId().toLocal8Bit().data() << ' ' << std::setw(nameWidth - plugin.pluginId().length() + 2) << '.' << ' ' << plugin.description().toLocal8Bit().data() << std::endl;
+            std::cout << plugin.pluginId().toLocal8Bit().data() << ' ' << std::setw(nameWidth - plugin.pluginId().length() + 2) << '.' << ' '
+                      << plugin.description().toLocal8Bit().data() << std::endl;
 
             // qDebug() << "Formafactors: " << formFactors;
         }
@@ -112,7 +120,8 @@ int main(int argc, char **argv)
             if (len > nameWidth) {
                 nameWidth = len;
             }
-            std::cout << plugin.pluginId().toLocal8Bit().data() << ' ' << std::setw(nameWidth - plugin.pluginId().length() + 2) << '.' << ' ' << plugin.description().toLocal8Bit().data() << std::endl;
+            std::cout << plugin.pluginId().toLocal8Bit().data() << ' ' << std::setw(nameWidth - plugin.pluginId().length() + 2) << '.' << ' '
+                      << plugin.description().toLocal8Bit().data() << std::endl;
         }
 
         return 0;

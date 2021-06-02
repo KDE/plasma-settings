@@ -73,7 +73,9 @@ void TimeSettings::initSettings()
 
     setTimeFormat(m_localeSettings.readEntry("TimeFormat", QStringLiteral(FORMAT24H))); // FIXME?!
 
-    OrgFreedesktopTimedate1Interface timeDatedIface(QStringLiteral("org.freedesktop.timedate1"), QStringLiteral("/org/freedesktop/timedate1"), QDBusConnection::systemBus());
+    OrgFreedesktopTimedate1Interface timeDatedIface(QStringLiteral("org.freedesktop.timedate1"),
+                                                    QStringLiteral("/org/freedesktop/timedate1"),
+                                                    QDBusConnection::systemBus());
     // the server list is not relevant for timesyncd, it fetches it from the network
     m_useNtp = timeDatedIface.nTP();
 }
@@ -133,7 +135,9 @@ void TimeSettings::setUseNtp(bool ntp)
 
 bool TimeSettings::saveTime()
 {
-    OrgFreedesktopTimedate1Interface timedateIface(QStringLiteral("org.freedesktop.timedate1"), QStringLiteral("/org/freedesktop/timedate1"), QDBusConnection::systemBus());
+    OrgFreedesktopTimedate1Interface timedateIface(QStringLiteral("org.freedesktop.timedate1"),
+                                                   QStringLiteral("/org/freedesktop/timedate1"),
+                                                   QDBusConnection::systemBus());
 
     bool rc = true;
     // final arg in each method is "user-interaction" i.e whether it's OK for polkit to ask for auth
@@ -174,7 +178,9 @@ bool TimeSettings::saveTime()
 void TimeSettings::saveTimeZone(const QString &newtimezone)
 {
     qDebug() << "Saving timezone to config: " << newtimezone;
-    OrgFreedesktopTimedate1Interface timedateIface(QStringLiteral("org.freedesktop.timedate1"), QStringLiteral("/org/freedesktop/timedate1"), QDBusConnection::systemBus());
+    OrgFreedesktopTimedate1Interface timedateIface(QStringLiteral("org.freedesktop.timedate1"),
+                                                   QStringLiteral("/org/freedesktop/timedate1"),
+                                                   QDBusConnection::systemBus());
 
     if (!newtimezone.isEmpty()) {
         qDebug() << "Setting timezone: " << newtimezone;
@@ -205,7 +211,8 @@ void TimeSettings::setTimeFormat(const QString &timeFormat)
         m_localeSettings.writeEntry("TimeFormat", timeFormat, KConfigGroup::Notify);
         m_localeConfig->sync();
 
-        QDBusMessage msg = QDBusMessage::createSignal(QStringLiteral("/org/kde/kcmshell_clock"), QStringLiteral("org.kde.kcmshell_clock"), QStringLiteral("clockUpdated"));
+        QDBusMessage msg =
+            QDBusMessage::createSignal(QStringLiteral("/org/kde/kcmshell_clock"), QStringLiteral("org.kde.kcmshell_clock"), QStringLiteral("clockUpdated"));
         QDBusConnection::sessionBus().send(msg);
 
         qDebug() << "time format is now: " << QLocale().toString(QTime::currentTime(), m_timeFormat);
@@ -267,7 +274,8 @@ QString TimeSettings::errorString()
 
 void TimeSettings::notify()
 {
-    const QDBusMessage msg = QDBusMessage::createSignal(QStringLiteral("/org/kde/kcmshell_clock"), QStringLiteral("org.kde.kcmshell_clock"), QStringLiteral("clockUpdated"));
+    const QDBusMessage msg =
+        QDBusMessage::createSignal(QStringLiteral("/org/kde/kcmshell_clock"), QStringLiteral("org.kde.kcmshell_clock"), QStringLiteral("clockUpdated"));
     QDBusConnection::sessionBus().send(msg);
 }
 

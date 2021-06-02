@@ -26,7 +26,7 @@ class VirtualKeyboard : public KQuickAddons::ConfigModule
 
     Q_PROPERTY(bool soundFeedback MEMBER m_soundFeedback WRITE setSoundFeedback NOTIFY soundFeedbackChanged)
     Q_PROPERTY(bool vibrateFeedback MEMBER m_vibrateFeedback WRITE setVibrateFeedback NOTIFY vibrateFeedbackChanged)
-    
+
     Q_PROPERTY(QString theme MEMBER m_theme WRITE setTheme NOTIFY themeChanged)
     Q_PROPERTY(QStringList availableThemes MEMBER m_availableThemes NOTIFY availableThemesChanged)
 
@@ -44,7 +44,7 @@ public:
 
     void setTheme(QString theme);
     QStringList availableThemes();
-    
+
 Q_SIGNALS:
     void spellCheckChanged();
     void autoCapitalizeChanged();
@@ -70,7 +70,7 @@ private:
     // feedback
     bool m_soundFeedback;
     bool m_vibrateFeedback;
-    
+
     // theme
     QString m_theme;
     QStringList m_availableThemes;

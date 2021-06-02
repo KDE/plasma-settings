@@ -30,12 +30,14 @@ Password::Password(QObject *parent, const QVariantList &args)
     setButtons(KQuickAddons::ConfigModule::NoAdditionalButton);
 }
 
-static char saltCharacter() {
+static char saltCharacter()
+{
     static constexpr const quint32 letterCount = 64;
-    static const char saltCharacters[] = "ABCDEFGHIJKLMNOPQRSTUVWXYZ"
-                                         "abcdefghijklmnopqrstuvwxyz"
-                                         "./0123456789"; // and trailing NUL
-    static_assert(sizeof(saltCharacters) == (letterCount+1), // 64 letters and trailing NUL
+    static const char saltCharacters[] =
+        "ABCDEFGHIJKLMNOPQRSTUVWXYZ"
+        "abcdefghijklmnopqrstuvwxyz"
+        "./0123456789"; // and trailing NUL
+    static_assert(sizeof(saltCharacters) == (letterCount + 1), // 64 letters and trailing NUL
                   "Salt-chars array is not exactly 64 letters long");
 
     const quint32 index = QRandomGenerator::system()->bounded(0u, letterCount);
@@ -67,11 +69,14 @@ static QString saltPassword(const QString &plain)
 
 void Password::setPassword(const QString &password)
 {
-    auto accountsInterface = new OrgFreedesktopAccountsInterface(QStringLiteral("org.freedesktop.Accounts"), QStringLiteral("/org/freedesktop/Accounts"), QDBusConnection::systemBus(), this);
+    auto accountsInterface = new OrgFreedesktopAccountsInterface(QStringLiteral("org.freedesktop.Accounts"),
+                                                                 QStringLiteral("/org/freedesktop/Accounts"),
+                                                                 QDBusConnection::systemBus(),
+                                                                 this);
     auto reply = accountsInterface->FindUserByName(qgetenv("USER"));
     reply.waitForFinished();
 
-    if(reply.isError()) {
+    if (reply.isError()) {
         qDebug() << "Error";
         return;
     }

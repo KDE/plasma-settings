@@ -17,7 +17,7 @@
 struct Data {
     KPluginMetaData plugin;
     QPointer<KQuickAddons::ConfigModule> kcm;
-    bool operator<(const Data& other) const
+    bool operator<(const Data &other) const
     {
         return plugin.name() < other.plugin.name();
     }

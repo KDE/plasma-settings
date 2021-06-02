@@ -45,13 +45,7 @@ public:
     explicit TimeZoneModel(QObject *parent = nullptr);
     ~TimeZoneModel() override;
 
-    enum Roles {
-        TimeZoneIdRole = Qt::UserRole + 1,
-        RegionRole,
-        CityRole,
-        CommentRole,
-        CheckedRole
-    };
+    enum Roles { TimeZoneIdRole = Qt::UserRole + 1, RegionRole, CityRole, CommentRole, CheckedRole };
 
     int rowCount(const QModelIndex &parent) const override;
     QVariant data(const QModelIndex &index, int role) const override;

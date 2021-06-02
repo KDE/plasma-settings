@@ -48,9 +48,9 @@ VirtualKeyboard::VirtualKeyboard(QObject *parent, const QVariantList &args)
 
     m_soundFeedback = m_gsettings->value("key-press-feedback").toBool();
     m_vibrateFeedback = m_gsettings->value("key-press-haptic-feedback").toBool();
-    
+
     m_theme = m_gsettings->value("theme").toString();
-    
+
     // get available themes
     QDir themesFolder(MALIIT_KEYBOARD_THEMES_DIR);
     const auto files = themesFolder.entryList({"*.json"}, QDir::Files);

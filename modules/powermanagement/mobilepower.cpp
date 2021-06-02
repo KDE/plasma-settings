@@ -4,10 +4,10 @@
 #include "mobilepower.h"
 
 #include <KAboutData>
+#include <KConfigGroup>
 #include <KLocalizedString>
 #include <KPluginFactory>
 #include <KSharedConfig>
-#include <KConfigGroup>
 
 K_PLUGIN_CLASS_WITH_JSON(MobilePower, "powermanagement.json")
 
@@ -39,7 +39,7 @@ struct MobilePower::Private {
 
     // Maps the indices of the timeValues indexes
     // to minutes.
-    QMap<int, qreal> idxToMinutes= {
+    QMap<int, qreal> idxToMinutes = {
         {THIRTY_SECONDS, 0.5},
         {ONE_MINUTE, 1},
         {TWO_MINUTES, 2},
@@ -216,7 +216,6 @@ void MobilePower::setLockScreenIdx(int idx)
         }
         d->suspendSessionTime = value;
         qDebug() << "SEtting to lock in " << value << "Minutes";
-
     }
     Q_EMIT suspendSessionIdxChanged();
     save();
@@ -267,7 +266,6 @@ int MobilePower::sleepScreenIdx()
     if (!d->sleepScreen) {
         return MobilePower::Private::NEVER;
     }
-
 
     if (qFuzzyIsNull(d->sleepScreenTime)) {
         return MobilePower::Private::NEVER;
