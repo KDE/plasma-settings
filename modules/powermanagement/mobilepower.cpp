@@ -34,7 +34,7 @@ struct MobilePower::Private {
         FIVE_MINUTES,
         TEN_MINUTES,
         FIFTEEN_MINUTES,
-        NEVER
+        NEVER,
     };
 
     // Maps the indices of the timeValues indexes
@@ -46,7 +46,7 @@ struct MobilePower::Private {
         {FIVE_MINUTES, 5},
         {TEN_MINUTES, 10},
         {FIFTEEN_MINUTES, 15},
-        {NEVER, 0}
+        {NEVER, 0},
     };
 
     KSharedConfig::Ptr profilesConfig = KSharedConfig::openConfig("powermanagementprofilesrc", KConfig::SimpleConfig | KConfig::CascadeConfig);
