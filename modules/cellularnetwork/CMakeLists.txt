@@ -1,8 +1,4 @@
-set(cellularnetwork_SRCS # Specify source files for the library
-    cellularnetwork.cpp
-)
-
-add_library(kcm_mobile_cellularnetwork MODULE ${cellularnetwork_SRCS})
+add_library(kcm_mobile_cellularnetwork MODULE cellularnetwork.cpp)
 
 target_link_libraries(kcm_mobile_cellularnetwork
     Qt5::Core

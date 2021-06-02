@@ -4,7 +4,7 @@ set(timesettings_SRCS
     timezonesi18n.cpp
 )
 
-qt5_add_dbus_interface(timesettings_SRCS ${CMAKE_CURRENT_SOURCE_DIR}/timedated1.xml timedated_interface)
+qt_add_dbus_interface(timesettings_SRCS ${CMAKE_CURRENT_SOURCE_DIR}/timedated1.xml timedated_interface)
 
 add_library(kcm_mobile_time MODULE ${timesettings_SRCS})
 

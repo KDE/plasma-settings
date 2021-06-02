@@ -1,18 +1,9 @@
 # SPDX-License-Identifier: BSD-3-Clause
 # SPDX-FileCopyrightText: 2020 Tomaz Canabrava <tcanabrava@kde.org>
 
-include_directories(
-    ${CMAKE_CURRENT_BINARY_DIR}
-    ${CMAKE_CURRENT_SOURCE_DIR}
-)
-
 add_definitions(-DTRANSLATION_DOMAIN=\"kcm_mobile_power\")
 
-set(kcm_SRCS
-   mobilepower.cpp
-)
-
-add_library(kcm_mobile_power MODULE ${kcm_SRCS})
+add_library(kcm_mobile_power MODULE mobilepower.cpp)
 
 target_link_libraries(kcm_mobile_power
     Qt5::Core

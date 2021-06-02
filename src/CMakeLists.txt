@@ -20,7 +20,7 @@ target_link_libraries(plasma-settings
     KF5::Declarative
 )
 
-install( TARGETS plasma-settings ${INSTALL_TARGETS_DEFAULT_ARGS} )
+install(TARGETS plasma-settings ${INSTALL_TARGETS_DEFAULT_ARGS})
 
 install(DIRECTORY package/ DESTINATION ${KDE_INSTALL_DATAROOTDIR}/kpackage/genericqml/org.kde.plasma.settings)
 

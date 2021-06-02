@@ -2,25 +2,15 @@ project(plasma-settings)
 
 set(PROJECT_VERSION "21.05")
 
-cmake_minimum_required(VERSION 2.8.12)
-cmake_policy(SET CMP0063 NEW)
+cmake_minimum_required(VERSION 3.16)
 
-################# Disallow in-source build #################
-
-if("${CMAKE_SOURCE_DIR}" STREQUAL "${CMAKE_BINARY_DIR}")
-   message(FATAL_ERROR "plasma-settings requires an out of source build. Please create a separate build directory and run 'cmake path_to_plasma-settings [options]' there.")
-endif()
-
-include(CPack)
 include(FeatureSummary)
-
-################# set KDE specific information #################
 
 set(CMAKE_CXX_STANDARD 17)
 set(CMAKE_CXX_STANDARD_REQUIRED ON)
 
-set (QT_MIN_VERSION "5.14.0")
-set (KF5_MIN_VERSION "5.70")
+set (QT_MIN_VERSION "5.15.0")
+set (KF5_MIN_VERSION "5.82")
 
 find_package(ECM ${KF5_MIN_VERSION} REQUIRED NO_MODULE)
 
@@ -39,7 +29,6 @@ ecm_setup_version(${PROJECT_VERSION}
     VARIABLE_PREFIX PLASMA_SETTINGS
     VERSION_HEADER ${CMAKE_CURRENT_BINARY_DIR}/version.h
 )
-################# now find all used packages #################
 
 find_package(Qt5 ${QT_MIN_VERSION} REQUIRED NO_MODULE COMPONENTS Core Quick Test Gui Widgets)
 
@@ -56,7 +45,7 @@ find_package(KF5 ${KF5_MIN_VERSION} REQUIRED COMPONENTS
     KIO
 )
 
-find_package(PkgConfig)
+find_package(PkgConfig REQUIRED)
 
 pkg_check_modules(GOBJECT gobject-2.0 REQUIRED IMPORTED_TARGET)
 pkg_check_modules(GIO gio-2.0 REQUIRED IMPORTED_TARGET)
