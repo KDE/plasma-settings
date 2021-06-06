@@ -51,5 +51,6 @@ Kirigami.ScrollablePage {
         keyNavigationEnabled: true
         model: ModulesModel{}
         delegate: settingsModuleDelegate
+        currentIndex: -1 // no default highlight
     }
 }
