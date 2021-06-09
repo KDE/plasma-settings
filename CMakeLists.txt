@@ -1,6 +1,6 @@
 project(plasma-settings)
 
-set(PROJECT_VERSION "21.05")
+set(PROJECT_VERSION "21.06")
 
 cmake_minimum_required(VERSION 3.16)
 
