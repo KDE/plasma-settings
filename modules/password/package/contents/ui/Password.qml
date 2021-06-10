@@ -13,11 +13,6 @@ import org.kde.kcm 1.2
 SimpleKCM {
     title: i18n("Change Lockscreen Pin")
 
-    RegExpValidator {
-        id: pinValidator
-        regExp: /[0-9]+/
-    }
-
     ColumnLayout {
         Kirigami.InlineMessage {
             type: Kirigami.MessageType.Warning
@@ -29,17 +24,13 @@ SimpleKCM {
         Kirigami.FormLayout {
             QQC2.TextField {
                 id: pin
-                Kirigami.FormData.label: i18n("New Pin (numbers only):")
+                Kirigami.FormData.label: i18n("New Pin:")
                 echoMode: TextInput.PasswordEchoOnEdit
-                validator: pinValidator
-                inputMethodHints: Qt.ImhDigitsOnly
             }
             QQC2.TextField {
                 id: confirmPin
                 Kirigami.FormData.label: i18n("Confirm new Pin:")
                 echoMode: TextInput.PasswordEchoOnEdit
-                validator: pinValidator
-                inputMethodHints: Qt.ImhDigitsOnly
             }
             QQC2.Button {
                 text: i18n("Apply")
