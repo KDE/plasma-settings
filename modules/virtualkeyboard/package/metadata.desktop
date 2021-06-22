@@ -1,5 +1,5 @@
 [Desktop Entry]
-Name=Virtual Keyboard
+Name=On-Screen Keyboard
 Name[ast]=Tecláu virtual
 Name[az]=Virtual Klaviatura
 Name[ca]=Teclat virtual
@@ -32,7 +32,7 @@ Name[uk]=Віртуальна клавіатура
 Name[vi]=Bàn phím ảo
 Name[x-test]=xxVirtual Keyboardxx
 Name[zh_CN]=虚拟键盘
-Comment=Virtual Keyboard configuration
+Comment=On-Screen Keyboard configuration
 Comment[ast]=Configuración del tecláu virtual
 Comment[az]=Virtual Klaviatura tənzimləmələri
 Comment[ca]=Configuració del teclat virtual
@@ -76,7 +76,7 @@ X-KDE-PluginInfo-Version=1.0
 X-KDE-PluginInfo-Website=https://plasma-mobile.org
 X-KDE-PluginInfo-License=GPL
 X-KDE-FormFactors=handset,tablet
-X-KDE-Keywords=virtualkeyboard,keyboard
+X-KDE-Keywords=onscreen,osk,virtualkeyboard,keyboard
 X-KDE-Keywords[ast]=tecláu virtual,tecláu
 X-KDE-Keywords[az]=virtualkeyboard,keyboard,virtual klaviatura
 X-KDE-Keywords[ca]=teclat virtual,teclat
