@@ -71,7 +71,7 @@ Comment[tr]=Kilit, Uyku, Zaman aşımı
 Comment[uk]=Блокування, присипляння, час очікування
 Comment[vi]=Khoá, Ngủ, Tắt màn hình
 Comment[x-test]=xxLock, Sleep, Timeoutxx
-Comment[zh_CN]=锁屏，睡眠，超时
+Comment[zh_CN]=Lock, Sleep, Timeout, 锁屏, 睡眠, 休眠, 超时
 Comment[zh_TW]=鎖定、休眠與逾時
 
 Encoding=UTF-8
