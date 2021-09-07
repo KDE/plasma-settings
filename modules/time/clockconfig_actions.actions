@@ -2,7 +2,7 @@
 Name=Date and Time Control Module
 Name[ast]=Módulu de control pa la data y hora
 Name[az]=Tarix və Vaxta Nəzarət Modulu
-Name[ca]=Mòdul de control per a la data i hora
+Name[ca]=Mòdul de control de la data i hora
 Name[ca@valencia]=Mòdul de control per a la data i hora
 Name[cs]=Ovládací modul data a času
 Name[da]=Dato og klokkeslæt-kontrolmodul
@@ -42,7 +42,7 @@ Icon=preferences-system-time
 [org.kde.active.clockconfig.save]
 Name=Save the date/time settings
 Name[az]=Tarix/Vaxt ayarlarını saxlamaq
-Name[ca]=Desa la configuració per a la data i hora
+Name[ca]=Desa la configuració de la data i hora
 Name[ca@valencia]=Guarda la configuració per a la data i hora
 Name[cs]=Uložit nastavení data a času
 Name[da]=Gem dato-/klokkeslætsindstillingerne
@@ -80,7 +80,7 @@ Name[zh_TW]=儲存日期與時間設定
 Description=System policies prevent you from saving the date/time settings.
 Description[ast]=Les polítiques del sistema eviten que guardes los axustes de la data y hora.
 Description[az]=Təhlükəsizlik qaydaları sizə tarix və vaxtı idarə etməyə mane olur.
-Description[ca]=Les polítiques del sistema impedeixen que deseu la configuració per a la data i hora.
+Description[ca]=Les polítiques del sistema impedeixen que deseu la configuració de la data i hora.
 Description[ca@valencia]=Les polítiques del sistema impedeixen que guardeu la configuració per a la data i hora.
 Description[cs]=Nastavení systému vám znemožňuje uložit datum/čas.
 Description[da]=Systempolitikker forhindrer dig i at gemme dato-/klokkeslætsindstillinger.
