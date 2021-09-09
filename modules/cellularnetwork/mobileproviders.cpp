@@ -110,7 +110,6 @@ MobileProviders::MobileProviders()
                     const QString name = getNameByLocale(localizedProviderNames);
                     if (hasGsm) {
                         mProvidersGsm.insert(name, e2.firstChild());
-                        sortedGsm.insert(name.toLower(), name);
                     }
                 }
                 n2 = n2.nextSibling();

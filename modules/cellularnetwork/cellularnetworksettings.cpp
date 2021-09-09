@@ -22,7 +22,6 @@ CellularNetworkSettings::CellularNetworkSettings(QObject *parent, const QVariant
     : KQuickAddons::ConfigModule(parent, args)
     , m_modemList{}
     , m_simList{}
-    , m_providers{nullptr}
 {
     CellularNetworkSettings::staticInst = this;
 

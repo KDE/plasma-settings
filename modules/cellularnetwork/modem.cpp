@@ -336,11 +336,11 @@ void Modem::addDetectedProfileSettings()
             qWarning() << QStringLiteral("Detecting profile settings. Using MCCMNC:") << operatorCode;
 
             // lookup apns with mccmnc codes
-            for (QString &provider : mobileProviders->getProvidersFromMCCMNC(operatorCode)) {
+            for (QString &provider : mobileProviders.getProvidersFromMCCMNC(operatorCode)) {
                 qWarning() << QStringLiteral("Provider:") << provider;
 
-                for (auto apn : mobileProviders->getApns(provider)) {
-                    QVariantMap apnInfo = mobileProviders->getApnInfo(apn);
+                for (auto apn : mobileProviders.getApns(provider)) {
+                    QVariantMap apnInfo = mobileProviders.getApnInfo(apn);
                     qWarning() << QStringLiteral("Found gsm profile settings. Type:") << apnInfo[QStringLiteral("usageType")];
 
                     // only add mobile data apns (not mms)
