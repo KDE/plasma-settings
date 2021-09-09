@@ -89,8 +89,6 @@ private:
     QList<Modem *> m_modemList;
     QList<Sim *> m_simList;
 
-    MobileProviders *m_providers;
-
     QList<InlineMessage *> m_messages;
 
     static CellularNetworkSettings *staticInst;

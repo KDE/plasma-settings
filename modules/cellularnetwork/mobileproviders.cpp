@@ -13,6 +13,9 @@
 
 const QString MobileProviders::ProvidersFile = QStringLiteral("/usr/share/mobile-broadband-provider-info/serviceproviders.xml");
 
+// adapted from https://invent.kde.org/plasma/plasma-nm/-/blob/master/libs/editor/mobileproviders.cpp
+// we only use gsm, ignore cdma
+
 bool localeAwareCompare(const QString &one, const QString &two)
 {
     return one.localeAwareCompare(two) < 0;
@@ -67,6 +70,55 @@ MobileProviders::MobileProviders()
         qWarning() << "Error opening providers file" << ProvidersFile;
         mError = ProvidersMissing;
     }
+
+    qDebug() << "TEST"; // TODO
+
+    // scan and fill mProvidersGsm
+    QDomNode n = docElement.firstChild();
+    while (!n.isNull()) {
+        QDomElement e = n.toElement(); // <country ...>
+
+        if (!e.isNull()) {
+            QDomNode n2 = e.firstChild();
+            while (!n2.isNull()) {
+                QDomElement e2 = n2.toElement(); // <provider ...>
+
+                if (!e2.isNull() && e2.tagName().toLower() == "provider") {
+                    QDomNode n3 = e2.firstChild();
+                    bool hasGsm = false;
+                    QMap<QString, QString> localizedProviderNames;
+
+                    while (!n3.isNull()) {
+                        QDomElement e3 = n3.toElement(); // <name | gsm | cdma>
+
+                        if (!e3.isNull()) {
+                            if (e3.tagName().toLower() == "gsm") {
+                                hasGsm = true;
+                            } else if (e3.tagName().toLower() == "name") {
+                                QString lang = e3.attribute("xml:lang");
+                                if (lang.isEmpty()) {
+                                    lang = "en"; // English is default
+                                } else {
+                                    lang = lang.toLower();
+                                    lang.remove(QRegExp("\\-.*$")); // Remove everything after '-' in xml:lang attribute.
+                                }
+                                localizedProviderNames.insert(lang, e3.text());
+                            }
+                        }
+                        n3 = n3.nextSibling();
+                    }
+                    const QString name = getNameByLocale(localizedProviderNames);
+                    if (hasGsm) {
+                        mProvidersGsm.insert(name, e2.firstChild());
+                        sortedGsm.insert(name.toLower(), name);
+                    }
+                }
+                n2 = n2.nextSibling();
+            }
+            break;
+        }
+        n = n.nextSibling();
+    }
 }
 
 MobileProviders::~MobileProviders()
@@ -88,76 +140,6 @@ QString MobileProviders::countryFromLocale() const
         return localeName.mid(idx + 1);
     }
     return QString();
-}
-
-QStringList MobileProviders::getProvidersList(QString country, NetworkManager::ConnectionSettings::ConnectionType type)
-{
-    mProvidersGsm.clear();
-    mProvidersCdma.clear();
-    QDomNode n = docElement.firstChild();
-
-    // country is a country name and we parse country codes.
-    if (!mCountries.key(country).isNull()) {
-        country = mCountries.key(country);
-    }
-    QMap<QString, QString> sortedGsm;
-    QMap<QString, QString> sortedCdma;
-    while (!n.isNull()) {
-        QDomElement e = n.toElement(); // <country ...>
-
-        if (!e.isNull() && e.attribute("code").toUpper() == country) {
-            QDomNode n2 = e.firstChild();
-            while (!n2.isNull()) {
-                QDomElement e2 = n2.toElement(); // <provider ...>
-
-                if (!e2.isNull() && e2.tagName().toLower() == "provider") {
-                    QDomNode n3 = e2.firstChild();
-                    bool hasGsm = false;
-                    bool hasCdma = false;
-                    QMap<QString, QString> localizedProviderNames;
-
-                    while (!n3.isNull()) {
-                        QDomElement e3 = n3.toElement(); // <name | gsm | cdma>
-
-                        if (!e3.isNull()) {
-                            if (e3.tagName().toLower() == "gsm") {
-                                hasGsm = true;
-                            } else if (e3.tagName().toLower() == "cdma") {
-                                hasCdma = true;
-                            } else if (e3.tagName().toLower() == "name") {
-                                QString lang = e3.attribute("xml:lang");
-                                if (lang.isEmpty()) {
-                                    lang = "en"; // English is default
-                                } else {
-                                    lang = lang.toLower();
-                                    lang.remove(QRegExp("\\-.*$")); // Remove everything after '-' in xml:lang attribute.
-                                }
-                                localizedProviderNames.insert(lang, e3.text());
-                            }
-                        }
-                        n3 = n3.nextSibling();
-                    }
-                    const QString name = getNameByLocale(localizedProviderNames);
-                    if (hasGsm) {
-                        mProvidersGsm.insert(name, e2.firstChild());
-                        sortedGsm.insert(name.toLower(), name);
-                    }
-                    if (hasCdma) {
-                        mProvidersCdma.insert(name, e2.firstChild());
-                        sortedCdma.insert(name.toLower(), name);
-                    }
-                }
-                n2 = n2.nextSibling();
-            }
-            break;
-        }
-        n = n.nextSibling();
-    }
-
-    if (type == NetworkManager::ConnectionSettings::Gsm) {
-        return sortedGsm.values();
-    }
-    return sortedCdma.values();
 }
 
 QStringList MobileProviders::getApns(const QString &provider)

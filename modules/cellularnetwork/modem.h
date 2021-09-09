@@ -7,7 +7,6 @@
 #pragma once
 
 #include "cellularnetworksettings.h"
-#include "mobileproviders.h"
 #include "modemdetails.h"
 #include "sim.h"
 
@@ -52,11 +51,7 @@ public:
         : QObject{parent}
     {
     }
-    Modem(QObject *parent,
-          ModemManager::ModemDevice::Ptr mmDevice,
-          NetworkManager::ModemDevice::Ptr nmDevice,
-          ModemManager::Modem::Ptr m_mmInterface,
-          MobileProviders *providers);
+    Modem(QObject *parent, ModemManager::ModemDevice::Ptr mmDevice, NetworkManager::ModemDevice::Ptr nmDevice, ModemManager::Modem::Ptr m_mmInterface);
 
     ModemDetails *modemDetails();
     QString displayId(); // splits uni and obtains the number suffix
@@ -112,8 +107,6 @@ private:
     ModemManager::Modem3gpp::Ptr m_mm3gppDevice = nullptr; // this may be a nullptr if no sim is inserted
 
     QList<ProfileSettings *> m_profileList;
-
-    MobileProviders *m_providers;
 
     friend class ModemDetails;
 };

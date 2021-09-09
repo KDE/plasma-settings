@@ -11,16 +11,11 @@
 #include <KLocalizedString>
 #include <KUser>
 
-Modem::Modem(QObject *parent,
-             ModemManager::ModemDevice::Ptr mmDevice,
-             NetworkManager::ModemDevice::Ptr nmDevice,
-             ModemManager::Modem::Ptr mmInterface,
-             MobileProviders *providers)
+Modem::Modem(QObject *parent, ModemManager::ModemDevice::Ptr mmDevice, NetworkManager::ModemDevice::Ptr nmDevice, ModemManager::Modem::Ptr mmInterface)
     : QObject{parent}
     , m_mmDevice{mmDevice}
     , m_nmDevice{nmDevice}
     , m_mmInterface{mmInterface}
-    , m_providers{providers}
 {
     connect(m_mmDevice.data(), &ModemManager::ModemDevice::simAdded, this, [this]() -> void {
         Q_EMIT simsChanged();
@@ -333,6 +328,7 @@ void Modem::updateProfile(QString connectionUni, QString name, QString apn, QStr
 void Modem::addDetectedProfileSettings()
 {
     bool found = false;
+    static MobileProviders mobileProviders{};
 
     if (m_mmDevice && hasSim()) {
         if (m_mm3gppDevice) {
@@ -340,11 +336,11 @@ void Modem::addDetectedProfileSettings()
             qWarning() << QStringLiteral("Detecting profile settings. Using MCCMNC:") << operatorCode;
 
             // lookup apns with mccmnc codes
-            for (QString &provider : m_providers->getProvidersFromMCCMNC(operatorCode)) {
+            for (QString &provider : mobileProviders->getProvidersFromMCCMNC(operatorCode)) {
                 qWarning() << QStringLiteral("Provider:") << provider;
 
-                for (auto apn : m_providers->getApns(provider)) {
-                    QVariantMap apnInfo = m_providers->getApnInfo(apn);
+                for (auto apn : mobileProviders->getApns(provider)) {
+                    QVariantMap apnInfo = mobileProviders->getApnInfo(apn);
                     qWarning() << QStringLiteral("Found gsm profile settings. Type:") << apnInfo[QStringLiteral("usageType")];
 
                     // only add mobile data apns (not mms)

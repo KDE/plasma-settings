@@ -38,9 +38,6 @@ CellularNetworkSettings::CellularNetworkSettings(QObject *parent, const QVariant
     qmlRegisterType<Sim>("cellularnetworkkcm", 1, 0, "Sim");
     qmlRegisterType<InlineMessage>("cellularnetworkkcm", 1, 0, "InlineMessage");
 
-    // parse mobile providers list
-    m_providers = new MobileProviders();
-
     // find modems
     ModemManager::scanDevices();
 
@@ -60,7 +57,7 @@ CellularNetworkSettings::CellularNetworkSettings(QObject *parent, const QVariant
             qWarning() << QStringLiteral("NetworkManager ModemDevice could not be found for this modem! Ignoring...");
         } else if ((nmModem->currentCapabilities() & NetworkManager::ModemDevice::GsmUmts)
                    || (nmModem->currentCapabilities() & NetworkManager::ModemDevice::Lte)) {
-            m_modemList.push_back(new Modem(this, device, nmModem, modem, m_providers));
+            m_modemList.push_back(new Modem(this, device, nmModem, modem));
 
             // update sims list if modem's list changes
             connect(m_modemList[m_modemList.size() - 1], &Modem::simsChanged, this, [this]() -> void {

@@ -14,6 +14,9 @@
 
 #include <NetworkManagerQt/ConnectionSettings>
 
+// adapted from https://invent.kde.org/plasma/plasma-nm/-/blob/master/libs/editor/mobileproviders.h
+// we only use gsm, ignore cdma
+
 struct ProviderData {
     QStringList mccmncs;
     QString name;
@@ -35,7 +38,6 @@ public:
     {
         return mCountries.value(key);
     }
-    QStringList getProvidersList(QString country, NetworkManager::ConnectionSettings::ConnectionType type);
     QStringList getApns(const QString &provider);
     QStringList getNetworkIds(const QString &provider);
     QVariantMap getApnInfo(const QString &apn);
