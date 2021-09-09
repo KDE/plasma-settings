@@ -70,54 +70,6 @@ MobileProviders::MobileProviders()
         qWarning() << "Error opening providers file" << ProvidersFile;
         mError = ProvidersMissing;
     }
-
-    qDebug() << "TEST"; // TODO
-
-    // scan and fill mProvidersGsm
-    QDomNode n = docElement.firstChild();
-    while (!n.isNull()) {
-        QDomElement e = n.toElement(); // <country ...>
-
-        if (!e.isNull()) {
-            QDomNode n2 = e.firstChild();
-            while (!n2.isNull()) {
-                QDomElement e2 = n2.toElement(); // <provider ...>
-
-                if (!e2.isNull() && e2.tagName().toLower() == "provider") {
-                    QDomNode n3 = e2.firstChild();
-                    bool hasGsm = false;
-                    QMap<QString, QString> localizedProviderNames;
-
-                    while (!n3.isNull()) {
-                        QDomElement e3 = n3.toElement(); // <name | gsm | cdma>
-
-                        if (!e3.isNull()) {
-                            if (e3.tagName().toLower() == "gsm") {
-                                hasGsm = true;
-                            } else if (e3.tagName().toLower() == "name") {
-                                QString lang = e3.attribute("xml:lang");
-                                if (lang.isEmpty()) {
-                                    lang = "en"; // English is default
-                                } else {
-                                    lang = lang.toLower();
-                                    lang.remove(QRegExp("\\-.*$")); // Remove everything after '-' in xml:lang attribute.
-                                }
-                                localizedProviderNames.insert(lang, e3.text());
-                            }
-                        }
-                        n3 = n3.nextSibling();
-                    }
-                    const QString name = getNameByLocale(localizedProviderNames);
-                    if (hasGsm) {
-                        mProvidersGsm.insert(name, e2.firstChild());
-                    }
-                }
-                n2 = n2.nextSibling();
-            }
-            break;
-        }
-        n = n.nextSibling();
-    }
 }
 
 MobileProviders::~MobileProviders()
@@ -197,6 +149,7 @@ ProviderData MobileProviders::parseProvider(const QDomNode &providerNode)
     QMap<QString, QString> localizedProviderNames;
 
     QDomNode c = providerNode.firstChild(); // <name | gsm | cdma>
+    bool hasGsm = false;
 
     while (!c.isNull()) {
         QDomElement ce = c.toElement();
@@ -212,6 +165,8 @@ ProviderData MobileProviders::parseProvider(const QDomNode &providerNode)
                 }
                 gsmNode = gsmNode.nextSibling();
             }
+
+            hasGsm = true;
         } else if (ce.tagName().toLower() == QLatin1String("name")) {
             QString lang = ce.attribute("xml:lang");
             if (lang.isEmpty()) {
@@ -222,10 +177,16 @@ ProviderData MobileProviders::parseProvider(const QDomNode &providerNode)
             }
             localizedProviderNames.insert(lang, ce.text());
         }
+
         c = c.nextSibling();
     }
 
     result.name = getNameByLocale(localizedProviderNames);
+
+    const QString name = result.name;
+    if (hasGsm) {
+        mProvidersGsm.insert(name, providerNode.firstChild());
+    }
 
     return result;
 }
