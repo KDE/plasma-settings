@@ -50,7 +50,6 @@ Modem::Modem(QObject *parent, ModemManager::ModemDevice::Ptr mmDevice, NetworkMa
             [this](NetworkManager::Device::State newstate, NetworkManager::Device::State oldstate, NetworkManager::Device::StateChangeReason reason) -> void {
                 qDebug() << QStringLiteral("Modem") << m_nmDevice->uni() << QStringLiteral("changed state:") << nmDeviceStateStr(oldstate)
                          << QStringLiteral("->") << nmDeviceStateStr(newstate) << QStringLiteral("due to:") << reason;
-                Q_EMIT mobileDataActiveChanged();
             });
 
     // we need to initialize it after m_mm3gppDevice has been set
@@ -142,47 +141,6 @@ void Modem::setIsRoaming(bool roaming)
         // the connection uni has changed, refresh the profiles list
         refreshProfiles();
         Q_EMIT activeConnectionUniChanged();
-    }
-}
-
-bool Modem::mobileDataActive()
-{
-    if (m_nmDevice) {
-        if (m_nmDevice->state() == NetworkManager::Device::State::UnknownState || m_nmDevice->state() == NetworkManager::Device::State::Unmanaged
-            || m_nmDevice->state() == NetworkManager::Device::State::Unavailable || m_nmDevice->state() == NetworkManager::Device::State::Disconnected
-            || m_nmDevice->state() == NetworkManager::Device::State::Deactivating || m_nmDevice->state() == NetworkManager::Device::State::Failed) {
-            return false;
-        } else {
-            return m_nmDevice->activeConnection() != nullptr;
-        }
-    }
-    return false;
-}
-
-void Modem::setMobileDataActive(bool active)
-{
-    if (active && !mobileDataActive()) { // turn on mobile data
-        m_nmDevice->setAutoconnect(true);
-
-        // activate connection that already has autoconnect set to true
-        for (auto connection : m_nmDevice->availableConnections()) {
-            if (connection->settings()->autoconnect()) {
-                activateProfile(connection->uuid());
-                break;
-            }
-        }
-        Q_EMIT mobileDataActiveChanged();
-    } else if (!active && mobileDataActive()) { // turn off mobile data
-        m_nmDevice->setAutoconnect(false);
-
-        QDBusPendingReply reply = m_nmDevice->disconnectInterface();
-        reply.waitForFinished();
-
-        if (reply.isError()) {
-            qWarning() << QStringLiteral("Error disconnecting modem interface:") << reply.error().message();
-            CellularNetworkSettings::instance()->addMessage(InlineMessage::Error, i18n("Error disconnecting modem interface: %1", reply.error().message()));
-        }
-        Q_EMIT mobileDataActiveChanged();
     }
 }
 
