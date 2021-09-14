@@ -41,11 +41,13 @@ Kirigami.Page {
     data: [
         Connections {
             target: kcm
-            onPagePushed: {
+            function onPagePushed(page) {
                 pageStack.push(kcmContainer.createObject(pageStack, {"internalPage": page}));
             }
-            onPageRemoved: pageStack.pop();
-            onNeedsSaveChanged: {
+            function onPageRemoved() {
+                pageStack.pop();
+            }
+            function onNeedsSaveChanged () {
                 if (kcm.needsSave) {
                     kcm.save()
                 }
@@ -53,7 +55,7 @@ Kirigami.Page {
         },
         Connections {
             target: pageStack
-            onPageRemoved: {
+            function onPageRemoved (page) {
                 if (kcm.needsSave) {
                     kcm.save()
                 }

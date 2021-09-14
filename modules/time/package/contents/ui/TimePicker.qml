@@ -42,7 +42,7 @@ Item {
                 duration: 250
             }
             NumberAnimation {
-                //duration: units.longDuration
+                //duration: PlasmaCore.Units.longDuration
                 duration: 250
                 easing.type: Easing.InOutQuad
             }
