@@ -101,10 +101,6 @@ Kirigami.ScrollablePage {
                 text: sim.locked ? i18n("Yes") : i18n("No")
             }
             Controls.Label {
-                Kirigami.FormData.label: i18n("Locked Reason:")
-                text: sim.lockedReason
-            }
-            Controls.Label {
                 Kirigami.FormData.label: i18n("IMSI:")
                 text: sim.imsi
             }
