@@ -8,7 +8,6 @@
 #include "module.h"
 
 #include <KPluginFactory>
-#include <KPluginLoader>
 
 KQuickAddons::ConfigModule *Module::kcm() const
 {
@@ -29,17 +28,15 @@ void Module::setName(const QString &name)
     m_name = name;
     Q_EMIT nameChanged();
 
-    const QString pluginPath = KPluginLoader::findPlugin(QLatin1String("kcms/") + name);
+    const auto plugin = KPluginMetaData::findPluginById(QLatin1String("kcms/"), name);
+    auto module = KPluginFactory::instantiatePlugin<KQuickAddons::ConfigModule>(plugin, this);
 
-    KPluginLoader loader(pluginPath);
-    KPluginFactory *factory = loader.factory();
-
-    if (!factory) {
-        qWarning() << "Error loading KCM plugin:" << loader.errorString();
+    if (!module) {
+        qWarning() << "Error loading KCM plugin:" << module.errorString;
     } else {
-        m_kcm = factory->create<KQuickAddons::ConfigModule>(this);
+        m_kcm = module.plugin;
         if (!m_kcm) {
-            qWarning() << "Error creating object from plugin" << loader.fileName();
+            qWarning() << "Error creating object from plugin" << plugin.fileName();
         }
     }
 

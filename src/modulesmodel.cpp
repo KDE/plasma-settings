@@ -12,7 +12,6 @@
 
 #include <KPackage/PackageLoader>
 #include <KPluginFactory>
-#include <KPluginLoader>
 
 #include <KDeclarative/KDeclarative>
 
@@ -86,10 +85,8 @@ QHash<int, QByteArray> ModulesModel::roleNames() const
 
 KQuickAddons::ConfigModule *ModulesModel::instantiateKcm(const QString &name) const
 {
-    const QString pluginPath = KPluginLoader::findPlugin(QLatin1String("kcms/") + name);
-
-    KPluginLoader loader(pluginPath);
-    KPluginFactory *factory = loader.factory();
+    auto plugin = KPluginMetaData::findPluginById(QStringLiteral("kcms/"), name);
+    auto module = KPluginFactory::instantiatePlugin<KQuickAddons::ConfigModule>(plugin, const_cast<ModulesModel *>(this));
 
     KQuickAddons::ConfigModule *kcm = nullptr;
 
@@ -99,12 +96,12 @@ KQuickAddons::ConfigModule *ModulesModel::instantiateKcm(const QString &name) co
              ui->setParentItem(nullptr);
          }
      });*/
-    if (!factory) {
-        qWarning() << "Error loading KCM plugin:" << loader.errorString();
+    if (!module) {
+        qWarning() << "Error loading KCM plugin:" << module.errorString;
     } else {
-        kcm = factory->create<KQuickAddons::ConfigModule>(const_cast<ModulesModel *>(this));
+        kcm = module.plugin;
         if (!kcm) {
-            qWarning() << "Error creating object from plugin" << loader.fileName();
+            qWarning() << "Error creating object from plugin" << plugin.fileName();
         }
     }
     return kcm;
