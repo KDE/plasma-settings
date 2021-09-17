@@ -1,5 +1,12 @@
 [Desktop Entry]
 Name=Cellular Network
+Name[ca]=Xarxa de telefonia mòbil
+Name[cs]=Mobilní síť
+Name[es]=Red móvil
+Name[nl]=Cellulair netwerk
+Name[sv]=Mobilnät
+Name[uk]=Стільникова мережа
+Name[x-test]=xxCellular Networkxx
 Comment=Management of cellular networks
 Comment[ast]=Xestión de redes pa móviles
 Comment[az]=Mobil Şəbəkələr Meneceri
@@ -49,4 +56,11 @@ X-KDE-System-Settings-Parent-Category=network
 X-KDE-Weight=70
 
 X-KDE-Keywords=mobile,data,network
+X-KDE-Keywords[ca]=mòbil,dades,xarxa
+X-KDE-Keywords[cs]=mobilní,data,síť
+X-KDE-Keywords[es]=móvil,datos,red
+X-KDE-Keywords[nl]=mobiel,gegevens,netwerk
+X-KDE-Keywords[sv]=mobil,data,nätverk
+X-KDE-Keywords[uk]=mobile,data,network,мобільний,дані,мережа
+X-KDE-Keywords[x-test]=xxmobilexx,xxdataxx,xxnetworkxx
 Categories=Qt;KDE;X-KDE-settings-system;

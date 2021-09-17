@@ -1,5 +1,12 @@
 [Desktop Entry]
 Name=Cellular Network
+Name[ca]=Xarxa de telefonia mòbil
+Name[cs]=Mobilní síť
+Name[es]=Red móvil
+Name[nl]=Cellulair netwerk
+Name[sv]=Mobilnät
+Name[uk]=Стільникова мережа
+Name[x-test]=xxCellular Networkxx
 Comment=Management of cellular networks
 Comment[ast]=Xestión de redes pa móviles
 Comment[az]=Mobil Şəbəkələr Meneceri
