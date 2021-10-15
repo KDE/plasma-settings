@@ -12,7 +12,6 @@
 
 #include <KPackage/PackageLoader>
 #include <KPluginFactory>
-#include <KPluginLoader>
 
 #include <KDeclarative/KDeclarative>
 
@@ -22,8 +21,9 @@ ModulesModel::ModulesModel(QObject *parent)
     : QAbstractListModel(parent)
 {
     qDebug() << "Current platform is " << KDeclarative::KDeclarative::runtimePlatform();
-    const auto packages = KPackage::PackageLoader::self()->listPackages(QString(), "kpackage/kcms/");
-    for (const KPluginMetaData &pluginMetaData : packages) {
+    const auto kcms = KPluginMetaData::findPlugins("kcms")
+        << KPluginMetaData::findPlugins("plasma/kcms") << KPluginMetaData::findPlugins("plasma/kcms/systemsettings");
+    for (const KPluginMetaData &pluginMetaData : kcms) {
         bool isCurrentPlatform = false;
         if (KDeclarative::KDeclarative::runtimePlatform().isEmpty()) {
             isCurrentPlatform = true;
@@ -64,7 +64,7 @@ QVariant ModulesModel::data(const QModelIndex &index, int role) const
         return d.plugin.iconName();
     case KcmRole: {
         if (!d.kcm) {
-            d.kcm = instantiateKcm(d.plugin.pluginId());
+            d.kcm = KPluginFactory::instantiatePlugin<KQuickAddons::ConfigModule>(d.plugin, const_cast<ModulesModel *>(this)).plugin;
         }
 
         return QVariant::fromValue(d.kcm.data());
@@ -87,30 +87,4 @@ QHash<int, QByteArray> ModulesModel::roleNames() const
         {IconNameRole, "iconName"},
         {KcmRole, "kcm"},
     };
-}
-
-KQuickAddons::ConfigModule *ModulesModel::instantiateKcm(const QString &name) const
-{
-    const QString pluginPath = KPluginLoader::findPlugin(QLatin1String("kcms/") + name);
-
-    KPluginLoader loader(pluginPath);
-    KPluginFactory *factory = loader.factory();
-
-    KQuickAddons::ConfigModule *kcm = nullptr;
-
-    /* connect(qApp, &QCoreApplication::aboutToQuit, this, [this, kcm](){
-         QQuickItem *ui = kcm->mainUi();
-         if (ui) {
-             ui->setParentItem(nullptr);
-         }
-     });*/
-    if (!factory) {
-        qWarning() << "Error loading KCM plugin:" << loader.errorString();
-    } else {
-        kcm = factory->create<KQuickAddons::ConfigModule>(const_cast<ModulesModel *>(this));
-        if (!kcm) {
-            qWarning() << "Error creating object from plugin" << loader.fileName();
-        }
-    }
-    return kcm;
 }
