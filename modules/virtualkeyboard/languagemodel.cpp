@@ -96,5 +96,9 @@ int LanguageModel::rowCount(const QModelIndex &parent) const
 
 QHash<int, QByteArray> LanguageModel::roleNames() const
 {
-    return {{NameRole, "name"}, {EnabledRole, "enabled"}, {LanguageIdRole, "langId"}};
+    return {
+        {NameRole, "name"},
+        {EnabledRole, "enabled"},
+        {LanguageIdRole, "langId"},
+    };
 }

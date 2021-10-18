@@ -38,7 +38,12 @@ class InlineMessage : public QObject
     Q_PROPERTY(QString message READ message NOTIFY messageChanged)
 
 public:
-    enum Type { Information, Positive, Warning, Error };
+    enum Type {
+        Information,
+        Positive,
+        Warning,
+        Error,
+    };
 
     InlineMessage(QObject *parent = nullptr, Type type = Information, QString message = "");
 

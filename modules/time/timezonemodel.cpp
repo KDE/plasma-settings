@@ -200,8 +200,13 @@ void TimeZoneModel::selectLocalTimeZone()
 
 QHash<int, QByteArray> TimeZoneModel::roleNames() const
 {
-    return QHash<int, QByteArray>(
-        {{TimeZoneIdRole, "timeZoneId"}, {RegionRole, "region"}, {CityRole, "city"}, {CommentRole, "comment"}, {CheckedRole, "checked"}});
+    return QHash<int, QByteArray>({
+        {TimeZoneIdRole, "timeZoneId"},
+        {RegionRole, "region"},
+        {CityRole, "city"},
+        {CommentRole, "comment"},
+        {CheckedRole, "checked"},
+    });
 }
 
 void TimeZoneModel::sortTimeZones()

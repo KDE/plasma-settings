@@ -28,7 +28,12 @@ class ModulesModel : public QAbstractListModel
     Q_OBJECT
 
 public:
-    enum ModelRoles { NameRole = Qt::DisplayRole, IconNameRole = Qt::DecorationRole, DescriptionRole = Qt::UserRole + 1, KcmRole };
+    enum ModelRoles {
+        NameRole = Qt::DisplayRole,
+        IconNameRole = Qt::DecorationRole,
+        DescriptionRole = Qt::UserRole + 1,
+        KcmRole,
+    };
 
 public:
     ModulesModel(QObject *parent = nullptr);

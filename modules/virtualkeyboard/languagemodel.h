@@ -18,7 +18,11 @@ struct Data {
 
 class LanguageModel : public QAbstractListModel
 {
-    enum ModelRoles { NameRole = Qt::DisplayRole, EnabledRole = Qt::UserRole + 1, LanguageIdRole };
+    enum ModelRoles {
+        NameRole = Qt::DisplayRole,
+        EnabledRole = Qt::UserRole + 1,
+        LanguageIdRole,
+    };
 
     Q_OBJECT
 public:

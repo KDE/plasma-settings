@@ -27,7 +27,14 @@ class Q_DECL_EXPORT MobileProviders
 public:
     static const QString ProvidersFile;
 
-    enum ErrorCodes { Success, CountryCodesMissing, ProvidersMissing, ProvidersIsNull, ProvidersWrongFormat, ProvidersFormatNotSupported };
+    enum ErrorCodes {
+        Success,
+        CountryCodesMissing,
+        ProvidersMissing,
+        ProvidersIsNull,
+        ProvidersWrongFormat,
+        ProvidersFormatNotSupported,
+    };
 
     MobileProviders();
     ~MobileProviders();
