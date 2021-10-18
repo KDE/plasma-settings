@@ -1,9 +1,9 @@
 /*
- * SPDX-FileCopyrightText: 2019 Jonah Brüchert <jbb@kaidan.im>
- * SPDX-FileCopyrightText: 2012-2019 Harald Sitter <sitter@kde.org>
- *
- * SPDX-License-Identifier: GPL-2.0-only OR GPL-3.0-only OR LicenseRef-KDE-Accepted-GPL
- */
+    SPDX-FileCopyrightText: 2019 Jonah Brüchert <jbb@kaidan.im>
+    SPDX-FileCopyrightText: 2012-2019 Harald Sitter <sitter@kde.org>
+
+    SPDX-License-Identifier: GPL-2.0-only OR GPL-3.0-only OR LicenseRef-KDE-Accepted-GPL
+*/
 
 #include "softwareinfo.h"
 #include <sys/utsname.h>

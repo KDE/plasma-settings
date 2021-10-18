@@ -1,9 +1,9 @@
-/***************************************************************************
- *                                                                         *
- *   SPDX-FileCopyrightText: 2011-2015 Sebastian Kügler <sebas@kde.org>                  *
- *                                                                         *
- *   SPDX-License-Identifier: GPL-2.0-or-later
- ***************************************************************************/
+/*
+
+    SPDX-FileCopyrightText: 2011-2015 Sebastian Kügler <sebas@kde.org>
+
+    SPDX-License-Identifier: GPL-2.0-or-later
+*/
 
 #ifndef TIMESETTINGS_H
 #define TIMESETTINGS_H

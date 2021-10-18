@@ -1,12 +1,12 @@
-/**************************************************************************
- *                                                                         *
- *   SPDX-FileCopyrightText: 2005 S.R.Haque <srhaque@iee.org>.                           *
- *   SPDX-FileCopyrightText: 2009 David Faure <faure@kde.org>                            *
- *   SPDX-FileCopyrightText: 2011-2015 Sebastian Kügler <sebas@kde.org>                  *
- *   SPDX-FileCopyrightText: 2015 David Edmundson <davidedmundson@kde.org>               *
- *                                                                         *
- *   SPDX-License-Identifier: GPL-2.0-or-later
- ***************************************************************************/
+/*
+
+    SPDX-FileCopyrightText: 2005 S.R.Haque <srhaque@iee.org>.
+    SPDX-FileCopyrightText: 2009 David Faure <faure@kde.org>
+    SPDX-FileCopyrightText: 2011-2015 Sebastian Kügler <sebas@kde.org>
+    SPDX-FileCopyrightText: 2015 David Edmundson <davidedmundson@kde.org>
+
+    SPDX-License-Identifier: GPL-2.0-or-later
+*/
 
 #include "timesettings.h"
 #include "timezonemodel.h"

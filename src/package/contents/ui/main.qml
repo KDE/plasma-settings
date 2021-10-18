@@ -1,10 +1,10 @@
-/***************************************************************************
- *                                                                         *
- *   SPDX-FileCopyrightText: 2017 Marco Martin <mart@kde.org>                            *
- *   SPDX-FileCopyrightText: 2011-2014 Sebastian Kügler <sebas@kde.org>                  *
- *                                                                         *
- *   SPDX-License-Identifier: GPL-2.0-or-later
- ***************************************************************************/
+/*
+
+    SPDX-FileCopyrightText: 2017 Marco Martin <mart@kde.org>
+    SPDX-FileCopyrightText: 2011-2014 Sebastian Kügler <sebas@kde.org>
+
+    SPDX-License-Identifier: GPL-2.0-or-later
+*/
 
 import QtQuick 2.6
 import QtQuick.Controls 2.2 as Controls

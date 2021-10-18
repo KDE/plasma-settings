@@ -1,9 +1,9 @@
 /*
- *   SPDX-FileCopyrightText: 2011 Sebastian Kügler <sebas@kde.org>
- *   SPDX-FileCopyrightText: 2012 Marco Martin <mart@kde.org>
- *
- *   SPDX-License-Identifier: LGPL-2.0-or-later
- */
+    SPDX-FileCopyrightText: 2011 Sebastian Kügler <sebas@kde.org>
+    SPDX-FileCopyrightText: 2012 Marco Martin <mart@kde.org>
+
+    SPDX-License-Identifier: LGPL-2.0-or-later
+*/
 
 import QtQuick 2.2
 import QtQuick.Controls 2.10 as QQC2

@@ -1,9 +1,9 @@
 /*
- * SPDX-FileCopyrightText: 2018 Martin Kacej <m.kacej@atlas.sk>
- * SPDX-FileCopyrightText: 2020-2021 Devin Lin <espidev@gmail.com>
- *
- * SPDX-License-Identifier: GPL-3.0-or-later
- */
+    SPDX-FileCopyrightText: 2018 Martin Kacej <m.kacej@atlas.sk>
+    SPDX-FileCopyrightText: 2020-2021 Devin Lin <espidev@gmail.com>
+
+    SPDX-License-Identifier: GPL-3.0-or-later
+*/
 
 #include "cellularnetworksettings.h"
 

@@ -1,9 +1,9 @@
 /*
- * SPDX-FileCopyrightText: 2018 Nicolas Fella <nicolas.fella@gmx.de>
- *
- * SPDX-License-Identifier: LGPL-2.1-only
- *
- */
+    SPDX-FileCopyrightText: 2018 Nicolas Fella <nicolas.fella@gmx.de>
+
+    SPDX-License-Identifier: LGPL-2.1-only
+
+*/
 
 #ifndef GSETTINGSITEM_H
 #define GSETTINGSITEM_H

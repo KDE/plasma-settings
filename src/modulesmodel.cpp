@@ -1,9 +1,9 @@
-/***************************************************************************
- *                                                                         *
- *   SPDX-FileCopyrightText: 2019 Nicolas Fella <nicolas.fella@gmx.de>                   *
- *                                                                         *
- *   SPDX-License-Identifier: GPL-2.0-or-later
- ***************************************************************************/
+/*
+
+    SPDX-FileCopyrightText: 2019 Nicolas Fella <nicolas.fella@gmx.de>
+
+    SPDX-License-Identifier: GPL-2.0-or-later
+*/
 
 #include "modulesmodel.h"
 
