@@ -63,6 +63,15 @@ Kirigami.Page {
                     page.destroy();
                 }
             }
+        },
+        Connections {
+            target: kcm
+            function onCurrentIndexChanged(index) {
+                const index_with_offset = index + 1;
+                if (index_with_offset !== pageStack.currentIndex) {
+                    pageStack.currentIndex = index_with_offset;
+                }
+            }
         }
     ]
 }
