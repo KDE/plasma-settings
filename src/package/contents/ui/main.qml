@@ -22,8 +22,8 @@ Kirigami.ApplicationWindow {
         id: contextDrawer
     }
 
-    function openModule(path) {
-        module.path = path
+    function openModule(moduleName) {
+        module.name = moduleName
         while (pageStack.depth > 1) {
             pageStack.pop()
         }

@@ -14,18 +14,18 @@ class Module : public QObject
 {
     Q_OBJECT
     Q_PROPERTY(KQuickAddons::ConfigModule *kcm READ kcm NOTIFY kcmChanged)
-    Q_PROPERTY(QString path READ path WRITE setPath NOTIFY pathChanged)
+    Q_PROPERTY(QString name READ name WRITE setName NOTIFY nameChanged)
 
 public:
     KQuickAddons::ConfigModule *kcm() const;
-    QString path() const;
-    void setPath(const QString &name);
+    QString name() const;
+    void setName(const QString &name);
 
 Q_SIGNALS:
     void kcmChanged();
-    void pathChanged();
+    void nameChanged();
 
 private:
     KQuickAddons::ConfigModule *m_kcm = nullptr;
-    QString m_path;
+    QString m_name;
 };

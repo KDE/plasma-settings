@@ -8,41 +8,40 @@
 #include "module.h"
 
 #include <KPluginFactory>
+#include <KPluginLoader>
 
 KQuickAddons::ConfigModule *Module::kcm() const
 {
     return m_kcm;
 }
 
-QString Module::path() const
+QString Module::name() const
 {
-    return m_path;
+    return m_name;
 }
 
-void Module::setPath(const QString &path)
+void Module::setName(const QString &name)
 {
-    if (m_path == path) {
+    if (m_name == name) {
         return;
     }
 
-    // In case the user clicks from the UI we pass in the absolute path
-    KPluginMetaData kcmMetaData(path);
-    if (!kcmMetaData.isValid()) {
-        // From the command line or DBus we usually get only the plugin id
-        if (KPluginMetaData data(QStringLiteral("plasma/kcms/systemsettings/") + path); data.isValid()) {
-            kcmMetaData = data;
-        } else if (KPluginMetaData data(QStringLiteral("kcms/") + path); data.isValid()) {
-            // Also check the old "kcms" namespace
-            // TODO KF6 remove this branch of the if statement
-            kcmMetaData = data;
+    m_name = name;
+    Q_EMIT nameChanged();
+
+    const QString pluginPath = KPluginLoader::findPlugin(QLatin1String("kcms/") + name);
+
+    KPluginLoader loader(pluginPath);
+    KPluginFactory *factory = loader.factory();
+
+    if (!factory) {
+        qWarning() << "Error loading KCM plugin:" << loader.errorString();
+    } else {
+        m_kcm = factory->create<KQuickAddons::ConfigModule>(this);
+        if (!m_kcm) {
+            qWarning() << "Error creating object from plugin" << loader.fileName();
         }
     }
 
-    if (kcmMetaData.isValid()) {
-        m_path = kcmMetaData.fileName();
-        Q_EMIT pathChanged();
-
-        m_kcm = KPluginFactory::instantiatePlugin<KQuickAddons::ConfigModule>(kcmMetaData, this).plugin;
-        Q_EMIT kcmChanged();
-    }
+    Q_EMIT kcmChanged();
 }
