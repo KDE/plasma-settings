@@ -11,7 +11,7 @@
 
 // own
 #include "module.h"
-#include "modulesmodel.h"
+#include "modulesproxymodel.h"
 #include "settingsapp.h"
 #include "version.h"
 
@@ -143,7 +143,7 @@ int main(int argc, char **argv)
     settingsApp->setStartModule(module);
     settingsApp->setSingleModule(singleModule);
 
-    qmlRegisterType<ModulesModel>("org.kde.plasma.settings", 0, 1, "ModulesModel");
+    qmlRegisterType<ModulesProxyModel>("org.kde.plasma.settings", 0, 1, "ModulesProxyModel");
     qmlRegisterType<Module>("org.kde.plasma.settings", 0, 1, "Module");
     qmlRegisterSingletonInstance<SettingsApp>("org.kde.plasma.settings", 0, 1, "SettingsApp", settingsApp);
 

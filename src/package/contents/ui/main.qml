@@ -14,24 +14,108 @@ import org.kde.plasma.settings 0.1
 
 Kirigami.ApplicationWindow {
     id: rootItem
-
-    pageStack.initialPage: SettingsApp.singleModule ? null : modulesList
-    pageStack.globalToolBar.style: Kirigami.ApplicationHeaderStyle.Breadcrumb
-
+    
+    pageStack.globalToolBar.style: Kirigami.ApplicationHeaderStyle.ToolBar
+    pageStack.globalToolBar.showNavigationButtons: Kirigami.ApplicationHeaderStyle.ShowBackButton;
+    
+    property alias currentModule: module
+    
+    // pop pages when not in use
+    Connections {
+        target: applicationWindow().pageStack
+        function onCurrentIndexChanged() {
+            timer.restart();
+        }
+    }
+    
+    // wait for animation to finish before popping pages
+    Timer {
+        id: timer
+        interval: 300
+        onTriggered: {
+            let currentIndex = applicationWindow().pageStack.currentIndex;
+            while (applicationWindow().pageStack.depth > (currentIndex + 1) && currentIndex >= 0) {
+                applicationWindow().pageStack.pop();
+            }
+        }
+    }
+    
+    // initialize context drawer
     contextDrawer: Kirigami.ContextDrawer {
         id: contextDrawer
     }
 
+    readonly property real widescreenThreshold: 720
+    property bool isWidescreen: width >= widescreenThreshold
+    onIsWidescreenChanged: changeNav(isWidescreen);
+    
+    // change between sidebar and single page listview
+    function changeNav(toWidescreen) {
+        if (SettingsApp.singleModule) return;
+        
+        if (toWidescreen) {
+            // load sidebars
+            sidebarLoader.active = true;
+            globalDrawer = sidebarLoader.item;
+            
+            // remove the listview page, and restore all other pages
+            listViewPageLoader.active = false;
+            if (pageStack.currentItem == defaultPage) return;
+            
+            if (pageStack.depth == 0) {
+                pageStack.push(defaultPage);
+            } else {
+                while (pageStack.depth > 0) {
+                    pageStack.pop();
+                }
+                if (module.name) {
+                    openModule(module.name);
+                }
+            }
+        } else {
+            // unload sidebar
+            sidebarLoader.active = false;
+            globalDrawer = null;
+            
+            // insert listview page in beginning
+            listViewPageLoader.active = true;
+            while (pageStack.depth > 0) {
+                pageStack.pop()
+            }
+            pageStack.push(listViewPageLoader.item);
+            
+            if (module.name) {
+                openModule(module.name);
+            }
+        }
+    }
+    
+    Loader {
+        id: listViewPageLoader
+        active: false
+        sourceComponent: ModulesListPage {
+            model: proxyModel
+        }
+    }
+    Loader {
+        id: sidebarLoader
+        active: false
+        sourceComponent: Sidebar {
+            model: proxyModel
+        }
+    }
+    
     function openModule(moduleName) {
         module.name = moduleName
-        while (pageStack.depth > 1) {
+        while (pageStack.depth > ((isWidescreen || SettingsApp.singleModule) ? 0 : 1)) {
             pageStack.pop()
         }
-
         pageStack.push(kcmContainer.createObject(pageStack, {"kcm": module.kcm, "internalPage": module.kcm.mainUi}));
     }
-
+    
+    // if module is specified to be opened, load it
     Component.onCompleted: {
+        changeNav(isWidescreen)
         if (SettingsApp.startModule.length > 0) {
             openModule(SettingsApp.startModule)
         }
@@ -39,22 +123,26 @@ Kirigami.ApplicationWindow {
 
     Connections {
         target: SettingsApp
-        onModuleRequested: {
+        function onModuleRequested() {
             openModule(moduleName)
         }
     }
-
+    
     Module {
         id: module
     }
-
-    ModulesList {
-        id: modulesList
+    
+    ModulesProxyModel {
+        id: proxyModel
+    }
+    
+    DefaultPage {
+        id: defaultPage
+        visible: false
     }
 
     Component {
         id: kcmContainer
-
         KCMContainer {}
     }
 }

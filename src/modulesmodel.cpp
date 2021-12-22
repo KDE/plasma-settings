@@ -62,6 +62,8 @@ QVariant ModulesModel::data(const QModelIndex &index, int role) const
         return d.plugin.description();
     case IconNameRole:
         return d.plugin.iconName();
+    case IdRole:
+        return d.plugin.pluginId();
     case KcmRole: {
         if (!d.kcm) {
             d.kcm = instantiateKcm(d.plugin.pluginId());
@@ -85,6 +87,7 @@ QHash<int, QByteArray> ModulesModel::roleNames() const
         {NameRole, "name"},
         {DescriptionRole, "description"},
         {IconNameRole, "iconName"},
+        {IdRole, "id"},
         {KcmRole, "kcm"},
     };
 }

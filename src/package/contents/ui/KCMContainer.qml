@@ -13,13 +13,16 @@ import org.kde.plasma.settings 0.1
 
 Kirigami.Page {
     id: container
-    title: internalPage.title
     property QtObject kcm
     property Item internalPage
+    
+    title: internalPage.title
+    
     topPadding: 0
     leftPadding: 0
     rightPadding: 0
     bottomPadding: 0
+    
     flickable: internalPage.flickable
     actions.main: internalPage.actions.main
     actions.contextualActions: internalPage.contextualActions
@@ -55,7 +58,7 @@ Kirigami.Page {
         },
         Connections {
             target: pageStack
-            function onPageRemoved (page) {
+            function onPageRemoved(page) {
                 if (kcm.needsSave) {
                     kcm.save()
                 }

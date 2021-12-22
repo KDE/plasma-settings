@@ -2,6 +2,7 @@ set(plasma-settings_SRCS
     main.cpp
     settingsapp.cpp
     modulesmodel.cpp
+    modulesproxymodel.cpp
     module.cpp
 )
 

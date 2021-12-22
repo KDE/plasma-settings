@@ -32,6 +32,7 @@ public:
         NameRole = Qt::DisplayRole,
         IconNameRole = Qt::DecorationRole,
         DescriptionRole = Qt::UserRole + 1,
+        IdRole = Qt::UserRole + 2,
         KcmRole,
     };
 
