@@ -123,8 +123,14 @@ Kirigami.ApplicationWindow {
 
     Connections {
         target: SettingsApp
-        function onModuleRequested() {
-            openModule(moduleName)
+        function onModuleRequested(moduleName) {
+            openModule(moduleName);
+            
+            // HACK: raise window when module is requested; 
+            // requestActivate() by itself doesn't seem to work
+            applicationWindow().hide();
+            applicationWindow().show();
+            applicationWindow().requestActivate();
         }
     }
     

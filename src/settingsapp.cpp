@@ -33,12 +33,14 @@ void SettingsApp::setupKDBus()
     QObject::connect(service, &KDBusService::activateRequested, this, [this](const QStringList &arguments, const QString & /*workingDirectory*/) {
         qDebug() << "activateRequested" << arguments;
         m_parser->parse(arguments);
+
         if (m_parser->isSet("module")) {
             const QString module = m_parser->value("module");
             qDebug() << "Loading module:" << module;
-            emit moduleRequested(module);
+            Q_EMIT moduleRequested(module);
         }
-        emit activateRequested();
+
+        Q_EMIT activateRequested();
     });
 }
 
