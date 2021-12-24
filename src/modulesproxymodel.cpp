@@ -31,6 +31,7 @@ void ModulesProxyModel::setFilterString(QString filterString)
 
 bool ModulesProxyModel::filterAcceptsRow(int sourceRow, const QModelIndex &parent) const
 {
+    Q_UNUSED(parent)
     QString name = m_model->data(m_model->index(sourceRow, 0), ModulesModel::NameRole).toString();
     QString description = m_model->data(m_model->index(sourceRow, 0), ModulesModel::DescriptionRole).toString();
 
