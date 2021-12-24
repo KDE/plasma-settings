@@ -8,7 +8,7 @@
 #include "module.h"
 
 #include <KPluginFactory>
-#include <KPluginLoader>
+#include <KPluginMetaData>
 
 KQuickAddons::ConfigModule *Module::kcm() const
 {
@@ -26,21 +26,20 @@ void Module::setName(const QString &name)
         return;
     }
 
+    KPluginMetaData metaData(QLatin1String("kcms/") + name);
+    if (!metaData.isValid()) {
+        qWarning() << "failed to find plugin:" << name;
+        return;
+    }
+
     m_name = name;
     Q_EMIT nameChanged();
 
-    const QString pluginPath = KPluginLoader::findPlugin(QLatin1String("kcms/") + name);
-
-    KPluginLoader loader(pluginPath);
-    KPluginFactory *factory = loader.factory();
-
-    if (!factory) {
-        qWarning() << "Error loading KCM plugin:" << loader.errorString();
+    auto result = KPluginFactory::instantiatePlugin<KQuickAddons::ConfigModule>(metaData);
+    if (!result) {
+        qWarning() << "Error loading KCM plugin:" << result.errorString;
     } else {
-        m_kcm = factory->create<KQuickAddons::ConfigModule>(this);
-        if (!m_kcm) {
-            qWarning() << "Error creating object from plugin" << loader.fileName();
-        }
+        m_kcm = result.plugin;
     }
 
     Q_EMIT kcmChanged();

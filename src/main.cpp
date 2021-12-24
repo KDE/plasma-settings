@@ -29,7 +29,6 @@
 #include <KLocalizedContext>
 #include <KLocalizedString>
 #include <KPackage/PackageLoader>
-#include <KPluginLoader>
 #include <KPluginMetaData>
 
 #include <KPackage/Package>
@@ -108,8 +107,8 @@ int main(int argc, char **argv)
             // qDebug() << "Formafactors: " << formFactors;
         }
 
-        const auto kcmPlugin = KPluginLoader::findPlugins("kcms");
-        for (const auto &plugin : kcmPlugin) {
+        const auto kcmPlugins = KPluginMetaData::findPlugins("kcms");
+        for (const auto &plugin : kcmPlugins) {
             if (seen.contains(plugin.pluginId())) {
                 continue;
             }
