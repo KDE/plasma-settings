@@ -16,10 +16,7 @@ target_link_libraries(kcm_mobile_info
     KF5::Solid
 )
 
-kcoreaddons_desktop_to_json(kcm_mobile_info "info.desktop") # Convert our desktop file to json
-
 install(TARGETS kcm_mobile_info DESTINATION ${KDE_INSTALL_PLUGINDIR}/kcms) # Install the library to the kcm location
 
-install(FILES info.desktop DESTINATION ${KDE_INSTALL_KSERVICES5DIR}) # Install the desktop file
 kpackage_install_package(package kcm_mobile_info kcms) # Finally install our QML kpackage.
 

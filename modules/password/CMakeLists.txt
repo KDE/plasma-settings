@@ -27,8 +27,6 @@ target_link_libraries(kcm_password
     KF5::I18n
     crypt
     )
-kcoreaddons_desktop_to_json(kcm_password "package/metadata.desktop")
 
-install(FILES package/metadata.desktop RENAME kcm_password.desktop DESTINATION ${KDE_INSTALL_KSERVICES5DIR})
 install(TARGETS kcm_password DESTINATION ${KDE_INSTALL_PLUGINDIR}/kcms)
 kpackage_install_package(package kcm_password kcms)

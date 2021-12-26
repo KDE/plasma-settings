@@ -24,9 +24,6 @@ target_link_libraries(kcm_mobile_virtualkeyboard
     PkgConfig::GOBJECT
 )
 
-kcoreaddons_desktop_to_json(kcm_mobile_virtualkeyboard "package/metadata.desktop")
-
 install(TARGETS kcm_mobile_virtualkeyboard DESTINATION ${KDE_INSTALL_PLUGINDIR}/kcms)
 
-install(FILES package/metadata.desktop RENAME kcm_mobile_virtualkeyboard.desktop DESTINATION ${KDE_INSTALL_KSERVICES5DIR})
 kpackage_install_package(package kcm_mobile_virtualkeyboard kcms)

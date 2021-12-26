@@ -21,8 +21,5 @@ target_link_libraries(kcm_cellular_network
     KF5::QuickAddons
 )
 
-kcoreaddons_desktop_to_json(kcm_cellular_network "cellularnetworksettings.desktop")
-
-install(FILES cellularnetworksettings.desktop DESTINATION ${SERVICES_INSTALL_DIR})
 install(TARGETS kcm_cellular_network DESTINATION ${PLUGIN_INSTALL_DIR}/kcms)
 kpackage_install_package(package kcm_cellular_network kcms)
