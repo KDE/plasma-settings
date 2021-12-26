@@ -45,7 +45,5 @@ public:
     QHash<int, QByteArray> roleNames() const override;
 
 private:
-    KQuickAddons::ConfigModule *instantiateKcm(const QString &name) const;
-
     QVector<Data> m_plugins;
 };

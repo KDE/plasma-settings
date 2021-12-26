@@ -105,8 +105,8 @@ Kirigami.ApplicationWindow {
         }
     }
     
-    function openModule(moduleName) {
-        module.name = moduleName
+    function openModule(path) {
+        module.path = path
         while (pageStack.depth > ((isWidescreen || SettingsApp.singleModule) ? 0 : 1)) {
             pageStack.pop()
         }
