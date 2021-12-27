@@ -44,5 +44,7 @@ void Module::setPath(const QString &path)
 
         m_kcm = KPluginFactory::instantiatePlugin<KQuickAddons::ConfigModule>(kcmMetaData, this).plugin;
         Q_EMIT kcmChanged();
+    } else {
+        qWarning() << "Unknown module" << path << "requested";
     }
 }
