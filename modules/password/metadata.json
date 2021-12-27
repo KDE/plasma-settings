@@ -40,7 +40,6 @@
         "Description[vi]": "Đặt PIN màn hình khoá",
         "Description[x-test]": "xxSet the Lockscreen PINxx",
         "Description[zh_CN]": "设置锁屏 PIN 码",
-        "EnabledByDefault": true,
         "FormFactors": [
             "handset",
             "tablet",
