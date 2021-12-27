@@ -88,6 +88,5 @@
         "Version": "1.0",
         "Website": "http://plasma-mobile.org"
     },
-    "X-KDE-ParentApp": "",
     "X-Plasma-MainScript": "ui/main.qml"
 }
