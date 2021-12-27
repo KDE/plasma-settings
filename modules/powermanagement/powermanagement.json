@@ -84,10 +84,7 @@
         "Name[vi]": "Màn hình",
         "Name[x-test]": "xxScreenxx",
         "Name[zh_CN]": "屏幕",
-        "Name[zh_TW]": "螢幕",
-        "ServiceTypes": [
-            "KCModule"
-        ]
+        "Name[zh_TW]": "螢幕"
     },
     "X-KDE-Keywords": "video, monitor, graphics, timeout, sleep, lock, screenlocker, screensaver",
     "X-KDE-Keywords[ast]": "videu,monitor,gráficos,dormir,dormición,bloquiar,bloquéu,curiapantalles,bloquiador de pantalla",

@@ -82,9 +82,6 @@
         "Name[vi]": "PIN",
         "Name[x-test]": "xxPinxx",
         "Name[zh_CN]": "PIN 码",
-        "ServiceTypes": [
-            "KCModule"
-        ],
         "Version": "1.0",
         "Website": "https://kde.org"
     },
