@@ -111,6 +111,5 @@
     "X-KDE-Keywords[uk]": "virtualkeyboard,keyboard,екранна,віртуальна,клавіатура,клавіші",
     "X-KDE-Keywords[vi]": "virtualkeyboard,keyboard,bàn phím ảo,bàn phím",
     "X-KDE-Keywords[x-test]": "xxvirtualkeyboardxx,xxkeyboardxx",
-    "X-KDE-Keywords[zh_CN]": "virtualkeyboard,keyboard,虚拟键盘,键盘",
-    "X-Plasma-MainScript": "ui/main.qml"
+    "X-KDE-Keywords[zh_CN]": "virtualkeyboard,keyboard,虚拟键盘,键盘"
 }

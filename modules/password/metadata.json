@@ -84,7 +84,5 @@
         "Version": "1.0",
         "Website": "https://kde.org"
     },
-    "X-KDE-System-Settings-Parent-Category": "personalization",
-    "X-Plasma-MainScript": "ui/Password.qml",
-    "X-Plasma-Package": "kcm_password"
+    "X-KDE-System-Settings-Parent-Category": "personalization"
 }

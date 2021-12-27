@@ -86,6 +86,5 @@
         "Name[zh_TW]": "行動裝置設定",
         "Version": "1.0",
         "Website": "http://plasma-mobile.org"
-    },
-    "X-Plasma-MainScript": "ui/main.qml"
+    }
 }
