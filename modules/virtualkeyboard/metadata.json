@@ -42,7 +42,6 @@
             "tablet"
         ],
         "Icon": "input-keyboard",
-        "Id": "kcm_mobile_virtualkeyboard",
         "License": "GPL",
         "Name": "Virtual Keyboard",
         "Name[ast]": "Tecláu virtual",

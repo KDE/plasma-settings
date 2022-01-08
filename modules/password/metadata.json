@@ -48,7 +48,6 @@
             "desktop"
         ],
         "Icon": "lock",
-        "Id": "kcm_password",
         "License": "GPL",
         "Name": "Pin",
         "Name[az]": "Pin",
