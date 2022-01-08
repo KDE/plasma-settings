@@ -11,7 +11,7 @@ import org.kde.kirigami 2.19 as Kirigami
 Controls.Control {
     property var model
     property bool show: false
-    
+
     onShowChanged: {
         if (show) {
             searchField.forceActiveFocus();
@@ -19,15 +19,15 @@ Controls.Control {
             searchField.text = "";
         }
     }
-    
+
     Kirigami.Theme.colorSet: Kirigami.Theme.Window
     Kirigami.Theme.inherit: false
-    
+
     background: Rectangle { color: Kirigami.Theme.backgroundColor }
-    
-    height: opacity != 0 ? implicitHeight : 0
+
+    height: opacity !== 0 ? implicitHeight : 0
     opacity: show ? 1 : 0
-    
+
     Behavior on height {
         NumberAnimation {
             duration: Kirigami.Units.longDuration
@@ -40,18 +40,18 @@ Controls.Control {
             easing.type: Easing.InOutQuad
         }
     }
-    
+
     leftPadding: Kirigami.Units.largeSpacing
     rightPadding: Kirigami.Units.largeSpacing
     topPadding: Kirigami.Units.largeSpacing
     bottomPadding: Kirigami.Units.largeSpacing
-    
+
     contentItem: Kirigami.SearchField {
         id: searchField
         autoAccept: true
         onAccepted: model.filterString = searchField.text
     }
-    
+
     Kirigami.Separator {
         anchors.left: parent.left
         anchors.right: parent.right
