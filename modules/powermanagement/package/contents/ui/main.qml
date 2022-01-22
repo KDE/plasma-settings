@@ -21,19 +21,29 @@ SimpleKCM {
 
     Kirigami.FormLayout {
         id: mainItem
+        wideMode: false
 
         QQC2.ComboBox {
-            id: sleepCombo
-            Kirigami.FormData.label: i18nc("Part of a sentence like 'Dim Display after 5 minutes'", "Dim Display")
+            id: dimScreenCombo
+            Kirigami.FormData.label: i18nc("Part of a sentence like 'Dim screen after 5 minutes'", "Dim screen after:")
             model: kcm.timeOptions()
-            currentIndex: kcm.sleepScreenIdx
-            onActivated: kcm.sleepScreenIdx = currentIndex
+            currentIndex: kcm.dimScreenIdx
+            onActivated: kcm.dimScreenIdx = currentIndex
+            onCurrentIndexChanged: print(currentIndex)
+        }
+        
+        QQC2.ComboBox {
+            id: screenOffCombo
+            Kirigami.FormData.label: i18nc("Part of a sentence like 'Turn off screen after 5 minutes'", "Turn off screen after:")
+            model: kcm.timeOptions()
+            currentIndex: kcm.screenOffIdx
+            onActivated: kcm.screenOffIdx = currentIndex
             onCurrentIndexChanged: print(currentIndex)
         }
 
         QQC2.ComboBox {
             id: suspendCombo
-            Kirigami.FormData.label: i18nc("Part of a sentence like 'Suspend Session after 5 minutes'", "Suspend Session")
+            Kirigami.FormData.label: i18nc("Part of a sentence like 'Suspend device after 5 minutes'", "Suspend device after:")
             model: kcm.timeOptions()
             currentIndex: kcm.suspendSessionIdx
             onActivated: kcm.suspendSessionIdx = currentIndex

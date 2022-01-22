@@ -10,42 +10,28 @@
 class MobilePower : public KQuickAddons::ConfigModule
 {
     Q_OBJECT
-    Q_PROPERTY(bool lockScreen READ lockScreen WRITE setLockScreen NOTIFY lockScreenChanged)
-    Q_PROPERTY(qreal suspendSessionTime READ suspendSessionTime WRITE setLockScreenTime NOTIFY suspendSessionTimeChanged)
-    Q_PROPERTY(bool sleepScreen READ sleepScreen WRITE setSleepScreen NOTIFY sleepScreenChanged)
-    Q_PROPERTY(qreal sleepScreenTime READ sleepScreenTime WRITE setSleepScreenTime NOTIFY sleepScreenTimeChanged)
-    Q_PROPERTY(int sleepScreenIdx READ sleepScreenIdx WRITE setSleepScreenIdx NOTIFY sleepScreenIdxChanged)
-    Q_PROPERTY(int suspendSessionIdx READ suspendSessionIdx WRITE setLockScreenIdx NOTIFY suspendSessionIdxChanged)
+    Q_PROPERTY(int dimScreenIdx READ dimScreenIdx WRITE setDimScreenIdx NOTIFY dimScreenIdxChanged)
+    Q_PROPERTY(int screenOffIdx READ screenOffIdx WRITE setScreenOffIdx NOTIFY screenOffIdxChanged)
+    Q_PROPERTY(int suspendSessionIdx READ suspendSessionIdx WRITE setSuspendSessionIdx NOTIFY suspendSessionIdxChanged)
 
 public:
     MobilePower(QObject *parent, const QVariantList &args);
     ~MobilePower();
 
     Q_INVOKABLE QStringList timeOptions() const;
-    Q_INVOKABLE void setLockScreenIdx(int idx);
-    Q_INVOKABLE void setSleepScreenIdx(int idx);
-    int sleepScreenIdx();
+
+    void setDimScreenIdx(int idx);
+    void setScreenOffIdx(int idx);
+    void setSuspendSessionIdx(int idx);
+    int dimScreenIdx();
+    int screenOffIdx();
     int suspendSessionIdx();
-    Q_SIGNAL void sleepScreenIdxChanged();
+
+    Q_SIGNAL void dimScreenIdxChanged();
+    Q_SIGNAL void screenOffIdxChanged();
     Q_SIGNAL void suspendSessionIdxChanged();
 
     QString stringForValue(int value);
-
-    bool lockScreen() const;
-    Q_SLOT void setLockScreen(bool value);
-    Q_SIGNAL void lockScreenChanged(bool value);
-
-    qreal suspendSessionTime() const;
-    Q_SLOT void setLockScreenTime(double value);
-    Q_SIGNAL void suspendSessionTimeChanged(double value);
-
-    bool sleepScreen() const;
-    Q_SLOT void setSleepScreen(bool value);
-    Q_SIGNAL void sleepScreenChanged(bool value);
-
-    qreal sleepScreenTime() const;
-    Q_SLOT void setSleepScreenTime(double value);
-    Q_SIGNAL void sleepScreenTimeChanged(double value);
 
     void load() override;
     void save() override;
