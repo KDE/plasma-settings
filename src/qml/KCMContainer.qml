@@ -15,14 +15,14 @@ Kirigami.Page {
     id: container
     property QtObject kcm
     property Item internalPage
-    
+
     title: internalPage.title
-    
+
     topPadding: 0
     leftPadding: 0
     rightPadding: 0
     bottomPadding: 0
-    
+
     flickable: internalPage.flickable
     actions.main: internalPage.actions.main
     actions.contextualActions: internalPage.contextualActions
@@ -37,15 +37,16 @@ Kirigami.Page {
         }
     }
 
-    Component.onCompleted: {
-        kcm.load()
-    }
+    Component.onCompleted: kcm.load()
 
     data: [
         Connections {
             target: kcm
             function onPagePushed(page) {
-                pageStack.push(kcmContainer.createObject(pageStack, {"internalPage": page}));
+                pageStack.push(kcmContainer.createObject(pageStack, {
+                    internalPage: page,
+                    kcm: kcm,
+                }));
             }
             function onPageRemoved() {
                 pageStack.pop();
