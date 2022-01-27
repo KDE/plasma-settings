@@ -2,6 +2,13 @@
     "Categories": "Qt;KDE;X-KDE-settings-system;",
     "KPlugin": {
         "Description": "Software Versions",
+        "Description[ca@valencia]": "Versions de programari",
+        "Description[ca]": "Versions de programari",
+        "Description[es]": "Versiones de software",
+        "Description[nl]": "Softwareversies",
+        "Description[sv]": "Programvaruversioner",
+        "Description[uk]": "Версії програмного забезпечення",
+        "Description[x-test]": "xxSoftware Versionsxx",
         "FormFactors": [
             "handset",
             "tablet",

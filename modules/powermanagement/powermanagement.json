@@ -2,6 +2,13 @@
     "Categories": "Qt;KDE;X-KDE-settings-system;",
     "KPlugin": {
         "Description": "Lock, Sleep, Timeout",
+        "Description[ca@valencia]": "Bloqueja, Adorm, Temps d'espera",
+        "Description[ca]": "Bloqueja, Adorm, Temps d'espera",
+        "Description[es]": "Bloquear, dormir, tiempo de espera",
+        "Description[nl]": "Vergrendelen, onderbreken, tijdslimiet",
+        "Description[sv]": "Lås, viloläge, tidsgräns",
+        "Description[uk]": "Блокування, присипляння, час очікування",
+        "Description[x-test]": "xxLock, Sleep, Timeoutxx",
         "FormFactors": [
             "handset",
             "tablet",

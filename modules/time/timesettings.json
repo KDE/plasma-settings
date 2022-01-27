@@ -2,6 +2,13 @@
     "Categories": "Qt;KDE;X-KDE-settings-system;",
     "KPlugin": {
         "Description": "Timezone, Date Display",
+        "Description[ca@valencia]": "Zona horària, Mostra la data",
+        "Description[ca]": "Zona horària, Mostra la data",
+        "Description[es]": "Zona horaria, visor de la fecha",
+        "Description[nl]": "Tijdzone, datumweergave",
+        "Description[sv]": "Tidszon, datumvisning",
+        "Description[uk]": "Часовий пояс, показ дати",
+        "Description[x-test]": "xxTimezone, Date Displayxx",
         "FormFactors": [
             "handset",
             "tablet",

@@ -2,6 +2,13 @@
     "Categories": "Qt;KDE;X-KDE-settings-system;",
     "KPlugin": {
         "Description": "Management of cellular networks",
+        "Description[ca@valencia]": "Gestió de xarxes de telefonia mòbil",
+        "Description[ca]": "Gestió de xarxes de telefonia mòbil",
+        "Description[es]": "Gestión de redes móviles",
+        "Description[nl]": "Beheer van cellulaire netwerken",
+        "Description[sv]": "Hantering av mobilnät",
+        "Description[uk]": "Керування стільниковими мережами",
+        "Description[x-test]": "xxManagement of cellular networksxx",
         "FormFactors": [
             "handset",
             "tablet",

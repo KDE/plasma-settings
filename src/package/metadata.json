@@ -3,11 +3,25 @@
         "Authors": [
             {
                 "Email": "sebas@kde.org",
-                "Name": "Sebastian Kügler"
+                "Name": "Sebastian Kügler",
+                "Name[ca@valencia]": "Sebastian Kügler",
+                "Name[ca]": "Sebastian Kügler",
+                "Name[es]": "Sebastian Kügler",
+                "Name[nl]": "Sebastian Kügler",
+                "Name[sv]": "Sebastian Kügler",
+                "Name[uk]": "Sebastian Kügler",
+                "Name[x-test]": "xxSebastian Küglerxx"
             }
         ],
         "Category": "Online Services",
         "Description": "Touchscreen friendly settings UI for Plasma Mobile",
+        "Description[ca@valencia]": "Configuració fàcil d'usar de la pantalla tàctil per al Plasma Mobile",
+        "Description[ca]": "Configuració fàcil d'usar de la pantalla tàctil per al Plasma Mobile",
+        "Description[es]": "Interfaz de preferencias amigables de la pantalla táctil para Plasma Mobile",
+        "Description[nl]": "Aanraakschermvriendelijke instellingen van UI voor Plasma Mobile",
+        "Description[sv]": "Pekskärmsvänliga inställningar av användargränssnitt för Plasma mobil",
+        "Description[uk]": "Інтерфейс параметрів сенсорного доступу для мобільної Плазми",
+        "Description[x-test]": "xxTouchscreen friendly settings UI for Plasma Mobilexx",
         "Icon": "preferences-desktop",
         "Id": "org.kde.plasma.settings",
         "License": "GPL",
