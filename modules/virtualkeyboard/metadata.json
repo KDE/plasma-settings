@@ -3,20 +3,28 @@
         "Authors": [
             {
                 "Name": "Bhushan Shah",
+                "Name[az]": "Bhushan Shah",
                 "Name[ca@valencia]": "Bhushan Shah",
                 "Name[ca]": "Bhushan Shah",
                 "Name[es]": "Bhushan Shah",
+                "Name[fr]": "Bhushan Shah",
+                "Name[hu]": "Bhushan Shah",
                 "Name[nl]": "Bhushan Shah",
+                "Name[sl]": "Bhushan Shah",
                 "Name[sv]": "Bhushan Shah",
                 "Name[uk]": "Bhushan Shah",
                 "Name[x-test]": "xxBhushan Shahxx"
             }
         ],
         "Description": "Virtual Keyboard configuration",
+        "Description[az]": "Virtual klaviatura tənzimləmələri",
         "Description[ca@valencia]": "Configuració del teclat virtual",
         "Description[ca]": "Configuració del teclat virtual",
         "Description[es]": "Configuración del teclado virtual",
+        "Description[fr]": "Configuration du clavier virtuel",
+        "Description[hu]": "Virtuális billentyűzet beállítása",
         "Description[nl]": "Configuratie van virtueel toetsenbord",
+        "Description[sl]": "Nastavitev navidezne tipkovnice",
         "Description[sv]": "Inställning av virtuellt tangentbord",
         "Description[uk]": "Налаштування віртуальної клавіатури",
         "Description[x-test]": "xxVirtual Keyboard configurationxx",
