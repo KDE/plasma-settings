@@ -12,9 +12,11 @@
         "Description[it]": "Blocco, sospensione, tempo massimo",
         "Description[nl]": "Vergrendelen, onderbreken, tijdslimiet",
         "Description[ro]": "Blocare, adormire, expirare",
+        "Description[ru]": "Блокировка, ждущий режим, время ожидания",
         "Description[sl]": "Zaklep, spanje, časovna omejitev",
         "Description[sv]": "Lås, viloläge, tidsgräns",
         "Description[uk]": "Блокування, присипляння, час очікування",
+        "Description[vi]": "Khoá, Ngủ, Tắt màn hình",
         "Description[x-test]": "xxLock, Sleep, Timeoutxx",
         "FormFactors": [
             "handset",

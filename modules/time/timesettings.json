@@ -12,9 +12,11 @@
         "Description[it]": "Fuso orario, visualizzazione della data",
         "Description[nl]": "Tijdzone, datumweergave",
         "Description[ro]": "Fus orar, afișare dată",
+        "Description[ru]": "Часовой пояс, формат вывода даты",
         "Description[sl]": "Časovni pas, prikaz datuma",
         "Description[sv]": "Tidszon, datumvisning",
         "Description[uk]": "Часовий пояс, показ дати",
+        "Description[vi]": "Hiển thị múi giờ, ngày",
         "Description[x-test]": "xxTimezone, Date Displayxx",
         "FormFactors": [
             "handset",

@@ -12,9 +12,11 @@
         "Description[it]": "Gestione delle reti cellulari",
         "Description[nl]": "Beheer van cellulaire netwerken",
         "Description[ro]": "Gestiunea rețelelor celulare",
+        "Description[ru]": "Управление сотовыми сетями",
         "Description[sl]": "Upravljanje mobilnih omrežij",
         "Description[sv]": "Hantering av mobilnät",
         "Description[uk]": "Керування стільниковими мережами",
+        "Description[vi]": "Quản lí các mạng di dộng",
         "Description[x-test]": "xxManagement of cellular networksxx",
         "FormFactors": [
             "handset",

@@ -12,9 +12,11 @@
         "Description[it]": "Versioni software",
         "Description[nl]": "Softwareversies",
         "Description[ro]": "Versiuni de programe",
+        "Description[ru]": "Версии приложений",
         "Description[sl]": "Verzije programja",
         "Description[sv]": "Programvaruversioner",
         "Description[uk]": "Версії програмного забезпечення",
+        "Description[vi]": "Các phiên bản phần mềm",
         "Description[x-test]": "xxSoftware Versionsxx",
         "FormFactors": [
             "handset",

@@ -14,9 +14,11 @@
                 "Name[it]": "Tobias Fella",
                 "Name[nl]": "Tobias Fella",
                 "Name[ro]": "Tobias Fella",
+                "Name[ru]": "Tobias Fella",
                 "Name[sl]": "Tobias Fella",
                 "Name[sv]": "Tobias Fella",
                 "Name[uk]": "Tobias Fella",
+                "Name[vi]": "Tobias Fella",
                 "Name[x-test]": "xxTobias Fellaxx"
             }
         ],
@@ -32,9 +34,11 @@
         "Description[it]": "Imposta il PIN di blocco dello schermo",
         "Description[nl]": "De PIN van schermvergrendeling instellen",
         "Description[ro]": "Stabilește PIN-ul ecranului de blocare",
+        "Description[ru]": "Настройка PIN-кода блокировки экрана",
         "Description[sl]": "Nastavi Pin za zaklepanje zaslona",
         "Description[sv]": "Ställ in PIN-kod för skärmlåsning",
         "Description[uk]": "Встановлення коду блокування екрана",
+        "Description[vi]": "Đặt PIN màn hình khoá",
         "Description[x-test]": "xxSet the Lockscreen PINxx",
         "FormFactors": [
             "handset",

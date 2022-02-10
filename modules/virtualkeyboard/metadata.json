@@ -13,9 +13,11 @@
                 "Name[it]": "Bhushan Shah",
                 "Name[nl]": "Bhushan Shah",
                 "Name[ro]": "Bhushan Shah",
+                "Name[ru]": "Bhushan Shah",
                 "Name[sl]": "Bhushan Shah",
                 "Name[sv]": "Bhushan Shah",
                 "Name[uk]": "Bhushan Shah",
+                "Name[vi]": "Bhushan Shah",
                 "Name[x-test]": "xxBhushan Shahxx"
             }
         ],
@@ -30,9 +32,11 @@
         "Description[it]": "Configurazione della tastiera virtuale",
         "Description[nl]": "Configuratie van virtueel toetsenbord",
         "Description[ro]": "Configurarea tastaturii virtuale",
+        "Description[ru]": "Настройка виртуальной клавиатуры",
         "Description[sl]": "Nastavitev navidezne tipkovnice",
         "Description[sv]": "Inställning av virtuellt tangentbord",
         "Description[uk]": "Налаштування віртуальної клавіатури",
+        "Description[vi]": "Cấu hình bàn phím ảo",
         "Description[x-test]": "xxVirtual Keyboard configurationxx",
         "FormFactors": [
             "handset",
