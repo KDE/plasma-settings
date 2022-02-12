@@ -18,6 +18,7 @@
         "Description[uk]": "Часовий пояс, показ дати",
         "Description[vi]": "Hiển thị múi giờ, ngày",
         "Description[x-test]": "xxTimezone, Date Displayxx",
+        "Description[zh_CN]": "时区、日期显示",
         "FormFactors": [
             "handset",
             "tablet",

@@ -18,7 +18,8 @@
                 "Name[sv]": "Bhushan Shah",
                 "Name[uk]": "Bhushan Shah",
                 "Name[vi]": "Bhushan Shah",
-                "Name[x-test]": "xxBhushan Shahxx"
+                "Name[x-test]": "xxBhushan Shahxx",
+                "Name[zh_CN]": "Bhushan Shah"
             }
         ],
         "Description": "Virtual Keyboard configuration",
@@ -38,6 +39,7 @@
         "Description[uk]": "Налаштування віртуальної клавіатури",
         "Description[vi]": "Cấu hình bàn phím ảo",
         "Description[x-test]": "xxVirtual Keyboard configurationxx",
+        "Description[zh_CN]": "虚拟键盘配置",
         "FormFactors": [
             "handset",
             "tablet"

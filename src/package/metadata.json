@@ -19,7 +19,8 @@
                 "Name[sv]": "Sebastian Kügler",
                 "Name[uk]": "Sebastian Kügler",
                 "Name[vi]": "Sebastian Kügler",
-                "Name[x-test]": "xxSebastian Küglerxx"
+                "Name[x-test]": "xxSebastian Küglerxx",
+                "Name[zh_CN]": "Sebastian Kügler"
             }
         ],
         "Category": "Online Services",
@@ -40,6 +41,7 @@
         "Description[uk]": "Інтерфейс параметрів сенсорного доступу для мобільної Плазми",
         "Description[vi]": "Giao diện \"Thiết lập\" phù hợp với màn hình cảm ứng cho Plasma Di động",
         "Description[x-test]": "xxTouchscreen friendly settings UI for Plasma Mobilexx",
+        "Description[zh_CN]": "为 Plasma Mobile 触摸屏设计的设置界面",
         "Icon": "preferences-desktop",
         "Id": "org.kde.plasma.settings",
         "License": "GPL",

@@ -19,7 +19,8 @@
                 "Name[sv]": "Tobias Fella",
                 "Name[uk]": "Tobias Fella",
                 "Name[vi]": "Tobias Fella",
-                "Name[x-test]": "xxTobias Fellaxx"
+                "Name[x-test]": "xxTobias Fellaxx",
+                "Name[zh_CN]": "Tobias Fella"
             }
         ],
         "Category": "",
@@ -40,6 +41,7 @@
         "Description[uk]": "Встановлення коду блокування екрана",
         "Description[vi]": "Đặt PIN màn hình khoá",
         "Description[x-test]": "xxSet the Lockscreen PINxx",
+        "Description[zh_CN]": "设置锁屏 PIN 码",
         "FormFactors": [
             "handset",
             "tablet",

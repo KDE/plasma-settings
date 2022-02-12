@@ -18,6 +18,7 @@
         "Description[uk]": "Блокування, присипляння, час очікування",
         "Description[vi]": "Khoá, Ngủ, Tắt màn hình",
         "Description[x-test]": "xxLock, Sleep, Timeoutxx",
+        "Description[zh_CN]": "锁屏、睡眠、超时",
         "FormFactors": [
             "handset",
             "tablet",

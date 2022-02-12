@@ -18,6 +18,7 @@
         "Description[uk]": "Версії програмного забезпечення",
         "Description[vi]": "Các phiên bản phần mềm",
         "Description[x-test]": "xxSoftware Versionsxx",
+        "Description[zh_CN]": "软件版本",
         "FormFactors": [
             "handset",
             "tablet",
