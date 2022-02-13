@@ -127,49 +127,49 @@ void MobilePower::save()
     if (d->dimScreenTime == 0) {
         qDebug() << "Deleting the group DimDisplay";
 
-        acGroup.deleteGroup("DimDisplay");
-        batteryGroup.deleteGroup("DimDisplay");
-        lowBatteryGroup.deleteGroup("DimDisplay");
+        acGroup.deleteGroup("DimDisplay", KConfigGroup::Notify);
+        batteryGroup.deleteGroup("DimDisplay", KConfigGroup::Notify);
+        lowBatteryGroup.deleteGroup("DimDisplay", KConfigGroup::Notify);
     } else {
         // powerdevil/dimdisplayconfig.cpp - here we store time * 60 * 1000
         // We should really, really, stop doing that.
-        acGroup.group("DimDisplay").writeEntry("idleTime", d->dimScreenTime * 60 * 1000);
-        batteryGroup.group("DimDisplay").writeEntry("idleTime", d->dimScreenTime * 60 * 1000);
-        lowBatteryGroup.group("DimDisplay").writeEntry("idleTime", d->dimScreenTime * 60 * 1000);
+        acGroup.group("DimDisplay").writeEntry("idleTime", d->dimScreenTime * 60 * 1000, KConfigGroup::Notify);
+        batteryGroup.group("DimDisplay").writeEntry("idleTime", d->dimScreenTime * 60 * 1000, KConfigGroup::Notify);
+        lowBatteryGroup.group("DimDisplay").writeEntry("idleTime", d->dimScreenTime * 60 * 1000, KConfigGroup::Notify);
     }
 
     if (d->screenOffTime == 0) {
         qDebug() << "Deleting the group DPMSControl";
 
-        acGroup.deleteGroup("DPMSControl");
-        batteryGroup.deleteGroup("DPMSControl");
-        lowBatteryGroup.deleteGroup("DPMSControl");
+        acGroup.deleteGroup("DPMSControl", KConfigGroup::Notify);
+        batteryGroup.deleteGroup("DPMSControl", KConfigGroup::Notify);
+        lowBatteryGroup.deleteGroup("DPMSControl", KConfigGroup::Notify);
     } else {
-        acGroup.group("DPMSControl").writeEntry("idleTime", d->screenOffTime * 60 * 1000);
-        batteryGroup.group("DPMSControl").writeEntry("idleTime", d->screenOffTime * 60 * 1000);
-        lowBatteryGroup.group("DPMSControl").writeEntry("idleTime", d->screenOffTime * 60 * 1000);
+        acGroup.group("DPMSControl").writeEntry("idleTime", d->screenOffTime * 60 * 1000, KConfigGroup::Notify);
+        batteryGroup.group("DPMSControl").writeEntry("idleTime", d->screenOffTime * 60 * 1000, KConfigGroup::Notify);
+        lowBatteryGroup.group("DPMSControl").writeEntry("idleTime", d->screenOffTime * 60 * 1000, KConfigGroup::Notify);
     }
 
     // ensure the system is locked when the screen is turned off
-    acGroup.group("DPMSControl").writeEntry("lockBeforeTurnOff", 1);
-    batteryGroup.group("DPMSControl").writeEntry("lockBeforeTurnOff", 1);
-    lowBatteryGroup.group("DPMSControl").writeEntry("lockBeforeTurnOff", 1);
+    acGroup.group("DPMSControl").writeEntry("lockBeforeTurnOff", 1, KConfigGroup::Notify);
+    batteryGroup.group("DPMSControl").writeEntry("lockBeforeTurnOff", 1, KConfigGroup::Notify);
+    lowBatteryGroup.group("DPMSControl").writeEntry("lockBeforeTurnOff", 1, KConfigGroup::Notify);
 
     if (d->suspendSessionTime == 0) {
         qDebug() << "Deleting the group SuspendDisplay";
 
-        acGroup.deleteGroup("SuspendSession");
-        batteryGroup.deleteGroup("SuspendSession");
-        lowBatteryGroup.deleteGroup("SuspendSession");
+        acGroup.deleteGroup("SuspendSession", KConfigGroup::Notify);
+        batteryGroup.deleteGroup("SuspendSession", KConfigGroup::Notify);
+        lowBatteryGroup.deleteGroup("SuspendSession", KConfigGroup::Notify);
     } else {
-        acGroup.group("SuspendSession").writeEntry("idleTime", d->suspendSessionTime * 60 * 1000);
-        acGroup.group("SuspendSession").writeEntry("suspendType", 1);
+        acGroup.group("SuspendSession").writeEntry("idleTime", d->suspendSessionTime * 60 * 1000, KConfigGroup::Notify);
+        acGroup.group("SuspendSession").writeEntry("suspendType", 1, KConfigGroup::Notify);
 
-        batteryGroup.group("SuspendSession").writeEntry("idleTime", d->suspendSessionTime * 60 * 1000);
-        batteryGroup.group("SuspendSession").writeEntry("suspendType", 1);
+        batteryGroup.group("SuspendSession").writeEntry("idleTime", d->suspendSessionTime * 60 * 1000, KConfigGroup::Notify);
+        batteryGroup.group("SuspendSession").writeEntry("suspendType", 1, KConfigGroup::Notify);
 
-        lowBatteryGroup.group("SuspendSession").writeEntry("idleTime", d->suspendSessionTime * 60 * 1000);
-        lowBatteryGroup.group("SuspendSession").writeEntry("suspendType", 1);
+        lowBatteryGroup.group("SuspendSession").writeEntry("idleTime", d->suspendSessionTime * 60 * 1000, KConfigGroup::Notify);
+        lowBatteryGroup.group("SuspendSession").writeEntry("suspendType", 1, KConfigGroup::Notify);
     }
 
     d->profilesConfig->sync();
