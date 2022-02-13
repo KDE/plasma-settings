@@ -150,6 +150,11 @@ void MobilePower::save()
         lowBatteryGroup.group("DPMSControl").writeEntry("idleTime", d->screenOffTime * 60 * 1000);
     }
 
+    // ensure the system is locked when the screen is turned off
+    acGroup.group("DPMSControl").writeEntry("lockBeforeTurnOff", 1);
+    batteryGroup.group("DPMSControl").writeEntry("lockBeforeTurnOff", 1);
+    lowBatteryGroup.group("DPMSControl").writeEntry("lockBeforeTurnOff", 1);
+
     if (d->suspendSessionTime == 0) {
         qDebug() << "Deleting the group SuspendDisplay";
 
