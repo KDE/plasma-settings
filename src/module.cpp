@@ -9,6 +9,7 @@
 
 #include <KPluginFactory>
 #include <QQmlContext>
+#include <QQuickItem>
 
 KQuickAddons::ConfigModule *Module::kcm() const
 {
@@ -44,7 +45,7 @@ void Module::setPath(const QString &path)
         Q_EMIT pathChanged();
 
         m_kcm = KPluginFactory::instantiatePlugin<KQuickAddons::ConfigModule>(kcmMetaData, this).plugin;
-        QQmlEngine::setContextForObject(m_kcm, new QQmlContext(QQmlEngine::contextForObject(this), this));
+        QQmlEngine::setContextForObject(m_kcm, new QQmlContext(QQmlEngine::contextForObject(this)->parentContext(), m_kcm));
         Q_EMIT kcmChanged();
     } else {
         qWarning() << "Unknown module" << path << "requested";
