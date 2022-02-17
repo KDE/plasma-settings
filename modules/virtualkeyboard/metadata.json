@@ -24,7 +24,7 @@
                 "Name[zh_CN]": "Bhushan Shah"
             }
         ],
-        "Description": "Virtual Keyboard configuration",
+        "Description": "On-Screen Keyboard configuration",
         "Description[az]": "Virtual klaviatura tənzimləmələri",
         "Description[ca@valencia]": "Configuració del teclat virtual",
         "Description[ca]": "Configuració del teclat virtual",
@@ -50,7 +50,7 @@
         ],
         "Icon": "input-keyboard",
         "License": "GPL",
-        "Name": "Virtual Keyboard",
+        "Name": "On-Screen Keyboard",
         "Name[ast]": "Tecláu virtual",
         "Name[az]": "Virtual Klaviatura",
         "Name[ca@valencia]": "Teclat virtual",
@@ -87,7 +87,7 @@
         "Version": "1.0",
         "Website": "https://plasma-mobile.org"
     },
-    "X-KDE-Keywords": "virtualkeyboard,keyboard",
+    "X-KDE-Keywords": "onscreen,osk,virtualkeyboard,keyboard",
     "X-KDE-Keywords[az]": "virtualkeyboard,keyboard,virtual klaviatura",
     "X-KDE-Keywords[ca@valencia]": "teclat virtual,teclat",
     "X-KDE-Keywords[ca]": "teclat virtual,teclat",

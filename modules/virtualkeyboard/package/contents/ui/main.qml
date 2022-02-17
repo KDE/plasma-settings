@@ -16,7 +16,7 @@ import org.kde.kitemmodels 1.0 as KItemModel
 KCM.SimpleKCM {
     id: root
 
-    title: i18n("Virtual Keyboard")
+    title: i18n("On-Screen Keyboard")
 
     leftPadding: Kirigami.Units.largeSpacing 
     rightPadding: Kirigami.Units.largeSpacing 
