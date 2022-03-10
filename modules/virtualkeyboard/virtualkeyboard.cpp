@@ -48,15 +48,6 @@ VirtualKeyboard::VirtualKeyboard(QObject *parent, const QVariantList &args)
 
     m_soundFeedback = m_gsettings->value("key-press-feedback").toBool();
     m_vibrateFeedback = m_gsettings->value("key-press-haptic-feedback").toBool();
-
-    m_theme = m_gsettings->value("theme").toString();
-
-    // get available themes
-    QDir themesFolder(MALIIT_KEYBOARD_THEMES_DIR);
-    const auto files = themesFolder.entryList({"*.json"}, QDir::Files);
-    for (const QString &fileName : files) {
-        m_availableThemes.append(fileName.split('.')[0]);
-    }
 }
 
 SETTER(setAutoCapitalize, m_autoCapitalize, "auto-capitalization", autoCapitalizeChanged)
@@ -67,14 +58,5 @@ SETTER(setSpellCheck, m_spellCheck, "spell-checking", spellCheckChanged)
 
 SETTER(setSoundFeedback, m_soundFeedback, "key-press-feedback", soundFeedbackChanged)
 SETTER(setVibrateFeedback, m_vibrateFeedback, "key-press-haptic-feedback", vibrateFeedbackChanged)
-
-void VirtualKeyboard::setTheme(QString theme)
-{
-    if (m_theme != theme) {
-        m_theme = theme;
-        m_gsettings->set("theme", theme);
-        Q_EMIT themeChanged();
-    }
-}
 
 #include "virtualkeyboard.moc"
