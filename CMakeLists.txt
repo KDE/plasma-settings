@@ -60,6 +60,8 @@ add_definitions(-DQT_DISABLE_DEPRECATED_BEFORE=0x060000)
 add_subdirectory(src)
 add_subdirectory(modules)
 
+ki18n_install(po)
+
 install(FILES org.kde.mobile.plasmasettings.desktop DESTINATION ${KDE_INSTALL_APPDIR})
 
 file(GLOB_RECURSE ALL_CLANG_FORMAT_SOURCE_FILES *.cpp *.h)
