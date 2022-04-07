@@ -149,6 +149,16 @@ Kirigami.ScrollablePage {
             contentItem: RowLayout {
                 Layout.fillWidth: true
                 
+                Controls.RadioButton {
+                    Layout.alignment: Qt.AlignRight | Qt.AlignVCenter
+                    checked: modem.activeConnectionUni == modelData.connectionUni
+                    onClicked: {
+                        if (!checked) {
+                            modem.activateProfile(modelData.connectionUni);
+                        }
+                    }
+                }
+                
                 ColumnLayout {
                     spacing: Kirigami.Units.smallSpacing
                     Kirigami.Heading {
@@ -157,15 +167,6 @@ Kirigami.ScrollablePage {
                     }
                     Controls.Label {
                         text: modelData.apn
-                    }
-                }
-                Controls.RadioButton {
-                    Layout.alignment: Qt.AlignRight | Qt.AlignVCenter
-                    checked: modem.activeConnectionUni == modelData.connectionUni
-                    onClicked: {
-                        if (!checked) {
-                            modem.activateProfile(modelData.connectionUni);
-                        }
                     }
                 }
             }

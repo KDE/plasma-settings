@@ -12,9 +12,12 @@ import cellularnetworkkcm 1.0
 
 ColumnLayout {
     id: root
+    
     property var model
     property alias count: repeater.count
+    
     spacing: 0
+    visible: count > 0
     
     Repeater {
         id: repeater

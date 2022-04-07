@@ -7,10 +7,14 @@
 import QtQuick 2.12
 import QtQuick.Layouts 1.2
 import QtQuick.Controls 2.12 as Controls
+
 import org.kde.kirigami 2.12 as Kirigami
 import org.kde.plasma.networkmanagement 0.2 as PlasmaNM
 import org.kde.kcm 1.2
+
 import cellularnetworkkcm 1.0
+
+import "mobileform" as MobileForm
 
 Kirigami.ScrollablePage {
     id: simPage
@@ -18,7 +22,10 @@ Kirigami.ScrollablePage {
     
     property Sim sim
     
-    padding: 0
+    leftPadding: 0
+    rightPadding: 0
+    topPadding: Kirigami.Units.gridUnit
+    bottomPadding: Kirigami.Units.gridUnit
     
     PlasmaNM.EnabledConnections {
         id: enabledConnections
@@ -26,6 +33,7 @@ Kirigami.ScrollablePage {
     
     ColumnLayout {
         spacing: 0
+        width: simPage.width
         
         Kirigami.InlineMessage {
             Layout.fillWidth: true
@@ -40,100 +48,229 @@ Kirigami.ScrollablePage {
             id: messagesList
             Layout.fillWidth: true
             Layout.margins: Kirigami.Units.largeSpacing
-            visible: count != 0
             model: kcm.messages
         }
         
-        Kirigami.FormLayout {
-            Layout.margins: Kirigami.Units.gridUnit
+        MobileForm.FormCard {
             Layout.fillWidth: true
-            wideMode: false
             
-            Controls.CheckBox {
-                Kirigami.FormData.label: i18n("Data roaming:")
-                text: checked ? i18n("On") : i18n("Off")
-                enabled: sim.enabled
-                checked: sim.modem.isRoaming
-                onCheckedChanged: sim.modem.isRoaming = checked
-            }
-            
-            Controls.Button {
-                Kirigami.FormData.label: i18n("APNs:")
-                icon.name: "globe"
-                text: i18n("Modify Access Point Names")
-                enabled: sim.enabled && enabledConnections.wwanEnabled
-                onClicked: {
-                    kcm.push("ProfileList.qml", {"modem": sim.modem});
+            contentItem: ColumnLayout {
+                spacing: 0
+                
+                MobileForm.FormSwitchDelegate {
+                    id: dataRoamingCheckBox
+                    text: i18n("Data Roaming")
+                    description: i18n("Allow your device to use networks other than your carrier.")
+                    enabled: sim.enabled
+                    checked: sim.modem.isRoaming
+                    onCheckedChanged: sim.modem.isRoaming = checked
+                }
+                
+                Kirigami.Separator {
+                    Layout.leftMargin: Kirigami.Units.largeSpacing
+                    Layout.rightMargin: Kirigami.Units.largeSpacing
+                    Layout.fillWidth: true
+                    opacity: (!dataRoamingCheckBox.controlHovered && !apnButton.controlHovered) ? 0.5 : 0
+                }
+                
+                MobileForm.FormButtonDelegate {
+                    id: apnButton
+                    iconName: "globe"
+                    text: i18n("Modify APNs")
+                    description: i18n("Configure access point names for your carrier.")
+                    enabled: sim.enabled && enabledConnections.wwanEnabled
+                    onClicked: kcm.push("ProfileList.qml", {"modem": sim.modem});
+                }
+                
+                Kirigami.Separator {
+                    Layout.leftMargin: Kirigami.Units.largeSpacing
+                    Layout.rightMargin: Kirigami.Units.largeSpacing
+                    Layout.fillWidth: true
+                    opacity: (!apnButton.controlHovered && !networksButton.controlHovered) ? 0.5 : 0
+                }
+                
+                MobileForm.FormButtonDelegate {
+                    id: networksButton
+                    iconName: "network-mobile-available"
+                    text: i18n("Networks")
+                    description: i18n("Select a network operator.")
+                    enabled: sim.enabled
+                    onClicked: kcm.push("AvailableNetworks.qml", { "modem": sim.modem, "sim": sim });
+                }
+                
+                Kirigami.Separator {
+                    Layout.leftMargin: Kirigami.Units.largeSpacing
+                    Layout.rightMargin: Kirigami.Units.largeSpacing
+                    Layout.fillWidth: true
+                    opacity: (!networksButton.controlHovered && !simLockButton.controlHovered) ? 0.5 : 0
+                }
+                
+                MobileForm.FormButtonDelegate {
+                    id: simLockButton
+                    iconName: "unlock"
+                    text: i18n("SIM Lock")
+                    description: i18n("Modify SIM lock settings.")
+                    enabled: sim.enabled
+                    onClicked: kcm.push("SimLock.qml", { "sim": sim });
+                }
+                
+                Kirigami.Separator {
+                    Layout.leftMargin: Kirigami.Units.largeSpacing
+                    Layout.rightMargin: Kirigami.Units.largeSpacing
+                    Layout.fillWidth: true
+                    opacity: (!simLockButton.controlHovered && !modemDetailsButton.controlHovered) ? 0.5 : 0
+                }
+                
+                MobileForm.FormButtonDelegate {
+                    id: modemDetailsButton
+                    iconName: "network-modem"
+                    text: i18n("Modem Details")
+                    description: i18n("View the details of the modem this SIM is connected to.")
+                    onClicked: kcm.push("Modem.qml", { "modem": sim.modem })
                 }
             }
+        }
+        
+        MobileForm.FormCard {
+            Layout.fillWidth: true
+            Layout.topMargin: Kirigami.Units.largeSpacing
             
-            Controls.Button {
-                Kirigami.FormData.label: i18n("Networks:")
-                icon.name: "network-mobile-available"
-                text: i18n("Select Network Operator")
-                enabled: sim.enabled
-                onClicked: {
-                    kcm.push("AvailableNetworks.qml", { "modem": sim.modem, "sim": sim });
+            contentItem: ColumnLayout {
+                spacing: 0
+                
+                MobileForm.FormCardHeader {
+                    title: i18n("SIM Details")
                 }
-            }
-            
-            Controls.Button {
-                Kirigami.FormData.label: i18n("SIM Lock:")
-                icon.name: "unlock"
-                text: i18n("Modify SIM Lock")
-                enabled: sim.enabled
-                onClicked: kcm.push("SimLock.qml", { "sim": sim });
-            }
-            
-            Controls.Button {
-                Kirigami.FormData.label: i18n("Modem:")
-                icon.name: "network-modem"
-                text: i18n("View Modem Details")
-                onClicked: kcm.push("Modem.qml", { "modem": sim.modem })
-            }
-            
-            Kirigami.Separator {
-                Kirigami.FormData.label: i18n("SIM Details")
-                Kirigami.FormData.isSection: true
-            }
-            Controls.Label {
-                Kirigami.FormData.label: i18n("Locked:")
-                text: sim.locked ? i18n("Yes") : i18n("No")
-            }
-            Controls.Label {
-                Kirigami.FormData.label: i18n("IMSI:")
-                text: sim.imsi
-            }
-            Controls.Label {
-                Kirigami.FormData.label: i18n("EID:")
-                text: sim.eid
-            }
-            Controls.Label {
-                Kirigami.FormData.label: i18n("Operator Code (modem):")
-                text: sim.modem.details.operatorCode
-            }
-            Controls.Label {
-                Kirigami.FormData.label: i18n("Operator Name (modem):")
-                text: sim.modem.details.operatorName
-            }
-            Controls.Label {
-                Kirigami.FormData.label: i18n("Operator Code (provided by SIM):")
-                text: sim.operatorIdentifier
-            }
-            Controls.Label {
-                Kirigami.FormData.label: i18n("Operator Name (provided by SIM):")
-                text: sim.operatorName
-            }
-            Controls.Label {
-                Kirigami.FormData.label: i18n("SIM ID:")
-                text: sim.simIdentifier
-            }
-            ColumnLayout {
-                Kirigami.FormData.label: i18n("Emergency Numbers:")
-                Repeater {
-                    model: sim.emergencyNumbers
-                    Controls.Label {
-                        text: modelData
+                
+                MobileForm.FormTextDelegate {
+                    id: lockedText
+                    text: i18n("Locked")
+                    description: sim.locked ? i18n("Yes") : i18n("No")
+                }
+                
+                Kirigami.Separator {
+                    Layout.leftMargin: Kirigami.Units.largeSpacing
+                    Layout.rightMargin: Kirigami.Units.largeSpacing
+                    Layout.fillWidth: true
+                    opacity: (!lockedText.controlHovered && !imsiText.controlHovered) ? 0.5 : 0
+                }
+                
+                MobileForm.FormTextDelegate  {
+                    id: imsiText
+                    text: i18n("IMSI")
+                    description: sim.imsi
+                }
+                
+                Kirigami.Separator {
+                    Layout.leftMargin: Kirigami.Units.largeSpacing
+                    Layout.rightMargin: Kirigami.Units.largeSpacing
+                    Layout.fillWidth: true
+                    opacity: (!imsiText.controlHovered && !eidText.controlHovered) ? 0.5 : 0
+                }
+                
+                MobileForm.FormTextDelegate  {
+                    id: eidText
+                    text: i18n("EID")
+                    description: sim.eid
+                }
+                
+                Kirigami.Separator {
+                    Layout.leftMargin: Kirigami.Units.largeSpacing
+                    Layout.rightMargin: Kirigami.Units.largeSpacing
+                    Layout.fillWidth: true
+                    opacity: (!eidText.controlHovered && !opCodeModemText.controlHovered) ? 0.5 : 0
+                }
+                
+                MobileForm.FormTextDelegate  {
+                    id: opCodeModemText
+                    text: i18n("Operator Code (modem)")
+                    description: sim.modem.details.operatorCode
+                }
+                
+                Kirigami.Separator {
+                    Layout.leftMargin: Kirigami.Units.largeSpacing
+                    Layout.rightMargin: Kirigami.Units.largeSpacing
+                    Layout.fillWidth: true
+                    opacity: (!opCodeModemText.controlHovered && !opNameModemText.controlHovered) ? 0.5 : 0
+                }
+                
+                MobileForm.FormTextDelegate  {
+                    id: opNameModemText
+                    text: i18n("Operator Name (modem)")
+                    description: sim.modem.details.operatorName
+                }
+                
+                Kirigami.Separator {
+                    Layout.leftMargin: Kirigami.Units.largeSpacing
+                    Layout.rightMargin: Kirigami.Units.largeSpacing
+                    Layout.fillWidth: true
+                    opacity: (!opNameModemText.controlHovered && !opCodeSimText.controlHovered) ? 0.5 : 0
+                }
+                
+                MobileForm.FormTextDelegate  {
+                    id: opCodeSimText
+                    text: i18n("Operator Code (provided by SIM)")
+                    description: sim.operatorIdentifier
+                }
+                
+                Kirigami.Separator {
+                    Layout.leftMargin: Kirigami.Units.largeSpacing
+                    Layout.rightMargin: Kirigami.Units.largeSpacing
+                    Layout.fillWidth: true
+                    opacity: (!opCodeSimText.controlHovered && !opNameSimText.controlHovered) ? 0.5 : 0
+                }
+                
+                MobileForm.FormTextDelegate {
+                    id: opNameSimText
+                    text: i18n("Operator Name (provided by SIM)")
+                    description: sim.operatorName
+                }
+                
+                Kirigami.Separator {
+                    Layout.leftMargin: Kirigami.Units.largeSpacing
+                    Layout.rightMargin: Kirigami.Units.largeSpacing
+                    Layout.fillWidth: true
+                    opacity: (!opNameSimText.controlHovered && !simIdText.controlHovered) ? 0.5 : 0
+                }
+                
+                MobileForm.FormTextDelegate {
+                    id: simIdText
+                    text: i18n("SIM ID")
+                    description: sim.simIdentifier
+                }
+                
+                Kirigami.Separator {
+                    Layout.leftMargin: Kirigami.Units.largeSpacing
+                    Layout.rightMargin: Kirigami.Units.largeSpacing
+                    Layout.fillWidth: true
+                    opacity: (!simIdText.controlHovered && !emergencyNumbersText.controlHovered) ? 0.5 : 0
+                }
+                
+                MobileForm.AbstractFormDelegate {
+                    id: emergencyNumbersText
+                    Layout.fillWidth: true
+                    
+                    background: Item {}
+                    contentItem: ColumnLayout {
+                        Layout.fillWidth: true
+                        spacing: Kirigami.Units.smallSpacing
+                        
+                        Controls.Label {
+                            Layout.fillWidth: true
+                            text: i18n("Emergency Numbers")
+                            elide: Text.ElideRight
+                        }
+                        
+                        Repeater {
+                            model: sim.emergencyNumbers
+                            Controls.Label {
+                                Layout.fillWidth: true
+                                text: modelData
+                                color: Kirigami.Theme.disabledTextColor
+                                font: Kirigami.Theme.smallFont
+                                elide: Text.ElideRight
+                            }
+                        }
                     }
                 }
             }

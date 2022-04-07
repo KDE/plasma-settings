@@ -7,22 +7,32 @@
 import QtQuick 2.12
 import QtQuick.Layouts 1.2
 import QtQuick.Controls 2.12 as Controls
-import org.kde.kirigami 2.12 as Kirigami
+
+import org.kde.kirigami 2.19 as Kirigami
 import org.kde.kcm 1.2
+
 import cellularnetworkkcm 1.0
+
+import "mobileform" as MobileForm
 
 Kirigami.ScrollablePage {
     id: root
     title: i18n("SIM Lock")
-    padding: 0
+    
+    leftPadding: 0
+    rightPadding: 0
+    topPadding: Kirigami.Units.gridUnit
+    bottomPadding: Kirigami.Units.gridUnit
     
     property Sim sim
 
     ColumnLayout {
+        spacing: 0
+        width: root.width
+        
         MessagesList {
             Layout.fillWidth: true
             Layout.margins: Kirigami.Units.largeSpacing
-            visible: count != 0
             model: kcm.messages
         }
 
@@ -72,29 +82,28 @@ Kirigami.ScrollablePage {
             }
         }
         
-        Kirigami.FormLayout {
+        MobileForm.FormCard {
             visible: !notLockedSimPlaceholder.visible && !unlockSimPlaceholder.visible
-            Layout.margins: Kirigami.Units.gridUnit
             Layout.fillWidth: true
-            wideMode: false
             
-            Controls.CheckBox {
-                Kirigami.FormData.label: "<b>" + i18n("SIM Lock:") + "</b>"
-                text: checked ? i18n("On") : i18n("Off")
-                checked: sim.pinEnabled
-                onCheckedChanged: {
-                    if (!checked) {
-                        checked = sim.pinEnabled; // prevent UI changing
-                        removePinDialog.open();
-                    }
-                }
+            MobileForm.FormButtonDelegate {
+                id: disableSimLockButton
+                text: i18n("Disable SIM Lock") 
+                description: i18n("Disable the SIM lock feature and remove the passcode on the SIM.")
+                onClicked: removePinDialog.open();
             }
             
-            Controls.Button {
-                Kirigami.FormData.label: "<b>" + i18n("Change PIN:") + "</b>"
-                icon.name: "unlock"
+            Kirigami.Separator {
+                Layout.leftMargin: Kirigami.Units.largeSpacing
+                Layout.rightMargin: Kirigami.Units.largeSpacing
+                Layout.fillWidth: true
+                opacity: (!disableSimLockButton.controlHovered && !changePinButton.controlHovered) ? 0.5 : 0
+            }
+            
+            MobileForm.FormButtonDelegate {
+                id: changePinButton
                 text: i18n("Change PIN")
-                enabled: sim.pinEnabled
+                description: i18n("Change the passcode set on the SIM.")
                 onClicked: changePinDialog.open()
             }
         }
@@ -106,7 +115,7 @@ Kirigami.ScrollablePage {
             regExp: /[0-9]+/
         }
         
-        PopupDialog {
+        Kirigami.Dialog {
             id: unlockPinDialog
             title: i18n("Unlock SIM")
             standardButtons: Controls.Dialog.Ok | Controls.Dialog.Cancel
@@ -126,7 +135,7 @@ Kirigami.ScrollablePage {
             }
         }
         
-        PopupDialog {
+        Kirigami.Dialog {
             id: changePinDialog
             title: i18n("Change SIM PIN")
             standardButtons: isValid ? Controls.Dialog.Ok | Controls.Dialog.Cancel : Controls.Dialog.Cancel
@@ -174,7 +183,7 @@ Kirigami.ScrollablePage {
             }
         }
         
-        PopupDialog {
+        Kirigami.Dialog {
             id: removePinDialog
             title: i18n("Remove SIM PIN")
             standardButtons: Controls.Dialog.Ok | Controls.Dialog.Cancel 
@@ -191,7 +200,7 @@ Kirigami.ScrollablePage {
             }
         }
         
-        PopupDialog {
+        Kirigami.Dialog {
             id: createPinDialog
             title: i18n("Add SIM PIN")
             standardButtons: isValid ? Controls.Dialog.Ok | Controls.Dialog.Cancel : Controls.Dialog.Cancel

@@ -7,10 +7,12 @@
 import QtQuick 2.12
 import QtQuick.Layouts 1.2
 import QtQuick.Controls 2.12 as Controls
-import org.kde.kirigami 2.12 as Kirigami
+
+import org.kde.kirigami 2.19 as Kirigami
+
 import cellularnetworkkcm 1.0
 
-PopupDialog {
+Kirigami.Dialog {
     id: dialog
     title: i18n("Edit APN")
     
@@ -28,7 +30,7 @@ PopupDialog {
             modem.updateProfile(profile.connectionUni, profileName.text, profileApn.text, profileUsername.text, profilePassword.text, profileNetworkType.value);
         }
     }
-    width: pageWidth - Kirigami.Units.gridUnit * 4
+    preferredWidth: pageWidth - Kirigami.Units.gridUnit * 4
     padding: Kirigami.Units.gridUnit
     
     ColumnLayout {
