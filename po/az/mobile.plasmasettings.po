@@ -1,0 +1,121 @@
+# Copyright (C) YEAR This file is copyright:
+# This file is distributed under the same license as the plasma-settings package.
+#
+# Xəyyam Qocayev <xxmn77@gmail.com>, 2020, 2021.
+msgid ""
+msgstr ""
+"Project-Id-Version: plasma-settings\n"
+"Report-Msgid-Bugs-To: https://bugs.kde.org\n"
+"POT-Creation-Date: 2022-01-26 00:47+0000\n"
+"PO-Revision-Date: 2021-12-25 12:15+0400\n"
+"Last-Translator: Kheyyam Gojayev <xxmn77@gmail.com>\n"
+"Language-Team: Azerbaijani <kde-i18n-doc@kde.org>\n"
+"Language: az\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Generator: Lokalize 21.12.0\n"
+
+#: src/main.cpp:46 src/package/contents/ui/ModulesListPage.qml:17
+#: src/package/contents/ui/Sidebar.qml:41
+#, kde-format
+msgid "Settings"
+msgstr "Ayarlar"
+
+#: src/main.cpp:48
+#, kde-format
+msgid "Touch-friendly settings application."
+msgstr "Toxunuş rahatlığı ayarları tətbiqi"
+
+#: src/main.cpp:50
+#, kde-format
+msgid "Copyright 2011-2015, Sebastian Kügler"
+msgstr "Copyright 2011-2015, Sebastian Kügler"
+
+#: src/main.cpp:51
+#, kde-format
+msgid "Sebastian Kügler"
+msgstr "Sebastian Kügler"
+
+#: src/main.cpp:51 src/main.cpp:52
+#, kde-format
+msgid "Maintainer"
+msgstr "Müşayətçi"
+
+#: src/main.cpp:52
+#, kde-format
+msgid "Marco Martin"
+msgstr "Marco Martin"
+
+#: src/main.cpp:60
+#, kde-format
+msgid "List available settings modules"
+msgstr "Mövcud ayarlar modullarının siyahısı"
+
+#: src/main.cpp:63
+#, kde-format
+msgid ""
+"Limit to modules suitable for <formfactor>, e.g. handset, tablet, "
+"mediacenter, desktop, test, all (default handset)"
+msgstr ""
+"<formfactor> üçün uyğun olan modullara məhdudiyyət qoymaq, məs.,\"handset"
+"\" (tel. dəstəyi), \"tablet\" (planşet), \"mediacenter\" (media mərkəzi), "
+"\"desktop\" (iş masası), \"test\", \"all\" (hamısı, standart tel. dəstəyi). "
+"Parametr ingiliscə və dırnaqsız verilməlidir."
+
+#: src/main.cpp:64
+#, kde-format
+msgid "formfactor"
+msgstr "form-faktor"
+
+#: src/main.cpp:65
+#, kde-format
+msgid "Settings module to open"
+msgstr "Açmaq üçün Ayarlar modulu"
+
+#: src/main.cpp:65
+#, kde-format
+msgid "modulename"
+msgstr "modul_adı"
+
+#: src/main.cpp:66
+#, kde-format
+msgid "Only show a single module, requires --module"
+msgstr "Yalnız tək modulu göstərmək, --module parametrini tələb edir"
+
+#: src/main.cpp:67
+#, kde-format
+msgid "Start window fullscreen"
+msgstr "Pəncərəni tam ekran başlatmaq"
+
+#: src/main.cpp:68
+#, kde-format
+msgid "Package to use for the UI (default org.kde.mobile.settings)"
+msgstr ""
+"İstifadəçi interfeysi (İİ) üçün istifadə olunan paket (standart org.kde."
+"mobile.settings)"
+
+#: src/main.cpp:68
+#, kde-format
+msgid "packagename"
+msgstr "paket_adı"
+
+#: src/package/contents/ui/DefaultPage.qml:29
+#, kde-format
+msgid "System Settings"
+msgstr "Sistem ayarları"
+
+#: src/package/contents/ui/DefaultPage.qml:35
+#, kde-format
+msgid "Open a configuration page from the sidebar."
+msgstr "Yan paneldən tənzimləmə səhifəsini açın."
+
+#: src/package/contents/ui/ModulesListPage.qml:23
+#: src/package/contents/ui/Sidebar.qml:52
+#, kde-format
+msgid "Search"
+msgstr "Axtarış"
+
+#~ msgid "Plasma Mobile Settings"
+#~ msgstr "Plasma Mobil Ayarları"

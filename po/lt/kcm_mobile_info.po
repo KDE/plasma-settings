@@ -1,0 +1,120 @@
+# Lithuanian translations for plasma-settings package.
+# Copyright (C) 2019 This file is copyright:
+# This file is distributed under the same license as the plasma-settings package.
+# Automatically generated, 2019.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: plasma-settings\n"
+"Report-Msgid-Bugs-To: https://bugs.kde.org\n"
+"POT-Creation-Date: 2021-02-16 02:44+0100\n"
+"PO-Revision-Date: 2020-03-07 22:00+0200\n"
+"Last-Translator: Automatically generated\n"
+"Language-Team: none\n"
+"Language: lt\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=4; plural=(n==1 ? 0 : n%10>=2 && (n%100<10 || n"
+"%100>=20) ? 1 : n%10==0 || (n%100>10 && n%100<20) ? 2 : 3);\n"
+"X-Generator: Poedit 2.3\n"
+
+#, kde-format
+msgctxt "NAME OF TRANSLATORS"
+msgid "Your names"
+msgstr "Moo"
+
+#, kde-format
+msgctxt "EMAIL OF TRANSLATORS"
+msgid "Your emails"
+msgstr "<>"
+
+#: info.cpp:23
+#, kde-format
+msgid "Info"
+msgstr "Informacija"
+
+#: info.cpp:24
+#, kde-format
+msgid "Jonah Brüchert"
+msgstr "Jonah Brüchert"
+
+#: package/contents/ui/main.qml:8
+#, kde-format
+msgid "System Information"
+msgstr "Sistemos informacija"
+
+#: package/contents/ui/main.qml:15 package/contents/ui/main.qml:105
+#, kde-format
+msgid "Copy to clipboard"
+msgstr "Kopijuoti į iškarpinę"
+
+#: package/contents/ui/main.qml:44
+#, kde-format
+msgid "Software"
+msgstr "Programinė įranga"
+
+#: package/contents/ui/main.qml:50
+#, kde-format
+msgid "KDE Plasma Version:"
+msgstr "KDE Plasma versija:"
+
+#: package/contents/ui/main.qml:55
+#, kde-format
+msgid "KDE Frameworks Version:"
+msgstr "KDE Frameworks versija:"
+
+#: package/contents/ui/main.qml:59
+#, kde-format
+msgid "Qt Version:"
+msgstr "Qt versija:"
+
+#: package/contents/ui/main.qml:64
+#, kde-format
+msgid "Kernel Version:"
+msgstr "Branduolio versija:"
+
+#: package/contents/ui/main.qml:69
+#, kde-format
+msgid "OS Type:"
+msgstr "OS tipas:"
+
+#: package/contents/ui/main.qml:70
+#, kde-format
+msgctxt "@label %1 is the CPU bit width (e.g. 32 or 64)"
+msgid "%1-bit"
+msgstr "%1 bitų"
+
+#: package/contents/ui/main.qml:77
+#, kde-format
+msgid "Hardware"
+msgstr "Aparatinė įranga"
+
+#: package/contents/ui/main.qml:83
+#, kde-format
+msgid "Processor:"
+msgid_plural "Processors:"
+msgstr[0] "Procesorius:"
+msgstr[1] "Procesoriai:"
+msgstr[2] "Procesoriai:"
+msgstr[3] "Procesoriai:"
+
+#: package/contents/ui/main.qml:87
+#, kde-format
+msgid "Memory:"
+msgstr "Atmintis:"
+
+#: package/contents/ui/main.qml:91
+#, kde-format
+msgctxt "@label %1 is the formatted amount of system memory (e.g. 7,7 GiB)"
+msgid "%1 of RAM"
+msgstr "%1 OA (RAM)"
+
+#: package/contents/ui/main.qml:93
+#, kde-format
+msgctxt "Unknown amount of RAM"
+msgid "Unknown"
+msgstr "Nežinoma"
+
+#~ msgid "Information About This System"
+#~ msgstr "Informacija apie šią sistemą"

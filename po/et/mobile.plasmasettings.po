@@ -1,0 +1,118 @@
+# Copyright (C) YEAR This file is copyright:
+# This file is distributed under the same license as the plasma-settings package.
+#
+# Marek Laane <qiilaq69@gmail.com>, 2019.
+msgid ""
+msgstr ""
+"Project-Id-Version: plasma-settings\n"
+"Report-Msgid-Bugs-To: https://bugs.kde.org\n"
+"POT-Creation-Date: 2022-01-26 00:47+0000\n"
+"PO-Revision-Date: 2019-11-21 01:38+0200\n"
+"Last-Translator: Marek Laane <qiilaq69@gmail.com>\n"
+"Language-Team: Estonian <kde-et@lists.linux.ee>\n"
+"Language: et\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Generator: Lokalize 19.08.1\n"
+
+#: src/main.cpp:46 src/package/contents/ui/ModulesListPage.qml:17
+#: src/package/contents/ui/Sidebar.qml:41
+#, kde-format
+msgid "Settings"
+msgstr "Seadistused"
+
+#: src/main.cpp:48
+#, kde-format
+msgid "Touch-friendly settings application."
+msgstr "Puutesõbralik seadistamise rakendus."
+
+#: src/main.cpp:50
+#, kde-format
+msgid "Copyright 2011-2015, Sebastian Kügler"
+msgstr "Autoriõigus 2011-2015: Sebastian Kügler"
+
+#: src/main.cpp:51
+#, kde-format
+msgid "Sebastian Kügler"
+msgstr "Sebastian Kügler"
+
+#: src/main.cpp:51 src/main.cpp:52
+#, kde-format
+msgid "Maintainer"
+msgstr "Hooldaja"
+
+#: src/main.cpp:52
+#, kde-format
+msgid "Marco Martin"
+msgstr "Marco Martin"
+
+#: src/main.cpp:60
+#, kde-format
+msgid "List available settings modules"
+msgstr "Saadaolevate seadistusmoodulite loend"
+
+#: src/main.cpp:63
+#, kde-format
+msgid ""
+"Limit to modules suitable for <formfactor>, e.g. handset, tablet, "
+"mediacenter, desktop, test, all (default handset)"
+msgstr ""
+"Moodulite piiramine <kujutegur>iga, nt mobiiltelefon, tahvelarvuti, "
+"meediakeskus, töölaud, test, kõik (vaikimisi mobiiltelefon)"
+
+#: src/main.cpp:64
+#, kde-format
+msgid "formfactor"
+msgstr "kujutegur"
+
+#: src/main.cpp:65
+#, kde-format
+msgid "Settings module to open"
+msgstr "Avatav seadistusmoodul"
+
+#: src/main.cpp:65
+#, kde-format
+msgid "modulename"
+msgstr "moodulinimi"
+
+#: src/main.cpp:66
+#, kde-format
+msgid "Only show a single module, requires --module"
+msgstr "Ainult ühe mooduli näitamine, vajalik on võti --module"
+
+#: src/main.cpp:67
+#, kde-format
+msgid "Start window fullscreen"
+msgstr "Akna käivitamine täisekraanis"
+
+#: src/main.cpp:68
+#, kde-format
+msgid "Package to use for the UI (default org.kde.mobile.settings)"
+msgstr "Kasutajaliideses tarvitatav pakett (vaikimisi org.kde.mobile.settings)"
+
+#: src/main.cpp:68
+#, kde-format
+msgid "packagename"
+msgstr "paketinimi"
+
+#: src/package/contents/ui/DefaultPage.qml:29
+#, fuzzy, kde-format
+#| msgid "Settings"
+msgid "System Settings"
+msgstr "Seadistused"
+
+#: src/package/contents/ui/DefaultPage.qml:35
+#, kde-format
+msgid "Open a configuration page from the sidebar."
+msgstr ""
+
+#: src/package/contents/ui/ModulesListPage.qml:23
+#: src/package/contents/ui/Sidebar.qml:52
+#, kde-format
+msgid "Search"
+msgstr ""
+
+#~ msgid "Plasma Mobile Settings"
+#~ msgstr "Plasma Mobile seadistused"

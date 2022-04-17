@@ -1,0 +1,115 @@
+# Copyright (C) YEAR This file is copyright:
+# This file is distributed under the same license as the plasma-settings package.
+#
+# Stefan Asserhäll <stefan.asserhall@bredband.net>, 2020, 2021, 2022.
+msgid ""
+msgstr ""
+"Project-Id-Version: plasma-settings\n"
+"Report-Msgid-Bugs-To: https://bugs.kde.org\n"
+"POT-Creation-Date: 2022-02-09 00:49+0000\n"
+"PO-Revision-Date: 2022-02-10 18:06+0100\n"
+"Last-Translator: Stefan Asserhäll <stefan.asserhall@bredband.net>\n"
+"Language-Team: Swedish <kde-i18n-doc@kde.org>\n"
+"Language: sv\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Generator: Lokalize 20.08.1\n"
+
+#, kde-format
+msgctxt "NAME OF TRANSLATORS"
+msgid "Your names"
+msgstr "Stefan Asserhäll"
+
+#, kde-format
+msgctxt "EMAIL OF TRANSLATORS"
+msgid "Your emails"
+msgstr "stefan.asserhall@bredband.net"
+
+#: mobilepower.cpp:20
+#, kde-format
+msgid "30 sec"
+msgstr "30 s"
+
+#: mobilepower.cpp:21
+#, kde-format
+msgid "1 min"
+msgstr "1 min"
+
+#: mobilepower.cpp:22
+#, kde-format
+msgid "2 min"
+msgstr "2 min"
+
+#: mobilepower.cpp:23
+#, kde-format
+msgid "5 min"
+msgstr "5 min"
+
+#: mobilepower.cpp:24
+#, kde-format
+msgid "10 min"
+msgstr "10 min"
+
+#: mobilepower.cpp:25
+#, kde-format
+msgid "15 min"
+msgstr "15 min"
+
+#: mobilepower.cpp:26
+#, kde-format
+msgid "Never"
+msgstr "Aldrig"
+
+#: mobilepower.cpp:58
+#, kde-format
+msgid "Energy Settings"
+msgstr "Strömsparinställningar"
+
+#: mobilepower.cpp:59
+#, kde-format
+msgid "Tomaz Canabrava"
+msgstr "Tomaz Canabrava"
+
+#: package/contents/ui/main.qml:28
+#, kde-format
+msgctxt "Part of a sentence like 'Dim screen after 5 minutes'"
+msgid "Dim screen after:"
+msgstr "Dämpa skärmen efter:"
+
+#: package/contents/ui/main.qml:37
+#, kde-format
+msgctxt "Part of a sentence like 'Turn off screen after 5 minutes'"
+msgid "Turn off screen after:"
+msgstr "Stäng av skärmen efter:"
+
+#: package/contents/ui/main.qml:46
+#, kde-format
+msgctxt "Part of a sentence like 'Suspend device after 5 minutes'"
+msgid "Suspend device after:"
+msgstr "Gå till viloläge efter:"
+
+#~ msgctxt "Part of a sentence like 'Dim Display after 5 minutes'"
+#~ msgid "Dim Display"
+#~ msgstr "Minska skärmens ljusstyrka"
+
+#~ msgctxt "Part of a sentence like 'Suspend Session after 5 minutes'"
+#~ msgid "Suspend Session"
+#~ msgstr "Viloläge för session"
+
+#~ msgctxt "Part of a sentence like 'Lock screen and sleep after 5 minutes'"
+#~ msgid "Lock Screen and Sleep"
+#~ msgstr "Lås skärm och gå till viloläge"
+
+#~ msgid "Part of a sentence like 'Turn off the Screen after 5 minutes'"
+#~ msgstr "Del av en mening som 'Stäng av skärmen efter 5 minuter'"
+
+#~ msgid "Screen Brightness"
+#~ msgstr "Skärmljusstyrka"
+
+#~ msgid "0%"
+#~ msgstr "0 %"
+
+#~ msgid "100%"
+#~ msgstr "100 %"

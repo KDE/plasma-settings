@@ -1,0 +1,124 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: kdeorg\n"
+"Report-Msgid-Bugs-To: https://bugs.kde.org\n"
+"POT-Creation-Date: 2022-02-18 00:47+0000\n"
+"PO-Revision-Date: 2022-04-14 15:34\n"
+"Last-Translator: \n"
+"Language-Team: Chinese Simplified\n"
+"Language: zh_CN\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+"X-Crowdin-Project: kdeorg\n"
+"X-Crowdin-Project-ID: 269464\n"
+"X-Crowdin-Language: zh-CN\n"
+"X-Crowdin-File: /kf5-trunk/messages/plasma-settings/"
+"kcm_mobile_virtualkeyboard.pot\n"
+"X-Crowdin-File-ID: 24948\n"
+
+#, kde-format
+msgctxt "NAME OF TRANSLATORS"
+msgid "Your names"
+msgstr "KDE 中国,Tyson Tan"
+
+#, kde-format
+msgctxt "EMAIL OF TRANSLATORS"
+msgid "Your emails"
+msgstr "kde-china@kde.org,tysontan@tysontan.com"
+
+#: package/contents/ui/languages.qml:20
+#, kde-format
+msgid "Languages"
+msgstr "语言"
+
+#: package/contents/ui/languages.qml:46
+#, kde-format
+msgid "Apply"
+msgstr "应用"
+
+#: package/contents/ui/main.qml:19
+#, kde-format
+msgid "On-Screen Keyboard"
+msgstr "屏幕键盘"
+
+#: package/contents/ui/main.qml:29
+#, kde-format
+msgid "Test keyboard:"
+msgstr "测试键盘："
+
+#: package/contents/ui/main.qml:30
+#, kde-format
+msgid "Type anything here…"
+msgstr "请在此随意输入一些内容…"
+
+#: package/contents/ui/main.qml:34
+#, kde-format
+msgid "Theme:"
+msgstr "主题："
+
+#: package/contents/ui/main.qml:43
+#, kde-format
+msgid "Feedback:"
+msgstr "输入反馈："
+
+#: package/contents/ui/main.qml:47
+#, kde-format
+msgid "Emit sound on key press"
+msgstr "按键时发声"
+
+#: package/contents/ui/main.qml:56
+#, kde-format
+msgid "Vibrate on key press"
+msgstr "按键时振动"
+
+#: package/contents/ui/main.qml:64
+#, kde-format
+msgid "Text correction:"
+msgstr "文本订正："
+
+#: package/contents/ui/main.qml:68
+#, kde-format
+msgid "Check spelling of entered text"
+msgstr "检查输入文本的拼写"
+
+#: package/contents/ui/main.qml:75
+#, kde-format
+msgid "Capitalize the first letter of each sentence"
+msgstr "句首字母大写"
+
+#: package/contents/ui/main.qml:82
+#, kde-format
+msgid "Complete current word with first suggestion when hitting space"
+msgstr "点击空格键使用第一个建议完成当前单词"
+
+#: package/contents/ui/main.qml:89
+#, kde-format
+msgid "Suggest potential words in word ribbon"
+msgstr "在候选中建议可能的词语"
+
+#: package/contents/ui/main.qml:98
+#, kde-format
+msgid "Insert a full-stop when space is pressed twice"
+msgstr "两次点击空格键插入句号"
+
+#: package/contents/ui/main.qml:106
+#, kde-format
+msgid "Languages:"
+msgstr "语言："
+
+#: package/contents/ui/main.qml:107
+#, kde-format
+msgid "Configure Languages"
+msgstr "配置语言"
+
+#: virtualkeyboard.cpp:37
+#, kde-format
+msgid "Virtual Keyboard"
+msgstr "虚拟键盘"
+
+#: virtualkeyboard.cpp:38
+#, kde-format
+msgid "Bhushan Shah"
+msgstr "Bhushan Shah"

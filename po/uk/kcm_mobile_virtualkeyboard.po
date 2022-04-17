@@ -1,0 +1,131 @@
+# Translation of kcm_mobile_virtualkeyboard.po to Ukrainian
+# Copyright (C) 2020-2021 This_file_is_part_of_KDE
+# This file is distributed under the license LGPL version 2.1 or
+# version 3 or later versions approved by the membership of KDE e.V.
+#
+# Yuri Chornoivan <yurchor@ukr.net>, 2020, 2021, 2022.
+msgid ""
+msgstr ""
+"Project-Id-Version: kcm_mobile_virtualkeyboard\n"
+"Report-Msgid-Bugs-To: https://bugs.kde.org\n"
+"POT-Creation-Date: 2022-02-18 00:47+0000\n"
+"PO-Revision-Date: 2022-01-20 08:29+0200\n"
+"Last-Translator: Yuri Chornoivan <yurchor@ukr.net>\n"
+"Language-Team: Ukrainian <kde-i18n-uk@kde.org>\n"
+"Language: uk\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=4; plural=n==1 ? 3 : n%10==1 && n%100!=11 ? 0 : n"
+"%10>=2 && n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2;\n"
+"X-Generator: Lokalize 20.12.0\n"
+
+#, kde-format
+msgctxt "NAME OF TRANSLATORS"
+msgid "Your names"
+msgstr "Юрій Чорноіван"
+
+#, kde-format
+msgctxt "EMAIL OF TRANSLATORS"
+msgid "Your emails"
+msgstr "yurchor@ukr.net"
+
+#: package/contents/ui/languages.qml:20
+#, kde-format
+msgid "Languages"
+msgstr "Мови"
+
+#: package/contents/ui/languages.qml:46
+#, kde-format
+msgid "Apply"
+msgstr "Застосувати"
+
+#: package/contents/ui/main.qml:19
+#, kde-format
+msgid "On-Screen Keyboard"
+msgstr "Екранна клавіатура"
+
+#: package/contents/ui/main.qml:29
+#, kde-format
+msgid "Test keyboard:"
+msgstr "Перевірка клавіатури:"
+
+#: package/contents/ui/main.qml:30
+#, kde-format
+msgid "Type anything here…"
+msgstr "Введіть тут щось…"
+
+#: package/contents/ui/main.qml:34
+#, kde-format
+msgid "Theme:"
+msgstr "Тема:"
+
+#: package/contents/ui/main.qml:43
+#, kde-format
+msgid "Feedback:"
+msgstr "Відгук:"
+
+#: package/contents/ui/main.qml:47
+#, kde-format
+msgid "Emit sound on key press"
+msgstr "Супроводжувати натискання звуками"
+
+#: package/contents/ui/main.qml:56
+#, kde-format
+msgid "Vibrate on key press"
+msgstr "Вібрувати при натисканні клавіші"
+
+#: package/contents/ui/main.qml:64
+#, kde-format
+msgid "Text correction:"
+msgstr "Виправлення тексту:"
+
+#: package/contents/ui/main.qml:68
+#, kde-format
+msgid "Check spelling of entered text"
+msgstr "Перевіряти правопис у введеному тексті"
+
+#: package/contents/ui/main.qml:75
+#, kde-format
+msgid "Capitalize the first letter of each sentence"
+msgstr "Робити першу літеру речення великою"
+
+#: package/contents/ui/main.qml:82
+#, kde-format
+msgid "Complete current word with first suggestion when hitting space"
+msgstr ""
+"Доповнювати поточне слово до першої пропозиції у відповідь на натискання "
+"пробілу"
+
+#: package/contents/ui/main.qml:89
+#, kde-format
+msgid "Suggest potential words in word ribbon"
+msgstr "Пропонувати потенційні варіанти на стрічці слів"
+
+#: package/contents/ui/main.qml:98
+#, kde-format
+msgid "Insert a full-stop when space is pressed twice"
+msgstr "Вставляти крапку, якщо пробіл натиснуто двічі"
+
+#: package/contents/ui/main.qml:106
+#, kde-format
+msgid "Languages:"
+msgstr "Мови:"
+
+#: package/contents/ui/main.qml:107
+#, kde-format
+msgid "Configure Languages"
+msgstr "Налаштувати мови"
+
+#: virtualkeyboard.cpp:37
+#, kde-format
+msgid "Virtual Keyboard"
+msgstr "Віртуальна клавіатура"
+
+#: virtualkeyboard.cpp:38
+#, kde-format
+msgid "Bhushan Shah"
+msgstr "Bhushan Shah"
+
+#~ msgid "Other:"
+#~ msgstr "Інше:"

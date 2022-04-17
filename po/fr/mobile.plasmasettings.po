@@ -1,0 +1,116 @@
+# Xavier Besnard <xavier.besnard@neuf.fr>, 2020, 2021.
+msgid ""
+msgstr ""
+"Project-Id-Version: plasma-settings\n"
+"Report-Msgid-Bugs-To: https://bugs.kde.org\n"
+"POT-Creation-Date: 2022-01-26 00:47+0000\n"
+"PO-Revision-Date: 2021-12-24 09:33+0100\n"
+"Last-Translator: Xavier Besnard <xavier.besnard@neuf.fr>\n"
+"Language-Team: French <kde-francophone@kde.org>\n"
+"Language: fr\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n > 1);\n"
+"X-Generator: Lokalize 21.12.0\n"
+
+#: src/main.cpp:46 src/package/contents/ui/ModulesListPage.qml:17
+#: src/package/contents/ui/Sidebar.qml:41
+#, kde-format
+msgid "Settings"
+msgstr "Configuration"
+
+#: src/main.cpp:48
+#, kde-format
+msgid "Touch-friendly settings application."
+msgstr "Application de paramétrage via l'interface tactile."
+
+#: src/main.cpp:50
+#, kde-format
+msgid "Copyright 2011-2015, Sebastian Kügler"
+msgstr "Copyright 2011-2015, Sebastian Kügler"
+
+#: src/main.cpp:51
+#, kde-format
+msgid "Sebastian Kügler"
+msgstr "Sebastian Kügler"
+
+#: src/main.cpp:51 src/main.cpp:52
+#, kde-format
+msgid "Maintainer"
+msgstr "Mainteneur"
+
+#: src/main.cpp:52
+#, kde-format
+msgid "Marco Martin"
+msgstr "Marco Martin"
+
+#: src/main.cpp:60
+#, kde-format
+msgid "List available settings modules"
+msgstr "Répertorier les modules de paramètres disponibles"
+
+#: src/main.cpp:63
+#, kde-format
+msgid ""
+"Limit to modules suitable for <formfactor>, e.g. handset, tablet, "
+"mediacenter, desktop, test, all (default handset)"
+msgstr ""
+"Restreindre aux modules appropriés pour <formfactor>, par exemple, combiné, "
+"tablette, centre multimédia, bureau, test, tout (combiné par défaut)"
+
+#: src/main.cpp:64
+#, kde-format
+msgid "formfactor"
+msgstr "Gabarit"
+
+#: src/main.cpp:65
+#, kde-format
+msgid "Settings module to open"
+msgstr "Paramètres du module à ouvrir"
+
+#: src/main.cpp:65
+#, kde-format
+msgid "modulename"
+msgstr "Nom de module"
+
+#: src/main.cpp:66
+#, kde-format
+msgid "Only show a single module, requires --module"
+msgstr "N'afficher qu'un seul module. Nécessite l'option « --module »"
+
+#: src/main.cpp:67
+#, kde-format
+msgid "Start window fullscreen"
+msgstr "Démarrer la fenêtre en mode « Plein écran »"
+
+#: src/main.cpp:68
+#, kde-format
+msgid "Package to use for the UI (default org.kde.mobile.settings)"
+msgstr ""
+"Paquet à utiliser pour l'interface utilisateur (par défaut : org.kde.mobile."
+"settings)"
+
+#: src/main.cpp:68
+#, kde-format
+msgid "packagename"
+msgstr "Nom du paquet"
+
+#: src/package/contents/ui/DefaultPage.qml:29
+#, kde-format
+msgid "System Settings"
+msgstr "Configuration du système"
+
+#: src/package/contents/ui/DefaultPage.qml:35
+#, kde-format
+msgid "Open a configuration page from the sidebar."
+msgstr "Ouvrir la page de configuration à partir du panneau latéral."
+
+#: src/package/contents/ui/ModulesListPage.qml:23
+#: src/package/contents/ui/Sidebar.qml:52
+#, kde-format
+msgid "Search"
+msgstr "Rechercher"
+
+#~ msgid "Plasma Mobile Settings"
+#~ msgstr "Configuration de Plasma mobile"

@@ -1,0 +1,129 @@
+# Translation of kcm_mobile_virtualkeyboard.po to Catalan
+# Copyright (C) 2020-2022 This_file_is_part_of_KDE
+# This file is distributed under the license LGPL version 2.1 or
+# version 3 or later versions approved by the membership of KDE e.V.
+#
+# Josep M. Ferrer <txemaq@gmail.com>, 2020, 2021, 2022.
+msgid ""
+msgstr ""
+"Project-Id-Version: plasma-settings\n"
+"Report-Msgid-Bugs-To: https://bugs.kde.org\n"
+"POT-Creation-Date: 2022-02-18 00:47+0000\n"
+"PO-Revision-Date: 2022-01-20 08:43+0100\n"
+"Last-Translator: Josep M. Ferrer <txemaq@gmail.com>\n"
+"Language-Team: Catalan <kde-i18n-ca@kde.org>\n"
+"Language: ca\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Accelerator-Marker: &\n"
+"X-Generator: Lokalize 20.12.0\n"
+
+#, kde-format
+msgctxt "NAME OF TRANSLATORS"
+msgid "Your names"
+msgstr "Josep M. Ferrer"
+
+#, kde-format
+msgctxt "EMAIL OF TRANSLATORS"
+msgid "Your emails"
+msgstr "txemaq@gmail.com"
+
+#: package/contents/ui/languages.qml:20
+#, kde-format
+msgid "Languages"
+msgstr "Idiomes"
+
+#: package/contents/ui/languages.qml:46
+#, kde-format
+msgid "Apply"
+msgstr "Aplica"
+
+#: package/contents/ui/main.qml:19
+#, kde-format
+msgid "On-Screen Keyboard"
+msgstr "Teclat en pantalla"
+
+#: package/contents/ui/main.qml:29
+#, kde-format
+msgid "Test keyboard:"
+msgstr "Proveu el teclat:"
+
+#: package/contents/ui/main.qml:30
+#, kde-format
+msgid "Type anything here…"
+msgstr "Teclegeu aquí qualsevol cosa…"
+
+#: package/contents/ui/main.qml:34
+#, kde-format
+msgid "Theme:"
+msgstr "Tema:"
+
+#: package/contents/ui/main.qml:43
+#, kde-format
+msgid "Feedback:"
+msgstr "Retroalimentació:"
+
+#: package/contents/ui/main.qml:47
+#, kde-format
+msgid "Emit sound on key press"
+msgstr "Emet un so en prémer les tecles"
+
+#: package/contents/ui/main.qml:56
+#, kde-format
+msgid "Vibrate on key press"
+msgstr "Vibra en prémer les tecles"
+
+#: package/contents/ui/main.qml:64
+#, kde-format
+msgid "Text correction:"
+msgstr "Correcció de text:"
+
+#: package/contents/ui/main.qml:68
+#, kde-format
+msgid "Check spelling of entered text"
+msgstr "Verificació ortogràfica del text introduït"
+
+#: package/contents/ui/main.qml:75
+#, kde-format
+msgid "Capitalize the first letter of each sentence"
+msgstr "Posa en majúscula la primera lletra de cada frase"
+
+#: package/contents/ui/main.qml:82
+#, kde-format
+msgid "Complete current word with first suggestion when hitting space"
+msgstr "Completa la paraula actual amb el primer suggeriment en prémer espai"
+
+#: package/contents/ui/main.qml:89
+#, kde-format
+msgid "Suggest potential words in word ribbon"
+msgstr "Suggereix paraules potencials a la franja de paraules"
+
+#: package/contents/ui/main.qml:98
+#, kde-format
+msgid "Insert a full-stop when space is pressed twice"
+msgstr "Insereix un punt quan es premi dues vegades l'espai"
+
+#: package/contents/ui/main.qml:106
+#, kde-format
+msgid "Languages:"
+msgstr "Idiomes:"
+
+#: package/contents/ui/main.qml:107
+#, kde-format
+msgid "Configure Languages"
+msgstr "Configura els idiomes"
+
+#: virtualkeyboard.cpp:37
+#, kde-format
+msgid "Virtual Keyboard"
+msgstr "Teclat virtual"
+
+#: virtualkeyboard.cpp:38
+#, kde-format
+msgid "Bhushan Shah"
+msgstr "Bhushan Shah"
+
+#~ msgid "Other:"
+#~ msgstr "Altres:"

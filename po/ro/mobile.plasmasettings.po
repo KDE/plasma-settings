@@ -1,0 +1,117 @@
+# Copyright (C) YEAR This file is copyright:
+# This file is distributed under the same license as the plasma-settings package.
+# Sergiu Bivol <sergiu@cip.md>, 2020.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: plasma-settings\n"
+"Report-Msgid-Bugs-To: https://bugs.kde.org\n"
+"POT-Creation-Date: 2022-01-26 00:47+0000\n"
+"PO-Revision-Date: 2020-09-19 10:01+0100\n"
+"Last-Translator: Sergiu Bivol <sergiu@cip.md>\n"
+"Language-Team: Romanian\n"
+"Language: ro\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=3; plural=n==1 ? 0 : (n==0 || (n%100 > 0 && n%100 < "
+"20)) ? 1 : 2;\n"
+"X-Generator: Lokalize 19.12.3\n"
+
+#: src/main.cpp:46 src/package/contents/ui/ModulesListPage.qml:17
+#: src/package/contents/ui/Sidebar.qml:41
+#, kde-format
+msgid "Settings"
+msgstr "Configurări"
+
+#: src/main.cpp:48
+#, kde-format
+msgid "Touch-friendly settings application."
+msgstr "Aplicație de configurare prietenoasă la atingere"
+
+#: src/main.cpp:50
+#, kde-format
+msgid "Copyright 2011-2015, Sebastian Kügler"
+msgstr "Drept de autor 2011-2015, Sebastian Kügler"
+
+#: src/main.cpp:51
+#, kde-format
+msgid "Sebastian Kügler"
+msgstr "Sebastian Kügler"
+
+#: src/main.cpp:51 src/main.cpp:52
+#, kde-format
+msgid "Maintainer"
+msgstr "Responsabil"
+
+#: src/main.cpp:52
+#, kde-format
+msgid "Marco Martin"
+msgstr "Marco Martin"
+
+#: src/main.cpp:60
+#, kde-format
+msgid "List available settings modules"
+msgstr "Enumeră modulele de configurare disponibile"
+
+#: src/main.cpp:63
+#, kde-format
+msgid ""
+"Limit to modules suitable for <formfactor>, e.g. handset, tablet, "
+"mediacenter, desktop, test, all (default handset)"
+msgstr ""
+"Limitează la modulele potrivite pentru <factor_de_formă>, cum ar fi telefon, "
+"tabletă, centru multimedia, birou, test, toate (implicit e telefon)"
+
+#: src/main.cpp:64
+#, kde-format
+msgid "formfactor"
+msgstr "factor_de_formă"
+
+#: src/main.cpp:65
+#, kde-format
+msgid "Settings module to open"
+msgstr "Modulul de configurare de deschis"
+
+#: src/main.cpp:65
+#, kde-format
+msgid "modulename"
+msgstr "denumire_modul"
+
+#: src/main.cpp:66
+#, kde-format
+msgid "Only show a single module, requires --module"
+msgstr "Arată un singur modul, necesită --module"
+
+#: src/main.cpp:67
+#, kde-format
+msgid "Start window fullscreen"
+msgstr "Pornește fereastra pe tot ecranul"
+
+#: src/main.cpp:68
+#, kde-format
+msgid "Package to use for the UI (default org.kde.mobile.settings)"
+msgstr ""
+"Pachetul de folosit pentru interfață (implicit e org.kde.mobile.settings)"
+
+#: src/main.cpp:68
+#, kde-format
+msgid "packagename"
+msgstr "denumire_pachet"
+
+#: src/package/contents/ui/DefaultPage.qml:29
+#, fuzzy, kde-format
+#| msgid "Settings"
+msgid "System Settings"
+msgstr "Configurări"
+
+#: src/package/contents/ui/DefaultPage.qml:35
+#, kde-format
+msgid "Open a configuration page from the sidebar."
+msgstr ""
+
+#: src/package/contents/ui/ModulesListPage.qml:23
+#: src/package/contents/ui/Sidebar.qml:52
+#, kde-format
+msgid "Search"
+msgstr ""

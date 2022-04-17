@@ -1,0 +1,117 @@
+# Translation of mobile.plasmasettings to Norwegian Nynorsk
+#
+# Karl Ove Hufthammer <karl@huftis.org>, 2020.
+msgid ""
+msgstr ""
+"Project-Id-Version: plasma-settings\n"
+"Report-Msgid-Bugs-To: https://bugs.kde.org\n"
+"POT-Creation-Date: 2022-01-26 00:47+0000\n"
+"PO-Revision-Date: 2020-10-22 21:18+0200\n"
+"Last-Translator: Karl Ove Hufthammer <karl@huftis.org>\n"
+"Language-Team: Norwegian Nynorsk <l10n-no@lister.huftis.org>\n"
+"Language: nn\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Generator: Lokalize 20.08.2\n"
+"X-Environment: kde\n"
+"X-Accelerator-Marker: &\n"
+"X-Text-Markup: kde4\n"
+
+#: src/main.cpp:46 src/package/contents/ui/ModulesListPage.qml:17
+#: src/package/contents/ui/Sidebar.qml:41
+#, kde-format
+msgid "Settings"
+msgstr "Innstillingar"
+
+#: src/main.cpp:48
+#, kde-format
+msgid "Touch-friendly settings application."
+msgstr "Trykksjermvennleg innstillingsprogram."
+
+#: src/main.cpp:50
+#, kde-format
+msgid "Copyright 2011-2015, Sebastian Kügler"
+msgstr "© 2011–2015 Sebastian Kügler"
+
+#: src/main.cpp:51
+#, kde-format
+msgid "Sebastian Kügler"
+msgstr "Sebastian Kügler"
+
+#: src/main.cpp:51 src/main.cpp:52
+#, kde-format
+msgid "Maintainer"
+msgstr "Vedlikehaldar"
+
+#: src/main.cpp:52
+#, kde-format
+msgid "Marco Martin"
+msgstr "Marco Martin"
+
+#: src/main.cpp:60
+#, kde-format
+msgid "List available settings modules"
+msgstr "Vis oversikt over tilgjengelege innstillingsmodular."
+
+#: src/main.cpp:63
+#, kde-format
+msgid ""
+"Limit to modules suitable for <formfactor>, e.g. handset, tablet, "
+"mediacenter, desktop, test, all (default handset)"
+msgstr ""
+"Avgrens modular til dei som høver til <formfaktor>, for eksempel «handset», "
+"«tablet», «mediacenter», «desktop», «test» eller «all» (standard: handset)."
+
+#: src/main.cpp:64
+#, kde-format
+msgid "formfactor"
+msgstr "formfaktor"
+
+#: src/main.cpp:65
+#, kde-format
+msgid "Settings module to open"
+msgstr "Innstillingsmodulen som skal opnast."
+
+#: src/main.cpp:65
+#, kde-format
+msgid "modulename"
+msgstr "modulnamn"
+
+#: src/main.cpp:66
+#, kde-format
+msgid "Only show a single module, requires --module"
+msgstr "Vis berre éin modul (krev «--module»)."
+
+#: src/main.cpp:67
+#, kde-format
+msgid "Start window fullscreen"
+msgstr "Start vindauget i fullskjermsmodus."
+
+#: src/main.cpp:68
+#, kde-format
+msgid "Package to use for the UI (default org.kde.mobile.settings)"
+msgstr ""
+"Pakke som skal brukast for brukarflata (standard: org.kde.mobile_settings)."
+
+#: src/main.cpp:68
+#, kde-format
+msgid "packagename"
+msgstr "pakkenamn"
+
+#: src/package/contents/ui/DefaultPage.qml:29
+#, kde-format
+msgid "System Settings"
+msgstr ""
+
+#: src/package/contents/ui/DefaultPage.qml:35
+#, kde-format
+msgid "Open a configuration page from the sidebar."
+msgstr ""
+
+#: src/package/contents/ui/ModulesListPage.qml:23
+#: src/package/contents/ui/Sidebar.qml:52
+#, kde-format
+msgid "Search"
+msgstr ""
