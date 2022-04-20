@@ -26,4 +26,4 @@ target_link_libraries(kcm_mobile_onscreenkeyboard
 
 install(TARGETS kcm_mobile_onscreenkeyboard DESTINATION ${KDE_INSTALL_PLUGINDIR}/kcms)
 
-kpackage_install_package(package kcm_mobile_onscreenkeyboard kcms)
+kpackage_install_package(package kcm_mobile_virtualkeyboard kcms)
