@@ -594,10 +594,9 @@ msgid "Manufacturer"
 msgstr "Fabricante:"
 
 #: package/contents/ui/Modem.qml:172
-#, fuzzy, kde-format
-#| msgid "Model:"
+#, kde-format
 msgid "Model"
-msgstr "Modelo:"
+msgstr "Modelo"
 
 #: package/contents/ui/Modem.qml:193
 #, kde-format
@@ -607,18 +606,17 @@ msgstr ""
 #: package/contents/ui/Modem.qml:218
 #, kde-format
 msgid "Revision"
-msgstr ""
+msgstr "Revisão"
 
 #: package/contents/ui/Modem.qml:231
 #, kde-format
 msgid "Signal Quality"
-msgstr ""
+msgstr "Qualidade do Sinal"
 
 #: package/contents/ui/Modem.qml:244
-#, fuzzy, kde-format
-#| msgid "State:"
+#, kde-format
 msgid "State"
-msgstr "Estado:"
+msgstr "Estado"
 
 #: package/contents/ui/Modem.qml:257
 #, kde-format
@@ -657,16 +655,14 @@ msgid "Active NetworkManager Connection"
 msgstr ""
 
 #: package/contents/ui/Modem.qml:348
-#, fuzzy, kde-format
-#| msgid "Device:"
+#, kde-format
 msgid "Device"
-msgstr "Dispositivo:"
+msgstr "Dispositivo"
 
 #: package/contents/ui/Modem.qml:361
-#, fuzzy, kde-format
-#| msgid "Device:"
+#, kde-format
 msgid "Device ID"
-msgstr "Dispositivo:"
+msgstr "ID do dispositivo"
 
 #: package/contents/ui/Modem.qml:382
 #, kde-format
@@ -676,7 +672,7 @@ msgstr ""
 #: package/contents/ui/Modem.qml:407
 #, kde-format
 msgid "Plugin"
-msgstr ""
+msgstr "'Plugin'"
 
 #: package/contents/ui/Modem.qml:420
 #, kde-format
@@ -746,7 +742,7 @@ msgstr ""
 #: package/contents/ui/Sim.qml:95
 #, kde-format
 msgid "Networks"
-msgstr ""
+msgstr "Redes"
 
 #: package/contents/ui/Sim.qml:96
 #, kde-format
@@ -781,7 +777,7 @@ msgstr ""
 #: package/contents/ui/Sim.qml:173
 #, kde-format
 msgid "EID"
-msgstr ""
+msgstr "EID"
 
 #: package/contents/ui/Sim.qml:186
 #, kde-format
