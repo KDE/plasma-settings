@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: kruler\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2022-04-08 00:47+0000\n"
-"PO-Revision-Date: 2021-12-07 18:35+0000\n"
+"PO-Revision-Date: 2022-04-21 15:48+0100\n"
 "Last-Translator: José Nuno Pires <zepires@gmail.com>\n"
 "Language-Team: pt <kde-i18n-pt@kde.org>\n"
 "Language: pt\n"
@@ -14,7 +14,7 @@ msgstr ""
 "X-Spell-Extra: KRuler QColor RGB\n"
 "X-POFile-SpellExtra: QColor KRuler  Krech Till Gunnstein Lye Mathias px\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-POFile-SpellExtra: Soeken pt Devin Lin Kacej PIN\n"
+"X-POFile-SpellExtra: Soeken pt Devin Lin Kacej PIN EID\n"
 
 #, kde-format
 msgctxt "NAME OF TRANSLATORS"
@@ -588,10 +588,9 @@ msgid "IMEI"
 msgstr ""
 
 #: package/contents/ui/Modem.qml:159
-#, fuzzy, kde-format
-#| msgid "Manufacturer:"
+#, kde-format
 msgid "Manufacturer"
-msgstr "Fabricante:"
+msgstr "Fabricante"
 
 #: package/contents/ui/Modem.qml:172
 #, kde-format
@@ -644,10 +643,9 @@ msgid "Interface Name"
 msgstr ""
 
 #: package/contents/ui/Modem.qml:322
-#, fuzzy, kde-format
-#| msgid "Metered:"
+#, kde-format
 msgid "Metered"
-msgstr "Medida:"
+msgstr "Limitada"
 
 #: package/contents/ui/Modem.qml:335
 #, kde-format
@@ -1020,6 +1018,3 @@ msgstr ""
 #, kde-format
 msgid "Error sending the PUK: %1"
 msgstr ""
-
-#~ msgid "Modem:"
-#~ msgstr "Modem:"
