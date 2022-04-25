@@ -832,7 +832,7 @@ msgid ""
 "You can lock your SIM to require a set PIN code for phone calls and mobile "
 "data."
 msgstr ""
-"Podeu blocar la SIM per a requerir un codi PIN per a les trucades "
+"Podeu blocar la SIM per a requerir un codi PIN per a les tocades "
 "telefòniques i les dades mòbils."
 
 #: package/contents/ui/SimLock.qml:79
