@@ -1,13 +1,13 @@
 # Copyright (C) YEAR This file is copyright:
 # This file is distributed under the same license as the plasma-settings package.
 #
-# Łukasz Wojniłowicz <lukasz.wojnilowicz@gmail.com>, 2021.
+# Łukasz Wojniłowicz <lukasz.wojnilowicz@gmail.com>, 2021, 2022.
 msgid ""
 msgstr ""
 "Project-Id-Version: plasma-settings\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2022-04-08 00:47+0000\n"
-"PO-Revision-Date: 2021-09-25 08:07+0200\n"
+"PO-Revision-Date: 2022-04-25 20:26+0200\n"
 "Last-Translator: Łukasz Wojniłowicz <lukasz.wojnilowicz@gmail.com>\n"
 "Language-Team: Polish <kde-i18n-doc@kde.org>\n"
 "Language: pl\n"
@@ -16,7 +16,7 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=3; plural=(n==1 ? 0 : n%10>=2 && n%10<=4 && (n%100<10 "
 "|| n%100>=20) ? 1 : 2);\n"
-"X-Generator: Lokalize 20.12.1\n"
+"X-Generator: Lokalize 22.03.70\n"
 
 #, kde-format
 msgctxt "NAME OF TRANSLATORS"
@@ -502,27 +502,24 @@ msgid "Modem not available"
 msgstr "Modem jest niedostępny"
 
 #: package/contents/ui/main.qml:81
-#, fuzzy, kde-format
-#| msgid "Mobile data:"
+#, kde-format
 msgid "Mobile data"
-msgstr "Dane komórkowe:"
+msgstr "Dane komórkowe"
 
 #: package/contents/ui/main.qml:82
 #, kde-format
 msgid "Whether mobile data is enabled."
-msgstr ""
+msgstr "Określa czy dane komórkowe są włączone."
 
 #: package/contents/ui/main.qml:103
-#, fuzzy, kde-format
-#| msgid "Data Usage:"
+#, kde-format
 msgid "Data Usage"
-msgstr "Wykorzystanie danych:"
+msgstr "Wykorzystanie danych"
 
 #: package/contents/ui/main.qml:104
-#, fuzzy, kde-format
-#| msgid "View Data Usage"
+#, kde-format
 msgid "View data usage."
-msgstr "Zobacz wykorzystanie danych"
+msgstr "Zobacz wykorzystanie danych."
 
 #: package/contents/ui/main.qml:120 package/contents/ui/Sim.qml:21
 #, kde-format
@@ -540,10 +537,9 @@ msgid "SIM %1"
 msgstr "Karta SIM %1"
 
 #: package/contents/ui/main.qml:141
-#, fuzzy, kde-format
-#| msgid "View Modem Details"
+#, kde-format
 msgid "View SIM %1 details."
-msgstr "Pokaż szczegóły modemu"
+msgstr "Pokaż szczegóły karty SIM %1."
 
 #: package/contents/ui/Modem.qml:20
 #, kde-format
@@ -551,16 +547,14 @@ msgid "Modem %1"
 msgstr "Modem %1"
 
 #: package/contents/ui/Modem.qml:45
-#, fuzzy, kde-format
-#| msgid "Modem Control:"
+#, kde-format
 msgid "Modem Control"
-msgstr "Sterowanie modemem:"
+msgstr "Sterowanie modemem"
 
 #: package/contents/ui/Modem.qml:54
-#, fuzzy, kde-format
-#| msgid "Power State:"
+#, kde-format
 msgid "Modem State"
-msgstr "Stan zasilania:"
+msgstr "Stan modemu"
 
 #: package/contents/ui/Modem.qml:57
 #, kde-format
@@ -573,10 +567,9 @@ msgid "Enable Modem"
 msgstr "Włącz modem"
 
 #: package/contents/ui/Modem.qml:76
-#, fuzzy, kde-format
-#| msgid "Force Modem Restart"
+#, kde-format
 msgid "Modem Restart"
-msgstr "Wymuś ponowne uruchomienie modemu"
+msgstr "Uruchom modem ponownie"
 
 #: package/contents/ui/Modem.qml:79
 #, kde-format
@@ -589,28 +582,24 @@ msgid "Modem Details"
 msgstr "Szczegóły modemu"
 
 #: package/contents/ui/Modem.qml:108
-#, fuzzy, kde-format
-#| msgid "Access Technologies:"
+#, kde-format
 msgid "Access Technologies"
-msgstr "Technologie dostępu:"
+msgstr "Technologie dostępu"
 
 #: package/contents/ui/Modem.qml:133
-#, fuzzy, kde-format
-#| msgid "IMEI:"
+#, kde-format
 msgid "IMEI"
-msgstr "IMEI:"
+msgstr "IMEI"
 
 #: package/contents/ui/Modem.qml:159
-#, fuzzy, kde-format
-#| msgid "Manufacturer:"
+#, kde-format
 msgid "Manufacturer"
-msgstr "Wytwórca:"
+msgstr "Wytwórca"
 
 #: package/contents/ui/Modem.qml:172
-#, fuzzy, kde-format
-#| msgid "Model:"
+#, kde-format
 msgid "Model"
-msgstr "Model:"
+msgstr "Model"
 
 #: package/contents/ui/Modem.qml:193
 #, kde-format
@@ -618,76 +607,64 @@ msgid "Owned Numbers:"
 msgstr "Posiadane numery:"
 
 #: package/contents/ui/Modem.qml:218
-#, fuzzy, kde-format
-#| msgid "Revision:"
+#, kde-format
 msgid "Revision"
-msgstr "Wydanie:"
+msgstr "Wydanie"
 
 #: package/contents/ui/Modem.qml:231
-#, fuzzy, kde-format
-#| msgid "Signal Quality:"
+#, kde-format
 msgid "Signal Quality"
-msgstr "Jakość sygnału:"
+msgstr "Jakość sygnału"
 
 #: package/contents/ui/Modem.qml:244
-#, fuzzy, kde-format
-#| msgid "State:"
+#, kde-format
 msgid "State"
-msgstr "Stan:"
+msgstr "Stan"
 
 #: package/contents/ui/Modem.qml:257
-#, fuzzy, kde-format
-#| msgid "Failure Reason:"
+#, kde-format
 msgid "Failure Reason"
-msgstr "Powód niepowodzenia:"
+msgstr "Powód niepowodzenia"
 
 #: package/contents/ui/Modem.qml:270
-#, fuzzy, kde-format
-#| msgid "Registration State:"
+#, kde-format
 msgid "Registration State"
-msgstr "Stan rejestracji:"
+msgstr "Stan rejestracji"
 
 #: package/contents/ui/Modem.qml:283
-#, fuzzy, kde-format
-#| msgid "Roaming:"
+#, kde-format
 msgid "Roaming"
-msgstr "Roaming:"
+msgstr "Roaming"
 
 #: package/contents/ui/Modem.qml:296
-#, fuzzy, kde-format
-#| msgid "Firmware Version:"
+#, kde-format
 msgid "Firmware Version"
-msgstr "Wersja oprogramowania układowego:"
+msgstr "Wersja oprogramowania układowego"
 
 #: package/contents/ui/Modem.qml:309
-#, fuzzy, kde-format
-#| msgid "Interface Name:"
+#, kde-format
 msgid "Interface Name"
-msgstr "Nazwa interfejsu:"
+msgstr "Nazwa interfejsu"
 
 #: package/contents/ui/Modem.qml:322
-#, fuzzy, kde-format
-#| msgid "Metered:"
+#, kde-format
 msgid "Metered"
-msgstr "Taryfowa:"
+msgstr "Taryfowa"
 
 #: package/contents/ui/Modem.qml:335
-#, fuzzy, kde-format
-#| msgid "Active NetworkManager Connection:"
+#, kde-format
 msgid "Active NetworkManager Connection"
-msgstr "Włącz połączenie z zarządzania siecią:"
+msgstr "Bieżące połączenie sieciowe"
 
 #: package/contents/ui/Modem.qml:348
-#, fuzzy, kde-format
-#| msgid "Device:"
+#, kde-format
 msgid "Device"
-msgstr "Urządzenie:"
+msgstr "Urządzenie"
 
 #: package/contents/ui/Modem.qml:361
-#, fuzzy, kde-format
-#| msgid "Device ID:"
+#, kde-format
 msgid "Device ID"
-msgstr "ID urządzenia:"
+msgstr "ID urządzenia"
 
 #: package/contents/ui/Modem.qml:382
 #, kde-format
@@ -695,22 +672,19 @@ msgid "Drivers:"
 msgstr "Sterowniki:"
 
 #: package/contents/ui/Modem.qml:407
-#, fuzzy, kde-format
-#| msgid "Plugin:"
+#, kde-format
 msgid "Plugin"
-msgstr "Wtyczka:"
+msgstr "Wtyczka"
 
 #: package/contents/ui/Modem.qml:420
-#, fuzzy, kde-format
-#| msgid "Power State:"
+#, kde-format
 msgid "Power State"
-msgstr "Stan zasilania:"
+msgstr "Stan zasilania"
 
 #: package/contents/ui/Modem.qml:433
-#, fuzzy, kde-format
-#| msgid "SIM Path:"
+#, kde-format
 msgid "SIM Path"
-msgstr "Ścieżka karty SIM:"
+msgstr "Ścieżka karty SIM"
 
 #: package/contents/ui/ProfileList.qml:15
 #, kde-format
@@ -748,38 +722,35 @@ msgid "Delete"
 msgstr "Usuń"
 
 #: package/contents/ui/Sim.qml:62
-#, fuzzy, kde-format
-#| msgid "Data roaming:"
+#, kde-format
 msgid "Data Roaming"
-msgstr "Dane w roamingu:"
+msgstr "Dane w roamingu"
 
 #: package/contents/ui/Sim.qml:63
 #, kde-format
 msgid "Allow your device to use networks other than your carrier."
 msgstr ""
+"Zezwól swojemu urządzeniu na używanie sieci innych niż swojego dostawcy."
 
 #: package/contents/ui/Sim.qml:79
-#, fuzzy, kde-format
-#| msgid "Edit APN"
+#, kde-format
 msgid "Modify APNs"
 msgstr "Zmień APN"
 
 #: package/contents/ui/Sim.qml:80
 #, kde-format
 msgid "Configure access point names for your carrier."
-msgstr ""
+msgstr "Nadaj nazwy punktów dostępowych swojego dostawcy."
 
 #: package/contents/ui/Sim.qml:95
-#, fuzzy, kde-format
-#| msgid "Networks:"
+#, kde-format
 msgid "Networks"
-msgstr "Sieci:"
+msgstr "Sieci"
 
 #: package/contents/ui/Sim.qml:96
-#, fuzzy, kde-format
-#| msgid "Select Network Operator"
+#, kde-format
 msgid "Select a network operator."
-msgstr "Wybierz operatora sieci"
+msgstr "Wybierz operatora sieci."
 
 #: package/contents/ui/Sim.qml:111 package/contents/ui/SimLock.qml:20
 #, kde-format
@@ -787,68 +758,59 @@ msgid "SIM Lock"
 msgstr "Blokada karty SIM"
 
 #: package/contents/ui/Sim.qml:112
-#, fuzzy, kde-format
-#| msgid "Modify SIM Lock"
+#, kde-format
 msgid "Modify SIM lock settings."
-msgstr "Zmień blokadę karty SIM"
+msgstr "Zmień ustawienia blokady karty SIM."
 
 #: package/contents/ui/Sim.qml:128
 #, kde-format
 msgid "View the details of the modem this SIM is connected to."
-msgstr ""
+msgstr "Obejrzyj szczegóły modemu, do którego włożona jest ta karta SIM."
 
 #: package/contents/ui/Sim.qml:142
 #, kde-format
 msgid "SIM Details"
-msgstr "Szczegóły karty SIM"
+msgstr "Szczegóły SIM"
 
 #: package/contents/ui/Sim.qml:160
-#, fuzzy, kde-format
-#| msgid "IMSI:"
+#, kde-format
 msgid "IMSI"
-msgstr "IMSI:"
+msgstr "IMSI"
 
 #: package/contents/ui/Sim.qml:173
-#, fuzzy, kde-format
-#| msgid "EID:"
+#, kde-format
 msgid "EID"
-msgstr "EID:"
+msgstr "EID"
 
 #: package/contents/ui/Sim.qml:186
-#, fuzzy, kde-format
-#| msgid "Operator Code (modem):"
+#, kde-format
 msgid "Operator Code (modem)"
-msgstr "Kod operatora (modem):"
+msgstr "Kod operatora (modem)"
 
 #: package/contents/ui/Sim.qml:199
-#, fuzzy, kde-format
-#| msgid "Operator Name (modem):"
+#, kde-format
 msgid "Operator Name (modem)"
-msgstr "Nazwa operatora (modem):"
+msgstr "Nazwa operatora (modem)"
 
 #: package/contents/ui/Sim.qml:212
-#, fuzzy, kde-format
-#| msgid "Operator Code (provided by SIM):"
+#, kde-format
 msgid "Operator Code (provided by SIM)"
-msgstr "Kod operatora (dostarczony przez kartę SIM):"
+msgstr "Kod operatora (dostarczony przez kartę SIM)"
 
 #: package/contents/ui/Sim.qml:225
-#, fuzzy, kde-format
-#| msgid "Operator Name (provided by SIM):"
+#, kde-format
 msgid "Operator Name (provided by SIM)"
-msgstr "Nazwa operatora (dostarczona przez kartę SIM):"
+msgstr "Nazwa operatora (dostarczona przez kartę SIM)"
 
 #: package/contents/ui/Sim.qml:238
-#, fuzzy, kde-format
-#| msgid "SIM ID:"
+#, kde-format
 msgid "SIM ID"
-msgstr "ID karty SIM:"
+msgstr "ID karty SIM"
 
 #: package/contents/ui/Sim.qml:260
-#, fuzzy, kde-format
-#| msgid "Emergency Numbers:"
+#, kde-format
 msgid "Emergency Numbers"
-msgstr "Numery alarmowe:"
+msgstr "Numery alarmowe"
 
 #: package/contents/ui/SimLock.qml:51
 #, kde-format
@@ -880,15 +842,14 @@ msgid "Lock SIM"
 msgstr "Zablokuj kartę SIM"
 
 #: package/contents/ui/SimLock.qml:91
-#, fuzzy, kde-format
-#| msgid "Disable Modem"
+#, kde-format
 msgid "Disable SIM Lock"
-msgstr "Wyłącz modem"
+msgstr "Wyłącz blokadę karty SIM"
 
 #: package/contents/ui/SimLock.qml:92
 #, kde-format
 msgid "Disable the SIM lock feature and remove the passcode on the SIM."
-msgstr ""
+msgstr "Wyłącz blokadę karty SIM i usuń kod dostępu do niej."
 
 #: package/contents/ui/SimLock.qml:105
 #, kde-format
@@ -898,7 +859,7 @@ msgstr "Zmień PIN"
 #: package/contents/ui/SimLock.qml:106
 #, kde-format
 msgid "Change the passcode set on the SIM."
-msgstr ""
+msgstr "Zmień hasło chroniące kartę SIM."
 
 #: package/contents/ui/SimLock.qml:120
 #, kde-format
@@ -933,7 +894,7 @@ msgstr "PIN musi zawierać od 4 do 8 cyfr!"
 #: package/contents/ui/SimLock.qml:170 package/contents/ui/SimLock.qml:197
 #, kde-format
 msgid "Current PIN"
-msgstr "Bieżący numer PIN"
+msgstr "Bieżący PIN"
 
 #: package/contents/ui/SimLock.qml:175 package/contents/ui/SimLock.qml:234
 #, kde-format
@@ -943,7 +904,7 @@ msgstr "Nowy numer PIN"
 #: package/contents/ui/SimLock.qml:180 package/contents/ui/SimLock.qml:239
 #, kde-format
 msgid "Confirm PIN"
-msgstr "Potwierdź numer PIN"
+msgstr "Potwierdź PIN"
 
 #: package/contents/ui/SimLock.qml:188
 #, kde-format
