@@ -134,7 +134,7 @@ msgstr "S'està desactivant"
 #: modem.cpp:381 modemdetails.cpp:244
 #, kde-format
 msgid "Failed"
-msgstr "Ha fallat"
+msgstr "No s'ha pogut"
 
 #: modemdetails.cpp:115 modemdetails.cpp:444
 #, kde-format
@@ -369,7 +369,7 @@ msgstr "S'ha connectat per accedir als serveis restringits d'operador local."
 #: modemdetails.cpp:366
 #, kde-format
 msgid "Scanning networks failed: %1"
-msgstr "Ha fallat l'exploració de xarxes: %1"
+msgstr "No s'ha pogut fer l'exploració de xarxes: %1"
 
 #: modemdetails.cpp:413 package/contents/ui/Modem.qml:284
 #: package/contents/ui/Sim.qml:148
