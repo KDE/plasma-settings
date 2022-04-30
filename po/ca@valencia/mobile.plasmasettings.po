@@ -104,7 +104,7 @@ msgstr "nomdelpaquet"
 #: src/package/contents/ui/DefaultPage.qml:29
 #, kde-format
 msgid "System Settings"
-msgstr "Arranjament del sistema"
+msgstr "Configuració del sistema"
 
 #: src/package/contents/ui/DefaultPage.qml:35
 #, kde-format
