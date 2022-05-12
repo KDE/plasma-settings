@@ -10,6 +10,7 @@
 #include <QQuickItem>
 #include <QSet>
 
+#include <KJsonUtils>
 #include <KPackage/PackageLoader>
 #include <KPluginFactory>
 
@@ -64,6 +65,14 @@ QVariant ModulesModel::data(const QModelIndex &index, int role) const
         return d.plugin.iconName();
     case IdRole:
         return d.plugin.pluginId();
+    case KeywordsRole: {
+        QStringList keywords;
+        QJsonObject raw = d.plugin.rawData();
+        // always include English keywords to make searching for words with accents easier
+        keywords << raw.value(QLatin1String("X-KDE-Keywords")).toString().split(QLatin1String(","));
+        keywords << KJsonUtils::readTranslatedString(raw, QStringLiteral("X-KDE-Keywords")).split(QLatin1String(","));
+        return keywords;
+    }
     case KcmRole: {
         if (!d.kcm) {
             d.kcm = KPluginFactory::instantiatePlugin<KQuickAddons::ConfigModule>(d.plugin, const_cast<ModulesModel *>(this)).plugin;
