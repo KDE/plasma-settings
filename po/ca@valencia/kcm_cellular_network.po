@@ -729,7 +729,7 @@ msgstr "Itinerància de dades"
 #: package/contents/ui/Sim.qml:63
 #, kde-format
 msgid "Allow your device to use networks other than your carrier."
-msgstr "Permet que el dispositiu usi xarxes d'atres operadors."
+msgstr "Permet que el dispositiu utilitze xarxes d'atres operadors."
 
 #: package/contents/ui/Sim.qml:79
 #, kde-format
@@ -819,7 +819,7 @@ msgstr "La SIM està blocada"
 #: package/contents/ui/SimLock.qml:52
 #, kde-format
 msgid "In order to use this SIM, you must first unlock it."
-msgstr "Per tal d'usar esta SIM, primer cal desblocar-la."
+msgstr "Per tal d'utilitzar esta SIM, primer cal desblocar-la."
 
 #: package/contents/ui/SimLock.qml:74
 #, kde-format
@@ -885,7 +885,7 @@ msgstr "Canvia el PIN de la SIM"
 #: package/contents/ui/SimLock.qml:159 package/contents/ui/SimLock.qml:223
 #, kde-format
 msgid "PINs don't match!"
-msgstr "Els PIN no coincidisquen!"
+msgstr "Els PIN no coincideixen!"
 
 #: package/contents/ui/SimLock.qml:165 package/contents/ui/SimLock.qml:229
 #, kde-format
