@@ -19,6 +19,7 @@ target_link_libraries(kcm_cellular_network
     KF5::NetworkManagerQt
     KF5::ModemManagerQt
     KF5::QuickAddons
+    QCoro::DBus
 )
 
 install(TARGETS kcm_cellular_network DESTINATION ${PLUGIN_INSTALL_DIR}/kcms)

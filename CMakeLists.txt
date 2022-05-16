@@ -6,7 +6,7 @@ cmake_minimum_required(VERSION 3.16)
 
 include(FeatureSummary)
 
-set(CMAKE_CXX_STANDARD 17)
+set(CMAKE_CXX_STANDARD 20)
 set(CMAKE_CXX_STANDARD_REQUIRED ON)
 
 set (QT_MIN_VERSION "5.15.0")
@@ -52,6 +52,10 @@ find_package(PkgConfig REQUIRED)
 
 pkg_check_modules(GOBJECT gobject-2.0 REQUIRED IMPORTED_TARGET)
 pkg_check_modules(GIO gio-2.0 REQUIRED IMPORTED_TARGET)
+
+find_package(QCoro5 REQUIRED COMPONENTS DBus)
+
+qcoro_enable_coroutines()
 
 ecm_find_qmlmodule(org.kde.kcm 1.0)
 

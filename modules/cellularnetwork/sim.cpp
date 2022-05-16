@@ -8,6 +8,8 @@
 
 #include <KLocalizedString>
 
+#include <QCoroDBusPendingReply>
+
 Sim::Sim(QObject *parent, Modem *modem, ModemManager::Sim::Ptr mmSim, ModemManager::Modem::Ptr mmModem, ModemManager::Modem3gpp::Ptr mmModem3gpp)
     : QObject{parent}
     , m_modem{modem}
@@ -150,45 +152,50 @@ Modem *Sim::modem()
 
 void Sim::togglePinEnabled(const QString &pin)
 {
-    bool isPinEnabled = pinEnabled();
-    QDBusPendingReply reply = m_mmSim->enablePin(pin, !isPinEnabled);
-    reply.waitForFinished();
-    if (reply.isError()) {
-        qWarning() << QStringLiteral("Error toggling SIM lock to") << isPinEnabled << QStringLiteral(":") << reply.error().message();
-        CellularNetworkSettings::instance()->addMessage(InlineMessage::Error, i18n("Error toggling SIM lock: %1", reply.error().message()));
-    }
+    [this, pin]() -> QCoro::Task<void> {
+        bool isPinEnabled = pinEnabled();
+        QDBusReply reply = co_await m_mmSim->enablePin(pin, !isPinEnabled);
+
+        if (!reply.isValid()) {
+            qWarning() << QStringLiteral("Error toggling SIM lock to") << isPinEnabled << QStringLiteral(":") << reply.error().message();
+            CellularNetworkSettings::instance()->addMessage(InlineMessage::Error, i18n("Error toggling SIM lock: %1", reply.error().message()));
+        }
+    }();
 }
 
 void Sim::changePin(const QString &oldPin, const QString &newPin)
 {
-    QDBusPendingReply reply = m_mmSim->changePin(oldPin, newPin);
-    reply.waitForFinished();
-    if (reply.isError()) {
-        qWarning() << QStringLiteral("Error changing the PIN:") << reply.error().message();
-        CellularNetworkSettings::instance()->addMessage(InlineMessage::Error, i18n("Error changing the PIN: %1", reply.error().message()));
-    }
+    [this, oldPin, newPin]() -> QCoro::Task<void> {
+        QDBusReply reply = co_await m_mmSim->changePin(oldPin, newPin);
+        if (!reply.isValid()) {
+            qWarning() << QStringLiteral("Error changing the PIN:") << reply.error().message();
+            CellularNetworkSettings::instance()->addMessage(InlineMessage::Error, i18n("Error changing the PIN: %1", reply.error().message()));
+        }
+    }();
 }
 
 void Sim::sendPin(const QString &pin)
 {
-    if (m_mmModem->unlockRequired() != MM_MODEM_LOCK_NONE) {
-        QDBusPendingReply reply = m_mmSim->sendPin(pin);
-        reply.waitForFinished();
-        if (reply.isError()) {
-            qWarning() << QStringLiteral("Error sending the PIN:") << reply.error().message();
-            CellularNetworkSettings::instance()->addMessage(InlineMessage::Error, i18n("Error sending the PIN: %1", reply.error().message()));
+    [this, pin]() -> QCoro::Task<void> {
+        if (m_mmModem->unlockRequired() != MM_MODEM_LOCK_NONE) {
+            QDBusReply reply = co_await m_mmSim->sendPin(pin);
+            if (!reply.isValid()) {
+                qWarning() << QStringLiteral("Error sending the PIN:") << reply.error().message();
+                CellularNetworkSettings::instance()->addMessage(InlineMessage::Error, i18n("Error sending the PIN: %1", reply.error().message()));
+            }
         }
-    }
+    }();
 }
 
 void Sim::sendPuk(const QString &pin, const QString &puk)
 {
-    if (m_mmModem->unlockRequired() != MM_MODEM_LOCK_NONE) {
-        QDBusPendingReply reply = m_mmSim->sendPuk(pin, puk);
-        reply.waitForFinished();
-        if (reply.isError()) {
-            qWarning() << QStringLiteral("Error sending the PUK:") << reply.error().message();
-            CellularNetworkSettings::instance()->addMessage(InlineMessage::Error, i18n("Error sending the PUK: %1", reply.error().message()));
+    [this, pin, puk]() -> QCoro::Task<void> {
+        if (m_mmModem->unlockRequired() != MM_MODEM_LOCK_NONE) {
+            QDBusReply reply = co_await m_mmSim->sendPuk(pin, puk);
+            if (!reply.isValid()) {
+                qWarning() << QStringLiteral("Error sending the PUK:") << reply.error().message();
+                CellularNetworkSettings::instance()->addMessage(InlineMessage::Error, i18n("Error sending the PUK: %1", reply.error().message()));
+            }
         }
-    }
+    }();
 }
