@@ -86,25 +86,28 @@ Kirigami.ScrollablePage {
             visible: !notLockedSimPlaceholder.visible && !unlockSimPlaceholder.visible
             Layout.fillWidth: true
             
-            MobileForm.FormButtonDelegate {
-                id: disableSimLockButton
-                text: i18n("Disable SIM Lock") 
-                description: i18n("Disable the SIM lock feature and remove the passcode on the SIM.")
-                onClicked: removePinDialog.open();
-            }
-            
-            Kirigami.Separator {
-                Layout.leftMargin: Kirigami.Units.largeSpacing
-                Layout.rightMargin: Kirigami.Units.largeSpacing
-                Layout.fillWidth: true
-                opacity: (!disableSimLockButton.controlHovered && !changePinButton.controlHovered) ? 0.5 : 0
-            }
-            
-            MobileForm.FormButtonDelegate {
-                id: changePinButton
-                text: i18n("Change PIN")
-                description: i18n("Change the passcode set on the SIM.")
-                onClicked: changePinDialog.open()
+            contentItem: ColumnLayout {
+                spacing: 0
+                MobileForm.FormButtonDelegate {
+                    id: disableSimLockButton
+                    text: i18n("Disable SIM Lock") 
+                    description: i18n("Disable the SIM lock feature and remove the passcode on the SIM.")
+                    onClicked: removePinDialog.open();
+                }
+                
+                Kirigami.Separator {
+                    Layout.leftMargin: Kirigami.Units.largeSpacing
+                    Layout.rightMargin: Kirigami.Units.largeSpacing
+                    Layout.fillWidth: true
+                    opacity: (!disableSimLockButton.controlHovered && !changePinButton.controlHovered) ? 0.5 : 0
+                }
+                
+                MobileForm.FormButtonDelegate {
+                    id: changePinButton
+                    text: i18n("Change PIN")
+                    description: i18n("Change the passcode set on the SIM.")
+                    onClicked: changePinDialog.open()
+                }
             }
         }
         
