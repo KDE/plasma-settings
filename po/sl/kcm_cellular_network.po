@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-settings\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2022-04-08 00:47+0000\n"
+"POT-Creation-Date: 2022-05-19 00:47+0000\n"
 "PO-Revision-Date: 2022-04-11 10:13+0200\n"
 "Last-Translator: Matjaž Jeran <matjaz.jeran@amis.net>\n"
 "Language-Team: Slovenian <lugos-slo@lugos.si>\n"
@@ -43,93 +43,93 @@ msgstr "Devin Lin"
 msgid "Martin Kacej"
 msgstr "Martin Kacej"
 
-#: modem.cpp:91
+#: modem.cpp:96
 #, kde-format
 msgid "Error resetting the modem: %1"
 msgstr "Napaka pri ponovni nastavitvi modema: %1"
 
-#: modem.cpp:135 modem.cpp:273
+#: modem.cpp:192 modem.cpp:330
 #, kde-format
 msgid "Error updating connection settings for %1: %2."
 msgstr "Napaka pri osveževanju nastavitev povezave za %1: %2."
 
-#: modem.cpp:200
+#: modem.cpp:257
 #, kde-format
 msgid "Error activating connection: %1"
 msgstr "Napaka pri aktiviranju povezave: %1"
 
-#: modem.cpp:230
+#: modem.cpp:287
 #, kde-format
 msgid "Error adding connection: %1"
 msgstr "Napaka pri dodajanju povezave: %1"
 
-#: modem.cpp:244
+#: modem.cpp:301
 #, kde-format
 msgid "Error removing connection: %1"
 msgstr "Napaka pri odstranjevanju povezave: %1"
 
-#: modem.cpp:357 modemdetails.cpp:112 modemdetails.cpp:214 modemdetails.cpp:246
+#: modem.cpp:414 modemdetails.cpp:112 modemdetails.cpp:214 modemdetails.cpp:246
 #: modemdetails.cpp:411 modemdetails.cpp:441
 #, kde-format
 msgid "Unknown"
 msgstr "Neznano"
 
-#: modem.cpp:359
+#: modem.cpp:416
 #, kde-format
 msgid "Unmanaged"
 msgstr "Neupravljano"
 
-#: modem.cpp:361
+#: modem.cpp:418
 #, kde-format
 msgid "Unavailable"
 msgstr "Nerazpoložljivo"
 
-#: modem.cpp:363
+#: modem.cpp:420
 #, kde-format
 msgid "Disconnected"
 msgstr "Odklopljeno"
 
-#: modem.cpp:365
+#: modem.cpp:422
 #, kde-format
 msgid "Preparing"
 msgstr "Pripravljanje"
 
-#: modem.cpp:367
+#: modem.cpp:424
 #, kde-format
 msgid "ConfiguringHardware"
 msgstr "Nastavljanje strojne opreme"
 
-#: modem.cpp:369
+#: modem.cpp:426
 #, kde-format
 msgid "NeedAuth"
 msgstr "Potrebna je poverilnica"
 
-#: modem.cpp:371
+#: modem.cpp:428
 #, kde-format
 msgid "ConfiguringIp"
 msgstr "Nastavljanje IP"
 
-#: modem.cpp:373
+#: modem.cpp:430
 #, kde-format
 msgid "CheckingIp"
 msgstr "Preverjanje IP"
 
-#: modem.cpp:375
+#: modem.cpp:432
 #, kde-format
 msgid "WaitingForSecondaries"
 msgstr "Čakanje na sekundarne"
 
-#: modem.cpp:377
+#: modem.cpp:434
 #, kde-format
 msgid "Activated"
 msgstr "Aktivirano"
 
-#: modem.cpp:379
+#: modem.cpp:436
 #, kde-format
 msgid "Deactivating"
 msgstr "Deaktivirano"
 
-#: modem.cpp:381 modemdetails.cpp:244
+#: modem.cpp:438 modemdetails.cpp:244
 #, kde-format
 msgid "Failed"
 msgstr "Spodletelo"
@@ -254,7 +254,7 @@ msgstr "Onemogočam"
 msgid "Enabling"
 msgstr "Omogočanje"
 
-#: modemdetails.cpp:258 package/contents/ui/Modem.qml:146
+#: modemdetails.cpp:258 package/contents/ui/Modem.qml:130
 #, kde-format
 msgid "Enabled"
 msgstr "Omogočeno"
@@ -369,13 +369,13 @@ msgstr "Priključen za dostop do omejenih lokalnih operaterskih storitev."
 msgid "Scanning networks failed: %1"
 msgstr "Prečesavanje omrežij ni uspelo: %1"
 
-#: modemdetails.cpp:413 package/contents/ui/Modem.qml:284
+#: modemdetails.cpp:413 package/contents/ui/Modem.qml:268
 #: package/contents/ui/Sim.qml:148
 #, kde-format
 msgid "Yes"
 msgstr "Da"
 
-#: modemdetails.cpp:415 package/contents/ui/Modem.qml:284
+#: modemdetails.cpp:415 package/contents/ui/Modem.qml:268
 #: package/contents/ui/Sim.qml:148
 #, kde-format
 msgid "No"
@@ -494,192 +494,177 @@ msgstr "Samo 3G"
 msgid "Only 2G"
 msgstr "Samo 2G"
 
-#: package/contents/ui/main.qml:39
+#: package/contents/ui/main.qml:38
 #, kde-format
 msgid "Modem not available"
 msgstr "Modem ni na voljo"
 
-#: package/contents/ui/main.qml:81
+#: package/contents/ui/main.qml:80
 #, kde-format
 msgid "Mobile data"
 msgstr "Mobilni podatki"
 
-#: package/contents/ui/main.qml:82
+#: package/contents/ui/main.qml:81
 #, kde-format
 msgid "Whether mobile data is enabled."
 msgstr "Ali so omogočeni mobilni podatki."
 
-#: package/contents/ui/main.qml:103
+#: package/contents/ui/main.qml:102
 #, kde-format
 msgid "Data Usage"
 msgstr "Raba podatkov"
 
-#: package/contents/ui/main.qml:104
+#: package/contents/ui/main.qml:103
 #, kde-format
 msgid "View data usage."
 msgstr "Pogled rabe podatkov."
 
-#: package/contents/ui/main.qml:120 package/contents/ui/Sim.qml:21
+#: package/contents/ui/main.qml:119 package/contents/ui/Sim.qml:21
 #, kde-format
 msgid "SIM"
 msgstr "SIM"
 
-#: package/contents/ui/main.qml:120
+#: package/contents/ui/main.qml:119
 #, kde-format
 msgid "SIMs"
 msgstr "SIM-i"
 
-#: package/contents/ui/main.qml:140
+#: package/contents/ui/main.qml:139
 #, kde-format
 msgid "SIM %1"
 msgstr "SIM %1"
 
-#: package/contents/ui/main.qml:141
+#: package/contents/ui/main.qml:140
 #, kde-format
 msgid "View SIM %1 details."
 msgstr "Pogled podrobnosti SIM %1."
 
-#: package/contents/ui/Modem.qml:20
+#: package/contents/ui/Modem.qml:19
 #, kde-format
 msgid "Modem %1"
 msgstr "Model %1"
 
-#: package/contents/ui/Modem.qml:45
+#: package/contents/ui/Modem.qml:44
 #, kde-format
 msgid "Modem Control"
 msgstr "Upravljanje modema"
 
-#: package/contents/ui/Modem.qml:54
-#, kde-format
-msgid "Modem State"
-msgstr "Stanje modema"
-
-#: package/contents/ui/Modem.qml:57
-#, kde-format
-msgid "Disable Modem"
-msgstr "Onemogoči modem"
-
-#: package/contents/ui/Modem.qml:57
-#, kde-format
-msgid "Enable Modem"
-msgstr "Omogoči modem"
-
-#: package/contents/ui/Modem.qml:76
+#: package/contents/ui/Modem.qml:60
 #, kde-format
 msgid "Modem Restart"
 msgstr "Ponovni zagon modema"
 
-#: package/contents/ui/Modem.qml:79
+#: package/contents/ui/Modem.qml:63
 #, kde-format
 msgid "Force Modem Restart"
 msgstr "Prisili ponovni zagon modema"
 
-#: package/contents/ui/Modem.qml:95 package/contents/ui/Sim.qml:127
+#: package/contents/ui/Modem.qml:79 package/contents/ui/Sim.qml:127
 #, kde-format
 msgid "Modem Details"
 msgstr "Podrobnosti modema"
 
-#: package/contents/ui/Modem.qml:108
+#: package/contents/ui/Modem.qml:92
 #, kde-format
 msgid "Access Technologies"
 msgstr "Tehnologije dostopa"
 
-#: package/contents/ui/Modem.qml:133
+#: package/contents/ui/Modem.qml:117
 #, kde-format
 msgid "IMEI"
 msgstr "IMEI"
 
-#: package/contents/ui/Modem.qml:159
+#: package/contents/ui/Modem.qml:143
 #, kde-format
 msgid "Manufacturer"
 msgstr "Izdelovalec"
 
-#: package/contents/ui/Modem.qml:172
+#: package/contents/ui/Modem.qml:156
 #, kde-format
 msgid "Model"
 msgstr "Model"
 
-#: package/contents/ui/Modem.qml:193
+#: package/contents/ui/Modem.qml:177
 #, kde-format
 msgid "Owned Numbers:"
 msgstr "Lastne številke:"
 
-#: package/contents/ui/Modem.qml:218
+#: package/contents/ui/Modem.qml:202
 #, kde-format
 msgid "Revision"
 msgstr "Revizija"
 
-#: package/contents/ui/Modem.qml:231
+#: package/contents/ui/Modem.qml:215
 #, kde-format
 msgid "Signal Quality"
 msgstr "Kakovost signala"
 
-#: package/contents/ui/Modem.qml:244
+#: package/contents/ui/Modem.qml:228
 #, kde-format
 msgid "State"
 msgstr "Stanje"
 
-#: package/contents/ui/Modem.qml:257
+#: package/contents/ui/Modem.qml:241
 #, kde-format
 msgid "Failure Reason"
 msgstr "Razlog izpada"
 
-#: package/contents/ui/Modem.qml:270
+#: package/contents/ui/Modem.qml:254
 #, kde-format
 msgid "Registration State"
 msgstr "Stanje registracije"
 
-#: package/contents/ui/Modem.qml:283
+#: package/contents/ui/Modem.qml:267
 #, kde-format
 msgid "Roaming"
 msgstr "Gostovanje"
 
-#: package/contents/ui/Modem.qml:296
+#: package/contents/ui/Modem.qml:280
 #, kde-format
 msgid "Firmware Version"
 msgstr "Različica vgrajenega programja"
 
-#: package/contents/ui/Modem.qml:309
+#: package/contents/ui/Modem.qml:293
 #, kde-format
 msgid "Interface Name"
 msgstr "Ime vmesnika"
 
-#: package/contents/ui/Modem.qml:322
+#: package/contents/ui/Modem.qml:306
 #, kde-format
 msgid "Metered"
 msgstr "Merjeno"
 
-#: package/contents/ui/Modem.qml:335
+#: package/contents/ui/Modem.qml:319
 #, kde-format
 msgid "Active NetworkManager Connection"
 msgstr "Aktivna povezava skrbnika omrežja"
 
-#: package/contents/ui/Modem.qml:348
+#: package/contents/ui/Modem.qml:332
 #, kde-format
 msgid "Device"
 msgstr "Naprava"
 
-#: package/contents/ui/Modem.qml:361
+#: package/contents/ui/Modem.qml:345
 #, kde-format
 msgid "Device ID"
 msgstr "Določilnik naprave"
 
-#: package/contents/ui/Modem.qml:382
+#: package/contents/ui/Modem.qml:366
 #, kde-format
 msgid "Drivers:"
 msgstr "Krmilniki:"
 
-#: package/contents/ui/Modem.qml:407
+#: package/contents/ui/Modem.qml:391
 #, kde-format
 msgid "Plugin"
 msgstr "Vtičnik"
 
-#: package/contents/ui/Modem.qml:420
+#: package/contents/ui/Modem.qml:404
 #, kde-format
 msgid "Power State"
 msgstr "Stanje napajanja"
 
-#: package/contents/ui/Modem.qml:433
+#: package/contents/ui/Modem.qml:417
 #, kde-format
 msgid "SIM Path"
 msgstr "Pot SIM"
@@ -839,77 +824,77 @@ msgstr ""
 msgid "Lock SIM"
 msgstr "Zakleni SIM"
 
-#: package/contents/ui/SimLock.qml:91
+#: package/contents/ui/SimLock.qml:93
 #, kde-format
 msgid "Disable SIM Lock"
 msgstr "Onemogoči zaklepanje SIMa"
 
-#: package/contents/ui/SimLock.qml:92
+#: package/contents/ui/SimLock.qml:94
 #, kde-format
 msgid "Disable the SIM lock feature and remove the passcode on the SIM."
 msgstr "Onemogoči možnost zaklepanje SIMa in odstrani geselno frazo na SIMu."
 
-#: package/contents/ui/SimLock.qml:105
+#: package/contents/ui/SimLock.qml:107
 #, kde-format
 msgid "Change PIN"
 msgstr "Spremeni PIN"
 
-#: package/contents/ui/SimLock.qml:106
+#: package/contents/ui/SimLock.qml:108
 #, kde-format
 msgid "Change the passcode set on the SIM."
 msgstr "Spremeni geselno frazo nastavljeno na SIMu."
 
-#: package/contents/ui/SimLock.qml:120
+#: package/contents/ui/SimLock.qml:123
 #, kde-format
 msgid "Unlock SIM"
 msgstr "Odkleni SIM"
 
-#: package/contents/ui/SimLock.qml:128
+#: package/contents/ui/SimLock.qml:131
 #, kde-format
 msgid "Attempts left: %1"
 msgstr "Preostali poskusi: %1"
 
-#: package/contents/ui/SimLock.qml:132
+#: package/contents/ui/SimLock.qml:135
 #, kde-format
 msgid "Enter PIN"
 msgstr "Vnesite PIN"
 
-#: package/contents/ui/SimLock.qml:140
+#: package/contents/ui/SimLock.qml:143
 #, kde-format
 msgid "Change SIM PIN"
 msgstr "Spremeni PIN od SIM"
 
-#: package/contents/ui/SimLock.qml:159 package/contents/ui/SimLock.qml:223
+#: package/contents/ui/SimLock.qml:162 package/contents/ui/SimLock.qml:226
 #, kde-format
 msgid "PINs don't match!"
 msgstr "PINa se ne ujemata!"
 
-#: package/contents/ui/SimLock.qml:165 package/contents/ui/SimLock.qml:229
+#: package/contents/ui/SimLock.qml:168 package/contents/ui/SimLock.qml:232
 #, kde-format
 msgid "PINs must be between 4 and 8 digits!"
 msgstr "PIN kode morajo imeti med 4 in 8 cifer!"
 
-#: package/contents/ui/SimLock.qml:170 package/contents/ui/SimLock.qml:197
+#: package/contents/ui/SimLock.qml:173 package/contents/ui/SimLock.qml:200
 #, kde-format
 msgid "Current PIN"
 msgstr "Trenutni PIN"
 
-#: package/contents/ui/SimLock.qml:175 package/contents/ui/SimLock.qml:234
+#: package/contents/ui/SimLock.qml:178 package/contents/ui/SimLock.qml:237
 #, kde-format
 msgid "New PIN"
 msgstr "Novi PIN"
 
-#: package/contents/ui/SimLock.qml:180 package/contents/ui/SimLock.qml:239
+#: package/contents/ui/SimLock.qml:183 package/contents/ui/SimLock.qml:242
 #, kde-format
 msgid "Confirm PIN"
 msgstr "Potrdi PIN"
 
-#: package/contents/ui/SimLock.qml:188
+#: package/contents/ui/SimLock.qml:191
 #, kde-format
 msgid "Remove SIM PIN"
 msgstr "Odstrani PIN od SIM"
 
-#: package/contents/ui/SimLock.qml:205
+#: package/contents/ui/SimLock.qml:208
 #, kde-format
 msgid "Add SIM PIN"
 msgstr "Dodaj PIN SIMu"
@@ -1023,6 +1008,15 @@ msgstr "Napaka pri pošiljanju kode PIN: %1"
 #, kde-format
 msgid "Error sending the PUK: %1"
 msgstr "Napaka pri pošiljanju kode PUK: %1"
+
+#~ msgid "Modem State"
+#~ msgstr "Stanje modema"
+
+#~ msgid "Disable Modem"
+#~ msgstr "Onemogoči modem"
+
+#~ msgid "Enable Modem"
+#~ msgstr "Omogoči modem"
 
 #~ msgid "On"
 #~ msgstr "Vklopljeno"

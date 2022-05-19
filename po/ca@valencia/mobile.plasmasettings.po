@@ -74,7 +74,7 @@ msgstr "factordeforma"
 #: src/main.cpp:65
 #, kde-format
 msgid "Settings module to open"
-msgstr "Mòdul de configuració a obrir"
+msgstr "Mòdul de configuració que s'obrirà"
 
 #: src/main.cpp:65
 #, kde-format

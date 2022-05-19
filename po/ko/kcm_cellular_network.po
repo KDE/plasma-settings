@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-settings\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2022-04-08 00:47+0000\n"
+"POT-Creation-Date: 2022-05-19 00:47+0000\n"
 "PO-Revision-Date: 2022-04-16 01:40+0200\n"
 "Last-Translator: Shinjo Park <kde@peremen.name>\n"
 "Language-Team: Korean <kde-kr@kde.org>\n"
@@ -42,93 +42,93 @@ msgstr "Devin Lin"
 msgid "Martin Kacej"
 msgstr "Martin Kacej"
 
-#: modem.cpp:91
+#: modem.cpp:96
 #, kde-format
 msgid "Error resetting the modem: %1"
 msgstr "모뎀 초기화 오류: %1"
 
-#: modem.cpp:135 modem.cpp:273
+#: modem.cpp:192 modem.cpp:330
 #, kde-format
 msgid "Error updating connection settings for %1: %2."
 msgstr "%1의 연결 설정 업데이트 오류: %2."
 
-#: modem.cpp:200
+#: modem.cpp:257
 #, kde-format
 msgid "Error activating connection: %1"
 msgstr "연결 활성화 오류: %1"
 
-#: modem.cpp:230
+#: modem.cpp:287
 #, kde-format
 msgid "Error adding connection: %1"
 msgstr "연결 추가 오류: %1"
 
-#: modem.cpp:244
+#: modem.cpp:301
 #, kde-format
 msgid "Error removing connection: %1"
 msgstr "연결 삭제 오류: %1"
 
-#: modem.cpp:357 modemdetails.cpp:112 modemdetails.cpp:214 modemdetails.cpp:246
+#: modem.cpp:414 modemdetails.cpp:112 modemdetails.cpp:214 modemdetails.cpp:246
 #: modemdetails.cpp:411 modemdetails.cpp:441
 #, kde-format
 msgid "Unknown"
 msgstr "알 수 없음"
 
-#: modem.cpp:359
+#: modem.cpp:416
 #, kde-format
 msgid "Unmanaged"
 msgstr "관리되지 않음"
 
-#: modem.cpp:361
+#: modem.cpp:418
 #, kde-format
 msgid "Unavailable"
 msgstr "사용할 수 없음"
 
-#: modem.cpp:363
+#: modem.cpp:420
 #, kde-format
 msgid "Disconnected"
 msgstr "연결 끊김"
 
-#: modem.cpp:365
+#: modem.cpp:422
 #, kde-format
 msgid "Preparing"
 msgstr "준비 중"
 
-#: modem.cpp:367
+#: modem.cpp:424
 #, kde-format
 msgid "ConfiguringHardware"
 msgstr "하드웨어 설정 중"
 
-#: modem.cpp:369
+#: modem.cpp:426
 #, kde-format
 msgid "NeedAuth"
 msgstr "인증 필요"
 
-#: modem.cpp:371
+#: modem.cpp:428
 #, kde-format
 msgid "ConfiguringIp"
 msgstr "IP 설정 중"
 
-#: modem.cpp:373
+#: modem.cpp:430
 #, kde-format
 msgid "CheckingIp"
 msgstr "IP 확인 중"
 
-#: modem.cpp:375
+#: modem.cpp:432
 #, kde-format
 msgid "WaitingForSecondaries"
 msgstr "이차 연결 대기 중"
 
-#: modem.cpp:377
+#: modem.cpp:434
 #, kde-format
 msgid "Activated"
 msgstr "활성화됨"
 
-#: modem.cpp:379
+#: modem.cpp:436
 #, kde-format
 msgid "Deactivating"
 msgstr "비활성화 중"
 
-#: modem.cpp:381 modemdetails.cpp:244
+#: modem.cpp:438 modemdetails.cpp:244
 #, kde-format
 msgid "Failed"
 msgstr "실패"
@@ -253,7 +253,7 @@ msgstr "비활성화 중"
 msgid "Enabling"
 msgstr "활성화 중"
 
-#: modemdetails.cpp:258 package/contents/ui/Modem.qml:146
+#: modemdetails.cpp:258 package/contents/ui/Modem.qml:130
 #, kde-format
 msgid "Enabled"
 msgstr "사용함"
@@ -368,13 +368,13 @@ msgstr "등록되었으며 제한된 로컬 통신사 서비스에 접근 가능
 msgid "Scanning networks failed: %1"
 msgstr "통신사 검색 실패: %1"
 
-#: modemdetails.cpp:413 package/contents/ui/Modem.qml:284
+#: modemdetails.cpp:413 package/contents/ui/Modem.qml:268
 #: package/contents/ui/Sim.qml:148
 #, kde-format
 msgid "Yes"
 msgstr "예"
 
-#: modemdetails.cpp:415 package/contents/ui/Modem.qml:284
+#: modemdetails.cpp:415 package/contents/ui/Modem.qml:268
 #: package/contents/ui/Sim.qml:148
 #, kde-format
 msgid "No"
@@ -493,192 +493,177 @@ msgstr "3G 전용"
 msgid "Only 2G"
 msgstr "2G 전용"
 
-#: package/contents/ui/main.qml:39
+#: package/contents/ui/main.qml:38
 #, kde-format
 msgid "Modem not available"
 msgstr "모뎀을 사용할 수 없음"
 
-#: package/contents/ui/main.qml:81
+#: package/contents/ui/main.qml:80
 #, kde-format
 msgid "Mobile data"
 msgstr "모바일 데이터"
 
-#: package/contents/ui/main.qml:82
+#: package/contents/ui/main.qml:81
 #, kde-format
 msgid "Whether mobile data is enabled."
 msgstr "모바일 데이터 활성화 여부입니다."
 
-#: package/contents/ui/main.qml:103
+#: package/contents/ui/main.qml:102
 #, kde-format
 msgid "Data Usage"
 msgstr "데이터 사용량"
 
-#: package/contents/ui/main.qml:104
+#: package/contents/ui/main.qml:103
 #, kde-format
 msgid "View data usage."
 msgstr "데이터 사용량을 봅니다."
 
-#: package/contents/ui/main.qml:120 package/contents/ui/Sim.qml:21
+#: package/contents/ui/main.qml:119 package/contents/ui/Sim.qml:21
 #, kde-format
 msgid "SIM"
 msgstr "SIM"
 
-#: package/contents/ui/main.qml:120
+#: package/contents/ui/main.qml:119
 #, kde-format
 msgid "SIMs"
 msgstr "SIM"
 
-#: package/contents/ui/main.qml:140
+#: package/contents/ui/main.qml:139
 #, kde-format
 msgid "SIM %1"
 msgstr "SIM %1"
 
-#: package/contents/ui/main.qml:141
+#: package/contents/ui/main.qml:140
 #, kde-format
 msgid "View SIM %1 details."
 msgstr "SIM %1의 자세한 정보를 표시합니다."
 
-#: package/contents/ui/Modem.qml:20
+#: package/contents/ui/Modem.qml:19
 #, kde-format
 msgid "Modem %1"
 msgstr "모뎀 %1"
 
-#: package/contents/ui/Modem.qml:45
+#: package/contents/ui/Modem.qml:44
 #, kde-format
 msgid "Modem Control"
 msgstr "모뎀 제어"
 
-#: package/contents/ui/Modem.qml:54
-#, kde-format
-msgid "Modem State"
-msgstr "모뎀 상태"
-
-#: package/contents/ui/Modem.qml:57
-#, kde-format
-msgid "Disable Modem"
-msgstr "모뎀 비활성화"
-
-#: package/contents/ui/Modem.qml:57
-#, kde-format
-msgid "Enable Modem"
-msgstr "모뎀 활성화"
-
-#: package/contents/ui/Modem.qml:76
+#: package/contents/ui/Modem.qml:60
 #, kde-format
 msgid "Modem Restart"
 msgstr "모뎀 다시 시작"
 
-#: package/contents/ui/Modem.qml:79
+#: package/contents/ui/Modem.qml:63
 #, kde-format
 msgid "Force Modem Restart"
 msgstr "모뎀 강제 다시 시작"
 
-#: package/contents/ui/Modem.qml:95 package/contents/ui/Sim.qml:127
+#: package/contents/ui/Modem.qml:79 package/contents/ui/Sim.qml:127
 #, kde-format
 msgid "Modem Details"
 msgstr "모뎀 자세한 정보"
 
-#: package/contents/ui/Modem.qml:108
+#: package/contents/ui/Modem.qml:92
 #, kde-format
 msgid "Access Technologies"
 msgstr "접속 기술"
 
-#: package/contents/ui/Modem.qml:133
+#: package/contents/ui/Modem.qml:117
 #, kde-format
 msgid "IMEI"
 msgstr "IMEI"
 
-#: package/contents/ui/Modem.qml:159
+#: package/contents/ui/Modem.qml:143
 #, kde-format
 msgid "Manufacturer"
 msgstr "제조사"
 
-#: package/contents/ui/Modem.qml:172
+#: package/contents/ui/Modem.qml:156
 #, kde-format
 msgid "Model"
 msgstr "모델"
 
-#: package/contents/ui/Modem.qml:193
+#: package/contents/ui/Modem.qml:177
 #, kde-format
 msgid "Owned Numbers:"
 msgstr "전화 번호:"
 
-#: package/contents/ui/Modem.qml:218
+#: package/contents/ui/Modem.qml:202
 #, kde-format
 msgid "Revision"
 msgstr "리비전"
 
-#: package/contents/ui/Modem.qml:231
+#: package/contents/ui/Modem.qml:215
 #, kde-format
 msgid "Signal Quality"
 msgstr "신호 품질"
 
-#: package/contents/ui/Modem.qml:244
+#: package/contents/ui/Modem.qml:228
 #, kde-format
 msgid "State"
 msgstr "상태"
 
-#: package/contents/ui/Modem.qml:257
+#: package/contents/ui/Modem.qml:241
 #, kde-format
 msgid "Failure Reason"
 msgstr "실패 이유"
 
-#: package/contents/ui/Modem.qml:270
+#: package/contents/ui/Modem.qml:254
 #, kde-format
 msgid "Registration State"
 msgstr "등록 상태"
 
-#: package/contents/ui/Modem.qml:283
+#: package/contents/ui/Modem.qml:267
 #, kde-format
 msgid "Roaming"
 msgstr "로밍"
 
-#: package/contents/ui/Modem.qml:296
+#: package/contents/ui/Modem.qml:280
 #, kde-format
 msgid "Firmware Version"
 msgstr "펌웨어 버전"
 
-#: package/contents/ui/Modem.qml:309
+#: package/contents/ui/Modem.qml:293
 #, kde-format
 msgid "Interface Name"
 msgstr "인터페이스 이름"
 
-#: package/contents/ui/Modem.qml:322
+#: package/contents/ui/Modem.qml:306
 #, kde-format
 msgid "Metered"
 msgstr "종량제"
 
-#: package/contents/ui/Modem.qml:335
+#: package/contents/ui/Modem.qml:319
 #, kde-format
 msgid "Active NetworkManager Connection"
 msgstr "활성 NetworkManager 연결"
 
-#: package/contents/ui/Modem.qml:348
+#: package/contents/ui/Modem.qml:332
 #, kde-format
 msgid "Device"
 msgstr "장치"
 
-#: package/contents/ui/Modem.qml:361
+#: package/contents/ui/Modem.qml:345
 #, kde-format
 msgid "Device ID"
 msgstr "장치 ID"
 
-#: package/contents/ui/Modem.qml:382
+#: package/contents/ui/Modem.qml:366
 #, kde-format
 msgid "Drivers:"
 msgstr "드라이버:"
 
-#: package/contents/ui/Modem.qml:407
+#: package/contents/ui/Modem.qml:391
 #, kde-format
 msgid "Plugin"
 msgstr "플러그인"
 
-#: package/contents/ui/Modem.qml:420
+#: package/contents/ui/Modem.qml:404
 #, kde-format
 msgid "Power State"
 msgstr "전원 상태"
 
-#: package/contents/ui/Modem.qml:433
+#: package/contents/ui/Modem.qml:417
 #, kde-format
 msgid "SIM Path"
 msgstr "SIM 경로"
@@ -837,77 +822,77 @@ msgstr ""
 msgid "Lock SIM"
 msgstr "SIM 잠그기"
 
-#: package/contents/ui/SimLock.qml:91
+#: package/contents/ui/SimLock.qml:93
 #, kde-format
 msgid "Disable SIM Lock"
 msgstr "SIM 잠금 비활성화"
 
-#: package/contents/ui/SimLock.qml:92
+#: package/contents/ui/SimLock.qml:94
 #, kde-format
 msgid "Disable the SIM lock feature and remove the passcode on the SIM."
 msgstr "SIM 잠금 기능을 비활성화하고 SIM 비밀번호를 비활성화합니다."
 
-#: package/contents/ui/SimLock.qml:105
+#: package/contents/ui/SimLock.qml:107
 #, kde-format
 msgid "Change PIN"
 msgstr "PIN 변경"
 
-#: package/contents/ui/SimLock.qml:106
+#: package/contents/ui/SimLock.qml:108
 #, kde-format
 msgid "Change the passcode set on the SIM."
 msgstr "SIM 비밀번호를 변경합니다."
 
-#: package/contents/ui/SimLock.qml:120
+#: package/contents/ui/SimLock.qml:123
 #, kde-format
 msgid "Unlock SIM"
 msgstr "SIM 잠금 해제"
 
-#: package/contents/ui/SimLock.qml:128
+#: package/contents/ui/SimLock.qml:131
 #, kde-format
 msgid "Attempts left: %1"
 msgstr "시도 남음: %1회"
 
-#: package/contents/ui/SimLock.qml:132
+#: package/contents/ui/SimLock.qml:135
 #, kde-format
 msgid "Enter PIN"
 msgstr "PIN 입력"
 
-#: package/contents/ui/SimLock.qml:140
+#: package/contents/ui/SimLock.qml:143
 #, kde-format
 msgid "Change SIM PIN"
 msgstr "SIM PIN 변경"
 
-#: package/contents/ui/SimLock.qml:159 package/contents/ui/SimLock.qml:223
+#: package/contents/ui/SimLock.qml:162 package/contents/ui/SimLock.qml:226
 #, kde-format
 msgid "PINs don't match!"
 msgstr "PIN이 일치하지 않습니다!"
 
-#: package/contents/ui/SimLock.qml:165 package/contents/ui/SimLock.qml:229
+#: package/contents/ui/SimLock.qml:168 package/contents/ui/SimLock.qml:232
 #, kde-format
 msgid "PINs must be between 4 and 8 digits!"
 msgstr "PIN은 4자리 이상 8자리 이하여야 합니다!"
 
-#: package/contents/ui/SimLock.qml:170 package/contents/ui/SimLock.qml:197
+#: package/contents/ui/SimLock.qml:173 package/contents/ui/SimLock.qml:200
 #, kde-format
 msgid "Current PIN"
 msgstr "현재 PIN"
 
-#: package/contents/ui/SimLock.qml:175 package/contents/ui/SimLock.qml:234
+#: package/contents/ui/SimLock.qml:178 package/contents/ui/SimLock.qml:237
 #, kde-format
 msgid "New PIN"
 msgstr "새 PIN"
 
-#: package/contents/ui/SimLock.qml:180 package/contents/ui/SimLock.qml:239
+#: package/contents/ui/SimLock.qml:183 package/contents/ui/SimLock.qml:242
 #, kde-format
 msgid "Confirm PIN"
 msgstr "PIN 확인"
 
-#: package/contents/ui/SimLock.qml:188
+#: package/contents/ui/SimLock.qml:191
 #, kde-format
 msgid "Remove SIM PIN"
 msgstr "SIM PIN 삭제"
 
-#: package/contents/ui/SimLock.qml:205
+#: package/contents/ui/SimLock.qml:208
 #, kde-format
 msgid "Add SIM PIN"
 msgstr "SIM PIN 추가"
@@ -1021,6 +1006,15 @@ msgstr "PIN 전송 실패: %1"
 #, kde-format
 msgid "Error sending the PUK: %1"
 msgstr "PUK 전송 실패: %1"
+
+#~ msgid "Modem State"
+#~ msgstr "모뎀 상태"
+
+#~ msgid "Disable Modem"
+#~ msgstr "모뎀 비활성화"
+
+#~ msgid "Enable Modem"
+#~ msgstr "모뎀 활성화"
 
 #~ msgid "On"
 #~ msgstr "켬"

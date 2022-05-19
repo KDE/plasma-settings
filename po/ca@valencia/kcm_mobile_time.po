@@ -130,7 +130,7 @@ msgstr "Data"
 #, kde-format
 msgctxt "@title:window"
 msgid "Pick Timezone"
-msgstr "Selecció de la zona horària"
+msgstr "Seleccioneu la zona horària"
 
 #: package/contents/ui/main.qml:144 package/contents/ui/main.qml:200
 #: package/contents/ui/main.qml:245

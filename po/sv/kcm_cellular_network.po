@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-settings\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2022-04-08 00:47+0000\n"
+"POT-Creation-Date: 2022-05-19 00:47+0000\n"
 "PO-Revision-Date: 2022-04-08 19:36+0200\n"
 "Last-Translator: Stefan Asserhäll <stefan.asserhall@bredband.net>\n"
 "Language-Team: Swedish <kde-i18n-doc@kde.org>\n"
@@ -42,93 +42,93 @@ msgstr "Devin Lin"
 msgid "Martin Kacej"
 msgstr "Martin Kacej"
 
-#: modem.cpp:91
+#: modem.cpp:96
 #, kde-format
 msgid "Error resetting the modem: %1"
 msgstr "Fel vid återställning av modem: %1"
 
-#: modem.cpp:135 modem.cpp:273
+#: modem.cpp:192 modem.cpp:330
 #, kde-format
 msgid "Error updating connection settings for %1: %2."
 msgstr "Fel vid uppdatering av anslutningsinställningar för %1: %2."
 
-#: modem.cpp:200
+#: modem.cpp:257
 #, kde-format
 msgid "Error activating connection: %1"
 msgstr "Fel vid aktivering av anslutning: %1"
 
-#: modem.cpp:230
+#: modem.cpp:287
 #, kde-format
 msgid "Error adding connection: %1"
 msgstr "Fel vid tillägg av anslutning: %1"
 
-#: modem.cpp:244
+#: modem.cpp:301
 #, kde-format
 msgid "Error removing connection: %1"
 msgstr "Fel vid borttagning av anslutning: %1"
 
-#: modem.cpp:357 modemdetails.cpp:112 modemdetails.cpp:214 modemdetails.cpp:246
+#: modem.cpp:414 modemdetails.cpp:112 modemdetails.cpp:214 modemdetails.cpp:246
 #: modemdetails.cpp:411 modemdetails.cpp:441
 #, kde-format
 msgid "Unknown"
 msgstr "Okänd"
 
-#: modem.cpp:359
+#: modem.cpp:416
 #, kde-format
 msgid "Unmanaged"
 msgstr "Inte hanterat"
 
-#: modem.cpp:361
+#: modem.cpp:418
 #, kde-format
 msgid "Unavailable"
 msgstr "Inte tillgänglig"
 
-#: modem.cpp:363
+#: modem.cpp:420
 #, kde-format
 msgid "Disconnected"
 msgstr "Nerkopplad"
 
-#: modem.cpp:365
+#: modem.cpp:422
 #, kde-format
 msgid "Preparing"
 msgstr "Förbereder"
 
-#: modem.cpp:367
+#: modem.cpp:424
 #, kde-format
 msgid "ConfiguringHardware"
 msgstr "Ställer in maskinvara"
 
-#: modem.cpp:369
+#: modem.cpp:426
 #, kde-format
 msgid "NeedAuth"
 msgstr "Kräver behörighetskontroll"
 
-#: modem.cpp:371
+#: modem.cpp:428
 #, kde-format
 msgid "ConfiguringIp"
 msgstr "Ställer in Ip"
 
-#: modem.cpp:373
+#: modem.cpp:430
 #, kde-format
 msgid "CheckingIp"
 msgstr "Kontrollerar Ip"
 
-#: modem.cpp:375
+#: modem.cpp:432
 #, kde-format
 msgid "WaitingForSecondaries"
 msgstr "Väntar på ställföreträdare"
 
-#: modem.cpp:377
+#: modem.cpp:434
 #, kde-format
 msgid "Activated"
 msgstr "Aktiverad"
 
-#: modem.cpp:379
+#: modem.cpp:436
 #, kde-format
 msgid "Deactivating"
 msgstr "Inaktiverar"
 
-#: modem.cpp:381 modemdetails.cpp:244
+#: modem.cpp:438 modemdetails.cpp:244
 #, kde-format
 msgid "Failed"
 msgstr "Misslyckades"
@@ -253,7 +253,7 @@ msgstr "Inaktiverar"
 msgid "Enabling"
 msgstr "Aktiverar"
 
-#: modemdetails.cpp:258 package/contents/ui/Modem.qml:146
+#: modemdetails.cpp:258 package/contents/ui/Modem.qml:130
 #, kde-format
 msgid "Enabled"
 msgstr "Aktiverad"
@@ -368,13 +368,13 @@ msgstr "Ansluten för åtkomst till begränsade lokala operatörstjänster."
 msgid "Scanning networks failed: %1"
 msgstr "Sökning efter nätverk misslyckades: %1"
 
-#: modemdetails.cpp:413 package/contents/ui/Modem.qml:284
+#: modemdetails.cpp:413 package/contents/ui/Modem.qml:268
 #: package/contents/ui/Sim.qml:148
 #, kde-format
 msgid "Yes"
 msgstr "Ja"
 
-#: modemdetails.cpp:415 package/contents/ui/Modem.qml:284
+#: modemdetails.cpp:415 package/contents/ui/Modem.qml:268
 #: package/contents/ui/Sim.qml:148
 #, kde-format
 msgid "No"
@@ -493,192 +493,177 @@ msgstr "Bara 3G"
 msgid "Only 2G"
 msgstr "Bara 2G"
 
-#: package/contents/ui/main.qml:39
+#: package/contents/ui/main.qml:38
 #, kde-format
 msgid "Modem not available"
 msgstr "Modem inte tillgängligt"
 
-#: package/contents/ui/main.qml:81
+#: package/contents/ui/main.qml:80
 #, kde-format
 msgid "Mobile data"
 msgstr "Mobildata"
 
-#: package/contents/ui/main.qml:82
+#: package/contents/ui/main.qml:81
 #, kde-format
 msgid "Whether mobile data is enabled."
 msgstr "Om mobildata är aktiverad."
 
-#: package/contents/ui/main.qml:103
+#: package/contents/ui/main.qml:102
 #, kde-format
 msgid "Data Usage"
 msgstr "Dataanvändning"
 
-#: package/contents/ui/main.qml:104
+#: package/contents/ui/main.qml:103
 #, kde-format
 msgid "View data usage."
 msgstr "Visa dataanvändning."
 
-#: package/contents/ui/main.qml:120 package/contents/ui/Sim.qml:21
+#: package/contents/ui/main.qml:119 package/contents/ui/Sim.qml:21
 #, kde-format
 msgid "SIM"
 msgstr "SIM-kort"
 
-#: package/contents/ui/main.qml:120
+#: package/contents/ui/main.qml:119
 #, kde-format
 msgid "SIMs"
 msgstr "SIM-kort"
 
-#: package/contents/ui/main.qml:140
+#: package/contents/ui/main.qml:139
 #, kde-format
 msgid "SIM %1"
 msgstr "SIM-kort %1"
 
-#: package/contents/ui/main.qml:141
+#: package/contents/ui/main.qml:140
 #, kde-format
 msgid "View SIM %1 details."
 msgstr "Visa information om SIM-kort %1"
 
-#: package/contents/ui/Modem.qml:20
+#: package/contents/ui/Modem.qml:19
 #, kde-format
 msgid "Modem %1"
 msgstr "Modem %1"
 
-#: package/contents/ui/Modem.qml:45
+#: package/contents/ui/Modem.qml:44
 #, kde-format
 msgid "Modem Control"
 msgstr "Modemstyrning"
 
-#: package/contents/ui/Modem.qml:54
-#, kde-format
-msgid "Modem State"
-msgstr "Modemtillstånd"
-
-#: package/contents/ui/Modem.qml:57
-#, kde-format
-msgid "Disable Modem"
-msgstr "Inaktivera modem"
-
-#: package/contents/ui/Modem.qml:57
-#, kde-format
-msgid "Enable Modem"
-msgstr "Aktivera modem"
-
-#: package/contents/ui/Modem.qml:76
+#: package/contents/ui/Modem.qml:60
 #, kde-format
 msgid "Modem Restart"
 msgstr "Omstart av modem"
 
-#: package/contents/ui/Modem.qml:79
+#: package/contents/ui/Modem.qml:63
 #, kde-format
 msgid "Force Modem Restart"
 msgstr "Tvinga omstart av modem"
 
-#: package/contents/ui/Modem.qml:95 package/contents/ui/Sim.qml:127
+#: package/contents/ui/Modem.qml:79 package/contents/ui/Sim.qml:127
 #, kde-format
 msgid "Modem Details"
 msgstr "Modeminformation"
 
-#: package/contents/ui/Modem.qml:108
+#: package/contents/ui/Modem.qml:92
 #, kde-format
 msgid "Access Technologies"
 msgstr "Åtkomstteknologier"
 
-#: package/contents/ui/Modem.qml:133
+#: package/contents/ui/Modem.qml:117
 #, kde-format
 msgid "IMEI"
 msgstr "IMEI"
 
-#: package/contents/ui/Modem.qml:159
+#: package/contents/ui/Modem.qml:143
 #, kde-format
 msgid "Manufacturer"
 msgstr "Tillverkare"
 
-#: package/contents/ui/Modem.qml:172
+#: package/contents/ui/Modem.qml:156
 #, kde-format
 msgid "Model"
 msgstr "Modell"
 
-#: package/contents/ui/Modem.qml:193
+#: package/contents/ui/Modem.qml:177
 #, kde-format
 msgid "Owned Numbers:"
 msgstr "Ägda nummer:"
 
-#: package/contents/ui/Modem.qml:218
+#: package/contents/ui/Modem.qml:202
 #, kde-format
 msgid "Revision"
 msgstr "Utgåva"
 
-#: package/contents/ui/Modem.qml:231
+#: package/contents/ui/Modem.qml:215
 #, kde-format
 msgid "Signal Quality"
 msgstr "Signalkvalitet"
 
-#: package/contents/ui/Modem.qml:244
+#: package/contents/ui/Modem.qml:228
 #, kde-format
 msgid "State"
 msgstr "Delstat"
 
-#: package/contents/ui/Modem.qml:257
+#: package/contents/ui/Modem.qml:241
 #, kde-format
 msgid "Failure Reason"
 msgstr "Orsak för misslyckande"
 
-#: package/contents/ui/Modem.qml:270
+#: package/contents/ui/Modem.qml:254
 #, kde-format
 msgid "Registration State"
 msgstr "Registreringstillstånd"
 
-#: package/contents/ui/Modem.qml:283
+#: package/contents/ui/Modem.qml:267
 #, kde-format
 msgid "Roaming"
 msgstr "Roaming"
 
-#: package/contents/ui/Modem.qml:296
+#: package/contents/ui/Modem.qml:280
 #, kde-format
 msgid "Firmware Version"
 msgstr "Inbyggd programvaruversion"
 
-#: package/contents/ui/Modem.qml:309
+#: package/contents/ui/Modem.qml:293
 #, kde-format
 msgid "Interface Name"
 msgstr "Gränssnittsnamn"
 
-#: package/contents/ui/Modem.qml:322
+#: package/contents/ui/Modem.qml:306
 #, kde-format
 msgid "Metered"
 msgstr "Uppmätt"
 
-#: package/contents/ui/Modem.qml:335
+#: package/contents/ui/Modem.qml:319
 #, kde-format
 msgid "Active NetworkManager Connection"
 msgstr "Aktiv anslutning i nätverkshanterare"
 
-#: package/contents/ui/Modem.qml:348
+#: package/contents/ui/Modem.qml:332
 #, kde-format
 msgid "Device"
 msgstr "Enhet"
 
-#: package/contents/ui/Modem.qml:361
+#: package/contents/ui/Modem.qml:345
 #, kde-format
 msgid "Device ID"
 msgstr "Enhetsidentifierare"
 
-#: package/contents/ui/Modem.qml:382
+#: package/contents/ui/Modem.qml:366
 #, kde-format
 msgid "Drivers:"
 msgstr "Drivrutiner:"
 
-#: package/contents/ui/Modem.qml:407
+#: package/contents/ui/Modem.qml:391
 #, kde-format
 msgid "Plugin"
 msgstr "Insticksprogram"
 
-#: package/contents/ui/Modem.qml:420
+#: package/contents/ui/Modem.qml:404
 #, kde-format
 msgid "Power State"
 msgstr "Strömtillstånd"
 
-#: package/contents/ui/Modem.qml:433
+#: package/contents/ui/Modem.qml:417
 #, kde-format
 msgid "SIM Path"
 msgstr "SIM-kortsökväg"
@@ -837,77 +822,77 @@ msgstr ""
 msgid "Lock SIM"
 msgstr "Lås SIM-kort"
 
-#: package/contents/ui/SimLock.qml:91
+#: package/contents/ui/SimLock.qml:93
 #, kde-format
 msgid "Disable SIM Lock"
 msgstr "Inaktivera SIM-låsning"
 
-#: package/contents/ui/SimLock.qml:92
+#: package/contents/ui/SimLock.qml:94
 #, kde-format
 msgid "Disable the SIM lock feature and remove the passcode on the SIM."
 msgstr "Inaktivera SIM-låsfunktionen och ta bort SIM-kortets kod."
 
-#: package/contents/ui/SimLock.qml:105
+#: package/contents/ui/SimLock.qml:107
 #, kde-format
 msgid "Change PIN"
 msgstr "Ändra PIN-kod"
 
-#: package/contents/ui/SimLock.qml:106
+#: package/contents/ui/SimLock.qml:108
 #, kde-format
 msgid "Change the passcode set on the SIM."
 msgstr "Ändra SIM-kortets inställda kod."
 
-#: package/contents/ui/SimLock.qml:120
+#: package/contents/ui/SimLock.qml:123
 #, kde-format
 msgid "Unlock SIM"
 msgstr "Lås upp SIM-kort"
 
-#: package/contents/ui/SimLock.qml:128
+#: package/contents/ui/SimLock.qml:131
 #, kde-format
 msgid "Attempts left: %1"
 msgstr "Försök kvar: %1"
 
-#: package/contents/ui/SimLock.qml:132
+#: package/contents/ui/SimLock.qml:135
 #, kde-format
 msgid "Enter PIN"
 msgstr "Ange PIN-kod"
 
-#: package/contents/ui/SimLock.qml:140
+#: package/contents/ui/SimLock.qml:143
 #, kde-format
 msgid "Change SIM PIN"
 msgstr "Ändra SIM-kortets PIN-kod"
 
-#: package/contents/ui/SimLock.qml:159 package/contents/ui/SimLock.qml:223
+#: package/contents/ui/SimLock.qml:162 package/contents/ui/SimLock.qml:226
 #, kde-format
 msgid "PINs don't match!"
 msgstr "PIN-koderna stämmer inte."
 
-#: package/contents/ui/SimLock.qml:165 package/contents/ui/SimLock.qml:229
+#: package/contents/ui/SimLock.qml:168 package/contents/ui/SimLock.qml:232
 #, kde-format
 msgid "PINs must be between 4 and 8 digits!"
 msgstr "PIN-koder måste vara mellan 4 och 8 siffror."
 
-#: package/contents/ui/SimLock.qml:170 package/contents/ui/SimLock.qml:197
+#: package/contents/ui/SimLock.qml:173 package/contents/ui/SimLock.qml:200
 #, kde-format
 msgid "Current PIN"
 msgstr "Nuvarande PIN-kod:"
 
-#: package/contents/ui/SimLock.qml:175 package/contents/ui/SimLock.qml:234
+#: package/contents/ui/SimLock.qml:178 package/contents/ui/SimLock.qml:237
 #, kde-format
 msgid "New PIN"
 msgstr "Ny PIN-kod"
 
-#: package/contents/ui/SimLock.qml:180 package/contents/ui/SimLock.qml:239
+#: package/contents/ui/SimLock.qml:183 package/contents/ui/SimLock.qml:242
 #, kde-format
 msgid "Confirm PIN"
 msgstr "Bekräfta PIN-kod"
 
-#: package/contents/ui/SimLock.qml:188
+#: package/contents/ui/SimLock.qml:191
 #, kde-format
 msgid "Remove SIM PIN"
 msgstr "Ta bort SIM-kortets PIN-kod"
 
-#: package/contents/ui/SimLock.qml:205
+#: package/contents/ui/SimLock.qml:208
 #, kde-format
 msgid "Add SIM PIN"
 msgstr "Lägg till PIN-kod för SIM-kort"
@@ -1021,6 +1006,15 @@ msgstr "Fel när PIN-kod skulle skickas: %1"
 #, kde-format
 msgid "Error sending the PUK: %1"
 msgstr "Fel när PUK-kod skulle skickas: %1"
+
+#~ msgid "Modem State"
+#~ msgstr "Modemtillstånd"
+
+#~ msgid "Disable Modem"
+#~ msgstr "Inaktivera modem"
+
+#~ msgid "Enable Modem"
+#~ msgstr "Aktivera modem"
 
 #~ msgid "On"
 #~ msgstr "På"

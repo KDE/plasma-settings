@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-settings\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2022-04-08 00:47+0000\n"
+"POT-Creation-Date: 2022-05-19 00:47+0000\n"
 "PO-Revision-Date: 2022-04-22 18:00+0400\n"
 "Last-Translator: Kheyyam Gojayev <xxmn77@gmail.com>\n"
 "Language-Team: Azerbaijani <kde-i18n-doc@kde.org>\n"
@@ -42,93 +42,93 @@ msgstr "Devin Lin"
 msgid "Martin Kacej"
 msgstr "Martin Kacej"
 
-#: modem.cpp:91
+#: modem.cpp:96
 #, kde-format
 msgid "Error resetting the modem: %1"
 msgstr "Modemin sıfırlanması xətası: %1"
 
-#: modem.cpp:135 modem.cpp:273
+#: modem.cpp:192 modem.cpp:330
 #, kde-format
 msgid "Error updating connection settings for %1: %2."
 msgstr "%1 üçün bağlantı ayarlarının yenilənmələsi xətası: %2."
 
-#: modem.cpp:200
+#: modem.cpp:257
 #, kde-format
 msgid "Error activating connection: %1"
 msgstr "Bağlantının aktivləşdirilməsi xətası: %1"
 
-#: modem.cpp:230
+#: modem.cpp:287
 #, kde-format
 msgid "Error adding connection: %1"
 msgstr "Bağlantının əlavə olunması xətası: %1"
 
-#: modem.cpp:244
+#: modem.cpp:301
 #, kde-format
 msgid "Error removing connection: %1"
 msgstr "Bağlantının silinməsi xətası: %1"
 
-#: modem.cpp:357 modemdetails.cpp:112 modemdetails.cpp:214 modemdetails.cpp:246
+#: modem.cpp:414 modemdetails.cpp:112 modemdetails.cpp:214 modemdetails.cpp:246
 #: modemdetails.cpp:411 modemdetails.cpp:441
 #, kde-format
 msgid "Unknown"
 msgstr "Bilinməyən"
 
-#: modem.cpp:359
+#: modem.cpp:416
 #, kde-format
 msgid "Unmanaged"
 msgstr "İdarə olunmayan"
 
-#: modem.cpp:361
+#: modem.cpp:418
 #, kde-format
 msgid "Unavailable"
 msgstr "Əlçatmaz"
 
-#: modem.cpp:363
+#: modem.cpp:420
 #, kde-format
 msgid "Disconnected"
 msgstr "Kəsilmiş bağlantı"
 
-#: modem.cpp:365
+#: modem.cpp:422
 #, kde-format
 msgid "Preparing"
 msgstr "Hazırlanır"
 
-#: modem.cpp:367
+#: modem.cpp:424
 #, kde-format
 msgid "ConfiguringHardware"
 msgstr "AvadanlığınTənzimlənməsi"
 
-#: modem.cpp:369
+#: modem.cpp:426
 #, kde-format
 msgid "NeedAuth"
 msgstr "Doğrulama_Lazım"
 
-#: modem.cpp:371
+#: modem.cpp:428
 #, kde-format
 msgid "ConfiguringIp"
 msgstr "İP_Doğrulaması"
 
-#: modem.cpp:373
+#: modem.cpp:430
 #, kde-format
 msgid "CheckingIp"
 msgstr "İP_Yoxlanışı"
 
-#: modem.cpp:375
+#: modem.cpp:432
 #, kde-format
 msgid "WaitingForSecondaries"
 msgstr "İkincilər_üçün_gözləmə"
 
-#: modem.cpp:377
+#: modem.cpp:434
 #, kde-format
 msgid "Activated"
 msgstr "İşə salındı"
 
-#: modem.cpp:379
+#: modem.cpp:436
 #, kde-format
 msgid "Deactivating"
 msgstr "Dayandırılır"
 
-#: modem.cpp:381 modemdetails.cpp:244
+#: modem.cpp:438 modemdetails.cpp:244
 #, kde-format
 msgid "Failed"
 msgstr "Alınmadı"
@@ -253,7 +253,7 @@ msgstr "Söndürülür"
 msgid "Enabling"
 msgstr "İşə düşür"
 
-#: modemdetails.cpp:258 package/contents/ui/Modem.qml:146
+#: modemdetails.cpp:258 package/contents/ui/Modem.qml:130
 #, kde-format
 msgid "Enabled"
 msgstr "İşə düşdü"
@@ -368,13 +368,13 @@ msgstr "Operatorun yerli məhdud xidmətinə giriş üçün əlavə olunur."
 msgid "Scanning networks failed: %1"
 msgstr "Şəbəkə axtarışı uğursuz oldu: %1"
 
-#: modemdetails.cpp:413 package/contents/ui/Modem.qml:284
+#: modemdetails.cpp:413 package/contents/ui/Modem.qml:268
 #: package/contents/ui/Sim.qml:148
 #, kde-format
 msgid "Yes"
 msgstr "Bəli"
 
-#: modemdetails.cpp:415 package/contents/ui/Modem.qml:284
+#: modemdetails.cpp:415 package/contents/ui/Modem.qml:268
 #: package/contents/ui/Sim.qml:148
 #, kde-format
 msgid "No"
@@ -493,192 +493,177 @@ msgstr "Yalnız 3G"
 msgid "Only 2G"
 msgstr "Yalnız 2G"
 
-#: package/contents/ui/main.qml:39
+#: package/contents/ui/main.qml:38
 #, kde-format
 msgid "Modem not available"
 msgstr "Modem əlçatan deyil"
 
-#: package/contents/ui/main.qml:81
+#: package/contents/ui/main.qml:80
 #, kde-format
 msgid "Mobile data"
 msgstr "Mobil internet"
 
-#: package/contents/ui/main.qml:82
+#: package/contents/ui/main.qml:81
 #, kde-format
 msgid "Whether mobile data is enabled."
 msgstr "Mobil internetin qoşulub qoşulmaması."
 
-#: package/contents/ui/main.qml:103
+#: package/contents/ui/main.qml:102
 #, kde-format
 msgid "Data Usage"
 msgstr "Verilənlərin istifadəsi"
 
-#: package/contents/ui/main.qml:104
+#: package/contents/ui/main.qml:103
 #, kde-format
 msgid "View data usage."
 msgstr "Verilənlərin istifadəsinə baxış."
 
-#: package/contents/ui/main.qml:120 package/contents/ui/Sim.qml:21
+#: package/contents/ui/main.qml:119 package/contents/ui/Sim.qml:21
 #, kde-format
 msgid "SIM"
 msgstr "SIM kart"
 
-#: package/contents/ui/main.qml:120
+#: package/contents/ui/main.qml:119
 #, kde-format
 msgid "SIMs"
 msgstr "SIM kartlar"
 
-#: package/contents/ui/main.qml:140
+#: package/contents/ui/main.qml:139
 #, kde-format
 msgid "SIM %1"
 msgstr "SIM %1"
 
-#: package/contents/ui/main.qml:141
+#: package/contents/ui/main.qml:140
 #, kde-format
 msgid "View SIM %1 details."
 msgstr "SİM %1 məlumatları."
 
-#: package/contents/ui/Modem.qml:20
+#: package/contents/ui/Modem.qml:19
 #, kde-format
 msgid "Modem %1"
 msgstr "Modem %1"
 
-#: package/contents/ui/Modem.qml:45
+#: package/contents/ui/Modem.qml:44
 #, kde-format
 msgid "Modem Control"
 msgstr "Modemin idarəsi"
 
-#: package/contents/ui/Modem.qml:54
-#, kde-format
-msgid "Modem State"
-msgstr "Modemin vəziyyəti"
-
-#: package/contents/ui/Modem.qml:57
-#, kde-format
-msgid "Disable Modem"
-msgstr "Modemi söndürün"
-
-#: package/contents/ui/Modem.qml:57
-#, kde-format
-msgid "Enable Modem"
-msgstr "Modemi qoşun"
-
-#: package/contents/ui/Modem.qml:76
+#: package/contents/ui/Modem.qml:60
 #, kde-format
 msgid "Modem Restart"
 msgstr "Modemi yenidən başladın"
 
-#: package/contents/ui/Modem.qml:79
+#: package/contents/ui/Modem.qml:63
 #, kde-format
 msgid "Force Modem Restart"
 msgstr "Modemi məcburi yenidən başladın"
 
-#: package/contents/ui/Modem.qml:95 package/contents/ui/Sim.qml:127
+#: package/contents/ui/Modem.qml:79 package/contents/ui/Sim.qml:127
 #, kde-format
 msgid "Modem Details"
 msgstr "Modem təfərratları"
 
-#: package/contents/ui/Modem.qml:108
+#: package/contents/ui/Modem.qml:92
 #, kde-format
 msgid "Access Technologies"
 msgstr "Giriş texnologiyası"
 
-#: package/contents/ui/Modem.qml:133
+#: package/contents/ui/Modem.qml:117
 #, kde-format
 msgid "IMEI"
 msgstr "IMEI"
 
-#: package/contents/ui/Modem.qml:159
+#: package/contents/ui/Modem.qml:143
 #, kde-format
 msgid "Manufacturer"
 msgstr "İstehsalçı"
 
-#: package/contents/ui/Modem.qml:172
+#: package/contents/ui/Modem.qml:156
 #, kde-format
 msgid "Model"
 msgstr "Model"
 
-#: package/contents/ui/Modem.qml:193
+#: package/contents/ui/Modem.qml:177
 #, kde-format
 msgid "Owned Numbers:"
 msgstr "Şəxsi nömrələr:"
 
-#: package/contents/ui/Modem.qml:218
+#: package/contents/ui/Modem.qml:202
 #, kde-format
 msgid "Revision"
 msgstr "Buraxılış"
 
-#: package/contents/ui/Modem.qml:231
+#: package/contents/ui/Modem.qml:215
 #, kde-format
 msgid "Signal Quality"
 msgstr "Siqnal keyfiyyəti"
 
-#: package/contents/ui/Modem.qml:244
+#: package/contents/ui/Modem.qml:228
 #, kde-format
 msgid "State"
 msgstr "Vəziyyət"
 
-#: package/contents/ui/Modem.qml:257
+#: package/contents/ui/Modem.qml:241
 #, kde-format
 msgid "Failure Reason"
 msgstr "Xəta səbəbi"
 
-#: package/contents/ui/Modem.qml:270
+#: package/contents/ui/Modem.qml:254
 #, kde-format
 msgid "Registration State"
 msgstr "Qeydiyyat vəziyyəti"
 
-#: package/contents/ui/Modem.qml:283
+#: package/contents/ui/Modem.qml:267
 #, kde-format
 msgid "Roaming"
 msgstr "Rominq"
 
-#: package/contents/ui/Modem.qml:296
+#: package/contents/ui/Modem.qml:280
 #, kde-format
 msgid "Firmware Version"
 msgstr "İş çərçivəsi versiyası"
 
-#: package/contents/ui/Modem.qml:309
+#: package/contents/ui/Modem.qml:293
 #, kde-format
 msgid "Interface Name"
 msgstr "Interfeysin adı"
 
-#: package/contents/ui/Modem.qml:322
+#: package/contents/ui/Modem.qml:306
 #, kde-format
 msgid "Metered"
 msgstr "Məhdud"
 
-#: package/contents/ui/Modem.qml:335
+#: package/contents/ui/Modem.qml:319
 #, kde-format
 msgid "Active NetworkManager Connection"
 msgstr "İşlək şəbəkə meneceri bağlantısı"
 
-#: package/contents/ui/Modem.qml:348
+#: package/contents/ui/Modem.qml:332
 #, kde-format
 msgid "Device"
 msgstr "Cihaz"
 
-#: package/contents/ui/Modem.qml:361
+#: package/contents/ui/Modem.qml:345
 #, kde-format
 msgid "Device ID"
 msgstr "Cihaz İD-si"
 
-#: package/contents/ui/Modem.qml:382
+#: package/contents/ui/Modem.qml:366
 #, kde-format
 msgid "Drivers:"
 msgstr "Sürücülər:"
 
-#: package/contents/ui/Modem.qml:407
+#: package/contents/ui/Modem.qml:391
 #, kde-format
 msgid "Plugin"
 msgstr "Modul"
 
-#: package/contents/ui/Modem.qml:420
+#: package/contents/ui/Modem.qml:404
 #, kde-format
 msgid "Power State"
 msgstr "El. qidalanma vəziyyəti"
 
-#: package/contents/ui/Modem.qml:433
+#: package/contents/ui/Modem.qml:417
 #, kde-format
 msgid "SIM Path"
 msgstr "SİM yolu"
@@ -838,77 +823,77 @@ msgstr ""
 msgid "Lock SIM"
 msgstr "SİM-i kilidləyin"
 
-#: package/contents/ui/SimLock.qml:91
+#: package/contents/ui/SimLock.qml:93
 #, kde-format
 msgid "Disable SIM Lock"
 msgstr "SİM kilidini söndürün"
 
-#: package/contents/ui/SimLock.qml:92
+#: package/contents/ui/SimLock.qml:94
 #, kde-format
 msgid "Disable the SIM lock feature and remove the passcode on the SIM."
 msgstr "SİM kilidi funksiyasını söndürün və SİM şifrəsini ləğv edin."
 
-#: package/contents/ui/SimLock.qml:105
+#: package/contents/ui/SimLock.qml:107
 #, kde-format
 msgid "Change PIN"
 msgstr "PİN kodu dəyişin"
 
-#: package/contents/ui/SimLock.qml:106
+#: package/contents/ui/SimLock.qml:108
 #, kde-format
 msgid "Change the passcode set on the SIM."
 msgstr "SİM kart şifrəsini dəyişin."
 
-#: package/contents/ui/SimLock.qml:120
+#: package/contents/ui/SimLock.qml:123
 #, kde-format
 msgid "Unlock SIM"
 msgstr "SİM-i kiliddən çıxarın"
 
-#: package/contents/ui/SimLock.qml:128
+#: package/contents/ui/SimLock.qml:131
 #, kde-format
 msgid "Attempts left: %1"
 msgstr "Qalan cəhd sayı: %1"
 
-#: package/contents/ui/SimLock.qml:132
+#: package/contents/ui/SimLock.qml:135
 #, kde-format
 msgid "Enter PIN"
 msgstr "PİN daxil edin"
 
-#: package/contents/ui/SimLock.qml:140
+#: package/contents/ui/SimLock.qml:143
 #, kde-format
 msgid "Change SIM PIN"
 msgstr "SİM PİN kodunu dəyişin"
 
-#: package/contents/ui/SimLock.qml:159 package/contents/ui/SimLock.qml:223
+#: package/contents/ui/SimLock.qml:162 package/contents/ui/SimLock.qml:226
 #, kde-format
 msgid "PINs don't match!"
 msgstr "PİN kodlar eyni olmadı!"
 
-#: package/contents/ui/SimLock.qml:165 package/contents/ui/SimLock.qml:229
+#: package/contents/ui/SimLock.qml:168 package/contents/ui/SimLock.qml:232
 #, kde-format
 msgid "PINs must be between 4 and 8 digits!"
 msgstr "PİN kodlar 4 və 8 arası rəqəmlərdən olmalıdır!"
 
-#: package/contents/ui/SimLock.qml:170 package/contents/ui/SimLock.qml:197
+#: package/contents/ui/SimLock.qml:173 package/contents/ui/SimLock.qml:200
 #, kde-format
 msgid "Current PIN"
 msgstr "Hazırkı PİN"
 
-#: package/contents/ui/SimLock.qml:175 package/contents/ui/SimLock.qml:234
+#: package/contents/ui/SimLock.qml:178 package/contents/ui/SimLock.qml:237
 #, kde-format
 msgid "New PIN"
 msgstr "Yeni PİN"
 
-#: package/contents/ui/SimLock.qml:180 package/contents/ui/SimLock.qml:239
+#: package/contents/ui/SimLock.qml:183 package/contents/ui/SimLock.qml:242
 #, kde-format
 msgid "Confirm PIN"
 msgstr "PİN kodu təsdiq edin"
 
-#: package/contents/ui/SimLock.qml:188
+#: package/contents/ui/SimLock.qml:191
 #, kde-format
 msgid "Remove SIM PIN"
 msgstr "SİM PİN kodunu silin"
 
-#: package/contents/ui/SimLock.qml:205
+#: package/contents/ui/SimLock.qml:208
 #, kde-format
 msgid "Add SIM PIN"
 msgstr "SİM PİN kodu əlavə edin"
@@ -1022,6 +1007,15 @@ msgstr "PİN kod göndrilərkən xəta: %1"
 #, kde-format
 msgid "Error sending the PUK: %1"
 msgstr "PUK kod göndərilərkən xəta: %1"
+
+#~ msgid "Modem State"
+#~ msgstr "Modemin vəziyyəti"
+
+#~ msgid "Disable Modem"
+#~ msgstr "Modemi söndürün"
+
+#~ msgid "Enable Modem"
+#~ msgstr "Modemi qoşun"
 
 #~ msgid "On"
 #~ msgstr "Açıq"
