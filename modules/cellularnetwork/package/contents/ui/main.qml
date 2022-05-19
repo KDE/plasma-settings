@@ -1,10 +1,9 @@
-/*
-    SPDX-FileCopyrightText: 2018 Martin Kacej <m.kacej@atlas.sk>
-    SPDX-FileCopyrightText: 2020 Dimitris Kardarakos <dimkard@posteo.net>
-    SPDX-FileCopyrightText: 2021-2022 Devin Lin <espidev@gmail.com>
-
-    SPDX-License-Identifier: GPL-3.0-or-later
-*/
+//
+// SPDX-FileCopyrightText: 2018 Martin Kacej <m.kacej@atlas.sk>
+// SPDX-FileCopyrightText: 2020 Dimitris Kardarakos <dimkard@posteo.net>
+// SPDX-FileCopyrightText: 2021-2022 Devin Lin <espidev@gmail.com>
+//
+// SPDX-License-Identifier: GPL-3.0-or-later
 
 import QtQuick 2.12
 import QtQuick.Layouts 1.2
@@ -81,12 +80,12 @@ KCM.SimpleKCM {
                     text: i18n("Mobile data")
                     description: i18n("Whether mobile data is enabled.")
                     
-                    enabled: enabledConnections.wwanHwEnabled && availableDevices.modemDeviceAvailable
+                    enabled: kcm.selectedModem
                     
-                    checked: enabledConnections.wwanEnabled
+                    checked: kcm.selectedModem && kcm.selectedModem.enabled
                     onCheckedChanged: {
-                        if (enabledConnections.wwanEnabled != checked) {
-                            nmHandler.enableWwan(checked)
+                        if (kcm.selectedModem.enabled != checked) {
+                            kcm.selectedModem.enabled = !checked
                         }
                     }
                 }

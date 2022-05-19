@@ -1,8 +1,7 @@
-/*
-    SPDX-FileCopyrightText: 2021 Devin Lin <espidev@gmail.com>
-
-    SPDX-License-Identifier: GPL-3.0-or-later
-*/
+//
+// SPDX-FileCopyrightText: 2021 Devin Lin <espidev@gmail.com>
+//
+// SPDX-License-Identifier: GPL-3.0-or-later
 
 #pragma once
 
@@ -40,6 +39,7 @@ class Modem : public QObject
     Q_PROPERTY(QString uni READ uni NOTIFY uniChanged)
     Q_PROPERTY(QString displayId READ displayId NOTIFY displayIdChanged)
 
+    Q_PROPERTY(bool enabled READ enabled WRITE setEnabled NOTIFY enabledChanged)
     Q_PROPERTY(bool isRoaming READ isRoaming WRITE setIsRoaming NOTIFY isRoamingChanged)
     Q_PROPERTY(bool hasSim READ hasSim NOTIFY hasSimChanged)
     Q_PROPERTY(QList<ProfileSettings *> profiles READ profileList NOTIFY profileListChanged)
@@ -58,7 +58,9 @@ public:
     QString activeConnectionUni();
 
     Q_INVOKABLE void reset();
-    Q_INVOKABLE void setEnabled(bool enabled);
+
+    bool enabled();
+    void setEnabled(bool enabled);
 
     bool isRoaming();
     void setIsRoaming(bool roaming);
@@ -85,6 +87,7 @@ Q_SIGNALS:
     void displayIdChanged();
     void activeConnectionUniChanged();
 
+    void enabledChanged();
     void isRoamingChanged();
     void simsChanged();
     void hasSimChanged();

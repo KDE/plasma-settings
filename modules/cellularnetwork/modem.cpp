@@ -1,8 +1,7 @@
-/*
-    SPDX-FileCopyrightText: 2021 Devin Lin <espidev@gmail.com>
-
-    SPDX-License-Identifier: GPL-3.0-or-later
-*/
+//
+// SPDX-FileCopyrightText: 2021 Devin Lin <espidev@gmail.com>
+//
+// SPDX-License-Identifier: GPL-3.0-or-later
 
 #include "modem.h"
 
@@ -24,6 +23,12 @@ Modem::Modem(QObject *parent, ModemManager::ModemDevice::Ptr mmDevice, NetworkMa
     connect(m_mmDevice.data(), &ModemManager::ModemDevice::simRemoved, this, [this]() -> void {
         Q_EMIT simsChanged();
         Q_EMIT hasSimChanged();
+    });
+    connect(m_nmDevice.data(), &NetworkManager::Device::autoconnectChanged, this, [this]() {
+        Q_EMIT enabledChanged();
+    });
+    connect(m_nmDevice.data(), &NetworkManager::Device::stateChanged, this, [this](auto, auto, auto) {
+        Q_EMIT enabledChanged();
     });
 
     // this is guaranteed to be a GSM modem
@@ -92,14 +97,66 @@ void Modem::reset()
     }
 }
 
+bool Modem::enabled()
+{
+    // no modem -> no mobile data -> report disabled
+    if (!m_nmDevice) {
+        return false;
+    }
+
+    // mobile data already activated -> report enabled
+    if (m_nmDevice->state() == NetworkManager::Device::Activated) {
+        return true;
+    }
+
+    // autoconnect disabled on the entire modem -> report disabled
+    if (!m_nmDevice->autoconnect()) {
+        return false;
+    }
+
+    // at least one connection set to autoconnect -> report enabled
+    for (NetworkManager::Connection::Ptr con : m_nmDevice->availableConnections()) {
+        if (con->settings()->autoconnect()) {
+            return true;
+        }
+    }
+
+    // modem, but no connection, set to autoconnect -> report disabled
+    return false;
+}
+
 void Modem::setEnabled(bool enabled)
 {
-    if (enabled != m_mmInterface->isEnabled()) {
-        qDebug() << (enabled ? QStringLiteral("Enabling") : QStringLiteral("Disabling")) << QStringLiteral("the modem...");
-        QDBusPendingReply<void> reply = m_mmInterface->setEnabled(enabled);
-        reply.waitForFinished();
-        if (reply.isError()) {
-            qDebug() << QStringLiteral("Error setting the enabled state of the modem: ") << reply.error().message();
+    if (!enabled) {
+        m_nmDevice->setAutoconnect(false);
+        // we need to also set all connections to not autoconnect (#182)
+        for (NetworkManager::Connection::Ptr con : m_nmDevice->availableConnections()) {
+            con->settings()->setAutoconnect(false);
+            con->update(con->settings()->toMap());
+        }
+        m_nmDevice->disconnectInterface().waitForFinished();
+    } else {
+        m_nmDevice->setAutoconnect(true);
+        // activate the connection that was last used
+        QDateTime latestTimestamp;
+        NetworkManager::Connection::Ptr latestCon;
+        for (NetworkManager::Connection::Ptr con : m_nmDevice->availableConnections()) {
+            QDateTime timestamp = con->settings()->timestamp();
+            // if con was not used yet, skip it, otherwise:
+            // if we have no latestTimestamp yet, con is the latest
+            // otherwise, compare the timestamps
+            // in case of a tie, use the first connection that was found
+            if (!timestamp.isNull() && (latestTimestamp.isNull() || timestamp > latestTimestamp)) {
+                latestTimestamp = timestamp;
+                latestCon = con;
+            }
+        }
+        // if we found the last used connection
+        if (!latestCon.isNull()) {
+            // set it to autoconnect and connect it immediately
+            latestCon->settings()->setAutoconnect(true);
+            latestCon->update(latestCon->settings()->toMap());
+            NetworkManager::activateConnection(latestCon->path(), m_nmDevice->uni(), "");
         }
     }
 }

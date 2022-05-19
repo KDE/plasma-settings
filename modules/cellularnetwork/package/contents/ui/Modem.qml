@@ -1,8 +1,7 @@
-/*
-    SPDX-FileCopyrightText: 2021 Devin Lin <espidev@gmail.com>
-
-    SPDX-License-Identifier: GPL-3.0-or-later
-*/
+//
+// SPDX-FileCopyrightText: 2021 Devin Lin <espidev@gmail.com>
+//
+// SPDX-License-Identifier: GPL-3.0-or-later
 
 import QtQuick 2.12
 import QtQuick.Layouts 1.2
@@ -43,21 +42,6 @@ Kirigami.ScrollablePage {
                 
                 MobileForm.FormCardHeader {
                     title: i18n("Modem Control")
-                }
-                
-                MobileForm.AbstractFormDelegate {
-                    id: toggleModemButton
-                    Layout.fillWidth: true
-                    contentItem: RowLayout {
-                        Controls.Label {
-                            Layout.fillWidth: true
-                            text: i18n("Modem State")
-                        }
-                        Controls.Button {
-                            text: modem.details.isEnabled ? i18n("Disable Modem") : i18n("Enable Modem")
-                            onClicked: modem.setEnabled(!modem.details.isEnabled)
-                        }
-                    }
                 }
                 
                 Kirigami.Separator {
