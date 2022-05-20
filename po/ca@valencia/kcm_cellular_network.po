@@ -304,7 +304,7 @@ msgstr "Es requereix una SIM però falta."
 #: modemdetails.cpp:283
 #, kde-format
 msgid "SIM is available but unusable."
-msgstr "La SIM és disponible, però no es pot utilitzar."
+msgstr "La SIM està disponible, però no es pot utilitzar."
 
 #: modemdetails.cpp:306
 #, kde-format
@@ -1011,12 +1011,3 @@ msgstr "S'ha produït un error en enviar el PIN: %1"
 #, kde-format
 msgid "Error sending the PUK: %1"
 msgstr "S'ha produït un error en enviar el PUK: %1"
-
-#~ msgid "Modem State"
-#~ msgstr "Estat del mòdem"
-
-#~ msgid "Disable Modem"
-#~ msgstr "Desactiva el mòdem"
-
-#~ msgid "Enable Modem"
-#~ msgstr "Activa el mòdem"
