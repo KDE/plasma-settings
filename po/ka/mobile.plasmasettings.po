@@ -1,0 +1,115 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR This file is copyright:
+# This file is distributed under the same license as the plasma-settings package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: plasma-settings\n"
+"Report-Msgid-Bugs-To: https://bugs.kde.org\n"
+"POT-Creation-Date: 2022-01-26 00:47+0000\n"
+"PO-Revision-Date: 2022-05-24 15:09+0200\n"
+"Last-Translator: Temuri Doghonadze <temuri.doghonadze@gmail.com>\n"
+"Language-Team: Georgian <kde-i18n-doc@kde.org>\n"
+"Language: ka\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+"X-Generator: Poedit 3.0.1\n"
+
+#: src/main.cpp:46 src/package/contents/ui/ModulesListPage.qml:17
+#: src/package/contents/ui/Sidebar.qml:41
+#, kde-format
+msgid "Settings"
+msgstr "პარამეტრები"
+
+#: src/main.cpp:48
+#, kde-format
+msgid "Touch-friendly settings application."
+msgstr "მორგების  სენსორულ ეკრანთან თავსებადი აპლიკაცია."
+
+#: src/main.cpp:50
+#, kde-format
+msgid "Copyright 2011-2015, Sebastian Kügler"
+msgstr "2011-2015, სებასტიან კიუგლერი, ყველა უფლება დაცულია"
+
+#: src/main.cpp:51
+#, kde-format
+msgid "Sebastian Kügler"
+msgstr "სებასტიან კუგლერი"
+
+#: src/main.cpp:51 src/main.cpp:52
+#, kde-format
+msgid "Maintainer"
+msgstr "წამყვანი პროგრამისტი"
+
+#: src/main.cpp:52
+#, kde-format
+msgid "Marco Martin"
+msgstr "მაკრო მარტინი"
+
+#: src/main.cpp:60
+#, kde-format
+msgid "List available settings modules"
+msgstr "მორგების ხელმისაწვდომი მოდულების სია"
+
+#: src/main.cpp:63
+#, kde-format
+msgid ""
+"Limit to modules suitable for <formfactor>, e.g. handset, tablet, "
+"mediacenter, desktop, test, all (default handset)"
+msgstr ""
+"შეზღუდეთ მოდულები თქვენთვის შესაბამისი <ფორმფაქტორისთვის>, მაგ. ტელეფონი, "
+"სამუშაო კომპიუტერი და ა.შ."
+
+#: src/main.cpp:64
+#, kde-format
+msgid "formfactor"
+msgstr "ფორმფაქტორი"
+
+#: src/main.cpp:65
+#, kde-format
+msgid "Settings module to open"
+msgstr "გასახსნელი პარამეტრების მოდული"
+
+#: src/main.cpp:65
+#, kde-format
+msgid "modulename"
+msgstr "მოდულის სახელი"
+
+#: src/main.cpp:66
+#, kde-format
+msgid "Only show a single module, requires --module"
+msgstr "მხოლოდ 1 მოდულის ჩვენება. მოითხოვს --module"
+
+#: src/main.cpp:67
+#, kde-format
+msgid "Start window fullscreen"
+msgstr "ფანჯრის მთელ ეკრანზე ჩვენება"
+
+#: src/main.cpp:68
+#, kde-format
+msgid "Package to use for the UI (default org.kde.mobile.settings)"
+msgstr "UI-სთვის გამოყენებული პაკეტი (ნაგულისხმები: org.kde.module.settings)"
+
+#: src/main.cpp:68
+#, kde-format
+msgid "packagename"
+msgstr "პაკეტის სახელი"
+
+#: src/package/contents/ui/DefaultPage.qml:29
+#, kde-format
+msgid "System Settings"
+msgstr "სისტემის მორგება"
+
+#: src/package/contents/ui/DefaultPage.qml:35
+#, kde-format
+msgid "Open a configuration page from the sidebar."
+msgstr "გვერდითი პანელიდან მორგების გვერდის გახსნა."
+
+#: src/package/contents/ui/ModulesListPage.qml:23
+#: src/package/contents/ui/Sidebar.qml:52
+#, kde-format
+msgid "Search"
+msgstr "ძებნა"
