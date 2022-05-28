@@ -3,7 +3,7 @@
     "KPlugin": {
         "Description": "Management of cellular networks",
         "Description[az]": "Mobil şəbəkələr idarəetməsi",
-        "Description[ca@valencia]": "Gestió de xarxes de telefonia mòbil",
+        "Description[ca@valencia]": "Gestió de rets de telefonia mòbil",
         "Description[ca]": "Gestió de xarxes de telefonia mòbil",
         "Description[cs]": "Spravovat vaše mobilní sítě",
         "Description[de]": "Verwaltung von Mobilfunknetzen",
@@ -39,7 +39,7 @@
         "Icon": "smartphone",
         "Name": "Cellular Network",
         "Name[az]": "Mobil Şəbəkə",
-        "Name[ca@valencia]": "Xarxa de telefonia mòbil",
+        "Name[ca@valencia]": "Ret de telefonia mòbil",
         "Name[ca]": "Xarxa de telefonia mòbil",
         "Name[cs]": "Mobilní síť",
         "Name[de]": "Mobilfunknetz",
