@@ -99,7 +99,7 @@ msgstr "Visualització del temps"
 #: package/contents/ui/main.qml:50
 #, kde-format
 msgid "Use 24-hour clock:"
-msgstr "Utilitza un rellotge de 24 hores:"
+msgstr "Utilisa un rellotge de 24 hores:"
 
 #: package/contents/ui/main.qml:67
 #, kde-format
@@ -555,7 +555,7 @@ msgstr "Brunei"
 #, kde-format
 msgctxt "This is a city associated with particular time zone"
 msgid "Brussels"
-msgstr "Brussel·les"
+msgstr "Brusseles"
 
 #: timezonesi18n.cpp:107
 #, kde-format

@@ -63,7 +63,7 @@ msgid ""
 "Limit to modules suitable for <formfactor>, e.g. handset, tablet, "
 "mediacenter, desktop, test, all (default handset)"
 msgstr ""
-"Limita als mòduls adequats per al <factordeforma>, p. ex. telèfon, tauleta, "
+"Llimita als mòduls adequats per al <factordeforma>, p. ex. telèfon, tauleta, "
 "centre multimèdia, escriptori, prova, tot (predeterminat: telèfon)"
 
 #: src/main.cpp:64
@@ -94,7 +94,7 @@ msgstr "Inicia la finestra a pantalla completa"
 #: src/main.cpp:68
 #, kde-format
 msgid "Package to use for the UI (default org.kde.mobile.settings)"
-msgstr "Paquet a utilitzar per a la IU (predeterminat org.kde.mobile.settings)"
+msgstr "Paquet a utilisar per a la IU (predeterminat org.kde.mobile.settings)"
 
 #: src/main.cpp:68
 #, kde-format
