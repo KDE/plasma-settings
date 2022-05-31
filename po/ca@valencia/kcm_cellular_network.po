@@ -53,7 +53,7 @@ msgstr "S'ha produït un error en reiniciar el mòdem: %1"
 #, kde-format
 msgid "Error updating connection settings for %1: %2."
 msgstr ""
-"S'ha produït un error en actualitzar els paràmetres de connexió de %1: %2."
+"S'ha produït un error en actualisar els paràmetres de connexió de %1: %2."
 
 #: modem.cpp:257
 #, kde-format
@@ -104,7 +104,7 @@ msgstr "Configurant el maquinari"
 #: modem.cpp:426
 #, kde-format
 msgid "NeedAuth"
-msgstr "Cal autorització"
+msgstr "Cal autorisació"
 
 #: modem.cpp:428
 #, kde-format
@@ -234,7 +234,7 @@ msgstr "Modo de tota potència"
 #: modemdetails.cpp:248
 #, kde-format
 msgid "Initializing"
-msgstr "S'està inicialitzant"
+msgstr "S'està inicialisant"
 
 #: modemdetails.cpp:250 package/contents/ui/Sim.qml:147
 #, kde-format
