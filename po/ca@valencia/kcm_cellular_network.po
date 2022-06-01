@@ -309,7 +309,7 @@ msgstr "La SIM està disponible, pero no es pot utilisar."
 #: modemdetails.cpp:306
 #, kde-format
 msgid "Not registered, not searching for new operator to register."
-msgstr "No registrat, no se busca cap operador nou amb el qual registrar-se."
+msgstr "No registrat, no es busca cap operador nou amb el qual registrar-se."
 
 #: modemdetails.cpp:308
 #, kde-format
@@ -319,7 +319,7 @@ msgstr "S'ha registrat en la ret domèstica."
 #: modemdetails.cpp:310
 #, kde-format
 msgid "Not registered, searching for new operator to register with."
-msgstr "No registrat, se busca un operador nou amb el qual registrar-se."
+msgstr "No registrat, es busca un operador nou amb el qual registrar-se."
 
 #: modemdetails.cpp:312
 #, kde-format
