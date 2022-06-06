@@ -18,6 +18,7 @@ msgstr ""
 "X-POFile-SpellExtra: Lin Kacej HW GPRS EDGE UMTS HSDPA HSUPA HSPA CDMA\n"
 "X-POFile-SpellExtra: xRTT EVDO LTE roaming CSFB APN IMEI Roaming Firmware\n"
 "X-POFile-SpellExtra: NetworkManager IMSI EID PIN PUK PH FSIM\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
 
 #, kde-format
 msgctxt "NAME OF TRANSLATORS"
