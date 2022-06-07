@@ -659,7 +659,7 @@ msgstr "Controladors:"
 #: package/contents/ui/Modem.qml:391
 #, kde-format
 msgid "Plugin"
-msgstr "Connector"
+msgstr "Conector"
 
 #: package/contents/ui/Modem.qml:404
 #, kde-format

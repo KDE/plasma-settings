@@ -93,17 +93,17 @@ msgstr "Posa en majúscula la primera lletra de cada frase"
 #: package/contents/ui/main.qml:82
 #, kde-format
 msgid "Complete current word with first suggestion when hitting space"
-msgstr "Completa la paraula actual amb el primer suggeriment en prémer espai"
+msgstr "Completa la paraula actual amb el primer sugeriment en prémer espai"
 
 #: package/contents/ui/main.qml:89
 #, kde-format
 msgid "Suggest potential words in word ribbon"
-msgstr "Suggereix paraules potencials a la franja de paraules"
+msgstr "Sugerix paraules potencials a la franja de paraules"
 
 #: package/contents/ui/main.qml:98
 #, kde-format
 msgid "Insert a full-stop when space is pressed twice"
-msgstr "Insereix un punt quan es prema dues vegades l'espai"
+msgstr "Inserix un punt quan es prema dues vegades l'espai"
 
 #: package/contents/ui/main.qml:106
 #, kde-format
