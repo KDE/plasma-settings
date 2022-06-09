@@ -299,7 +299,7 @@ msgstr "S'ha produït un error desconegut."
 #: modemdetails.cpp:281
 #, kde-format
 msgid "SIM is required but missing."
-msgstr "Es requereix una SIM pero falta."
+msgstr "Es requerix una SIM pero falta."
 
 #: modemdetails.cpp:283
 #, kde-format
@@ -915,77 +915,77 @@ msgstr "El mòdem està desblocat."
 #: sim.cpp:71
 #, kde-format
 msgid "SIM requires the PIN code."
-msgstr "La SIM requereix el codi PIN."
+msgstr "La SIM requerix el codi PIN."
 
 #: sim.cpp:73
 #, kde-format
 msgid "SIM requires the PIN2 code."
-msgstr "La SIM requereix el codi PIN2."
+msgstr "La SIM requerix el codi PIN2."
 
 #: sim.cpp:75
 #, kde-format
 msgid "SIM requires the PUK code."
-msgstr "La SIM requereix el codi PUK."
+msgstr "La SIM requerix el codi PUK."
 
 #: sim.cpp:77
 #, kde-format
 msgid "SIM requires the PUK2 code."
-msgstr "La SIM requereix el codi PUK2."
+msgstr "La SIM requerix el codi PUK2."
 
 #: sim.cpp:79
 #, kde-format
 msgid "Modem requires the service provider PIN code."
-msgstr "El mòdem requereix el codi PIN del proveïdor de serveis."
+msgstr "El mòdem requerix el codi PIN del proveïdor de serveis."
 
 #: sim.cpp:81
 #, kde-format
 msgid "Modem requires the service provider PUK code."
-msgstr "El mòdem requereix el codi PUK del proveïdor de serveis."
+msgstr "El mòdem requerix el codi PUK del proveïdor de serveis."
 
 #: sim.cpp:83
 #, kde-format
 msgid "Modem requires the network PIN code."
-msgstr "El mòdem requereix el codi PIN de la ret."
+msgstr "El mòdem requerix el codi PIN de la ret."
 
 #: sim.cpp:85
 #, kde-format
 msgid "Modem requires the network PUK code."
-msgstr "El mòdem requereix el codi PUK de la ret."
+msgstr "El mòdem requerix el codi PUK de la ret."
 
 #: sim.cpp:87
 #, kde-format
 msgid "Modem requires the PIN code."
-msgstr "El mòdem requereix el codi PIN."
+msgstr "El mòdem requerix el codi PIN."
 
 #: sim.cpp:89
 #, kde-format
 msgid "Modem requires the corporate PIN code."
-msgstr "El mòdem requereix el codi PIN de l'empresa."
+msgstr "El mòdem requerix el codi PIN de l'empresa."
 
 #: sim.cpp:91
 #, kde-format
 msgid "Modem requires the corporate PUK code."
-msgstr "El mòdem requereix el codi PUK de l'empresa."
+msgstr "El mòdem requerix el codi PUK de l'empresa."
 
 #: sim.cpp:93
 #, kde-format
 msgid "Modem requires the PH-FSIM PIN code."
-msgstr "El mòdem requereix el codi PIN de la PH-FSIM."
+msgstr "El mòdem requerix el codi PIN de la PH-FSIM."
 
 #: sim.cpp:95
 #, kde-format
 msgid "Modem requires the PH-FSIM PUK code."
-msgstr "El mòdem requereix el codi PUK de la PH-FSIM."
+msgstr "El mòdem requerix el codi PUK de la PH-FSIM."
 
 #: sim.cpp:97
 #, kde-format
 msgid "Modem requires the network subset PIN code."
-msgstr "El mòdem requereix el codi PIN del subsegment de ret."
+msgstr "El mòdem requerix el codi PIN del subsegment de ret."
 
 #: sim.cpp:99
 #, kde-format
 msgid "Modem requires the network subset PUK code."
-msgstr "El mòdem requereix el codi PUK del subsegment de ret."
+msgstr "El mòdem requerix el codi PUK del subsegment de ret."
 
 #: sim.cpp:143
 #, kde-format

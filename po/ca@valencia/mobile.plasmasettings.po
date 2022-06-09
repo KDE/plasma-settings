@@ -84,7 +84,7 @@ msgstr "nomdelmòdul"
 #: src/main.cpp:66
 #, kde-format
 msgid "Only show a single module, requires --module"
-msgstr "Mostra només un únic mòdul, requereix --module"
+msgstr "Mostra només un únic mòdul, requerix --module"
 
 #: src/main.cpp:67
 #, kde-format
