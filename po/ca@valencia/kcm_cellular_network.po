@@ -53,7 +53,7 @@ msgstr "S'ha produït un error en reiniciar el mòdem: %1"
 #, kde-format
 msgid "Error updating connection settings for %1: %2."
 msgstr ""
-"S'ha produït un error en actualisar els paràmetres de connexió de %1: %2."
+"S'ha produït un error en actualitzar els paràmetres de connexió de %1: %2."
 
 #: modem.cpp:257
 #, kde-format
@@ -104,7 +104,7 @@ msgstr "Configurant el maquinari"
 #: modem.cpp:426
 #, kde-format
 msgid "NeedAuth"
-msgstr "Cal autorisació"
+msgstr "Cal autorització"
 
 #: modem.cpp:428
 #, kde-format
@@ -224,17 +224,17 @@ msgstr "Apagat"
 #: modemdetails.cpp:218
 #, kde-format
 msgid "Low-power mode"
-msgstr "Modo de baix consum"
+msgstr "Mode de baix consum"
 
 #: modemdetails.cpp:220
 #, kde-format
 msgid "Full power mode"
-msgstr "Modo de tota potència"
+msgstr "Mode de tota potència"
 
 #: modemdetails.cpp:248
 #, kde-format
 msgid "Initializing"
-msgstr "S'està inicialisant"
+msgstr "S'està inicialitzant"
 
 #: modemdetails.cpp:250 package/contents/ui/Sim.qml:147
 #, kde-format
@@ -299,12 +299,12 @@ msgstr "S'ha produït un error desconegut."
 #: modemdetails.cpp:281
 #, kde-format
 msgid "SIM is required but missing."
-msgstr "Es requerix una SIM pero falta."
+msgstr "Es requerix una SIM però falta."
 
 #: modemdetails.cpp:283
 #, kde-format
 msgid "SIM is available but unusable."
-msgstr "La SIM està disponible, pero no es pot utilisar."
+msgstr "La SIM està disponible, però no es pot utilitzar."
 
 #: modemdetails.cpp:306
 #, kde-format
@@ -539,7 +539,7 @@ msgstr "SIM %1"
 #: package/contents/ui/main.qml:140
 #, kde-format
 msgid "View SIM %1 details."
-msgstr "Visualisa els detalls de la SIM %1."
+msgstr "Visualitza els detalls de la SIM %1."
 
 #: package/contents/ui/Modem.qml:19
 #, kde-format
@@ -659,7 +659,7 @@ msgstr "Controladors:"
 #: package/contents/ui/Modem.qml:391
 #, kde-format
 msgid "Plugin"
-msgstr "Conector"
+msgstr "Connector"
 
 #: package/contents/ui/Modem.qml:404
 #, kde-format
@@ -714,7 +714,7 @@ msgstr "Itinerància de dades"
 #: package/contents/ui/Sim.qml:63
 #, kde-format
 msgid "Allow your device to use networks other than your carrier."
-msgstr "Permet que el dispositiu utilise rets d'atres operadors."
+msgstr "Permet que el dispositiu usi rets d'altres operadors."
 
 #: package/contents/ui/Sim.qml:79
 #, kde-format
@@ -749,7 +749,7 @@ msgstr "Modifica la configuració del bloqueig de la SIM."
 #: package/contents/ui/Sim.qml:128
 #, kde-format
 msgid "View the details of the modem this SIM is connected to."
-msgstr "Visualisa els detalls del mòdem al qual està connectat esta SIM."
+msgstr "Visualitza els detalls del mòdem al qual està connectat esta SIM."
 
 #: package/contents/ui/Sim.qml:142
 #, kde-format
@@ -804,7 +804,7 @@ msgstr "La SIM està blocada"
 #: package/contents/ui/SimLock.qml:52
 #, kde-format
 msgid "In order to use this SIM, you must first unlock it."
-msgstr "Per tal d'utilisar esta SIM, primer cal desblocar-la."
+msgstr "Per tal d'utilitzar esta SIM, primer cal desblocar-la."
 
 #: package/contents/ui/SimLock.qml:74
 #, kde-format
