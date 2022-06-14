@@ -79,7 +79,7 @@ msgstr "Tomaz Canabrava"
 #, kde-format
 msgctxt "Part of a sentence like 'Dim screen after 5 minutes'"
 msgid "Dim screen after:"
-msgstr "Enfosqueix la pantalla després de:"
+msgstr "Enfosquix la pantalla després de:"
 
 #: package/contents/ui/main.qml:37
 #, kde-format
