@@ -1,0 +1,91 @@
+# Chinese translations for plasma-settings package
+# plasma-settings 套件的正體中文翻譯.
+# Copyright (C) 2022 This file is copyright:
+# This file is distributed under the same license as the plasma-settings package.
+# Automatically generated, 2022.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: plasma-settings\n"
+"Report-Msgid-Bugs-To: https://bugs.kde.org\n"
+"POT-Creation-Date: 2022-02-09 00:49+0000\n"
+"PO-Revision-Date: 2022-02-09 00:49+0000\n"
+"Last-Translator: Automatically generated\n"
+"Language-Team: none\n"
+"Language: zh_TW\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#, kde-format
+msgctxt "NAME OF TRANSLATORS"
+msgid "Your names"
+msgstr ""
+
+#, kde-format
+msgctxt "EMAIL OF TRANSLATORS"
+msgid "Your emails"
+msgstr ""
+
+#: mobilepower.cpp:20
+#, kde-format
+msgid "30 sec"
+msgstr ""
+
+#: mobilepower.cpp:21
+#, kde-format
+msgid "1 min"
+msgstr ""
+
+#: mobilepower.cpp:22
+#, kde-format
+msgid "2 min"
+msgstr ""
+
+#: mobilepower.cpp:23
+#, kde-format
+msgid "5 min"
+msgstr ""
+
+#: mobilepower.cpp:24
+#, kde-format
+msgid "10 min"
+msgstr ""
+
+#: mobilepower.cpp:25
+#, kde-format
+msgid "15 min"
+msgstr ""
+
+#: mobilepower.cpp:26
+#, kde-format
+msgid "Never"
+msgstr ""
+
+#: mobilepower.cpp:58
+#, kde-format
+msgid "Energy Settings"
+msgstr ""
+
+#: mobilepower.cpp:59
+#, kde-format
+msgid "Tomaz Canabrava"
+msgstr ""
+
+#: package/contents/ui/main.qml:28
+#, kde-format
+msgctxt "Part of a sentence like 'Dim screen after 5 minutes'"
+msgid "Dim screen after:"
+msgstr ""
+
+#: package/contents/ui/main.qml:37
+#, kde-format
+msgctxt "Part of a sentence like 'Turn off screen after 5 minutes'"
+msgid "Turn off screen after:"
+msgstr ""
+
+#: package/contents/ui/main.qml:46
+#, kde-format
+msgctxt "Part of a sentence like 'Suspend device after 5 minutes'"
+msgid "Suspend device after:"
+msgstr ""
