@@ -63,7 +63,7 @@ msgid ""
 "Limit to modules suitable for <formfactor>, e.g. handset, tablet, "
 "mediacenter, desktop, test, all (default handset)"
 msgstr ""
-"Llimita als mòduls adequats per al <factordeforma>, p. ex. teléfon, tauleta, "
+"Limita als mòduls adequats per al <factordeforma>, p. ex. teléfon, tauleta, "
 "centre multimèdia, escriptori, prova, tot (predeterminat: teléfon)"
 
 #: src/main.cpp:64
