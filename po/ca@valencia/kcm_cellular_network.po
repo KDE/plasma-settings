@@ -32,7 +32,7 @@ msgstr "txemaq@gmail.com"
 #: cellularnetworksettings.cpp:28
 #, kde-format
 msgid "Cellular Networks"
-msgstr "Rets de telefonia mòbil"
+msgstr "Xarxes de telefonia mòbil"
 
 #: cellularnetworksettings.cpp:29
 #, kde-format
@@ -264,12 +264,12 @@ msgstr "Activada"
 #: modemdetails.cpp:260
 #, kde-format
 msgid "Searching for network provider"
-msgstr "S'està buscant un proveïdor de ret"
+msgstr "S'està buscant un proveïdor de xarxa"
 
 #: modemdetails.cpp:262
 #, kde-format
 msgid "Registered with network provider"
-msgstr "S'ha registrat amb el proveïdor de ret"
+msgstr "S'ha registrat amb el proveïdor de xarxa"
 
 #: modemdetails.cpp:264
 #, kde-format
@@ -314,7 +314,7 @@ msgstr "No registrat, no es busca cap operador nou amb el qual registrar-se."
 #: modemdetails.cpp:308
 #, kde-format
 msgid "Registered on home network."
-msgstr "S'ha registrat en la ret domèstica."
+msgstr "S'ha registrat en la xarxa domèstica."
 
 #: modemdetails.cpp:310
 #, kde-format
@@ -334,17 +334,17 @@ msgstr "Estat de registre desconegut."
 #: modemdetails.cpp:316
 #, kde-format
 msgid "Registered on a roaming network."
-msgstr "S'ha registrat en una ret d'itinerància."
+msgstr "S'ha registrat en una xarxa d'itinerància."
 
 #: modemdetails.cpp:318
 #, kde-format
 msgid "Registered for \"SMS only\", on home network."
-msgstr "S'ha registrat per a «només SMS», en la ret domèstica."
+msgstr "S'ha registrat per a «només SMS», en la xarxa domèstica."
 
 #: modemdetails.cpp:320
 #, kde-format
 msgid "Registered for \"SMS only\", roaming network."
-msgstr "S'ha registrat per a «només SMS», en la ret d'itinerància."
+msgstr "S'ha registrat per a «només SMS», en la xarxa d'itinerància."
 
 #: modemdetails.cpp:322
 #, kde-format
@@ -354,12 +354,12 @@ msgstr "Només serveis d'emergència."
 #: modemdetails.cpp:324
 #, kde-format
 msgid "Registered for \"CSFB not preferred\", home network."
-msgstr "S'ha registrat per a «CSFB no preferit», en la ret domèstica."
+msgstr "S'ha registrat per a «CSFB no preferit», en la xarxa domèstica."
 
 #: modemdetails.cpp:326
 #, kde-format
 msgid "Registered for \"CSFB not preferred\", roaming network."
-msgstr "S'ha registrat per a «CSFB no preferit», en la ret d'itinerància."
+msgstr "S'ha registrat per a «CSFB no preferit», en la xarxa d'itinerància."
 
 #: modemdetails.cpp:328
 #, kde-format
@@ -369,7 +369,7 @@ msgstr "S'ha connectat per accedir als serveis restringits d'operador local."
 #: modemdetails.cpp:366
 #, kde-format
 msgid "Scanning networks failed: %1"
-msgstr "No s'ha pogut fer l'exploració de rets: %1"
+msgstr "No s'ha pogut fer l'exploració de xarxes: %1"
 
 #: modemdetails.cpp:413 package/contents/ui/Modem.qml:268
 #: package/contents/ui/Sim.qml:148
@@ -424,7 +424,7 @@ msgstr "Qualsevol"
 #: package/contents/ui/AvailableNetworks.qml:16
 #, kde-format
 msgid "Available Networks"
-msgstr "Rets disponibles"
+msgstr "Xarxes disponibles"
 
 #: package/contents/ui/AvailableNetworks.qml:40
 #, kde-format
@@ -439,7 +439,7 @@ msgstr "Operador actual: %1"
 #: package/contents/ui/AvailableNetworks.qml:43
 #, kde-format
 msgid "Scan For Networks"
-msgstr "Explora rets"
+msgstr "Explora xarxes"
 
 #: package/contents/ui/EditProfileDialog.qml:17
 #, kde-format
@@ -469,7 +469,7 @@ msgstr "Contrasenya"
 #: package/contents/ui/EditProfileDialog.qml:63
 #, kde-format
 msgid "Network type"
-msgstr "Tipus de ret"
+msgstr "Tipus de xarxa"
 
 #: package/contents/ui/EditProfileDialog.qml:64
 #, kde-format
@@ -714,7 +714,7 @@ msgstr "Itinerància de dades"
 #: package/contents/ui/Sim.qml:63
 #, kde-format
 msgid "Allow your device to use networks other than your carrier."
-msgstr "Permet que el dispositiu usi rets d'altres operadors."
+msgstr "Permet que el dispositiu usi xarxes d'altres operadors."
 
 #: package/contents/ui/Sim.qml:79
 #, kde-format
@@ -729,12 +729,12 @@ msgstr "Configura els noms dels punts d'accés per al vostre operador."
 #: package/contents/ui/Sim.qml:95
 #, kde-format
 msgid "Networks"
-msgstr "Rets"
+msgstr "Xarxes"
 
 #: package/contents/ui/Sim.qml:96
 #, kde-format
 msgid "Select a network operator."
-msgstr "Seleccioneu un operador de ret."
+msgstr "Seleccioneu un operador de xarxa."
 
 #: package/contents/ui/Sim.qml:111 package/contents/ui/SimLock.qml:20
 #, kde-format
@@ -945,12 +945,12 @@ msgstr "El mòdem requerix el codi PUK del proveïdor de serveis."
 #: sim.cpp:83
 #, kde-format
 msgid "Modem requires the network PIN code."
-msgstr "El mòdem requerix el codi PIN de la ret."
+msgstr "El mòdem requerix el codi PIN de la xarxa."
 
 #: sim.cpp:85
 #, kde-format
 msgid "Modem requires the network PUK code."
-msgstr "El mòdem requerix el codi PUK de la ret."
+msgstr "El mòdem requerix el codi PUK de la xarxa."
 
 #: sim.cpp:87
 #, kde-format
@@ -980,12 +980,12 @@ msgstr "El mòdem requerix el codi PUK de la PH-FSIM."
 #: sim.cpp:97
 #, kde-format
 msgid "Modem requires the network subset PIN code."
-msgstr "El mòdem requerix el codi PIN del subsegment de ret."
+msgstr "El mòdem requerix el codi PIN del subsegment de xarxa."
 
 #: sim.cpp:99
 #, kde-format
 msgid "Modem requires the network subset PUK code."
-msgstr "El mòdem requerix el codi PUK del subsegment de ret."
+msgstr "El mòdem requerix el codi PUK del subsegment de xarxa."
 
 #: sim.cpp:143
 #, kde-format

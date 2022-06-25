@@ -91,4 +91,4 @@ msgstr "Apaga la pantalla després de:"
 #, kde-format
 msgctxt "Part of a sentence like 'Suspend device after 5 minutes'"
 msgid "Suspend device after:"
-msgstr "Suspèn el dispositiu després de:"
+msgstr "Suspén el dispositiu després de:"
