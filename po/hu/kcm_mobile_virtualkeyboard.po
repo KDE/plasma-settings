@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-settings\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2022-02-18 00:47+0000\n"
+"POT-Creation-Date: 2022-06-30 00:47+0000\n"
 "PO-Revision-Date: 2022-02-18 11:19+0100\n"
 "Last-Translator: Kristof Kiszel <ulysses@fsf.hu>\n"
 "Language-Team: Hungarian <kde-l10n-hu@kde.org>\n"
@@ -55,60 +55,55 @@ msgstr "Gépeljen ide…"
 
 #: package/contents/ui/main.qml:34
 #, kde-format
-msgid "Theme:"
-msgstr "Téma:"
-
-#: package/contents/ui/main.qml:43
-#, kde-format
 msgid "Feedback:"
 msgstr "Visszajelzés:"
 
-#: package/contents/ui/main.qml:47
+#: package/contents/ui/main.qml:38
 #, kde-format
 msgid "Emit sound on key press"
 msgstr "Hang kiadása billentyűnyomáskor"
 
-#: package/contents/ui/main.qml:56
+#: package/contents/ui/main.qml:47
 #, kde-format
 msgid "Vibrate on key press"
 msgstr "Rezgés billentyűnyomáskor"
 
-#: package/contents/ui/main.qml:64
+#: package/contents/ui/main.qml:55
 #, kde-format
 msgid "Text correction:"
 msgstr "Szövegjavítás:"
 
-#: package/contents/ui/main.qml:68
+#: package/contents/ui/main.qml:59
 #, kde-format
 msgid "Check spelling of entered text"
 msgstr "A beírt szöveg helyesírásának ellenőrzése"
 
-#: package/contents/ui/main.qml:75
+#: package/contents/ui/main.qml:66
 #, kde-format
 msgid "Capitalize the first letter of each sentence"
 msgstr "A mondatok kezdőbetűinek nagybetűvé alakítésa"
 
-#: package/contents/ui/main.qml:82
+#: package/contents/ui/main.qml:73
 #, kde-format
 msgid "Complete current word with first suggestion when hitting space"
 msgstr "A jelenlegi szó kiegészítése az első javaslatra a szóköz megnyomásakor"
 
-#: package/contents/ui/main.qml:89
+#: package/contents/ui/main.qml:80
 #, kde-format
 msgid "Suggest potential words in word ribbon"
 msgstr "Lehetséges szavak felsorolása egy szalagon"
 
-#: package/contents/ui/main.qml:98
+#: package/contents/ui/main.qml:89
 #, kde-format
 msgid "Insert a full-stop when space is pressed twice"
 msgstr "Mondatvégi pont beszúrása a szóköz kétszeres megnyomásakor"
 
-#: package/contents/ui/main.qml:106
+#: package/contents/ui/main.qml:97
 #, kde-format
 msgid "Languages:"
 msgstr "Nyelvek:"
 
-#: package/contents/ui/main.qml:107
+#: package/contents/ui/main.qml:98
 #, kde-format
 msgid "Configure Languages"
 msgstr "Nyelvbeállítások"
@@ -122,6 +117,9 @@ msgstr "Virtuális billentyűzet"
 #, kde-format
 msgid "Bhushan Shah"
 msgstr "Bhushan Shah"
+
+#~ msgid "Theme:"
+#~ msgstr "Téma:"
 
 #~ msgid "Other:"
 #~ msgstr "Egyéb:"

@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-settings\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2022-02-18 00:47+0000\n"
+"POT-Creation-Date: 2022-06-30 00:47+0000\n"
 "PO-Revision-Date: 2022-02-18 23:09+0100\n"
 "Last-Translator: giovanni <g.sora@tiscali.it>\n"
 "Language-Team: Interlingua <kde-i18n-doc@kde.org>\n"
@@ -54,61 +54,56 @@ msgstr "Typa alique hic ..."
 
 #: package/contents/ui/main.qml:34
 #, kde-format
-msgid "Theme:"
-msgstr "Thema:"
-
-#: package/contents/ui/main.qml:43
-#, kde-format
 msgid "Feedback:"
 msgstr "Retorno :"
 
-#: package/contents/ui/main.qml:47
+#: package/contents/ui/main.qml:38
 #, kde-format
 msgid "Emit sound on key press"
 msgstr "Emitte sono sur pression de clave"
 
-#: package/contents/ui/main.qml:56
+#: package/contents/ui/main.qml:47
 #, kde-format
 msgid "Vibrate on key press"
 msgstr "Vibra sur pression de clave"
 
-#: package/contents/ui/main.qml:64
+#: package/contents/ui/main.qml:55
 #, kde-format
 msgid "Text correction:"
 msgstr "Correction de texto:"
 
-#: package/contents/ui/main.qml:68
+#: package/contents/ui/main.qml:59
 #, kde-format
 msgid "Check spelling of entered text"
 msgstr "Verifica orthographia del texto insertate"
 
-#: package/contents/ui/main.qml:75
+#: package/contents/ui/main.qml:66
 #, kde-format
 msgid "Capitalize the first letter of each sentence"
 msgstr "Capitalisa (Il pone in majuscule) le prime littera de cata phrase"
 
-#: package/contents/ui/main.qml:82
+#: package/contents/ui/main.qml:73
 #, kde-format
 msgid "Complete current word with first suggestion when hitting space"
 msgstr ""
 "Completa parola currente con prime suggestion quando colpa barr de spatio"
 
-#: package/contents/ui/main.qml:89
+#: package/contents/ui/main.qml:80
 #, kde-format
 msgid "Suggest potential words in word ribbon"
 msgstr "Suggere parolas potential in banda de parola"
 
-#: package/contents/ui/main.qml:98
+#: package/contents/ui/main.qml:89
 #, kde-format
 msgid "Insert a full-stop when space is pressed twice"
 msgstr "Inserta puncto quando spatio es premite duo vices"
 
-#: package/contents/ui/main.qml:106
+#: package/contents/ui/main.qml:97
 #, kde-format
 msgid "Languages:"
 msgstr "Linguages:"
 
-#: package/contents/ui/main.qml:107
+#: package/contents/ui/main.qml:98
 #, kde-format
 msgid "Configure Languages"
 msgstr "Configura linguages"
@@ -122,6 +117,9 @@ msgstr "Claviero virtual"
 #, kde-format
 msgid "Bhushan Shah"
 msgstr "Bhushan Shah"
+
+#~ msgid "Theme:"
+#~ msgstr "Thema:"
 
 #~ msgid "Other:"
 #~ msgstr "Altere:"

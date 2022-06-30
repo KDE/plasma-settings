@@ -5,7 +5,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcm_mobile_virtualkeyboard\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2022-02-18 00:47+0000\n"
+"POT-Creation-Date: 2022-06-30 00:47+0000\n"
 "PO-Revision-Date: 2021-08-11 20:02+0200\n"
 "Last-Translator: Matej Mrenica <matejm98mthw@gmail.com>\n"
 "Language-Team: Slovak <kde-i18n-doc@kde.org>\n"
@@ -54,60 +54,55 @@ msgstr ""
 
 #: package/contents/ui/main.qml:34
 #, kde-format
-msgid "Theme:"
-msgstr "Téma:"
-
-#: package/contents/ui/main.qml:43
-#, kde-format
 msgid "Feedback:"
 msgstr "Odozva"
 
-#: package/contents/ui/main.qml:47
+#: package/contents/ui/main.qml:38
 #, kde-format
 msgid "Emit sound on key press"
 msgstr "Vydávať zvuky pri stlačení klávesu"
 
-#: package/contents/ui/main.qml:56
+#: package/contents/ui/main.qml:47
 #, kde-format
 msgid "Vibrate on key press"
 msgstr "Vibrovať pri stlačení klávesu"
 
-#: package/contents/ui/main.qml:64
+#: package/contents/ui/main.qml:55
 #, kde-format
 msgid "Text correction:"
 msgstr "Oprava textu:"
 
-#: package/contents/ui/main.qml:68
+#: package/contents/ui/main.qml:59
 #, kde-format
 msgid "Check spelling of entered text"
 msgstr "Skontrolovať pravopis zadaného textu"
 
-#: package/contents/ui/main.qml:75
+#: package/contents/ui/main.qml:66
 #, kde-format
 msgid "Capitalize the first letter of each sentence"
 msgstr "V každej vete začínať písanie veľkými písmenami"
 
-#: package/contents/ui/main.qml:82
+#: package/contents/ui/main.qml:73
 #, kde-format
 msgid "Complete current word with first suggestion when hitting space"
 msgstr "Dokončiť aktuálne slovo prvým návrhom pri stlačení medzerníku"
 
-#: package/contents/ui/main.qml:89
+#: package/contents/ui/main.qml:80
 #, kde-format
 msgid "Suggest potential words in word ribbon"
 msgstr "Navrhnú potenciálne slová na páse slov"
 
-#: package/contents/ui/main.qml:98
+#: package/contents/ui/main.qml:89
 #, kde-format
 msgid "Insert a full-stop when space is pressed twice"
 msgstr "Po dvojitom stlačení medzery vložiť bodku"
 
-#: package/contents/ui/main.qml:106
+#: package/contents/ui/main.qml:97
 #, kde-format
 msgid "Languages:"
 msgstr "Jazyky:"
 
-#: package/contents/ui/main.qml:107
+#: package/contents/ui/main.qml:98
 #, kde-format
 msgid "Configure Languages"
 msgstr "Nastaviť jazyky"
@@ -121,6 +116,9 @@ msgstr "Virtuálna klávesnica"
 #, kde-format
 msgid "Bhushan Shah"
 msgstr "Bhushan Shah"
+
+#~ msgid "Theme:"
+#~ msgstr "Téma:"
 
 #~ msgid "Other:"
 #~ msgstr "Iný:"

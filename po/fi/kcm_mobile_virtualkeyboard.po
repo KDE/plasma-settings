@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-settings\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2022-02-18 00:47+0000\n"
+"POT-Creation-Date: 2022-06-30 00:47+0000\n"
 "PO-Revision-Date: 2022-03-18 23:11+0200\n"
 "Last-Translator: Tommi Nieminen <translator@legisign.org>\n"
 "Language-Team: Finnish <kde-i18n-doc@kde.org>\n"
@@ -54,60 +54,55 @@ msgstr "Kirjoita tähän mitä vain…"
 
 #: package/contents/ui/main.qml:34
 #, kde-format
-msgid "Theme:"
-msgstr "Teema:"
-
-#: package/contents/ui/main.qml:43
-#, kde-format
 msgid "Feedback:"
 msgstr "Palaute:"
 
-#: package/contents/ui/main.qml:47
+#: package/contents/ui/main.qml:38
 #, kde-format
 msgid "Emit sound on key press"
 msgstr "Anna näppäimistä äänimerkki"
 
-#: package/contents/ui/main.qml:56
+#: package/contents/ui/main.qml:47
 #, kde-format
 msgid "Vibrate on key press"
 msgstr "Värise näppäinpainalluksista"
 
-#: package/contents/ui/main.qml:64
+#: package/contents/ui/main.qml:55
 #, kde-format
 msgid "Text correction:"
 msgstr "Tekstin korjaus:"
 
-#: package/contents/ui/main.qml:68
+#: package/contents/ui/main.qml:59
 #, kde-format
 msgid "Check spelling of entered text"
 msgstr "Tarkista syötetyn tekstin oikeinkirjoitus"
 
-#: package/contents/ui/main.qml:75
+#: package/contents/ui/main.qml:66
 #, kde-format
 msgid "Capitalize the first letter of each sentence"
 msgstr "Aloita virkkeet isolla alkukirjaimella"
 
-#: package/contents/ui/main.qml:82
+#: package/contents/ui/main.qml:73
 #, kde-format
 msgid "Complete current word with first suggestion when hitting space"
 msgstr "Täydennä sana ensimmäisellä ehdotuksella välilyöntiä painettaessa"
 
-#: package/contents/ui/main.qml:89
+#: package/contents/ui/main.qml:80
 #, kde-format
 msgid "Suggest potential words in word ribbon"
 msgstr "Ehdota sananauhassa mahdollisia sanoja"
 
-#: package/contents/ui/main.qml:98
+#: package/contents/ui/main.qml:89
 #, kde-format
 msgid "Insert a full-stop when space is pressed twice"
 msgstr "Lisää piste painettaessa välilyöntiä kahdesti"
 
-#: package/contents/ui/main.qml:106
+#: package/contents/ui/main.qml:97
 #, kde-format
 msgid "Languages:"
 msgstr "Kielet:"
 
-#: package/contents/ui/main.qml:107
+#: package/contents/ui/main.qml:98
 #, kde-format
 msgid "Configure Languages"
 msgstr "Kieliasetukset"
@@ -121,6 +116,9 @@ msgstr "Näyttönäppäimistö"
 #, kde-format
 msgid "Bhushan Shah"
 msgstr "Bhushan Shah"
+
+#~ msgid "Theme:"
+#~ msgstr "Teema:"
 
 #~ msgid "Other:"
 #~ msgstr "Muu:"
