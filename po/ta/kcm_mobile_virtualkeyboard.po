@@ -2,13 +2,13 @@
 # This file is distributed under the same license as the plasma-settings package.
 #
 # gobinathal <gobinathal8@gmail.com>, 2021.
-# Kishore G <kishore96@gmail.com>, 2021.
+# Kishore G <kishore96@gmail.com>, 2021, 2022.
 msgid ""
 msgstr ""
 "Project-Id-Version: plasma-settings\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2022-06-30 00:47+0000\n"
-"PO-Revision-Date: 2021-10-31 17:26+0530\n"
+"PO-Revision-Date: 2022-06-30 21:38+0530\n"
 "Last-Translator: Kishore G <kishore96@gmail.com>\n"
 "Language-Team: Tamil <kde-i18n-doc@kde.org>\n"
 "Language: ta\n"
@@ -16,7 +16,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Lokalize 21.08.2\n"
+"X-Generator: Lokalize 22.04.2\n"
 
 #, kde-format
 msgctxt "NAME OF TRANSLATORS"
@@ -41,18 +41,17 @@ msgstr "செயல்படுத்து"
 #: package/contents/ui/main.qml:19
 #, kde-format
 msgid "On-Screen Keyboard"
-msgstr ""
+msgstr "திரை விசைப்பலகை"
 
 #: package/contents/ui/main.qml:29
-#, fuzzy, kde-format
-#| msgid "Virtual Keyboard"
+#, kde-format
 msgid "Test keyboard:"
-msgstr "மெய்நிகர் விசைப்பலகை"
+msgstr "விசைப்பலகை சோதனை:"
 
 #: package/contents/ui/main.qml:30
 #, kde-format
 msgid "Type anything here…"
-msgstr ""
+msgstr "எதையாவது இங்கு தட்டச்சிடுங்கள்…"
 
 #: package/contents/ui/main.qml:34
 #, kde-format
@@ -117,7 +116,7 @@ msgstr "மெய்நிகர் விசைப்பலகை"
 #: virtualkeyboard.cpp:38
 #, kde-format
 msgid "Bhushan Shah"
-msgstr ""
+msgstr "புஷன் ஷா"
 
 #~ msgid "Theme:"
 #~ msgstr "தோற்றத்திட்டம்:"
