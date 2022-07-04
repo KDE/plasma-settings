@@ -386,12 +386,12 @@ msgstr "No"
 #: modemdetails.cpp:417
 #, kde-format
 msgid "GuessYes"
-msgstr "Sembla que sí"
+msgstr "Pareix que sí"
 
 #: modemdetails.cpp:419
 #, kde-format
 msgid "GuessNo"
-msgstr "Sembla que no"
+msgstr "Pareix que no"
 
 #: modemdetails.cpp:447 modemdetails.cpp:450 modemdetails.cpp:453
 #: modemdetails.cpp:456 package/contents/ui/EditProfileDialog.qml:64
