@@ -555,7 +555,7 @@ msgstr "Brunei"
 #, kde-format
 msgctxt "This is a city associated with particular time zone"
 msgid "Brussels"
-msgstr "Brusseles"
+msgstr "Brussel·les"
 
 #: timezonesi18n.cpp:107
 #, kde-format
