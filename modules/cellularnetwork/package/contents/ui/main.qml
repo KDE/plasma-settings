@@ -12,10 +12,9 @@ import QtQuick.Controls 2.12 as Controls
 import org.kde.plasma.networkmanagement 0.2 as PlasmaNM
 import org.kde.kirigami 2.19 as Kirigami
 import org.kde.kcm 1.3 as KCM
+import org.kde.kirigamiaddons.labs.mobileform 0.1 as MobileForm
 
 import cellularnetworkkcm 1.0
-
-import "mobileform" as MobileForm
 
 KCM.SimpleKCM {
     id: root
@@ -90,18 +89,13 @@ KCM.SimpleKCM {
                     }
                 }
                 
-                Kirigami.Separator {
-                    Layout.leftMargin: Kirigami.Units.largeSpacing
-                    Layout.rightMargin: Kirigami.Units.largeSpacing
-                    Layout.fillWidth: true
-                    opacity: (!mobileDataSwitch.controlHovered && !dataUsageButton.controlHovered) ? 0.5 : 0
-                }
+                MobileForm.FormDelegateSeparator { above: mobileDataSwitch; below: dataUsageButton }
                 
                 MobileForm.FormButtonDelegate {
                     id: dataUsageButton
                     text: i18n("Data Usage")
                     description: i18n("View data usage.")
-                    iconName: "office-chart-bar"
+                    icon.name: "office-chart-bar"
                     
                     enabled: false
                 }
@@ -138,7 +132,7 @@ KCM.SimpleKCM {
                             id: simDelegate
                             text: i18n("SIM %1", modelData.displayId)
                             description: i18n("View SIM %1 details.", modelData.displayId)
-                            iconName: "auth-sim-symbolic"
+                            icon.name: "auth-sim-symbolic"
                             onClicked: kcm.push("Sim.qml", { "sim": modelData })
                         }
                     }

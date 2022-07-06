@@ -10,10 +10,9 @@ import QtQuick.Controls 2.12 as Controls
 
 import org.kde.kirigami 2.19 as Kirigami
 import org.kde.kcm 1.2
+import org.kde.kirigamiaddons.labs.mobileform 0.1 as MobileForm
 
 import cellularnetworkkcm 1.0
-
-import "mobileform" as MobileForm
 
 Kirigami.ScrollablePage {
     id: root

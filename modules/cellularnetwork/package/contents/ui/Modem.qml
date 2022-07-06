@@ -9,10 +9,9 @@ import QtQuick.Controls 2.12 as Controls
 
 import org.kde.kirigami 2.19 as Kirigami
 import org.kde.kcm 1.2
+import org.kde.kirigamiaddons.labs.mobileform 0.1 as MobileForm
 
 import cellularnetworkkcm 1.0
-
-import "mobileform" as MobileForm
 
 Kirigami.ScrollablePage {
     id: modemPage
@@ -42,13 +41,6 @@ Kirigami.ScrollablePage {
                 
                 MobileForm.FormCardHeader {
                     title: i18n("Modem Control")
-                }
-                
-                Kirigami.Separator {
-                    Layout.leftMargin: Kirigami.Units.largeSpacing
-                    Layout.rightMargin: Kirigami.Units.largeSpacing
-                    Layout.fillWidth: true
-                    opacity: (!toggleModemButton.controlHovered && !modemRestartButton.controlHovered) ? 0.5 : 0
                 }
                 
                 MobileForm.AbstractFormDelegate {
@@ -105,12 +97,7 @@ Kirigami.ScrollablePage {
                     }
                 }
                 
-                Kirigami.Separator {
-                    Layout.leftMargin: Kirigami.Units.largeSpacing
-                    Layout.rightMargin: Kirigami.Units.largeSpacing
-                    Layout.fillWidth: true
-                    opacity: (!accessTechnologiesText.controlHovered && !imeiText.controlHovered) ? 0.5 : 0
-                }
+                MobileForm.FormDelegateSeparator {}
                 
                 MobileForm.FormTextDelegate {
                     id: imeiText
@@ -118,12 +105,7 @@ Kirigami.ScrollablePage {
                     description: modem.details.equipmentIdentifier
                 }
                 
-                Kirigami.Separator {
-                    Layout.leftMargin: Kirigami.Units.largeSpacing
-                    Layout.rightMargin: Kirigami.Units.largeSpacing
-                    Layout.fillWidth: true
-                    opacity: (!imeiText.controlHovered && !enabledText.controlHovered) ? 0.5 : 0
-                }
+                MobileForm.FormDelegateSeparator {}
                 
                 MobileForm.FormTextDelegate {
                     id: enabledText
@@ -131,12 +113,7 @@ Kirigami.ScrollablePage {
                     description: modem.details.isEnabled
                 }
                 
-                Kirigami.Separator {
-                    Layout.leftMargin: Kirigami.Units.largeSpacing
-                    Layout.rightMargin: Kirigami.Units.largeSpacing
-                    Layout.fillWidth: true
-                    opacity: (!enabledText.controlHovered && !manufacturerText.controlHovered) ? 0.5 : 0
-                }
+                MobileForm.FormDelegateSeparator {}
                 
                 MobileForm.FormTextDelegate {
                     id: manufacturerText
@@ -144,12 +121,7 @@ Kirigami.ScrollablePage {
                     description: modem.details.manufacturer
                 }
                 
-                Kirigami.Separator {
-                    Layout.leftMargin: Kirigami.Units.largeSpacing
-                    Layout.rightMargin: Kirigami.Units.largeSpacing
-                    Layout.fillWidth: true
-                    opacity: (!manufacturerText.controlHovered && !modelText.controlHovered) ? 0.5 : 0
-                }
+                MobileForm.FormDelegateSeparator {}
                 
                 MobileForm.FormTextDelegate {
                     id: modelText
@@ -157,12 +129,7 @@ Kirigami.ScrollablePage {
                     description: modem.details.model
                 }
                 
-                Kirigami.Separator {
-                    Layout.leftMargin: Kirigami.Units.largeSpacing
-                    Layout.rightMargin: Kirigami.Units.largeSpacing
-                    Layout.fillWidth: true
-                    opacity: (!modelText.controlHovered && !ownedNumbersText.controlHovered) ? 0.5 : 0
-                }
+                MobileForm.FormDelegateSeparator {}
                 
                 MobileForm.AbstractFormDelegate {
                     id: ownedNumbersText
@@ -190,12 +157,7 @@ Kirigami.ScrollablePage {
                     }
                 }
                 
-                Kirigami.Separator {
-                    Layout.leftMargin: Kirigami.Units.largeSpacing
-                    Layout.rightMargin: Kirigami.Units.largeSpacing
-                    Layout.fillWidth: true
-                    opacity: (!ownedNumbersText.controlHovered && !revisionText.controlHovered) ? 0.5 : 0
-                }
+                MobileForm.FormDelegateSeparator {}
 
                 MobileForm.FormTextDelegate {
                     id: revisionText
@@ -203,12 +165,7 @@ Kirigami.ScrollablePage {
                     description: modem.details.revision
                 }
                 
-                Kirigami.Separator {
-                    Layout.leftMargin: Kirigami.Units.largeSpacing
-                    Layout.rightMargin: Kirigami.Units.largeSpacing
-                    Layout.fillWidth: true
-                    opacity: (!revisionText.controlHovered && !signalQualityText.controlHovered) ? 0.5 : 0
-                }
+                MobileForm.FormDelegateSeparator {}
                 
                 MobileForm.FormTextDelegate {
                     id: signalQualityText
@@ -216,12 +173,7 @@ Kirigami.ScrollablePage {
                     description: modem.details.signalQuality
                 }
                 
-                Kirigami.Separator {
-                    Layout.leftMargin: Kirigami.Units.largeSpacing
-                    Layout.rightMargin: Kirigami.Units.largeSpacing
-                    Layout.fillWidth: true
-                    opacity: (!signalQualityText.controlHovered && !stateText.controlHovered) ? 0.5 : 0
-                }
+                MobileForm.FormDelegateSeparator {}
                 
                 MobileForm.FormTextDelegate {
                     id: stateText
@@ -229,12 +181,7 @@ Kirigami.ScrollablePage {
                     description: modem.details.state
                 }
                 
-                Kirigami.Separator {
-                    Layout.leftMargin: Kirigami.Units.largeSpacing
-                    Layout.rightMargin: Kirigami.Units.largeSpacing
-                    Layout.fillWidth: true
-                    opacity: (!stateText.controlHovered && !failureReasonText.controlHovered) ? 0.5 : 0
-                }
+                MobileForm.FormDelegateSeparator {}
                 
                 MobileForm.FormTextDelegate {
                     id: failureReasonText
@@ -242,12 +189,7 @@ Kirigami.ScrollablePage {
                     description: modem.details.stateFailedReason
                 }
                 
-                Kirigami.Separator {
-                    Layout.leftMargin: Kirigami.Units.largeSpacing
-                    Layout.rightMargin: Kirigami.Units.largeSpacing
-                    Layout.fillWidth: true
-                    opacity: (!failureReasonText.controlHovered && !registrationStateText.controlHovered) ? 0.5 : 0
-                }
+                MobileForm.FormDelegateSeparator {}
                 
                 MobileForm.FormTextDelegate {
                     id: registrationStateText
@@ -255,12 +197,7 @@ Kirigami.ScrollablePage {
                     description: modem.details.registrationState
                 }
                 
-                Kirigami.Separator {
-                    Layout.leftMargin: Kirigami.Units.largeSpacing
-                    Layout.rightMargin: Kirigami.Units.largeSpacing
-                    Layout.fillWidth: true
-                    opacity: (!registrationStateText.controlHovered && !roamingText.controlHovered) ? 0.5 : 0
-                }
+                MobileForm.FormDelegateSeparator {}
                 
                 MobileForm.FormTextDelegate {
                     id: roamingText
@@ -268,12 +205,7 @@ Kirigami.ScrollablePage {
                     description: modem.isRoaming ? i18n("Yes") : i18n("No")
                 }
                 
-                Kirigami.Separator {
-                    Layout.leftMargin: Kirigami.Units.largeSpacing
-                    Layout.rightMargin: Kirigami.Units.largeSpacing
-                    Layout.fillWidth: true
-                    opacity: (!roamingText.controlHovered && !firmwareVersionText.controlHovered) ? 0.5 : 0
-                }
+                MobileForm.FormDelegateSeparator {}
                 
                 MobileForm.FormTextDelegate {
                     id: firmwareVersionText
@@ -281,12 +213,7 @@ Kirigami.ScrollablePage {
                     description: modem.details.firmwareVersion
                 }
                 
-                Kirigami.Separator {
-                    Layout.leftMargin: Kirigami.Units.largeSpacing
-                    Layout.rightMargin: Kirigami.Units.largeSpacing
-                    Layout.fillWidth: true
-                    opacity: (!firmwareVersionText.controlHovered && !interfaceNameText.controlHovered) ? 0.5 : 0
-                }
+                MobileForm.FormDelegateSeparator {}
                 
                 MobileForm.FormTextDelegate {
                     id: interfaceNameText
@@ -294,12 +221,7 @@ Kirigami.ScrollablePage {
                     description: modem.details.interfaceName
                 }
                 
-                Kirigami.Separator {
-                    Layout.leftMargin: Kirigami.Units.largeSpacing
-                    Layout.rightMargin: Kirigami.Units.largeSpacing
-                    Layout.fillWidth: true
-                    opacity: (!interfaceNameText.controlHovered && !meteredText.controlHovered) ? 0.5 : 0
-                }
+                MobileForm.FormDelegateSeparator {}
                 
                 MobileForm.FormTextDelegate {
                     id: meteredText
@@ -307,12 +229,7 @@ Kirigami.ScrollablePage {
                     description: modem.details.metered
                 }
                 
-                Kirigami.Separator {
-                    Layout.leftMargin: Kirigami.Units.largeSpacing
-                    Layout.rightMargin: Kirigami.Units.largeSpacing
-                    Layout.fillWidth: true
-                    opacity: (!meteredText.controlHovered && !activeNMConnectionText.controlHovered) ? 0.5 : 0
-                }
+                MobileForm.FormDelegateSeparator {}
                 
                 MobileForm.FormTextDelegate {
                     id: activeNMConnectionText
@@ -320,12 +237,7 @@ Kirigami.ScrollablePage {
                     description: modem.activeConnectionUni
                 }
                 
-                Kirigami.Separator {
-                    Layout.leftMargin: Kirigami.Units.largeSpacing
-                    Layout.rightMargin: Kirigami.Units.largeSpacing
-                    Layout.fillWidth: true
-                    opacity: (!activeNMConnectionText.controlHovered && !deviceText.controlHovered) ? 0.5 : 0
-                }
+                MobileForm.FormDelegateSeparator {}
                 
                 MobileForm.FormTextDelegate {
                     id: deviceText
@@ -333,12 +245,7 @@ Kirigami.ScrollablePage {
                     description: modem.details.device
                 }
                 
-                Kirigami.Separator {
-                    Layout.leftMargin: Kirigami.Units.largeSpacing
-                    Layout.rightMargin: Kirigami.Units.largeSpacing
-                    Layout.fillWidth: true
-                    opacity: (!deviceText.controlHovered && !imsiText.controlHovered) ? 0.5 : 0
-                }
+                MobileForm.FormDelegateSeparator {}
                 
                 MobileForm.FormTextDelegate {
                     id: deviceIdText
@@ -346,12 +253,7 @@ Kirigami.ScrollablePage {
                     description: modem.details.deviceIdentifier
                 }
                 
-                Kirigami.Separator {
-                    Layout.leftMargin: Kirigami.Units.largeSpacing
-                    Layout.rightMargin: Kirigami.Units.largeSpacing
-                    Layout.fillWidth: true
-                    opacity: (!deviceIdText.controlHovered && !imsiText.controlHovered) ? 0.5 : 0
-                }
+                MobileForm.FormDelegateSeparator {}
                 
                 MobileForm.AbstractFormDelegate {
                     id: driversText
@@ -379,12 +281,7 @@ Kirigami.ScrollablePage {
                     }
                 }
                 
-                Kirigami.Separator {
-                    Layout.leftMargin: Kirigami.Units.largeSpacing
-                    Layout.rightMargin: Kirigami.Units.largeSpacing
-                    Layout.fillWidth: true
-                    opacity: (!driversText.controlHovered && !pluginText.controlHovered) ? 0.5 : 0
-                }
+                MobileForm.FormDelegateSeparator {}
                 
                 MobileForm.FormTextDelegate {
                     id: pluginText
@@ -392,12 +289,7 @@ Kirigami.ScrollablePage {
                     description: modem.details.plugin
                 }
                 
-                Kirigami.Separator {
-                    Layout.leftMargin: Kirigami.Units.largeSpacing
-                    Layout.rightMargin: Kirigami.Units.largeSpacing
-                    Layout.fillWidth: true
-                    opacity: (!pluginText.controlHovered && !powerStateText.controlHovered) ? 0.5 : 0
-                }
+                MobileForm.FormDelegateSeparator {}
                 
                 MobileForm.FormTextDelegate {
                     id: powerStateText
@@ -405,12 +297,7 @@ Kirigami.ScrollablePage {
                     description: modem.details.powerState
                 }
                 
-                Kirigami.Separator {
-                    Layout.leftMargin: Kirigami.Units.largeSpacing
-                    Layout.rightMargin: Kirigami.Units.largeSpacing
-                    Layout.fillWidth: true
-                    opacity: (!powerStateText.controlHovered && !simPathText.controlHovered) ? 0.5 : 0
-                }
+                MobileForm.FormDelegateSeparator {}
                 
                 MobileForm.FormTextDelegate {
                     id: simPathText

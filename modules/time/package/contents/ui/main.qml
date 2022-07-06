@@ -12,10 +12,16 @@ import QtQuick.Controls 2.3 as Controls
 import org.kde.kirigami 2.10 as Kirigami
 import org.kde.kcm 1.2
 import org.kde.timesettings 1.0
+import org.kde.kirigamiaddons.labs.mobileform 0.1 as MobileForm
 
 SimpleKCM {
     id: timeModule
 
+    leftPadding: 0
+    rightPadding: 0
+    topPadding: Kirigami.Units.gridUnit
+    bottomPadding: Kirigami.Units.gridUnit
+    
     Component {
         id: listDelegateComponent
 
@@ -38,85 +44,85 @@ SimpleKCM {
     }
 
     ColumnLayout {
-        width: parent.width
         spacing: 0
-        id: formLayout
-
-        Kirigami.ListSectionHeader {
-            label: i18n("Time Display")
-        }
-
-        Kirigami.BasicListItem {
-            label: i18n("Use 24-hour clock:")
-            icon: "clock"
-            onClicked: {
-                twentyFourSwitch.checked = !twentyFourSwitch.checked
-                twentyFourSwitch.clicked()
-            }
-            Controls.Switch {
-                id: twentyFourSwitch
-                checked: kcm.twentyFour
-                onClicked: {
-                    kcm.twentyFour = checked
-                    print(kcm.timeZone);
+        width: parent.width
+        
+        MobileForm.FormCard {
+            Layout.fillWidth: true
+            
+            contentItem: ColumnLayout {
+                spacing: 0
+                
+                MobileForm.FormCardHeader {
+                    title: i18n("Display")
                 }
-            }
-        }
 
-        Kirigami.BasicListItem {
-            label: i18n("Timezone:")
-            onClicked: timeZonePickerSheet.open()
-            Controls.Label {
-                id: timeZoneButton
-                text: kcm.timeZone
-            }
-        }
-
-        Kirigami.ListSectionHeader {
-            label: i18n("Set Time and Date")
-        }
-
-        Kirigami.BasicListItem {
-            label: i18n("Set time automatically:")
-            onClicked: {
-                ntpCheckBox.checked = !ntpCheckBox.checked
-                ntpCheckBox.clicked()
-            }
-
-            Controls.Switch {
-                id: ntpCheckBox
-                checked: kcm.useNtp
-                onClicked: {
-                    kcm.useNtp = checked;
-                    if (!checked) {
-                        kcm.ntpServer = ""
-                        kcm.saveTime()
+                MobileForm.FormSwitchDelegate {
+                    id: hourFormatSwitch
+                    text: i18n("24-Hour Format")
+                    description: i18n("Whether to use a 24-hour format for clocks.")
+                    checked: kcm.twentyFour
+                    onCheckedChanged: {
+                        kcm.twentyFour = checked
                     }
                 }
-            }
-        }
-
-        Kirigami.BasicListItem {
-            label: i18n("Time")
-            icon: "clock"
-            enabled: !ntpCheckBox.checked
-            onClicked: timePickerSheet.open()
-            Controls.Label {
-                text: {
-                    Qt.formatTime(kcm.currentTime, Locale.LongFormat)
+                
+                MobileForm.FormDelegateSeparator { above: hourFormatSwitch; below: timeZoneSelect }
+                
+                MobileForm.FormButtonDelegate {
+                    id: timeZoneSelect
+                    text: i18n("Timezone")
+                    description: kcm.timeZone
+                    onClicked: timeZonePickerSheet.open()
                 }
             }
         }
+        
+        MobileForm.FormCard {
+            Layout.topMargin: Kirigami.Units.largeSpacing
+            Layout.fillWidth: true
+            
+            contentItem: ColumnLayout {
+                spacing: 0
+                
+                MobileForm.FormCardHeader {
+                    title: i18n("Time and Date")
+                }
 
-        Kirigami.BasicListItem {
-            label: i18n("Date")
-            icon: "view-calendar"
-            enabled: !ntpCheckBox.checked
-            onClicked: datePickerSheet.open()
-
-            Controls.Label {
-                text: {
-                    Qt.formatDate(kcm.currentDate, Locale.LongFormat);
+                MobileForm.FormSwitchDelegate {
+                    id: ntpCheckBox
+                    text: i18n("Automatic Time Synchronization")
+                    description: i18n("Whether to set the time automatically.")
+                    checked: kcm.useNtp
+                    onCheckedChanged: {
+                        kcm.useNtp = checked
+                        if (!checked) {
+                            kcm.ntpServer = ""
+                            kcm.saveTime()
+                        }
+                    }
+                }
+                
+                MobileForm.FormDelegateSeparator { above: ntpCheckBox; below: timeSelect }
+                
+                MobileForm.FormButtonDelegate {
+                    id: timeSelect
+                    enabled: !ntpCheckBox.checked
+                    icon.name: "clock"
+                    text: i18n("Current Time")
+                    description: Qt.formatTime(kcm.currentTime, Locale.LongFormat)
+                    onClicked: timePickerSheet.open()
+                }
+                
+                MobileForm.FormDelegateSeparator { above: timeSelect; below: dateSelect }
+                
+                MobileForm.FormButtonDelegate {
+                    id: dateSelect
+                    enabled: !ntpCheckBox.checked
+                    icon.name: "view-calendar"
+                    text: i18n("Date")
+                    description: Qt.formatDate(kcm.currentDate, Locale.LongFormat)
+                    onClicked: datePickerSheet.open()
                 }
             }
         }

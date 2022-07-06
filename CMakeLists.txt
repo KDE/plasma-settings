@@ -53,6 +53,7 @@ find_package(PkgConfig REQUIRED)
 pkg_check_modules(GOBJECT gobject-2.0 REQUIRED IMPORTED_TARGET)
 pkg_check_modules(GIO gio-2.0 REQUIRED IMPORTED_TARGET)
 
+ecm_find_qmlmodule(org.kde.kirigamiaddons.labs.mobileform 0.1)
 ecm_find_qmlmodule(org.kde.kcm 1.0)
 
 add_definitions(-DQT_DISABLE_DEPRECATED_BEFORE=0x060000)
