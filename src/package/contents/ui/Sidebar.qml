@@ -75,6 +75,7 @@ Kirigami.OverlayDrawer {
             id: scrollView
             Layout.fillHeight: true
             Layout.fillWidth: true
+            z: -1
 
             property real scrollBarWidth: QQC2.ScrollBar.vertical.width
             QQC2.ScrollBar.horizontal.visible: false
@@ -90,7 +91,7 @@ Kirigami.OverlayDrawer {
                     height: Kirigami.Units.gridUnit * 2
                     x: Kirigami.Units.smallSpacing
 
-                    property bool pageInView: model.id === applicationWindow().currentModule.name
+                    property bool pageInView: model.id === applicationWindow().currentModuleName
 
                     text: model.name
                     icon.name: model.iconName
@@ -99,9 +100,8 @@ Kirigami.OverlayDrawer {
                     onClicked: {
                         if (!pageInView) {
                             applicationWindow().openModule(model.id);
-                        } else {
-                            checked = Qt.binding(function() { return pageInView; });
                         }
+                        checked = Qt.binding(function() { return pageInView; });
                     }
                 }
             }

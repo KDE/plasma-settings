@@ -19,6 +19,7 @@ Kirigami.ApplicationWindow {
     pageStack.globalToolBar.showNavigationButtons: Kirigami.ApplicationHeaderStyle.ShowBackButton;
     
     property alias currentModule: module
+    property string currentModuleName
     
     // pop pages when not in use
     Connections {
@@ -106,11 +107,13 @@ Kirigami.ApplicationWindow {
     }
     
     function openModule(path) {
-        module.path = path
+        module.path = path;
         while (pageStack.depth > ((isWidescreen || SettingsApp.singleModule) ? 0 : 1)) {
-            pageStack.pop()
+            pageStack.pop();
         }
         pageStack.push(kcmContainer.createObject(pageStack, {"kcm": module.kcm, "internalPage": module.kcm.mainUi}));
+        
+        currentModuleName = module.name;
     }
     
     // if module is specified to be opened, load it
