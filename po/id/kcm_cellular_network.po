@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-settings\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2022-05-19 00:47+0000\n"
+"POT-Creation-Date: 2022-07-07 00:47+0000\n"
 "PO-Revision-Date: 2022-04-07 22:24+0700\n"
 "Last-Translator: Wantoyèk <wantoyek@gmail.com>\n"
 "Language-Team: Indonesian <kde-i18n-doc@kde.org>\n"
@@ -233,7 +233,7 @@ msgstr "Mode daya penuh"
 msgid "Initializing"
 msgstr "Menginisialisasi"
 
-#: modemdetails.cpp:250 package/contents/ui/Sim.qml:147
+#: modemdetails.cpp:250 package/contents/ui/Sim.qml:126
 #, kde-format
 msgid "Locked"
 msgstr "Dikunci"
@@ -253,7 +253,7 @@ msgstr "Menonfungsikan"
 msgid "Enabling"
 msgstr "Memfungsikan"
 
-#: modemdetails.cpp:258 package/contents/ui/Modem.qml:130
+#: modemdetails.cpp:258 package/contents/ui/Modem.qml:112
 #, kde-format
 msgid "Enabled"
 msgstr "Difungsikan"
@@ -368,14 +368,14 @@ msgstr "Lampiran untuk mengakses ke Layanan Operator Lokal Terbatas."
 msgid "Scanning networks failed: %1"
 msgstr "Pemindaian jaringan, gagal: %1"
 
-#: modemdetails.cpp:413 package/contents/ui/Modem.qml:268
-#: package/contents/ui/Sim.qml:148
+#: modemdetails.cpp:413 package/contents/ui/Modem.qml:205
+#: package/contents/ui/Sim.qml:127
 #, kde-format
 msgid "Yes"
 msgstr "Ya"
 
-#: modemdetails.cpp:415 package/contents/ui/Modem.qml:268
-#: package/contents/ui/Sim.qml:148
+#: modemdetails.cpp:415 package/contents/ui/Modem.qml:205
+#: package/contents/ui/Sim.qml:127
 #, kde-format
 msgid "No"
 msgstr "Tidak"
@@ -493,201 +493,201 @@ msgstr "Hanya 3G"
 msgid "Only 2G"
 msgstr "Hanya 2G"
 
-#: package/contents/ui/main.qml:38
+#: package/contents/ui/main.qml:37
 #, kde-format
 msgid "Modem not available"
 msgstr "Modem tidak tersedia"
 
-#: package/contents/ui/main.qml:80
+#: package/contents/ui/main.qml:79
 #, fuzzy, kde-format
 #| msgid "Mobile data:"
 msgid "Mobile data"
 msgstr "Data seluler:"
 
-#: package/contents/ui/main.qml:81
+#: package/contents/ui/main.qml:80
 #, kde-format
 msgid "Whether mobile data is enabled."
 msgstr ""
 
-#: package/contents/ui/main.qml:102
+#: package/contents/ui/main.qml:96
 #, fuzzy, kde-format
 #| msgid "Data Usage:"
 msgid "Data Usage"
 msgstr "Penggunaan Data:"
 
-#: package/contents/ui/main.qml:103
+#: package/contents/ui/main.qml:97
 #, fuzzy, kde-format
 #| msgid "View Data Usage"
 msgid "View data usage."
 msgstr "Tampilan Penggunaan Data"
 
-#: package/contents/ui/main.qml:119 package/contents/ui/Sim.qml:21
+#: package/contents/ui/main.qml:113 package/contents/ui/Sim.qml:20
 #, kde-format
 msgid "SIM"
 msgstr "SIM"
 
-#: package/contents/ui/main.qml:119
+#: package/contents/ui/main.qml:113
 #, kde-format
 msgid "SIMs"
 msgstr "SIM"
 
-#: package/contents/ui/main.qml:139
+#: package/contents/ui/main.qml:133
 #, kde-format
 msgid "SIM %1"
 msgstr "SIM %1"
 
-#: package/contents/ui/main.qml:140
+#: package/contents/ui/main.qml:134
 #, fuzzy, kde-format
 #| msgid "View Modem Details"
 msgid "View SIM %1 details."
 msgstr "Tampilan Detail Modem"
 
-#: package/contents/ui/Modem.qml:19
+#: package/contents/ui/Modem.qml:18
 #, kde-format
 msgid "Modem %1"
 msgstr "Modem %1"
 
-#: package/contents/ui/Modem.qml:44
+#: package/contents/ui/Modem.qml:43
 #, fuzzy, kde-format
 #| msgid "Modem Control:"
 msgid "Modem Control"
 msgstr "Kontrol Modem:"
 
-#: package/contents/ui/Modem.qml:60
+#: package/contents/ui/Modem.qml:52
 #, fuzzy, kde-format
 #| msgid "Force Modem Restart"
 msgid "Modem Restart"
 msgstr "Paksa Restart Modem"
 
-#: package/contents/ui/Modem.qml:63
+#: package/contents/ui/Modem.qml:55
 #, kde-format
 msgid "Force Modem Restart"
 msgstr "Paksa Restart Modem"
 
-#: package/contents/ui/Modem.qml:79 package/contents/ui/Sim.qml:127
+#: package/contents/ui/Modem.qml:71 package/contents/ui/Sim.qml:106
 #, kde-format
 msgid "Modem Details"
 msgstr "Detail Modem"
 
-#: package/contents/ui/Modem.qml:92
+#: package/contents/ui/Modem.qml:84
 #, fuzzy, kde-format
 #| msgid "Access Technologies:"
 msgid "Access Technologies"
 msgstr "Teknologi Akses:"
 
-#: package/contents/ui/Modem.qml:117
+#: package/contents/ui/Modem.qml:104
 #, fuzzy, kde-format
 #| msgid "IMEI:"
 msgid "IMEI"
 msgstr "IMEI:"
 
-#: package/contents/ui/Modem.qml:143
+#: package/contents/ui/Modem.qml:120
 #, fuzzy, kde-format
 #| msgid "Manufacturer:"
 msgid "Manufacturer"
 msgstr "Manufaktur:"
 
-#: package/contents/ui/Modem.qml:156
+#: package/contents/ui/Modem.qml:128
 #, fuzzy, kde-format
 #| msgid "Model:"
 msgid "Model"
 msgstr "Model:"
 
-#: package/contents/ui/Modem.qml:177
+#: package/contents/ui/Modem.qml:144
 #, kde-format
 msgid "Owned Numbers:"
 msgstr "Nomor Pemlik:"
 
-#: package/contents/ui/Modem.qml:202
+#: package/contents/ui/Modem.qml:164
 #, fuzzy, kde-format
 #| msgid "Revision:"
 msgid "Revision"
 msgstr "Revisi:"
 
-#: package/contents/ui/Modem.qml:215
+#: package/contents/ui/Modem.qml:172
 #, fuzzy, kde-format
 #| msgid "Signal Quality:"
 msgid "Signal Quality"
 msgstr "Kualitas Sinyal:"
 
-#: package/contents/ui/Modem.qml:228
+#: package/contents/ui/Modem.qml:180
 #, fuzzy, kde-format
 #| msgid "State:"
 msgid "State"
 msgstr "Keadaan:"
 
-#: package/contents/ui/Modem.qml:241
+#: package/contents/ui/Modem.qml:188
 #, fuzzy, kde-format
 #| msgid "Failure Reason:"
 msgid "Failure Reason"
 msgstr "Alasan Kegagalan:"
 
-#: package/contents/ui/Modem.qml:254
+#: package/contents/ui/Modem.qml:196
 #, fuzzy, kde-format
 #| msgid "Registration State:"
 msgid "Registration State"
 msgstr "Keadaan Registrasi:"
 
-#: package/contents/ui/Modem.qml:267
+#: package/contents/ui/Modem.qml:204
 #, fuzzy, kde-format
 #| msgid "Roaming:"
 msgid "Roaming"
 msgstr "Roaming:"
 
-#: package/contents/ui/Modem.qml:280
+#: package/contents/ui/Modem.qml:212
 #, fuzzy, kde-format
 #| msgid "Firmware Version:"
 msgid "Firmware Version"
 msgstr "Versi Firmware:"
 
-#: package/contents/ui/Modem.qml:293
+#: package/contents/ui/Modem.qml:220
 #, fuzzy, kde-format
 #| msgid "Interface Name:"
 msgid "Interface Name"
 msgstr "Nama Antarmuka:"
 
-#: package/contents/ui/Modem.qml:306
+#: package/contents/ui/Modem.qml:228
 #, fuzzy, kde-format
 #| msgid "Metered:"
 msgid "Metered"
 msgstr "Diukur:"
 
-#: package/contents/ui/Modem.qml:319
+#: package/contents/ui/Modem.qml:236
 #, fuzzy, kde-format
 #| msgid "Active NetworkManager Connection:"
 msgid "Active NetworkManager Connection"
 msgstr "Aktifkan Koneksi NetworkManager:"
 
-#: package/contents/ui/Modem.qml:332
+#: package/contents/ui/Modem.qml:244
 #, fuzzy, kde-format
 #| msgid "Device:"
 msgid "Device"
 msgstr "Perangkat:"
 
-#: package/contents/ui/Modem.qml:345
+#: package/contents/ui/Modem.qml:252
 #, fuzzy, kde-format
 #| msgid "Device ID:"
 msgid "Device ID"
 msgstr "ID Perangkat:"
 
-#: package/contents/ui/Modem.qml:366
+#: package/contents/ui/Modem.qml:268
 #, kde-format
 msgid "Drivers:"
 msgstr "Driver:"
 
-#: package/contents/ui/Modem.qml:391
+#: package/contents/ui/Modem.qml:288
 #, fuzzy, kde-format
 #| msgid "Plugin:"
 msgid "Plugin"
 msgstr "Plugin:"
 
-#: package/contents/ui/Modem.qml:404
+#: package/contents/ui/Modem.qml:296
 #, fuzzy, kde-format
 #| msgid "Power State:"
 msgid "Power State"
 msgstr "Kondisi Daya:"
 
-#: package/contents/ui/Modem.qml:417
+#: package/contents/ui/Modem.qml:304
 #, fuzzy, kde-format
 #| msgid "SIM Path:"
 msgid "SIM Path"
@@ -728,125 +728,125 @@ msgstr "Edit"
 msgid "Delete"
 msgstr "Hapus"
 
-#: package/contents/ui/Sim.qml:62
+#: package/contents/ui/Sim.qml:61
 #, fuzzy, kde-format
 #| msgid "Data roaming:"
 msgid "Data Roaming"
 msgstr "Data roaming:"
 
-#: package/contents/ui/Sim.qml:63
+#: package/contents/ui/Sim.qml:62
 #, kde-format
 msgid "Allow your device to use networks other than your carrier."
 msgstr ""
 
-#: package/contents/ui/Sim.qml:79
+#: package/contents/ui/Sim.qml:73
 #, fuzzy, kde-format
 #| msgid "Edit APN"
 msgid "Modify APNs"
 msgstr "Edit APN"
 
-#: package/contents/ui/Sim.qml:80
+#: package/contents/ui/Sim.qml:74
 #, kde-format
 msgid "Configure access point names for your carrier."
 msgstr ""
 
-#: package/contents/ui/Sim.qml:95
+#: package/contents/ui/Sim.qml:84
 #, fuzzy, kde-format
 #| msgid "Networks:"
 msgid "Networks"
 msgstr "Jaringan:"
 
-#: package/contents/ui/Sim.qml:96
+#: package/contents/ui/Sim.qml:85
 #, fuzzy, kde-format
 #| msgid "Select Network Operator"
 msgid "Select a network operator."
 msgstr "Plih Operator Jaringan"
 
-#: package/contents/ui/Sim.qml:111 package/contents/ui/SimLock.qml:20
+#: package/contents/ui/Sim.qml:95 package/contents/ui/SimLock.qml:19
 #, kde-format
 msgid "SIM Lock"
 msgstr "Kunci SIM"
 
-#: package/contents/ui/Sim.qml:112
+#: package/contents/ui/Sim.qml:96
 #, fuzzy, kde-format
 #| msgid "Modify SIM Lock"
 msgid "Modify SIM lock settings."
 msgstr "Modifikasi Kunci SIM"
 
-#: package/contents/ui/Sim.qml:128
+#: package/contents/ui/Sim.qml:107
 #, kde-format
 msgid "View the details of the modem this SIM is connected to."
 msgstr ""
 
-#: package/contents/ui/Sim.qml:142
+#: package/contents/ui/Sim.qml:121
 #, kde-format
 msgid "SIM Details"
 msgstr "Detail SIM"
 
-#: package/contents/ui/Sim.qml:160
+#: package/contents/ui/Sim.qml:134
 #, fuzzy, kde-format
 #| msgid "IMSI:"
 msgid "IMSI"
 msgstr "IMSI:"
 
-#: package/contents/ui/Sim.qml:173
+#: package/contents/ui/Sim.qml:142
 #, fuzzy, kde-format
 #| msgid "EID:"
 msgid "EID"
 msgstr "EID:"
 
-#: package/contents/ui/Sim.qml:186
+#: package/contents/ui/Sim.qml:150
 #, fuzzy, kde-format
 #| msgid "Operator Code (modem):"
 msgid "Operator Code (modem)"
 msgstr "Kode Operator (modem):"
 
-#: package/contents/ui/Sim.qml:199
+#: package/contents/ui/Sim.qml:158
 #, fuzzy, kde-format
 #| msgid "Operator Name (modem):"
 msgid "Operator Name (modem)"
 msgstr "Nama Operator (modem):"
 
-#: package/contents/ui/Sim.qml:212
+#: package/contents/ui/Sim.qml:166
 #, fuzzy, kde-format
 #| msgid "Operator Code (provided by SIM):"
 msgid "Operator Code (provided by SIM)"
 msgstr "Kode Operator (disediakan oleh SIM):"
 
-#: package/contents/ui/Sim.qml:225
+#: package/contents/ui/Sim.qml:174
 #, fuzzy, kde-format
 #| msgid "Operator Name (provided by SIM):"
 msgid "Operator Name (provided by SIM)"
 msgstr "Nama Operator (disediakan oleh SIM):"
 
-#: package/contents/ui/Sim.qml:238
+#: package/contents/ui/Sim.qml:182
 #, fuzzy, kde-format
 #| msgid "SIM ID:"
 msgid "SIM ID"
 msgstr "SIM ID:"
 
-#: package/contents/ui/Sim.qml:260
+#: package/contents/ui/Sim.qml:199
 #, fuzzy, kde-format
 #| msgid "Emergency Numbers:"
 msgid "Emergency Numbers"
 msgstr "Nomor Darurat:"
 
-#: package/contents/ui/SimLock.qml:51
+#: package/contents/ui/SimLock.qml:50
 #, kde-format
 msgid "SIM is locked"
 msgstr "SIM telah terkunci"
 
-#: package/contents/ui/SimLock.qml:52
+#: package/contents/ui/SimLock.qml:51
 #, kde-format
 msgid "In order to use this SIM, you must first unlock it."
 msgstr "Supaya SIM ini dapat digunakan, kamu harus membuka kunci dulu."
 
-#: package/contents/ui/SimLock.qml:74
+#: package/contents/ui/SimLock.qml:73
 #, kde-format
 msgid "SIM is not locked"
 msgstr "SIM tidaklah terkunci"
 
-#: package/contents/ui/SimLock.qml:75
+#: package/contents/ui/SimLock.qml:74
 #, kde-format
 msgid ""
 "You can lock your SIM to require a set PIN code for phone calls and mobile "
@@ -855,83 +855,83 @@ msgstr ""
 "Kamu bisa mengunci SIM-mu untuk meminta kode PIN yang ditetapkan untuk "
 "panggilan telpon dan data seluler."
 
-#: package/contents/ui/SimLock.qml:79
+#: package/contents/ui/SimLock.qml:78
 #, kde-format
 msgid "Lock SIM"
 msgstr "Kunci SIM"
 
-#: package/contents/ui/SimLock.qml:93
+#: package/contents/ui/SimLock.qml:92
 #, fuzzy, kde-format
 #| msgid "Disable Modem"
 msgid "Disable SIM Lock"
 msgstr "Nonfungsikan Modem"
 
-#: package/contents/ui/SimLock.qml:94
+#: package/contents/ui/SimLock.qml:93
 #, kde-format
 msgid "Disable the SIM lock feature and remove the passcode on the SIM."
 msgstr ""
 
-#: package/contents/ui/SimLock.qml:107
+#: package/contents/ui/SimLock.qml:106
 #, kde-format
 msgid "Change PIN"
 msgstr "Ubah PIN"
 
-#: package/contents/ui/SimLock.qml:108
+#: package/contents/ui/SimLock.qml:107
 #, kde-format
 msgid "Change the passcode set on the SIM."
 msgstr ""
 
-#: package/contents/ui/SimLock.qml:123
+#: package/contents/ui/SimLock.qml:122
 #, kde-format
 msgid "Unlock SIM"
 msgstr "Lepas Kunci SIM"
 
-#: package/contents/ui/SimLock.qml:131
+#: package/contents/ui/SimLock.qml:130
 #, kde-format
 msgid "Attempts left: %1"
 msgstr "Mencoba tinggal: %1"
 
-#: package/contents/ui/SimLock.qml:135
+#: package/contents/ui/SimLock.qml:134
 #, kde-format
 msgid "Enter PIN"
 msgstr "Masukksan PIN"
 
-#: package/contents/ui/SimLock.qml:143
+#: package/contents/ui/SimLock.qml:142
 #, kde-format
 msgid "Change SIM PIN"
 msgstr "Ubah PIN SIM"
 
-#: package/contents/ui/SimLock.qml:162 package/contents/ui/SimLock.qml:226
+#: package/contents/ui/SimLock.qml:161 package/contents/ui/SimLock.qml:225
 #, kde-format
 msgid "PINs don't match!"
 msgstr "PIN tidak cocok!"
 
-#: package/contents/ui/SimLock.qml:168 package/contents/ui/SimLock.qml:232
+#: package/contents/ui/SimLock.qml:167 package/contents/ui/SimLock.qml:231
 #, kde-format
 msgid "PINs must be between 4 and 8 digits!"
 msgstr "PIN harus terdiri dari antara 4 dan 8 digit!"
 
-#: package/contents/ui/SimLock.qml:173 package/contents/ui/SimLock.qml:200
+#: package/contents/ui/SimLock.qml:172 package/contents/ui/SimLock.qml:199
 #, kde-format
 msgid "Current PIN"
 msgstr "PIN saat ini"
 
-#: package/contents/ui/SimLock.qml:178 package/contents/ui/SimLock.qml:237
+#: package/contents/ui/SimLock.qml:177 package/contents/ui/SimLock.qml:236
 #, kde-format
 msgid "New PIN"
 msgstr "PIN baru"
 
-#: package/contents/ui/SimLock.qml:183 package/contents/ui/SimLock.qml:242
+#: package/contents/ui/SimLock.qml:182 package/contents/ui/SimLock.qml:241
 #, kde-format
 msgid "Confirm PIN"
 msgstr "Konfirmasi PIN"
 
-#: package/contents/ui/SimLock.qml:191
+#: package/contents/ui/SimLock.qml:190
 #, kde-format
 msgid "Remove SIM PIN"
 msgstr "Hapus PIN SIM"
 
-#: package/contents/ui/SimLock.qml:208
+#: package/contents/ui/SimLock.qml:207
 #, kde-format
 msgid "Add SIM PIN"
 msgstr "Tambahkan PIN SIM"

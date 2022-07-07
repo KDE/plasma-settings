@@ -5,7 +5,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcm_mobile_powermanagement\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2022-02-09 00:49+0000\n"
+"POT-Creation-Date: 2022-07-07 00:47+0000\n"
 "PO-Revision-Date: 2021-08-11 20:05+0200\n"
 "Last-Translator: Matej Mrenica <matejm98mthw@gmail.com>\n"
 "Language-Team: Slovak <kde-i18n-doc@kde.org>\n"
@@ -71,23 +71,24 @@ msgstr "Nastavenia energie"
 msgid "Tomaz Canabrava"
 msgstr "Tomaz Canabrava"
 
-#: package/contents/ui/main.qml:28
-#, kde-format
+#: package/contents/ui/main.qml:38
+#, fuzzy, kde-format
+#| msgid "Turn off the screen"
 msgctxt "Part of a sentence like 'Dim screen after 5 minutes'"
-msgid "Dim screen after:"
-msgstr ""
+msgid "Dim screen after"
+msgstr "Vypnúť obrazovku"
 
-#: package/contents/ui/main.qml:37
+#: package/contents/ui/main.qml:63
 #, fuzzy, kde-format
 #| msgid "Turn off the screen"
 msgctxt "Part of a sentence like 'Turn off screen after 5 minutes'"
-msgid "Turn off screen after:"
+msgid "Turn off screen after"
 msgstr "Vypnúť obrazovku"
 
-#: package/contents/ui/main.qml:46
+#: package/contents/ui/main.qml:88
 #, kde-format
 msgctxt "Part of a sentence like 'Suspend device after 5 minutes'"
-msgid "Suspend device after:"
+msgid "Suspend device after"
 msgstr ""
 
 #~ msgctxt "Part of a sentence like 'Dim Display after 5 minutes'"

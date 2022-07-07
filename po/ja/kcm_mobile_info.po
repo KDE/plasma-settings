@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-settings\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2021-02-16 02:44+0100\n"
+"POT-Creation-Date: 2022-07-07 00:47+0000\n"
 "PO-Revision-Date: 2019-10-20 16:34-0700\n"
 "Last-Translator: Japanese KDE translation team <kde-jp@kde.org>\n"
 "Language-Team: Japanese <kde-jp@kde.org>\n"
@@ -34,77 +34,77 @@ msgstr ""
 msgid "Jonah Brüchert"
 msgstr ""
 
-#: package/contents/ui/main.qml:8
+#: package/contents/ui/main.qml:16
 #, kde-format
 msgid "System Information"
 msgstr ""
 
-#: package/contents/ui/main.qml:15 package/contents/ui/main.qml:105
+#: package/contents/ui/main.qml:42
 #, kde-format
-msgid "Copy to clipboard"
+msgid "Operating System"
 msgstr ""
 
-#: package/contents/ui/main.qml:44
+#: package/contents/ui/main.qml:49
 #, kde-format
-msgid "Software"
-msgstr ""
-
-#: package/contents/ui/main.qml:50
-#, kde-format
-msgid "KDE Plasma Version:"
-msgstr ""
-
-#: package/contents/ui/main.qml:55
-#, kde-format
-msgid "KDE Frameworks Version:"
-msgstr ""
-
-#: package/contents/ui/main.qml:59
-#, kde-format
-msgid "Qt Version:"
-msgstr ""
-
-#: package/contents/ui/main.qml:64
-#, kde-format
-msgid "Kernel Version:"
-msgstr ""
-
-#: package/contents/ui/main.qml:69
-#, kde-format
-msgid "OS Type:"
+msgid "Webpage"
 msgstr ""
 
 #: package/contents/ui/main.qml:70
+#, kde-format
+msgid "KDE Plasma Version"
+msgstr ""
+
+#: package/contents/ui/main.qml:77
+#, kde-format
+msgid "KDE Frameworks Version"
+msgstr ""
+
+#: package/contents/ui/main.qml:84
+#, kde-format
+msgid "Qt Version"
+msgstr ""
+
+#: package/contents/ui/main.qml:91
+#, kde-format
+msgid "Kernel Version"
+msgstr ""
+
+#: package/contents/ui/main.qml:98
+#, kde-format
+msgid "OS Type"
+msgstr ""
+
+#: package/contents/ui/main.qml:99
 #, kde-format
 msgctxt "@label %1 is the CPU bit width (e.g. 32 or 64)"
 msgid "%1-bit"
 msgstr ""
 
-#: package/contents/ui/main.qml:77
+#: package/contents/ui/main.qml:116
 #, kde-format
-msgid "Hardware"
-msgstr ""
-
-#: package/contents/ui/main.qml:83
-#, kde-format
-msgid "Processor:"
-msgid_plural "Processors:"
+msgid "Processor"
+msgid_plural "Processors"
 msgstr[0] ""
 msgstr[1] ""
 
-#: package/contents/ui/main.qml:87
+#: package/contents/ui/main.qml:123
 #, kde-format
-msgid "Memory:"
+msgid "Memory"
 msgstr ""
 
-#: package/contents/ui/main.qml:91
+#: package/contents/ui/main.qml:127
 #, kde-format
 msgctxt "@label %1 is the formatted amount of system memory (e.g. 7,7 GiB)"
 msgid "%1 of RAM"
 msgstr ""
 
-#: package/contents/ui/main.qml:93
+#: package/contents/ui/main.qml:129
 #, kde-format
 msgctxt "Unknown amount of RAM"
 msgid "Unknown"
+msgstr ""
+
+#: package/contents/ui/main.qml:143
+#, kde-format
+msgid "Copy to clipboard"
 msgstr ""

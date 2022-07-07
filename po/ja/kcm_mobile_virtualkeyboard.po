@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-settings\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2022-06-30 00:47+0000\n"
+"POT-Creation-Date: 2022-07-07 00:47+0000\n"
 "PO-Revision-Date: 2020-11-08 20:42-0800\n"
 "Last-Translator: Japanese KDE translation team <kde-jp@kde.org>\n"
 "Language-Team: Japanese <kde-jp@kde.org>\n"
@@ -34,72 +34,62 @@ msgstr ""
 msgid "Apply"
 msgstr ""
 
-#: package/contents/ui/main.qml:19
+#: package/contents/ui/main.qml:20
 #, kde-format
 msgid "On-Screen Keyboard"
 msgstr ""
 
-#: package/contents/ui/main.qml:29
-#, kde-format
-msgid "Test keyboard:"
-msgstr ""
-
-#: package/contents/ui/main.qml:30
+#: package/contents/ui/main.qml:43
 #, kde-format
 msgid "Type anything here…"
 msgstr ""
 
-#: package/contents/ui/main.qml:34
+#: package/contents/ui/main.qml:63
 #, kde-format
-msgid "Feedback:"
+msgid "Sound"
 msgstr ""
 
-#: package/contents/ui/main.qml:38
+#: package/contents/ui/main.qml:64
 #, kde-format
-msgid "Emit sound on key press"
-msgstr ""
-
-#: package/contents/ui/main.qml:47
-#, kde-format
-msgid "Vibrate on key press"
-msgstr ""
-
-#: package/contents/ui/main.qml:55
-#, kde-format
-msgid "Text correction:"
-msgstr ""
-
-#: package/contents/ui/main.qml:59
-#, kde-format
-msgid "Check spelling of entered text"
-msgstr ""
-
-#: package/contents/ui/main.qml:66
-#, kde-format
-msgid "Capitalize the first letter of each sentence"
+msgid "Whether to emit a sound on keypress."
 msgstr ""
 
 #: package/contents/ui/main.qml:73
 #, kde-format
+msgid "Vibration"
+msgstr ""
+
+#: package/contents/ui/main.qml:74
+#, kde-format
+msgid "Whether to vibrate on keypress."
+msgstr ""
+
+#: package/contents/ui/main.qml:94
+#, kde-format
+msgid "Check spelling of entered text"
+msgstr ""
+
+#: package/contents/ui/main.qml:103
+#, kde-format
+msgid "Capitalize the first letter of each sentence"
+msgstr ""
+
+#: package/contents/ui/main.qml:112
+#, kde-format
 msgid "Complete current word with first suggestion when hitting space"
 msgstr ""
 
-#: package/contents/ui/main.qml:80
+#: package/contents/ui/main.qml:121
 #, kde-format
 msgid "Suggest potential words in word ribbon"
 msgstr ""
 
-#: package/contents/ui/main.qml:89
+#: package/contents/ui/main.qml:132
 #, kde-format
 msgid "Insert a full-stop when space is pressed twice"
 msgstr ""
 
-#: package/contents/ui/main.qml:97
-#, kde-format
-msgid "Languages:"
-msgstr ""
-
-#: package/contents/ui/main.qml:98
+#: package/contents/ui/main.qml:143
 #, kde-format
 msgid "Configure Languages"
 msgstr ""

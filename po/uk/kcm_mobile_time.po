@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcm_mobile_time\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2022-01-26 00:47+0000\n"
+"POT-Creation-Date: 2022-07-07 00:47+0000\n"
 "PO-Revision-Date: 2021-08-13 09:26+0300\n"
 "Last-Translator: Yuri Chornoivan <yurchor@ukr.net>\n"
 "Language-Team: Ukrainian <kde-i18n-uk@kde.org>\n"
@@ -90,60 +90,76 @@ msgstr "лис"
 msgid "Dec"
 msgstr "гру"
 
-#: package/contents/ui/main.qml:46
-#, kde-format
-msgid "Time Display"
+#: package/contents/ui/main.qml:57
+#, fuzzy, kde-format
+#| msgid "Time Display"
+msgid "Display"
 msgstr "Показ часу:"
 
-#: package/contents/ui/main.qml:50
+#: package/contents/ui/main.qml:62
 #, kde-format
-msgid "Use 24-hour clock:"
-msgstr "24-годинний відлік:"
+msgid "24-Hour Format"
+msgstr ""
 
-#: package/contents/ui/main.qml:67
+#: package/contents/ui/main.qml:63
 #, kde-format
-msgid "Timezone:"
+msgid "Whether to use a 24-hour format for clocks."
+msgstr ""
+
+#: package/contents/ui/main.qml:74
+#, fuzzy, kde-format
+#| msgid "Timezone:"
+msgid "Timezone"
 msgstr "Часовий пояс:"
 
-#: package/contents/ui/main.qml:76
-#, kde-format
-msgid "Set Time and Date"
+#: package/contents/ui/main.qml:89
+#, fuzzy, kde-format
+#| msgid "Set Time and Date"
+msgid "Time and Date"
 msgstr "Встановити час і дату"
 
-#: package/contents/ui/main.qml:80
+#: package/contents/ui/main.qml:94
 #, kde-format
-msgid "Set time automatically:"
+msgid "Automatic Time Synchronization"
+msgstr ""
+
+#: package/contents/ui/main.qml:95
+#, fuzzy, kde-format
+#| msgid "Set time automatically:"
+msgid "Whether to set the time automatically."
 msgstr "Встановити час автоматично:"
 
-#: package/contents/ui/main.qml:100
-#, kde-format
-msgid "Time"
-msgstr "Час"
-
 #: package/contents/ui/main.qml:112
+#, fuzzy, kde-format
+#| msgctxt "This is a city associated with particular time zone"
+#| msgid "Currie"
+msgid "Current Time"
+msgstr "Кур’є"
+
+#: package/contents/ui/main.qml:123
 #, kde-format
 msgid "Date"
 msgstr "Дата"
 
-#: package/contents/ui/main.qml:129
+#: package/contents/ui/main.qml:135
 #, kde-format
 msgctxt "@title:window"
 msgid "Pick Timezone"
 msgstr "Виберіть часовий пояс"
 
-#: package/contents/ui/main.qml:144 package/contents/ui/main.qml:200
-#: package/contents/ui/main.qml:245
+#: package/contents/ui/main.qml:150 package/contents/ui/main.qml:206
+#: package/contents/ui/main.qml:251
 #, kde-format
 msgctxt "@action:button"
 msgid "Close"
 msgstr "Закрити"
 
-#: package/contents/ui/main.qml:164
+#: package/contents/ui/main.qml:170
 #, kde-format
 msgid "Pick Time"
 msgstr "Виберіть час"
 
-#: package/contents/ui/main.qml:209
+#: package/contents/ui/main.qml:215
 #, kde-format
 msgid "Pick Date"
 msgstr "Виберіть дату"
@@ -3063,6 +3079,12 @@ msgstr "Індійський океан"
 msgctxt "This is a continent/area associated with a particular timezone"
 msgid "Pacific"
 msgstr "Тихий океан"
+
+#~ msgid "Use 24-hour clock:"
+#~ msgstr "24-годинний відлік:"
+
+#~ msgid "Time"
+#~ msgstr "Час"
 
 #~ msgctxt "This is a city associated with particular time zone"
 #~ msgid "Kiev"

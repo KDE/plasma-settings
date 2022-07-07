@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-settings\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2022-06-30 00:47+0000\n"
+"POT-Creation-Date: 2022-07-07 00:47+0000\n"
 "PO-Revision-Date: 2022-03-13 11:14+0100\n"
 "Last-Translator: Łukasz Wojniłowicz <lukasz.wojnilowicz@gmail.com>\n"
 "Language-Team: Polish <kde-i18n-doc@kde.org>\n"
@@ -38,73 +38,65 @@ msgstr "Języki"
 msgid "Apply"
 msgstr "Zastosuj"
 
-#: package/contents/ui/main.qml:19
+#: package/contents/ui/main.qml:20
 #, kde-format
 msgid "On-Screen Keyboard"
 msgstr "Klawiatura ekranowa"
 
-#: package/contents/ui/main.qml:29
-#, kde-format
-msgid "Test keyboard:"
-msgstr "Próba klawiatury:"
-
-#: package/contents/ui/main.qml:30
+#: package/contents/ui/main.qml:43
 #, kde-format
 msgid "Type anything here…"
 msgstr "Wpisz tutaj cokolwiek..."
 
-#: package/contents/ui/main.qml:34
+#: package/contents/ui/main.qml:63
 #, kde-format
-msgid "Feedback:"
-msgstr "Informacja zwrotna:"
+msgid "Sound"
+msgstr ""
 
-#: package/contents/ui/main.qml:38
-#, kde-format
-msgid "Emit sound on key press"
+#: package/contents/ui/main.qml:64
+#, fuzzy, kde-format
+#| msgid "Emit sound on key press"
+msgid "Whether to emit a sound on keypress."
 msgstr "Odtwórz dźwięk po naciśnięciu klawisza"
 
-#: package/contents/ui/main.qml:47
+#: package/contents/ui/main.qml:73
 #, kde-format
-msgid "Vibrate on key press"
+msgid "Vibration"
+msgstr ""
+
+#: package/contents/ui/main.qml:74
+#, fuzzy, kde-format
+#| msgid "Vibrate on key press"
+msgid "Whether to vibrate on keypress."
 msgstr "Zadrżyj po naciśnięciu klawisza"
 
-#: package/contents/ui/main.qml:55
-#, kde-format
-msgid "Text correction:"
-msgstr "Poprawianie tekstu:"
-
-#: package/contents/ui/main.qml:59
+#: package/contents/ui/main.qml:94
 #, kde-format
 msgid "Check spelling of entered text"
 msgstr "Popraw pisownię wpisywanego tekstu"
 
-#: package/contents/ui/main.qml:66
+#: package/contents/ui/main.qml:103
 #, kde-format
 msgid "Capitalize the first letter of each sentence"
 msgstr "Zamień pierwszą literę na wielką literę w każdym zdaniu"
 
-#: package/contents/ui/main.qml:73
+#: package/contents/ui/main.qml:112
 #, kde-format
 msgid "Complete current word with first suggestion when hitting space"
 msgstr ""
 "Uzupełnij bieżące słowo pierwszą podpowiedzią po naciśnięciu klawisza spacji"
 
-#: package/contents/ui/main.qml:80
+#: package/contents/ui/main.qml:121
 #, kde-format
 msgid "Suggest potential words in word ribbon"
 msgstr "Podpowiadaj słowa w oknie wysuwnym"
 
-#: package/contents/ui/main.qml:89
+#: package/contents/ui/main.qml:132
 #, kde-format
 msgid "Insert a full-stop when space is pressed twice"
 msgstr "Wstaw kropkę, po dwukrotnym naciśnięciu klawisza spacji"
 
-#: package/contents/ui/main.qml:97
-#, kde-format
-msgid "Languages:"
-msgstr "Języki:"
-
-#: package/contents/ui/main.qml:98
+#: package/contents/ui/main.qml:143
 #, kde-format
 msgid "Configure Languages"
 msgstr "Ustawienia języków"
@@ -118,6 +110,18 @@ msgstr "Klawiatura ekranowa"
 #, kde-format
 msgid "Bhushan Shah"
 msgstr "Bhushan Shah"
+
+#~ msgid "Test keyboard:"
+#~ msgstr "Próba klawiatury:"
+
+#~ msgid "Feedback:"
+#~ msgstr "Informacja zwrotna:"
+
+#~ msgid "Text correction:"
+#~ msgstr "Poprawianie tekstu:"
+
+#~ msgid "Languages:"
+#~ msgstr "Języki:"
 
 #~ msgid "Theme:"
 #~ msgstr "Wygląd:"

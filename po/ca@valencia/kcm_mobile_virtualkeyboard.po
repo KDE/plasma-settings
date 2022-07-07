@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-settings\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2022-06-30 00:47+0000\n"
+"POT-Creation-Date: 2022-07-07 00:47+0000\n"
 "PO-Revision-Date: 2022-01-20 08:43+0100\n"
 "Last-Translator: Josep M. Ferrer <txemaq@gmail.com>\n"
 "Language-Team: Catalan <kde-i18n-ca@kde.org>\n"
@@ -40,72 +40,64 @@ msgstr "Idiomes"
 msgid "Apply"
 msgstr "Aplica"
 
-#: package/contents/ui/main.qml:19
+#: package/contents/ui/main.qml:20
 #, kde-format
 msgid "On-Screen Keyboard"
 msgstr "Teclat en pantalla"
 
-#: package/contents/ui/main.qml:29
-#, kde-format
-msgid "Test keyboard:"
-msgstr "Proveu el teclat:"
-
-#: package/contents/ui/main.qml:30
+#: package/contents/ui/main.qml:43
 #, kde-format
 msgid "Type anything here…"
 msgstr "Teclegeu ací qualsevol cosa…"
 
-#: package/contents/ui/main.qml:34
+#: package/contents/ui/main.qml:63
 #, kde-format
-msgid "Feedback:"
-msgstr "Retroalimentació:"
+msgid "Sound"
+msgstr ""
 
-#: package/contents/ui/main.qml:38
-#, kde-format
-msgid "Emit sound on key press"
+#: package/contents/ui/main.qml:64
+#, fuzzy, kde-format
+#| msgid "Emit sound on key press"
+msgid "Whether to emit a sound on keypress."
 msgstr "Emet un so en prémer les tecles"
 
-#: package/contents/ui/main.qml:47
+#: package/contents/ui/main.qml:73
 #, kde-format
-msgid "Vibrate on key press"
+msgid "Vibration"
+msgstr ""
+
+#: package/contents/ui/main.qml:74
+#, fuzzy, kde-format
+#| msgid "Vibrate on key press"
+msgid "Whether to vibrate on keypress."
 msgstr "Vibra en prémer les tecles"
 
-#: package/contents/ui/main.qml:55
-#, kde-format
-msgid "Text correction:"
-msgstr "Correcció de text:"
-
-#: package/contents/ui/main.qml:59
+#: package/contents/ui/main.qml:94
 #, kde-format
 msgid "Check spelling of entered text"
 msgstr "Verificació ortogràfica del text introduït"
 
-#: package/contents/ui/main.qml:66
+#: package/contents/ui/main.qml:103
 #, kde-format
 msgid "Capitalize the first letter of each sentence"
 msgstr "Posa en majúscula la primera lletra de cada frase"
 
-#: package/contents/ui/main.qml:73
+#: package/contents/ui/main.qml:112
 #, kde-format
 msgid "Complete current word with first suggestion when hitting space"
 msgstr "Completa la paraula actual amb el primer suggeriment en prémer espai"
 
-#: package/contents/ui/main.qml:80
+#: package/contents/ui/main.qml:121
 #, kde-format
 msgid "Suggest potential words in word ribbon"
 msgstr "Suggerix paraules potencials a la franja de paraules"
 
-#: package/contents/ui/main.qml:89
+#: package/contents/ui/main.qml:132
 #, kde-format
 msgid "Insert a full-stop when space is pressed twice"
 msgstr "Inserix un punt quan es prema dues vegades l'espai"
 
-#: package/contents/ui/main.qml:97
-#, kde-format
-msgid "Languages:"
-msgstr "Idiomes:"
-
-#: package/contents/ui/main.qml:98
+#: package/contents/ui/main.qml:143
 #, kde-format
 msgid "Configure Languages"
 msgstr "Configura els idiomes"
@@ -119,6 +111,18 @@ msgstr "Teclat virtual"
 #, kde-format
 msgid "Bhushan Shah"
 msgstr "Bhushan Shah"
+
+#~ msgid "Test keyboard:"
+#~ msgstr "Proveu el teclat:"
+
+#~ msgid "Feedback:"
+#~ msgstr "Retroalimentació:"
+
+#~ msgid "Text correction:"
+#~ msgstr "Correcció de text:"
+
+#~ msgid "Languages:"
+#~ msgstr "Idiomes:"
 
 #~ msgid "Theme:"
 #~ msgstr "Tema:"

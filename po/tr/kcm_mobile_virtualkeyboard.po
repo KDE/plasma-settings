@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-settings\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2022-06-30 00:47+0000\n"
+"POT-Creation-Date: 2022-07-07 00:47+0000\n"
 "PO-Revision-Date: 2022-02-27 13:39+0100\n"
 "Last-Translator: Volkan Gezer <volkangezer@gmail.com>\n"
 "Language-Team: Turkish <kde-l10n-tr@kde.org>\n"
@@ -37,72 +37,64 @@ msgstr "Diller"
 msgid "Apply"
 msgstr "Uygula"
 
-#: package/contents/ui/main.qml:19
+#: package/contents/ui/main.qml:20
 #, kde-format
 msgid "On-Screen Keyboard"
 msgstr "Ekran Klavyesi"
 
-#: package/contents/ui/main.qml:29
-#, kde-format
-msgid "Test keyboard:"
-msgstr "Klavyeyi sına:"
-
-#: package/contents/ui/main.qml:30
+#: package/contents/ui/main.qml:43
 #, kde-format
 msgid "Type anything here…"
 msgstr "Buraya bir şeyler yazın…"
 
-#: package/contents/ui/main.qml:34
+#: package/contents/ui/main.qml:63
 #, kde-format
-msgid "Feedback:"
-msgstr "Geri bildirim:"
+msgid "Sound"
+msgstr ""
 
-#: package/contents/ui/main.qml:38
-#, kde-format
-msgid "Emit sound on key press"
+#: package/contents/ui/main.qml:64
+#, fuzzy, kde-format
+#| msgid "Emit sound on key press"
+msgid "Whether to emit a sound on keypress."
 msgstr "Düğme basımında ses çıkar"
 
-#: package/contents/ui/main.qml:47
+#: package/contents/ui/main.qml:73
 #, kde-format
-msgid "Vibrate on key press"
+msgid "Vibration"
+msgstr ""
+
+#: package/contents/ui/main.qml:74
+#, fuzzy, kde-format
+#| msgid "Vibrate on key press"
+msgid "Whether to vibrate on keypress."
 msgstr "Düğme basımında titret"
 
-#: package/contents/ui/main.qml:55
-#, kde-format
-msgid "Text correction:"
-msgstr "Metin düzeltme:"
-
-#: package/contents/ui/main.qml:59
+#: package/contents/ui/main.qml:94
 #, kde-format
 msgid "Check spelling of entered text"
 msgstr "Girilen metnin yazımını denetle"
 
-#: package/contents/ui/main.qml:66
+#: package/contents/ui/main.qml:103
 #, kde-format
 msgid "Capitalize the first letter of each sentence"
 msgstr "Her bir tümcenin ilk harfini büyük yap"
 
-#: package/contents/ui/main.qml:73
+#: package/contents/ui/main.qml:112
 #, kde-format
 msgid "Complete current word with first suggestion when hitting space"
 msgstr "Boşluk'a basıldığında geçerli sözcüğü ilk öneriyle tamamla"
 
-#: package/contents/ui/main.qml:80
+#: package/contents/ui/main.qml:121
 #, kde-format
 msgid "Suggest potential words in word ribbon"
 msgstr "Sözcük şeridinde olası sözcükleri öner"
 
-#: package/contents/ui/main.qml:89
+#: package/contents/ui/main.qml:132
 #, kde-format
 msgid "Insert a full-stop when space is pressed twice"
 msgstr "Boşluk'a iki kez basıldığında nokta gir"
 
-#: package/contents/ui/main.qml:97
-#, kde-format
-msgid "Languages:"
-msgstr "Diller:"
-
-#: package/contents/ui/main.qml:98
+#: package/contents/ui/main.qml:143
 #, kde-format
 msgid "Configure Languages"
 msgstr "Dilleri Yapılandır"
@@ -116,6 +108,18 @@ msgstr "Sanal Klavye"
 #, kde-format
 msgid "Bhushan Shah"
 msgstr "Buşan Şah"
+
+#~ msgid "Test keyboard:"
+#~ msgstr "Klavyeyi sına:"
+
+#~ msgid "Feedback:"
+#~ msgstr "Geri bildirim:"
+
+#~ msgid "Text correction:"
+#~ msgstr "Metin düzeltme:"
+
+#~ msgid "Languages:"
+#~ msgstr "Diller:"
 
 #~ msgid "Theme:"
 #~ msgstr "Tema:"

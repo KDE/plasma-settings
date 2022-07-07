@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-settings\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2022-06-30 00:47+0000\n"
+"POT-Creation-Date: 2022-07-07 00:47+0000\n"
 "PO-Revision-Date: 2022-03-18 23:11+0200\n"
 "Last-Translator: Tommi Nieminen <translator@legisign.org>\n"
 "Language-Team: Finnish <kde-i18n-doc@kde.org>\n"
@@ -37,72 +37,64 @@ msgstr "Kielet"
 msgid "Apply"
 msgstr "Käytä"
 
-#: package/contents/ui/main.qml:19
+#: package/contents/ui/main.qml:20
 #, kde-format
 msgid "On-Screen Keyboard"
 msgstr "Näyttönäppäimistö"
 
-#: package/contents/ui/main.qml:29
-#, kde-format
-msgid "Test keyboard:"
-msgstr "Kokeile näppäimistöä:"
-
-#: package/contents/ui/main.qml:30
+#: package/contents/ui/main.qml:43
 #, kde-format
 msgid "Type anything here…"
 msgstr "Kirjoita tähän mitä vain…"
 
-#: package/contents/ui/main.qml:34
+#: package/contents/ui/main.qml:63
 #, kde-format
-msgid "Feedback:"
-msgstr "Palaute:"
+msgid "Sound"
+msgstr ""
 
-#: package/contents/ui/main.qml:38
-#, kde-format
-msgid "Emit sound on key press"
+#: package/contents/ui/main.qml:64
+#, fuzzy, kde-format
+#| msgid "Emit sound on key press"
+msgid "Whether to emit a sound on keypress."
 msgstr "Anna näppäimistä äänimerkki"
 
-#: package/contents/ui/main.qml:47
+#: package/contents/ui/main.qml:73
 #, kde-format
-msgid "Vibrate on key press"
+msgid "Vibration"
+msgstr ""
+
+#: package/contents/ui/main.qml:74
+#, fuzzy, kde-format
+#| msgid "Vibrate on key press"
+msgid "Whether to vibrate on keypress."
 msgstr "Värise näppäinpainalluksista"
 
-#: package/contents/ui/main.qml:55
-#, kde-format
-msgid "Text correction:"
-msgstr "Tekstin korjaus:"
-
-#: package/contents/ui/main.qml:59
+#: package/contents/ui/main.qml:94
 #, kde-format
 msgid "Check spelling of entered text"
 msgstr "Tarkista syötetyn tekstin oikeinkirjoitus"
 
-#: package/contents/ui/main.qml:66
+#: package/contents/ui/main.qml:103
 #, kde-format
 msgid "Capitalize the first letter of each sentence"
 msgstr "Aloita virkkeet isolla alkukirjaimella"
 
-#: package/contents/ui/main.qml:73
+#: package/contents/ui/main.qml:112
 #, kde-format
 msgid "Complete current word with first suggestion when hitting space"
 msgstr "Täydennä sana ensimmäisellä ehdotuksella välilyöntiä painettaessa"
 
-#: package/contents/ui/main.qml:80
+#: package/contents/ui/main.qml:121
 #, kde-format
 msgid "Suggest potential words in word ribbon"
 msgstr "Ehdota sananauhassa mahdollisia sanoja"
 
-#: package/contents/ui/main.qml:89
+#: package/contents/ui/main.qml:132
 #, kde-format
 msgid "Insert a full-stop when space is pressed twice"
 msgstr "Lisää piste painettaessa välilyöntiä kahdesti"
 
-#: package/contents/ui/main.qml:97
-#, kde-format
-msgid "Languages:"
-msgstr "Kielet:"
-
-#: package/contents/ui/main.qml:98
+#: package/contents/ui/main.qml:143
 #, kde-format
 msgid "Configure Languages"
 msgstr "Kieliasetukset"
@@ -116,6 +108,18 @@ msgstr "Näyttönäppäimistö"
 #, kde-format
 msgid "Bhushan Shah"
 msgstr "Bhushan Shah"
+
+#~ msgid "Test keyboard:"
+#~ msgstr "Kokeile näppäimistöä:"
+
+#~ msgid "Feedback:"
+#~ msgstr "Palaute:"
+
+#~ msgid "Text correction:"
+#~ msgstr "Tekstin korjaus:"
+
+#~ msgid "Languages:"
+#~ msgstr "Kielet:"
 
 #~ msgid "Theme:"
 #~ msgstr "Teema:"

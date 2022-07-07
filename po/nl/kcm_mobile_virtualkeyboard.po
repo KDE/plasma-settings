@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-settings\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2022-06-30 00:47+0000\n"
+"POT-Creation-Date: 2022-07-07 00:47+0000\n"
 "PO-Revision-Date: 2022-01-20 11:34+0100\n"
 "Last-Translator: Freek de Kruijf <freekdekruijf@kde.nl>\n"
 "Language-Team: \n"
@@ -37,74 +37,66 @@ msgstr "Talen"
 msgid "Apply"
 msgstr "Toepassen"
 
-#: package/contents/ui/main.qml:19
+#: package/contents/ui/main.qml:20
 #, kde-format
 msgid "On-Screen Keyboard"
 msgstr "Toetsenbord op scherm"
 
-#: package/contents/ui/main.qml:29
-#, kde-format
-msgid "Test keyboard:"
-msgstr "Toetsenbord testen:"
-
-#: package/contents/ui/main.qml:30
+#: package/contents/ui/main.qml:43
 #, kde-format
 msgid "Type anything here…"
 msgstr "Hier iets typen…"
 
-#: package/contents/ui/main.qml:34
+#: package/contents/ui/main.qml:63
 #, kde-format
-msgid "Feedback:"
-msgstr "Terugkoppeling:"
+msgid "Sound"
+msgstr ""
 
-#: package/contents/ui/main.qml:38
-#, kde-format
-msgid "Emit sound on key press"
+#: package/contents/ui/main.qml:64
+#, fuzzy, kde-format
+#| msgid "Emit sound on key press"
+msgid "Whether to emit a sound on keypress."
 msgstr "Geluid maken bij indrukken van een toets"
 
-#: package/contents/ui/main.qml:47
+#: package/contents/ui/main.qml:73
 #, kde-format
-msgid "Vibrate on key press"
+msgid "Vibration"
+msgstr ""
+
+#: package/contents/ui/main.qml:74
+#, fuzzy, kde-format
+#| msgid "Vibrate on key press"
+msgid "Whether to vibrate on keypress."
 msgstr "Vibreren bij indrukken van een toets"
 
-#: package/contents/ui/main.qml:55
-#, kde-format
-msgid "Text correction:"
-msgstr "Tekstcorrectie:"
-
-#: package/contents/ui/main.qml:59
+#: package/contents/ui/main.qml:94
 #, kde-format
 msgid "Check spelling of entered text"
 msgstr "Spelling van ingevoerde tekst controleren"
 
-#: package/contents/ui/main.qml:66
+#: package/contents/ui/main.qml:103
 #, kde-format
 msgid "Capitalize the first letter of each sentence"
 msgstr "Zet de eerste letter van elke zin om naar een hoofdletter"
 
-#: package/contents/ui/main.qml:73
+#: package/contents/ui/main.qml:112
 #, kde-format
 msgid "Complete current word with first suggestion when hitting space"
 msgstr ""
 "Het huidige woord aanvullen met de eerste suggestie bij indrukken van de "
 "spatie"
 
-#: package/contents/ui/main.qml:80
+#: package/contents/ui/main.qml:121
 #, kde-format
 msgid "Suggest potential words in word ribbon"
 msgstr "Potentiële woorden in woordlint suggereren"
 
-#: package/contents/ui/main.qml:89
+#: package/contents/ui/main.qml:132
 #, kde-format
 msgid "Insert a full-stop when space is pressed twice"
 msgstr "Een punt invoegen bij tweemaal indrukken van de spatie"
 
-#: package/contents/ui/main.qml:97
-#, kde-format
-msgid "Languages:"
-msgstr "Talen:"
-
-#: package/contents/ui/main.qml:98
+#: package/contents/ui/main.qml:143
 #, kde-format
 msgid "Configure Languages"
 msgstr "Talen configureren"
@@ -118,6 +110,18 @@ msgstr "Virtueel toetsenbord"
 #, kde-format
 msgid "Bhushan Shah"
 msgstr "Bhushan Shah"
+
+#~ msgid "Test keyboard:"
+#~ msgstr "Toetsenbord testen:"
+
+#~ msgid "Feedback:"
+#~ msgstr "Terugkoppeling:"
+
+#~ msgid "Text correction:"
+#~ msgstr "Tekstcorrectie:"
+
+#~ msgid "Languages:"
+#~ msgstr "Talen:"
 
 #~ msgid "Theme:"
 #~ msgstr "Thema:"

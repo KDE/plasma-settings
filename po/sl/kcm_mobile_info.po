@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-settings\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2021-02-16 02:44+0100\n"
+"POT-Creation-Date: 2022-07-07 00:47+0000\n"
 "PO-Revision-Date: 2022-04-11 10:13+0200\n"
 "Last-Translator: Matjaž Jeran <matjaz.jeran@amis.net>\n"
 "Language-Team: Slovenian <lugos-slo@lugos.si>\n"
@@ -38,79 +38,93 @@ msgstr "Info"
 msgid "Jonah Brüchert"
 msgstr "Jonah Brüchert"
 
-#: package/contents/ui/main.qml:8
+#: package/contents/ui/main.qml:16
 #, kde-format
 msgid "System Information"
 msgstr "Podatki o sistemu"
 
-#: package/contents/ui/main.qml:15 package/contents/ui/main.qml:105
+#: package/contents/ui/main.qml:42
 #, kde-format
-msgid "Copy to clipboard"
-msgstr "Kopiraj na odložišče"
+msgid "Operating System"
+msgstr ""
 
-#: package/contents/ui/main.qml:44
+#: package/contents/ui/main.qml:49
 #, kde-format
-msgid "Software"
-msgstr "Programje"
-
-#: package/contents/ui/main.qml:50
-#, kde-format
-msgid "KDE Plasma Version:"
-msgstr "KDE Plasma verzija:"
-
-#: package/contents/ui/main.qml:55
-#, kde-format
-msgid "KDE Frameworks Version:"
-msgstr "KDE Frameworks verzija:"
-
-#: package/contents/ui/main.qml:59
-#, kde-format
-msgid "Qt Version:"
-msgstr "Qt verzija:"
-
-#: package/contents/ui/main.qml:64
-#, kde-format
-msgid "Kernel Version:"
-msgstr "Jedro verzija:"
-
-#: package/contents/ui/main.qml:69
-#, kde-format
-msgid "OS Type:"
-msgstr "Vrsta OS:"
+msgid "Webpage"
+msgstr ""
 
 #: package/contents/ui/main.qml:70
+#, fuzzy, kde-format
+#| msgid "KDE Plasma Version:"
+msgid "KDE Plasma Version"
+msgstr "KDE Plasma verzija:"
+
+#: package/contents/ui/main.qml:77
+#, fuzzy, kde-format
+#| msgid "KDE Frameworks Version:"
+msgid "KDE Frameworks Version"
+msgstr "KDE Frameworks verzija:"
+
+#: package/contents/ui/main.qml:84
+#, fuzzy, kde-format
+#| msgid "Qt Version:"
+msgid "Qt Version"
+msgstr "Qt verzija:"
+
+#: package/contents/ui/main.qml:91
+#, fuzzy, kde-format
+#| msgid "Kernel Version:"
+msgid "Kernel Version"
+msgstr "Jedro verzija:"
+
+#: package/contents/ui/main.qml:98
+#, fuzzy, kde-format
+#| msgid "OS Type:"
+msgid "OS Type"
+msgstr "Vrsta OS:"
+
+#: package/contents/ui/main.qml:99
 #, kde-format
 msgctxt "@label %1 is the CPU bit width (e.g. 32 or 64)"
 msgid "%1-bit"
 msgstr "%1-bit"
 
-#: package/contents/ui/main.qml:77
-#, kde-format
-msgid "Hardware"
-msgstr "Strojna oprema"
-
-#: package/contents/ui/main.qml:83
-#, kde-format
-msgid "Processor:"
-msgid_plural "Processors:"
+#: package/contents/ui/main.qml:116
+#, fuzzy, kde-format
+#| msgid "Processor:"
+#| msgid_plural "Processors:"
+msgid "Processor"
+msgid_plural "Processors"
 msgstr[0] "Procesor:"
 msgstr[1] "Procesorja:"
 msgstr[2] "Procesorji:"
 msgstr[3] "Procesorji:"
 
-#: package/contents/ui/main.qml:87
-#, kde-format
-msgid "Memory:"
+#: package/contents/ui/main.qml:123
+#, fuzzy, kde-format
+#| msgid "Memory:"
+msgid "Memory"
 msgstr "Pomnilnik:"
 
-#: package/contents/ui/main.qml:91
+#: package/contents/ui/main.qml:127
 #, kde-format
 msgctxt "@label %1 is the formatted amount of system memory (e.g. 7,7 GiB)"
 msgid "%1 of RAM"
 msgstr "%1 RAM"
 
-#: package/contents/ui/main.qml:93
+#: package/contents/ui/main.qml:129
 #, kde-format
 msgctxt "Unknown amount of RAM"
 msgid "Unknown"
 msgstr "Neznano"
+
+#: package/contents/ui/main.qml:143
+#, kde-format
+msgid "Copy to clipboard"
+msgstr "Kopiraj na odložišče"
+
+#~ msgid "Software"
+#~ msgstr "Programje"
+
+#~ msgid "Hardware"
+#~ msgstr "Strojna oprema"

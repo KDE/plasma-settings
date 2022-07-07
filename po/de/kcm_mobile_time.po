@@ -5,7 +5,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2022-01-26 00:47+0000\n"
+"POT-Creation-Date: 2022-07-07 00:47+0000\n"
 "PO-Revision-Date: 2022-07-02 12:51+0200\n"
 "Last-Translator: Frederik Schwarzer <schwarzer@kde.org>\n"
 "Language-Team: German <kde-i18n-de@kde.org>\n"
@@ -86,60 +86,77 @@ msgstr "Nov"
 msgid "Dec"
 msgstr "Dez"
 
-#: package/contents/ui/main.qml:46
-#, kde-format
-msgid "Time Display"
+#: package/contents/ui/main.qml:57
+#, fuzzy, kde-format
+#| msgid "Time Display"
+msgid "Display"
 msgstr "Anzeigeformat der Zeit:"
 
-#: package/contents/ui/main.qml:50
-#, kde-format
-msgid "Use 24-hour clock:"
-msgstr "24-Stunden-Uhr verwenden"
+#: package/contents/ui/main.qml:62
+#, fuzzy, kde-format
+#| msgid "24-Hour"
+msgid "24-Hour Format"
+msgstr "24 Stunden"
 
-#: package/contents/ui/main.qml:67
+#: package/contents/ui/main.qml:63
 #, kde-format
-msgid "Timezone:"
+msgid "Whether to use a 24-hour format for clocks."
+msgstr ""
+
+#: package/contents/ui/main.qml:74
+#, fuzzy, kde-format
+#| msgid "Timezone:"
+msgid "Timezone"
 msgstr "Zeitzone:"
 
-#: package/contents/ui/main.qml:76
-#, kde-format
-msgid "Set Time and Date"
+#: package/contents/ui/main.qml:89
+#, fuzzy, kde-format
+#| msgid "Set Time and Date"
+msgid "Time and Date"
 msgstr "Zeit und Datum einstellen"
 
-#: package/contents/ui/main.qml:80
+#: package/contents/ui/main.qml:94
 #, kde-format
-msgid "Set time automatically:"
+msgid "Automatic Time Synchronization"
+msgstr ""
+
+#: package/contents/ui/main.qml:95
+#, fuzzy, kde-format
+#| msgid "Set time automatically:"
+msgid "Whether to set the time automatically."
 msgstr "Uhrzeit automatisch einstellen:"
 
-#: package/contents/ui/main.qml:100
-#, kde-format
-msgid "Time"
-msgstr "Zeit"
-
 #: package/contents/ui/main.qml:112
+#, fuzzy, kde-format
+#| msgctxt "This is a city associated with particular time zone"
+#| msgid "Currie"
+msgid "Current Time"
+msgstr "Currie"
+
+#: package/contents/ui/main.qml:123
 #, kde-format
 msgid "Date"
 msgstr "Datum"
 
-#: package/contents/ui/main.qml:129
+#: package/contents/ui/main.qml:135
 #, kde-format
 msgctxt "@title:window"
 msgid "Pick Timezone"
 msgstr "Zeitzonen auswählen"
 
-#: package/contents/ui/main.qml:144 package/contents/ui/main.qml:200
-#: package/contents/ui/main.qml:245
+#: package/contents/ui/main.qml:150 package/contents/ui/main.qml:206
+#: package/contents/ui/main.qml:251
 #, kde-format
 msgctxt "@action:button"
 msgid "Close"
 msgstr "Schließen"
 
-#: package/contents/ui/main.qml:164
+#: package/contents/ui/main.qml:170
 #, kde-format
 msgid "Pick Time"
 msgstr "Zeit aussuchen"
 
-#: package/contents/ui/main.qml:209
+#: package/contents/ui/main.qml:215
 #, kde-format
 msgid "Pick Date"
 msgstr "Datum aussuchen"
@@ -3060,6 +3077,12 @@ msgctxt "This is a continent/area associated with a particular timezone"
 msgid "Pacific"
 msgstr "Pazifik"
 
+#~ msgid "Use 24-hour clock:"
+#~ msgstr "24-Stunden-Uhr verwenden"
+
+#~ msgid "Time"
+#~ msgstr "Zeit"
+
 #~ msgid "Appearance"
 #~ msgstr "Erscheinungsbild"
 
@@ -3114,9 +3137,6 @@ msgstr "Pazifik"
 
 #~ msgid "Use Region Defaults"
 #~ msgstr "Regionaleinstellungen verwenden"
-
-#~ msgid "24-Hour"
-#~ msgstr "24 Stunden"
 
 #~ msgid "Change Regional Settings..."
 #~ msgstr "Regionaleinstellungen ändern ..."

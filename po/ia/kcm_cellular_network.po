@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-settings\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2022-05-19 00:47+0000\n"
+"POT-Creation-Date: 2022-07-07 00:47+0000\n"
 "PO-Revision-Date: 2022-06-06 22:06+0200\n"
 "Last-Translator: giovanni <g.sora@tiscali.it>\n"
 "Language-Team: Interlingua <kde-i18n-doc@kde.org>\n"
@@ -233,7 +233,7 @@ msgstr "Modo a potentia plen"
 msgid "Initializing"
 msgstr "Il es initializante"
 
-#: modemdetails.cpp:250 package/contents/ui/Sim.qml:147
+#: modemdetails.cpp:250 package/contents/ui/Sim.qml:126
 #, kde-format
 msgid "Locked"
 msgstr "Blocate"
@@ -253,7 +253,7 @@ msgstr "Dishabilitante"
 msgid "Enabling"
 msgstr "Habilitante"
 
-#: modemdetails.cpp:258 package/contents/ui/Modem.qml:130
+#: modemdetails.cpp:258 package/contents/ui/Modem.qml:112
 #, kde-format
 msgid "Enabled"
 msgstr "Habilitate"
@@ -368,14 +368,14 @@ msgstr "Attachate per accesso a Servicios de Operator Local Restringite"
 msgid "Scanning networks failed: %1"
 msgstr "Il falleva a scander retes: %1"
 
-#: modemdetails.cpp:413 package/contents/ui/Modem.qml:268
-#: package/contents/ui/Sim.qml:148
+#: modemdetails.cpp:413 package/contents/ui/Modem.qml:205
+#: package/contents/ui/Sim.qml:127
 #, kde-format
 msgid "Yes"
 msgstr "Si"
 
-#: modemdetails.cpp:415 package/contents/ui/Modem.qml:268
-#: package/contents/ui/Sim.qml:148
+#: modemdetails.cpp:415 package/contents/ui/Modem.qml:205
+#: package/contents/ui/Sim.qml:127
 #, kde-format
 msgid "No"
 msgstr "No"
@@ -493,177 +493,177 @@ msgstr "Solmente 3G"
 msgid "Only 2G"
 msgstr "Solmente 2G"
 
-#: package/contents/ui/main.qml:38
+#: package/contents/ui/main.qml:37
 #, kde-format
 msgid "Modem not available"
 msgstr "Modem non disponibile"
 
-#: package/contents/ui/main.qml:80
+#: package/contents/ui/main.qml:79
 #, kde-format
 msgid "Mobile data"
 msgstr "Datos Mobile"
 
-#: package/contents/ui/main.qml:81
+#: package/contents/ui/main.qml:80
 #, kde-format
 msgid "Whether mobile data is enabled."
 msgstr ""
 
-#: package/contents/ui/main.qml:102
+#: package/contents/ui/main.qml:96
 #, kde-format
 msgid "Data Usage"
 msgstr "Uso de datos"
 
-#: package/contents/ui/main.qml:103
+#: package/contents/ui/main.qml:97
 #, kde-format
 msgid "View data usage."
 msgstr "Vide uso de datos."
 
-#: package/contents/ui/main.qml:119 package/contents/ui/Sim.qml:21
+#: package/contents/ui/main.qml:113 package/contents/ui/Sim.qml:20
 #, kde-format
 msgid "SIM"
 msgstr "SIM"
 
-#: package/contents/ui/main.qml:119
+#: package/contents/ui/main.qml:113
 #, kde-format
 msgid "SIMs"
 msgstr "SIMs"
 
-#: package/contents/ui/main.qml:139
+#: package/contents/ui/main.qml:133
 #, kde-format
 msgid "SIM %1"
 msgstr "SIM %1"
 
-#: package/contents/ui/main.qml:140
+#: package/contents/ui/main.qml:134
 #, kde-format
 msgid "View SIM %1 details."
 msgstr "Vide detalios de SIM %1."
 
-#: package/contents/ui/Modem.qml:19
+#: package/contents/ui/Modem.qml:18
 #, kde-format
 msgid "Modem %1"
 msgstr "Modem %1"
 
-#: package/contents/ui/Modem.qml:44
+#: package/contents/ui/Modem.qml:43
 #, kde-format
 msgid "Modem Control"
 msgstr "Controlo de Modem"
 
-#: package/contents/ui/Modem.qml:60
+#: package/contents/ui/Modem.qml:52
 #, kde-format
 msgid "Modem Restart"
 msgstr "Reinitiar de Modem"
 
-#: package/contents/ui/Modem.qml:63
+#: package/contents/ui/Modem.qml:55
 #, kde-format
 msgid "Force Modem Restart"
 msgstr "Fortia Reinitiar de Modem"
 
-#: package/contents/ui/Modem.qml:79 package/contents/ui/Sim.qml:127
+#: package/contents/ui/Modem.qml:71 package/contents/ui/Sim.qml:106
 #, kde-format
 msgid "Modem Details"
 msgstr "Detalios de Modem"
 
-#: package/contents/ui/Modem.qml:92
+#: package/contents/ui/Modem.qml:84
 #, kde-format
 msgid "Access Technologies"
 msgstr "Technologias de accesso"
 
-#: package/contents/ui/Modem.qml:117
+#: package/contents/ui/Modem.qml:104
 #, kde-format
 msgid "IMEI"
 msgstr "IMEI"
 
-#: package/contents/ui/Modem.qml:143
+#: package/contents/ui/Modem.qml:120
 #, kde-format
 msgid "Manufacturer"
 msgstr "Constructor"
 
-#: package/contents/ui/Modem.qml:156
+#: package/contents/ui/Modem.qml:128
 #, kde-format
 msgid "Model"
 msgstr "Modello"
 
-#: package/contents/ui/Modem.qml:177
+#: package/contents/ui/Modem.qml:144
 #, kde-format
 msgid "Owned Numbers:"
 msgstr "Numeros possedite:"
 
-#: package/contents/ui/Modem.qml:202
+#: package/contents/ui/Modem.qml:164
 #, kde-format
 msgid "Revision"
 msgstr "Revision"
 
-#: package/contents/ui/Modem.qml:215
+#: package/contents/ui/Modem.qml:172
 #, kde-format
 msgid "Signal Quality"
 msgstr "Qualitate de signal"
 
-#: package/contents/ui/Modem.qml:228
+#: package/contents/ui/Modem.qml:180
 #, kde-format
 msgid "State"
 msgstr "Stato"
 
-#: package/contents/ui/Modem.qml:241
+#: package/contents/ui/Modem.qml:188
 #, kde-format
 msgid "Failure Reason"
 msgstr "Ration de fallimento"
 
-#: package/contents/ui/Modem.qml:254
+#: package/contents/ui/Modem.qml:196
 #, kde-format
 msgid "Registration State"
 msgstr "Stato de registration"
 
-#: package/contents/ui/Modem.qml:267
+#: package/contents/ui/Modem.qml:204
 #, kde-format
 msgid "Roaming"
 msgstr "Roaming"
 
-#: package/contents/ui/Modem.qml:280
+#: package/contents/ui/Modem.qml:212
 #, kde-format
 msgid "Firmware Version"
 msgstr "Version de firmware"
 
-#: package/contents/ui/Modem.qml:293
+#: package/contents/ui/Modem.qml:220
 #, kde-format
 msgid "Interface Name"
 msgstr "Nomine de interfacie"
 
-#: package/contents/ui/Modem.qml:306
+#: package/contents/ui/Modem.qml:228
 #, kde-format
 msgid "Metered"
 msgstr "Metrate"
 
-#: package/contents/ui/Modem.qml:319
+#: package/contents/ui/Modem.qml:236
 #, kde-format
 msgid "Active NetworkManager Connection"
 msgstr "Activa Connexion de Gerente de Rete"
 
-#: package/contents/ui/Modem.qml:332
+#: package/contents/ui/Modem.qml:244
 #, kde-format
 msgid "Device"
 msgstr "Dispositivo"
 
-#: package/contents/ui/Modem.qml:345
+#: package/contents/ui/Modem.qml:252
 #, kde-format
 msgid "Device ID"
 msgstr "ID de dispositivo"
 
-#: package/contents/ui/Modem.qml:366
+#: package/contents/ui/Modem.qml:268
 #, kde-format
 msgid "Drivers:"
 msgstr "Drivers:"
 
-#: package/contents/ui/Modem.qml:391
+#: package/contents/ui/Modem.qml:288
 #, kde-format
 msgid "Plugin"
 msgstr "Plugin"
 
-#: package/contents/ui/Modem.qml:404
+#: package/contents/ui/Modem.qml:296
 #, kde-format
 msgid "Power State"
 msgstr "Stato de alimentation"
 
-#: package/contents/ui/Modem.qml:417
+#: package/contents/ui/Modem.qml:304
 #, kde-format
 msgid "SIM Path"
 msgstr "Percurso de SIM"
@@ -703,112 +703,112 @@ msgstr "Modifica"
 msgid "Delete"
 msgstr "Dele"
 
-#: package/contents/ui/Sim.qml:62
+#: package/contents/ui/Sim.qml:61
 #, kde-format
 msgid "Data Roaming"
 msgstr "Roaming de datos"
 
-#: package/contents/ui/Sim.qml:63
+#: package/contents/ui/Sim.qml:62
 #, kde-format
 msgid "Allow your device to use networks other than your carrier."
 msgstr ""
 
-#: package/contents/ui/Sim.qml:79
+#: package/contents/ui/Sim.qml:73
 #, kde-format
 msgid "Modify APNs"
 msgstr "Modifica APNs"
 
-#: package/contents/ui/Sim.qml:80
+#: package/contents/ui/Sim.qml:74
 #, kde-format
 msgid "Configure access point names for your carrier."
 msgstr ""
 
-#: package/contents/ui/Sim.qml:95
+#: package/contents/ui/Sim.qml:84
 #, kde-format
 msgid "Networks"
 msgstr "Retes"
 
-#: package/contents/ui/Sim.qml:96
+#: package/contents/ui/Sim.qml:85
 #, kde-format
 msgid "Select a network operator."
 msgstr "Selige un operator de Rete."
 
-#: package/contents/ui/Sim.qml:111 package/contents/ui/SimLock.qml:20
+#: package/contents/ui/Sim.qml:95 package/contents/ui/SimLock.qml:19
 #, kde-format
 msgid "SIM Lock"
 msgstr "Bloco de SIM"
 
-#: package/contents/ui/Sim.qml:112
+#: package/contents/ui/Sim.qml:96
 #, kde-format
 msgid "Modify SIM lock settings."
 msgstr "Modifica preferentias de  Bloco de SIM"
 
-#: package/contents/ui/Sim.qml:128
+#: package/contents/ui/Sim.qml:107
 #, kde-format
 msgid "View the details of the modem this SIM is connected to."
 msgstr ""
 
-#: package/contents/ui/Sim.qml:142
+#: package/contents/ui/Sim.qml:121
 #, kde-format
 msgid "SIM Details"
 msgstr "Detalios de SIM"
 
-#: package/contents/ui/Sim.qml:160
+#: package/contents/ui/Sim.qml:134
 #, kde-format
 msgid "IMSI"
 msgstr "IMSI"
 
-#: package/contents/ui/Sim.qml:173
+#: package/contents/ui/Sim.qml:142
 #, kde-format
 msgid "EID"
 msgstr "EID"
 
-#: package/contents/ui/Sim.qml:186
+#: package/contents/ui/Sim.qml:150
 #, kde-format
 msgid "Operator Code (modem)"
 msgstr "Codice de Operator (modem)"
 
-#: package/contents/ui/Sim.qml:199
+#: package/contents/ui/Sim.qml:158
 #, kde-format
 msgid "Operator Name (modem)"
 msgstr "Nomine de Operator (modem)"
 
-#: package/contents/ui/Sim.qml:212
+#: package/contents/ui/Sim.qml:166
 #, kde-format
 msgid "Operator Code (provided by SIM)"
 msgstr "Codice de Operator (fornite per SIM)"
 
-#: package/contents/ui/Sim.qml:225
+#: package/contents/ui/Sim.qml:174
 #, kde-format
 msgid "Operator Name (provided by SIM)"
 msgstr "Nomine de Operator (fornite per SIM)"
 
-#: package/contents/ui/Sim.qml:238
+#: package/contents/ui/Sim.qml:182
 #, kde-format
 msgid "SIM ID"
 msgstr "ID de SIM"
 
-#: package/contents/ui/Sim.qml:260
+#: package/contents/ui/Sim.qml:199
 #, kde-format
 msgid "Emergency Numbers"
 msgstr "Numeros de Emergentia"
 
-#: package/contents/ui/SimLock.qml:51
+#: package/contents/ui/SimLock.qml:50
 #, kde-format
 msgid "SIM is locked"
 msgstr "SIM es blocate"
 
-#: package/contents/ui/SimLock.qml:52
+#: package/contents/ui/SimLock.qml:51
 #, kde-format
 msgid "In order to use this SIM, you must first unlock it."
 msgstr "Per poter usar iste SIM, tu primo deve disblocar lo."
 
-#: package/contents/ui/SimLock.qml:74
+#: package/contents/ui/SimLock.qml:73
 #, kde-format
 msgid "SIM is not locked"
 msgstr "SIM es non blocate"
 
-#: package/contents/ui/SimLock.qml:75
+#: package/contents/ui/SimLock.qml:74
 #, kde-format
 msgid ""
 "You can lock your SIM to require a set PIN code for phone calls and mobile "
@@ -817,82 +817,82 @@ msgstr ""
 "Tu pote blocar tu SIM per require un codice de PIN fixate per appellos de "
 "telephono e datos mobile"
 
-#: package/contents/ui/SimLock.qml:79
+#: package/contents/ui/SimLock.qml:78
 #, kde-format
 msgid "Lock SIM"
 msgstr "Bloca SIM"
 
-#: package/contents/ui/SimLock.qml:93
+#: package/contents/ui/SimLock.qml:92
 #, kde-format
 msgid "Disable SIM Lock"
 msgstr "Dishabilita Bloco de SIM"
 
-#: package/contents/ui/SimLock.qml:94
+#: package/contents/ui/SimLock.qml:93
 #, kde-format
 msgid "Disable the SIM lock feature and remove the passcode on the SIM."
 msgstr ""
 
-#: package/contents/ui/SimLock.qml:107
+#: package/contents/ui/SimLock.qml:106
 #, kde-format
 msgid "Change PIN"
 msgstr "Modifica PIN"
 
-#: package/contents/ui/SimLock.qml:108
+#: package/contents/ui/SimLock.qml:107
 #, kde-format
 msgid "Change the passcode set on the SIM."
 msgstr ""
 
-#: package/contents/ui/SimLock.qml:123
+#: package/contents/ui/SimLock.qml:122
 #, kde-format
 msgid "Unlock SIM"
 msgstr "Disbloca SIM"
 
-#: package/contents/ui/SimLock.qml:131
+#: package/contents/ui/SimLock.qml:130
 #, kde-format
 msgid "Attempts left: %1"
 msgstr "Tentativas lassate: %1"
 
-#: package/contents/ui/SimLock.qml:135
+#: package/contents/ui/SimLock.qml:134
 #, kde-format
 msgid "Enter PIN"
 msgstr "Inserta PIN"
 
-#: package/contents/ui/SimLock.qml:143
+#: package/contents/ui/SimLock.qml:142
 #, kde-format
 msgid "Change SIM PIN"
 msgstr "Modifica PIN de SIM"
 
-#: package/contents/ui/SimLock.qml:162 package/contents/ui/SimLock.qml:226
+#: package/contents/ui/SimLock.qml:161 package/contents/ui/SimLock.qml:225
 #, kde-format
 msgid "PINs don't match!"
 msgstr "PINS non es correspondente!"
 
-#: package/contents/ui/SimLock.qml:168 package/contents/ui/SimLock.qml:232
+#: package/contents/ui/SimLock.qml:167 package/contents/ui/SimLock.qml:231
 #, kde-format
 msgid "PINs must be between 4 and 8 digits!"
 msgstr "PINS debe esser inter 4 e 8 digitos!"
 
-#: package/contents/ui/SimLock.qml:173 package/contents/ui/SimLock.qml:200
+#: package/contents/ui/SimLock.qml:172 package/contents/ui/SimLock.qml:199
 #, kde-format
 msgid "Current PIN"
 msgstr "PIN Currente"
 
-#: package/contents/ui/SimLock.qml:178 package/contents/ui/SimLock.qml:237
+#: package/contents/ui/SimLock.qml:177 package/contents/ui/SimLock.qml:236
 #, kde-format
 msgid "New PIN"
 msgstr "Nove PIN"
 
-#: package/contents/ui/SimLock.qml:183 package/contents/ui/SimLock.qml:242
+#: package/contents/ui/SimLock.qml:182 package/contents/ui/SimLock.qml:241
 #, kde-format
 msgid "Confirm PIN"
 msgstr "Confirma PIN"
 
-#: package/contents/ui/SimLock.qml:191
+#: package/contents/ui/SimLock.qml:190
 #, kde-format
 msgid "Remove SIM PIN"
 msgstr "Remove PIN de SIM"
 
-#: package/contents/ui/SimLock.qml:208
+#: package/contents/ui/SimLock.qml:207
 #, kde-format
 msgid "Add SIM PIN"
 msgstr "Adde PIN de SIM"
