@@ -9,7 +9,7 @@ msgstr ""
 "Project-Id-Version: plasma-settings\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2022-07-07 00:47+0000\n"
-"PO-Revision-Date: 2022-01-20 08:43+0100\n"
+"PO-Revision-Date: 2022-07-07 15:07+0200\n"
 "Last-Translator: Josep M. Ferrer <txemaq@gmail.com>\n"
 "Language-Team: Catalan <kde-i18n-ca@kde.org>\n"
 "Language: ca\n"
@@ -53,24 +53,22 @@ msgstr "Teclegeu aquí qualsevol cosa…"
 #: package/contents/ui/main.qml:63
 #, kde-format
 msgid "Sound"
-msgstr ""
+msgstr "So"
 
 #: package/contents/ui/main.qml:64
-#, fuzzy, kde-format
-#| msgid "Emit sound on key press"
+#, kde-format
 msgid "Whether to emit a sound on keypress."
-msgstr "Emet un so en prémer les tecles"
+msgstr "Si s'ha d'emetre un so en prémer les tecles."
 
 #: package/contents/ui/main.qml:73
 #, kde-format
 msgid "Vibration"
-msgstr ""
+msgstr "Vibració"
 
 #: package/contents/ui/main.qml:74
-#, fuzzy, kde-format
-#| msgid "Vibrate on key press"
+#, kde-format
 msgid "Whether to vibrate on keypress."
-msgstr "Vibra en prémer les tecles"
+msgstr "Si ha de vibrar en prémer les tecles."
 
 #: package/contents/ui/main.qml:94
 #, kde-format
@@ -111,21 +109,3 @@ msgstr "Teclat virtual"
 #, kde-format
 msgid "Bhushan Shah"
 msgstr "Bhushan Shah"
-
-#~ msgid "Test keyboard:"
-#~ msgstr "Proveu el teclat:"
-
-#~ msgid "Feedback:"
-#~ msgstr "Retroalimentació:"
-
-#~ msgid "Text correction:"
-#~ msgstr "Correcció de text:"
-
-#~ msgid "Languages:"
-#~ msgstr "Idiomes:"
-
-#~ msgid "Theme:"
-#~ msgstr "Tema:"
-
-#~ msgid "Other:"
-#~ msgstr "Altres:"

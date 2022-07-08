@@ -9,7 +9,7 @@ msgstr ""
 "Project-Id-Version: kcm_mobile_powermanagement\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2022-07-07 00:47+0000\n"
-"PO-Revision-Date: 2022-02-09 09:17+0200\n"
+"PO-Revision-Date: 2022-07-07 09:12+0300\n"
 "Last-Translator: Yuri Chornoivan <yurchor@ukr.net>\n"
 "Language-Team: Ukrainian <kde-i18n-uk@kde.org>\n"
 "Language: uk\n"
@@ -76,28 +76,22 @@ msgid "Tomaz Canabrava"
 msgstr "Tomaz Canabrava"
 
 #: package/contents/ui/main.qml:38
-#, fuzzy, kde-format
-#| msgctxt "Part of a sentence like 'Dim screen after 5 minutes'"
-#| msgid "Dim screen after:"
+#, kde-format
 msgctxt "Part of a sentence like 'Dim screen after 5 minutes'"
 msgid "Dim screen after"
-msgstr "Притлумити екран за:"
+msgstr "Притлумити екран за"
 
 #: package/contents/ui/main.qml:63
-#, fuzzy, kde-format
-#| msgctxt "Part of a sentence like 'Turn off screen after 5 minutes'"
-#| msgid "Turn off screen after:"
+#, kde-format
 msgctxt "Part of a sentence like 'Turn off screen after 5 minutes'"
 msgid "Turn off screen after"
-msgstr "Вимкнути екран за:"
+msgstr "Вимкнути екран за"
 
 #: package/contents/ui/main.qml:88
-#, fuzzy, kde-format
-#| msgctxt "Part of a sentence like 'Suspend device after 5 minutes'"
-#| msgid "Suspend device after:"
+#, kde-format
 msgctxt "Part of a sentence like 'Suspend device after 5 minutes'"
 msgid "Suspend device after"
-msgstr "Приспати пристрій за:"
+msgstr "Приспати пристрій за"
 
 #~ msgctxt "Part of a sentence like 'Dim Display after 5 minutes'"
 #~ msgid "Dim Display"

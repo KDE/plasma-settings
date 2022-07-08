@@ -1,26 +1,26 @@
 # Copyright (C) YEAR This file is copyright:
 # This file is distributed under the same license as the plasma-settings package.
 #
-# Freek de Kruijf <freekdekruijf@kde.nl>, 2019, 2020.
+# Freek de Kruijf <freekdekruijf@kde.nl>, 2019, 2020, 2022.
 msgid ""
 msgstr ""
 "Project-Id-Version: plasma-settings\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2022-07-07 00:47+0000\n"
-"PO-Revision-Date: 2020-02-26 14:53+0100\n"
+"PO-Revision-Date: 2022-07-07 13:06+0200\n"
 "Last-Translator: Freek de Kruijf <freekdekruijf@kde.nl>\n"
-"Language-Team: Dutch <kde-i18n-nl@kde.org>\n"
+"Language-Team: \n"
 "Language: nl\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Lokalize 19.12.2\n"
+"X-Generator: Lokalize 22.04.2\n"
 
 #, kde-format
 msgctxt "NAME OF TRANSLATORS"
 msgid "Your names"
-msgstr "Freek de Kruijf - 2019 t/m 2020"
+msgstr "Freek de Kruijf - 2019 t/m 2022"
 
 #, kde-format
 msgctxt "EMAIL OF TRANSLATORS"
@@ -45,42 +45,37 @@ msgstr "Systeeminformatie"
 #: package/contents/ui/main.qml:42
 #, kde-format
 msgid "Operating System"
-msgstr ""
+msgstr "Besturingssysteem"
 
 #: package/contents/ui/main.qml:49
 #, kde-format
 msgid "Webpage"
-msgstr ""
+msgstr "Webpagina"
 
 #: package/contents/ui/main.qml:70
-#, fuzzy, kde-format
-#| msgid "KDE Plasma Version:"
+#, kde-format
 msgid "KDE Plasma Version"
-msgstr "KDE Plasma-versie:"
+msgstr "KDE Plasma-versie"
 
 #: package/contents/ui/main.qml:77
-#, fuzzy, kde-format
-#| msgid "KDE Frameworks Version:"
+#, kde-format
 msgid "KDE Frameworks Version"
-msgstr "Versie van KDE-Frameworks:"
+msgstr "KDE-Frameworks-versie"
 
 #: package/contents/ui/main.qml:84
-#, fuzzy, kde-format
-#| msgid "Qt Version:"
+#, kde-format
 msgid "Qt Version"
-msgstr "Qt-versie:"
+msgstr "Qt-versie"
 
 #: package/contents/ui/main.qml:91
-#, fuzzy, kde-format
-#| msgid "Kernel Version:"
+#, kde-format
 msgid "Kernel Version"
-msgstr "Kernel-versie:"
+msgstr "Kernel-versie"
 
 #: package/contents/ui/main.qml:98
-#, fuzzy, kde-format
-#| msgid "OS Type:"
+#, kde-format
 msgid "OS Type"
-msgstr "Type OS:"
+msgstr "Type OS"
 
 #: package/contents/ui/main.qml:99
 #, kde-format
@@ -89,19 +84,16 @@ msgid "%1-bit"
 msgstr "%1-bit"
 
 #: package/contents/ui/main.qml:116
-#, fuzzy, kde-format
-#| msgid "Processor:"
-#| msgid_plural "Processors:"
+#, kde-format
 msgid "Processor"
 msgid_plural "Processors"
-msgstr[0] "Processor:"
-msgstr[1] "Processors:"
+msgstr[0] "Processor"
+msgstr[1] "Processors"
 
 #: package/contents/ui/main.qml:123
-#, fuzzy, kde-format
-#| msgid "Memory:"
+#, kde-format
 msgid "Memory"
-msgstr "Geheugen:"
+msgstr "Geheugen"
 
 #: package/contents/ui/main.qml:127
 #, kde-format

@@ -9,7 +9,7 @@ msgstr ""
 "Project-Id-Version: kcm_mobile_virtualkeyboard\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2022-07-07 00:47+0000\n"
-"PO-Revision-Date: 2022-01-20 08:29+0200\n"
+"PO-Revision-Date: 2022-07-07 09:13+0300\n"
 "Last-Translator: Yuri Chornoivan <yurchor@ukr.net>\n"
 "Language-Team: Ukrainian <kde-i18n-uk@kde.org>\n"
 "Language: uk\n"
@@ -53,24 +53,22 @@ msgstr "Введіть тут щось…"
 #: package/contents/ui/main.qml:63
 #, kde-format
 msgid "Sound"
-msgstr ""
+msgstr "Звук"
 
 #: package/contents/ui/main.qml:64
-#, fuzzy, kde-format
-#| msgid "Emit sound on key press"
+#, kde-format
 msgid "Whether to emit a sound on keypress."
-msgstr "Супроводжувати натискання звуками"
+msgstr "Визначає, чи слід супроводжувати натискання клавіш звуками."
 
 #: package/contents/ui/main.qml:73
 #, kde-format
 msgid "Vibration"
-msgstr ""
+msgstr "Вібрація"
 
 #: package/contents/ui/main.qml:74
-#, fuzzy, kde-format
-#| msgid "Vibrate on key press"
+#, kde-format
 msgid "Whether to vibrate on keypress."
-msgstr "Вібрувати при натисканні клавіші"
+msgstr "Визначає, чи слід супроводжувати натискання клавіш вібрацією."
 
 #: package/contents/ui/main.qml:94
 #, kde-format

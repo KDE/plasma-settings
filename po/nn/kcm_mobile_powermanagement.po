@@ -5,7 +5,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-settings\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2022-02-09 00:49+0000\n"
+"POT-Creation-Date: 2022-07-07 00:47+0000\n"
 "PO-Revision-Date: 2022-02-13 14:58+0100\n"
 "Last-Translator: Karl Ove Hufthammer <karl@huftis.org>\n"
 "Language-Team: Norwegian Nynorsk <l10n-no@lister.huftis.org>\n"
@@ -74,20 +74,20 @@ msgstr "Strauminnstillingar"
 msgid "Tomaz Canabrava"
 msgstr "Tomaz Canabrava"
 
-#: package/contents/ui/main.qml:28
+#: package/contents/ui/main.qml:38
 #, kde-format
 msgctxt "Part of a sentence like 'Dim screen after 5 minutes'"
-msgid "Dim screen after:"
-msgstr "Ton skjermen ned etter:"
+msgid "Dim screen after"
+msgstr ""
 
-#: package/contents/ui/main.qml:37
+#: package/contents/ui/main.qml:63
 #, kde-format
 msgctxt "Part of a sentence like 'Turn off screen after 5 minutes'"
-msgid "Turn off screen after:"
-msgstr "Slå av skjermen etter:"
+msgid "Turn off screen after"
+msgstr ""
 
-#: package/contents/ui/main.qml:46
+#: package/contents/ui/main.qml:88
 #, kde-format
 msgctxt "Part of a sentence like 'Suspend device after 5 minutes'"
-msgid "Suspend device after:"
-msgstr "Slå av eininga etter:"
+msgid "Suspend device after"
+msgstr ""

@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: plasma-settings\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2022-07-07 00:47+0000\n"
-"PO-Revision-Date: 2022-03-28 01:52+0100\n"
+"PO-Revision-Date: 2022-07-07 11:13+0100\n"
 "Last-Translator: José Nuno Coelho Pires <zepires@gmail.com>\n"
 "Language-Team: Portuguese <kde-i18n-pt@kde.org>\n"
 "Language: pt\n"
@@ -74,25 +74,19 @@ msgid "Tomaz Canabrava"
 msgstr "Tomaz Canabrava"
 
 #: package/contents/ui/main.qml:38
-#, fuzzy, kde-format
-#| msgctxt "Part of a sentence like 'Dim screen after 5 minutes'"
-#| msgid "Dim screen after:"
+#, kde-format
 msgctxt "Part of a sentence like 'Dim screen after 5 minutes'"
 msgid "Dim screen after"
-msgstr "Escurecer o ecrã ao fim de:"
+msgstr "Escurecer o ecrã ao fim de"
 
 #: package/contents/ui/main.qml:63
-#, fuzzy, kde-format
-#| msgctxt "Part of a sentence like 'Turn off screen after 5 minutes'"
-#| msgid "Turn off screen after:"
+#, kde-format
 msgctxt "Part of a sentence like 'Turn off screen after 5 minutes'"
 msgid "Turn off screen after"
-msgstr "Desligar o ecrã ao fim de:"
+msgstr "Desligar o ecrã ao fim de"
 
 #: package/contents/ui/main.qml:88
-#, fuzzy, kde-format
-#| msgctxt "Part of a sentence like 'Suspend device after 5 minutes'"
-#| msgid "Suspend device after:"
+#, kde-format
 msgctxt "Part of a sentence like 'Suspend device after 5 minutes'"
 msgid "Suspend device after"
-msgstr "Suspender o dispositivo ao fim de:"
+msgstr "Suspender o dispositivo ao fim de"

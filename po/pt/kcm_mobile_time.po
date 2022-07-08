@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: kgeography\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2022-07-07 00:47+0000\n"
-"PO-Revision-Date: 2021-08-24 02:16+0100\n"
+"PO-Revision-Date: 2022-07-07 11:14+0100\n"
 "Last-Translator: Pedro Morais <morais@kde.org>\n"
 "Language-Team: pt <kde-i18n-pt@kde.org>\n"
 "Language: pt\n"
@@ -836,50 +836,44 @@ msgid "Dec"
 msgstr "Dez"
 
 #: package/contents/ui/main.qml:57
-#, fuzzy, kde-format
-#| msgid "Time Display"
+#, kde-format
 msgid "Display"
-msgstr "Apresentação da Hora"
+msgstr "Visualização"
 
 #: package/contents/ui/main.qml:62
 #, kde-format
 msgid "24-Hour Format"
-msgstr ""
+msgstr "Formato de 24-Horas"
 
 #: package/contents/ui/main.qml:63
 #, kde-format
 msgid "Whether to use a 24-hour format for clocks."
-msgstr ""
+msgstr "Se deve usar um formato de 24-horas nos relógios."
 
 #: package/contents/ui/main.qml:74
-#, fuzzy, kde-format
-#| msgid "Timezone:"
+#, kde-format
 msgid "Timezone"
-msgstr "Fuso-horário:"
+msgstr "Fuso-horário"
 
 #: package/contents/ui/main.qml:89
-#, fuzzy, kde-format
-#| msgid "Set Time and Date"
+#, kde-format
 msgid "Time and Date"
-msgstr "Mudar a Data e Hora"
+msgstr "Data e Hora"
 
 #: package/contents/ui/main.qml:94
 #, kde-format
 msgid "Automatic Time Synchronization"
-msgstr ""
+msgstr "Sincronização Automática da Hora"
 
 #: package/contents/ui/main.qml:95
-#, fuzzy, kde-format
-#| msgid "Set time automatically:"
+#, kde-format
 msgid "Whether to set the time automatically."
-msgstr "Acertar a hora automaticamente:"
+msgstr "Se deve acertar a hora automaticamente."
 
 #: package/contents/ui/main.qml:112
-#, fuzzy, kde-format
-#| msgctxt "This is a city associated with particular time zone"
-#| msgid "Currie"
+#, kde-format
 msgid "Current Time"
-msgstr "Currie"
+msgstr "Hora Actual"
 
 #: package/contents/ui/main.qml:123
 #, kde-format
@@ -3824,9 +3818,3 @@ msgstr "Índico"
 msgctxt "This is a continent/area associated with a particular timezone"
 msgid "Pacific"
 msgstr "Pacífico"
-
-#~ msgid "Use 24-hour clock:"
-#~ msgstr "Usar o relógio de 24 horas:"
-
-#~ msgid "Time"
-#~ msgstr "Hora"

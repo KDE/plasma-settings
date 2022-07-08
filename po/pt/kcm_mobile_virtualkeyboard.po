@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: plasma-settings\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2022-07-07 00:47+0000\n"
-"PO-Revision-Date: 2022-03-28 01:51+0100\n"
+"PO-Revision-Date: 2022-07-07 11:12+0100\n"
 "Last-Translator: José Nuno Coelho Pires <zepires@gmail.com>\n"
 "Language-Team: Portuguese <kde-i18n-pt@kde.org>\n"
 "Language: pt\n"
@@ -51,24 +51,22 @@ msgstr "Escreva algo aqui…"
 #: package/contents/ui/main.qml:63
 #, kde-format
 msgid "Sound"
-msgstr ""
+msgstr "Som"
 
 #: package/contents/ui/main.qml:64
-#, fuzzy, kde-format
-#| msgid "Emit sound on key press"
+#, kde-format
 msgid "Whether to emit a sound on keypress."
-msgstr "Emitir um som ao carregar nas teclas"
+msgstr "Se deve emitir um som ao carregar nas teclas."
 
 #: package/contents/ui/main.qml:73
 #, kde-format
 msgid "Vibration"
-msgstr ""
+msgstr "Vibração"
 
 #: package/contents/ui/main.qml:74
-#, fuzzy, kde-format
-#| msgid "Vibrate on key press"
+#, kde-format
 msgid "Whether to vibrate on keypress."
-msgstr "Vibrar ao carregar nas teclas"
+msgstr "Se deve vibrar ao carregar nas teclas."
 
 #: package/contents/ui/main.qml:94
 #, kde-format
@@ -110,18 +108,3 @@ msgstr "Teclado Virtual"
 #, kde-format
 msgid "Bhushan Shah"
 msgstr "Bhushan Shah"
-
-#~ msgid "Test keyboard:"
-#~ msgstr "Testar o teclado:"
-
-#~ msgid "Feedback:"
-#~ msgstr "Reacção:"
-
-#~ msgid "Text correction:"
-#~ msgstr "Correcção do texto:"
-
-#~ msgid "Languages:"
-#~ msgstr "Línguas:"
-
-#~ msgid "Theme:"
-#~ msgstr "Tema:"
