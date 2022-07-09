@@ -1,16 +1,16 @@
 # Translation of kcm_mobile_time.po to Catalan (Valencian)
-# Copyright (C) 2019-2021 This_file_is_part_of_KDE
+# Copyright (C) 2019-2022 This_file_is_part_of_KDE
 # This file is distributed under the license LGPL version 2.1 or
 # version 3 or later versions approved by the membership of KDE e.V.
 #
-# Josep M. Ferrer <txemaq@gmail.com>, 2019, 2020, 2021.
+# Josep M. Ferrer <txemaq@gmail.com>, 2019, 2020, 2021, 2022.
 # Antoni Bella Pérez <antonibella5@yahoo.com>, 2020.
 msgid ""
 msgstr ""
 "Project-Id-Version: plasma-settings\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2022-07-07 00:47+0000\n"
-"PO-Revision-Date: 2021-10-23 23:12+0200\n"
+"PO-Revision-Date: 2022-07-07 11:30+0200\n"
 "Last-Translator: Josep M. Ferrer <txemaq@gmail.com>\n"
 "Language-Team: Catalan <kde-i18n-ca@kde.org>\n"
 "Language: ca@valencia\n"
@@ -92,50 +92,44 @@ msgid "Dec"
 msgstr "Des."
 
 #: package/contents/ui/main.qml:57
-#, fuzzy, kde-format
-#| msgid "Time Display"
+#, kde-format
 msgid "Display"
-msgstr "Visualització del temps"
+msgstr "Visualització"
 
 #: package/contents/ui/main.qml:62
 #, kde-format
 msgid "24-Hour Format"
-msgstr ""
+msgstr "Format de 24 hores"
 
 #: package/contents/ui/main.qml:63
 #, kde-format
 msgid "Whether to use a 24-hour format for clocks."
-msgstr ""
+msgstr "Si s'ha d'emprar el format de 24 hores en els rellotges."
 
 #: package/contents/ui/main.qml:74
-#, fuzzy, kde-format
-#| msgid "Timezone:"
+#, kde-format
 msgid "Timezone"
-msgstr "Zona horària:"
+msgstr "Zona horària"
 
 #: package/contents/ui/main.qml:89
-#, fuzzy, kde-format
-#| msgid "Set Time and Date"
+#, kde-format
 msgid "Time and Date"
-msgstr "Establix la data i l'hora"
+msgstr "Data i l'hora"
 
 #: package/contents/ui/main.qml:94
 #, kde-format
 msgid "Automatic Time Synchronization"
-msgstr ""
+msgstr "Sincronització automàtica de la data i l'hora"
 
 #: package/contents/ui/main.qml:95
-#, fuzzy, kde-format
-#| msgid "Set time automatically:"
+#, kde-format
 msgid "Whether to set the time automatically."
-msgstr "Establix la data i l'hora automàticament:"
+msgstr "Si s'ha d'establir automàticament la data i l'hora."
 
 #: package/contents/ui/main.qml:112
-#, fuzzy, kde-format
-#| msgctxt "This is a city associated with particular time zone"
-#| msgid "Currie"
+#, kde-format
 msgid "Current Time"
-msgstr "Currie"
+msgstr "Hora actual"
 
 #: package/contents/ui/main.qml:123
 #, kde-format
@@ -3081,9 +3075,3 @@ msgstr "Índic"
 msgctxt "This is a continent/area associated with a particular timezone"
 msgid "Pacific"
 msgstr "Pacífic"
-
-#~ msgid "Use 24-hour clock:"
-#~ msgstr "Utilitza un rellotge de 24 hores:"
-
-#~ msgid "Time"
-#~ msgstr "Hora"

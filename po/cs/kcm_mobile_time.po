@@ -88,10 +88,9 @@ msgid "Dec"
 msgstr "Dec"
 
 #: package/contents/ui/main.qml:57
-#, fuzzy, kde-format
-#| msgid "Time Display"
+#, kde-format
 msgid "Display"
-msgstr "Zobrazení času"
+msgstr "Zobrazení"
 
 #: package/contents/ui/main.qml:62
 #, kde-format
@@ -104,16 +103,14 @@ msgid "Whether to use a 24-hour format for clocks."
 msgstr ""
 
 #: package/contents/ui/main.qml:74
-#, fuzzy, kde-format
-#| msgid "Timezone:"
+#, kde-format
 msgid "Timezone"
-msgstr "Časová zóna:"
+msgstr "Časové pásmo"
 
 #: package/contents/ui/main.qml:89
-#, fuzzy, kde-format
-#| msgid "Set Time and Date"
+#, kde-format
 msgid "Time and Date"
-msgstr "Nastavit čas a datum"
+msgstr "Čas a datum"
 
 #: package/contents/ui/main.qml:94
 #, kde-format
@@ -121,17 +118,14 @@ msgid "Automatic Time Synchronization"
 msgstr ""
 
 #: package/contents/ui/main.qml:95
-#, fuzzy, kde-format
-#| msgid "Set time automatically:"
+#, kde-format
 msgid "Whether to set the time automatically."
-msgstr "Nastavit čas automaticky:"
+msgstr ""
 
 #: package/contents/ui/main.qml:112
-#, fuzzy, kde-format
-#| msgctxt "This is a city associated with particular time zone"
-#| msgid "Currie"
+#, kde-format
 msgid "Current Time"
-msgstr "Currie"
+msgstr "Aktuální čas"
 
 #: package/contents/ui/main.qml:123
 #, kde-format
@@ -3076,9 +3070,3 @@ msgstr "Indický"
 msgctxt "This is a continent/area associated with a particular timezone"
 msgid "Pacific"
 msgstr "Tichý oceán"
-
-#~ msgid "Use 24-hour clock:"
-#~ msgstr "Používat 24-hodinový formát:"
-
-#~ msgid "Time"
-#~ msgstr "Čas"

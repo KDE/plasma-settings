@@ -1,13 +1,13 @@
 # Copyright (C) YEAR This file is copyright:
 # This file is distributed under the same license as the plasma-settings package.
-# Vit Pelcak <vpelcak@suse.cz>, 2021.
+# Vit Pelcak <vpelcak@suse.cz>, 2021, 2022.
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: plasma-settings\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2022-07-07 00:47+0000\n"
-"PO-Revision-Date: 2021-09-16 11:56+0200\n"
+"PO-Revision-Date: 2022-06-29 20:01+0200\n"
 "Last-Translator: Vit Pelcak <vpelcak@suse.cz>\n"
 "Language-Team: Czech <kde-i18n-doc@kde.org>\n"
 "Language: cs\n"
@@ -15,7 +15,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=3; plural=(n==1) ? 0 : (n>=2 && n<=4) ? 1 : 2;\n"
-"X-Generator: Lokalize 21.08.1\n"
+"X-Generator: Lokalize 22.04.2\n"
 
 #, kde-format
 msgctxt "NAME OF TRANSLATORS"
@@ -501,7 +501,7 @@ msgstr "Modem není dostupný"
 #: package/contents/ui/main.qml:79
 #, kde-format
 msgid "Mobile data"
-msgstr ""
+msgstr "Mobilní data"
 
 #: package/contents/ui/main.qml:80
 #, kde-format
@@ -511,7 +511,7 @@ msgstr ""
 #: package/contents/ui/main.qml:96
 #, kde-format
 msgid "Data Usage"
-msgstr ""
+msgstr "Využití dat"
 
 #: package/contents/ui/main.qml:97
 #, kde-format
@@ -571,7 +571,7 @@ msgstr ""
 #: package/contents/ui/Modem.qml:104
 #, kde-format
 msgid "IMEI"
-msgstr ""
+msgstr "IMEI"
 
 #: package/contents/ui/Modem.qml:120
 #, kde-format
@@ -616,12 +616,12 @@ msgstr ""
 #: package/contents/ui/Modem.qml:204
 #, kde-format
 msgid "Roaming"
-msgstr ""
+msgstr "Roaming"
 
 #: package/contents/ui/Modem.qml:212
 #, kde-format
 msgid "Firmware Version"
-msgstr ""
+msgstr "Verze firmwaru"
 
 #: package/contents/ui/Modem.qml:220
 #, kde-format
@@ -661,12 +661,12 @@ msgstr "Modul"
 #: package/contents/ui/Modem.qml:296
 #, kde-format
 msgid "Power State"
-msgstr ""
+msgstr "Stav napájení"
 
 #: package/contents/ui/Modem.qml:304
 #, kde-format
 msgid "SIM Path"
-msgstr ""
+msgstr "Cesta k SIM"
 
 #: package/contents/ui/ProfileList.qml:15
 #, kde-format
@@ -706,7 +706,7 @@ msgstr "Smazat"
 #: package/contents/ui/Sim.qml:61
 #, kde-format
 msgid "Data Roaming"
-msgstr ""
+msgstr "Data roaming"
 
 #: package/contents/ui/Sim.qml:62
 #, kde-format
@@ -756,7 +756,7 @@ msgstr "Podrobnosti SIM"
 #: package/contents/ui/Sim.qml:134
 #, kde-format
 msgid "IMSI"
-msgstr ""
+msgstr "IMSI"
 
 #: package/contents/ui/Sim.qml:142
 #, kde-format
@@ -786,7 +786,7 @@ msgstr ""
 #: package/contents/ui/Sim.qml:182
 #, kde-format
 msgid "SIM ID"
-msgstr ""
+msgstr "ID SIM"
 
 #: package/contents/ui/Sim.qml:199
 #, kde-format
@@ -1004,9 +1004,3 @@ msgstr ""
 #, kde-format
 msgid "Error sending the PUK: %1"
 msgstr ""
-
-#~ msgid "Disable Modem"
-#~ msgstr "Zakázat modem"
-
-#~ msgid "Enable Modem"
-#~ msgstr "Povolit modem"

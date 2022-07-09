@@ -45,7 +45,7 @@ msgstr "Systémové informace"
 #: package/contents/ui/main.qml:42
 #, kde-format
 msgid "Operating System"
-msgstr ""
+msgstr "Operační systém"
 
 #: package/contents/ui/main.qml:49
 #, kde-format
@@ -53,34 +53,29 @@ msgid "Webpage"
 msgstr ""
 
 #: package/contents/ui/main.qml:70
-#, fuzzy, kde-format
-#| msgid "KDE Plasma Version:"
+#, kde-format
 msgid "KDE Plasma Version"
-msgstr "Verze KDE Plasma:"
+msgstr "Verze Plasma KDE"
 
 #: package/contents/ui/main.qml:77
-#, fuzzy, kde-format
-#| msgid "KDE Frameworks Version:"
+#, kde-format
 msgid "KDE Frameworks Version"
-msgstr "Verze KDE Frameworks:"
+msgstr ""
 
 #: package/contents/ui/main.qml:84
-#, fuzzy, kde-format
-#| msgid "Qt Version:"
+#, kde-format
 msgid "Qt Version"
-msgstr "Verze Qt:"
+msgstr ""
 
 #: package/contents/ui/main.qml:91
-#, fuzzy, kde-format
-#| msgid "Kernel Version:"
+#, kde-format
 msgid "Kernel Version"
-msgstr "Verze jádra:"
+msgstr ""
 
 #: package/contents/ui/main.qml:98
-#, fuzzy, kde-format
-#| msgid "OS Type:"
+#, kde-format
 msgid "OS Type"
-msgstr "Typ OS:"
+msgstr "Typ OS"
 
 #: package/contents/ui/main.qml:99
 #, kde-format
@@ -89,20 +84,17 @@ msgid "%1-bit"
 msgstr "%1-bit"
 
 #: package/contents/ui/main.qml:116
-#, fuzzy, kde-format
-#| msgid "Processor:"
-#| msgid_plural "Processors:"
+#, kde-format
 msgid "Processor"
 msgid_plural "Processors"
-msgstr[0] "Procesor:"
-msgstr[1] "Procesory:"
-msgstr[2] "Procesorů:"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
 
 #: package/contents/ui/main.qml:123
-#, fuzzy, kde-format
-#| msgid "Memory:"
+#, kde-format
 msgid "Memory"
-msgstr "Paměť:"
+msgstr "Paměť"
 
 #: package/contents/ui/main.qml:127
 #, kde-format
@@ -120,9 +112,3 @@ msgstr "Neznámý"
 #, kde-format
 msgid "Copy to clipboard"
 msgstr "Zkopírovat do schránky"
-
-#~ msgid "Software"
-#~ msgstr "Software"
-
-#~ msgid "Hardware"
-#~ msgstr "Hardware"
