@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: kdeorg\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2022-07-07 00:47+0000\n"
-"PO-Revision-Date: 2022-07-02 10:59\n"
+"PO-Revision-Date: 2022-07-10 09:19\n"
 "Last-Translator: \n"
 "Language-Team: Chinese Simplified\n"
 "Language: zh_CN\n"
@@ -88,50 +88,44 @@ msgid "Dec"
 msgstr "十二月"
 
 #: package/contents/ui/main.qml:57
-#, fuzzy, kde-format
-#| msgid "Time Display"
+#, kde-format
 msgid "Display"
-msgstr "时间显示"
+msgstr "显示"
 
 #: package/contents/ui/main.qml:62
 #, kde-format
 msgid "24-Hour Format"
-msgstr ""
+msgstr "24 小时格式"
 
 #: package/contents/ui/main.qml:63
 #, kde-format
 msgid "Whether to use a 24-hour format for clocks."
-msgstr ""
+msgstr "时钟是否使用 24 小时格式显示。"
 
 #: package/contents/ui/main.qml:74
-#, fuzzy, kde-format
-#| msgid "Timezone:"
+#, kde-format
 msgid "Timezone"
-msgstr "时区："
+msgstr "时区"
 
 #: package/contents/ui/main.qml:89
-#, fuzzy, kde-format
-#| msgid "Set Time and Date"
+#, kde-format
 msgid "Time and Date"
-msgstr "设置时间和日期"
+msgstr "时间和日期"
 
 #: package/contents/ui/main.qml:94
 #, kde-format
 msgid "Automatic Time Synchronization"
-msgstr ""
+msgstr "自动同步时间"
 
 #: package/contents/ui/main.qml:95
-#, fuzzy, kde-format
-#| msgid "Set time automatically:"
+#, kde-format
 msgid "Whether to set the time automatically."
-msgstr "自动设置时间："
+msgstr "是否自动设置时间。"
 
 #: package/contents/ui/main.qml:112
-#, fuzzy, kde-format
-#| msgctxt "This is a city associated with particular time zone"
-#| msgid "Currie"
+#, kde-format
 msgid "Current Time"
-msgstr "柯里"
+msgstr "当前时间"
 
 #: package/contents/ui/main.qml:123
 #, kde-format
@@ -1179,7 +1173,7 @@ msgstr "霍巴特"
 #, kde-format
 msgctxt "This is a city associated with particular time zone"
 msgid "Hong Kong"
-msgstr "香港"
+msgstr "中国香港特别行政区"
 
 #: timezonesi18n.cpp:209
 #, kde-format
@@ -3076,9 +3070,3 @@ msgstr "印度洋"
 msgctxt "This is a continent/area associated with a particular timezone"
 msgid "Pacific"
 msgstr "太平洋"
-
-#~ msgid "Use 24-hour clock:"
-#~ msgstr "使用 24 小时制："
-
-#~ msgid "Time"
-#~ msgstr "时间"

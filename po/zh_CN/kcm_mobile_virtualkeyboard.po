@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: kdeorg\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2022-07-07 00:47+0000\n"
-"PO-Revision-Date: 2022-07-02 10:59\n"
+"PO-Revision-Date: 2022-07-10 09:19\n"
 "Last-Translator: \n"
 "Language-Team: Chinese Simplified\n"
 "Language: zh_CN\n"
@@ -51,24 +51,22 @@ msgstr "请在此随意输入一些内容…"
 #: package/contents/ui/main.qml:63
 #, kde-format
 msgid "Sound"
-msgstr ""
+msgstr "声音"
 
 #: package/contents/ui/main.qml:64
-#, fuzzy, kde-format
-#| msgid "Emit sound on key press"
+#, kde-format
 msgid "Whether to emit a sound on keypress."
-msgstr "按键时发声"
+msgstr "是否在按键时发出按键音。"
 
 #: package/contents/ui/main.qml:73
 #, kde-format
 msgid "Vibration"
-msgstr ""
+msgstr "振动"
 
 #: package/contents/ui/main.qml:74
-#, fuzzy, kde-format
-#| msgid "Vibrate on key press"
+#, kde-format
 msgid "Whether to vibrate on keypress."
-msgstr "按键时振动"
+msgstr "是否在按键时震动。"
 
 #: package/contents/ui/main.qml:94
 #, kde-format
@@ -109,15 +107,3 @@ msgstr "虚拟键盘"
 #, kde-format
 msgid "Bhushan Shah"
 msgstr "Bhushan Shah"
-
-#~ msgid "Test keyboard:"
-#~ msgstr "测试键盘："
-
-#~ msgid "Feedback:"
-#~ msgstr "输入反馈："
-
-#~ msgid "Text correction:"
-#~ msgstr "文本订正："
-
-#~ msgid "Languages:"
-#~ msgstr "语言："
