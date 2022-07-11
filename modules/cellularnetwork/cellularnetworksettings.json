@@ -31,6 +31,7 @@
         "Description[vi]": "Quản lí các mạng di dộng",
         "Description[x-test]": "xxManagement of cellular networksxx",
         "Description[zh_CN]": "管理移动网络",
+        "Description[zh_TW]": "行動網路管理",
         "FormFactors": [
             "handset",
             "tablet",
@@ -70,7 +71,8 @@
         "Name[uk]": "Стільникова мережа",
         "Name[vi]": "Mạng di động",
         "Name[x-test]": "xxCellular Networkxx",
-        "Name[zh_CN]": "移动网络"
+        "Name[zh_CN]": "移动网络",
+        "Name[zh_TW]": "行動網路"
     },
     "X-KDE-Keywords": "mobile,data,network",
     "X-KDE-Keywords[az]": "mobile,data,network,verilənlər,şəbəkə,mobil",

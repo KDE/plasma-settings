@@ -31,7 +31,8 @@
                 "Name[uk]": "Bhushan Shah",
                 "Name[vi]": "Bhushan Shah",
                 "Name[x-test]": "xxBhushan Shahxx",
-                "Name[zh_CN]": "Bhushan Shah"
+                "Name[zh_CN]": "Bhushan Shah",
+                "Name[zh_TW]": "Bhushan Shah"
             }
         ],
         "Description": "On-Screen Keyboard configuration",
@@ -64,6 +65,7 @@
         "Description[vi]": "Cấu hình bàn phím trên màn hình",
         "Description[x-test]": "xxOn-Screen Keyboard configurationxx",
         "Description[zh_CN]": "屏幕键盘配置",
+        "Description[zh_TW]": "螢幕上的虛擬鍵盤設定",
         "FormFactors": [
             "handset",
             "tablet"
@@ -100,6 +102,7 @@
         "Name[vi]": "Bàn phím trên màn hình",
         "Name[x-test]": "xxOn-Screen Keyboardxx",
         "Name[zh_CN]": "屏幕键盘",
+        "Name[zh_TW]": "螢幕上的虛擬鍵盤",
         "Version": "1.0",
         "Website": "https://plasma-mobile.org"
     },

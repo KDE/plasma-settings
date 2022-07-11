@@ -32,7 +32,8 @@
                 "Name[uk]": "Tobias Fella",
                 "Name[vi]": "Tobias Fella",
                 "Name[x-test]": "xxTobias Fellaxx",
-                "Name[zh_CN]": "Tobias Fella"
+                "Name[zh_CN]": "Tobias Fella",
+                "Name[zh_TW]": "Tobias Fella"
             }
         ],
         "Category": "",
@@ -66,6 +67,7 @@
         "Description[vi]": "Đặt PIN màn hình khoá",
         "Description[x-test]": "xxSet the Lockscreen PINxx",
         "Description[zh_CN]": "设置锁屏 PIN 码",
+        "Description[zh_TW]": "設定鎖定螢幕 PIN 碼",
         "FormFactors": [
             "handset",
             "tablet",
@@ -109,6 +111,7 @@
         "Name[vi]": "PIN",
         "Name[x-test]": "xxPinxx",
         "Name[zh_CN]": "PIN 码",
+        "Name[zh_TW]": "PIN 碼",
         "Version": "1.0",
         "Website": "https://kde.org"
     },

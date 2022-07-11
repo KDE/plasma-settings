@@ -31,6 +31,7 @@
         "Description[vi]": "Khoá, Ngủ, Tắt màn hình",
         "Description[x-test]": "xxLock, Sleep, Timeoutxx",
         "Description[zh_CN]": "锁屏、睡眠、超时",
+        "Description[zh_TW]": "鎖定、睡眠、逾時",
         "FormFactors": [
             "handset",
             "tablet",
