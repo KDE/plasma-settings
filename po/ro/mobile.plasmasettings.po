@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-settings\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2022-01-26 00:47+0000\n"
+"POT-Creation-Date: 2022-07-12 00:49+0000\n"
 "PO-Revision-Date: 2022-05-05 12:56+0100\n"
 "Last-Translator: Sergiu Bivol <sergiu@cip.md>\n"
 "Language-Team: Romanian <kde-i18n-ro@kde.org>\n"
@@ -18,7 +18,7 @@ msgstr ""
 "20)) ? 1 : 2;\n"
 "X-Generator: Lokalize 21.12.3\n"
 
-#: src/main.cpp:46 src/package/contents/ui/ModulesListPage.qml:17
+#: src/main.cpp:46 src/package/contents/ui/ModulesListPage.qml:18
 #: src/package/contents/ui/Sidebar.qml:41
 #, kde-format
 msgid "Settings"
@@ -109,7 +109,7 @@ msgstr "Configurări de sistem"
 msgid "Open a configuration page from the sidebar."
 msgstr "Deschide o pagină de configurări din bara laterală."
 
-#: src/package/contents/ui/ModulesListPage.qml:23
+#: src/package/contents/ui/ModulesListPage.qml:24
 #: src/package/contents/ui/Sidebar.qml:52
 #, kde-format
 msgid "Search"

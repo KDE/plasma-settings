@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-settings\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2022-01-26 00:47+0000\n"
+"POT-Creation-Date: 2022-07-12 00:49+0000\n"
 "PO-Revision-Date: 2020-04-08 20:19+0200\n"
 "Last-Translator: Iñigo Salvador Azurmendi <xalba@euskalnet.net>\n"
 "Language-Team: Basque <kde-i18n-eu@kde.org>\n"
@@ -20,7 +20,7 @@ msgstr ""
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 "X-Generator: Lokalize 19.12.3\n"
 
-#: src/main.cpp:46 src/package/contents/ui/ModulesListPage.qml:17
+#: src/main.cpp:46 src/package/contents/ui/ModulesListPage.qml:18
 #: src/package/contents/ui/Sidebar.qml:41
 #, kde-format
 msgid "Settings"
@@ -114,7 +114,7 @@ msgstr "Ezarpenak"
 msgid "Open a configuration page from the sidebar."
 msgstr ""
 
-#: src/package/contents/ui/ModulesListPage.qml:23
+#: src/package/contents/ui/ModulesListPage.qml:24
 #: src/package/contents/ui/Sidebar.qml:52
 #, kde-format
 msgid "Search"

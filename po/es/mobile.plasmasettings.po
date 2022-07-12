@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: mobile\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2022-01-26 00:47+0000\n"
+"POT-Creation-Date: 2022-07-12 00:49+0000\n"
 "PO-Revision-Date: 2021-12-24 00:38+0100\n"
 "Last-Translator: Eloy Cuadra <ecuadra@eloihr.net>\n"
 "Language-Team: Spanish <kde-l10n-es@kde.org>\n"
@@ -19,7 +19,7 @@ msgstr ""
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
 "X-Generator: Lokalize 21.12.0\n"
 
-#: src/main.cpp:46 src/package/contents/ui/ModulesListPage.qml:17
+#: src/main.cpp:46 src/package/contents/ui/ModulesListPage.qml:18
 #: src/package/contents/ui/Sidebar.qml:41
 #, kde-format
 msgid "Settings"
@@ -111,7 +111,7 @@ msgstr "Preferencias del sistema"
 msgid "Open a configuration page from the sidebar."
 msgstr "Abrir una página de configuración desde la barra lateral."
 
-#: src/package/contents/ui/ModulesListPage.qml:23
+#: src/package/contents/ui/ModulesListPage.qml:24
 #: src/package/contents/ui/Sidebar.qml:52
 #, kde-format
 msgid "Search"
