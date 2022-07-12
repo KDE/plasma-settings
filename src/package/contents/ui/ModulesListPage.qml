@@ -37,55 +37,68 @@ Kirigami.ScrollablePage {
     Component {
         id: settingsModuleDelegate
         
-        MobileForm.AbstractFormDelegate {
-            id: delegateItem
-            property string name: model.name
-            property string description: model.description
-            property string iconName: model.iconName ? model.iconName : "question"
+        Column {
+            width: listView.width
             
-            onClicked: {
-                print("Clicked index: " + index + " current: " + listView.currentIndex + " " + name + " curr: " + rootItem.currentModule);
-                // Only the first main page has a kcm property
-                applicationWindow().openModule(model.id);
+            MobileForm.FormDelegateSeparator {
+                anchors.left: parent.left
+                anchors.right: parent.right
+                anchors.leftMargin: Kirigami.Units.largeSpacing
+                anchors.rightMargin: Kirigami.Units.largeSpacing
+                visible: model.index !== 0
+                above: listView.children[model.index]
+                below: delegateItem
             }
             
-            width: listView.width
-            contentItem: RowLayout {
-                Kirigami.Icon {
-                    source: delegateItem.iconName
-                    Layout.rightMargin: Kirigami.Units.largeSpacing
-                    implicitWidth: Kirigami.Units.iconSizes.medium
-                    implicitHeight: Kirigami.Units.iconSizes.medium
+            MobileForm.AbstractFormDelegate {
+                id: delegateItem
+                property string name: model.name
+                property string description: model.description
+                property string iconName: model.iconName ? model.iconName : "question"
+                
+                onClicked: {
+                    print("Clicked index: " + index + " current: " + listView.currentIndex + " " + name + " curr: " + rootItem.currentModule);
+                    // Only the first main page has a kcm property
+                    applicationWindow().openModule(model.id);
                 }
                 
-                ColumnLayout {
-                    Layout.fillWidth: true
-                    spacing: Kirigami.Units.smallSpacing
-                    
-                    Controls.Label {
-                        Layout.fillWidth: true
-                        text: delegateItem.name
-                        elide: Text.ElideRight
+                width: listView.width
+                contentItem: RowLayout {
+                    Kirigami.Icon {
+                        source: delegateItem.iconName
+                        Layout.rightMargin: Kirigami.Units.largeSpacing
+                        implicitWidth: Kirigami.Units.iconSizes.medium
+                        implicitHeight: Kirigami.Units.iconSizes.medium
                     }
                     
-                    Controls.Label {
+                    ColumnLayout {
                         Layout.fillWidth: true
-                        text: delegateItem.description
-                        color: Kirigami.Theme.disabledTextColor
-                        font: Kirigami.Theme.smallFont
-                        elide: Text.ElideRight
+                        spacing: Kirigami.Units.smallSpacing
+                        
+                        Controls.Label {
+                            Layout.fillWidth: true
+                            text: delegateItem.name
+                            elide: Text.ElideRight
+                        }
+                        
+                        Controls.Label {
+                            Layout.fillWidth: true
+                            text: delegateItem.description
+                            color: Kirigami.Theme.disabledTextColor
+                            font: Kirigami.Theme.smallFont
+                            elide: Text.ElideRight
+                        }
                     }
-                }
-                
-                Kirigami.Icon {
-                    Layout.alignment: Qt.AlignRight
-                    source: "arrow-right"
-                    implicitWidth: Kirigami.Units.iconSizes.small
-                    implicitHeight: Kirigami.Units.iconSizes.small
+                    
+                    Kirigami.Icon {
+                        Layout.alignment: Qt.AlignRight
+                        source: "arrow-right"
+                        implicitWidth: Kirigami.Units.iconSizes.small
+                        implicitHeight: Kirigami.Units.iconSizes.small
+                    }
                 }
             }
         }
-
     }
 
     // This is pretty much a placeholder of what will be the sandboxing mechanism: this element will be a wayland compositor that will contain off-process kcm pages
