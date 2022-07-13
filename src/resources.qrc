@@ -1,0 +1,18 @@
+<!--
+- Copyright 2022 Devin Lin <devin@kde.org>
+- SPDX-License-Identifier: GPL-2.0-or-later
+-->
+
+<RCC>
+    <qresource prefix="/">
+        
+        <file>qml/main.qml</file>
+        <file>qml/DefaultPage.qml</file>
+        <file>qml/HeaderSearchBar.qml</file>
+        <file>qml/KCMContainer.qml</file>
+        <file>qml/ModulesListPage.qml</file>
+        <file>qml/Sidebar.qml</file>
+        <file>qml/SidebarButton.qml</file>
+
+    </qresource>
+</RCC>

@@ -128,16 +128,12 @@ int main(int argc, char **argv)
     }
 
     const QString module = parser.value(moduleOption);
-    QString ui = parser.isSet(layoutOption) ? parser.value(layoutOption) : "org.kde.plasma.settings";
     const bool singleModule = parser.isSet(singleModuleOption);
 
     if (singleModule && module.isEmpty()) {
         parser.showHelp();
         return 0;
     }
-
-    KPackage::Package package = KPackage::PackageLoader::self()->loadPackage("KPackage/GenericQML");
-    package.setPath(ui);
 
     auto *settingsApp = new SettingsApp(parser);
     settingsApp->setStartModule(module);
@@ -149,7 +145,7 @@ int main(int argc, char **argv)
 
     QQmlApplicationEngine engine;
     engine.rootContext()->setContextObject(new KLocalizedContext(&engine));
-    engine.load(package.filePath("mainscript"));
+    engine.load(QUrl(QStringLiteral("qrc:/qml/main.qml")));
 
     return app.exec();
 }
