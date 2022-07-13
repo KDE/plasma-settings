@@ -17,28 +17,21 @@ Kirigami.ScrollablePage {
 
     title: i18n("Settings")
     
-    property alias model: listView.model
-
-    mainAction: Kirigami.Action {
-        id: searchAction
-        text: i18n("Search")
-        iconName: "search"
-        shortcut: "Ctrl+F"
-        
-        checkable: true
-        onCheckedChanged: {
-            if (!checked) {
-                settingsRoot.model.filterString = "";
-            }
-        }
-    }
+    property alias model: repeater.model
     
+    Kirigami.Theme.colorSet: Kirigami.Theme.Window
+    Kirigami.Theme.inherit: false
+            
+    leftPadding: 0
+    rightPadding: 0
+    topPadding: 0
+    bottomPadding: 0
     
     Component {
         id: settingsModuleDelegate
         
         Column {
-            width: listView.width
+            width: cardColumn.width
             
             MobileForm.FormDelegateSeparator {
                 anchors.left: parent.left
@@ -46,7 +39,7 @@ Kirigami.ScrollablePage {
                 anchors.leftMargin: Kirigami.Units.largeSpacing
                 anchors.rightMargin: Kirigami.Units.largeSpacing
                 visible: model.index !== 0
-                above: listView.children[model.index]
+                above: cardColumn.children[model.index]
                 below: delegateItem
             }
             
@@ -57,12 +50,11 @@ Kirigami.ScrollablePage {
                 property string iconName: model.iconName ? model.iconName : "question"
                 
                 onClicked: {
-                    print("Clicked index: " + index + " current: " + listView.currentIndex + " " + name + " curr: " + rootItem.currentModule);
                     // Only the first main page has a kcm property
                     applicationWindow().openModule(model.id);
                 }
                 
-                width: listView.width
+                width: cardColumn.width
                 contentItem: RowLayout {
                     Kirigami.Icon {
                         source: delegateItem.iconName
@@ -108,18 +100,52 @@ Kirigami.ScrollablePage {
         KCMContainer {}
     }
 
-    // search bar
-    header: HeaderSearchBar {
-        model: settingsRoot.model
-        show: searchAction.checked
-    }
-    
-    ListView {
-        id: listView
-        focus: true
-        activeFocusOnTab: true
-        keyNavigationEnabled: true
-        delegate: settingsModuleDelegate
-        currentIndex: -1 // no default highlight
+    ColumnLayout {
+        spacing: 0
+        width: settingsRoot.width
+        
+        // search bar
+        MobileForm.FormCard {
+            Layout.fillWidth: true
+            Layout.topMargin: Kirigami.Units.largeSpacing
+            
+            contentItem: ColumnLayout {
+                spacing: 0
+                
+                MobileForm.AbstractFormDelegate {
+                    Layout.fillWidth: true
+                    background: Item {}
+                    
+                    contentItem: RowLayout {
+                        Kirigami.SearchField {
+                            id: searchField
+                            Layout.fillWidth: true
+                            autoAccept: true
+                            onAccepted: settingsRoot.model.filterString = searchField.text
+                        }
+                    }
+                }
+            }
+        }
+        
+        // settings categories
+        MobileForm.FormCard {
+            Layout.fillWidth: true
+            Layout.topMargin: Kirigami.Units.largeSpacing
+            
+            contentItem: ColumnLayout {
+                id: cardColumn
+                spacing: 0
+                
+                MobileForm.FormCardHeader {
+                    title: i18n("Settings")
+                }
+                
+                Repeater {
+                    id: repeater
+                    delegate: settingsModuleDelegate
+                }
+            }
+        }
     }
 }

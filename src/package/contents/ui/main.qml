@@ -15,6 +15,7 @@ import org.kde.plasma.settings 0.1
 Kirigami.ApplicationWindow {
     id: rootItem
     
+    pageStack.defaultColumnWidth: Kirigami.Units.gridUnit * 35
     pageStack.globalToolBar.style: Kirigami.ApplicationHeaderStyle.ToolBar
     pageStack.globalToolBar.showNavigationButtons: Kirigami.ApplicationHeaderStyle.ShowBackButton;
     

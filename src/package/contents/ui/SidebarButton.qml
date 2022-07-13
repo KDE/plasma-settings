@@ -23,7 +23,7 @@ Controls.AbstractButton {
         Kirigami.Theme.colorSet: Kirigami.Theme.Button
         Kirigami.Theme.inherit: false
         
-        color: button.pressed ? pressedColor : (button.checked || hoverHandler.hovered ? hoverSelectColor : "transparent")
+        color: button.pressed ? pressedColor : (button.checked || (hoverHandler.hovered && !Kirigami.Settings.tabletMode) ? hoverSelectColor : "transparent")
 
         border.color: button.checked ? checkedBorderColor : (button.pressed ? pressedBorderColor : color)
         border.width: 1
