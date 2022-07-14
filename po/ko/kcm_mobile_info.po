@@ -1,13 +1,13 @@
 # Copyright (C) YEAR This file is copyright:
 # This file is distributed under the same license as the plasma-settings package.
-# Shinjo Park <kde@peremen.name>, 2020.
+# Shinjo Park <kde@peremen.name>, 2020, 2022.
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: plasma-settings\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2022-07-07 00:47+0000\n"
-"PO-Revision-Date: 2020-03-26 16:12+0100\n"
+"PO-Revision-Date: 2022-07-13 12:03+0200\n"
 "Last-Translator: Shinjo Park <kde@peremen.name>\n"
 "Language-Team: Korean <kde-kr@kde.org>\n"
 "Language: ko\n"
@@ -15,7 +15,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
-"X-Generator: Lokalize 19.04.3\n"
+"X-Generator: Lokalize 21.12.3\n"
 
 #, kde-format
 msgctxt "NAME OF TRANSLATORS"
@@ -45,42 +45,37 @@ msgstr "시스템 정보"
 #: package/contents/ui/main.qml:42
 #, kde-format
 msgid "Operating System"
-msgstr ""
+msgstr "운영 체제"
 
 #: package/contents/ui/main.qml:49
 #, kde-format
 msgid "Webpage"
-msgstr ""
+msgstr "웹 페이지"
 
 #: package/contents/ui/main.qml:70
-#, fuzzy, kde-format
-#| msgid "KDE Plasma Version:"
+#, kde-format
 msgid "KDE Plasma Version"
-msgstr "KDE Plasma 버전:"
+msgstr "KDE Plasma 버전"
 
 #: package/contents/ui/main.qml:77
-#, fuzzy, kde-format
-#| msgid "KDE Frameworks Version:"
+#, kde-format
 msgid "KDE Frameworks Version"
-msgstr "KDE 프레임워크 버전:"
+msgstr "KDE 프레임워크 버전"
 
 #: package/contents/ui/main.qml:84
-#, fuzzy, kde-format
-#| msgid "Qt Version:"
+#, kde-format
 msgid "Qt Version"
-msgstr "Qt 버전:"
+msgstr "Qt 버전"
 
 #: package/contents/ui/main.qml:91
-#, fuzzy, kde-format
-#| msgid "Kernel Version:"
+#, kde-format
 msgid "Kernel Version"
-msgstr "커널 버전:"
+msgstr "커널 버전"
 
 #: package/contents/ui/main.qml:98
-#, fuzzy, kde-format
-#| msgid "OS Type:"
+#, kde-format
 msgid "OS Type"
-msgstr "OS 종류:"
+msgstr "OS 종류"
 
 #: package/contents/ui/main.qml:99
 #, kde-format
@@ -89,18 +84,15 @@ msgid "%1-bit"
 msgstr "%1비트"
 
 #: package/contents/ui/main.qml:116
-#, fuzzy, kde-format
-#| msgid "Processor:"
-#| msgid_plural "Processors:"
+#, kde-format
 msgid "Processor"
 msgid_plural "Processors"
-msgstr[0] "프로세서:"
+msgstr[0] "프로세서"
 
 #: package/contents/ui/main.qml:123
-#, fuzzy, kde-format
-#| msgid "Memory:"
+#, kde-format
 msgid "Memory"
-msgstr "메모리:"
+msgstr "메모리"
 
 #: package/contents/ui/main.qml:127
 #, kde-format

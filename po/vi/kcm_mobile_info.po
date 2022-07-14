@@ -1,13 +1,13 @@
 # Copyright (C) YEAR This file is copyright:
 # This file is distributed under the same license as the plasma-settings package.
 #
-# Phu Hung Nguyen <phu.nguyen@kdemail.net>, 2021.
+# Phu Hung Nguyen <phu.nguyen@kdemail.net>, 2021, 2022.
 msgid ""
 msgstr ""
 "Project-Id-Version: plasma-settings\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2022-07-07 00:47+0000\n"
-"PO-Revision-Date: 2021-08-31 13:06+0200\n"
+"PO-Revision-Date: 2022-07-13 09:24+0200\n"
 "Last-Translator: Phu Hung Nguyen <phu.nguyen@kdemail.net>\n"
 "Language-Team: Vietnamese <kde-l10n-vi@kde.org>\n"
 "Language: vi\n"
@@ -15,7 +15,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
-"X-Generator: Lokalize 20.12.2\n"
+"X-Generator: Lokalize 22.04.1\n"
 
 #, kde-format
 msgctxt "NAME OF TRANSLATORS"
@@ -45,42 +45,37 @@ msgstr "Thông tin hệ thống"
 #: package/contents/ui/main.qml:42
 #, kde-format
 msgid "Operating System"
-msgstr ""
+msgstr "Hệ điều hành"
 
 #: package/contents/ui/main.qml:49
 #, kde-format
 msgid "Webpage"
-msgstr ""
+msgstr "Trang web"
 
 #: package/contents/ui/main.qml:70
-#, fuzzy, kde-format
-#| msgid "KDE Plasma Version:"
+#, kde-format
 msgid "KDE Plasma Version"
-msgstr "Phiên bản Plasma KDE:"
+msgstr "Phiên bản Plasma KDE"
 
 #: package/contents/ui/main.qml:77
-#, fuzzy, kde-format
-#| msgid "KDE Frameworks Version:"
+#, kde-format
 msgid "KDE Frameworks Version"
-msgstr "Phiên bản Các Kết cấu KDE:"
+msgstr "Phiên bản Các Kết cấu KDE"
 
 #: package/contents/ui/main.qml:84
-#, fuzzy, kde-format
-#| msgid "Qt Version:"
+#, kde-format
 msgid "Qt Version"
-msgstr "Phiên bản Qt:"
+msgstr "Phiên bản Qt"
 
 #: package/contents/ui/main.qml:91
-#, fuzzy, kde-format
-#| msgid "Kernel Version:"
+#, kde-format
 msgid "Kernel Version"
-msgstr "Phiên bản nhân:"
+msgstr "Phiên bản nhân"
 
 #: package/contents/ui/main.qml:98
-#, fuzzy, kde-format
-#| msgid "OS Type:"
+#, kde-format
 msgid "OS Type"
-msgstr "Kiểu HĐH:"
+msgstr "Kiểu HĐH"
 
 #: package/contents/ui/main.qml:99
 #, kde-format
@@ -89,18 +84,15 @@ msgid "%1-bit"
 msgstr "%1-bit"
 
 #: package/contents/ui/main.qml:116
-#, fuzzy, kde-format
-#| msgid "Processor:"
-#| msgid_plural "Processors:"
+#, kde-format
 msgid "Processor"
 msgid_plural "Processors"
-msgstr[0] "Bộ xử lí:"
+msgstr[0] "Bộ xử lí"
 
 #: package/contents/ui/main.qml:123
-#, fuzzy, kde-format
-#| msgid "Memory:"
+#, kde-format
 msgid "Memory"
-msgstr "Bộ nhớ:"
+msgstr "Bộ nhớ"
 
 #: package/contents/ui/main.qml:127
 #, kde-format

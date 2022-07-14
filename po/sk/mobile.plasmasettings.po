@@ -5,7 +5,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: mobile.plasmasettings\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2022-07-12 00:49+0000\n"
+"POT-Creation-Date: 2022-07-14 00:48+0000\n"
 "PO-Revision-Date: 2022-01-07 15:11+0100\n"
 "Last-Translator: Matej Mrenica <matejm98mthw@gmail.com>\n"
 "Language-Team: Slovak <kde-i18n-doc@kde.org>\n"
@@ -16,8 +16,8 @@ msgstr ""
 "X-Generator: Lokalize 21.12.1\n"
 "Plural-Forms: nplurals=3; plural=(n==1) ? 0 : (n>=2 && n<=4) ? 1 : 2;\n"
 
-#: src/main.cpp:46 src/package/contents/ui/ModulesListPage.qml:18
-#: src/package/contents/ui/Sidebar.qml:41
+#: src/main.cpp:46 src/qml/ModulesListPage.qml:18
+#: src/qml/ModulesListPage.qml:141 src/qml/Sidebar.qml:41
 #, kde-format
 msgid "Settings"
 msgstr "Nastavenia"
@@ -98,18 +98,17 @@ msgstr ""
 msgid "packagename"
 msgstr "packagename"
 
-#: src/package/contents/ui/DefaultPage.qml:29
+#: src/qml/DefaultPage.qml:29
 #, kde-format
 msgid "System Settings"
 msgstr "Systémové nastavenia"
 
-#: src/package/contents/ui/DefaultPage.qml:35
+#: src/qml/DefaultPage.qml:35
 #, kde-format
 msgid "Open a configuration page from the sidebar."
 msgstr "Otvoriť konfiguračnú stránku z bočného panela."
 
-#: src/package/contents/ui/ModulesListPage.qml:24
-#: src/package/contents/ui/Sidebar.qml:52
+#: src/qml/Sidebar.qml:52
 #, kde-format
 msgid "Search"
 msgstr "Hľadať"

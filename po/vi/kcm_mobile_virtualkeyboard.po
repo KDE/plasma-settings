@@ -7,7 +7,7 @@ msgstr ""
 "Project-Id-Version: plasma-settings\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2022-07-07 00:47+0000\n"
-"PO-Revision-Date: 2022-02-09 19:33+0100\n"
+"PO-Revision-Date: 2022-07-13 09:23+0200\n"
 "Last-Translator: Phu Hung Nguyen <phu.nguyen@kdemail.net>\n"
 "Language-Team: Vietnamese <kde-l10n-vi@kde.org>\n"
 "Language: vi\n"
@@ -15,7 +15,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
-"X-Generator: Lokalize 20.12.2\n"
+"X-Generator: Lokalize 22.04.1\n"
 
 #, kde-format
 msgctxt "NAME OF TRANSLATORS"
@@ -50,24 +50,22 @@ msgstr "Gõ vào đây..."
 #: package/contents/ui/main.qml:63
 #, kde-format
 msgid "Sound"
-msgstr ""
+msgstr "Âm thanh"
 
 #: package/contents/ui/main.qml:64
-#, fuzzy, kde-format
-#| msgid "Emit sound on key press"
+#, kde-format
 msgid "Whether to emit a sound on keypress."
-msgstr "Phát tiếng khi ấn phím"
+msgstr "Có phát tiếng khi ấn phím không."
 
 #: package/contents/ui/main.qml:73
 #, kde-format
 msgid "Vibration"
-msgstr ""
+msgstr "Rung"
 
 #: package/contents/ui/main.qml:74
-#, fuzzy, kde-format
-#| msgid "Vibrate on key press"
+#, kde-format
 msgid "Whether to vibrate on keypress."
-msgstr "Rung khi ấn phím"
+msgstr "Có rung khi ấn phím không."
 
 #: package/contents/ui/main.qml:94
 #, kde-format

@@ -5,7 +5,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-settings\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2022-07-12 00:49+0000\n"
+"POT-Creation-Date: 2022-07-14 00:48+0000\n"
 "PO-Revision-Date: 2022-07-02 12:52+0200\n"
 "Last-Translator: Frederik Schwarzer <schwarzer@kde.org>\n"
 "Language-Team: German <kde-i18n-de@kde.org>\n"
@@ -16,8 +16,8 @@ msgstr ""
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
 "X-Generator: Lokalize 22.04.1\n"
 
-#: src/main.cpp:46 src/package/contents/ui/ModulesListPage.qml:18
-#: src/package/contents/ui/Sidebar.qml:41
+#: src/main.cpp:46 src/qml/ModulesListPage.qml:18
+#: src/qml/ModulesListPage.qml:141 src/qml/Sidebar.qml:41
 #, kde-format
 msgid "Settings"
 msgstr "Einstellungen"
@@ -96,18 +96,17 @@ msgstr ""
 msgid "packagename"
 msgstr "Paketname"
 
-#: src/package/contents/ui/DefaultPage.qml:29
+#: src/qml/DefaultPage.qml:29
 #, kde-format
 msgid "System Settings"
 msgstr "Systemeinstellungen"
 
-#: src/package/contents/ui/DefaultPage.qml:35
+#: src/qml/DefaultPage.qml:35
 #, kde-format
 msgid "Open a configuration page from the sidebar."
 msgstr ""
 
-#: src/package/contents/ui/ModulesListPage.qml:24
-#: src/package/contents/ui/Sidebar.qml:52
+#: src/qml/Sidebar.qml:52
 #, kde-format
 msgid "Search"
 msgstr "Suchen"

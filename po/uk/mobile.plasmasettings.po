@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: mobile.plasmasettings\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2022-07-12 00:49+0000\n"
+"POT-Creation-Date: 2022-07-14 00:48+0000\n"
 "PO-Revision-Date: 2021-12-23 08:43+0200\n"
 "Last-Translator: Yuri Chornoivan <yurchor@ukr.net>\n"
 "Language-Team: Ukrainian <kde-i18n-uk@kde.org>\n"
@@ -20,8 +20,8 @@ msgstr ""
 "%10>=2 && n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2;\n"
 "X-Generator: Lokalize 20.12.0\n"
 
-#: src/main.cpp:46 src/package/contents/ui/ModulesListPage.qml:18
-#: src/package/contents/ui/Sidebar.qml:41
+#: src/main.cpp:46 src/qml/ModulesListPage.qml:18
+#: src/qml/ModulesListPage.qml:141 src/qml/Sidebar.qml:41
 #, kde-format
 msgid "Settings"
 msgstr "Параметри"
@@ -103,18 +103,17 @@ msgstr ""
 msgid "packagename"
 msgstr "назва_пакунка"
 
-#: src/package/contents/ui/DefaultPage.qml:29
+#: src/qml/DefaultPage.qml:29
 #, kde-format
 msgid "System Settings"
 msgstr "Системні параметри"
 
-#: src/package/contents/ui/DefaultPage.qml:35
+#: src/qml/DefaultPage.qml:35
 #, kde-format
 msgid "Open a configuration page from the sidebar."
 msgstr "Відкрити сторінку налаштувань з бічної панелі."
 
-#: src/package/contents/ui/ModulesListPage.qml:24
-#: src/package/contents/ui/Sidebar.qml:52
+#: src/qml/Sidebar.qml:52
 #, kde-format
 msgid "Search"
 msgstr "Пошук"

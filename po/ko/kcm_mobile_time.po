@@ -1,13 +1,13 @@
 # Copyright (C) YEAR This file is copyright:
 # This file is distributed under the same license as the plasma-settings package.
-# Shinjo Park <kde@peremen.name>, 2020, 2021.
+# Shinjo Park <kde@peremen.name>, 2020, 2021, 2022.
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: plasma-settings\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2022-07-07 00:47+0000\n"
-"PO-Revision-Date: 2021-11-12 01:30+0100\n"
+"PO-Revision-Date: 2022-07-13 12:04+0200\n"
 "Last-Translator: Shinjo Park <kde@peremen.name>\n"
 "Language-Team: Korean <kde-kr@kde.org>\n"
 "Language: ko\n"
@@ -15,7 +15,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
-"X-Generator: Lokalize 21.08.1\n"
+"X-Generator: Lokalize 21.12.3\n"
 
 #, kde-format
 msgctxt "NAME OF TRANSLATORS"
@@ -88,50 +88,44 @@ msgid "Dec"
 msgstr "12월"
 
 #: package/contents/ui/main.qml:57
-#, fuzzy, kde-format
-#| msgid "Time Display"
+#, kde-format
 msgid "Display"
-msgstr "시간 표시"
+msgstr "표시"
 
 #: package/contents/ui/main.qml:62
 #, kde-format
 msgid "24-Hour Format"
-msgstr ""
+msgstr "24시간제 형식"
 
 #: package/contents/ui/main.qml:63
 #, kde-format
 msgid "Whether to use a 24-hour format for clocks."
-msgstr ""
+msgstr "24시간제 형식으로 시간을 표시할지 여부입니다."
 
 #: package/contents/ui/main.qml:74
-#, fuzzy, kde-format
-#| msgid "Timezone:"
+#, kde-format
 msgid "Timezone"
-msgstr "시간대:"
+msgstr "시간대"
 
 #: package/contents/ui/main.qml:89
-#, fuzzy, kde-format
-#| msgid "Set Time and Date"
+#, kde-format
 msgid "Time and Date"
-msgstr "날짜와 시간 설정"
+msgstr "날짜와 시간"
 
 #: package/contents/ui/main.qml:94
 #, kde-format
 msgid "Automatic Time Synchronization"
-msgstr ""
+msgstr "자동 시간 동기화"
 
 #: package/contents/ui/main.qml:95
-#, fuzzy, kde-format
-#| msgid "Set time automatically:"
+#, kde-format
 msgid "Whether to set the time automatically."
-msgstr "자동으로 시간 설정:"
+msgstr "자동으로 시간 설정 여부입니다."
 
 #: package/contents/ui/main.qml:112
-#, fuzzy, kde-format
-#| msgctxt "This is a city associated with particular time zone"
-#| msgid "Currie"
+#, kde-format
 msgid "Current Time"
-msgstr "커리"
+msgstr "현재 시간"
 
 #: package/contents/ui/main.qml:123
 #, kde-format
