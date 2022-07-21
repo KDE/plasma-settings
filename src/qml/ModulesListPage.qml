@@ -85,8 +85,8 @@ Kirigami.ScrollablePage {
                     Kirigami.Icon {
                         Layout.alignment: Qt.AlignRight
                         source: "arrow-right"
-                        implicitWidth: Kirigami.Units.iconSizes.small
-                        implicitHeight: Kirigami.Units.iconSizes.small
+                        implicitWidth: Math.round(Kirigami.Units.iconSizes.small * 0.75)
+                        implicitHeight: Math.round(Kirigami.Units.iconSizes.small * 0.75)
                     }
                 }
             }
