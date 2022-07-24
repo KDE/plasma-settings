@@ -20,8 +20,8 @@
 
 #include <ModemManagerQt/GenericTypes>
 #include <ModemManagerQt/Manager>
+#include <ModemManagerQt/Modem3Gpp>
 #include <ModemManagerQt/ModemDevice>
-#include <modem3gpp.h>
 
 class Modem;
 
