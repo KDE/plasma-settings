@@ -20,7 +20,7 @@
 
 #include <KQuickAddons/ConfigModule>
 
-class TimeZoneFilterProxy;
+#include "timezonemodel.h"
 
 //#include "settingsmodule.h"
 
