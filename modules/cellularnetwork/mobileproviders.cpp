@@ -9,6 +9,7 @@
 #include <QDebug>
 #include <QFile>
 #include <QLocale>
+#include <QRegularExpression>
 #include <QTextStream>
 
 const QString MobileProviders::ProvidersFile = QStringLiteral("/usr/share/mobile-broadband-provider-info/serviceproviders.xml");
@@ -173,7 +174,7 @@ ProviderData MobileProviders::parseProvider(const QDomNode &providerNode)
                 lang = "en"; // English is default
             } else {
                 lang = lang.toLower();
-                lang.remove(QRegExp("\\-.*$")); // Remove everything after '-' in xml:lang attribute.
+                lang.remove(QRegularExpression(QStringLiteral("\\-.*$"))); // Remove everything after '-' in xml:lang attribute.
             }
             localizedProviderNames.insert(lang, ce.text());
         }
@@ -246,7 +247,7 @@ QVariantMap MobileProviders::getApnInfo(const QString &apn)
                     lang = "en"; // English is default
                 } else {
                     lang = lang.toLower();
-                    lang.remove(QRegExp("\\-.*$")); // Remove everything after '-' in xml:lang attribute.
+                    lang.remove(QRegularExpression(QStringLiteral("\\-.*$"))); // Remove everything after '-' in xml:lang attribute.
                 }
                 localizedPlanNames.insert(lang, e.text());
             } else if (e.tagName().toLower() == "username") {
