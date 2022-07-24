@@ -8,7 +8,7 @@ set(info_SRCS # Specify source files for the library
 add_library(kcm_mobile_info MODULE ${info_SRCS})
 
 target_link_libraries(kcm_mobile_info
-    Qt5::Core
+    Qt::Core
     KF5::CoreAddons
     KF5::I18n
     KF5::QuickAddons

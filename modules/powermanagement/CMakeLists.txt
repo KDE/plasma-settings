@@ -6,7 +6,7 @@ add_definitions(-DTRANSLATION_DOMAIN=\"kcm_mobile_power\")
 add_library(kcm_mobile_power MODULE mobilepower.cpp)
 
 target_link_libraries(kcm_mobile_power
-    Qt5::Core
+    Qt::Core
     KF5::CoreAddons
     KF5::I18n
     KF5::QuickAddons

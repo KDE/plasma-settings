@@ -13,7 +13,7 @@ add_library(kcm_mobile_onscreenkeyboard MODULE ${onscreenkeyboard_SRCS})
 target_compile_definitions(kcm_mobile_onscreenkeyboard PRIVATE "MALIIT_KEYBOARD_LANGUAGES_DIR=\"${MALIIT_KEYBOARD_LANGUAGES_DIR}\"")
 
 target_link_libraries(kcm_mobile_onscreenkeyboard
-    Qt5::Core
+    Qt::Core
     KF5::CoreAddons
     KF5::I18n
     KF5::QuickAddons

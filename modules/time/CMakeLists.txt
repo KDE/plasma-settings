@@ -9,9 +9,9 @@ qt_add_dbus_interface(timesettings_SRCS ${CMAKE_CURRENT_SOURCE_DIR}/timedated1.x
 add_library(kcm_mobile_time MODULE ${timesettings_SRCS})
 
 target_link_libraries(kcm_mobile_time
-    Qt5::Quick
-    Qt5::Qml
-    Qt5::DBus
+    Qt::Quick
+    Qt::Qml
+    Qt::DBus
     KF5::QuickAddons
     KF5::ConfigCore
     KF5::I18n

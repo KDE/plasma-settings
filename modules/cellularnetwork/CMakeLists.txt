@@ -9,11 +9,11 @@ set (cellularnetworksettings_SRCS
 add_library(kcm_cellular_network MODULE ${cellularnetworksettings_SRCS})
 
 target_link_libraries(kcm_cellular_network
-    Qt5::DBus
-    Qt5::Gui
-    Qt5::Quick
-    Qt5::Qml
-    Qt5::Xml
+    Qt::DBus
+    Qt::Gui
+    Qt::Quick
+    Qt::Qml
+    Qt::Xml
     KF5::Plasma
     KF5::I18n
     KF5::NetworkManagerQt
