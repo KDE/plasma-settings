@@ -14,7 +14,7 @@ class HardwareInfo : public QObject
     Q_OBJECT
 
     Q_PROPERTY(QString processors READ processors CONSTANT)
-    Q_PROPERTY(QString processorCount READ processorCount CONSTANT)
+    Q_PROPERTY(int processorCount READ processorCount CONSTANT)
     Q_PROPERTY(QString memory READ memory CONSTANT)
 
 public:
