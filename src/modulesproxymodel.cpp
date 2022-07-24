@@ -24,7 +24,7 @@ void ModulesProxyModel::setFilterString(QString filterString)
 {
     if (filterString != m_filterString) {
         m_filterString = filterString;
-        setFilterRegExp({m_filterString});
+        setFilterFixedString({m_filterString});
         Q_EMIT filterStringChanged();
     }
 }
