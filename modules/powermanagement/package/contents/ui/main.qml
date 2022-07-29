@@ -96,10 +96,10 @@ SimpleKCM {
                         bottomPadding: Kirigami.Units.smallSpacing * 2
                         
                         text: modelData
-                        checked: dimScreenCombo.currentValue == modelData
+                        checked: suspendCombo.currentValue == modelData
                         onCheckedChanged: {
                             if (checked) {
-                                dimScreenCombo.currentValue = modelData;
+                                suspendCombo.currentValue = modelData;
                                 kcm.screenOffIdx = model.index;
                             }
                         }
