@@ -2,13 +2,31 @@
     "Categories": "Qt;KDE;X-KDE-settings-system;",
     "KPlugin": {
         "Description": "Configure power management settings",
+        "Description[ca@valencia]": "Configuració dels paràmetres de gestió d'energia",
+        "Description[ca]": "Configuració dels paràmetres de gestió d'energia",
+        "Description[es]": "Configurar las preferencias de la gestión de energía",
+        "Description[nl]": "Energie-instellingen configureren",
+        "Description[pl]": "Ustawienia zarządzania energią",
+        "Description[pt]": "Configurar as definições de gestão de energia",
+        "Description[tr]": "Güç yönetimi ayarlarını yapılandır",
+        "Description[uk]": "Налаштовування керування живленням",
+        "Description[x-test]": "xxConfigure power management settingsxx",
         "FormFactors": [
             "handset",
             "tablet",
             "mediacenter"
         ],
         "Icon": "preferences-system-power-management",
-        "Name": "Energy"
+        "Name": "Energy",
+        "Name[ca@valencia]": "Energia",
+        "Name[ca]": "Energia",
+        "Name[es]": "Energía",
+        "Name[nl]": "Energie",
+        "Name[pl]": "Energia",
+        "Name[pt]": "Energia",
+        "Name[tr]": "Enerji",
+        "Name[uk]": "Живлення",
+        "Name[x-test]": "xxEnergyxx"
     },
     "X-KDE-Keywords": "video, monitor, graphics, timeout, sleep, lock, screenlocker, screensaver",
     "X-KDE-Keywords[ast]": "videu,monitor,gráficos,dormir,dormición,bloquiar,bloquéu,curiapantalles,bloquiador de pantalla",
