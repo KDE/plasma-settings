@@ -10,6 +10,7 @@
         "Description[pl]": "Ustawienia zarządzania energią",
         "Description[pt]": "Configurar as definições de gestão de energia",
         "Description[sl]": "Konfiguriraj nastavitve upravljanja  energijo",
+        "Description[sv]": "Anpassa inställningar av strömhantering",
         "Description[tr]": "Güç yönetimi ayarlarını yapılandır",
         "Description[uk]": "Налаштовування керування живленням",
         "Description[x-test]": "xxConfigure power management settingsxx",
@@ -28,6 +29,7 @@
         "Name[pl]": "Energia",
         "Name[pt]": "Energia",
         "Name[sl]": "Energija",
+        "Name[sv]": "Energi",
         "Name[tr]": "Enerji",
         "Name[uk]": "Живлення",
         "Name[x-test]": "xxEnergyxx"
