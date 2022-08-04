@@ -7,7 +7,7 @@ msgstr ""
 "Project-Id-Version: plasma-settings\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2022-07-07 00:47+0000\n"
-"PO-Revision-Date: 2022-01-20 17:11+0100\n"
+"PO-Revision-Date: 2022-08-03 09:32+0200\n"
 "Last-Translator: Stefan Asserhäll <stefan.asserhall@bredband.net>\n"
 "Language-Team: Swedish <kde-i18n-doc@kde.org>\n"
 "Language: sv\n"
@@ -50,24 +50,22 @@ msgstr "Skriv något här…"
 #: package/contents/ui/main.qml:63
 #, kde-format
 msgid "Sound"
-msgstr ""
+msgstr "Ljud"
 
 #: package/contents/ui/main.qml:64
-#, fuzzy, kde-format
-#| msgid "Emit sound on key press"
+#, kde-format
 msgid "Whether to emit a sound on keypress."
-msgstr "Avge ljud vid tangentnedtryckning"
+msgstr "Om ett ljud ska avges vid tangentnedtryckning eller inte."
 
 #: package/contents/ui/main.qml:73
 #, kde-format
 msgid "Vibration"
-msgstr ""
+msgstr "Vibration"
 
 #: package/contents/ui/main.qml:74
-#, fuzzy, kde-format
-#| msgid "Vibrate on key press"
+#, kde-format
 msgid "Whether to vibrate on keypress."
-msgstr "Vibrera vid tangentnedtryckning"
+msgstr "Om vibration ska ske vid tangentnedtryckning eller inte"
 
 #: package/contents/ui/main.qml:94
 #, kde-format

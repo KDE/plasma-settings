@@ -7,7 +7,7 @@ msgstr ""
 "Project-Id-Version: plasma-settings\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2022-07-07 00:47+0000\n"
-"PO-Revision-Date: 2022-04-18 22:24+0300\n"
+"PO-Revision-Date: 2022-07-24 09:27+0300\n"
 "Last-Translator: Tommi Nieminen <translator@legisign.org>\n"
 "Language-Team: Finnish <kde-i18n-doc@kde.org>\n"
 "Language: fi\n"
@@ -15,7 +15,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"X-Generator: Lokalize 21.12.3\n"
+"X-Generator: Lokalize 20.12.0\n"
 
 #, kde-format
 msgctxt "NAME OF TRANSLATORS"
@@ -96,22 +96,22 @@ msgstr "Valmistellaan"
 #: modem.cpp:424
 #, kde-format
 msgid "ConfiguringHardware"
-msgstr ""
+msgstr "MäärittäväLaite"
 
 #: modem.cpp:426
 #, kde-format
 msgid "NeedAuth"
-msgstr ""
+msgstr "TodennusVaaditaan"
 
 #: modem.cpp:428
 #, kde-format
 msgid "ConfiguringIp"
-msgstr ""
+msgstr "MäärittäväIP"
 
 #: modem.cpp:430
 #, kde-format
 msgid "CheckingIp"
-msgstr ""
+msgstr "TarkistavaIP"
 
 #: modem.cpp:432
 #, kde-format
@@ -630,10 +630,9 @@ msgid "Interface Name"
 msgstr "Liitännän nimi"
 
 #: package/contents/ui/Modem.qml:228
-#, fuzzy, kde-format
-#| msgid "Metered:"
+#, kde-format
 msgid "Metered"
-msgstr "Datankäytön mittaus:"
+msgstr "Mitattu"
 
 #: package/contents/ui/Modem.qml:236
 #, kde-format

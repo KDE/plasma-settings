@@ -7,7 +7,7 @@ msgstr ""
 "Project-Id-Version: plasma-settings\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2022-07-31 00:49+0000\n"
-"PO-Revision-Date: 2022-02-10 18:06+0100\n"
+"PO-Revision-Date: 2022-08-03 09:35+0200\n"
 "Last-Translator: Stefan Asserhäll <stefan.asserhall@bredband.net>\n"
 "Language-Team: Swedish <kde-i18n-doc@kde.org>\n"
 "Language: sv\n"
@@ -75,244 +75,237 @@ msgstr "Tomaz Canabrava"
 #: mobilepower.cpp:60
 #, kde-format
 msgid "Devin Lin"
-msgstr ""
+msgstr "Devin Lin"
 
 #: package/contents/ui/BatteryPage.qml:26
 #, kde-format
 msgid "Battery Information"
-msgstr ""
+msgstr "Batteriinformation"
 
 #: package/contents/ui/BatteryPage.qml:51
 #, kde-format
 msgid "Usage Graph"
-msgstr ""
+msgstr "Användningsdiagram"
 
 #: package/contents/ui/BatteryPage.qml:82
 #, kde-format
 msgctxt "Shorthand for Watts"
 msgid "W"
-msgstr ""
+msgstr "W"
 
 #: package/contents/ui/BatteryPage.qml:100
 #, kde-format
 msgid "Information"
-msgstr ""
+msgstr "Information"
 
 #: package/contents/ui/BatteryPage.qml:105
 #, kde-format
 msgid "Is Rechargeable"
-msgstr ""
+msgstr "Är uppladdningsbar"
 
 #: package/contents/ui/BatteryPage.qml:106
 #, kde-format
 msgid "Yes"
-msgstr ""
+msgstr "Ja"
 
 #: package/contents/ui/BatteryPage.qml:106
 #, kde-format
 msgid "No"
-msgstr ""
+msgstr "Nej"
 
 #: package/contents/ui/BatteryPage.qml:113
 #, kde-format
 msgid "Charge State"
-msgstr ""
+msgstr "Laddningstillstånd"
 
 #: package/contents/ui/BatteryPage.qml:116
 #, kde-format
 msgid "Not charging"
-msgstr ""
+msgstr "Laddas inte"
 
 #: package/contents/ui/BatteryPage.qml:117
 #, kde-format
 msgid "Charging"
-msgstr ""
+msgstr "Laddas"
 
 #: package/contents/ui/BatteryPage.qml:118
 #, kde-format
 msgid "Discharging"
-msgstr ""
+msgstr "Laddas ur"
 
 #: package/contents/ui/BatteryPage.qml:119
 #, kde-format
 msgid "Fully charged"
-msgstr ""
+msgstr "Fulladdat"
 
 #: package/contents/ui/BatteryPage.qml:120
 #, kde-format
 msgid "Unknown"
-msgstr ""
+msgstr "Okänt"
 
 #: package/contents/ui/BatteryPage.qml:129
 #, kde-format
 msgid "Current Charge"
-msgstr ""
+msgstr "Aktuell laddning"
 
 #: package/contents/ui/BatteryPage.qml:130
 #: package/contents/ui/BatteryPage.qml:138 package/contents/ui/main.qml:95
-#, fuzzy, kde-format
-#| msgid "0%"
+#, kde-format
 msgid "%"
-msgstr "0 %"
+msgstr "%"
 
 #: package/contents/ui/BatteryPage.qml:130
 #: package/contents/ui/BatteryPage.qml:138
 #, kde-format
 msgctxt "%1 is value, %2 is unit"
 msgid "%1 %2"
-msgstr ""
+msgstr "%1 %2"
 
 #: package/contents/ui/BatteryPage.qml:137
 #, kde-format
 msgid "Health"
-msgstr ""
+msgstr "Hälsa"
 
 #: package/contents/ui/BatteryPage.qml:145
 #, kde-format
 msgid "Vendor"
-msgstr ""
+msgstr "Tillverkare"
 
 #: package/contents/ui/BatteryPage.qml:153
 #, kde-format
 msgid "Model"
-msgstr ""
+msgstr "Modell"
 
 #: package/contents/ui/BatteryPage.qml:161
 #, kde-format
 msgid "Serial Number"
-msgstr ""
+msgstr "Serienummer"
 
 #: package/contents/ui/BatteryPage.qml:169
 #, kde-format
 msgid "Technology"
-msgstr ""
+msgstr "Teknologi"
 
 #: package/contents/ui/BatteryPage.qml:172
 #, kde-format
 msgid "Lithium ion"
-msgstr ""
+msgstr "Litiumjon"
 
 #: package/contents/ui/BatteryPage.qml:173
 #, kde-format
 msgid "Lithium polymer"
-msgstr ""
+msgstr "Litiumpolymer"
 
 #: package/contents/ui/BatteryPage.qml:174
 #, kde-format
 msgid "Lithium iron phosphate"
-msgstr ""
+msgstr "Litiumjärnfosfat"
 
 #: package/contents/ui/BatteryPage.qml:175
 #, kde-format
 msgid "Lead acid"
-msgstr ""
+msgstr "Blybatteri"
 
 #: package/contents/ui/BatteryPage.qml:176
 #, kde-format
 msgid "Nickel cadmium"
-msgstr ""
+msgstr "Nickelkadmium"
 
 #: package/contents/ui/BatteryPage.qml:177
 #, kde-format
 msgid "Nickel metal hydride"
-msgstr ""
+msgstr "Nickelmetallhydrid"
 
 #: package/contents/ui/BatteryPage.qml:178
 #, kde-format
 msgid "Unknown technology"
-msgstr ""
+msgstr "Okänd teknologi"
 
 #: package/contents/ui/main.qml:40
 #, kde-format
 msgid "Devices"
-msgstr ""
+msgstr "Enheter"
 
 #: package/contents/ui/main.qml:85
 #, kde-format
 msgid "Internal battery"
-msgstr ""
+msgstr "Internt batteri"
 
 #: package/contents/ui/main.qml:86
 #, kde-format
 msgid "UPS battery"
-msgstr ""
+msgstr "UPS-batteri"
 
 #: package/contents/ui/main.qml:87
 #, kde-format
 msgid "Monitor battery"
-msgstr ""
+msgstr "Bildskärmsbatteri"
 
 #: package/contents/ui/main.qml:88
 #, kde-format
 msgid "Mouse battery"
-msgstr ""
+msgstr "Musbatteri"
 
 #: package/contents/ui/main.qml:89
 #, kde-format
 msgid "Keyboard battery"
-msgstr ""
+msgstr "Tangentbordsbatteri"
 
 #: package/contents/ui/main.qml:90
 #, kde-format
 msgid "PDA battery"
-msgstr ""
+msgstr "Handdatorbatteri"
 
 #: package/contents/ui/main.qml:91
 #, kde-format
 msgid "Phone battery"
-msgstr ""
+msgstr "Telefonbatteri"
 
 #: package/contents/ui/main.qml:92
 #, kde-format
 msgid "Unknown battery"
-msgstr ""
+msgstr "Okänt batteri"
 
 #: package/contents/ui/main.qml:95
 #, kde-format
 msgctxt "%1 is value, %2 is unit"
 msgid "%1%2"
-msgstr ""
+msgstr "%1 %2"
 
 #: package/contents/ui/main.qml:97
 #, kde-format
 msgctxt "%1 is battery type, %2 is charge percent"
 msgid "%1 %2 (Charging)"
-msgstr ""
+msgstr "%1 %2 (laddas)"
 
 #: package/contents/ui/main.qml:97
 #, kde-format
 msgctxt "%1 is battery type, %2 is charge percent"
 msgid "%1 %2"
-msgstr ""
+msgstr "%1 %2"
 
 #: package/contents/ui/main.qml:129
 #, kde-format
 msgid "Screen"
-msgstr ""
+msgstr "Skärm"
 
 #: package/contents/ui/main.qml:134
-#, fuzzy, kde-format
-#| msgctxt "Part of a sentence like 'Dim screen after 5 minutes'"
-#| msgid "Dim screen after:"
+#, kde-format
 msgctxt "Part of a sentence like 'Dim screen after 5 minutes'"
 msgid "Dim screen after"
-msgstr "Dämpa skärmen efter:"
+msgstr "Dämpa skärmen efter"
 
 #: package/contents/ui/main.qml:159
-#, fuzzy, kde-format
-#| msgctxt "Part of a sentence like 'Turn off screen after 5 minutes'"
-#| msgid "Turn off screen after:"
+#, kde-format
 msgctxt "Part of a sentence like 'Turn off screen after 5 minutes'"
 msgid "Turn off screen after"
-msgstr "Stäng av skärmen efter:"
+msgstr "Stäng av skärmen efter"
 
 #: package/contents/ui/main.qml:184
-#, fuzzy, kde-format
-#| msgctxt "Part of a sentence like 'Suspend device after 5 minutes'"
-#| msgid "Suspend device after:"
+#, kde-format
 msgctxt "Part of a sentence like 'Suspend device after 5 minutes'"
 msgid "Suspend device after"
-msgstr "Gå till viloläge efter:"
+msgstr "Gå till viloläge efter"
 
 #~ msgctxt "Part of a sentence like 'Dim Display after 5 minutes'"
 #~ msgid "Dim Display"

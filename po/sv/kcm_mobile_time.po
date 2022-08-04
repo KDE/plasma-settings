@@ -1,13 +1,13 @@
 # Copyright (C) YEAR This file is copyright:
 # This file is distributed under the same license as the plasma-settings package.
 #
-# Stefan Asserhäll <stefan.asserhall@bredband.net>, 2019, 2020, 2021.
+# Stefan Asserhäll <stefan.asserhall@bredband.net>, 2019, 2020, 2021, 2022.
 msgid ""
 msgstr ""
 "Project-Id-Version: plasma-settings\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2022-07-07 00:47+0000\n"
-"PO-Revision-Date: 2021-08-13 18:16+0200\n"
+"PO-Revision-Date: 2022-08-03 09:33+0200\n"
 "Last-Translator: Stefan Asserhäll <stefan.asserhall@bredband.net>\n"
 "Language-Team: Swedish <kde-i18n-doc@kde.org>\n"
 "Language: sv\n"
@@ -88,50 +88,44 @@ msgid "Dec"
 msgstr "dec"
 
 #: package/contents/ui/main.qml:57
-#, fuzzy, kde-format
-#| msgid "Time Display"
+#, kde-format
 msgid "Display"
-msgstr "Tidsvisning"
+msgstr "Visning"
 
 #: package/contents/ui/main.qml:62
 #, kde-format
 msgid "24-Hour Format"
-msgstr ""
+msgstr "24-timmarsformat"
 
 #: package/contents/ui/main.qml:63
 #, kde-format
 msgid "Whether to use a 24-hour format for clocks."
-msgstr ""
+msgstr "Om ett 24-timmarsformat ska användas för klockor eller inte."
 
 #: package/contents/ui/main.qml:74
-#, fuzzy, kde-format
-#| msgid "Timezone:"
+#, kde-format
 msgid "Timezone"
-msgstr "Tidszon:"
+msgstr "Tidszon"
 
 #: package/contents/ui/main.qml:89
-#, fuzzy, kde-format
-#| msgid "Set Time and Date"
+#, kde-format
 msgid "Time and Date"
-msgstr "Ställ in tid och datum"
+msgstr "Tid och datum"
 
 #: package/contents/ui/main.qml:94
 #, kde-format
 msgid "Automatic Time Synchronization"
-msgstr ""
+msgstr "Automatisk tidssynkronisering"
 
 #: package/contents/ui/main.qml:95
-#, fuzzy, kde-format
-#| msgid "Set time automatically:"
+#, kde-format
 msgid "Whether to set the time automatically."
-msgstr "Ställ in tid automatiskt:"
+msgstr "Om tiden ska ställas in automatiskt eller inte."
 
 #: package/contents/ui/main.qml:112
-#, fuzzy, kde-format
-#| msgctxt "This is a city associated with particular time zone"
-#| msgid "Currie"
+#, kde-format
 msgid "Current Time"
-msgstr "Currie"
+msgstr "Aktuell tid"
 
 #: package/contents/ui/main.qml:123
 #, kde-format
