@@ -79,7 +79,7 @@ Kirigami.ScrollablePage {
                             xMax: history.lastDataPointTime
                             xDuration: history.duration
                 
-                            yUnits: i18nc("Shorthand for Watts","W")
+                            yUnits: i18nc("literal percent sign","%")
                             yMax: 100
                             yStep: 20
                             visible: history.count > 1
