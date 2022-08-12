@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-settings\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2022-07-31 00:49+0000\n"
+"POT-Creation-Date: 2022-08-12 00:47+0000\n"
 "PO-Revision-Date: 2022-07-14 10:41-0300\n"
 "Last-Translator: Luiz Fernando Ranghetti <elchevive@opensuse.org>\n"
 "Language-Team: Portuguese <kde-i18n-pt_BR@kde.org>\n"
@@ -88,10 +88,11 @@ msgid "Usage Graph"
 msgstr ""
 
 #: package/contents/ui/BatteryPage.qml:82
-#, kde-format
-msgctxt "Shorthand for Watts"
-msgid "W"
-msgstr ""
+#, fuzzy, kde-format
+#| msgid "0%"
+msgctxt "literal percent sign"
+msgid "%"
+msgstr "0%"
 
 #: package/contents/ui/BatteryPage.qml:100
 #, kde-format

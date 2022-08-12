@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-settings\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2022-07-31 00:49+0000\n"
+"POT-Creation-Date: 2022-08-12 00:47+0000\n"
 "PO-Revision-Date: 2022-07-31 14:25+0200\n"
 "Last-Translator: Freek de Kruijf <freekdekruijf@kde.nl>\n"
 "Language-Team: \n"
@@ -88,10 +88,11 @@ msgid "Usage Graph"
 msgstr "Grafiek van gebruik"
 
 #: package/contents/ui/BatteryPage.qml:82
-#, kde-format
-msgctxt "Shorthand for Watts"
-msgid "W"
-msgstr "W"
+#, fuzzy, kde-format
+#| msgid "%"
+msgctxt "literal percent sign"
+msgid "%"
+msgstr "%"
 
 #: package/contents/ui/BatteryPage.qml:100
 #, kde-format
@@ -306,6 +307,10 @@ msgstr "Scherm uitschakelen na"
 msgctxt "Part of a sentence like 'Suspend device after 5 minutes'"
 msgid "Suspend device after"
 msgstr "Apparaat onderbreken na"
+
+#~ msgctxt "Shorthand for Watts"
+#~ msgid "W"
+#~ msgstr "W"
 
 #~ msgctxt "Part of a sentence like 'Dim Display after 5 minutes'"
 #~ msgid "Dim Display"

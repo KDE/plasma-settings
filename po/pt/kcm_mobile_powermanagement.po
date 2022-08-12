@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-settings\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2022-07-31 00:49+0000\n"
+"POT-Creation-Date: 2022-08-12 00:47+0000\n"
 "PO-Revision-Date: 2022-07-31 22:57+0100\n"
 "Last-Translator: José Nuno Coelho Pires <zepires@gmail.com>\n"
 "Language-Team: Portuguese <kde-i18n-pt@kde.org>\n"
@@ -89,10 +89,11 @@ msgid "Usage Graph"
 msgstr "Gráfico de Utilização"
 
 #: package/contents/ui/BatteryPage.qml:82
-#, kde-format
-msgctxt "Shorthand for Watts"
-msgid "W"
-msgstr "W"
+#, fuzzy, kde-format
+#| msgid "%"
+msgctxt "literal percent sign"
+msgid "%"
+msgstr "%"
 
 #: package/contents/ui/BatteryPage.qml:100
 #, kde-format
@@ -307,3 +308,7 @@ msgstr "Desligar o ecrã ao fim de"
 msgctxt "Part of a sentence like 'Suspend device after 5 minutes'"
 msgid "Suspend device after"
 msgstr "Suspender o dispositivo ao fim de"
+
+#~ msgctxt "Shorthand for Watts"
+#~ msgid "W"
+#~ msgstr "W"

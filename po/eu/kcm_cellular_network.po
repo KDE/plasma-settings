@@ -1,16 +1,16 @@
 # Translation for kcm_cellular_network.po to Euskera/Basque (eu).
-# Copyright (C) 2021 This file is copyright:
+# Copyright (C) 2021-2022, This file is copyright:
 # This file is distributed under the same license as the plasma-settings package.
 # KDE euskaratzeko proiektuko arduraduna <xalba@ni.eus>.
 #
 # Translators:
-# Iñigo Salvador Azurmendi <xalba@ni.eus>, 2021.
+# Iñigo Salvador Azurmendi <xalba@ni.eus>, 2021, 2022.
 msgid ""
 msgstr ""
 "Project-Id-Version: plasma-settings\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2022-07-07 00:47+0000\n"
-"PO-Revision-Date: 2021-10-11 12:48+0200\n"
+"PO-Revision-Date: 2022-08-11 14:28+0200\n"
 "Last-Translator: Iñigo Salvador Azurmendi <xalba@ni.eus>\n"
 "Language-Team: Basque <kde-i18n-eu@kde.org>\n"
 "Language: eu\n"
@@ -18,7 +18,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"X-Generator: Lokalize 21.08.2\n"
+"X-Generator: Lokalize 22.04.3\n"
 
 #, kde-format
 msgctxt "NAME OF TRANSLATORS"
@@ -503,27 +503,24 @@ msgid "Modem not available"
 msgstr "Modema ez dago erabilgarria"
 
 #: package/contents/ui/main.qml:79
-#, fuzzy, kde-format
-#| msgid "Mobile data:"
+#, kde-format
 msgid "Mobile data"
-msgstr "Mugikorreko datuak:"
+msgstr "Mugikorreko datuak"
 
 #: package/contents/ui/main.qml:80
 #, kde-format
 msgid "Whether mobile data is enabled."
-msgstr ""
+msgstr "Mugikorreko datuak gaituta dauden ala ez."
 
 #: package/contents/ui/main.qml:96
-#, fuzzy, kde-format
-#| msgid "Data Usage:"
+#, kde-format
 msgid "Data Usage"
-msgstr "Datuen erabilera:"
+msgstr "Datuen erabilera"
 
 #: package/contents/ui/main.qml:97
-#, fuzzy, kde-format
-#| msgid "View Data Usage"
+#, kde-format
 msgid "View data usage."
-msgstr "Ikusi datuen erabilera"
+msgstr "Ikusi datuen erabilera."
 
 #: package/contents/ui/main.qml:113 package/contents/ui/Sim.qml:20
 #, kde-format
@@ -541,10 +538,9 @@ msgid "SIM %1"
 msgstr "%1 SIMa"
 
 #: package/contents/ui/main.qml:134
-#, fuzzy, kde-format
-#| msgid "View Modem Details"
+#, kde-format
 msgid "View SIM %1 details."
-msgstr "Ikusi modemaren xehetasunak"
+msgstr "Ikusi SIM %1(r)en xehetasunak."
 
 #: package/contents/ui/Modem.qml:18
 #, kde-format
@@ -552,16 +548,14 @@ msgid "Modem %1"
 msgstr "%1 modema"
 
 #: package/contents/ui/Modem.qml:43
-#, fuzzy, kde-format
-#| msgid "Modem Control:"
+#, kde-format
 msgid "Modem Control"
-msgstr "Modemaren agintea:"
+msgstr "Modemaren agintea"
 
 #: package/contents/ui/Modem.qml:52
-#, fuzzy, kde-format
-#| msgid "Force Modem Restart"
+#, kde-format
 msgid "Modem Restart"
-msgstr "Behartu modema berrekitea"
+msgstr "Modema berrekitea"
 
 #: package/contents/ui/Modem.qml:55
 #, kde-format
@@ -574,28 +568,24 @@ msgid "Modem Details"
 msgstr "Modemaren xehetasunak"
 
 #: package/contents/ui/Modem.qml:84
-#, fuzzy, kde-format
-#| msgid "Access Technologies:"
+#, kde-format
 msgid "Access Technologies"
-msgstr "Sarbide-teknologiak:"
+msgstr "Sarbide-teknologiak"
 
 #: package/contents/ui/Modem.qml:104
-#, fuzzy, kde-format
-#| msgid "IMEI:"
+#, kde-format
 msgid "IMEI"
-msgstr "IMEI:"
+msgstr "IMEI"
 
 #: package/contents/ui/Modem.qml:120
-#, fuzzy, kde-format
-#| msgid "Manufacturer:"
+#, kde-format
 msgid "Manufacturer"
-msgstr "Fabrikatzailea:"
+msgstr "Fabrikatzailea"
 
 #: package/contents/ui/Modem.qml:128
-#, fuzzy, kde-format
-#| msgid "Model:"
+#, kde-format
 msgid "Model"
-msgstr "Eredua:"
+msgstr "Eredua"
 
 #: package/contents/ui/Modem.qml:144
 #, kde-format
@@ -603,76 +593,64 @@ msgid "Owned Numbers:"
 msgstr "Norbere zenbakiak:"
 
 #: package/contents/ui/Modem.qml:164
-#, fuzzy, kde-format
-#| msgid "Revision:"
+#, kde-format
 msgid "Revision"
-msgstr "Berrikuspena:"
+msgstr "Berrikuspena"
 
 #: package/contents/ui/Modem.qml:172
-#, fuzzy, kde-format
-#| msgid "Signal Quality:"
+#, kde-format
 msgid "Signal Quality"
-msgstr "Seinalearen kalitatea:"
+msgstr "Seinalearen kalitatea"
 
 #: package/contents/ui/Modem.qml:180
-#, fuzzy, kde-format
-#| msgid "State:"
+#, kde-format
 msgid "State"
-msgstr "Egoera:"
+msgstr "Egoera"
 
 #: package/contents/ui/Modem.qml:188
-#, fuzzy, kde-format
-#| msgid "Failure Reason:"
+#, kde-format
 msgid "Failure Reason"
-msgstr "Hutsegiteko arrazoia:"
+msgstr "Hutsegiteko arrazoia"
 
 #: package/contents/ui/Modem.qml:196
-#, fuzzy, kde-format
-#| msgid "Registration State:"
+#, kde-format
 msgid "Registration State"
-msgstr "Erregistro egoera:"
+msgstr "Erregistro egoera"
 
 #: package/contents/ui/Modem.qml:204
-#, fuzzy, kde-format
-#| msgid "Roaming:"
+#, kde-format
 msgid "Roaming"
-msgstr "Ibiltaritza:"
+msgstr "Ibiltaritza"
 
 #: package/contents/ui/Modem.qml:212
-#, fuzzy, kde-format
-#| msgid "Firmware Version:"
+#, kde-format
 msgid "Firmware Version"
-msgstr "Firmwarearen bertsioa:"
+msgstr "Firmwarearen bertsioa"
 
 #: package/contents/ui/Modem.qml:220
-#, fuzzy, kde-format
-#| msgid "Interface Name:"
+#, kde-format
 msgid "Interface Name"
-msgstr "Interfazearen izena:"
+msgstr "Interfazearen izena"
 
 #: package/contents/ui/Modem.qml:228
-#, fuzzy, kde-format
-#| msgid "Metered:"
+#, kde-format
 msgid "Metered"
-msgstr "Erabilera neurtua:"
+msgstr "Tarifatua"
 
 #: package/contents/ui/Modem.qml:236
-#, fuzzy, kde-format
-#| msgid "Active NetworkManager Connection:"
+#, kde-format
 msgid "Active NetworkManager Connection"
-msgstr "Sare-kudeatzailearen konexio aktiboa:"
+msgstr "Sare-kudeatzailearen konexio aktiboa"
 
 #: package/contents/ui/Modem.qml:244
-#, fuzzy, kde-format
-#| msgid "Device:"
+#, kde-format
 msgid "Device"
-msgstr "Gailua:"
+msgstr "Gailua"
 
 #: package/contents/ui/Modem.qml:252
-#, fuzzy, kde-format
-#| msgid "Device ID:"
+#, kde-format
 msgid "Device ID"
-msgstr "Gailuaren IDa:"
+msgstr "Gailuaren IDa"
 
 #: package/contents/ui/Modem.qml:268
 #, kde-format
@@ -680,22 +658,19 @@ msgid "Drivers:"
 msgstr "Gidariak:"
 
 #: package/contents/ui/Modem.qml:288
-#, fuzzy, kde-format
-#| msgid "Plugin:"
+#, kde-format
 msgid "Plugin"
-msgstr "Pluginak:"
+msgstr "Plugina"
 
 #: package/contents/ui/Modem.qml:296
-#, fuzzy, kde-format
-#| msgid "Power State:"
+#, kde-format
 msgid "Power State"
-msgstr "Energia-egoera:"
+msgstr "Energiaren egoera"
 
 #: package/contents/ui/Modem.qml:304
-#, fuzzy, kde-format
-#| msgid "SIM Path:"
+#, kde-format
 msgid "SIM Path"
-msgstr "SIMaren bidea-izena:"
+msgstr "SIMaren bidea-izena"
 
 #: package/contents/ui/ProfileList.qml:15
 #, kde-format
@@ -733,38 +708,34 @@ msgid "Delete"
 msgstr "Ezabatu"
 
 #: package/contents/ui/Sim.qml:61
-#, fuzzy, kde-format
-#| msgid "Data roaming:"
+#, kde-format
 msgid "Data Roaming"
-msgstr "Datuen ibiltaritza:"
+msgstr "Datuen ibiltaritza"
 
 #: package/contents/ui/Sim.qml:62
 #, kde-format
 msgid "Allow your device to use networks other than your carrier."
-msgstr ""
+msgstr "Baimendu zure gailuak zure eramailea ez den beste bat erabiltzea."
 
 #: package/contents/ui/Sim.qml:73
-#, fuzzy, kde-format
-#| msgid "Edit APN"
+#, kde-format
 msgid "Modify APNs"
-msgstr "Editatu APNa"
+msgstr "Aldatu APNak"
 
 #: package/contents/ui/Sim.qml:74
 #, kde-format
 msgid "Configure access point names for your carrier."
-msgstr ""
+msgstr "Konfiguratu zure eramailearen sarbide puntuen izenak."
 
 #: package/contents/ui/Sim.qml:84
-#, fuzzy, kde-format
-#| msgid "Networks:"
+#, kde-format
 msgid "Networks"
-msgstr "Sareak:"
+msgstr "Sareak"
 
 #: package/contents/ui/Sim.qml:85
-#, fuzzy, kde-format
-#| msgid "Select Network Operator"
+#, kde-format
 msgid "Select a network operator."
-msgstr "Hautatu sare operadorea"
+msgstr "Hautatu sare operadore bat."
 
 #: package/contents/ui/Sim.qml:95 package/contents/ui/SimLock.qml:19
 #, kde-format
@@ -772,15 +743,14 @@ msgid "SIM Lock"
 msgstr "SIM giltzatzea"
 
 #: package/contents/ui/Sim.qml:96
-#, fuzzy, kde-format
-#| msgid "Modify SIM Lock"
+#, kde-format
 msgid "Modify SIM lock settings."
-msgstr "Aldatu SIM giltzatzea"
+msgstr "Aldatu SIM giltzatze ezarpenak."
 
 #: package/contents/ui/Sim.qml:107
 #, kde-format
 msgid "View the details of the modem this SIM is connected to."
-msgstr ""
+msgstr "Ikusi SIM hau konektatuta dagoen modemaren xehetasunak."
 
 #: package/contents/ui/Sim.qml:121
 #, kde-format
@@ -788,52 +758,44 @@ msgid "SIM Details"
 msgstr "SIMaren xehetasunak"
 
 #: package/contents/ui/Sim.qml:134
-#, fuzzy, kde-format
-#| msgid "IMSI:"
+#, kde-format
 msgid "IMSI"
-msgstr "IMSI:"
+msgstr "IMSI"
 
 #: package/contents/ui/Sim.qml:142
-#, fuzzy, kde-format
-#| msgid "EID:"
+#, kde-format
 msgid "EID"
-msgstr "EID:"
+msgstr "EID"
 
 #: package/contents/ui/Sim.qml:150
-#, fuzzy, kde-format
-#| msgid "Operator Code (modem):"
+#, kde-format
 msgid "Operator Code (modem)"
-msgstr "Operadorearen kodea (modema):"
+msgstr "Operadorearen kodea (modema)"
 
 #: package/contents/ui/Sim.qml:158
-#, fuzzy, kde-format
-#| msgid "Operator Name (modem):"
+#, kde-format
 msgid "Operator Name (modem)"
-msgstr "Operadorearen izena (modema):"
+msgstr "Operadorearen izena (modema)"
 
 #: package/contents/ui/Sim.qml:166
-#, fuzzy, kde-format
-#| msgid "Operator Code (provided by SIM):"
+#, kde-format
 msgid "Operator Code (provided by SIM)"
-msgstr "Operadorearen kodea (SIMak hornitua):"
+msgstr "Operadorearen kodea (SIMak hornitua)"
 
 #: package/contents/ui/Sim.qml:174
-#, fuzzy, kde-format
-#| msgid "Operator Name (provided by SIM):"
+#, kde-format
 msgid "Operator Name (provided by SIM)"
-msgstr "Operadorearen izena (SIMak hornitua):"
+msgstr "Operadorearen izena (SIMak hornitua)"
 
 #: package/contents/ui/Sim.qml:182
-#, fuzzy, kde-format
-#| msgid "SIM ID:"
+#, kde-format
 msgid "SIM ID"
-msgstr "SIM ID:"
+msgstr "SIM IDa"
 
 #: package/contents/ui/Sim.qml:199
-#, fuzzy, kde-format
-#| msgid "Emergency Numbers:"
+#, kde-format
 msgid "Emergency Numbers"
-msgstr "Larrialdiko zenbakiak:"
+msgstr "Larrialdiko zenbakiak"
 
 #: package/contents/ui/SimLock.qml:50
 #, kde-format
@@ -865,15 +827,14 @@ msgid "Lock SIM"
 msgstr "Giltzatu SIMa"
 
 #: package/contents/ui/SimLock.qml:92
-#, fuzzy, kde-format
-#| msgid "Disable Modem"
+#, kde-format
 msgid "Disable SIM Lock"
-msgstr "Ezgaitu modema"
+msgstr "Ezgaitu SIM giltzatzea"
 
 #: package/contents/ui/SimLock.qml:93
 #, kde-format
 msgid "Disable the SIM lock feature and remove the passcode on the SIM."
-msgstr ""
+msgstr "Ezgaitu SIM giltzatze ezaugarria eta kendu SIMeko pasakodea."
 
 #: package/contents/ui/SimLock.qml:106
 #, kde-format
@@ -883,7 +844,7 @@ msgstr "Aldatu PINa:"
 #: package/contents/ui/SimLock.qml:107
 #, kde-format
 msgid "Change the passcode set on the SIM."
-msgstr ""
+msgstr "Aldatu SIMean ezarritako pasakodea."
 
 #: package/contents/ui/SimLock.qml:122
 #, kde-format

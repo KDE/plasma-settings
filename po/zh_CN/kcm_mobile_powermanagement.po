@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kdeorg\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2022-07-31 00:49+0000\n"
+"POT-Creation-Date: 2022-08-12 00:47+0000\n"
 "PO-Revision-Date: 2022-08-07 13:29\n"
 "Last-Translator: \n"
 "Language-Team: Chinese Simplified\n"
@@ -89,10 +89,11 @@ msgid "Usage Graph"
 msgstr "电量使用情况图表"
 
 #: package/contents/ui/BatteryPage.qml:82
-#, kde-format
-msgctxt "Shorthand for Watts"
-msgid "W"
-msgstr "W"
+#, fuzzy, kde-format
+#| msgid "%"
+msgctxt "literal percent sign"
+msgid "%"
+msgstr "%"
 
 #: package/contents/ui/BatteryPage.qml:100
 #, kde-format
@@ -307,3 +308,7 @@ msgstr "关闭屏幕等待时间"
 msgctxt "Part of a sentence like 'Suspend device after 5 minutes'"
 msgid "Suspend device after"
 msgstr "挂起设备等待时间"
+
+#~ msgctxt "Shorthand for Watts"
+#~ msgid "W"
+#~ msgstr "W"
