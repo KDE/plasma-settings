@@ -89,8 +89,7 @@ msgid "Usage Graph"
 msgstr "Gráfico de Utilização"
 
 #: package/contents/ui/BatteryPage.qml:82
-#, fuzzy, kde-format
-#| msgid "%"
+#, kde-format
 msgctxt "literal percent sign"
 msgid "%"
 msgstr "%"
