@@ -9,7 +9,7 @@ msgstr ""
 "Project-Id-Version: plasma-settings\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2022-07-07 00:47+0000\n"
-"PO-Revision-Date: 2022-07-14 10:42-0300\n"
+"PO-Revision-Date: 2022-08-19 15:45-0300\n"
 "Last-Translator: Luiz Fernando Ranghetti <elchevive@opensuse.org>\n"
 "Language-Team: Portuguese <kde-i18n-pt_BR@kde.org>\n"
 "Language: pt_BR\n"
@@ -90,10 +90,9 @@ msgid "Dec"
 msgstr "Dez"
 
 #: package/contents/ui/main.qml:57
-#, fuzzy, kde-format
-#| msgid "Time Display"
+#, kde-format
 msgid "Display"
-msgstr "Exibição das horas"
+msgstr "Tela"
 
 #: package/contents/ui/main.qml:62
 #, kde-format
@@ -118,7 +117,7 @@ msgstr "Data e hora"
 #: package/contents/ui/main.qml:94
 #, kde-format
 msgid "Automatic Time Synchronization"
-msgstr ""
+msgstr "Sincronização automática do tempo"
 
 #: package/contents/ui/main.qml:95
 #, fuzzy, kde-format

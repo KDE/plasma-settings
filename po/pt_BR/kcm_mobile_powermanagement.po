@@ -7,7 +7,7 @@ msgstr ""
 "Project-Id-Version: plasma-settings\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2022-08-12 00:47+0000\n"
-"PO-Revision-Date: 2022-07-14 10:41-0300\n"
+"PO-Revision-Date: 2022-08-19 15:44-0300\n"
 "Last-Translator: Luiz Fernando Ranghetti <elchevive@opensuse.org>\n"
 "Language-Team: Portuguese <kde-i18n-pt_BR@kde.org>\n"
 "Language: pt_BR\n"
@@ -75,221 +75,219 @@ msgstr "Tomaz Canabrava"
 #: mobilepower.cpp:60
 #, kde-format
 msgid "Devin Lin"
-msgstr ""
+msgstr "Devin Lin"
 
 #: package/contents/ui/BatteryPage.qml:26
 #, kde-format
 msgid "Battery Information"
-msgstr ""
+msgstr "Informação da bateria"
 
 #: package/contents/ui/BatteryPage.qml:51
 #, kde-format
 msgid "Usage Graph"
-msgstr ""
+msgstr "Gráfico de uso"
 
 #: package/contents/ui/BatteryPage.qml:82
-#, fuzzy, kde-format
-#| msgid "0%"
+#, kde-format
 msgctxt "literal percent sign"
 msgid "%"
-msgstr "0%"
+msgstr "%"
 
 #: package/contents/ui/BatteryPage.qml:100
 #, kde-format
 msgid "Information"
-msgstr ""
+msgstr "Informações"
 
 #: package/contents/ui/BatteryPage.qml:105
 #, kde-format
 msgid "Is Rechargeable"
-msgstr ""
+msgstr "É recarregável"
 
 #: package/contents/ui/BatteryPage.qml:106
 #, kde-format
 msgid "Yes"
-msgstr ""
+msgstr "Sim"
 
 #: package/contents/ui/BatteryPage.qml:106
 #, kde-format
 msgid "No"
-msgstr ""
+msgstr "Não"
 
 #: package/contents/ui/BatteryPage.qml:113
 #, kde-format
 msgid "Charge State"
-msgstr ""
+msgstr "Estado da carga"
 
 #: package/contents/ui/BatteryPage.qml:116
 #, kde-format
 msgid "Not charging"
-msgstr ""
+msgstr "Não está carregando"
 
 #: package/contents/ui/BatteryPage.qml:117
 #, kde-format
 msgid "Charging"
-msgstr ""
+msgstr "Carregando"
 
 #: package/contents/ui/BatteryPage.qml:118
 #, kde-format
 msgid "Discharging"
-msgstr ""
+msgstr "Descarregando"
 
 #: package/contents/ui/BatteryPage.qml:119
 #, kde-format
 msgid "Fully charged"
-msgstr ""
+msgstr "Totalmente carregada"
 
 #: package/contents/ui/BatteryPage.qml:120
 #, kde-format
 msgid "Unknown"
-msgstr ""
+msgstr "Desconhecido"
 
 #: package/contents/ui/BatteryPage.qml:129
 #, kde-format
 msgid "Current Charge"
-msgstr ""
+msgstr "Carga atual"
 
 #: package/contents/ui/BatteryPage.qml:130
 #: package/contents/ui/BatteryPage.qml:138 package/contents/ui/main.qml:95
-#, fuzzy, kde-format
-#| msgid "0%"
+#, kde-format
 msgid "%"
-msgstr "0%"
+msgstr "%"
 
 #: package/contents/ui/BatteryPage.qml:130
 #: package/contents/ui/BatteryPage.qml:138
 #, kde-format
 msgctxt "%1 is value, %2 is unit"
 msgid "%1 %2"
-msgstr ""
+msgstr "%1 %2"
 
 #: package/contents/ui/BatteryPage.qml:137
 #, kde-format
 msgid "Health"
-msgstr ""
+msgstr "Saúde"
 
 #: package/contents/ui/BatteryPage.qml:145
 #, kde-format
 msgid "Vendor"
-msgstr ""
+msgstr "Fabricante"
 
 #: package/contents/ui/BatteryPage.qml:153
 #, kde-format
 msgid "Model"
-msgstr ""
+msgstr "Modelo"
 
 #: package/contents/ui/BatteryPage.qml:161
 #, kde-format
 msgid "Serial Number"
-msgstr ""
+msgstr "Número de série"
 
 #: package/contents/ui/BatteryPage.qml:169
 #, kde-format
 msgid "Technology"
-msgstr ""
+msgstr "Tecnologia"
 
 #: package/contents/ui/BatteryPage.qml:172
 #, kde-format
 msgid "Lithium ion"
-msgstr ""
+msgstr "Íons de lítio"
 
 #: package/contents/ui/BatteryPage.qml:173
 #, kde-format
 msgid "Lithium polymer"
-msgstr ""
+msgstr "Polímero de lítio"
 
 #: package/contents/ui/BatteryPage.qml:174
 #, kde-format
 msgid "Lithium iron phosphate"
-msgstr ""
+msgstr "Fosfatos de íons de lítio"
 
 #: package/contents/ui/BatteryPage.qml:175
 #, kde-format
 msgid "Lead acid"
-msgstr ""
+msgstr "Chumbo-ácido"
 
 #: package/contents/ui/BatteryPage.qml:176
 #, kde-format
 msgid "Nickel cadmium"
-msgstr ""
+msgstr "Níquel-cádmio"
 
 #: package/contents/ui/BatteryPage.qml:177
 #, kde-format
 msgid "Nickel metal hydride"
-msgstr ""
+msgstr "Hidreto de níquel-metal"
 
 #: package/contents/ui/BatteryPage.qml:178
 #, kde-format
 msgid "Unknown technology"
-msgstr ""
+msgstr "Tecnologia desconhecida"
 
 #: package/contents/ui/main.qml:40
 #, kde-format
 msgid "Devices"
-msgstr ""
+msgstr "Dispositivos"
 
 #: package/contents/ui/main.qml:85
 #, kde-format
 msgid "Internal battery"
-msgstr ""
+msgstr "Bateria interna"
 
 #: package/contents/ui/main.qml:86
 #, kde-format
 msgid "UPS battery"
-msgstr ""
+msgstr "Bateria da UPS"
 
 #: package/contents/ui/main.qml:87
 #, kde-format
 msgid "Monitor battery"
-msgstr ""
+msgstr "Bateria do monitor"
 
 #: package/contents/ui/main.qml:88
 #, kde-format
 msgid "Mouse battery"
-msgstr ""
+msgstr "Bateria do mouse"
 
 #: package/contents/ui/main.qml:89
 #, kde-format
 msgid "Keyboard battery"
-msgstr ""
+msgstr "Bateria do teclado"
 
 #: package/contents/ui/main.qml:90
 #, kde-format
 msgid "PDA battery"
-msgstr ""
+msgstr "Bateria do PDA"
 
 #: package/contents/ui/main.qml:91
 #, kde-format
 msgid "Phone battery"
-msgstr ""
+msgstr "Bateria do celular"
 
 #: package/contents/ui/main.qml:92
 #, kde-format
 msgid "Unknown battery"
-msgstr ""
+msgstr "Bateria desconhecida"
 
 #: package/contents/ui/main.qml:95
 #, kde-format
 msgctxt "%1 is value, %2 is unit"
 msgid "%1%2"
-msgstr ""
+msgstr "%1 %2"
 
 #: package/contents/ui/main.qml:97
 #, kde-format
 msgctxt "%1 is battery type, %2 is charge percent"
 msgid "%1 %2 (Charging)"
-msgstr ""
+msgstr "%1 %2 (carregando)"
 
 #: package/contents/ui/main.qml:97
 #, kde-format
 msgctxt "%1 is battery type, %2 is charge percent"
 msgid "%1 %2"
-msgstr ""
+msgstr "%1 %2"
 
 #: package/contents/ui/main.qml:129
 #, kde-format
 msgid "Screen"
-msgstr ""
+msgstr "Tela"
 
 #: package/contents/ui/main.qml:134
 #, kde-format

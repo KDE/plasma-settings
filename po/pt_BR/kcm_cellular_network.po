@@ -1,13 +1,13 @@
 # Copyright (C) YEAR This file is copyright:
 # This file is distributed under the same license as the plasma-settings package.
 #
-# Luiz Fernando Ranghetti <elchevive@opensuse.org>, 2021.
+# Luiz Fernando Ranghetti <elchevive@opensuse.org>, 2021, 2022.
 msgid ""
 msgstr ""
 "Project-Id-Version: plasma-settings\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2022-07-07 00:47+0000\n"
-"PO-Revision-Date: 2021-10-26 14:40-0300\n"
+"PO-Revision-Date: 2022-08-19 15:44-0300\n"
 "Last-Translator: Luiz Fernando Ranghetti <elchevive@opensuse.org>\n"
 "Language-Team: Portuguese <kde-i18n-pt_BR@kde.org>\n"
 "Language: pt_BR\n"
@@ -15,7 +15,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n > 1);\n"
-"X-Generator: Lokalize 20.04.2\n"
+"X-Generator: Lokalize 21.12.3\n"
 
 #, kde-format
 msgctxt "NAME OF TRANSLATORS"
@@ -724,10 +724,9 @@ msgid "Configure access point names for your carrier."
 msgstr ""
 
 #: package/contents/ui/Sim.qml:84
-#, fuzzy, kde-format
-#| msgid "Network type"
+#, kde-format
 msgid "Networks"
-msgstr "Tipo de rede"
+msgstr "Redes"
 
 #: package/contents/ui/Sim.qml:85
 #, kde-format

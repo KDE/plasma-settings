@@ -3014,7 +3014,7 @@ msgstr "Zagreb"
 #, kde-format
 msgctxt "This is a city associated with particular time zone"
 msgid "Zaporizhzhia"
-msgstr "Zaporizjzjia"
+msgstr "Zaporizjzja"
 
 #: timezonesi18n.cpp:515
 #, kde-format
