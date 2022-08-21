@@ -134,7 +134,7 @@ SimpleKCM {
                     text: i18nc("Part of a sentence like 'Dim screen after 5 minutes'", "Dim screen after")
                     model: kcm.timeOptions()
                     currentValue: kcm.timeOptions()[kcm.dimScreenIdx]
-                    dialog.parent: powermanagementModule
+                    Component.onCompleted: dialog.parent = powermanagementModule
                     
                     dialogDelegate: QQC2.RadioDelegate {
                         implicitWidth: Kirigami.Units.gridUnit * 16
@@ -159,7 +159,7 @@ SimpleKCM {
                     text: i18nc("Part of a sentence like 'Turn off screen after 5 minutes'", "Turn off screen after")
                     model: kcm.timeOptions()
                     currentValue: kcm.timeOptions()[kcm.screenOffIdx]
-                    dialog.parent: powermanagementModule
+                    Component.onCompleted: dialog.parent = powermanagementModule
                     
                     dialogDelegate: QQC2.RadioDelegate {
                         implicitWidth: Kirigami.Units.gridUnit * 16
@@ -184,7 +184,7 @@ SimpleKCM {
                     text: i18nc("Part of a sentence like 'Suspend device after 5 minutes'", "Suspend device after")
                     model: kcm.timeOptions()
                     currentValue: kcm.timeOptions()[kcm.screenOffIdx]
-                    dialog.parent: powermanagementModule
+                    Component.onCompleted: dialog.parent = powermanagementModule
                     
                     dialogDelegate: QQC2.RadioDelegate {
                         implicitWidth: Kirigami.Units.gridUnit * 16
