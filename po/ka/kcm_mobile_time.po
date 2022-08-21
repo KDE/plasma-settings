@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: plasma-settings\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2022-07-07 00:47+0000\n"
-"PO-Revision-Date: 2022-05-24 22:27+0400\n"
+"PO-Revision-Date: 2022-08-20 08:15+0200\n"
 "Last-Translator: Temuri Doghonadze <temuri.doghonadze@gmail.com>\n"
 "Language-Team: Georgian <kde-i18n-doc@kde.org>\n"
 "Language: ka\n"
@@ -16,7 +16,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
-"X-Generator: Poedit 3.0.1\n"
+"X-Generator: Poedit 3.1.1\n"
 
 #, kde-format
 msgctxt "NAME OF TRANSLATORS"
@@ -89,50 +89,44 @@ msgid "Dec"
 msgstr "დეკ"
 
 #: package/contents/ui/main.qml:57
-#, fuzzy, kde-format
-#| msgid "Time Display"
+#, kde-format
 msgid "Display"
 msgstr "დროის ჩვენება"
 
 #: package/contents/ui/main.qml:62
 #, kde-format
 msgid "24-Hour Format"
-msgstr ""
+msgstr "24-საათიანი ფორმატი"
 
 #: package/contents/ui/main.qml:63
 #, kde-format
 msgid "Whether to use a 24-hour format for clocks."
-msgstr ""
+msgstr "გამოიყენება თუ არა 24-საათიანი ფორმატი საათებისთვის."
 
 #: package/contents/ui/main.qml:74
-#, fuzzy, kde-format
-#| msgid "Timezone:"
+#, kde-format
 msgid "Timezone"
-msgstr "დროის სარტყელი:"
+msgstr "დროის სარტყელი"
 
 #: package/contents/ui/main.qml:89
-#, fuzzy, kde-format
-#| msgid "Set Time and Date"
+#, kde-format
 msgid "Time and Date"
-msgstr "თარიღისა და დროის დაყენება"
+msgstr "თარიღი და დრო"
 
 #: package/contents/ui/main.qml:94
 #, kde-format
 msgid "Automatic Time Synchronization"
-msgstr ""
+msgstr "დროის ავტომატური სინქრონიზაცია"
 
 #: package/contents/ui/main.qml:95
-#, fuzzy, kde-format
-#| msgid "Set time automatically:"
+#, kde-format
 msgid "Whether to set the time automatically."
-msgstr "დროის ავტომატურად დაყენება:"
+msgstr "დროის ავტომატურად დაყენება."
 
 #: package/contents/ui/main.qml:112
-#, fuzzy, kde-format
-#| msgctxt "This is a city associated with particular time zone"
-#| msgid "Currie"
+#, kde-format
 msgid "Current Time"
-msgstr "კური"
+msgstr "მიმდინარე დრო"
 
 #: package/contents/ui/main.qml:123
 #, kde-format
@@ -736,7 +730,7 @@ msgstr "ჩონგკინგი"
 #, kde-format
 msgctxt "This is a city associated with particular time zone"
 msgid "Christmas"
-msgstr "შობა"
+msgstr "აღდგომა"
 
 #: timezonesi18n.cpp:135
 #, kde-format
@@ -2326,7 +2320,7 @@ msgstr "სარატოვი"
 #, kde-format
 msgctxt "This is a city associated with particular time zone"
 msgid "Scoresbysund"
-msgstr "სკორსბისუნდი"
+msgstr "იტოკორტოორმიიტი"
 
 #: timezonesi18n.cpp:400
 #, kde-format
@@ -2938,7 +2932,7 @@ msgstr "ვაკე"
 #, kde-format
 msgctxt "This is a city associated with particular time zone"
 msgid "Wallis"
-msgstr "უოლისი"
+msgstr "ამბლესტონი"
 
 #: timezonesi18n.cpp:502
 #, kde-format

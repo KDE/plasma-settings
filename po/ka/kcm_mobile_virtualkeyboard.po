@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: plasma-settings\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2022-07-07 00:47+0000\n"
-"PO-Revision-Date: 2022-05-24 15:04+0200\n"
+"PO-Revision-Date: 2022-08-20 08:16+0200\n"
 "Last-Translator: Temuri Doghonadze <temuri.doghonadze@gmail.com>\n"
 "Language-Team: Georgian <kde-i18n-doc@kde.org>\n"
 "Language: ka\n"
@@ -16,7 +16,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
-"X-Generator: Poedit 3.0.1\n"
+"X-Generator: Poedit 3.1.1\n"
 
 #, kde-format
 msgctxt "NAME OF TRANSLATORS"
@@ -51,24 +51,22 @@ msgstr "აქ აკრიფეთ ნებისმიერი რამ…
 #: package/contents/ui/main.qml:63
 #, kde-format
 msgid "Sound"
-msgstr ""
+msgstr "ხმა"
 
 #: package/contents/ui/main.qml:64
-#, fuzzy, kde-format
-#| msgid "Emit sound on key press"
+#, kde-format
 msgid "Whether to emit a sound on keypress."
-msgstr "ღილაკის დაწოლისას ხმის გამოცემა"
+msgstr "ღილაკის დაწოლისას ხმის გამოცემა."
 
 #: package/contents/ui/main.qml:73
 #, kde-format
 msgid "Vibration"
-msgstr ""
+msgstr "ვიბრაცია"
 
 #: package/contents/ui/main.qml:74
-#, fuzzy, kde-format
-#| msgid "Vibrate on key press"
+#, kde-format
 msgid "Whether to vibrate on keypress."
-msgstr "ღილაკის დაწოლისას ვიბრაცია"
+msgstr "ვიბრაცია ღილაკის დაწოლისას."
 
 #: package/contents/ui/main.qml:94
 #, kde-format
@@ -113,6 +111,9 @@ msgstr "Bhushan Shah"
 #~ msgid "Test keyboard:"
 #~ msgstr "კლავიატურის ტესტი:"
 
+#~ msgid "Theme:"
+#~ msgstr "თემა:"
+
 #~ msgid "Feedback:"
 #~ msgstr "უკუკავშირი:"
 
@@ -121,6 +122,3 @@ msgstr "Bhushan Shah"
 
 #~ msgid "Languages:"
 #~ msgstr "ენები:"
-
-#~ msgid "Theme:"
-#~ msgstr "თემა:"

@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: plasma-settings\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2022-07-07 00:47+0000\n"
-"PO-Revision-Date: 2022-05-24 14:19+0200\n"
+"PO-Revision-Date: 2022-08-20 08:12+0200\n"
 "Last-Translator: Temuri Doghonadze <temuri.doghonadze@gmail.com>\n"
 "Language-Team: Georgian <kde-i18n-doc@kde.org>\n"
 "Language: ka\n"
@@ -16,7 +16,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
-"X-Generator: Poedit 3.0.1\n"
+"X-Generator: Poedit 3.1.1\n"
 
 #, kde-format
 msgctxt "NAME OF TRANSLATORS"
@@ -46,42 +46,37 @@ msgstr "ინფორმაცის სისტემის შესახ�
 #: package/contents/ui/main.qml:42
 #, kde-format
 msgid "Operating System"
-msgstr ""
+msgstr "ოპერაციული სისტემა"
 
 #: package/contents/ui/main.qml:49
 #, kde-format
 msgid "Webpage"
-msgstr ""
+msgstr "ვებ-გვერდი"
 
 #: package/contents/ui/main.qml:70
-#, fuzzy, kde-format
-#| msgid "KDE Plasma Version:"
+#, kde-format
 msgid "KDE Plasma Version"
-msgstr "KDE Plasma-ის ვერსია:"
+msgstr "KDE Plasma-ის ვერსია"
 
 #: package/contents/ui/main.qml:77
-#, fuzzy, kde-format
-#| msgid "KDE Frameworks Version:"
+#, kde-format
 msgid "KDE Frameworks Version"
-msgstr "KDE Frameworks-ის ვერსია:"
+msgstr "KDE Frameworks-ის ვერსია"
 
 #: package/contents/ui/main.qml:84
-#, fuzzy, kde-format
-#| msgid "Qt Version:"
+#, kde-format
 msgid "Qt Version"
-msgstr "Qt-ის ვერსია:"
+msgstr "Qt-ის ვერსია"
 
 #: package/contents/ui/main.qml:91
-#, fuzzy, kde-format
-#| msgid "Kernel Version:"
+#, kde-format
 msgid "Kernel Version"
-msgstr "ბირთვის ვერსია:"
+msgstr "ბირთვის ვერსია"
 
 #: package/contents/ui/main.qml:98
-#, fuzzy, kde-format
-#| msgid "OS Type:"
+#, kde-format
 msgid "OS Type"
-msgstr "ოს-ის ტიპი:"
+msgstr "ოს-ის ტიპი"
 
 #: package/contents/ui/main.qml:99
 #, kde-format
@@ -90,18 +85,15 @@ msgid "%1-bit"
 msgstr "%1-ბიტიანი"
 
 #: package/contents/ui/main.qml:116
-#, fuzzy, kde-format
-#| msgid "Processor:"
-#| msgid_plural "Processors:"
+#, kde-format
 msgid "Processor"
 msgid_plural "Processors"
-msgstr[0] "პროცესორი:"
+msgstr[0] "პროცესორი"
 
 #: package/contents/ui/main.qml:123
-#, fuzzy, kde-format
-#| msgid "Memory:"
+#, kde-format
 msgid "Memory"
-msgstr "მეხსიერება:"
+msgstr "მეხსიერება"
 
 #: package/contents/ui/main.qml:127
 #, kde-format
