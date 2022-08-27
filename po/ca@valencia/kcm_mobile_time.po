@@ -152,12 +152,12 @@ msgstr "Tanca"
 #: package/contents/ui/main.qml:170
 #, kde-format
 msgid "Pick Time"
-msgstr "Trieu una hora"
+msgstr "Seleccioneu una hora"
 
 #: package/contents/ui/main.qml:215
 #, kde-format
 msgid "Pick Date"
-msgstr "Trieu una data"
+msgstr "Seleccioneu una data"
 
 #: timesettings.cpp:45
 #, kde-format
