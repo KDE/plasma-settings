@@ -75,12 +75,12 @@ msgstr "Tomaz Canabrava"
 #: mobilepower.cpp:60
 #, kde-format
 msgid "Devin Lin"
-msgstr ""
+msgstr "Devin Lin"
 
 #: package/contents/ui/BatteryPage.qml:26
 #, kde-format
 msgid "Battery Information"
-msgstr ""
+msgstr "Informace o baterii"
 
 #: package/contents/ui/BatteryPage.qml:51
 #, kde-format
@@ -91,12 +91,12 @@ msgstr ""
 #, kde-format
 msgctxt "literal percent sign"
 msgid "%"
-msgstr ""
+msgstr "%"
 
 #: package/contents/ui/BatteryPage.qml:100
 #, kde-format
 msgid "Information"
-msgstr ""
+msgstr "Informace"
 
 #: package/contents/ui/BatteryPage.qml:105
 #, kde-format
@@ -106,42 +106,42 @@ msgstr ""
 #: package/contents/ui/BatteryPage.qml:106
 #, kde-format
 msgid "Yes"
-msgstr ""
+msgstr "Ano"
 
 #: package/contents/ui/BatteryPage.qml:106
 #, kde-format
 msgid "No"
-msgstr ""
+msgstr "Ne"
 
 #: package/contents/ui/BatteryPage.qml:113
 #, kde-format
 msgid "Charge State"
-msgstr ""
+msgstr "Stav nabití"
 
 #: package/contents/ui/BatteryPage.qml:116
 #, kde-format
 msgid "Not charging"
-msgstr ""
+msgstr "Nenabíjí se"
 
 #: package/contents/ui/BatteryPage.qml:117
 #, kde-format
 msgid "Charging"
-msgstr ""
+msgstr "Nabíjí se"
 
 #: package/contents/ui/BatteryPage.qml:118
 #, kde-format
 msgid "Discharging"
-msgstr ""
+msgstr "Vybíjí se"
 
 #: package/contents/ui/BatteryPage.qml:119
 #, kde-format
 msgid "Fully charged"
-msgstr ""
+msgstr "Plně nabitá"
 
 #: package/contents/ui/BatteryPage.qml:120
 #, kde-format
 msgid "Unknown"
-msgstr ""
+msgstr "Neznámý"
 
 #: package/contents/ui/BatteryPage.qml:129
 #, kde-format
@@ -152,119 +152,119 @@ msgstr ""
 #: package/contents/ui/BatteryPage.qml:138 package/contents/ui/main.qml:95
 #, kde-format
 msgid "%"
-msgstr ""
+msgstr "%"
 
 #: package/contents/ui/BatteryPage.qml:130
 #: package/contents/ui/BatteryPage.qml:138
 #, kde-format
 msgctxt "%1 is value, %2 is unit"
 msgid "%1 %2"
-msgstr ""
+msgstr "%1 %2"
 
 #: package/contents/ui/BatteryPage.qml:137
 #, kde-format
 msgid "Health"
-msgstr ""
+msgstr "Zdraví"
 
 #: package/contents/ui/BatteryPage.qml:145
 #, kde-format
 msgid "Vendor"
-msgstr ""
+msgstr "Prodejce"
 
 #: package/contents/ui/BatteryPage.qml:153
 #, kde-format
 msgid "Model"
-msgstr ""
+msgstr "Model"
 
 #: package/contents/ui/BatteryPage.qml:161
 #, kde-format
 msgid "Serial Number"
-msgstr ""
+msgstr "Sériové číslo"
 
 #: package/contents/ui/BatteryPage.qml:169
 #, kde-format
 msgid "Technology"
-msgstr ""
+msgstr "Technologie"
 
 #: package/contents/ui/BatteryPage.qml:172
 #, kde-format
 msgid "Lithium ion"
-msgstr ""
+msgstr "Lithium Ion"
 
 #: package/contents/ui/BatteryPage.qml:173
 #, kde-format
 msgid "Lithium polymer"
-msgstr ""
+msgstr "Lithium Polymer"
 
 #: package/contents/ui/BatteryPage.qml:174
 #, kde-format
 msgid "Lithium iron phosphate"
-msgstr ""
+msgstr "Lithium-železo fosfát"
 
 #: package/contents/ui/BatteryPage.qml:175
 #, kde-format
 msgid "Lead acid"
-msgstr ""
+msgstr "Kyselina olovitá"
 
 #: package/contents/ui/BatteryPage.qml:176
 #, kde-format
 msgid "Nickel cadmium"
-msgstr ""
+msgstr "Nikl-kadmium"
 
 #: package/contents/ui/BatteryPage.qml:177
 #, kde-format
 msgid "Nickel metal hydride"
-msgstr ""
+msgstr "Nikl-metal hydrid"
 
 #: package/contents/ui/BatteryPage.qml:178
 #, kde-format
 msgid "Unknown technology"
-msgstr ""
+msgstr "Neznámá technologie"
 
 #: package/contents/ui/main.qml:40
 #, kde-format
 msgid "Devices"
-msgstr ""
+msgstr "Zařízení"
 
 #: package/contents/ui/main.qml:85
 #, kde-format
 msgid "Internal battery"
-msgstr ""
+msgstr "Vnitřní baterie"
 
 #: package/contents/ui/main.qml:86
 #, kde-format
 msgid "UPS battery"
-msgstr ""
+msgstr "Baterie UPS"
 
 #: package/contents/ui/main.qml:87
 #, kde-format
 msgid "Monitor battery"
-msgstr ""
+msgstr "Baterie monitoru"
 
 #: package/contents/ui/main.qml:88
 #, kde-format
 msgid "Mouse battery"
-msgstr ""
+msgstr "Baterie myši"
 
 #: package/contents/ui/main.qml:89
 #, kde-format
 msgid "Keyboard battery"
-msgstr ""
+msgstr "Baterie klávesnice"
 
 #: package/contents/ui/main.qml:90
 #, kde-format
 msgid "PDA battery"
-msgstr ""
+msgstr "Baterie PDA"
 
 #: package/contents/ui/main.qml:91
 #, kde-format
 msgid "Phone battery"
-msgstr ""
+msgstr "Baterie telefonu"
 
 #: package/contents/ui/main.qml:92
 #, kde-format
 msgid "Unknown battery"
-msgstr ""
+msgstr "Neznámá baterie"
 
 #: package/contents/ui/main.qml:95
 #, kde-format
@@ -287,7 +287,7 @@ msgstr ""
 #: package/contents/ui/main.qml:129
 #, kde-format
 msgid "Screen"
-msgstr ""
+msgstr "Obrazovka"
 
 #: package/contents/ui/main.qml:134
 #, kde-format
