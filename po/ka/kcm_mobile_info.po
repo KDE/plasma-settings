@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: plasma-settings\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2022-07-07 00:47+0000\n"
-"PO-Revision-Date: 2022-08-20 08:12+0200\n"
+"PO-Revision-Date: 2022-09-12 20:24+0200\n"
 "Last-Translator: Temuri Doghonadze <temuri.doghonadze@gmail.com>\n"
 "Language-Team: Georgian <kde-i18n-doc@kde.org>\n"
 "Language: ka\n"
@@ -85,10 +85,11 @@ msgid "%1-bit"
 msgstr "%1-ბიტიანი"
 
 #: package/contents/ui/main.qml:116
-#, fuzzy, kde-format
+#, kde-format
 msgid "Processor"
 msgid_plural "Processors"
 msgstr[0] "პროცესორი"
+msgstr[1] "პროცესორი"
 
 #: package/contents/ui/main.qml:123
 #, kde-format
