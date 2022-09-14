@@ -39,6 +39,7 @@
             "tablet",
             "mediacenter"
         ],
+        "Icon": "dialog-information",
         "Name": "Information",
         "Name[ast]": "Información",
         "Name[az]": "Məlumat",
@@ -79,8 +80,7 @@
         "Name[vi]": "Thông tin",
         "Name[x-test]": "xxInformationxx",
         "Name[zh_CN]": "信息",
-        "Name[zh_TW]": "資訊",
-        "Icon": "dialog-information"
+        "Name[zh_TW]": "資訊"
     },
     "X-KDE-Keywords": "info, distro, system",
     "X-KDE-Keywords[ast]": "info, información, systema",
