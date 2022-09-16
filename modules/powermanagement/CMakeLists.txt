@@ -19,6 +19,6 @@ target_link_libraries(kcm_mobile_power
     KF5::Solid
 )
 
-install(TARGETS kcm_mobile_power DESTINATION ${PLUGIN_INSTALL_DIR}/kcms)
+install(TARGETS kcm_mobile_power DESTINATION ${KDE_INSTALL_PLUGINDIR}/kcms)
 
 kpackage_install_package(package kcm_mobile_power kcms)

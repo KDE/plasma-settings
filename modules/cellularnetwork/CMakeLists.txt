@@ -21,5 +21,5 @@ target_link_libraries(kcm_cellular_network
     KF5::QuickAddons
 )
 
-install(TARGETS kcm_cellular_network DESTINATION ${PLUGIN_INSTALL_DIR}/kcms)
+install(TARGETS kcm_cellular_network DESTINATION ${KDE_INSTALL_PLUGINDIR}/kcms)
 kpackage_install_package(package kcm_cellular_network kcms)

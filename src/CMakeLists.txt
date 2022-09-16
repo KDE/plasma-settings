@@ -22,4 +22,4 @@ target_link_libraries(plasma-settings
     KF5::Declarative
 )
 
-install(TARGETS plasma-settings ${INSTALL_TARGETS_DEFAULT_ARGS})
+install(TARGETS plasma-settings ${KDE_INSTALL_TARGETS_DEFAULT_ARGS})
