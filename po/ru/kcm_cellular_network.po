@@ -1,13 +1,13 @@
 # Copyright (C) YEAR This file is copyright:
 # This file is distributed under the same license as the plasma-settings package.
 #
-# Alexander Yavorsky <kekcuha@gmail.com>, 2021.
+# Alexander Yavorsky <kekcuha@gmail.com>, 2021, 2022.
 msgid ""
 msgstr ""
 "Project-Id-Version: plasma-settings\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2022-07-07 00:47+0000\n"
-"PO-Revision-Date: 2021-10-09 20:13+0300\n"
+"PO-Revision-Date: 2022-09-24 14:48+0300\n"
 "Last-Translator: Alexander Yavorsky <kekcuha@gmail.com>\n"
 "Language-Team: Russian <kde-russian@lists.kde.ru>\n"
 "Language: ru\n"
@@ -16,7 +16,7 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=4; plural=n==1 ? 3 : n%10==1 && n%100!=11 ? 0 : n"
 "%10>=2 && n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2;\n"
-"X-Generator: Lokalize 21.08.2\n"
+"X-Generator: Lokalize 21.08.3\n"
 
 #, kde-format
 msgctxt "NAME OF TRANSLATORS"
@@ -415,7 +415,7 @@ msgid "5G"
 msgstr "5G"
 
 #: modemdetails.cpp:492 package/contents/ui/EditProfileDialog.qml:64
-#, fuzzy, kde-format
+#, kde-format
 msgid "Any"
 msgstr "Любой"
 
@@ -500,10 +500,9 @@ msgid "Modem not available"
 msgstr "Модем не доступен"
 
 #: package/contents/ui/main.qml:79
-#, fuzzy, kde-format
-#| msgid "Mobile data:"
+#, kde-format
 msgid "Mobile data"
-msgstr "Передача данных:"
+msgstr "Передача данных"
 
 #: package/contents/ui/main.qml:80
 #, kde-format
@@ -511,8 +510,7 @@ msgid "Whether mobile data is enabled."
 msgstr ""
 
 #: package/contents/ui/main.qml:96
-#, fuzzy, kde-format
-#| msgid "Data Usage:"
+#, kde-format
 msgid "Data Usage"
 msgstr "Использование данных"
 
