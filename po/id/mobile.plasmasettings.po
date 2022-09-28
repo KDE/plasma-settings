@@ -7,7 +7,7 @@ msgstr ""
 "Project-Id-Version: plasma-settings\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2022-07-14 00:48+0000\n"
-"PO-Revision-Date: 2022-03-18 07:13+0700\n"
+"PO-Revision-Date: 2022-09-27 18:12+0700\n"
 "Last-Translator: Wantoyèk <wantoyek@gmail.com>\n"
 "Language-Team: Indonesian <kde-i18n-doc@kde.org>\n"
 "Language: id\n"
@@ -85,7 +85,7 @@ msgstr "Tampilkan hanya modul tunggal, memerlukan --module"
 #: src/main.cpp:67
 #, kde-format
 msgid "Start window fullscreen"
-msgstr "Mulaikan window layar penuh"
+msgstr "Mulaikan jendela layar penuh"
 
 #: src/main.cpp:68
 #, kde-format
