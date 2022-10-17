@@ -74,7 +74,7 @@ msgstr "factordeforma"
 #: src/main.cpp:65
 #, kde-format
 msgid "Settings module to open"
-msgstr "Mòdul de configuració que s'obrirà"
+msgstr "Mòdul de configuració que s'ha d'obrir"
 
 #: src/main.cpp:65
 #, kde-format
@@ -95,7 +95,8 @@ msgstr "Inicia la finestra a pantalla completa"
 #, kde-format
 msgid "Package to use for the UI (default org.kde.mobile.settings)"
 msgstr ""
-"Paquet que s'utilitzarà per a la IU (predeterminat org.kde.mobile.settings)"
+"Paquet que s'ha d'utilitzar per a la IU (predeterminat org.kde.mobile."
+"settings)"
 
 #: src/main.cpp:68
 #, kde-format
