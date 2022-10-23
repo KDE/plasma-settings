@@ -73,8 +73,12 @@ KCM.SimpleKCM {
                     id: mobileDataSwitch
                     text: i18n("Mobile data")
                     description: {
-                        if (!kcm.selectedModem.mobileDataSupported) {
-                            return i18n("Mobile data is not available with this modem.");
+                        if (!kcm.modemFound) {
+                            return "";
+                        } else if (!kcm.selectedModem.hasSim) {
+                            return i18n("No SIM is inserted.")
+                        } if (!kcm.selectedModem.mobileDataSupported) {
+                            return i18n("Mobile data is not available with this modem.")
                         } else if (kcm.selectedModem.needsAPNAdded) {
                             return i18n("An APN needs to be configured to have mobile data.");
                         } else {
