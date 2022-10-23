@@ -207,6 +207,7 @@ Kirigami.ScrollablePage {
             title: i18n("Add SIM PIN")
             standardButtons: isValid ? Controls.Dialog.Ok | Controls.Dialog.Cancel : Controls.Dialog.Cancel
             padding: Kirigami.Units.largeSpacing
+            
             property bool isValid: createPinNewPin.text == createPinConfirmPin.text && 
                                    createPinNewPin.text.length >= 4 && createPinNewPin.text.length <= 8 // SIM PINs are between 4-8 digits
             

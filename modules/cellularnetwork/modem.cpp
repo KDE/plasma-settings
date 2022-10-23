@@ -1,4 +1,4 @@
-// SPDX-FileCopyrightText: 2022 Devin Lin <espidev@gmail.com>
+// SPDX-FileCopyrightText: 2021-2022 Devin Lin <espidev@gmail.com>
 // SPDX-License-Identifier: GPL-3.0-or-later
 
 #include "modem.h"
@@ -22,34 +22,19 @@ Modem::Modem(QObject *parent, ModemManager::ModemDevice::Ptr mmModem, ModemManag
     // TODO multi-sim support
     m_sims = {new Sim{this, this, m_mmModem->sim(), m_mmInterface, m_mm3gppDevice}};
 
-    connect(m_mmModem.data(), &ModemManager::ModemDevice::simAdded, this, [this]() -> void {
-        Q_EMIT simsChanged();
-        Q_EMIT hasSimChanged();
-    });
-    connect(m_mmModem.data(), &ModemManager::ModemDevice::simRemoved, this, [this]() -> void {
-        Q_EMIT simsChanged();
-        Q_EMIT hasSimChanged();
-    });
+    connect(m_mmModem.data(), &ModemManager::ModemDevice::simAdded, this, &Modem::simsChanged);
+    connect(m_mmModem.data(), &ModemManager::ModemDevice::simAdded, this, &Modem::hasSimChanged);
+    connect(m_mmModem.data(), &ModemManager::ModemDevice::simRemoved, this, &Modem::simsChanged);
+    connect(m_mmModem.data(), &ModemManager::ModemDevice::simRemoved, this, &Modem::hasSimChanged);
 
     if (m_mmModem->sim()) {
-        connect(m_mmModem->sim().get(), &ModemManager::Sim::simIdentifierChanged, this, [this]() -> void {
-            Q_EMIT hasSimChanged();
-        });
+        connect(m_mmModem->sim().get(), &ModemManager::Sim::simIdentifierChanged, this, &Modem::hasSimChanged);
     }
 
-    connect(NetworkManager::settingsNotifier(), &NetworkManager::SettingsNotifier::connectionAdded, this, [this]() {
-        Q_EMIT mobileDataEnabled();
-    });
-    connect(NetworkManager::settingsNotifier(), &NetworkManager::SettingsNotifier::connectionRemoved, this, [this]() {
-        Q_EMIT mobileDataEnabled();
-    });
-    connect(NetworkManager::notifier(), &NetworkManager::Notifier::activeConnectionAdded, this, [this]() {
-        Q_EMIT mobileDataEnabled();
-    });
-    connect(NetworkManager::notifier(), &NetworkManager::Notifier::activeConnectionRemoved, this, [this]() {
-        Q_EMIT mobileDataEnabled();
-    });
-
+    connect(NetworkManager::settingsNotifier(), &NetworkManager::SettingsNotifier::connectionAdded, this, &Modem::mobileDataEnabledChanged);
+    connect(NetworkManager::settingsNotifier(), &NetworkManager::SettingsNotifier::connectionRemoved, this, &Modem::mobileDataEnabledChanged);
+    connect(NetworkManager::notifier(), &NetworkManager::Notifier::activeConnectionAdded, this, &Modem::mobileDataEnabledChanged);
+    connect(NetworkManager::notifier(), &NetworkManager::Notifier::activeConnectionRemoved, this, &Modem::mobileDataEnabledChanged);
     connect(NetworkManager::notifier(), &NetworkManager::Notifier::deviceAdded, this, &Modem::findNetworkManagerDevice);
     connect(NetworkManager::notifier(), &NetworkManager::Notifier::deviceRemoved, this, &Modem::findNetworkManagerDevice);
 
@@ -80,12 +65,11 @@ void Modem::findNetworkManagerDevice()
     }
 
     if (m_nmModem) {
-        connect(m_nmModem.data(), &NetworkManager::Device::autoconnectChanged, this, [this]() {
-            Q_EMIT mobileDataEnabled();
-        });
-        connect(m_nmModem.data(), &NetworkManager::Device::stateChanged, this, [this](auto, auto, auto) {
-            Q_EMIT mobileDataEnabled();
-        });
+        connect(m_nmModem.data(), &NetworkManager::Device::autoconnectChanged, this, &Modem::mobileDataEnabledChanged);
+        connect(m_nmModem.data(), &NetworkManager::Device::stateChanged, this, &Modem::mobileDataEnabledChanged);
+        connect(m_nmModem.data(), &NetworkManager::Device::availableConnectionAppeared, this, &Modem::mobileDataEnabledChanged);
+        connect(m_nmModem.data(), &NetworkManager::Device::availableConnectionDisappeared, this, &Modem::mobileDataEnabledChanged);
+
         connect(m_nmModem.data(), &NetworkManager::ModemDevice::availableConnectionChanged, this, [this]() -> void {
             refreshProfiles();
         });
@@ -93,20 +77,17 @@ void Modem::findNetworkManagerDevice()
             refreshProfiles();
             Q_EMIT activeConnectionUniChanged();
         });
-        connect(
-            m_nmModem.data(),
-            &NetworkManager::ModemDevice::stateChanged,
-            this,
-            [this](NetworkManager::Device::State newstate, NetworkManager::Device::State oldstate, NetworkManager::Device::StateChangeReason reason) -> void {
-                qDebug() << QStringLiteral("Modem") << m_nmModem->uni() << QStringLiteral("changed state:") << nmDeviceStateStr(oldstate)
-                         << QStringLiteral("->") << nmDeviceStateStr(newstate) << QStringLiteral("due to:") << reason;
-            });
+        connect(m_nmModem.data(), &NetworkManager::ModemDevice::stateChanged, this, [this](auto newstate, auto oldstate, auto reason) -> void {
+            qDebug() << QStringLiteral("Modem") << m_nmModem->uni() << QStringLiteral("changed state:") << nmDeviceStateStr(oldstate) << QStringLiteral("->")
+                     << nmDeviceStateStr(newstate) << QStringLiteral("due to:") << reason;
+        });
 
         // add connection profiles
         refreshProfiles();
     }
 
     Q_EMIT nmModemChanged();
+    Q_EMIT mobileDataEnabledChanged();
     Q_EMIT mobileDataSupportedChanged();
 }
 
@@ -278,7 +259,7 @@ bool Modem::hasSim() const
     if (!m_mmModem) {
         return false;
     }
-    return m_mmModem && m_mmModem->sim() && m_mmModem->sim()->uni() == QStringLiteral("/");
+    return m_mmModem && m_mmModem->sim() && m_mmModem->sim()->uni() != QStringLiteral("/");
 }
 
 QList<ProfileSettings *> &Modem::profileList()

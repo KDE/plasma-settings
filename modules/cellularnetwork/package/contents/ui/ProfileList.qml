@@ -150,22 +150,30 @@ Kirigami.ScrollablePage {
                 Layout.fillWidth: true
                 
                 Controls.RadioButton {
-                    Layout.alignment: Qt.AlignRight | Qt.AlignVCenter
+                    Layout.alignment: Qt.AlignLeft | Qt.AlignVCenter
                     checked: modem.activeConnectionUni == modelData.connectionUni
                     onClicked: {
                         if (!checked) {
                             modem.activateProfile(modelData.connectionUni);
                         }
+                        
+                        // reapply binding
+                        checked = Qt.binding(() => { return modem.activeConnectionUni == modelData.connectionUni });
                     }
                 }
                 
                 ColumnLayout {
+                    Layout.alignment: Qt.AlignLeft
+                    Layout.fillWidth: true
                     spacing: Kirigami.Units.smallSpacing
+                    
                     Kirigami.Heading {
+                        Layout.fillWidth: true
                         level: 3
                         text: modelData.name
                     }
                     Controls.Label {
+                        Layout.fillWidth: true
                         text: modelData.apn
                     }
                 }

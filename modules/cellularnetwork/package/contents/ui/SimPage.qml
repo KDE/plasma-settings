@@ -22,6 +22,16 @@ Kirigami.ScrollablePage {
     property bool simEnabled: sim ? sim.enabled : false
     property bool isRoaming: sim ? (sim.modem ? sim.modem.isRoaming : false) : false
     
+    property bool simLocked: sim ? sim.locked : false
+    property string simImsi: sim ? sim.imsi : ""
+    property string simEid: sim ? sim.eid : ""
+    property string operatorCode: sim ? (sim.modem ? sim.modem.details.operatorCode : "") : ""
+    property string operatorName: sim ? (sim.modem ? sim.modem.details.operatorName : "") : ""
+    property string simOperatorIdentifier: sim ? sim.operatorIdentifier : ""
+    property string simOperatorName: sim ? sim.operatorName : ""
+    property string simIdentifier: sim ? sim.simIdentifier : ""
+    property var simEmergencyNumbers: sim ? sim.emergencyNumbers : []
+    
     leftPadding: 0
     rightPadding: 0
     topPadding: Kirigami.Units.gridUnit
@@ -96,7 +106,7 @@ Kirigami.ScrollablePage {
                     text: i18n("SIM Lock")
                     description: i18n("Modify SIM lock settings.")
                     enabled: simEnabled
-                    onClicked: kcm.push("SimLock.qml", { "sim": sim });
+                    onClicked: kcm.push("SimLockPage.qml", { "sim": sim });
                 }
                 
                 MobileForm.FormDelegateSeparator { above: simLockButton; below: modemDetailsButton }
@@ -106,7 +116,7 @@ Kirigami.ScrollablePage {
                     icon.name: "network-modem"
                     text: i18n("Modem Details")
                     description: i18n("View the details of the modem this SIM is connected to.")
-                    onClicked: kcm.push("Modem.qml", { "modem": sim.modem })
+                    onClicked: kcm.push("ModemPage.qml", { "modem": sim.modem })
                 }
             }
         }
@@ -125,7 +135,7 @@ Kirigami.ScrollablePage {
                 MobileForm.FormTextDelegate {
                     id: lockedText
                     text: i18n("Locked")
-                    description: sim.locked ? i18n("Yes") : i18n("No")
+                    description: simLocked ? i18n("Yes") : i18n("No")
                 }
                 
                 MobileForm.FormDelegateSeparator {}
@@ -133,7 +143,7 @@ Kirigami.ScrollablePage {
                 MobileForm.FormTextDelegate  {
                     id: imsiText
                     text: i18n("IMSI")
-                    description: sim.imsi
+                    description: simImsi
                 }
                 
                 MobileForm.FormDelegateSeparator {}
@@ -141,7 +151,7 @@ Kirigami.ScrollablePage {
                 MobileForm.FormTextDelegate  {
                     id: eidText
                     text: i18n("EID")
-                    description: sim.eid
+                    description: simEid
                 }
                 
                 MobileForm.FormDelegateSeparator {}
@@ -149,7 +159,7 @@ Kirigami.ScrollablePage {
                 MobileForm.FormTextDelegate {
                     id: opCodeModemText
                     text: i18n("Operator Code (modem)")
-                    description: sim.modem.details.operatorCode
+                    description: operatorCode
                 }
                 
                 MobileForm.FormDelegateSeparator {}
@@ -157,7 +167,7 @@ Kirigami.ScrollablePage {
                 MobileForm.FormTextDelegate  {
                     id: opNameModemText
                     text: i18n("Operator Name (modem)")
-                    description: sim.modem.details.operatorName
+                    description: operatorName
                 }
                 
                 MobileForm.FormDelegateSeparator {}
@@ -165,7 +175,7 @@ Kirigami.ScrollablePage {
                 MobileForm.FormTextDelegate  {
                     id: opCodeSimText
                     text: i18n("Operator Code (provided by SIM)")
-                    description: sim.operatorIdentifier
+                    description: simOperatorIdentifier
                 }
                 
                 MobileForm.FormDelegateSeparator {}
@@ -173,7 +183,7 @@ Kirigami.ScrollablePage {
                 MobileForm.FormTextDelegate {
                     id: opNameSimText
                     text: i18n("Operator Name (provided by SIM)")
-                    description: sim.operatorName
+                    description: simOperatorName
                 }
                 
                 MobileForm.FormDelegateSeparator {}
@@ -181,7 +191,7 @@ Kirigami.ScrollablePage {
                 MobileForm.FormTextDelegate {
                     id: simIdText
                     text: i18n("SIM ID")
-                    description: sim.simIdentifier
+                    description: simIdentifier
                 }
                 
                 MobileForm.FormDelegateSeparator {}
@@ -202,7 +212,8 @@ Kirigami.ScrollablePage {
                         }
                         
                         Repeater {
-                            model: sim.emergencyNumbers
+                            model: simEmergencyNumbers
+                            
                             Controls.Label {
                                 Layout.fillWidth: true
                                 text: modelData

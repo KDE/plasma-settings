@@ -1,8 +1,5 @@
-/*
-    SPDX-FileCopyrightText: 2020-2021 Devin Lin <espidev@gmail.com>
-
-    SPDX-License-Identifier: GPL-3.0-or-later
-*/
+// SPDX-FileCopyrightText: 2020-2022 Devin Lin <espidev@gmail.com>
+// SPDX-License-Identifier: GPL-3.0-or-later
 
 import QtQuick 2.12
 import QtQuick.Layouts 1.2
@@ -15,6 +12,7 @@ import cellularnetworkkcm 1.0
 Kirigami.Dialog {
     id: dialog
     title: i18n("Edit APN")
+    clip: true
     
     property Modem modem
     property ProfileSettings profile

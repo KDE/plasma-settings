@@ -1,8 +1,6 @@
-//
 // SPDX-FileCopyrightText: 2018 Martin Kacej <m.kacej@atlas.sk>
 // SPDX-FileCopyrightText: 2020 Dimitris Kardarakos <dimkard@posteo.net>
 // SPDX-FileCopyrightText: 2021-2022 Devin Lin <espidev@gmail.com>
-//
 // SPDX-License-Identifier: GPL-3.0-or-later
 
 import QtQuick 2.12
@@ -56,6 +54,7 @@ KCM.SimpleKCM {
         
         SimPage {
             id: simPage
+            visible: false
         }
         
         MessagesList {
@@ -83,11 +82,25 @@ KCM.SimpleKCM {
                         }
                     }
                     
+                    property bool manuallySet: false
+                    property bool shouldBeChecked: kcm.selectedModem && kcm.selectedModem.mobileDataEnabled
+                    onShouldBeCheckedChanged: {
+                        checked = shouldBeChecked;
+                    }
+                    
                     enabled: kcm.selectedModem.mobileDataSupported && !kcm.selectedModem.needsAPNAdded
-                    checked: kcm.selectedModem && kcm.selectedModem.mobileDataEnabled
+                    checked: shouldBeChecked
+                    
                     onCheckedChanged: {
+                        // prevent binding loops
+                        if (manuallySet) {
+                            manuallySet = false;
+                            return;
+                        }
+                        
                         if (kcm.selectedModem.mobileDataEnabled != checked) {
-                            kcm.selectedModem.mobileDataEnabled = !checked
+                            manuallySet = true;
+                            kcm.selectedModem.mobileDataEnabled = checked;
                         }
                     }
                 }
@@ -138,6 +151,7 @@ KCM.SimpleKCM {
                             icon.name: "auth-sim-symbolic"
                             onClicked: {
                                 simPage.sim = modelData;
+                                simPage.visible = true;
                                 kcm.push(simPage);
                             }
                         }
