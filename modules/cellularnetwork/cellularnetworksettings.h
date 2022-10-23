@@ -89,6 +89,7 @@ Q_SIGNALS:
     void messagesChanged();
 
 private:
+    void updateModemList();
     void fillSims();
 
     QList<Modem *> m_modemList;

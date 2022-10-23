@@ -8,6 +8,7 @@
 #include "cellularnetworksettings.h"
 #include "modemdetails.h"
 #include "sim.h"
+#include "profilesettings.h"
 
 #include <QList>
 #include <QString>
@@ -45,11 +46,8 @@ class Modem : public QObject
     Q_PROPERTY(QString activeConnectionUni READ activeConnectionUni NOTIFY activeConnectionUniChanged)
 
 public:
-    Modem(QObject *parent = nullptr)
-        : QObject{parent}
-    {
-    }
-    Modem(QObject *parent, ModemManager::ModemDevice::Ptr mmDevice, NetworkManager::ModemDevice::Ptr nmDevice, ModemManager::Modem::Ptr m_mmInterface);
+    Modem(QObject *parent = nullptr);
+    Modem(QObject *parent, ModemManager::ModemDevice::Ptr mmModem, ModemManager::Modem::Ptr m_mmInterface);
 
     ModemDetails *modemDetails();
     QString displayId(); // splits uni and obtains the number suffix
@@ -85,6 +83,8 @@ Q_SIGNALS:
     void uniChanged();
     void displayIdChanged();
     void activeConnectionUniChanged();
+    
+    void nmModemChanged();
 
     void enabledChanged();
     void isRoamingChanged();
@@ -95,72 +95,18 @@ Q_SIGNALS:
     void couldNotAutodetectSettings();
 
 private:
+    void findNetworkManagerDevice();
+    
     QString nmDeviceStateStr(NetworkManager::Device::State state);
 
     ModemDetails *m_details;
 
-    ModemManager::ModemDevice::Ptr m_mmDevice;
-    NetworkManager::ModemDevice::Ptr m_nmDevice;
+    ModemManager::ModemDevice::Ptr m_mmModem;
+    NetworkManager::ModemDevice::Ptr m_nmModem; // may be a nullptr if the nm modem hasn't been found yet
     ModemManager::Modem::Ptr m_mmInterface = nullptr;
     ModemManager::Modem3gpp::Ptr m_mm3gppDevice = nullptr; // this may be a nullptr if no sim is inserted
 
     QList<ProfileSettings *> m_profileList;
 
     friend class ModemDetails;
-};
-
-class ProfileSettings : public QObject
-{
-    Q_OBJECT
-    Q_PROPERTY(QString name READ name NOTIFY nameChanged)
-    Q_PROPERTY(QString apn READ apn WRITE setApn NOTIFY apnChanged)
-    Q_PROPERTY(QString user READ user WRITE setUser NOTIFY userChanged)
-    Q_PROPERTY(QString password READ password WRITE setPassword NOTIFY passwordChanged)
-    Q_PROPERTY(QString networkType READ networkType WRITE setNetworkType NOTIFY networkTypeChanged)
-    Q_PROPERTY(QString connectionUni READ connectionUni NOTIFY connectionUniChanged)
-
-public:
-    ProfileSettings(QObject *parent = nullptr)
-        : QObject{parent}
-    {
-    }
-    ProfileSettings(QObject *parent,
-                    QString name,
-                    QString apn,
-                    QString user,
-                    QString password,
-                    NetworkManager::GsmSetting::NetworkType networkType,
-                    QString connectionUni);
-    ProfileSettings(QObject *parent, NetworkManager::Setting::Ptr settings, NetworkManager::Connection::Ptr connection);
-
-    QString name();
-    QString apn();
-    void setApn(QString apn);
-    QString user();
-    void setUser(QString user);
-    QString password();
-    void setPassword(QString password);
-    QString networkType();
-    void setNetworkType(QString ipType);
-    QString connectionUni();
-
-    // utilities
-    static QString networkTypeStr(NetworkManager::GsmSetting::NetworkType networkType);
-    static NetworkManager::GsmSetting::NetworkType networkTypeFlag(const QString &networkType);
-
-Q_SIGNALS:
-    void nameChanged();
-    void apnChanged();
-    void userChanged();
-    void passwordChanged();
-    void networkTypeChanged();
-    void connectionUniChanged();
-
-private:
-    QString m_name;
-    QString m_apn;
-    QString m_user;
-    QString m_password;
-    QString m_networkType;
-    QString m_connectionUni;
 };

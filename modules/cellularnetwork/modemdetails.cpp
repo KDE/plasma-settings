@@ -79,15 +79,24 @@ ModemDetails::ModemDetails(QObject *parent, Modem *modem)
         qWarning() << QStringLiteral("3gpp device not found!");
     }
 
-    connect(m_modem->m_nmDevice.data(), &NetworkManager::ModemDevice::firmwareVersionChanged, this, [this]() -> void {
-        Q_EMIT firmwareVersionChanged();
-    });
-    connect(m_modem->m_nmDevice.data(), &NetworkManager::ModemDevice::interfaceNameChanged, this, [this]() -> void {
-        Q_EMIT interfaceNameChanged();
-    });
-    connect(m_modem->m_nmDevice.data(), &NetworkManager::ModemDevice::meteredChanged, this, [this]() -> void {
-        Q_EMIT meteredChanged();
-    });
+    // m_modem->m_nmModem may be nullptr, listen for updates
+    connect(m_modem, &Modem::nmModemChanged, this, &ModemDetails::updateNMSignals);
+    updateNMSignals();
+}
+
+void ModemDetails::updateNMSignals()
+{
+    if (m_modem->m_nmModem) {
+        connect(m_modem->m_nmModem.data(), &NetworkManager::ModemDevice::firmwareVersionChanged, this, [this]() -> void {
+            Q_EMIT firmwareVersionChanged();
+        });
+        connect(m_modem->m_nmModem.data(), &NetworkManager::ModemDevice::interfaceNameChanged, this, [this]() -> void {
+            Q_EMIT interfaceNameChanged();
+        });
+        connect(m_modem->m_nmModem.data(), &NetworkManager::ModemDevice::meteredChanged, this, [this]() -> void {
+            Q_EMIT meteredChanged();
+        });
+    }
 }
 
 ModemDetails &ModemDetails::operator=(ModemDetails &&other)
@@ -340,8 +349,9 @@ QList<AvailableNetwork *> ModemDetails::networks()
 
 Q_INVOKABLE void ModemDetails::scanNetworks()
 {
-    for (auto p : m_cachedScannedNetworks)
+    for (auto p : m_cachedScannedNetworks) {
         p->deleteLater();
+    }
     m_cachedScannedNetworks.clear();
 
     if (m_modem->m_mm3gppDevice) {
@@ -396,17 +406,27 @@ bool ModemDetails::isScanningNetworks()
 
 QString ModemDetails::firmwareVersion()
 {
-    return m_modem->m_nmDevice->firmwareVersion();
+    if (!m_modem->m_nmModem) {
+        return QString {};
+    }
+    return m_modem->m_nmModem->firmwareVersion();
 }
 
 QString ModemDetails::interfaceName()
 {
-    return m_modem->m_nmDevice->interfaceName();
+    if (!m_modem->m_nmModem) {
+        return QString{};
+    }
+    return m_modem->m_nmModem->interfaceName();
 }
 
 QString ModemDetails::metered()
 {
-    switch (m_modem->m_nmDevice->metered()) {
+    if (!m_modem->m_nmModem) {
+        return QString{};
+    }
+    
+    switch (m_modem->m_nmModem->metered()) {
     case NetworkManager::Device::MeteredStatus::UnknownStatus:
         return i18n("Unknown");
     case NetworkManager::Device::MeteredStatus::Yes:

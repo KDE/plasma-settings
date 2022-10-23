@@ -4,6 +4,7 @@ set (cellularnetworksettings_SRCS
     modemdetails.cpp
     sim.cpp
     mobileproviders.cpp
+    profilesettings.cpp
 )
 
 add_library(kcm_cellular_network MODULE ${cellularnetworksettings_SRCS})

@@ -1,8 +1,5 @@
-/*
-    SPDX-FileCopyrightText: 2021 Devin Lin <espidev@gmail.com>
-
-    SPDX-License-Identifier: GPL-3.0-or-later
-*/
+// SPDX-FileCopyrightText: 2022 Devin Lin <espidev@gmail.com>
+// SPDX-License-Identifier: GPL-3.0-or-later
 
 import QtQuick 2.12
 import QtQuick.Layouts 1.2
@@ -17,9 +14,13 @@ import cellularnetworkkcm 1.0
 
 Kirigami.ScrollablePage {
     id: simPage
-    title: i18n("SIM") + " " + sim.displayId
+    title: i18n("SIM") + " " + displayId
     
-    property Sim sim
+    property Sim sim: null
+    
+    property string displayId: sim ? sim.displayId : ""
+    property bool simEnabled: sim ? sim.enabled : false
+    property bool isRoaming: sim ? (sim.modem ? sim.modem.isRoaming : false) : false
     
     leftPadding: 0
     rightPadding: 0
@@ -38,7 +39,7 @@ Kirigami.ScrollablePage {
             Layout.fillWidth: true
             Layout.margins: Kirigami.Units.largeSpacing
             Layout.bottomMargin: visible && !messagesList.visible ? Kirigami.Units.largeSpacing : 0
-            visible: !sim.enabled
+            visible: !simEnabled
             type: Kirigami.MessageType.Error
             text: qsTr("This SIM slot is empty, a SIM card needs to be inserted in order for it to be used.")
         }
@@ -60,8 +61,8 @@ Kirigami.ScrollablePage {
                     id: dataRoamingCheckBox
                     text: i18n("Data Roaming")
                     description: i18n("Allow your device to use networks other than your carrier.")
-                    enabled: sim.enabled
-                    checked: sim.modem.isRoaming
+                    enabled: simEnabled
+                    checked: isRoaming
                     onCheckedChanged: sim.modem.isRoaming = checked
                 }
                 
@@ -72,8 +73,8 @@ Kirigami.ScrollablePage {
                     icon.name: "globe"
                     text: i18n("Modify APNs")
                     description: i18n("Configure access point names for your carrier.")
-                    enabled: sim.enabled && enabledConnections.wwanEnabled
-                    onClicked: kcm.push("ProfileList.qml", {"modem": sim.modem});
+                    enabled: simEnabled && enabledConnections.wwanEnabled
+                    onClicked: kcm.push("ProfileList.qml", { "modem": sim.modem });
                 }
                 
                 MobileForm.FormDelegateSeparator { above: apnButton; below: networksButton }
@@ -83,7 +84,7 @@ Kirigami.ScrollablePage {
                     icon.name: "network-mobile-available"
                     text: i18n("Networks")
                     description: i18n("Select a network operator.")
-                    enabled: sim.enabled
+                    enabled: simEnabled
                     onClicked: kcm.push("AvailableNetworks.qml", { "modem": sim.modem, "sim": sim });
                 }
                 
@@ -94,7 +95,7 @@ Kirigami.ScrollablePage {
                     icon.name: "unlock"
                     text: i18n("SIM Lock")
                     description: i18n("Modify SIM lock settings.")
-                    enabled: sim.enabled
+                    enabled: simEnabled
                     onClicked: kcm.push("SimLock.qml", { "sim": sim });
                 }
                 

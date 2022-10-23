@@ -38,42 +38,10 @@ CellularNetworkSettings::CellularNetworkSettings(QObject *parent, const QVariant
     qmlRegisterType<InlineMessage>("cellularnetworkkcm", 1, 0, "InlineMessage");
 
     // find modems
-    ModemManager::scanDevices();
-
-    qDebug() << QStringLiteral("Scanning for modems...");
-    for (ModemManager::ModemDevice::Ptr device : ModemManager::modemDevices()) {
-        ModemManager::Modem::Ptr modem = device->modemInterface();
-        NetworkManager::ModemDevice::Ptr nmModem;
-
-        for (NetworkManager::Device::Ptr nmDevice : NetworkManager::networkInterfaces()) {
-            if (nmDevice->udi() == device->uni()) {
-                nmModem = nmDevice.objectCast<NetworkManager::ModemDevice>();
-            }
-        }
-
-        qDebug() << QStringLiteral("Found modem:") << device->uni();
-        if (!nmModem) {
-            qWarning() << QStringLiteral("NetworkManager ModemDevice could not be found for this modem! Ignoring...");
-        } else if ((nmModem->currentCapabilities() & NetworkManager::ModemDevice::GsmUmts)
-                   || (nmModem->currentCapabilities() & NetworkManager::ModemDevice::Lte)) {
-            m_modemList.push_back(new Modem(this, device, nmModem, modem));
-
-            // update sims list if modem's list changes
-            connect(m_modemList[m_modemList.size() - 1], &Modem::simsChanged, this, [this]() -> void {
-                fillSims();
-            });
-        } else {
-            qDebug() << QStringLiteral("Modem is not 3GPP (CDMA not supported), skipping...");
-        }
-    }
-
-    if (m_modemList.empty()) {
-        qDebug() << QStringLiteral("No modems found.");
-    }
-
-    Q_EMIT selectedModemChanged();
-
-    fillSims();
+    updateModemList();
+    
+    connect(ModemManager::notifier(), &ModemManager::Notifier::modemAdded, this, &CellularNetworkSettings::updateModemList);
+    connect(ModemManager::notifier(), &ModemManager::Notifier::modemRemoved, this, &CellularNetworkSettings::updateModemList);
 }
 
 CellularNetworkSettings *CellularNetworkSettings::instance()
@@ -83,7 +51,7 @@ CellularNetworkSettings *CellularNetworkSettings::instance()
 
 Modem *CellularNetworkSettings::selectedModem()
 {
-    // TODO
+    // TODO: we are currently assuming there is a single modem
     if (m_modemList.count() > 0) {
         return m_modemList[0];
     }
@@ -105,6 +73,38 @@ bool CellularNetworkSettings::modemFound()
     return !m_modemList.empty();
 }
 
+void CellularNetworkSettings::updateModemList()
+{
+    // find modems
+    ModemManager::scanDevices();
+    
+    qDebug() << QStringLiteral("Scanning for modems...");
+    
+    // loop over every modem
+    for (ModemManager::ModemDevice::Ptr device : ModemManager::modemDevices()) {
+        ModemManager::Modem::Ptr modem = device->modemInterface();
+        
+        qDebug() << QStringLiteral("Found modem:") << device->uni();
+        
+        m_modemList.push_back(new Modem(this, device, modem));
+
+        // update sims list if modem's list changes
+        connect(m_modemList[m_modemList.size() - 1], &Modem::simsChanged, this, [this]() -> void {
+            fillSims();
+        });
+    }
+
+    if (m_modemList.empty()) {
+        qDebug() << QStringLiteral("No modems found.");
+    }
+    
+    // fill sim list
+    fillSims();
+    
+    // update the currently selected modem
+    Q_EMIT selectedModemChanged();
+}
+
 void CellularNetworkSettings::fillSims()
 {
     for (auto p : m_simList) {
@@ -115,9 +115,9 @@ void CellularNetworkSettings::fillSims()
     qDebug() << QStringLiteral("Scanning SIMs list...");
     for (auto modem : m_modemList) {
         auto sims = modem->sims();
-        for (auto simp : sims) {
-            qDebug() << QStringLiteral("Found SIM") << simp->uni() << simp->imsi();
-            m_simList.push_back(simp);
+        for (auto sim : sims) {
+            qDebug() << QStringLiteral("Found SIM") << sim->uni() << sim->imsi();
+            m_simList.push_back(sim);
         }
     }
 

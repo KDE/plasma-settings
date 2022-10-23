@@ -62,6 +62,10 @@ KCM.SimpleKCM {
             }
         }
         
+        SimPage {
+            id: simPage
+        }
+        
         MessagesList {
             Layout.fillWidth: true
             Layout.margins: Kirigami.Units.largeSpacing
@@ -133,7 +137,10 @@ KCM.SimpleKCM {
                             text: i18n("SIM %1", modelData.displayId)
                             description: i18n("View SIM %1 details.", modelData.displayId)
                             icon.name: "auth-sim-symbolic"
-                            onClicked: kcm.push("Sim.qml", { "sim": modelData })
+                            onClicked: {
+                                simPage.sim = modelData;
+                                kcm.push(simPage);
+                            }
                         }
                     }
                 }
