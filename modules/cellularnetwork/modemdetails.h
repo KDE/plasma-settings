@@ -129,7 +129,7 @@ Q_SIGNALS:
 
 private:
     void updateNMSignals();
-    
+
     Modem *m_modem;
 
     QDBusPendingCallWatcher *m_scanNetworkWatcher;

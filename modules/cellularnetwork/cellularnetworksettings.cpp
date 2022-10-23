@@ -39,7 +39,7 @@ CellularNetworkSettings::CellularNetworkSettings(QObject *parent, const QVariant
 
     // find modems
     updateModemList();
-    
+
     connect(ModemManager::notifier(), &ModemManager::Notifier::modemAdded, this, &CellularNetworkSettings::updateModemList);
     connect(ModemManager::notifier(), &ModemManager::Notifier::modemRemoved, this, &CellularNetworkSettings::updateModemList);
 }
@@ -77,15 +77,15 @@ void CellularNetworkSettings::updateModemList()
 {
     // find modems
     ModemManager::scanDevices();
-    
+
     qDebug() << QStringLiteral("Scanning for modems...");
-    
+
     // loop over every modem
     for (ModemManager::ModemDevice::Ptr device : ModemManager::modemDevices()) {
         ModemManager::Modem::Ptr modem = device->modemInterface();
-        
+
         qDebug() << QStringLiteral("Found modem:") << device->uni();
-        
+
         m_modemList.push_back(new Modem(this, device, modem));
 
         // update sims list if modem's list changes
@@ -97,10 +97,10 @@ void CellularNetworkSettings::updateModemList()
     if (m_modemList.empty()) {
         qDebug() << QStringLiteral("No modems found.");
     }
-    
+
     // fill sim list
     fillSims();
-    
+
     // update the currently selected modem
     Q_EMIT selectedModemChanged();
 }

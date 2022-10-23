@@ -407,7 +407,7 @@ bool ModemDetails::isScanningNetworks()
 QString ModemDetails::firmwareVersion()
 {
     if (!m_modem->m_nmModem) {
-        return QString {};
+        return QString{};
     }
     return m_modem->m_nmModem->firmwareVersion();
 }
@@ -425,7 +425,7 @@ QString ModemDetails::metered()
     if (!m_modem->m_nmModem) {
         return QString{};
     }
-    
+
     switch (m_modem->m_nmModem->metered()) {
     case NetworkManager::Device::MeteredStatus::UnknownStatus:
         return i18n("Unknown");

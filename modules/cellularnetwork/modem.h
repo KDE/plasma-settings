@@ -7,8 +7,8 @@
 
 #include "cellularnetworksettings.h"
 #include "modemdetails.h"
-#include "sim.h"
 #include "profilesettings.h"
+#include "sim.h"
 
 #include <QList>
 #include <QString>
@@ -39,29 +39,34 @@ class Modem : public QObject
     Q_PROPERTY(QString uni READ uni NOTIFY uniChanged)
     Q_PROPERTY(QString displayId READ displayId NOTIFY displayIdChanged)
 
-    Q_PROPERTY(bool enabled READ enabled WRITE setEnabled NOTIFY enabledChanged)
     Q_PROPERTY(bool isRoaming READ isRoaming WRITE setIsRoaming NOTIFY isRoamingChanged)
     Q_PROPERTY(bool hasSim READ hasSim NOTIFY hasSimChanged)
     Q_PROPERTY(QList<ProfileSettings *> profiles READ profileList NOTIFY profileListChanged)
     Q_PROPERTY(QString activeConnectionUni READ activeConnectionUni NOTIFY activeConnectionUniChanged)
 
+    Q_PROPERTY(bool mobileDataEnabled READ mobileDataEnabled WRITE setMobileDataEnabled NOTIFY mobileDataEnabledChanged)
+    Q_PROPERTY(bool mobileDataSupported READ mobileDataSupported NOTIFY mobileDataSupportedChanged)
+    Q_PROPERTY(bool needsAPNAdded READ needsAPNAdded NOTIFY mobileDataEnabledChanged)
+
 public:
     Modem(QObject *parent = nullptr);
     Modem(QObject *parent, ModemManager::ModemDevice::Ptr mmModem, ModemManager::Modem::Ptr m_mmInterface);
 
-    ModemDetails *modemDetails();
-    QString displayId(); // splits uni and obtains the number suffix
-    QString uni();
-    QString activeConnectionUni();
+    ModemDetails *modemDetails() const;
+    QString displayId() const; // splits uni and obtains the number suffix
+    QString uni() const;
+    QString activeConnectionUni() const;
 
     Q_INVOKABLE void reset();
 
-    bool enabled();
-    void setEnabled(bool enabled);
+    bool mobileDataEnabled() const;
+    void setMobileDataEnabled(bool enabled);
+    bool mobileDataSupported() const;
+    bool needsAPNAdded() const;
 
-    bool isRoaming();
+    bool isRoaming() const;
     void setIsRoaming(bool roaming);
-    bool hasSim();
+    bool hasSim() const;
 
     // connection profiles
     QList<ProfileSettings *> &profileList();
@@ -83,10 +88,11 @@ Q_SIGNALS:
     void uniChanged();
     void displayIdChanged();
     void activeConnectionUniChanged();
-    
+
     void nmModemChanged();
 
-    void enabledChanged();
+    void mobileDataEnabledChanged();
+    void mobileDataSupportedChanged();
     void isRoamingChanged();
     void simsChanged();
     void hasSimChanged();
@@ -96,7 +102,7 @@ Q_SIGNALS:
 
 private:
     void findNetworkManagerDevice();
-    
+
     QString nmDeviceStateStr(NetworkManager::Device::State state);
 
     ModemDetails *m_details;
@@ -106,6 +112,7 @@ private:
     ModemManager::Modem::Ptr m_mmInterface = nullptr;
     ModemManager::Modem3gpp::Ptr m_mm3gppDevice = nullptr; // this may be a nullptr if no sim is inserted
 
+    QList<Sim *> m_sims;
     QList<ProfileSettings *> m_profileList;
 
     friend class ModemDetails;

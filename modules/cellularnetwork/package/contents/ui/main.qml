@@ -52,14 +52,6 @@ KCM.SimpleKCM {
 
         PlasmaNM.EnabledConnections {
             id: enabledConnections
-
-            onWwanEnabledChanged: {
-                mobileDataCheckbox.checked = mobileDataCheckbox.enabled && enabled
-            }
-
-            onWwanHwEnabledChanged: {
-                mobileDataCheckbox.enabled = enabled && availableDevices.modemDeviceAvailable
-            }
         }
         
         SimPage {
@@ -81,14 +73,21 @@ KCM.SimpleKCM {
                 MobileForm.FormSwitchDelegate {
                     id: mobileDataSwitch
                     text: i18n("Mobile data")
-                    description: i18n("Whether mobile data is enabled.")
+                    description: {
+                        if (!kcm.selectedModem.mobileDataSupported) {
+                            return i18n("Mobile data is not available with this modem.");
+                        } else if (kcm.selectedModem.needsAPNAdded) {
+                            return i18n("An APN needs to be configured to have mobile data.");
+                        } else {
+                            return i18n("Whether mobile data is enabled.");
+                        }
+                    }
                     
-                    enabled: kcm.selectedModem
-                    
-                    checked: kcm.selectedModem && kcm.selectedModem.enabled
+                    enabled: kcm.selectedModem.mobileDataSupported && !kcm.selectedModem.needsAPNAdded
+                    checked: kcm.selectedModem && kcm.selectedModem.mobileDataEnabled
                     onCheckedChanged: {
-                        if (kcm.selectedModem.enabled != checked) {
-                            kcm.selectedModem.enabled = !checked
+                        if (kcm.selectedModem.mobileDataEnabled != checked) {
+                            kcm.selectedModem.mobileDataEnabled = !checked
                         }
                     }
                 }
