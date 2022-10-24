@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-settings\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2022-07-07 00:47+0000\n"
+"POT-Creation-Date: 2022-10-24 00:50+0000\n"
 "PO-Revision-Date: 2022-07-24 09:27+0300\n"
 "Last-Translator: Tommi Nieminen <translator@legisign.org>\n"
 "Language-Team: Finnish <kde-i18n-doc@kde.org>\n"
@@ -42,379 +42,379 @@ msgstr "Devin Lin"
 msgid "Martin Kacej"
 msgstr "Martin Kacej"
 
-#: modem.cpp:96
+#: modem.cpp:126
 #, kde-format
 msgid "Error resetting the modem: %1"
 msgstr "Virhe alustettaessa modeemia: %1"
 
-#: modem.cpp:192 modem.cpp:330
+#: modem.cpp:245 modem.cpp:414
 #, kde-format
 msgid "Error updating connection settings for %1: %2."
 msgstr "Virhe päivitettäessä yhteysasetuksia kohteelle %1: %2."
 
-#: modem.cpp:257
+#: modem.cpp:325
 #, kde-format
 msgid "Error activating connection: %1"
 msgstr "Virhe aktivoitaessa yhteyttä: %1"
 
-#: modem.cpp:287
+#: modem.cpp:360
 #, kde-format
 msgid "Error adding connection: %1"
 msgstr "Virhe lisättäessä yhteyttä: %1"
 
-#: modem.cpp:301
+#: modem.cpp:378
 #, kde-format
 msgid "Error removing connection: %1"
 msgstr "Virhe poistettaessa yhteyttä: %1"
 
-#: modem.cpp:414 modemdetails.cpp:112 modemdetails.cpp:214 modemdetails.cpp:246
-#: modemdetails.cpp:411 modemdetails.cpp:441
+#: modem.cpp:500 modemdetails.cpp:121 modemdetails.cpp:223 modemdetails.cpp:255
+#: modemdetails.cpp:431 modemdetails.cpp:461
 #, kde-format
 msgid "Unknown"
 msgstr "Tuntematon"
 
-#: modem.cpp:416
+#: modem.cpp:502
 #, kde-format
 msgid "Unmanaged"
 msgstr "Ei hallittu"
 
-#: modem.cpp:418
+#: modem.cpp:504
 #, kde-format
 msgid "Unavailable"
 msgstr "Ei käytettävissä"
 
-#: modem.cpp:420
+#: modem.cpp:506
 #, kde-format
 msgid "Disconnected"
 msgstr "Ei yhteyttä"
 
-#: modem.cpp:422
+#: modem.cpp:508
 #, kde-format
 msgid "Preparing"
 msgstr "Valmistellaan"
 
-#: modem.cpp:424
+#: modem.cpp:510
 #, kde-format
 msgid "ConfiguringHardware"
 msgstr "MäärittäväLaite"
 
-#: modem.cpp:426
+#: modem.cpp:512
 #, kde-format
 msgid "NeedAuth"
 msgstr "TodennusVaaditaan"
 
-#: modem.cpp:428
+#: modem.cpp:514
 #, kde-format
 msgid "ConfiguringIp"
 msgstr "MäärittäväIP"
 
-#: modem.cpp:430
+#: modem.cpp:516
 #, kde-format
 msgid "CheckingIp"
 msgstr "TarkistavaIP"
 
-#: modem.cpp:432
+#: modem.cpp:518
 #, kde-format
 msgid "WaitingForSecondaries"
 msgstr ""
 
-#: modem.cpp:434
+#: modem.cpp:520
 #, kde-format
 msgid "Activated"
 msgstr "Käytössä"
 
-#: modem.cpp:436
+#: modem.cpp:522
 #, kde-format
 msgid "Deactivating"
 msgstr "Passivoidaan"
 
-#: modem.cpp:438 modemdetails.cpp:244
+#: modem.cpp:524 modemdetails.cpp:253
 #, kde-format
 msgid "Failed"
 msgstr "Epäonnistui"
 
-#: modemdetails.cpp:115 modemdetails.cpp:444
+#: modemdetails.cpp:124 modemdetails.cpp:464
 #, kde-format
 msgid "POTS"
 msgstr "POTS"
 
-#: modemdetails.cpp:118
+#: modemdetails.cpp:127
 #, kde-format
 msgid "GSM"
 msgstr "GSM"
 
-#: modemdetails.cpp:121
+#: modemdetails.cpp:130
 #, kde-format
 msgid "GSM Compact"
 msgstr "GSM Compact"
 
-#: modemdetails.cpp:124
+#: modemdetails.cpp:133
 #, kde-format
 msgid "GPRS"
 msgstr "GPRS"
 
-#: modemdetails.cpp:127
+#: modemdetails.cpp:136
 #, kde-format
 msgid "EDGE"
 msgstr "EDGE"
 
-#: modemdetails.cpp:130
+#: modemdetails.cpp:139
 #, kde-format
 msgid "UMTS"
 msgstr "UMTS"
 
-#: modemdetails.cpp:133
+#: modemdetails.cpp:142
 #, kde-format
 msgid "HSDPA"
 msgstr "HSDPA"
 
-#: modemdetails.cpp:136
+#: modemdetails.cpp:145
 #, kde-format
 msgid "HSUPA"
 msgstr "HSUPA"
 
-#: modemdetails.cpp:139
+#: modemdetails.cpp:148
 #, kde-format
 msgid "HSPA"
 msgstr "HSPA"
 
-#: modemdetails.cpp:142
+#: modemdetails.cpp:151
 #, kde-format
 msgid "HSPA+"
 msgstr "HSPA+"
 
-#: modemdetails.cpp:145
+#: modemdetails.cpp:154
 #, kde-format
 msgid "CDMA2000 1xRTT"
 msgstr "CDMA2000 1xRTT"
 
-#: modemdetails.cpp:148
+#: modemdetails.cpp:157
 #, kde-format
 msgid "CDMA2000 EVDO-0"
 msgstr "CDMA2000 EVDO-0"
 
-#: modemdetails.cpp:151
+#: modemdetails.cpp:160
 #, kde-format
 msgid "CDMA2000 EVDO-A"
 msgstr "CDMA2000 EVDO-A"
 
-#: modemdetails.cpp:154
+#: modemdetails.cpp:163
 #, kde-format
 msgid "CDMA2000 EVDO-B"
 msgstr "CDMA2000 EVDO-B"
 
-#: modemdetails.cpp:157
+#: modemdetails.cpp:166
 #, kde-format
 msgid "LTE"
 msgstr "LTE"
 
-#: modemdetails.cpp:160
+#: modemdetails.cpp:169
 #, kde-format
 msgid "5GNR"
 msgstr "5GNR"
 
-#: modemdetails.cpp:216
+#: modemdetails.cpp:225
 #, kde-format
 msgid "Off"
 msgstr "Ei käytössä"
 
-#: modemdetails.cpp:218
+#: modemdetails.cpp:227
 #, kde-format
 msgid "Low-power mode"
 msgstr "Vähävirtatila"
 
-#: modemdetails.cpp:220
+#: modemdetails.cpp:229
 #, kde-format
 msgid "Full power mode"
 msgstr "Täysvirtatila"
 
-#: modemdetails.cpp:248
+#: modemdetails.cpp:257
 #, kde-format
 msgid "Initializing"
 msgstr "Alustetaan"
 
-#: modemdetails.cpp:250 package/contents/ui/Sim.qml:126
+#: modemdetails.cpp:259 package/contents/ui/SimPage.qml:137
 #, kde-format
 msgid "Locked"
 msgstr "Lukittu"
 
-#: modemdetails.cpp:252
+#: modemdetails.cpp:261
 #, kde-format
 msgid "Disabled"
 msgstr "Ei käytössä"
 
-#: modemdetails.cpp:254
+#: modemdetails.cpp:263
 #, kde-format
 msgid "Disabling"
 msgstr "Poistetaan käytöstä"
 
-#: modemdetails.cpp:256
+#: modemdetails.cpp:265
 #, kde-format
 msgid "Enabling"
 msgstr "Otetaan käyttöön"
 
-#: modemdetails.cpp:258 package/contents/ui/Modem.qml:112
+#: modemdetails.cpp:267 package/contents/ui/ModemPage.qml:110
 #, kde-format
 msgid "Enabled"
 msgstr "Käytössä"
 
-#: modemdetails.cpp:260
+#: modemdetails.cpp:269
 #, kde-format
 msgid "Searching for network provider"
 msgstr "Etsitään verkkotarjoajaa"
 
-#: modemdetails.cpp:262
+#: modemdetails.cpp:271
 #, kde-format
 msgid "Registered with network provider"
 msgstr "Rekisteröity verkkotarjoajaan"
 
-#: modemdetails.cpp:264
+#: modemdetails.cpp:273
 #, kde-format
 msgid "Disconnecting"
 msgstr "Katkaistaan yhteys"
 
-#: modemdetails.cpp:266
+#: modemdetails.cpp:275
 #, kde-format
 msgid "Connecting"
 msgstr "Yhdistetään"
 
-#: modemdetails.cpp:268
+#: modemdetails.cpp:277
 #, kde-format
 msgid "Connected"
 msgstr "Yhdistetty"
 
-#: modemdetails.cpp:277
+#: modemdetails.cpp:286
 #, kde-format
 msgid "No error."
 msgstr "Ei virheitä."
 
-#: modemdetails.cpp:279
+#: modemdetails.cpp:288
 #, kde-format
 msgid "Unknown error."
 msgstr "Tuntematon virhe."
 
-#: modemdetails.cpp:281
+#: modemdetails.cpp:290
 #, kde-format
 msgid "SIM is required but missing."
 msgstr "SIM vaaditaan mutta puuttuu."
 
-#: modemdetails.cpp:283
+#: modemdetails.cpp:292
 #, kde-format
 msgid "SIM is available but unusable."
 msgstr "SIM on läsnä muttei käytettävissä."
 
-#: modemdetails.cpp:306
+#: modemdetails.cpp:315
 #, kde-format
 msgid "Not registered, not searching for new operator to register."
 msgstr ""
 "Ei rekisteröity eikä etsitä uutta operaattoria rekisteröitymistä varten."
 
-#: modemdetails.cpp:308
+#: modemdetails.cpp:317
 #, kde-format
 msgid "Registered on home network."
 msgstr "Rekisteröity kotiverkkoon."
 
-#: modemdetails.cpp:310
+#: modemdetails.cpp:319
 #, kde-format
 msgid "Not registered, searching for new operator to register with."
 msgstr "Ei rekisteröity, etsitään uutta operaattoria, johon rekisteröityä."
 
-#: modemdetails.cpp:312
+#: modemdetails.cpp:321
 #, kde-format
 msgid "Registration denied."
 msgstr "Rekisteröityminen estetty."
 
-#: modemdetails.cpp:314
+#: modemdetails.cpp:323
 #, kde-format
 msgid "Unknown registration status."
 msgstr "Tuntematon rekisteröitymisen tila."
 
-#: modemdetails.cpp:316
+#: modemdetails.cpp:325
 #, kde-format
 msgid "Registered on a roaming network."
 msgstr "Rekisteröity verkkovierailuun."
 
-#: modemdetails.cpp:318
+#: modemdetails.cpp:327
 #, kde-format
 msgid "Registered for \"SMS only\", on home network."
 msgstr "Rekisteröity ”vain tekstiviesteille” kotiverkossa."
 
-#: modemdetails.cpp:320
+#: modemdetails.cpp:329
 #, kde-format
 msgid "Registered for \"SMS only\", roaming network."
 msgstr "Rekisteröity ”vain tekstiviesteille, verkkovierailussa."
 
-#: modemdetails.cpp:322
+#: modemdetails.cpp:331
 #, kde-format
 msgid "Emergency services only."
 msgstr "Vain hätänumerot."
 
-#: modemdetails.cpp:324
+#: modemdetails.cpp:333
 #, kde-format
 msgid "Registered for \"CSFB not preferred\", home network."
 msgstr "Rekisteröity muodossa \"CSFB:tä ei suosita”, kotiverkko."
 
-#: modemdetails.cpp:326
+#: modemdetails.cpp:335
 #, kde-format
 msgid "Registered for \"CSFB not preferred\", roaming network."
 msgstr "Rekisteröity muodossa \"CSFB:tä ei suosita”, verkkovierailu."
 
-#: modemdetails.cpp:328
+#: modemdetails.cpp:337
 #, kde-format
 msgid "Attached for access to Restricted Local Operator Services."
 msgstr "Liitetty rajattujen paikallisoperaattoripalvelujen käyttöön."
 
-#: modemdetails.cpp:366
+#: modemdetails.cpp:376
 #, kde-format
 msgid "Scanning networks failed: %1"
 msgstr "Verkkohaku epäonnistui: %1"
 
-#: modemdetails.cpp:413 package/contents/ui/Modem.qml:205
-#: package/contents/ui/Sim.qml:127
+#: modemdetails.cpp:433 package/contents/ui/ModemPage.qml:203
+#: package/contents/ui/SimPage.qml:138
 #, kde-format
 msgid "Yes"
 msgstr "Kyllä"
 
-#: modemdetails.cpp:415 package/contents/ui/Modem.qml:205
-#: package/contents/ui/Sim.qml:127
+#: modemdetails.cpp:435 package/contents/ui/ModemPage.qml:203
+#: package/contents/ui/SimPage.qml:138
 #, kde-format
 msgid "No"
 msgstr "Ei"
 
-#: modemdetails.cpp:417
+#: modemdetails.cpp:437
 #, kde-format
 msgid "GuessYes"
 msgstr "ArvaaKyllä"
 
-#: modemdetails.cpp:419
+#: modemdetails.cpp:439
 #, kde-format
 msgid "GuessNo"
 msgstr "ArvaaEi"
 
-#: modemdetails.cpp:447 modemdetails.cpp:450 modemdetails.cpp:453
-#: modemdetails.cpp:456 package/contents/ui/EditProfileDialog.qml:64
+#: modemdetails.cpp:467 modemdetails.cpp:470 modemdetails.cpp:473
+#: modemdetails.cpp:476 package/contents/ui/EditProfileDialog.qml:62
 #, kde-format
 msgid "2G"
 msgstr "2G"
 
-#: modemdetails.cpp:459 modemdetails.cpp:462 modemdetails.cpp:465
-#: modemdetails.cpp:468 modemdetails.cpp:471 modemdetails.cpp:474
-#: modemdetails.cpp:477 modemdetails.cpp:480 modemdetails.cpp:483
+#: modemdetails.cpp:479 modemdetails.cpp:482 modemdetails.cpp:485
+#: modemdetails.cpp:488 modemdetails.cpp:491 modemdetails.cpp:494
+#: modemdetails.cpp:497 modemdetails.cpp:500 modemdetails.cpp:503
 #, kde-format
 msgid "3G"
 msgstr "3G"
 
-#: modemdetails.cpp:486
+#: modemdetails.cpp:506
 #, kde-format
 msgid "4G"
 msgstr "4G"
 
-#: modemdetails.cpp:489
+#: modemdetails.cpp:509
 #, kde-format
 msgid "5G"
 msgstr "5G"
 
-#: modemdetails.cpp:492 package/contents/ui/EditProfileDialog.qml:64
+#: modemdetails.cpp:512 package/contents/ui/EditProfileDialog.qml:62
 #, kde-format
 msgid "Any"
 msgstr "Mikä tahansa"
@@ -439,232 +439,248 @@ msgstr "Nykyinen operaattori: %1"
 msgid "Scan For Networks"
 msgstr "Etsi verkkoja"
 
-#: package/contents/ui/EditProfileDialog.qml:17
+#: package/contents/ui/EditProfileDialog.qml:14
 #, kde-format
 msgid "Edit APN"
 msgstr "Muokkaa APN:ää"
 
-#: package/contents/ui/EditProfileDialog.qml:43
+#: package/contents/ui/EditProfileDialog.qml:41
 #, kde-format
 msgid "Name"
 msgstr "Nimi"
 
-#: package/contents/ui/EditProfileDialog.qml:48
+#: package/contents/ui/EditProfileDialog.qml:46
 #, kde-format
 msgid "APN"
 msgstr "APN"
 
-#: package/contents/ui/EditProfileDialog.qml:53
+#: package/contents/ui/EditProfileDialog.qml:51
 #, kde-format
 msgid "Username"
 msgstr "Käyttäjätunnus"
 
-#: package/contents/ui/EditProfileDialog.qml:58
+#: package/contents/ui/EditProfileDialog.qml:56
 #, kde-format
 msgid "Password"
 msgstr "Salasana"
 
-#: package/contents/ui/EditProfileDialog.qml:63
+#: package/contents/ui/EditProfileDialog.qml:61
 #, kde-format
 msgid "Network type"
 msgstr "Verkon tyyppi"
 
-#: package/contents/ui/EditProfileDialog.qml:64
+#: package/contents/ui/EditProfileDialog.qml:62
 #, kde-format
 msgid "4G/3G/2G"
 msgstr "4G/3G/2G"
 
-#: package/contents/ui/EditProfileDialog.qml:64
+#: package/contents/ui/EditProfileDialog.qml:62
 #, kde-format
 msgid "3G/2G"
 msgstr "3G/2G"
 
-#: package/contents/ui/EditProfileDialog.qml:64
+#: package/contents/ui/EditProfileDialog.qml:62
 #, kde-format
 msgid "Only 4G"
 msgstr "Vain 4G"
 
-#: package/contents/ui/EditProfileDialog.qml:64
+#: package/contents/ui/EditProfileDialog.qml:62
 #, kde-format
 msgid "Only 3G"
 msgstr "Vain 3G"
 
-#: package/contents/ui/EditProfileDialog.qml:64
+#: package/contents/ui/EditProfileDialog.qml:62
 #, kde-format
 msgid "Only 2G"
 msgstr "Vain 2G"
 
-#: package/contents/ui/main.qml:37
+#: package/contents/ui/main.qml:35
 #, kde-format
 msgid "Modem not available"
 msgstr "Modeemi ei ole käytettävissä"
 
-#: package/contents/ui/main.qml:79
+#: package/contents/ui/main.qml:74
 #, kde-format
 msgid "Mobile data"
 msgstr "Mobiilidata"
 
-#: package/contents/ui/main.qml:80
+#: package/contents/ui/main.qml:79
+#, fuzzy, kde-format
+#| msgid "SIM is not locked"
+msgid "No SIM is inserted."
+msgstr "SIM-korttia ei ole lukittu"
+
+#: package/contents/ui/main.qml:81
+#, kde-format
+msgid "Mobile data is not available with this modem."
+msgstr ""
+
+#: package/contents/ui/main.qml:83
+#, kde-format
+msgid "An APN needs to be configured to have mobile data."
+msgstr ""
+
+#: package/contents/ui/main.qml:85
 #, kde-format
 msgid "Whether mobile data is enabled."
 msgstr "Onko mobiilidata käytössä."
 
-#: package/contents/ui/main.qml:96
+#: package/contents/ui/main.qml:116
 #, kde-format
 msgid "Data Usage"
 msgstr "Datakäyttö"
 
-#: package/contents/ui/main.qml:97
+#: package/contents/ui/main.qml:117
 #, kde-format
 msgid "View data usage."
 msgstr "Näytä datakäyttö."
 
-#: package/contents/ui/main.qml:113 package/contents/ui/Sim.qml:20
+#: package/contents/ui/main.qml:133 package/contents/ui/SimPage.qml:17
 #, kde-format
 msgid "SIM"
 msgstr "SIM"
 
-#: package/contents/ui/main.qml:113
+#: package/contents/ui/main.qml:133
 #, kde-format
 msgid "SIMs"
 msgstr "SIMit"
 
-#: package/contents/ui/main.qml:133
+#: package/contents/ui/main.qml:153
 #, kde-format
 msgid "SIM %1"
 msgstr "SIM %1"
 
-#: package/contents/ui/main.qml:134
+#: package/contents/ui/main.qml:154
 #, kde-format
 msgid "View SIM %1 details."
 msgstr "Näytä SIM-kortin %1 tiedot."
 
-#: package/contents/ui/Modem.qml:18
+#: package/contents/ui/ModemPage.qml:16
 #, kde-format
 msgid "Modem %1"
 msgstr "Modeemi %1"
 
-#: package/contents/ui/Modem.qml:43
+#: package/contents/ui/ModemPage.qml:41
 #, kde-format
 msgid "Modem Control"
 msgstr "Modeemin hallinta"
 
-#: package/contents/ui/Modem.qml:52
+#: package/contents/ui/ModemPage.qml:50
 #, kde-format
 msgid "Modem Restart"
 msgstr "Modeemin uudelleenkäynnistys"
 
-#: package/contents/ui/Modem.qml:55
+#: package/contents/ui/ModemPage.qml:53
 #, kde-format
 msgid "Force Modem Restart"
 msgstr "Pakota modeemin uudelleenkäynnistys"
 
-#: package/contents/ui/Modem.qml:71 package/contents/ui/Sim.qml:106
+#: package/contents/ui/ModemPage.qml:69 package/contents/ui/SimPage.qml:117
 #, kde-format
 msgid "Modem Details"
 msgstr "Modeemin tiedot"
 
-#: package/contents/ui/Modem.qml:84
+#: package/contents/ui/ModemPage.qml:82
 #, kde-format
 msgid "Access Technologies"
 msgstr "Saantitekniikat"
 
-#: package/contents/ui/Modem.qml:104
+#: package/contents/ui/ModemPage.qml:102
 #, kde-format
 msgid "IMEI"
 msgstr "IMEI"
 
-#: package/contents/ui/Modem.qml:120
+#: package/contents/ui/ModemPage.qml:118
 #, kde-format
 msgid "Manufacturer"
 msgstr "Valmistaja"
 
-#: package/contents/ui/Modem.qml:128
+#: package/contents/ui/ModemPage.qml:126
 #, kde-format
 msgid "Model"
 msgstr "Malli"
 
-#: package/contents/ui/Modem.qml:144
+#: package/contents/ui/ModemPage.qml:142
 #, kde-format
 msgid "Owned Numbers:"
 msgstr "Hallitut numerot:"
 
-#: package/contents/ui/Modem.qml:164
+#: package/contents/ui/ModemPage.qml:162
 #, kde-format
 msgid "Revision"
 msgstr "Julkaisu"
 
-#: package/contents/ui/Modem.qml:172
+#: package/contents/ui/ModemPage.qml:170
 #, kde-format
 msgid "Signal Quality"
 msgstr "Signaalin laatu"
 
-#: package/contents/ui/Modem.qml:180
+#: package/contents/ui/ModemPage.qml:178
 #, kde-format
 msgid "State"
 msgstr "Tila"
 
-#: package/contents/ui/Modem.qml:188
+#: package/contents/ui/ModemPage.qml:186
 #, kde-format
 msgid "Failure Reason"
 msgstr "Virheen syy"
 
-#: package/contents/ui/Modem.qml:196
+#: package/contents/ui/ModemPage.qml:194
 #, kde-format
 msgid "Registration State"
 msgstr "Rekisteröinnin tila"
 
-#: package/contents/ui/Modem.qml:204
+#: package/contents/ui/ModemPage.qml:202
 #, kde-format
 msgid "Roaming"
 msgstr "Verkkovierailu"
 
-#: package/contents/ui/Modem.qml:212
+#: package/contents/ui/ModemPage.qml:210
 #, kde-format
 msgid "Firmware Version"
 msgstr "Laiteohjelmaversio"
 
-#: package/contents/ui/Modem.qml:220
+#: package/contents/ui/ModemPage.qml:218
 #, kde-format
 msgid "Interface Name"
 msgstr "Liitännän nimi"
 
-#: package/contents/ui/Modem.qml:228
+#: package/contents/ui/ModemPage.qml:226
 #, kde-format
 msgid "Metered"
 msgstr "Mitattu"
 
-#: package/contents/ui/Modem.qml:236
+#: package/contents/ui/ModemPage.qml:234
 #, kde-format
 msgid "Active NetworkManager Connection"
 msgstr "Aktivoi NetworkManager-yhteys"
 
-#: package/contents/ui/Modem.qml:244
+#: package/contents/ui/ModemPage.qml:242
 #, kde-format
 msgid "Device"
 msgstr "Laite"
 
-#: package/contents/ui/Modem.qml:252
+#: package/contents/ui/ModemPage.qml:250
 #, kde-format
 msgid "Device ID"
 msgstr "Laitetunniste"
 
-#: package/contents/ui/Modem.qml:268
+#: package/contents/ui/ModemPage.qml:266
 #, kde-format
 msgid "Drivers:"
 msgstr "Ajurit:"
 
-#: package/contents/ui/Modem.qml:288
+#: package/contents/ui/ModemPage.qml:286
 #, kde-format
 msgid "Plugin"
 msgstr "Liitännäinen"
 
-#: package/contents/ui/Modem.qml:296
+#: package/contents/ui/ModemPage.qml:294
 #, kde-format
 msgid "Power State"
 msgstr "Virtatila"
 
-#: package/contents/ui/Modem.qml:304
+#: package/contents/ui/ModemPage.qml:302
 #, kde-format
 msgid "SIM Path"
 msgstr "SIM-kortin sijainti"
@@ -704,112 +720,27 @@ msgstr "Muokkaa"
 msgid "Delete"
 msgstr "Poista"
 
-#: package/contents/ui/Sim.qml:61
-#, kde-format
-msgid "Data Roaming"
-msgstr "Dataverkkovierailu"
-
-#: package/contents/ui/Sim.qml:62
-#, kde-format
-msgid "Allow your device to use networks other than your carrier."
-msgstr "Salli laitteen käyttää muitakin kuin omaa verkkoa."
-
-#: package/contents/ui/Sim.qml:73
-#, kde-format
-msgid "Modify APNs"
-msgstr "Muokkaa APN:iä"
-
-#: package/contents/ui/Sim.qml:74
-#, kde-format
-msgid "Configure access point names for your carrier."
-msgstr "Aseta operaattorisi tukiasemanimet."
-
-#: package/contents/ui/Sim.qml:84
-#, kde-format
-msgid "Networks"
-msgstr "Verkot"
-
-#: package/contents/ui/Sim.qml:85
-#, kde-format
-msgid "Select a network operator."
-msgstr "Valitse verkko-operaattori."
-
-#: package/contents/ui/Sim.qml:95 package/contents/ui/SimLock.qml:19
+#: package/contents/ui/SimLockPage.qml:19 package/contents/ui/SimPage.qml:106
 #, kde-format
 msgid "SIM Lock"
 msgstr "SIM on lukittu"
 
-#: package/contents/ui/Sim.qml:96
-#, kde-format
-msgid "Modify SIM lock settings."
-msgstr "Muuta SIM-lukitusasetuksia."
-
-#: package/contents/ui/Sim.qml:107
-#, kde-format
-msgid "View the details of the modem this SIM is connected to."
-msgstr "Näytä tiedot modeemista, johon tämä SIM on kytketty."
-
-#: package/contents/ui/Sim.qml:121
-#, kde-format
-msgid "SIM Details"
-msgstr "SIM-kortin tiedot"
-
-#: package/contents/ui/Sim.qml:134
-#, kde-format
-msgid "IMSI"
-msgstr "IMSI"
-
-#: package/contents/ui/Sim.qml:142
-#, kde-format
-msgid "EID"
-msgstr "EID"
-
-#: package/contents/ui/Sim.qml:150
-#, kde-format
-msgid "Operator Code (modem)"
-msgstr "Operaattorin koodi (modeemi)"
-
-#: package/contents/ui/Sim.qml:158
-#, kde-format
-msgid "Operator Name (modem)"
-msgstr "Operaattorin nimi (modeemi)"
-
-#: package/contents/ui/Sim.qml:166
-#, kde-format
-msgid "Operator Code (provided by SIM)"
-msgstr "Operaattorin koodi (SIM-kortilta)"
-
-#: package/contents/ui/Sim.qml:174
-#, kde-format
-msgid "Operator Name (provided by SIM)"
-msgstr "Operaattorin nimi (SIM-kortilta)"
-
-#: package/contents/ui/Sim.qml:182
-#, kde-format
-msgid "SIM ID"
-msgstr "SIMin tunniste"
-
-#: package/contents/ui/Sim.qml:199
-#, kde-format
-msgid "Emergency Numbers"
-msgstr "Hätänumerot"
-
-#: package/contents/ui/SimLock.qml:50
+#: package/contents/ui/SimLockPage.qml:50
 #, kde-format
 msgid "SIM is locked"
 msgstr "SIM on lukittu"
 
-#: package/contents/ui/SimLock.qml:51
+#: package/contents/ui/SimLockPage.qml:51
 #, kde-format
 msgid "In order to use this SIM, you must first unlock it."
 msgstr "SIM-korttia ei voi käyttää, ennen kuin sen lukitus on avattu."
 
-#: package/contents/ui/SimLock.qml:73
+#: package/contents/ui/SimLockPage.qml:73
 #, kde-format
 msgid "SIM is not locked"
 msgstr "SIM-korttia ei ole lukittu"
 
-#: package/contents/ui/SimLock.qml:74
+#: package/contents/ui/SimLockPage.qml:74
 #, kde-format
 msgid ""
 "You can lock your SIM to require a set PIN code for phone calls and mobile "
@@ -817,85 +748,175 @@ msgid ""
 msgstr ""
 "SIM-kortin voi lukita niin, että puhelut ja mobiilidata vaativat PIN-koodin."
 
-#: package/contents/ui/SimLock.qml:78
+#: package/contents/ui/SimLockPage.qml:78
 #, kde-format
 msgid "Lock SIM"
 msgstr "Lukitse SIM"
 
-#: package/contents/ui/SimLock.qml:92
+#: package/contents/ui/SimLockPage.qml:92
 #, kde-format
 msgid "Disable SIM Lock"
 msgstr "Poista SIM-lukitus käytöstä"
 
-#: package/contents/ui/SimLock.qml:93
+#: package/contents/ui/SimLockPage.qml:93
 #, kde-format
 msgid "Disable the SIM lock feature and remove the passcode on the SIM."
 msgstr "Poista SIM-lukitusominaisuus käytöstä ja SIM-kortin pääsykoodi."
 
-#: package/contents/ui/SimLock.qml:106
+#: package/contents/ui/SimLockPage.qml:106
 #, kde-format
 msgid "Change PIN"
 msgstr "Vaihda PIN-koodia"
 
-#: package/contents/ui/SimLock.qml:107
+#: package/contents/ui/SimLockPage.qml:107
 #, kde-format
 msgid "Change the passcode set on the SIM."
 msgstr "Muuta SIM-kortille asetettua pääsykoodia."
 
-#: package/contents/ui/SimLock.qml:122
+#: package/contents/ui/SimLockPage.qml:122
 #, kde-format
 msgid "Unlock SIM"
 msgstr "Poista SIM-kortin lukitus"
 
-#: package/contents/ui/SimLock.qml:130
+#: package/contents/ui/SimLockPage.qml:130
 #, kde-format
 msgid "Attempts left: %1"
 msgstr "Yrityksiä jäljellä: %1"
 
-#: package/contents/ui/SimLock.qml:134
+#: package/contents/ui/SimLockPage.qml:134
 #, kde-format
 msgid "Enter PIN"
 msgstr "Anna PIN"
 
-#: package/contents/ui/SimLock.qml:142
+#: package/contents/ui/SimLockPage.qml:142
 #, kde-format
 msgid "Change SIM PIN"
 msgstr "Vaihda SIM-kortin PIN"
 
-#: package/contents/ui/SimLock.qml:161 package/contents/ui/SimLock.qml:225
+#: package/contents/ui/SimLockPage.qml:161
+#: package/contents/ui/SimLockPage.qml:226
 #, kde-format
 msgid "PINs don't match!"
 msgstr "PINit eivät täsmää!"
 
-#: package/contents/ui/SimLock.qml:167 package/contents/ui/SimLock.qml:231
+#: package/contents/ui/SimLockPage.qml:167
+#: package/contents/ui/SimLockPage.qml:232
 #, kde-format
 msgid "PINs must be between 4 and 8 digits!"
 msgstr "PINin on oltava 4–8 numeroa pitkä!"
 
-#: package/contents/ui/SimLock.qml:172 package/contents/ui/SimLock.qml:199
+#: package/contents/ui/SimLockPage.qml:172
+#: package/contents/ui/SimLockPage.qml:199
 #, kde-format
 msgid "Current PIN"
 msgstr "Nykyinen PIN"
 
-#: package/contents/ui/SimLock.qml:177 package/contents/ui/SimLock.qml:236
+#: package/contents/ui/SimLockPage.qml:177
+#: package/contents/ui/SimLockPage.qml:237
 #, kde-format
 msgid "New PIN"
 msgstr "Uusi PIN"
 
-#: package/contents/ui/SimLock.qml:182 package/contents/ui/SimLock.qml:241
+#: package/contents/ui/SimLockPage.qml:182
+#: package/contents/ui/SimLockPage.qml:242
 #, kde-format
 msgid "Confirm PIN"
 msgstr "Vahvista PIN"
 
-#: package/contents/ui/SimLock.qml:190
+#: package/contents/ui/SimLockPage.qml:190
 #, kde-format
 msgid "Remove SIM PIN"
 msgstr "Poista SIM-kortin PIN"
 
-#: package/contents/ui/SimLock.qml:207
+#: package/contents/ui/SimLockPage.qml:207
 #, kde-format
 msgid "Add SIM PIN"
 msgstr "Lisää SIM-kortin PIN"
+
+#: package/contents/ui/SimPage.qml:72
+#, kde-format
+msgid "Data Roaming"
+msgstr "Dataverkkovierailu"
+
+#: package/contents/ui/SimPage.qml:73
+#, kde-format
+msgid "Allow your device to use networks other than your carrier."
+msgstr "Salli laitteen käyttää muitakin kuin omaa verkkoa."
+
+#: package/contents/ui/SimPage.qml:84
+#, kde-format
+msgid "Modify APNs"
+msgstr "Muokkaa APN:iä"
+
+#: package/contents/ui/SimPage.qml:85
+#, kde-format
+msgid "Configure access point names for your carrier."
+msgstr "Aseta operaattorisi tukiasemanimet."
+
+#: package/contents/ui/SimPage.qml:95
+#, kde-format
+msgid "Networks"
+msgstr "Verkot"
+
+#: package/contents/ui/SimPage.qml:96
+#, kde-format
+msgid "Select a network operator."
+msgstr "Valitse verkko-operaattori."
+
+#: package/contents/ui/SimPage.qml:107
+#, kde-format
+msgid "Modify SIM lock settings."
+msgstr "Muuta SIM-lukitusasetuksia."
+
+#: package/contents/ui/SimPage.qml:118
+#, kde-format
+msgid "View the details of the modem this SIM is connected to."
+msgstr "Näytä tiedot modeemista, johon tämä SIM on kytketty."
+
+#: package/contents/ui/SimPage.qml:132
+#, kde-format
+msgid "SIM Details"
+msgstr "SIM-kortin tiedot"
+
+#: package/contents/ui/SimPage.qml:145
+#, kde-format
+msgid "IMSI"
+msgstr "IMSI"
+
+#: package/contents/ui/SimPage.qml:153
+#, kde-format
+msgid "EID"
+msgstr "EID"
+
+#: package/contents/ui/SimPage.qml:161
+#, kde-format
+msgid "Operator Code (modem)"
+msgstr "Operaattorin koodi (modeemi)"
+
+#: package/contents/ui/SimPage.qml:169
+#, kde-format
+msgid "Operator Name (modem)"
+msgstr "Operaattorin nimi (modeemi)"
+
+#: package/contents/ui/SimPage.qml:177
+#, kde-format
+msgid "Operator Code (provided by SIM)"
+msgstr "Operaattorin koodi (SIM-kortilta)"
+
+#: package/contents/ui/SimPage.qml:185
+#, kde-format
+msgid "Operator Name (provided by SIM)"
+msgstr "Operaattorin nimi (SIM-kortilta)"
+
+#: package/contents/ui/SimPage.qml:193
+#, kde-format
+msgid "SIM ID"
+msgstr "SIMin tunniste"
+
+#: package/contents/ui/SimPage.qml:210
+#, kde-format
+msgid "Emergency Numbers"
+msgstr "Hätänumerot"
 
 #: sim.cpp:67
 #, kde-format
