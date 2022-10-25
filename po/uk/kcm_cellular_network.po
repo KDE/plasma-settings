@@ -7,7 +7,7 @@ msgstr ""
 "Project-Id-Version: plasma-settings\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2022-10-24 00:50+0000\n"
-"PO-Revision-Date: 2022-04-08 08:38+0300\n"
+"PO-Revision-Date: 2022-10-24 13:57+0300\n"
 "Last-Translator: Yuri Chornoivan <yurchor@ukr.net>\n"
 "Language-Team: Ukrainian <kde-i18n-uk@kde.org>\n"
 "Language: uk\n"
@@ -505,20 +505,19 @@ msgid "Mobile data"
 msgstr "Мобільні дані"
 
 #: package/contents/ui/main.qml:79
-#, fuzzy, kde-format
-#| msgid "SIM is not locked"
+#, kde-format
 msgid "No SIM is inserted."
-msgstr "SIM-картку не заблоковано"
+msgstr "Не вставлено жодної SIM-картки."
 
 #: package/contents/ui/main.qml:81
 #, kde-format
 msgid "Mobile data is not available with this modem."
-msgstr ""
+msgstr "Дані щодо мобільного зв'язку є недоступним для цього модема."
 
 #: package/contents/ui/main.qml:83
 #, kde-format
 msgid "An APN needs to be configured to have mobile data."
-msgstr ""
+msgstr "Для отримання даних щодо мобільного зв'язку має бути налаштовано APN."
 
 #: package/contents/ui/main.qml:85
 #, kde-format

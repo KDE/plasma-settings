@@ -7,7 +7,7 @@ msgstr ""
 "Project-Id-Version: kcm_cellular_network\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2022-10-24 00:50+0000\n"
-"PO-Revision-Date: 2022-06-04 15:32+0100\n"
+"PO-Revision-Date: 2022-10-24 11:42+0100\n"
 "Last-Translator: José Nuno Coelho Pires <zepires@gmail.com>\n"
 "Language-Team: Portuguese <kde-i18n-pt@kde.org>\n"
 "Language: pt\n"
@@ -507,20 +507,19 @@ msgid "Mobile data"
 msgstr "Dados móveis"
 
 #: package/contents/ui/main.qml:79
-#, fuzzy, kde-format
-#| msgid "SIM is not locked"
+#, kde-format
 msgid "No SIM is inserted."
-msgstr "O SIM não está bloqueado"
+msgstr "Não está inserido nenhum SIM."
 
 #: package/contents/ui/main.qml:81
 #, kde-format
 msgid "Mobile data is not available with this modem."
-msgstr ""
+msgstr "Os dados móveis não estão disponíveis com este modem."
 
 #: package/contents/ui/main.qml:83
 #, kde-format
 msgid "An APN needs to be configured to have mobile data."
-msgstr ""
+msgstr "É preciso configurar um APN para ter os dados móveis."
 
 #: package/contents/ui/main.qml:85
 #, kde-format

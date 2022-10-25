@@ -9,7 +9,7 @@ msgstr ""
 "Project-Id-Version: plasma-settings\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2022-10-24 00:50+0000\n"
-"PO-Revision-Date: 2022-04-08 09:43+0200\n"
+"PO-Revision-Date: 2022-10-24 10:53+0200\n"
 "Last-Translator: Josep M. Ferrer <txemaq@gmail.com>\n"
 "Language-Team: Catalan <kde-i18n-ca@kde.org>\n"
 "Language: ca\n"
@@ -506,20 +506,19 @@ msgid "Mobile data"
 msgstr "Dades mòbils"
 
 #: package/contents/ui/main.qml:79
-#, fuzzy, kde-format
-#| msgid "SIM is not locked"
+#, kde-format
 msgid "No SIM is inserted."
-msgstr "La SIM no està blocada"
+msgstr "No s'ha inserit cap SIM."
 
 #: package/contents/ui/main.qml:81
 #, kde-format
 msgid "Mobile data is not available with this modem."
-msgstr ""
+msgstr "Les dades mòbils no estan disponibles amb aquest mòdem."
 
 #: package/contents/ui/main.qml:83
 #, kde-format
 msgid "An APN needs to be configured to have mobile data."
-msgstr ""
+msgstr "Cal configurar un APN per a tenir dades mòbils."
 
 #: package/contents/ui/main.qml:85
 #, kde-format
@@ -1031,12 +1030,3 @@ msgstr "Error en enviar el PIN: %1"
 #, kde-format
 msgid "Error sending the PUK: %1"
 msgstr "Error en enviar el PUK: %1"
-
-#~ msgid "Modem State"
-#~ msgstr "Estat del mòdem"
-
-#~ msgid "Disable Modem"
-#~ msgstr "Desactiva el mòdem"
-
-#~ msgid "Enable Modem"
-#~ msgstr "Activa el mòdem"
