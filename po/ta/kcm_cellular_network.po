@@ -2,13 +2,13 @@
 # This file is distributed under the same license as the plasma-settings package.
 #
 # gobinathal <gobinathal8@gmail.com>, 2021.
-# Kishore G <kishore96@gmail.com>, 2021.
+# Kishore G <kishore96@gmail.com>, 2021, 2022.
 msgid ""
 msgstr ""
 "Project-Id-Version: plasma-settings\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2022-10-24 00:50+0000\n"
-"PO-Revision-Date: 2021-10-31 18:18+0530\n"
+"PO-Revision-Date: 2022-10-25 21:33+0530\n"
 "Last-Translator: Kishore G <kishore96@gmail.com>\n"
 "Language-Team: Tamil <kde-i18n-doc@kde.org>\n"
 "Language: ta\n"
@@ -16,7 +16,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Lokalize 21.08.2\n"
+"X-Generator: Lokalize 22.08.2\n"
 
 #, kde-format
 msgctxt "NAME OF TRANSLATORS"
@@ -367,7 +367,7 @@ msgstr ""
 #: modemdetails.cpp:376
 #, kde-format
 msgid "Scanning networks failed: %1"
-msgstr ""
+msgstr "பிணையங்களை கண்டறிவது தோல்வியடைந்தது: %1"
 
 #: modemdetails.cpp:433 package/contents/ui/ModemPage.qml:203
 #: package/contents/ui/SimPage.qml:138
@@ -427,17 +427,17 @@ msgstr "கிடைக்கிற பிணையங்கள்"
 #: package/contents/ui/AvailableNetworks.qml:40
 #, kde-format
 msgid "none"
-msgstr ""
+msgstr "ஏதுமில்லை"
 
 #: package/contents/ui/AvailableNetworks.qml:40
 #, kde-format
 msgid "Current operator: %1"
-msgstr ""
+msgstr "தற்போதைய நிறுவனம்: %1"
 
 #: package/contents/ui/AvailableNetworks.qml:43
 #, kde-format
 msgid "Scan For Networks"
-msgstr ""
+msgstr "பிணையங்களை கண்டறி"
 
 #: package/contents/ui/EditProfileDialog.qml:14
 #, kde-format
@@ -447,7 +447,7 @@ msgstr ""
 #: package/contents/ui/EditProfileDialog.qml:41
 #, kde-format
 msgid "Name"
-msgstr ""
+msgstr "பெயர்"
 
 #: package/contents/ui/EditProfileDialog.qml:46
 #, kde-format
@@ -457,27 +457,27 @@ msgstr ""
 #: package/contents/ui/EditProfileDialog.qml:51
 #, kde-format
 msgid "Username"
-msgstr ""
+msgstr "பயனர் பெயர்"
 
 #: package/contents/ui/EditProfileDialog.qml:56
 #, kde-format
 msgid "Password"
-msgstr ""
+msgstr "கடவுச்சொல்"
 
 #: package/contents/ui/EditProfileDialog.qml:61
 #, kde-format
 msgid "Network type"
-msgstr ""
+msgstr "பிணைய வகை"
 
 #: package/contents/ui/EditProfileDialog.qml:62
 #, kde-format
 msgid "4G/3G/2G"
-msgstr ""
+msgstr "4ஜி/3ஜி/2ஜி"
 
 #: package/contents/ui/EditProfileDialog.qml:62
 #, kde-format
 msgid "3G/2G"
-msgstr ""
+msgstr "3ஜி/2ஜி"
 
 #: package/contents/ui/EditProfileDialog.qml:62
 #, kde-format
@@ -497,12 +497,12 @@ msgstr "2ஜி மட்டும்"
 #: package/contents/ui/main.qml:35
 #, kde-format
 msgid "Modem not available"
-msgstr ""
+msgstr "இணக்கி கிடைக்கவில்லை"
 
 #: package/contents/ui/main.qml:74
 #, kde-format
 msgid "Mobile data"
-msgstr ""
+msgstr "கைபேசி தரவு"
 
 #: package/contents/ui/main.qml:79
 #, kde-format
