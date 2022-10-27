@@ -7,7 +7,7 @@ msgstr ""
 "Project-Id-Version: plasma-settings\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2022-10-24 00:50+0000\n"
-"PO-Revision-Date: 2022-04-11 17:13+0200\n"
+"PO-Revision-Date: 2022-10-26 11:31+0200\n"
 "Last-Translator: Vincenzo Reale <smart2128vr@gmail.com>\n"
 "Language-Team: Italian <kde-i18n-it@kde.org>\n"
 "Language: it\n"
@@ -15,7 +15,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"X-Generator: Lokalize 21.12.3\n"
+"X-Generator: Lokalize 22.08.2\n"
 
 #, kde-format
 msgctxt "NAME OF TRANSLATORS"
@@ -506,20 +506,19 @@ msgid "Mobile data"
 msgstr "Dati mobili"
 
 #: package/contents/ui/main.qml:79
-#, fuzzy, kde-format
-#| msgid "SIM is not locked"
+#, kde-format
 msgid "No SIM is inserted."
-msgstr "La SIM non è bloccata"
+msgstr "Nessuna SIM inserita."
 
 #: package/contents/ui/main.qml:81
 #, kde-format
 msgid "Mobile data is not available with this modem."
-msgstr ""
+msgstr "I dati mobili non sono disponibili con questo modem."
 
 #: package/contents/ui/main.qml:83
 #, kde-format
 msgid "An APN needs to be configured to have mobile data."
-msgstr ""
+msgstr "Un APN deve essere configurato per avere dati mobili."
 
 #: package/contents/ui/main.qml:85
 #, kde-format
