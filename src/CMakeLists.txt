@@ -19,7 +19,6 @@ target_link_libraries(plasma-settings
     KF5::DBusAddons
     KF5::QuickAddons
     KF5::I18n
-    KF5::Declarative
 )
 
 install(TARGETS plasma-settings ${KDE_INSTALL_TARGETS_DEFAULT_ARGS})

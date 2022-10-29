@@ -13,23 +13,22 @@
 #include <KJsonUtils>
 #include <KPackage/PackageLoader>
 #include <KPluginFactory>
-
-#include <KDeclarative/KDeclarative>
+#include <KRuntimePlatform>
 
 #include <QDebug>
 
 ModulesModel::ModulesModel(QObject *parent)
     : QAbstractListModel(parent)
 {
-    qDebug() << "Current platform is " << KDeclarative::KDeclarative::runtimePlatform();
+    qDebug() << "Current platform is " << KRuntimePlatform::runtimePlatform();
     const auto kcms = KPluginMetaData::findPlugins("kcms")
         << KPluginMetaData::findPlugins("plasma/kcms") << KPluginMetaData::findPlugins("plasma/kcms/systemsettings");
     for (const KPluginMetaData &pluginMetaData : kcms) {
         bool isCurrentPlatform = false;
-        if (KDeclarative::KDeclarative::runtimePlatform().isEmpty()) {
+        if (KRuntimePlatform::runtimePlatform().isEmpty()) {
             isCurrentPlatform = true;
         } else {
-            const auto platforms = KDeclarative::KDeclarative::runtimePlatform();
+            const auto platforms = KRuntimePlatform::runtimePlatform();
             for (const QString &platform : platforms) {
                 if (pluginMetaData.formFactors().contains(platform)) {
                     qDebug() << "Platform for " << pluginMetaData.name() << " is " << pluginMetaData.formFactors();
