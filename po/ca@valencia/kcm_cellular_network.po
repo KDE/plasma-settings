@@ -764,7 +764,7 @@ msgstr "Desactiva el bloqueig de la SIM"
 #, kde-format
 msgid "Disable the SIM lock feature and remove the passcode on the SIM."
 msgstr ""
-"Desactiva la funcionalitat de bloqueig de la SIM i elimina el codi de pas a "
+"Desactiva la característica de bloqueig de la SIM i elimina el codi de pas a "
 "la SIM."
 
 #: package/contents/ui/SimLockPage.qml:106
