@@ -117,89 +117,47 @@ SimpleKCM {
                 }
             }
         }
-        
+
         MobileForm.FormCard {
             Layout.fillWidth: true
             Layout.topMargin: Kirigami.Units.largeSpacing
-            
+
             contentItem: ColumnLayout {
                 spacing: 0
-                
+
                 MobileForm.FormCardHeader {
                     title: i18n("Screen")
                 }
-                
+
                 MobileForm.FormComboBoxDelegate {
                     id: dimScreenCombo
                     text: i18nc("Part of a sentence like 'Dim screen after 5 minutes'", "Dim screen after")
                     model: kcm.timeOptions()
-                    currentValue: kcm.timeOptions()[kcm.dimScreenIdx]
+                    currentIndex: kcm.dimScreenIdx
                     Component.onCompleted: dialog.parent = powermanagementModule
-                    
-                    dialogDelegate: QQC2.RadioDelegate {
-                        implicitWidth: Kirigami.Units.gridUnit * 16
-                        topPadding: Kirigami.Units.smallSpacing * 2
-                        bottomPadding: Kirigami.Units.smallSpacing * 2
-                        
-                        text: modelData
-                        checked: dimScreenCombo.currentValue == modelData
-                        onCheckedChanged: {
-                            if (checked) {
-                                dimScreenCombo.currentValue = modelData;
-                                kcm.dimScreenIdx = model.index;
-                            }
-                        }
-                    }
+                    onCurrentIndexChanged: kcm.dimScreenIdx = currentIndex
                 }
-                
+
                 MobileForm.FormDelegateSeparator { above: dimScreenCombo; below: screenOffCombo }
-                
+
                 MobileForm.FormComboBoxDelegate {
                     id: screenOffCombo
                     text: i18nc("Part of a sentence like 'Turn off screen after 5 minutes'", "Turn off screen after")
                     model: kcm.timeOptions()
-                    currentValue: kcm.timeOptions()[kcm.screenOffIdx]
+                    currentIndex: kcm.screenOffIdx
                     Component.onCompleted: dialog.parent = powermanagementModule
-                    
-                    dialogDelegate: QQC2.RadioDelegate {
-                        implicitWidth: Kirigami.Units.gridUnit * 16
-                        topPadding: Kirigami.Units.smallSpacing * 2
-                        bottomPadding: Kirigami.Units.smallSpacing * 2
-                        
-                        text: modelData
-                        checked: screenOffCombo.currentValue == modelData
-                        onCheckedChanged: {
-                            if (checked) {
-                                screenOffCombo.currentValue = modelData;
-                                kcm.screenOffIdx = model.index;
-                            }
-                        }
-                    }
+                    onCurrentIndexChanged: kcm.screenOffIdx = currentIndex
                 }
-                
+
                 MobileForm.FormDelegateSeparator { above: screenOffCombo; below: suspendCombo }
-                
+
                 MobileForm.FormComboBoxDelegate {
                     id: suspendCombo
                     text: i18nc("Part of a sentence like 'Suspend device after 5 minutes'", "Suspend device after")
                     model: kcm.timeOptions()
-                    currentValue: kcm.timeOptions()[kcm.screenOffIdx]
+                    currentIndex: kcm.suspendSessionIdx
                     Component.onCompleted: dialog.parent = powermanagementModule
-                    
-                    dialogDelegate: QQC2.RadioDelegate {
-                        implicitWidth: Kirigami.Units.gridUnit * 16
-                        topPadding: Kirigami.Units.smallSpacing * 2
-                        bottomPadding: Kirigami.Units.smallSpacing * 2
-                        
-                        text: modelData
-                        checked: suspendCombo.currentValue == modelData
-                        onCheckedChanged: {
-                            if (checked) {
-                                suspendCombo.currentValue = modelData;
-                                kcm.screenOffIdx = model.index;
-                            }
-                        }
-                    }
+                    onCurrentIndexChanged: kcm.suspendSessionIdx = currentIndex
                 }
             }
         }
