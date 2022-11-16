@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-settings\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2022-08-12 00:47+0000\n"
+"POT-Creation-Date: 2022-11-16 00:49+0000\n"
 "PO-Revision-Date: 2022-07-02 12:50+0200\n"
 "Last-Translator: Frederik Schwarzer <schwarzer@kde.org>\n"
 "Language-Team: German <kde-i18n-de@kde.org>\n"
@@ -298,7 +298,7 @@ msgctxt "Part of a sentence like 'Dim screen after 5 minutes'"
 msgid "Dim screen after"
 msgstr "Bildschirm abdunkeln nach:"
 
-#: package/contents/ui/main.qml:159
+#: package/contents/ui/main.qml:145
 #, fuzzy, kde-format
 #| msgctxt "Part of a sentence like 'Turn off screen after 5 minutes'"
 #| msgid "Turn off screen after:"
@@ -306,7 +306,7 @@ msgctxt "Part of a sentence like 'Turn off screen after 5 minutes'"
 msgid "Turn off screen after"
 msgstr "Bildschirm ausschalten nach:"
 
-#: package/contents/ui/main.qml:184
+#: package/contents/ui/main.qml:156
 #, fuzzy, kde-format
 #| msgctxt "Part of a sentence like 'Suspend device after 5 minutes'"
 #| msgid "Suspend device after:"
