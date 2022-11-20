@@ -1,13 +1,13 @@
 # Copyright (C) YEAR This file is copyright:
 # This file is distributed under the same license as the plasma-settings package.
 #
-# A S Alam <aalam.yellow@gmail.com>, 2020, 2021.
+# A S Alam <aalam.yellow@gmail.com>, 2020, 2021, 2022.
 msgid ""
 msgstr ""
 "Project-Id-Version: plasma-settings\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2022-11-16 00:49+0000\n"
-"PO-Revision-Date: 2021-06-08 22:19-0700\n"
+"PO-Revision-Date: 2022-11-19 06:11-0800\n"
 "Last-Translator: A S Alam <aalam@satluj.org>\n"
 "Language-Team: Punjabi <punjabi-users@lists.sf.net>\n"
 "Language: pa\n"
@@ -15,7 +15,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Lokalize 20.12.2\n"
+"X-Generator: Lokalize 22.08.2\n"
 
 #, kde-format
 msgctxt "NAME OF TRANSLATORS"
@@ -75,243 +75,237 @@ msgstr "ਤੋਮਾਜ਼ ਕਾਨਬਰਾਵਾ"
 #: mobilepower.cpp:60
 #, kde-format
 msgid "Devin Lin"
-msgstr ""
+msgstr "ਡੇਵਿਨ ਲਿਨ"
 
 #: package/contents/ui/BatteryPage.qml:26
 #, kde-format
 msgid "Battery Information"
-msgstr ""
+msgstr "ਬੈਟਰੀ ਦੀ ਜਾਣਕਾਰੀ"
 
 #: package/contents/ui/BatteryPage.qml:51
 #, kde-format
 msgid "Usage Graph"
-msgstr ""
+msgstr "ਵਰਤੋ ਦਾ ਗਰਾਫ"
 
 #: package/contents/ui/BatteryPage.qml:82
-#, fuzzy, kde-format
-#| msgid "0%"
+#, kde-format
 msgctxt "literal percent sign"
 msgid "%"
-msgstr "0%"
+msgstr "%"
 
 #: package/contents/ui/BatteryPage.qml:100
 #, kde-format
 msgid "Information"
-msgstr ""
+msgstr "ਜਾਣਕਾਰੀ"
 
 #: package/contents/ui/BatteryPage.qml:105
 #, kde-format
 msgid "Is Rechargeable"
-msgstr ""
+msgstr "ਚਾਰਜ ਹੋਣਯੋਗ ਹੈ"
 
 #: package/contents/ui/BatteryPage.qml:106
 #, kde-format
 msgid "Yes"
-msgstr ""
+msgstr "ਹਾਂ"
 
 #: package/contents/ui/BatteryPage.qml:106
 #, kde-format
 msgid "No"
-msgstr ""
+msgstr "ਨਹੀਂ"
 
 #: package/contents/ui/BatteryPage.qml:113
 #, kde-format
 msgid "Charge State"
-msgstr ""
+msgstr "ਚਾਰਜ ਹਾਲਤ"
 
 #: package/contents/ui/BatteryPage.qml:116
 #, kde-format
 msgid "Not charging"
-msgstr ""
+msgstr "ਚਾਰਜ ਨਹੀਂ ਹੋ ਰਹੀ"
 
 #: package/contents/ui/BatteryPage.qml:117
 #, kde-format
 msgid "Charging"
-msgstr ""
+msgstr "ਚਾਰਜ ਹੋ ਰਹੀ ਹੈ"
 
 #: package/contents/ui/BatteryPage.qml:118
 #, kde-format
 msgid "Discharging"
-msgstr ""
+msgstr "ਡਿਸ-ਚਾਰਜ ਹੋ ਰਹੀ ਹੈ"
 
 #: package/contents/ui/BatteryPage.qml:119
 #, kde-format
 msgid "Fully charged"
-msgstr ""
+msgstr "ਪੂਰੀ ਚਾਰਜ"
 
 #: package/contents/ui/BatteryPage.qml:120
 #, kde-format
 msgid "Unknown"
-msgstr ""
+msgstr "ਅਣਪਛਾਤਾ"
 
 #: package/contents/ui/BatteryPage.qml:129
 #, kde-format
 msgid "Current Charge"
-msgstr ""
+msgstr "ਮੌਜੂਦਾ ਚਾਰਜ"
 
 #: package/contents/ui/BatteryPage.qml:130
 #: package/contents/ui/BatteryPage.qml:138 package/contents/ui/main.qml:95
-#, fuzzy, kde-format
-#| msgid "0%"
+#, kde-format
 msgid "%"
-msgstr "0%"
+msgstr "%"
 
 #: package/contents/ui/BatteryPage.qml:130
 #: package/contents/ui/BatteryPage.qml:138
 #, kde-format
 msgctxt "%1 is value, %2 is unit"
 msgid "%1 %2"
-msgstr ""
+msgstr "%1 %2"
 
 #: package/contents/ui/BatteryPage.qml:137
 #, kde-format
 msgid "Health"
-msgstr ""
+msgstr "ਸੇਹਤ"
 
 #: package/contents/ui/BatteryPage.qml:145
 #, kde-format
 msgid "Vendor"
-msgstr ""
+msgstr "ਵੇਂਡਰ"
 
 #: package/contents/ui/BatteryPage.qml:153
 #, kde-format
 msgid "Model"
-msgstr ""
+msgstr "ਮਾਡਲ"
 
 #: package/contents/ui/BatteryPage.qml:161
 #, kde-format
 msgid "Serial Number"
-msgstr ""
+msgstr "ਸੀਰੀਅਲ ਨੰਬਰ"
 
 #: package/contents/ui/BatteryPage.qml:169
 #, kde-format
 msgid "Technology"
-msgstr ""
+msgstr "ਤਕਨੀਕ"
 
 #: package/contents/ui/BatteryPage.qml:172
 #, kde-format
 msgid "Lithium ion"
-msgstr ""
+msgstr "ਲੀਥੀਅਮ ਆਈਨ"
 
 #: package/contents/ui/BatteryPage.qml:173
 #, kde-format
 msgid "Lithium polymer"
-msgstr ""
+msgstr "ਲੀਥੀਅਮ ਪੋਲੀਮਰ"
 
 #: package/contents/ui/BatteryPage.qml:174
 #, kde-format
 msgid "Lithium iron phosphate"
-msgstr ""
+msgstr "ਲੀਥੀਅਮ ਆਈਰਨ ਫਾਸਫੇਟ"
 
 #: package/contents/ui/BatteryPage.qml:175
 #, kde-format
 msgid "Lead acid"
-msgstr ""
+msgstr "ਲੈੱਡ ਐਸਿਡ"
 
 #: package/contents/ui/BatteryPage.qml:176
 #, kde-format
 msgid "Nickel cadmium"
-msgstr ""
+msgstr "ਨਿੱਕਲ ਕੈਡੀਅਮ"
 
 #: package/contents/ui/BatteryPage.qml:177
 #, kde-format
 msgid "Nickel metal hydride"
-msgstr ""
+msgstr "ਨਿਕਲ ਮੈਟਲ ਹਾਇਡਰਾਇਡ"
 
 #: package/contents/ui/BatteryPage.qml:178
 #, kde-format
 msgid "Unknown technology"
-msgstr ""
+msgstr "ਅਣਪਛਾਤੀ ਤਕਨੀਕ"
 
 #: package/contents/ui/main.qml:40
 #, kde-format
 msgid "Devices"
-msgstr ""
+msgstr "ਡਿਵਾਈਸ"
 
 #: package/contents/ui/main.qml:85
 #, kde-format
 msgid "Internal battery"
-msgstr ""
+msgstr "ਅੰਦਰੂਨੀ ਬੈਟਰੀ"
 
 #: package/contents/ui/main.qml:86
 #, kde-format
 msgid "UPS battery"
-msgstr ""
+msgstr "UPS ਬੈਟਰੀ"
 
 #: package/contents/ui/main.qml:87
 #, kde-format
 msgid "Monitor battery"
-msgstr ""
+msgstr "ਮਾਨੀਟਰ ਦੀ ਬੈਟਰੀ"
 
 #: package/contents/ui/main.qml:88
 #, kde-format
 msgid "Mouse battery"
-msgstr ""
+msgstr "ਮਾਊਂਸ ਬੈਟਰੀ"
 
 #: package/contents/ui/main.qml:89
 #, kde-format
 msgid "Keyboard battery"
-msgstr ""
+msgstr "ਕੀਬੋਰਡ ਬੈਟਰੀ"
 
 #: package/contents/ui/main.qml:90
 #, kde-format
 msgid "PDA battery"
-msgstr ""
+msgstr "PDA ਬੈਟਰੀ"
 
 #: package/contents/ui/main.qml:91
 #, kde-format
 msgid "Phone battery"
-msgstr ""
+msgstr "ਫ਼ੋਨ ਦੀ ਬੈਟਰੀ"
 
 #: package/contents/ui/main.qml:92
 #, kde-format
 msgid "Unknown battery"
-msgstr ""
+msgstr "ਅਣਪਛਾਤੀ ਬੈਟਰੀ"
 
 #: package/contents/ui/main.qml:95
 #, kde-format
 msgctxt "%1 is value, %2 is unit"
 msgid "%1%2"
-msgstr ""
+msgstr "%1%2"
 
 #: package/contents/ui/main.qml:97
 #, kde-format
 msgctxt "%1 is battery type, %2 is charge percent"
 msgid "%1 %2 (Charging)"
-msgstr ""
+msgstr "%1 %2 (ਚਾਰਜ ਹੋ ਰਿਹਾ ਹੈ)"
 
 #: package/contents/ui/main.qml:97
 #, kde-format
 msgctxt "%1 is battery type, %2 is charge percent"
 msgid "%1 %2"
-msgstr ""
+msgstr "%1 %2"
 
 #: package/contents/ui/main.qml:129
 #, kde-format
 msgid "Screen"
-msgstr ""
+msgstr "ਸਕਰੀਨ"
 
 #: package/contents/ui/main.qml:134
-#, fuzzy, kde-format
-#| msgctxt "Part of a sentence like 'Turn off the Screen after 5 minutes'"
-#| msgid "Turn off the Screen"
+#, kde-format
 msgctxt "Part of a sentence like 'Dim screen after 5 minutes'"
 msgid "Dim screen after"
-msgstr "ਸਕਰੀਨ ਬੰਦ ਕਰੋ"
+msgstr "ਇਸ ਦੇ ਬਾਅਦ ਸਕਰੀਨ ਡਿਮ ਕਰੋ"
 
 #: package/contents/ui/main.qml:145
-#, fuzzy, kde-format
-#| msgctxt "Part of a sentence like 'Turn off the Screen after 5 minutes'"
-#| msgid "Turn off the Screen"
+#, kde-format
 msgctxt "Part of a sentence like 'Turn off screen after 5 minutes'"
 msgid "Turn off screen after"
-msgstr "ਸਕਰੀਨ ਬੰਦ ਕਰੋ"
+msgstr "ਇਸ ਦੇ ਬਾਅਦ ਸਕਰੀਨ ਬੰਦ ਕਰੋ"
 
 #: package/contents/ui/main.qml:156
 #, kde-format
 msgctxt "Part of a sentence like 'Suspend device after 5 minutes'"
 msgid "Suspend device after"
-msgstr ""
+msgstr "ਇਸ ਦੇ ਬਾਅਦ ਡਿਵਾਈਸ ਸਸਪੈਂਡ ਕਰੋ"
 
 #~ msgctxt "Part of a sentence like 'Dim Display after 5 minutes'"
 #~ msgid "Dim Display"
