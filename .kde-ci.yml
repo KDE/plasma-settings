@@ -18,3 +18,4 @@ Dependencies:
     'frameworks/kio': '@stable'
     'frameworks/networkmanager-qt': '@stable'
     'frameworks/modemmanager-qt': '@stable'
+    'libraries/kirigami-addons': '@latest'

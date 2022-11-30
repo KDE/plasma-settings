@@ -32,6 +32,7 @@ ecm_setup_version(${PROJECT_VERSION}
 )
 
 find_package(Qt${QT_MAJOR_VERSION} ${QT_MIN_VERSION} REQUIRED NO_MODULE COMPONENTS Core Quick Test Gui Widgets)
+find_package(KF5KirigamiAddons 0.6 REQUIRED)
 
 find_package(KF5 ${KF5_MIN_VERSION} REQUIRED COMPONENTS
     CoreAddons
@@ -53,7 +54,6 @@ find_package(PkgConfig REQUIRED)
 pkg_check_modules(GOBJECT gobject-2.0 REQUIRED IMPORTED_TARGET)
 pkg_check_modules(GIO gio-2.0 REQUIRED IMPORTED_TARGET)
 
-ecm_find_qmlmodule(org.kde.kirigamiaddons.labs.mobileform 0.1)
 ecm_find_qmlmodule(org.kde.kcm 1.0)
 
 add_definitions(-DQT_DISABLE_DEPRECATED_BEFORE=0x060000)
