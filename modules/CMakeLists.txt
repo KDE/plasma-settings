@@ -16,5 +16,3 @@ add_subdirectory(cellularnetwork)
 
 # Virtual Keyboard (maliit)
 add_subdirectory(virtualkeyboard)
-
-add_subdirectory(password)
