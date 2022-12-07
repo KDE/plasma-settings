@@ -18,29 +18,10 @@ Kirigami.ApplicationWindow {
     pageStack.defaultColumnWidth: Kirigami.Units.gridUnit * 35
     pageStack.globalToolBar.style: Kirigami.ApplicationHeaderStyle.ToolBar
     pageStack.globalToolBar.showNavigationButtons: Kirigami.ApplicationHeaderStyle.ShowBackButton;
-    
+    pageStack.popHiddenPages: true
+
     property alias currentModule: module
     property string currentModuleName
-    
-    // pop pages when not in use
-    Connections {
-        target: applicationWindow().pageStack
-        function onCurrentIndexChanged() {
-            timer.restart();
-        }
-    }
-    
-    // wait for animation to finish before popping pages
-    Timer {
-        id: timer
-        interval: 300
-        onTriggered: {
-            let currentIndex = applicationWindow().pageStack.currentIndex;
-            while (applicationWindow().pageStack.depth > (currentIndex + 1) && currentIndex >= 0) {
-                applicationWindow().pageStack.pop();
-            }
-        }
-    }
     
     // initialize context drawer
     contextDrawer: Kirigami.ContextDrawer {
