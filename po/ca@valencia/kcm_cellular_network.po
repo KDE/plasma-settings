@@ -364,7 +364,7 @@ msgstr "S'ha registrat per a «CSFB no preferit», en la xarxa d'itinerància."
 #: modemdetails.cpp:337
 #, kde-format
 msgid "Attached for access to Restricted Local Operator Services."
-msgstr "S'ha connectat per accedir als serveis restringits d'operador local."
+msgstr "S'ha connectat per a accedir als serveis restringits d'operador local."
 
 #: modemdetails.cpp:376
 #, kde-format
