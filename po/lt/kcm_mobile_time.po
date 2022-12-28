@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: plasma-settings\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2022-07-07 00:47+0000\n"
-"PO-Revision-Date: 2022-11-16 22:22+0200\n"
+"PO-Revision-Date: 2022-12-28 02:19+0200\n"
 "Last-Translator: Moo <<>>\n"
 "Language-Team: none\n"
 "Language: lt\n"
@@ -17,7 +17,7 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=4; plural=(n==1 ? 0 : n%10>=2 && (n%100<10 || n"
 "%100>=20) ? 1 : n%10==0 || (n%100>10 && n%100<20) ? 2 : 3);\n"
-"X-Generator: Poedit 3.2.1\n"
+"X-Generator: Poedit 3.2.2\n"
 
 #, kde-format
 msgctxt "NAME OF TRANSLATORS"
@@ -3023,55 +3023,55 @@ msgstr ""
 #, kde-format
 msgctxt "This is a continent/area associated with a particular timezone"
 msgid "Africa"
-msgstr ""
+msgstr "Afrika"
 
 #: timezonesi18n.cpp:777
 #, kde-format
 msgctxt "This is a continent/area associated with a particular timezone"
 msgid "America"
-msgstr ""
+msgstr "Amerika"
 
 #: timezonesi18n.cpp:778
 #, kde-format
 msgctxt "This is a continent/area associated with a particular timezone"
 msgid "Antarctica"
-msgstr ""
+msgstr "Antarktida"
 
 #: timezonesi18n.cpp:779
 #, kde-format
 msgctxt "This is a continent/area associated with a particular timezone"
 msgid "Asia"
-msgstr ""
+msgstr "Azija"
 
 #: timezonesi18n.cpp:780
 #, kde-format
 msgctxt "This is a continent/area associated with a particular timezone"
 msgid "Atlantic"
-msgstr ""
+msgstr "Atlanto vandenynas"
 
 #: timezonesi18n.cpp:781
 #, kde-format
 msgctxt "This is a continent/area associated with a particular timezone"
 msgid "Australia"
-msgstr ""
+msgstr "Australija"
 
 #: timezonesi18n.cpp:782
 #, kde-format
 msgctxt "This is a continent/area associated with a particular timezone"
 msgid "Europe"
-msgstr ""
+msgstr "Europa"
 
 #: timezonesi18n.cpp:783
 #, kde-format
 msgctxt "This is a continent/area associated with a particular timezone"
 msgid "Indian"
-msgstr ""
+msgstr "Indijos vandenynas"
 
 #: timezonesi18n.cpp:784
 #, kde-format
 msgctxt "This is a continent/area associated with a particular timezone"
 msgid "Pacific"
-msgstr ""
+msgstr "Ramusis vandenynas"
 
 #~ msgid "Use 24-hour clock:"
 #~ msgstr "Naudoti 24 val. laikrodį:"
