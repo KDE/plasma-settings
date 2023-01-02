@@ -654,7 +654,7 @@ msgstr "Ús mesurat"
 #: package/contents/ui/ModemPage.qml:234
 #, kde-format
 msgid "Active NetworkManager Connection"
-msgstr "Connexió activa del NetworkManager"
+msgstr "Connexió activa de NetworkManager"
 
 #: package/contents/ui/ModemPage.qml:242
 #, kde-format
