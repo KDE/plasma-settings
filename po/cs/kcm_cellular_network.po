@@ -1,6 +1,6 @@
 # Copyright (C) YEAR This file is copyright:
 # This file is distributed under the same license as the plasma-settings package.
-# Vit Pelcak <vpelcak@suse.cz>, 2021, 2022.
+# Vit Pelcak <vit@pelcak.org>, 2021, 2022.
 #
 msgid ""
 msgstr ""
@@ -504,10 +504,9 @@ msgid "Mobile data"
 msgstr "Mobilní data"
 
 #: package/contents/ui/main.qml:79
-#, fuzzy, kde-format
-#| msgid "SIM is not locked"
+#, kde-format
 msgid "No SIM is inserted."
-msgstr "SIM není uzamčena"
+msgstr ""
 
 #: package/contents/ui/main.qml:81
 #, kde-format
