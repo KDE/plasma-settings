@@ -7,7 +7,7 @@ msgstr ""
 "Project-Id-Version: plasma-settings\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2022-10-24 00:50+0000\n"
-"PO-Revision-Date: 2023-01-04 10:19+0100\n"
+"PO-Revision-Date: 2023-01-06 15:05+0100\n"
 "Last-Translator: Vit Pelcak <vit@pelcak.org>\n"
 "Language-Team: Czech <kde-i18n-doc@kde.org>\n"
 "Language: cs\n"
@@ -506,17 +506,17 @@ msgstr "Mobilní data"
 #: package/contents/ui/main.qml:79
 #, kde-format
 msgid "No SIM is inserted."
-msgstr ""
+msgstr "SIM není vložena"
 
 #: package/contents/ui/main.qml:81
 #, kde-format
 msgid "Mobile data is not available with this modem."
-msgstr ""
+msgstr "Mobilní data s tímto modememem nejsou dostupná."
 
 #: package/contents/ui/main.qml:83
 #, kde-format
 msgid "An APN needs to be configured to have mobile data."
-msgstr ""
+msgstr "APN potřebuje nastavení pro mobilní data."
 
 #: package/contents/ui/main.qml:85
 #, kde-format
@@ -621,7 +621,7 @@ msgstr "Stav"
 #: package/contents/ui/ModemPage.qml:186
 #, kde-format
 msgid "Failure Reason"
-msgstr ""
+msgstr "Důvod selhání"
 
 #: package/contents/ui/ModemPage.qml:194
 #, kde-format
