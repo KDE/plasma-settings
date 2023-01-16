@@ -1,12 +1,12 @@
 # Translation of kcm_cellular_network to Norwegian Nynorsk
 #
-# Karl Ove Hufthammer <karl@huftis.org>, 2022.
+# Karl Ove Hufthammer <karl@huftis.org>, 2022, 2023.
 msgid ""
 msgstr ""
 "Project-Id-Version: plasma-settings\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2022-10-24 00:50+0000\n"
-"PO-Revision-Date: 2022-02-13 14:58+0100\n"
+"PO-Revision-Date: 2023-01-15 12:46+0100\n"
 "Last-Translator: Karl Ove Hufthammer <karl@huftis.org>\n"
 "Language-Team: Norwegian Nynorsk <l10n-no@lister.huftis.org>\n"
 "Language: nn\n"
@@ -14,7 +14,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Lokalize 21.12.2\n"
+"X-Generator: Lokalize 22.12.1\n"
 "X-Environment: kde\n"
 "X-Accelerator-Marker: &\n"
 "X-Text-Markup: kde4\n"
@@ -78,7 +78,7 @@ msgstr "Ukjend"
 #: modem.cpp:502
 #, kde-format
 msgid "Unmanaged"
-msgstr ""
+msgstr "Ikkje styrt"
 
 #: modem.cpp:504
 #, kde-format
@@ -123,12 +123,12 @@ msgstr "WaitingForSecondaries"
 #: modem.cpp:520
 #, kde-format
 msgid "Activated"
-msgstr ""
+msgstr "Slått på"
 
 #: modem.cpp:522
 #, kde-format
 msgid "Deactivating"
-msgstr ""
+msgstr "Tek ut av bruk"
 
 #: modem.cpp:524 modemdetails.cpp:253
 #, kde-format
@@ -233,7 +233,7 @@ msgstr ""
 #: modemdetails.cpp:257
 #, kde-format
 msgid "Initializing"
-msgstr ""
+msgstr "Klargjer"
 
 #: modemdetails.cpp:259 package/contents/ui/SimPage.qml:137
 #, kde-format
@@ -243,12 +243,12 @@ msgstr "Låst"
 #: modemdetails.cpp:261
 #, kde-format
 msgid "Disabled"
-msgstr ""
+msgstr "Teke ut av bruk"
 
 #: modemdetails.cpp:263
 #, kde-format
 msgid "Disabling"
-msgstr ""
+msgstr "Tek ut av bruk"
 
 #: modemdetails.cpp:265
 #, kde-format
@@ -258,7 +258,7 @@ msgstr ""
 #: modemdetails.cpp:267 package/contents/ui/ModemPage.qml:110
 #, kde-format
 msgid "Enabled"
-msgstr ""
+msgstr "Teke i bruk"
 
 #: modemdetails.cpp:269
 #, kde-format
@@ -303,7 +303,7 @@ msgstr ""
 #: modemdetails.cpp:292
 #, kde-format
 msgid "SIM is available but unusable."
-msgstr ""
+msgstr "SIM-kortet er tilgjengeleg, men ikkje brukbart."
 
 #: modemdetails.cpp:315
 #, kde-format
@@ -423,22 +423,22 @@ msgstr ""
 #: package/contents/ui/AvailableNetworks.qml:16
 #, kde-format
 msgid "Available Networks"
-msgstr ""
+msgstr "Tilgjengelege nettverk"
 
 #: package/contents/ui/AvailableNetworks.qml:40
 #, kde-format
 msgid "none"
-msgstr ""
+msgstr "ingen"
 
 #: package/contents/ui/AvailableNetworks.qml:40
 #, kde-format
 msgid "Current operator: %1"
-msgstr ""
+msgstr "Gjeldande operatør: %1"
 
 #: package/contents/ui/AvailableNetworks.qml:43
 #, kde-format
 msgid "Scan For Networks"
-msgstr ""
+msgstr "Søk etter nettverk"
 
 #: package/contents/ui/EditProfileDialog.qml:14
 #, kde-format
@@ -503,7 +503,7 @@ msgstr ""
 #: package/contents/ui/main.qml:74
 #, kde-format
 msgid "Mobile data"
-msgstr ""
+msgstr "Mobildata"
 
 #: package/contents/ui/main.qml:79
 #, kde-format

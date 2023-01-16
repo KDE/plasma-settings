@@ -1,12 +1,12 @@
 # Translation of kcm_mobile_info to Norwegian Nynorsk
 #
-# Karl Ove Hufthammer <karl@huftis.org>, 2020.
+# Karl Ove Hufthammer <karl@huftis.org>, 2020, 2023.
 msgid ""
 msgstr ""
 "Project-Id-Version: plasma-settings\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2022-07-07 00:47+0000\n"
-"PO-Revision-Date: 2020-05-02 22:54+0200\n"
+"PO-Revision-Date: 2023-01-15 13:02+0100\n"
 "Last-Translator: Karl Ove Hufthammer <karl@huftis.org>\n"
 "Language-Team: Norwegian Nynorsk <l10n-no@lister.huftis.org>\n"
 "Language: nn\n"
@@ -14,7 +14,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Lokalize 20.04.0\n"
+"X-Generator: Lokalize 22.12.1\n"
 "X-Environment: kde\n"
 "X-Accelerator-Marker: &\n"
 "X-Text-Markup: kde4\n"
@@ -47,37 +47,37 @@ msgstr "Systeminformasjon"
 #: package/contents/ui/main.qml:42
 #, kde-format
 msgid "Operating System"
-msgstr ""
+msgstr "Operativsystem"
 
 #: package/contents/ui/main.qml:49
 #, kde-format
 msgid "Webpage"
-msgstr ""
+msgstr "Heimeside"
 
 #: package/contents/ui/main.qml:70
 #, kde-format
 msgid "KDE Plasma Version"
-msgstr ""
+msgstr "KDE Plasma-versjon"
 
 #: package/contents/ui/main.qml:77
 #, kde-format
 msgid "KDE Frameworks Version"
-msgstr ""
+msgstr "KDE Frameworks-versjon"
 
 #: package/contents/ui/main.qml:84
 #, kde-format
 msgid "Qt Version"
-msgstr ""
+msgstr "Qt-versjon"
 
 #: package/contents/ui/main.qml:91
 #, kde-format
 msgid "Kernel Version"
-msgstr ""
+msgstr "Kjerneversjon"
 
 #: package/contents/ui/main.qml:98
 #, kde-format
 msgid "OS Type"
-msgstr ""
+msgstr "OS-type"
 
 #: package/contents/ui/main.qml:99
 #, kde-format
@@ -89,13 +89,13 @@ msgstr "%1-bit"
 #, kde-format
 msgid "Processor"
 msgid_plural "Processors"
-msgstr[0] ""
-msgstr[1] ""
+msgstr[0] "Prosessor"
+msgstr[1] "Prosessorar"
 
 #: package/contents/ui/main.qml:123
 #, kde-format
 msgid "Memory"
-msgstr ""
+msgstr "Minne"
 
 #: package/contents/ui/main.qml:127
 #, kde-format
