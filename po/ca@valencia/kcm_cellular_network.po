@@ -109,7 +109,7 @@ msgstr "Cal autorització"
 #: modem.cpp:514
 #, kde-format
 msgid "ConfiguringIp"
-msgstr "Configuració de la IP"
+msgstr "Configureu la IP"
 
 #: modem.cpp:516
 #, kde-format

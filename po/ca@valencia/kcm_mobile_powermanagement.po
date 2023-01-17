@@ -68,7 +68,7 @@ msgstr "Mai"
 #: mobilepower.cpp:58
 #, kde-format
 msgid "Energy Settings"
-msgstr "Configuració de l'estalvi d'energia"
+msgstr "Configureu l'estalvi d'energia"
 
 #: mobilepower.cpp:59
 #, kde-format
