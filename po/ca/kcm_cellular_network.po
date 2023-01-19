@@ -1,15 +1,15 @@
 # Translation of kcm_cellular_network.po to Catalan
-# Copyright (C) 2021-2022 This_file_is_part_of_KDE
+# Copyright (C) 2021-2023 This_file_is_part_of_KDE
 # This file is distributed under the license LGPL version 2.1 or
 # version 3 or later versions approved by the membership of KDE e.V.
 #
-# Josep M. Ferrer <txemaq@gmail.com>, 2021, 2022.
+# Josep M. Ferrer <txemaq@gmail.com>, 2021, 2022, 2023.
 msgid ""
 msgstr ""
 "Project-Id-Version: plasma-settings\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2022-10-24 00:50+0000\n"
-"PO-Revision-Date: 2022-10-24 10:53+0200\n"
+"PO-Revision-Date: 2023-01-18 20:57+0100\n"
 "Last-Translator: Josep M. Ferrer <txemaq@gmail.com>\n"
 "Language-Team: Catalan <kde-i18n-ca@kde.org>\n"
 "Language: ca\n"
@@ -774,7 +774,7 @@ msgstr "Canvia el PIN"
 #: package/contents/ui/SimLockPage.qml:107
 #, kde-format
 msgid "Change the passcode set on the SIM."
-msgstr "Canvia el codi de pas establer en la SIM."
+msgstr "Canvia el codi de pas establert en la SIM."
 
 #: package/contents/ui/SimLockPage.qml:122
 #, kde-format
