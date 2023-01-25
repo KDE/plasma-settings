@@ -7,7 +7,7 @@ msgstr ""
 "Project-Id-Version: plasma-settings\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2022-10-24 00:50+0000\n"
-"PO-Revision-Date: 2023-01-06 15:05+0100\n"
+"PO-Revision-Date: 2023-01-24 17:03+0100\n"
 "Last-Translator: Vit Pelcak <vit@pelcak.org>\n"
 "Language-Team: Czech <kde-i18n-doc@kde.org>\n"
 "Language: cs\n"
@@ -15,7 +15,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=3; plural=(n==1) ? 0 : (n>=2 && n<=4) ? 1 : 2;\n"
-"X-Generator: Lokalize 22.12.0\n"
+"X-Generator: Lokalize 22.12.1\n"
 
 #, kde-format
 msgctxt "NAME OF TRANSLATORS"
@@ -646,7 +646,7 @@ msgstr "Název rozhraní"
 #: package/contents/ui/ModemPage.qml:226
 #, kde-format
 msgid "Metered"
-msgstr "Měřená"
+msgstr "Měřené"
 
 #: package/contents/ui/ModemPage.qml:234
 #, kde-format
