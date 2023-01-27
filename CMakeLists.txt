@@ -1,8 +1,7 @@
-project(plasma-settings)
-
-set(PROJECT_VERSION "22.11")
-
 cmake_minimum_required(VERSION 3.16)
+
+set(PROJECT_VERSION "23.01")
+project(plasma-settings VERSION ${PROJECT_VERSION})
 
 include(FeatureSummary)
 
