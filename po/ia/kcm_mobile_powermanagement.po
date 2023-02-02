@@ -1,13 +1,13 @@
 # Copyright (C) YEAR This file is copyright:
 # This file is distributed under the same license as the plasma-settings package.
 #
-# Giovanni Sora <g.sora@tiscali.it>, 2020, 2021, 2022.
+# Giovanni Sora <g.sora@tiscali.it>, 2020, 2021, 2022, 2023.
 msgid ""
 msgstr ""
 "Project-Id-Version: plasma-settings\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2022-11-16 00:49+0000\n"
-"PO-Revision-Date: 2022-07-15 12:13+0200\n"
+"PO-Revision-Date: 2023-02-01 22:46+0100\n"
 "Last-Translator: giovanni <g.sora@tiscali.it>\n"
 "Language-Team: Interlingua <kde-i18n-doc@kde.org>\n"
 "Language: ia\n"
@@ -15,7 +15,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Lokalize 21.12.3\n"
+"X-Generator: Lokalize 22.12.1\n"
 
 #, kde-format
 msgctxt "NAME OF TRANSLATORS"
@@ -75,221 +75,219 @@ msgstr "Tomaz Canabrava"
 #: mobilepower.cpp:60
 #, kde-format
 msgid "Devin Lin"
-msgstr ""
+msgstr "Devin Lin"
 
 #: package/contents/ui/BatteryPage.qml:26
 #, kde-format
 msgid "Battery Information"
-msgstr ""
+msgstr "Information de Batteria"
 
 #: package/contents/ui/BatteryPage.qml:51
 #, kde-format
 msgid "Usage Graph"
-msgstr ""
+msgstr "Grapho de Uso"
 
 #: package/contents/ui/BatteryPage.qml:82
-#, fuzzy, kde-format
-#| msgid "0%"
+#, kde-format
 msgctxt "literal percent sign"
 msgid "%"
-msgstr "0%"
+msgstr "%"
 
 #: package/contents/ui/BatteryPage.qml:100
 #, kde-format
 msgid "Information"
-msgstr ""
+msgstr "Information"
 
 #: package/contents/ui/BatteryPage.qml:105
 #, kde-format
 msgid "Is Rechargeable"
-msgstr ""
+msgstr "Es Recarcabile"
 
 #: package/contents/ui/BatteryPage.qml:106
 #, kde-format
 msgid "Yes"
-msgstr ""
+msgstr "Si"
 
 #: package/contents/ui/BatteryPage.qml:106
 #, kde-format
 msgid "No"
-msgstr ""
+msgstr "No"
 
 #: package/contents/ui/BatteryPage.qml:113
 #, kde-format
 msgid "Charge State"
-msgstr ""
+msgstr "Stato de cargamento"
 
 #: package/contents/ui/BatteryPage.qml:116
 #, kde-format
 msgid "Not charging"
-msgstr ""
+msgstr "Non cargante"
 
 #: package/contents/ui/BatteryPage.qml:117
 #, kde-format
 msgid "Charging"
-msgstr ""
+msgstr "Cargante"
 
 #: package/contents/ui/BatteryPage.qml:118
 #, kde-format
 msgid "Discharging"
-msgstr ""
+msgstr "Discargante"
 
 #: package/contents/ui/BatteryPage.qml:119
 #, kde-format
 msgid "Fully charged"
-msgstr ""
+msgstr "Completemente cargate"
 
 #: package/contents/ui/BatteryPage.qml:120
 #, kde-format
 msgid "Unknown"
-msgstr ""
+msgstr "Incognite"
 
 #: package/contents/ui/BatteryPage.qml:129
 #, kde-format
 msgid "Current Charge"
-msgstr ""
+msgstr "Cargamento currente"
 
 #: package/contents/ui/BatteryPage.qml:130
 #: package/contents/ui/BatteryPage.qml:138 package/contents/ui/main.qml:95
-#, fuzzy, kde-format
-#| msgid "0%"
+#, kde-format
 msgid "%"
-msgstr "0%"
+msgstr "%"
 
 #: package/contents/ui/BatteryPage.qml:130
 #: package/contents/ui/BatteryPage.qml:138
 #, kde-format
 msgctxt "%1 is value, %2 is unit"
 msgid "%1 %2"
-msgstr ""
+msgstr "%1 %2"
 
 #: package/contents/ui/BatteryPage.qml:137
 #, kde-format
 msgid "Health"
-msgstr ""
+msgstr "Sanitate"
 
 #: package/contents/ui/BatteryPage.qml:145
 #, kde-format
 msgid "Vendor"
-msgstr ""
+msgstr "Venditor"
 
 #: package/contents/ui/BatteryPage.qml:153
 #, kde-format
 msgid "Model"
-msgstr ""
+msgstr "Modello"
 
 #: package/contents/ui/BatteryPage.qml:161
 #, kde-format
 msgid "Serial Number"
-msgstr ""
+msgstr "Numero serial"
 
 #: package/contents/ui/BatteryPage.qml:169
 #, kde-format
 msgid "Technology"
-msgstr ""
+msgstr "Technologia"
 
 #: package/contents/ui/BatteryPage.qml:172
 #, kde-format
 msgid "Lithium ion"
-msgstr ""
+msgstr "Ion de Lithium"
 
 #: package/contents/ui/BatteryPage.qml:173
 #, kde-format
 msgid "Lithium polymer"
-msgstr ""
+msgstr "Polymero de Lithium"
 
 #: package/contents/ui/BatteryPage.qml:174
 #, kde-format
 msgid "Lithium iron phosphate"
-msgstr ""
+msgstr "Phosphato de Ferro de Lithium"
 
 #: package/contents/ui/BatteryPage.qml:175
 #, kde-format
 msgid "Lead acid"
-msgstr ""
+msgstr "Acido de Plumbo"
 
 #: package/contents/ui/BatteryPage.qml:176
 #, kde-format
 msgid "Nickel cadmium"
-msgstr ""
+msgstr "Nickel Cadmium"
 
 #: package/contents/ui/BatteryPage.qml:177
 #, kde-format
 msgid "Nickel metal hydride"
-msgstr ""
+msgstr "Nickel metal hydride"
 
 #: package/contents/ui/BatteryPage.qml:178
 #, kde-format
 msgid "Unknown technology"
-msgstr ""
+msgstr "Technologia incognite"
 
 #: package/contents/ui/main.qml:40
 #, kde-format
 msgid "Devices"
-msgstr ""
+msgstr "Dispositivos"
 
 #: package/contents/ui/main.qml:85
 #, kde-format
 msgid "Internal battery"
-msgstr ""
+msgstr "Batteria interne"
 
 #: package/contents/ui/main.qml:86
 #, kde-format
 msgid "UPS battery"
-msgstr ""
+msgstr "Batteria UPS"
 
 #: package/contents/ui/main.qml:87
 #, kde-format
 msgid "Monitor battery"
-msgstr ""
+msgstr "Batteria de Monitor"
 
 #: package/contents/ui/main.qml:88
 #, kde-format
 msgid "Mouse battery"
-msgstr ""
+msgstr "Batteria de mus"
 
 #: package/contents/ui/main.qml:89
 #, kde-format
 msgid "Keyboard battery"
-msgstr ""
+msgstr "Batteria de claviero"
 
 #: package/contents/ui/main.qml:90
 #, kde-format
 msgid "PDA battery"
-msgstr ""
+msgstr "Batteria PDA"
 
 #: package/contents/ui/main.qml:91
 #, kde-format
 msgid "Phone battery"
-msgstr ""
+msgstr "Batteria de telephono"
 
 #: package/contents/ui/main.qml:92
 #, kde-format
 msgid "Unknown battery"
-msgstr ""
+msgstr "Batteria incognite"
 
 #: package/contents/ui/main.qml:95
 #, kde-format
 msgctxt "%1 is value, %2 is unit"
 msgid "%1%2"
-msgstr ""
+msgstr "%1%2"
 
 #: package/contents/ui/main.qml:97
 #, kde-format
 msgctxt "%1 is battery type, %2 is charge percent"
 msgid "%1 %2 (Charging)"
-msgstr ""
+msgstr "%1 %2 (Cargante)"
 
 #: package/contents/ui/main.qml:97
 #, kde-format
 msgctxt "%1 is battery type, %2 is charge percent"
 msgid "%1 %2"
-msgstr ""
+msgstr "%1 %2"
 
 #: package/contents/ui/main.qml:129
 #, kde-format
 msgid "Screen"
-msgstr ""
+msgstr "Schermo"
 
 #: package/contents/ui/main.qml:134
 #, kde-format
