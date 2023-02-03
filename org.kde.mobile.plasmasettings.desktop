@@ -131,3 +131,4 @@ X-DBUS-StartupType=Unique
 X-DBUS-ServiceName=org.kde.mobile.plasmasettings
 Categories=Qt;KDE;Settings;
 X-KDE-FormFactors=tablet,handset
+Keywords=Preferences;Settings;
