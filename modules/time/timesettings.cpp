@@ -20,7 +20,6 @@
 #include <QTimer>
 #include <QVariant>
 
-#include <KAboutData>
 #include <KConfigGroup>
 #include <KLocalizedString>
 #include <KPluginFactory>
@@ -34,17 +33,14 @@
 
 K_PLUGIN_FACTORY_WITH_JSON(TimeSettingsFactory, "timesettings.json", registerPlugin<TimeSettings>();)
 
-TimeSettings::TimeSettings(QObject *parent, const QVariantList &args)
-    : KQuickAddons::ConfigModule(parent, args)
+TimeSettings::TimeSettings(QObject *parent, const KPluginMetaData &metaData, const QVariantList &args)
+    : KQuickAddons::ConfigModule(parent, metaData, args)
     , m_useNtp(true)
 {
     qDebug() << "time settings init";
     m_timeZonesModel = nullptr;
     setTimeZone(QTimeZone::systemTimeZone().id());
 
-    KAboutData *about = new KAboutData(QStringLiteral("kcm_mobile_time"), i18n("Date and Time"), QStringLiteral("0.1"), QString(), KAboutLicense::LGPL);
-    about->addAuthor(i18n("Sebastian Kügler"), QString(), QStringLiteral("sebas@kde.org"));
-    setAboutData(about);
     setButtons(Apply | Default);
 
     qmlRegisterAnonymousType<TimeZoneModel>("org.kde.timesettings", 1);

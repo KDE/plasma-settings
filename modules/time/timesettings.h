@@ -54,7 +54,7 @@ public:
      * @arg parent The parent object
      * @arg list Arguments, currently unused
      */
-    TimeSettings(QObject *parent, const QVariantList &args);
+    TimeSettings(QObject *parent, const KPluginMetaData &metaData, const QVariantList &args);
     ~TimeSettings() override;
 
     QString currentTimeText();

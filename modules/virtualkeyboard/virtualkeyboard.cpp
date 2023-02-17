@@ -5,7 +5,6 @@
 */
 
 #include "virtualkeyboard.h"
-#include <KAboutData>
 #include <KLocalizedString>
 #include <KPluginFactory>
 
@@ -29,15 +28,11 @@
 
 K_PLUGIN_CLASS_WITH_JSON(VirtualKeyboard, "metadata.json")
 
-VirtualKeyboard::VirtualKeyboard(QObject *parent, const QVariantList &args)
-    : KQuickAddons::ConfigModule(parent, args)
+VirtualKeyboard::VirtualKeyboard(QObject *parent, const KPluginMetaData &metaData, const QVariantList &args)
+    : KQuickAddons::ConfigModule(parent, metaData, args)
     , m_gsettings(new GSettingsItem("/org/maliit/keyboard/maliit/", parent))
     , m_langModel(new LanguageModel(this, m_gsettings))
 {
-    KAboutData *about = new KAboutData("kcm_mobile_virtualkeyboard", i18n("Virtual Keyboard"), "1.0", QString(), KAboutLicense::GPL);
-    about->addAuthor(i18n("Bhushan Shah"), QString(), "bshah@kde.org");
-    setAboutData(about);
-
     qmlRegisterAnonymousType<LanguageModel>("org.kde.kcm.virtualkeyboard", 1);
 
     m_autoCapitalize = m_gsettings->value("auto-capitalization").toBool();

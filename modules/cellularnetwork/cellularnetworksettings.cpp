@@ -7,7 +7,6 @@
 
 #include "cellularnetworksettings.h"
 
-#include <KAboutData>
 #include <KLocalizedString>
 #include <KPluginFactory>
 #include <KUser>
@@ -18,17 +17,12 @@ K_PLUGIN_CLASS_WITH_JSON(CellularNetworkSettings, "cellularnetworksettings.json"
 
 CellularNetworkSettings *CellularNetworkSettings::staticInst = nullptr;
 
-CellularNetworkSettings::CellularNetworkSettings(QObject *parent, const QVariantList &args)
-    : KQuickAddons::ConfigModule(parent, args)
+CellularNetworkSettings::CellularNetworkSettings(QObject *parent, const KPluginMetaData &metaData, const QVariantList &args)
+    : KQuickAddons::ConfigModule(parent, metaData, args)
     , m_modemList{}
     , m_simList{}
 {
     CellularNetworkSettings::staticInst = this;
-
-    KAboutData *about = new KAboutData("kcm_cellular_network", i18n("Cellular Networks"), "0.1", QString(), KAboutLicense::GPL);
-    about->addAuthor(i18n("Devin Lin"), QString(), QStringLiteral("espidev@gmail.com"));
-    about->addAuthor(i18n("Martin Kacej"), QString(), QStringLiteral("m.kacej@atlas.sk"));
-    setAboutData(about);
 
     qmlRegisterType<ProfileSettings>("cellularnetworkkcm", 1, 0, "ProfileSettings");
     qmlRegisterType<Modem>("cellularnetworkkcm", 1, 0, "Modem");

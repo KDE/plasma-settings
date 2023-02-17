@@ -4,7 +4,6 @@
 #include "mobilepower.h"
 #include "statisticsprovider.h"
 
-#include <KAboutData>
 #include <KConfigGroup>
 #include <KLocalizedString>
 #include <KPluginFactory>
@@ -46,8 +45,8 @@ const QMap<int, qreal> idxToMinutes = {
     {NEVER, 0},
 };
 
-MobilePower::MobilePower(QObject *parent, const QVariantList &args)
-    : KQuickAddons::ConfigModule(parent, args)
+MobilePower::MobilePower(QObject *parent, const KPluginMetaData &metaData, const QVariantList &args)
+    : KQuickAddons::ConfigModule(parent, metaData, args)
     , m_batteries{new BatteryModel(this)}
     , m_profilesConfig{KSharedConfig::openConfig("powermanagementprofilesrc", KConfig::SimpleConfig | KConfig::CascadeConfig)}
 {
@@ -55,10 +54,6 @@ MobilePower::MobilePower(QObject *parent, const QVariantList &args)
     qmlRegisterUncreatableType<Solid::Battery>("org.kde.kcm.power.mobile.private", 1, 0, "Battery", "");
     qmlRegisterType<StatisticsProvider>("org.kde.kcm.power.mobile.private", 1, 0, "HistoryModel");
 
-    KAboutData *about = new KAboutData("kcm_mobile_power", i18n("Energy Settings"), "1.0", QString(), KAboutLicense::GPL);
-    about->addAuthor(i18n("Tomaz Canabrava"), QString(), "tcanabrava@kde.org");
-    about->addAuthor(i18n("Devin Lin"), QString(), "devin@kde.org");
-    setAboutData(about);
     setButtons(KQuickAddons::ConfigModule::NoAdditionalButton);
     load();
 }
