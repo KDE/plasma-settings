@@ -2,6 +2,7 @@
     "Categories": "Qt;KDE;X-KDE-settings-system;",
     "KPlugin": {
         "Description": "Configure power management settings",
+        "Description[az]": "Enerji sərfiyyatı ayarlarını tənzimlə",
         "Description[ca@valencia]": "Configuració dels paràmetres de gestió d'energia",
         "Description[ca]": "Configuració dels paràmetres de gestió d'energia",
         "Description[cs]": "Konfigurace nastavení správy napájení",
@@ -36,6 +37,7 @@
         ],
         "Icon": "preferences-system-power-management",
         "Name": "Energy",
+        "Name[az]": "Enerji sərfiyyatı",
         "Name[ca@valencia]": "Energia",
         "Name[ca]": "Energia",
         "Name[cs]": "Energie",

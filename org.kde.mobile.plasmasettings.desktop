@@ -132,6 +132,7 @@ X-DBUS-ServiceName=org.kde.mobile.plasmasettings
 Categories=Qt;KDE;Settings;
 X-KDE-FormFactors=tablet,handset
 Keywords=Preferences;Settings;
+Keywords[az]=Preferences;Settings;Parametrlər;Seçimlər;Ayarlar;
 Keywords[ca]=Preferències;Configuració;Arranjament;
 Keywords[ca@valencia]=Preferències;Configuració;
 Keywords[cs]=Předvolby;Nastavení;
