@@ -6,7 +6,7 @@ msgstr ""
 "Project-Id-Version: plasma-settings\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2022-10-24 00:50+0000\n"
-"PO-Revision-Date: 2023-01-15 12:46+0100\n"
+"PO-Revision-Date: 2023-02-21 21:08+0100\n"
 "Last-Translator: Karl Ove Hufthammer <karl@huftis.org>\n"
 "Language-Team: Norwegian Nynorsk <l10n-no@lister.huftis.org>\n"
 "Language: nn\n"
@@ -14,7 +14,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Lokalize 22.12.1\n"
+"X-Generator: Lokalize 22.12.2\n"
 "X-Environment: kde\n"
 "X-Accelerator-Marker: &\n"
 "X-Text-Markup: kde4\n"
@@ -52,7 +52,7 @@ msgstr "Feil ved nullstilling av modemet: %1"
 #: modem.cpp:245 modem.cpp:414
 #, kde-format
 msgid "Error updating connection settings for %1: %2."
-msgstr ""
+msgstr "Feil ved oppdatering av tilkoplings­innstillingar for %1: %2."
 
 #: modem.cpp:325
 #, kde-format
@@ -253,7 +253,7 @@ msgstr "Tek ut av bruk"
 #: modemdetails.cpp:265
 #, kde-format
 msgid "Enabling"
-msgstr ""
+msgstr "Tek i bruk"
 
 #: modemdetails.cpp:267 package/contents/ui/ModemPage.qml:110
 #, kde-format
@@ -273,32 +273,32 @@ msgstr ""
 #: modemdetails.cpp:273
 #, kde-format
 msgid "Disconnecting"
-msgstr ""
+msgstr "Koplar frå"
 
 #: modemdetails.cpp:275
 #, kde-format
 msgid "Connecting"
-msgstr ""
+msgstr "Koplar til"
 
 #: modemdetails.cpp:277
 #, kde-format
 msgid "Connected"
-msgstr ""
+msgstr "Kopla til"
 
 #: modemdetails.cpp:286
 #, kde-format
 msgid "No error."
-msgstr ""
+msgstr "Ingen feil."
 
 #: modemdetails.cpp:288
 #, kde-format
 msgid "Unknown error."
-msgstr ""
+msgstr "Ukjend feil."
 
 #: modemdetails.cpp:290
 #, kde-format
 msgid "SIM is required but missing."
-msgstr ""
+msgstr "SIM-kort er nødvendig, men manglar."
 
 #: modemdetails.cpp:292
 #, kde-format
@@ -396,29 +396,29 @@ msgstr ""
 #: modemdetails.cpp:476 package/contents/ui/EditProfileDialog.qml:62
 #, kde-format
 msgid "2G"
-msgstr ""
+msgstr "2G"
 
 #: modemdetails.cpp:479 modemdetails.cpp:482 modemdetails.cpp:485
 #: modemdetails.cpp:488 modemdetails.cpp:491 modemdetails.cpp:494
 #: modemdetails.cpp:497 modemdetails.cpp:500 modemdetails.cpp:503
 #, kde-format
 msgid "3G"
-msgstr ""
+msgstr "3G"
 
 #: modemdetails.cpp:506
 #, kde-format
 msgid "4G"
-msgstr ""
+msgstr "4G"
 
 #: modemdetails.cpp:509
 #, kde-format
 msgid "5G"
-msgstr ""
+msgstr "5G"
 
 #: modemdetails.cpp:512 package/contents/ui/EditProfileDialog.qml:62
 #, kde-format
 msgid "Any"
-msgstr ""
+msgstr "Vilkårleg"
 
 #: package/contents/ui/AvailableNetworks.qml:16
 #, kde-format
@@ -443,57 +443,57 @@ msgstr "Søk etter nettverk"
 #: package/contents/ui/EditProfileDialog.qml:14
 #, kde-format
 msgid "Edit APN"
-msgstr ""
+msgstr "Rediger APN"
 
 #: package/contents/ui/EditProfileDialog.qml:41
 #, kde-format
 msgid "Name"
-msgstr ""
+msgstr "Namn"
 
 #: package/contents/ui/EditProfileDialog.qml:46
 #, kde-format
 msgid "APN"
-msgstr ""
+msgstr "APN"
 
 #: package/contents/ui/EditProfileDialog.qml:51
 #, kde-format
 msgid "Username"
-msgstr ""
+msgstr "Brukarnamn"
 
 #: package/contents/ui/EditProfileDialog.qml:56
 #, kde-format
 msgid "Password"
-msgstr ""
+msgstr "Passord"
 
 #: package/contents/ui/EditProfileDialog.qml:61
 #, kde-format
 msgid "Network type"
-msgstr ""
+msgstr "Nettverkstype"
 
 #: package/contents/ui/EditProfileDialog.qml:62
 #, kde-format
 msgid "4G/3G/2G"
-msgstr ""
+msgstr "4G/3G/2G"
 
 #: package/contents/ui/EditProfileDialog.qml:62
 #, kde-format
 msgid "3G/2G"
-msgstr ""
+msgstr "3G/2G"
 
 #: package/contents/ui/EditProfileDialog.qml:62
 #, kde-format
 msgid "Only 4G"
-msgstr ""
+msgstr "Berre 4G"
 
 #: package/contents/ui/EditProfileDialog.qml:62
 #, kde-format
 msgid "Only 3G"
-msgstr ""
+msgstr "Berre 3G"
 
 #: package/contents/ui/EditProfileDialog.qml:62
 #, kde-format
 msgid "Only 2G"
-msgstr ""
+msgstr "Berre 2G"
 
 #: package/contents/ui/main.qml:35
 #, kde-format
@@ -508,12 +508,12 @@ msgstr "Mobildata"
 #: package/contents/ui/main.qml:79
 #, kde-format
 msgid "No SIM is inserted."
-msgstr ""
+msgstr "Manglar SIM-kort."
 
 #: package/contents/ui/main.qml:81
 #, kde-format
 msgid "Mobile data is not available with this modem."
-msgstr ""
+msgstr "Mobildata er ikkje tilgjengeleg med dette modemet."
 
 #: package/contents/ui/main.qml:83
 #, kde-format
@@ -538,7 +538,7 @@ msgstr ""
 #: package/contents/ui/main.qml:133 package/contents/ui/SimPage.qml:17
 #, kde-format
 msgid "SIM"
-msgstr ""
+msgstr "SIM"
 
 #: package/contents/ui/main.qml:133
 #, kde-format
@@ -603,7 +603,7 @@ msgstr ""
 #: package/contents/ui/ModemPage.qml:142
 #, kde-format
 msgid "Owned Numbers:"
-msgstr ""
+msgstr "Eigde nummer:"
 
 #: package/contents/ui/ModemPage.qml:162
 #, kde-format
@@ -698,7 +698,7 @@ msgstr ""
 #: package/contents/ui/ProfileList.qml:34
 #, kde-format
 msgid "Add Connection"
-msgstr ""
+msgstr "Ny tilkopling"
 
 #: package/contents/ui/ProfileList.qml:101
 #, kde-format
@@ -723,7 +723,7 @@ msgstr ""
 #: package/contents/ui/SimLockPage.qml:19 package/contents/ui/SimPage.qml:106
 #, kde-format
 msgid "SIM Lock"
-msgstr ""
+msgstr "SIM-lås"
 
 #: package/contents/ui/SimLockPage.qml:50
 #, kde-format
@@ -750,7 +750,7 @@ msgstr ""
 #: package/contents/ui/SimLockPage.qml:78
 #, kde-format
 msgid "Lock SIM"
-msgstr ""
+msgstr "Lås SIM-kort"
 
 #: package/contents/ui/SimLockPage.qml:92
 #, kde-format
@@ -775,7 +775,7 @@ msgstr ""
 #: package/contents/ui/SimLockPage.qml:122
 #, kde-format
 msgid "Unlock SIM"
-msgstr ""
+msgstr "Lås opp SIM-kort"
 
 #: package/contents/ui/SimLockPage.qml:130
 #, kde-format
@@ -1005,7 +1005,7 @@ msgstr ""
 #: sim.cpp:143
 #, kde-format
 msgid "(empty)"
-msgstr ""
+msgstr "(tom)"
 
 #: sim.cpp:158
 #, kde-format
