@@ -1,13 +1,13 @@
 # Copyright (C) YEAR This file is copyright:
 # This file is distributed under the same license as the plasma-settings package.
-# Shinjo Park <kde@peremen.name>, 2021, 2022.
+# Shinjo Park <kde@peremen.name>, 2021, 2022, 2023.
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: plasma-settings\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2022-10-24 00:50+0000\n"
-"PO-Revision-Date: 2022-04-16 01:40+0200\n"
+"PO-Revision-Date: 2023-03-01 00:04+0100\n"
 "Last-Translator: Shinjo Park <kde@peremen.name>\n"
 "Language-Team: Korean <kde-kr@kde.org>\n"
 "Language: ko\n"
@@ -15,7 +15,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
-"X-Generator: Lokalize 21.08.1\n"
+"X-Generator: Lokalize 21.12.3\n"
 
 #, kde-format
 msgctxt "NAME OF TRANSLATORS"
@@ -504,20 +504,19 @@ msgid "Mobile data"
 msgstr "모바일 데이터"
 
 #: package/contents/ui/main.qml:79
-#, fuzzy, kde-format
-#| msgid "SIM is not locked"
+#, kde-format
 msgid "No SIM is inserted."
-msgstr "SIM 잠금 해제됨"
+msgstr "SIM 카드가 없습니다."
 
 #: package/contents/ui/main.qml:81
 #, kde-format
 msgid "Mobile data is not available with this modem."
-msgstr ""
+msgstr "이 모뎀에서 모바일 데이터를 사용할 수 없습니다."
 
 #: package/contents/ui/main.qml:83
 #, kde-format
 msgid "An APN needs to be configured to have mobile data."
-msgstr ""
+msgstr "모바일 데이터를 사용하려면 APN을 설정해야 합니다."
 
 #: package/contents/ui/main.qml:85
 #, kde-format
@@ -602,7 +601,7 @@ msgstr "모델"
 #: package/contents/ui/ModemPage.qml:142
 #, kde-format
 msgid "Owned Numbers:"
-msgstr "전화 번호:"
+msgstr "전화번호:"
 
 #: package/contents/ui/ModemPage.qml:162
 #, kde-format
