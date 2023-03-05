@@ -6,7 +6,7 @@ msgstr ""
 "Project-Id-Version: plasma-settings\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2022-10-24 00:50+0000\n"
-"PO-Revision-Date: 2023-02-21 21:08+0100\n"
+"PO-Revision-Date: 2023-03-04 15:51+0100\n"
 "Last-Translator: Karl Ove Hufthammer <karl@huftis.org>\n"
 "Language-Team: Norwegian Nynorsk <l10n-no@lister.huftis.org>\n"
 "Language: nn\n"
@@ -588,17 +588,17 @@ msgstr ""
 #: package/contents/ui/ModemPage.qml:102
 #, kde-format
 msgid "IMEI"
-msgstr ""
+msgstr "IMEI"
 
 #: package/contents/ui/ModemPage.qml:118
 #, kde-format
 msgid "Manufacturer"
-msgstr ""
+msgstr "Produsent"
 
 #: package/contents/ui/ModemPage.qml:126
 #, kde-format
 msgid "Model"
-msgstr ""
+msgstr "Modell"
 
 #: package/contents/ui/ModemPage.qml:142
 #, kde-format
@@ -608,47 +608,47 @@ msgstr "Eigde nummer:"
 #: package/contents/ui/ModemPage.qml:162
 #, kde-format
 msgid "Revision"
-msgstr ""
+msgstr "Revisjon"
 
 #: package/contents/ui/ModemPage.qml:170
 #, kde-format
 msgid "Signal Quality"
-msgstr ""
+msgstr "Signalkvalitet"
 
 #: package/contents/ui/ModemPage.qml:178
 #, kde-format
 msgid "State"
-msgstr ""
+msgstr "Tilstand"
 
 #: package/contents/ui/ModemPage.qml:186
 #, kde-format
 msgid "Failure Reason"
-msgstr ""
+msgstr "Grunn til feil"
 
 #: package/contents/ui/ModemPage.qml:194
 #, kde-format
 msgid "Registration State"
-msgstr ""
+msgstr "Registreringstilstand"
 
 #: package/contents/ui/ModemPage.qml:202
 #, kde-format
 msgid "Roaming"
-msgstr ""
+msgstr "Nettveksling"
 
 #: package/contents/ui/ModemPage.qml:210
 #, kde-format
 msgid "Firmware Version"
-msgstr ""
+msgstr "Fastvare-versjon"
 
 #: package/contents/ui/ModemPage.qml:218
 #, kde-format
 msgid "Interface Name"
-msgstr ""
+msgstr "Grensesnittnamn"
 
 #: package/contents/ui/ModemPage.qml:226
 #, kde-format
 msgid "Metered"
-msgstr ""
+msgstr "Forbruksmålt"
 
 #: package/contents/ui/ModemPage.qml:234
 #, kde-format
@@ -658,27 +658,27 @@ msgstr ""
 #: package/contents/ui/ModemPage.qml:242
 #, kde-format
 msgid "Device"
-msgstr ""
+msgstr "Eining"
 
 #: package/contents/ui/ModemPage.qml:250
 #, kde-format
 msgid "Device ID"
-msgstr ""
+msgstr "Einings-ID"
 
 #: package/contents/ui/ModemPage.qml:266
 #, kde-format
 msgid "Drivers:"
-msgstr ""
+msgstr "Drivarar:"
 
 #: package/contents/ui/ModemPage.qml:286
 #, kde-format
 msgid "Plugin"
-msgstr ""
+msgstr "Programtillegg"
 
 #: package/contents/ui/ModemPage.qml:294
 #, kde-format
 msgid "Power State"
-msgstr ""
+msgstr "Straumstatus"
 
 #: package/contents/ui/ModemPage.qml:302
 #, kde-format
@@ -688,7 +688,7 @@ msgstr ""
 #: package/contents/ui/ProfileList.qml:15
 #, kde-format
 msgid "APNs"
-msgstr ""
+msgstr "APN-ar"
 
 #: package/contents/ui/ProfileList.qml:29
 #, kde-format
@@ -703,22 +703,22 @@ msgstr "Ny tilkopling"
 #: package/contents/ui/ProfileList.qml:101
 #, kde-format
 msgid "Add APN"
-msgstr ""
+msgstr "Ny APN"
 
 #: package/contents/ui/ProfileList.qml:124
 #, kde-format
 msgid "Autodetect APN"
-msgstr ""
+msgstr "Oppdag automatisk APN"
 
 #: package/contents/ui/ProfileList.qml:136
 #, kde-format
 msgid "Edit"
-msgstr ""
+msgstr "Rediger"
 
 #: package/contents/ui/ProfileList.qml:144
 #, kde-format
 msgid "Delete"
-msgstr ""
+msgstr "Slett"
 
 #: package/contents/ui/SimLockPage.qml:19 package/contents/ui/SimPage.qml:106
 #, kde-format
