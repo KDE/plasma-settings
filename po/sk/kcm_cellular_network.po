@@ -4,7 +4,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcm_cellular_network\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2022-10-24 00:50+0000\n"
+"POT-Creation-Date: 2023-03-06 00:49+0000\n"
 "PO-Revision-Date: 2021-09-21 17:12+0200\n"
 "Last-Translator: Roman Paholik <wizzardsk@gmail.com>\n"
 "Language-Team: Slovak <kde-sk@linux.sk>\n"
@@ -14,31 +14,6 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "X-Generator: Lokalize 21.08.1\n"
 "Plural-Forms: nplurals=3; plural=(n==1) ? 0 : (n>=2 && n<=4) ? 1 : 2;\n"
-
-#, fuzzy, kde-format
-msgctxt "NAME OF TRANSLATORS"
-msgid "Your names"
-msgstr "Roman Paholík"
-
-#, fuzzy, kde-format
-msgctxt "EMAIL OF TRANSLATORS"
-msgid "Your emails"
-msgstr "wizzardsk@gmail.com"
-
-#: cellularnetworksettings.cpp:28
-#, kde-format
-msgid "Cellular Networks"
-msgstr "Mobilné siete"
-
-#: cellularnetworksettings.cpp:29
-#, kde-format
-msgid "Devin Lin"
-msgstr "Devin Lin"
-
-#: cellularnetworksettings.cpp:30
-#, kde-format
-msgid "Martin Kacej"
-msgstr "Martin Kacej"
 
 #: modem.cpp:126
 #, kde-format
@@ -1031,6 +1006,25 @@ msgstr ""
 #, kde-format
 msgid "Error sending the PUK: %1"
 msgstr ""
+
+#, fuzzy
+#~ msgctxt "NAME OF TRANSLATORS"
+#~ msgid "Your names"
+#~ msgstr "Roman Paholík"
+
+#, fuzzy
+#~ msgctxt "EMAIL OF TRANSLATORS"
+#~ msgid "Your emails"
+#~ msgstr "wizzardsk@gmail.com"
+
+#~ msgid "Cellular Networks"
+#~ msgstr "Mobilné siete"
+
+#~ msgid "Devin Lin"
+#~ msgstr "Devin Lin"
+
+#~ msgid "Martin Kacej"
+#~ msgstr "Martin Kacej"
 
 #, fuzzy
 #~ msgid "Modem State"

@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcm_cellular_network\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2022-10-24 00:50+0000\n"
+"POT-Creation-Date: 2023-03-06 00:49+0000\n"
 "PO-Revision-Date: 2022-10-24 11:42+0100\n"
 "Last-Translator: José Nuno Coelho Pires <zepires@gmail.com>\n"
 "Language-Team: Portuguese <kde-i18n-pt@kde.org>\n"
@@ -19,31 +19,6 @@ msgstr ""
 "X-POFile-SpellExtra: xRTT EVDO LTE roaming CSFB APN IMEI Roaming Firmware\n"
 "X-POFile-SpellExtra: NetworkManager IMSI EID PIN PUK PH FSIM\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-
-#, kde-format
-msgctxt "NAME OF TRANSLATORS"
-msgid "Your names"
-msgstr "José Nuno Pires,Pedro Morais"
-
-#, kde-format
-msgctxt "EMAIL OF TRANSLATORS"
-msgid "Your emails"
-msgstr "zepires@gmail.com,morais@kde.org"
-
-#: cellularnetworksettings.cpp:28
-#, kde-format
-msgid "Cellular Networks"
-msgstr "Redes Móveis"
-
-#: cellularnetworksettings.cpp:29
-#, kde-format
-msgid "Devin Lin"
-msgstr "Devin Lin"
-
-#: cellularnetworksettings.cpp:30
-#, kde-format
-msgid "Martin Kacej"
-msgstr "Martin Kacej"
 
 #: modem.cpp:126
 #, kde-format
@@ -1031,3 +1006,20 @@ msgstr "Erro ao enviar o PIN: %1"
 #, kde-format
 msgid "Error sending the PUK: %1"
 msgstr "Erro ao enviar o PUK: %1"
+
+#~ msgctxt "NAME OF TRANSLATORS"
+#~ msgid "Your names"
+#~ msgstr "José Nuno Pires,Pedro Morais"
+
+#~ msgctxt "EMAIL OF TRANSLATORS"
+#~ msgid "Your emails"
+#~ msgstr "zepires@gmail.com,morais@kde.org"
+
+#~ msgid "Cellular Networks"
+#~ msgstr "Redes Móveis"
+
+#~ msgid "Devin Lin"
+#~ msgstr "Devin Lin"
+
+#~ msgid "Martin Kacej"
+#~ msgstr "Martin Kacej"

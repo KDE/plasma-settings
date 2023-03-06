@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kdeorg\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2022-11-16 00:49+0000\n"
+"POT-Creation-Date: 2023-03-06 00:49+0000\n"
 "PO-Revision-Date: 2023-02-24 12:43\n"
 "Last-Translator: \n"
 "Language-Team: Chinese Simplified\n"
@@ -18,65 +18,40 @@ msgstr ""
 "kcm_mobile_powermanagement.pot\n"
 "X-Crowdin-File-ID: 24946\n"
 
-#, kde-format
-msgctxt "NAME OF TRANSLATORS"
-msgid "Your names"
-msgstr "KDE China, Tyson Tan"
-
-#, kde-format
-msgctxt "EMAIL OF TRANSLATORS"
-msgid "Your emails"
-msgstr "kde-china@kde.org, tysontan@tysontan.com"
-
-#: mobilepower.cpp:28
+#: mobilepower.cpp:27
 #, kde-format
 msgid "30 sec"
 msgstr "30 秒"
 
-#: mobilepower.cpp:29
+#: mobilepower.cpp:28
 #, kde-format
 msgid "1 min"
 msgstr "1 分钟"
 
-#: mobilepower.cpp:30
+#: mobilepower.cpp:29
 #, kde-format
 msgid "2 min"
 msgstr "2 分钟"
 
-#: mobilepower.cpp:31
+#: mobilepower.cpp:30
 #, kde-format
 msgid "5 min"
 msgstr "5 分钟"
 
-#: mobilepower.cpp:32
+#: mobilepower.cpp:31
 #, kde-format
 msgid "10 min"
 msgstr "10 分钟"
 
-#: mobilepower.cpp:33
+#: mobilepower.cpp:32
 #, kde-format
 msgid "15 min"
 msgstr "15 分钟"
 
-#: mobilepower.cpp:34
+#: mobilepower.cpp:33
 #, kde-format
 msgid "Never"
 msgstr "从不"
-
-#: mobilepower.cpp:58
-#, kde-format
-msgid "Energy Settings"
-msgstr "电量设置"
-
-#: mobilepower.cpp:59
-#, kde-format
-msgid "Tomaz Canabrava"
-msgstr "Tomaz Canabrava"
-
-#: mobilepower.cpp:60
-#, kde-format
-msgid "Devin Lin"
-msgstr "Devin Lin"
 
 #: package/contents/ui/BatteryPage.qml:26
 #, kde-format
@@ -307,3 +282,20 @@ msgstr "关闭屏幕等待时间"
 msgctxt "Part of a sentence like 'Suspend device after 5 minutes'"
 msgid "Suspend device after"
 msgstr "挂起设备等待时间"
+
+#~ msgctxt "NAME OF TRANSLATORS"
+#~ msgid "Your names"
+#~ msgstr "KDE China, Tyson Tan"
+
+#~ msgctxt "EMAIL OF TRANSLATORS"
+#~ msgid "Your emails"
+#~ msgstr "kde-china@kde.org, tysontan@tysontan.com"
+
+#~ msgid "Energy Settings"
+#~ msgstr "电量设置"
+
+#~ msgid "Tomaz Canabrava"
+#~ msgstr "Tomaz Canabrava"
+
+#~ msgid "Devin Lin"
+#~ msgstr "Devin Lin"

@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-settings\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2022-10-24 00:50+0000\n"
+"POT-Creation-Date: 2023-03-06 00:49+0000\n"
 "PO-Revision-Date: 2021-10-17 14:08+0200\n"
 "Last-Translator: Kristof Kiszel <kiszel.kristof@gmail.com>\n"
 "Language-Team: Hungarian <kde-l10n-hu@kde.org>\n"
@@ -16,31 +16,6 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 "X-Generator: Lokalize 21.08.2\n"
-
-#, kde-format
-msgctxt "NAME OF TRANSLATORS"
-msgid "Your names"
-msgstr "Kiszel Kristóf"
-
-#, kde-format
-msgctxt "EMAIL OF TRANSLATORS"
-msgid "Your emails"
-msgstr "kiszel.kristof@gmail.com"
-
-#: cellularnetworksettings.cpp:28
-#, kde-format
-msgid "Cellular Networks"
-msgstr "Mobilhálózatok"
-
-#: cellularnetworksettings.cpp:29
-#, kde-format
-msgid "Devin Lin"
-msgstr "Devin Lin"
-
-#: cellularnetworksettings.cpp:30
-#, kde-format
-msgid "Martin Kacej"
-msgstr "Martin Kacej"
 
 #: modem.cpp:126
 #, kde-format
@@ -1068,6 +1043,23 @@ msgstr "Hiba a PIN küldésekor: %1"
 #, kde-format
 msgid "Error sending the PUK: %1"
 msgstr "Hiba a PUK küldésekor: %1"
+
+#~ msgctxt "NAME OF TRANSLATORS"
+#~ msgid "Your names"
+#~ msgstr "Kiszel Kristóf"
+
+#~ msgctxt "EMAIL OF TRANSLATORS"
+#~ msgid "Your emails"
+#~ msgstr "kiszel.kristof@gmail.com"
+
+#~ msgid "Cellular Networks"
+#~ msgstr "Mobilhálózatok"
+
+#~ msgid "Devin Lin"
+#~ msgstr "Devin Lin"
+
+#~ msgid "Martin Kacej"
+#~ msgstr "Martin Kacej"
 
 #, fuzzy
 #~| msgid "Power State:"

@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-settings\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2022-07-07 00:47+0000\n"
+"POT-Creation-Date: 2023-03-06 00:49+0000\n"
 "PO-Revision-Date: 2023-01-06 15:03+0100\n"
 "Last-Translator: Vit Pelcak <vit@pelcak.org>\n"
 "Language-Team: Czech <kde-i18n-doc@kde.org>\n"
@@ -16,16 +16,6 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=3; plural=(n==1) ? 0 : (n>=2 && n<=4) ? 1 : 2;\n"
 "X-Generator: Lokalize 22.12.0\n"
-
-#, kde-format
-msgctxt "NAME OF TRANSLATORS"
-msgid "Your names"
-msgstr "Vít Pelčák"
-
-#, kde-format
-msgctxt "EMAIL OF TRANSLATORS"
-msgid "Your emails"
-msgstr "vit@pelcak.org"
 
 #: package/contents/ui/DatePicker.qml:121
 #, kde-format
@@ -155,27 +145,17 @@ msgstr "Zvolte čas"
 msgid "Pick Date"
 msgstr "Zvolte datum"
 
-#: timesettings.cpp:45
-#, kde-format
-msgid "Date and Time"
-msgstr "Datum a čas"
-
-#: timesettings.cpp:46
-#, kde-format
-msgid "Sebastian Kügler"
-msgstr "Sebastian Kügler"
-
-#: timesettings.cpp:151
+#: timesettings.cpp:147
 #, kde-format
 msgid "Unable to change NTP settings"
 msgstr "Nelze změnit nastavení NTP"
 
-#: timesettings.cpp:167
+#: timesettings.cpp:163
 #, kde-format
 msgid "Unable to set current time"
 msgstr "Nelze nastavit aktuální čas"
 
-#: timesettings.cpp:190
+#: timesettings.cpp:186
 #, kde-format
 msgid "Unable to set timezone"
 msgstr "Nelze nastavit časové pásmo"
@@ -3070,3 +3050,17 @@ msgstr "Indický"
 msgctxt "This is a continent/area associated with a particular timezone"
 msgid "Pacific"
 msgstr "Tichý oceán"
+
+#~ msgctxt "NAME OF TRANSLATORS"
+#~ msgid "Your names"
+#~ msgstr "Vít Pelčák"
+
+#~ msgctxt "EMAIL OF TRANSLATORS"
+#~ msgid "Your emails"
+#~ msgstr "vit@pelcak.org"
+
+#~ msgid "Date and Time"
+#~ msgstr "Datum a čas"
+
+#~ msgid "Sebastian Kügler"
+#~ msgstr "Sebastian Kügler"

@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-settings\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2022-10-24 00:50+0000\n"
+"POT-Creation-Date: 2023-03-06 00:49+0000\n"
 "PO-Revision-Date: 2022-04-07 22:24+0700\n"
 "Last-Translator: Wantoyèk <wantoyek@gmail.com>\n"
 "Language-Team: https://t.me/Localizations_KDE_Indonesia\n"
@@ -16,31 +16,6 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 "X-Generator: Lokalize 21.12.3\n"
-
-#, kde-format
-msgctxt "NAME OF TRANSLATORS"
-msgid "Your names"
-msgstr "Wantoyèk"
-
-#, kde-format
-msgctxt "EMAIL OF TRANSLATORS"
-msgid "Your emails"
-msgstr "wantoyek@gmail.com"
-
-#: cellularnetworksettings.cpp:28
-#, kde-format
-msgid "Cellular Networks"
-msgstr "Jaringan Seluler"
-
-#: cellularnetworksettings.cpp:29
-#, kde-format
-msgid "Devin Lin"
-msgstr "Devin Lin"
-
-#: cellularnetworksettings.cpp:30
-#, kde-format
-msgid "Martin Kacej"
-msgstr "Martin Kacej"
 
 #: modem.cpp:126
 #, kde-format
@@ -1066,6 +1041,23 @@ msgstr "Galat pengiriman PIN: %1"
 #, kde-format
 msgid "Error sending the PUK: %1"
 msgstr "Galat pengiriman PUK: %1"
+
+#~ msgctxt "NAME OF TRANSLATORS"
+#~ msgid "Your names"
+#~ msgstr "Wantoyèk"
+
+#~ msgctxt "EMAIL OF TRANSLATORS"
+#~ msgid "Your emails"
+#~ msgstr "wantoyek@gmail.com"
+
+#~ msgid "Cellular Networks"
+#~ msgstr "Jaringan Seluler"
+
+#~ msgid "Devin Lin"
+#~ msgstr "Devin Lin"
+
+#~ msgid "Martin Kacej"
+#~ msgstr "Martin Kacej"
 
 #, fuzzy
 #~| msgid "Power State:"

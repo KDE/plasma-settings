@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-settings\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2022-07-07 00:47+0000\n"
+"POT-Creation-Date: 2023-03-06 00:49+0000\n"
 "PO-Revision-Date: 2022-07-14 10:42-0300\n"
 "Last-Translator: Luiz Fernando Ranghetti <elchevive@opensuse.org>\n"
 "Language-Team: Portuguese <kde-i18n-pt_BR@kde.org>\n"
@@ -18,26 +18,6 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n > 1);\n"
 "X-Generator: Lokalize 21.12.3\n"
-
-#, kde-format
-msgctxt "NAME OF TRANSLATORS"
-msgid "Your names"
-msgstr "André Marcelo Alvarenga"
-
-#, kde-format
-msgctxt "EMAIL OF TRANSLATORS"
-msgid "Your emails"
-msgstr "alvarenga@kde.org"
-
-#: info.cpp:23
-#, kde-format
-msgid "Info"
-msgstr "Informações"
-
-#: info.cpp:24
-#, kde-format
-msgid "Jonah Brüchert"
-msgstr "Jonah Brüchert"
 
 #: package/contents/ui/main.qml:16
 #, kde-format
@@ -113,6 +93,20 @@ msgstr "Desconhecida"
 #, kde-format
 msgid "Copy to clipboard"
 msgstr "Copiar para a área de transferência"
+
+#~ msgctxt "NAME OF TRANSLATORS"
+#~ msgid "Your names"
+#~ msgstr "André Marcelo Alvarenga"
+
+#~ msgctxt "EMAIL OF TRANSLATORS"
+#~ msgid "Your emails"
+#~ msgstr "alvarenga@kde.org"
+
+#~ msgid "Info"
+#~ msgstr "Informações"
+
+#~ msgid "Jonah Brüchert"
+#~ msgstr "Jonah Brüchert"
 
 #~ msgid "Software"
 #~ msgstr "Software"

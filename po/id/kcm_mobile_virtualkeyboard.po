@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-settings\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2022-07-07 00:47+0000\n"
+"POT-Creation-Date: 2023-03-06 00:49+0000\n"
 "PO-Revision-Date: 2022-03-18 07:14+0700\n"
 "Last-Translator: Wantoyèk <wantoyek@gmail.com>\n"
 "Language-Team: Indonesian <kde-i18n-doc@kde.org>\n"
@@ -16,16 +16,6 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 "X-Generator: Lokalize 21.12.3\n"
-
-#, kde-format
-msgctxt "NAME OF TRANSLATORS"
-msgid "Your names"
-msgstr "Wantoyèk"
-
-#, kde-format
-msgctxt "EMAIL OF TRANSLATORS"
-msgid "Your emails"
-msgstr "wantoyek@gmail.com"
 
 #: package/contents/ui/languages.qml:20
 #, kde-format
@@ -99,15 +89,19 @@ msgstr "Sisipkan penghentian penuh ketika spasi tertekan ganda"
 msgid "Configure Languages"
 msgstr "Konfigurasi Bahasa"
 
-#: virtualkeyboard.cpp:37
-#, kde-format
-msgid "Virtual Keyboard"
-msgstr "Virtial Keyboard"
+#~ msgctxt "NAME OF TRANSLATORS"
+#~ msgid "Your names"
+#~ msgstr "Wantoyèk"
 
-#: virtualkeyboard.cpp:38
-#, kde-format
-msgid "Bhushan Shah"
-msgstr "Bhushan Shah"
+#~ msgctxt "EMAIL OF TRANSLATORS"
+#~ msgid "Your emails"
+#~ msgstr "wantoyek@gmail.com"
+
+#~ msgid "Virtual Keyboard"
+#~ msgstr "Virtial Keyboard"
+
+#~ msgid "Bhushan Shah"
+#~ msgstr "Bhushan Shah"
 
 #~ msgid "Test keyboard:"
 #~ msgstr "Uji keyboard:"

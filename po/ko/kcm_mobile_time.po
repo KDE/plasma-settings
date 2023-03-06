@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-settings\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2022-07-07 00:47+0000\n"
+"POT-Creation-Date: 2023-03-06 00:49+0000\n"
 "PO-Revision-Date: 2022-07-13 12:04+0200\n"
 "Last-Translator: Shinjo Park <kde@peremen.name>\n"
 "Language-Team: Korean <kde-kr@kde.org>\n"
@@ -16,16 +16,6 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
 "X-Generator: Lokalize 21.12.3\n"
-
-#, kde-format
-msgctxt "NAME OF TRANSLATORS"
-msgid "Your names"
-msgstr "박신조"
-
-#, kde-format
-msgctxt "EMAIL OF TRANSLATORS"
-msgid "Your emails"
-msgstr "kde@peremen.name"
 
 #: package/contents/ui/DatePicker.qml:121
 #, kde-format
@@ -155,27 +145,17 @@ msgstr "시간 선택"
 msgid "Pick Date"
 msgstr "날짜 선택"
 
-#: timesettings.cpp:45
-#, kde-format
-msgid "Date and Time"
-msgstr "날짜와 시간"
-
-#: timesettings.cpp:46
-#, kde-format
-msgid "Sebastian Kügler"
-msgstr "Sebastian Kügler"
-
-#: timesettings.cpp:151
+#: timesettings.cpp:147
 #, kde-format
 msgid "Unable to change NTP settings"
 msgstr "NTP 설정을 변경할 수 없음"
 
-#: timesettings.cpp:167
+#: timesettings.cpp:163
 #, kde-format
 msgid "Unable to set current time"
 msgstr "현재 시간을 설정할 수 없음"
 
-#: timesettings.cpp:190
+#: timesettings.cpp:186
 #, kde-format
 msgid "Unable to set timezone"
 msgstr "시간대를 설정할 수 없음"
@@ -3070,6 +3050,20 @@ msgstr "인도양"
 msgctxt "This is a continent/area associated with a particular timezone"
 msgid "Pacific"
 msgstr "태평양"
+
+#~ msgctxt "NAME OF TRANSLATORS"
+#~ msgid "Your names"
+#~ msgstr "박신조"
+
+#~ msgctxt "EMAIL OF TRANSLATORS"
+#~ msgid "Your emails"
+#~ msgstr "kde@peremen.name"
+
+#~ msgid "Date and Time"
+#~ msgstr "날짜와 시간"
+
+#~ msgid "Sebastian Kügler"
+#~ msgstr "Sebastian Kügler"
 
 #~ msgid "Use 24-hour clock:"
 #~ msgstr "24시간제 시계 사용:"

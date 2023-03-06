@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-settings\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2022-07-07 00:47+0000\n"
+"POT-Creation-Date: 2023-03-06 00:49+0000\n"
 "PO-Revision-Date: 2022-07-07 11:25+0300\n"
 "Last-Translator: Emir SARI <emir_sari@icloud.com>\n"
 "Language-Team: Turkish <kde-l10n-tr@kde.org>\n"
@@ -17,16 +17,6 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n > 1);\n"
 "X-Generator: Lokalize 22.04.2\n"
-
-#, kde-format
-msgctxt "NAME OF TRANSLATORS"
-msgid "Your names"
-msgstr "Emir SARI"
-
-#, kde-format
-msgctxt "EMAIL OF TRANSLATORS"
-msgid "Your emails"
-msgstr "emir_sari@icloud.com"
 
 #: package/contents/ui/languages.qml:20
 #, kde-format
@@ -98,15 +88,19 @@ msgstr "Boşluk'a iki kez basıldığında nokta gir"
 msgid "Configure Languages"
 msgstr "Dilleri Yapılandır"
 
-#: virtualkeyboard.cpp:37
-#, kde-format
-msgid "Virtual Keyboard"
-msgstr "Sanal Klavye"
+#~ msgctxt "NAME OF TRANSLATORS"
+#~ msgid "Your names"
+#~ msgstr "Emir SARI"
 
-#: virtualkeyboard.cpp:38
-#, kde-format
-msgid "Bhushan Shah"
-msgstr "Buşan Şah"
+#~ msgctxt "EMAIL OF TRANSLATORS"
+#~ msgid "Your emails"
+#~ msgstr "emir_sari@icloud.com"
+
+#~ msgid "Virtual Keyboard"
+#~ msgstr "Sanal Klavye"
+
+#~ msgid "Bhushan Shah"
+#~ msgstr "Buşan Şah"
 
 #~ msgid "Test keyboard:"
 #~ msgstr "Klavyeyi sına:"

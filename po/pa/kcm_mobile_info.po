@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-settings\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2022-07-07 00:47+0000\n"
+"POT-Creation-Date: 2023-03-06 00:49+0000\n"
 "PO-Revision-Date: 2020-12-19 13:09-0800\n"
 "Last-Translator: A S Alam <aalam.yellow@gmail.com>\n"
 "Language-Team: Punjabi <punjabi-users@lists.sf.net>\n"
@@ -16,26 +16,6 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
 "X-Generator: Lokalize 20.08.1\n"
-
-#, kde-format
-msgctxt "NAME OF TRANSLATORS"
-msgid "Your names"
-msgstr "ਅਮਨਪਰੀਤ ਸਿੰਘ ਆਲਮ ੨੦੨੦"
-
-#, kde-format
-msgctxt "EMAIL OF TRANSLATORS"
-msgid "Your emails"
-msgstr "alam.yellow@gmail.com"
-
-#: info.cpp:23
-#, kde-format
-msgid "Info"
-msgstr "ਜਾਣਕਾਰੀ"
-
-#: info.cpp:24
-#, kde-format
-msgid "Jonah Brüchert"
-msgstr "Jonah Brüchert"
 
 #: package/contents/ui/main.qml:16
 #, kde-format
@@ -119,6 +99,20 @@ msgstr "ਅਣਪਛਾਤਾ"
 #, kde-format
 msgid "Copy to clipboard"
 msgstr "ਕਲਿੱਪਬੋਰਡ ਵਿੱਚ ਕਾਪੀ ਕਰੋ"
+
+#~ msgctxt "NAME OF TRANSLATORS"
+#~ msgid "Your names"
+#~ msgstr "ਅਮਨਪਰੀਤ ਸਿੰਘ ਆਲਮ ੨੦੨੦"
+
+#~ msgctxt "EMAIL OF TRANSLATORS"
+#~ msgid "Your emails"
+#~ msgstr "alam.yellow@gmail.com"
+
+#~ msgid "Info"
+#~ msgstr "ਜਾਣਕਾਰੀ"
+
+#~ msgid "Jonah Brüchert"
+#~ msgstr "Jonah Brüchert"
 
 #~ msgid "Software"
 #~ msgstr "ਸਾਫਟਵੇਅਰ"

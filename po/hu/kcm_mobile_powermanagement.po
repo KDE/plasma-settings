@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-settings\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2022-11-16 00:49+0000\n"
+"POT-Creation-Date: 2023-03-06 00:49+0000\n"
 "PO-Revision-Date: 2022-02-09 17:27+0100\n"
 "Last-Translator: Kristof Kiszel <ulysses@fsf.hu>\n"
 "Language-Team: Hungarian <kde-l10n-hu@kde.org>\n"
@@ -18,65 +18,40 @@ msgstr ""
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 "X-Generator: Lokalize 21.07.70\n"
 
-#, kde-format
-msgctxt "NAME OF TRANSLATORS"
-msgid "Your names"
-msgstr "Kiszel Kristóf"
-
-#, kde-format
-msgctxt "EMAIL OF TRANSLATORS"
-msgid "Your emails"
-msgstr "ulysses@fsf.hu"
-
-#: mobilepower.cpp:28
+#: mobilepower.cpp:27
 #, kde-format
 msgid "30 sec"
 msgstr "30 másodperc"
 
-#: mobilepower.cpp:29
+#: mobilepower.cpp:28
 #, kde-format
 msgid "1 min"
 msgstr "1 perc után"
 
-#: mobilepower.cpp:30
+#: mobilepower.cpp:29
 #, kde-format
 msgid "2 min"
 msgstr "2 perc után"
 
-#: mobilepower.cpp:31
+#: mobilepower.cpp:30
 #, kde-format
 msgid "5 min"
 msgstr "5 perc után"
 
-#: mobilepower.cpp:32
+#: mobilepower.cpp:31
 #, kde-format
 msgid "10 min"
 msgstr "10 perc után"
 
-#: mobilepower.cpp:33
+#: mobilepower.cpp:32
 #, kde-format
 msgid "15 min"
 msgstr "15 perc után"
 
-#: mobilepower.cpp:34
+#: mobilepower.cpp:33
 #, kde-format
 msgid "Never"
 msgstr "Soha"
-
-#: mobilepower.cpp:58
-#, kde-format
-msgid "Energy Settings"
-msgstr "Energiagazdálkodási beállítások"
-
-#: mobilepower.cpp:59
-#, kde-format
-msgid "Tomaz Canabrava"
-msgstr "Tomaz Canabrava"
-
-#: mobilepower.cpp:60
-#, kde-format
-msgid "Devin Lin"
-msgstr ""
 
 #: package/contents/ui/BatteryPage.qml:26
 #, kde-format
@@ -315,6 +290,20 @@ msgstr "Képernyő kikapcsolása:"
 msgctxt "Part of a sentence like 'Suspend device after 5 minutes'"
 msgid "Suspend device after"
 msgstr "Eszköz felfüggesztése:"
+
+#~ msgctxt "NAME OF TRANSLATORS"
+#~ msgid "Your names"
+#~ msgstr "Kiszel Kristóf"
+
+#~ msgctxt "EMAIL OF TRANSLATORS"
+#~ msgid "Your emails"
+#~ msgstr "ulysses@fsf.hu"
+
+#~ msgid "Energy Settings"
+#~ msgstr "Energiagazdálkodási beállítások"
+
+#~ msgid "Tomaz Canabrava"
+#~ msgstr "Tomaz Canabrava"
 
 #~ msgctxt "Part of a sentence like 'Dim Display after 5 minutes'"
 #~ msgid "Dim Display"

@@ -5,7 +5,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcm_mobile_virtualkeyboard\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2022-07-07 00:47+0000\n"
+"POT-Creation-Date: 2023-03-06 00:49+0000\n"
 "PO-Revision-Date: 2021-08-11 20:02+0200\n"
 "Last-Translator: Matej Mrenica <matejm98mthw@gmail.com>\n"
 "Language-Team: Slovak <kde-i18n-doc@kde.org>\n"
@@ -15,16 +15,6 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "X-Generator: Lokalize 21.07.90\n"
 "Plural-Forms: nplurals=3; plural=(n==1) ? 0 : (n>=2 && n<=4) ? 1 : 2;\n"
-
-#, kde-format
-msgctxt "NAME OF TRANSLATORS"
-msgid "Your names"
-msgstr "Roman Paholík"
-
-#, kde-format
-msgctxt "EMAIL OF TRANSLATORS"
-msgid "Your emails"
-msgstr "wizzardsk@gmail.com"
 
 #: package/contents/ui/languages.qml:20
 #, kde-format
@@ -98,15 +88,19 @@ msgstr "Po dvojitom stlačení medzery vložiť bodku"
 msgid "Configure Languages"
 msgstr "Nastaviť jazyky"
 
-#: virtualkeyboard.cpp:37
-#, kde-format
-msgid "Virtual Keyboard"
-msgstr "Virtuálna klávesnica"
+#~ msgctxt "NAME OF TRANSLATORS"
+#~ msgid "Your names"
+#~ msgstr "Roman Paholík"
 
-#: virtualkeyboard.cpp:38
-#, kde-format
-msgid "Bhushan Shah"
-msgstr "Bhushan Shah"
+#~ msgctxt "EMAIL OF TRANSLATORS"
+#~ msgid "Your emails"
+#~ msgstr "wizzardsk@gmail.com"
+
+#~ msgid "Virtual Keyboard"
+#~ msgstr "Virtuálna klávesnica"
+
+#~ msgid "Bhushan Shah"
+#~ msgstr "Bhushan Shah"
 
 #, fuzzy
 #~| msgid "Virtual Keyboard"

@@ -3,7 +3,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-settings\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2022-07-07 00:47+0000\n"
+"POT-Creation-Date: 2023-03-06 00:49+0000\n"
 "PO-Revision-Date: 2022-07-08 10:14+0200\n"
 "Last-Translator: Xavier Besnard <xavier.besnard@neuf.fr>\n"
 "Language-Team: French <kde-francophone@kde.org>\n"
@@ -13,16 +13,6 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n > 1);\n"
 "X-Generator: Lokalize 22.04.2\n"
-
-#, kde-format
-msgctxt "NAME OF TRANSLATORS"
-msgid "Your names"
-msgstr "Xavier Besnard"
-
-#, kde-format
-msgctxt "EMAIL OF TRANSLATORS"
-msgid "Your emails"
-msgstr "xavier.besnard@neuf.fr"
 
 #: package/contents/ui/languages.qml:20
 #, kde-format
@@ -96,15 +86,19 @@ msgstr "Insérer un point lors d'un double appui sur la barre d'espace."
 msgid "Configure Languages"
 msgstr "Configurer les langues"
 
-#: virtualkeyboard.cpp:37
-#, kde-format
-msgid "Virtual Keyboard"
-msgstr "Clavier virtuel"
+#~ msgctxt "NAME OF TRANSLATORS"
+#~ msgid "Your names"
+#~ msgstr "Xavier Besnard"
 
-#: virtualkeyboard.cpp:38
-#, kde-format
-msgid "Bhushan Shah"
-msgstr "Bhushan Shah"
+#~ msgctxt "EMAIL OF TRANSLATORS"
+#~ msgid "Your emails"
+#~ msgstr "xavier.besnard@neuf.fr"
+
+#~ msgid "Virtual Keyboard"
+#~ msgstr "Clavier virtuel"
+
+#~ msgid "Bhushan Shah"
+#~ msgstr "Bhushan Shah"
 
 #~ msgid "Test keyboard:"
 #~ msgstr "Clavier de test :"

@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-settings\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2022-07-07 00:47+0000\n"
+"POT-Creation-Date: 2023-03-06 00:49+0000\n"
 "PO-Revision-Date: 2022-07-31 09:06+0200\n"
 "Last-Translator: Łukasz Wojniłowicz <lukasz.wojnilowicz@gmail.com>\n"
 "Language-Team: Polish <kde-i18n-doc@kde.org>\n"
@@ -17,16 +17,6 @@ msgstr ""
 "Plural-Forms: nplurals=3; plural=(n==1 ? 0 : n%10>=2 && n%10<=4 && (n%100<10 "
 "|| n%100>=20) ? 1 : 2);\n"
 "X-Generator: Lokalize 22.03.70\n"
-
-#, kde-format
-msgctxt "NAME OF TRANSLATORS"
-msgid "Your names"
-msgstr "Łukasz Wojniłowicz"
-
-#, kde-format
-msgctxt "EMAIL OF TRANSLATORS"
-msgid "Your emails"
-msgstr "lukasz.wojnilowicz@gmail.com"
 
 #: package/contents/ui/DatePicker.qml:121
 #, kde-format
@@ -156,27 +146,17 @@ msgstr "Wybierz czas"
 msgid "Pick Date"
 msgstr "Wybierz datę"
 
-#: timesettings.cpp:45
-#, kde-format
-msgid "Date and Time"
-msgstr "Data i czas"
-
-#: timesettings.cpp:46
-#, kde-format
-msgid "Sebastian Kügler"
-msgstr "Sebastian Kügler"
-
-#: timesettings.cpp:151
+#: timesettings.cpp:147
 #, kde-format
 msgid "Unable to change NTP settings"
 msgstr "Nie można zmienić ustawień NTP"
 
-#: timesettings.cpp:167
+#: timesettings.cpp:163
 #, kde-format
 msgid "Unable to set current time"
 msgstr "Nie można ustawić bieżącego czasu"
 
-#: timesettings.cpp:190
+#: timesettings.cpp:186
 #, kde-format
 msgid "Unable to set timezone"
 msgstr "Nie można ustawić strefy czasowej"
@@ -3071,6 +3051,20 @@ msgstr "Indyjska"
 msgctxt "This is a continent/area associated with a particular timezone"
 msgid "Pacific"
 msgstr "Oceanu spokojnego"
+
+#~ msgctxt "NAME OF TRANSLATORS"
+#~ msgid "Your names"
+#~ msgstr "Łukasz Wojniłowicz"
+
+#~ msgctxt "EMAIL OF TRANSLATORS"
+#~ msgid "Your emails"
+#~ msgstr "lukasz.wojnilowicz@gmail.com"
+
+#~ msgid "Date and Time"
+#~ msgstr "Data i czas"
+
+#~ msgid "Sebastian Kügler"
+#~ msgstr "Sebastian Kügler"
 
 #~ msgid "Use 24-hour clock:"
 #~ msgstr "Wyświetlaj zegar 24-godzinny:"

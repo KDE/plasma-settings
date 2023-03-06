@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-settings\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2022-10-24 00:50+0000\n"
+"POT-Creation-Date: 2023-03-06 00:49+0000\n"
 "PO-Revision-Date: 2022-10-25 09:04+0200\n"
 "Last-Translator: Matjaž Jeran <matjaz.jeran@amis.net>\n"
 "Language-Team: Slovenian <lugos-slo@lugos.si>\n"
@@ -17,31 +17,6 @@ msgstr ""
 "Plural-Forms: nplurals=4; plural=(n%100==1 ? 1 : n%100==2 ? 2 : n%100==3 || n"
 "%100==4 ? 3 : 0);\n"
 "X-Generator: Lokalize 22.08.1\n"
-
-#, kde-format
-msgctxt "NAME OF TRANSLATORS"
-msgid "Your names"
-msgstr "Matjaž Jeran,Martin Srebotnjak"
-
-#, kde-format
-msgctxt "EMAIL OF TRANSLATORS"
-msgid "Your emails"
-msgstr "matjaz.jeran@amis.net,miles@filmsi.net"
-
-#: cellularnetworksettings.cpp:28
-#, kde-format
-msgid "Cellular Networks"
-msgstr "Mobilna omrežja"
-
-#: cellularnetworksettings.cpp:29
-#, kde-format
-msgid "Devin Lin"
-msgstr "Devin Lin"
-
-#: cellularnetworksettings.cpp:30
-#, kde-format
-msgid "Martin Kacej"
-msgstr "Martin Kacej"
 
 #: modem.cpp:126
 #, kde-format
@@ -1028,6 +1003,23 @@ msgstr "Napaka pri pošiljanju kode PIN: %1"
 #, kde-format
 msgid "Error sending the PUK: %1"
 msgstr "Napaka pri pošiljanju kode PUK: %1"
+
+#~ msgctxt "NAME OF TRANSLATORS"
+#~ msgid "Your names"
+#~ msgstr "Matjaž Jeran,Martin Srebotnjak"
+
+#~ msgctxt "EMAIL OF TRANSLATORS"
+#~ msgid "Your emails"
+#~ msgstr "matjaz.jeran@amis.net,miles@filmsi.net"
+
+#~ msgid "Cellular Networks"
+#~ msgstr "Mobilna omrežja"
+
+#~ msgid "Devin Lin"
+#~ msgstr "Devin Lin"
+
+#~ msgid "Martin Kacej"
+#~ msgstr "Martin Kacej"
 
 #~ msgid "Modem State"
 #~ msgstr "Stanje modema"

@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-settings\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2022-07-07 00:47+0000\n"
+"POT-Creation-Date: 2023-03-06 00:49+0000\n"
 "PO-Revision-Date: 2020-10-30 01:40+0200\n"
 "Last-Translator: scootergrisen\n"
 "Language-Team: Danish\n"
@@ -15,16 +15,6 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-
-#, kde-format
-msgctxt "NAME OF TRANSLATORS"
-msgid "Your names"
-msgstr "scootergrisen"
-
-#, kde-format
-msgctxt "EMAIL OF TRANSLATORS"
-msgid "Your emails"
-msgstr ","
 
 #: package/contents/ui/DatePicker.qml:121
 #, kde-format
@@ -160,27 +150,17 @@ msgstr "Vælg klokkeslæt"
 msgid "Pick Date"
 msgstr "Vælg dato"
 
-#: timesettings.cpp:45
-#, kde-format
-msgid "Date and Time"
-msgstr "Dato og klokkeslæt"
-
-#: timesettings.cpp:46
-#, kde-format
-msgid "Sebastian Kügler"
-msgstr "Sebastian Kügler"
-
-#: timesettings.cpp:151
+#: timesettings.cpp:147
 #, kde-format
 msgid "Unable to change NTP settings"
 msgstr "Kan ikke ændre NTP-indstillinger"
 
-#: timesettings.cpp:167
+#: timesettings.cpp:163
 #, kde-format
 msgid "Unable to set current time"
 msgstr "Kan ikke indstille nuværende klokkeslæt"
 
-#: timesettings.cpp:190
+#: timesettings.cpp:186
 #, kde-format
 msgid "Unable to set timezone"
 msgstr "Kan ikke indstille tidszone"
@@ -3076,6 +3056,20 @@ msgstr ""
 msgctxt "This is a continent/area associated with a particular timezone"
 msgid "Pacific"
 msgstr ""
+
+#~ msgctxt "NAME OF TRANSLATORS"
+#~ msgid "Your names"
+#~ msgstr "scootergrisen"
+
+#~ msgctxt "EMAIL OF TRANSLATORS"
+#~ msgid "Your emails"
+#~ msgstr ","
+
+#~ msgid "Date and Time"
+#~ msgstr "Dato og klokkeslæt"
+
+#~ msgid "Sebastian Kügler"
+#~ msgstr "Sebastian Kügler"
 
 #~ msgid "Use 24-hour clock:"
 #~ msgstr "Brug 24-timers ur:"

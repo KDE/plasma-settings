@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-settings\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2022-07-07 00:47+0000\n"
+"POT-Creation-Date: 2023-03-06 00:49+0000\n"
 "PO-Revision-Date: 2020-02-27 11:36+0200\n"
 "Last-Translator: Marek Laane <qiilaq69@gmail.com>\n"
 "Language-Team: Estonian <kde-et@lists.linux.ee>\n"
@@ -16,26 +16,6 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
 "X-Generator: Lokalize 19.08.1\n"
-
-#, kde-format
-msgctxt "NAME OF TRANSLATORS"
-msgid "Your names"
-msgstr "Marek Laane"
-
-#, kde-format
-msgctxt "EMAIL OF TRANSLATORS"
-msgid "Your emails"
-msgstr "qiilaq69@gmail.com"
-
-#: info.cpp:23
-#, kde-format
-msgid "Info"
-msgstr "Teave"
-
-#: info.cpp:24
-#, kde-format
-msgid "Jonah Brüchert"
-msgstr "Jonah Brüchert"
 
 #: package/contents/ui/main.qml:16
 #, kde-format
@@ -119,6 +99,20 @@ msgstr "Teadmata"
 #, kde-format
 msgid "Copy to clipboard"
 msgstr "Kopeeri lõikepuhvrisse"
+
+#~ msgctxt "NAME OF TRANSLATORS"
+#~ msgid "Your names"
+#~ msgstr "Marek Laane"
+
+#~ msgctxt "EMAIL OF TRANSLATORS"
+#~ msgid "Your emails"
+#~ msgstr "qiilaq69@gmail.com"
+
+#~ msgid "Info"
+#~ msgstr "Teave"
+
+#~ msgid "Jonah Brüchert"
+#~ msgstr "Jonah Brüchert"
 
 #~ msgid "Software"
 #~ msgstr "Tarkvara"

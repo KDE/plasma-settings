@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-settings\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2022-07-07 00:47+0000\n"
+"POT-Creation-Date: 2023-03-06 00:49+0000\n"
 "PO-Revision-Date: 2022-07-31 09:19+0200\n"
 "Last-Translator: Łukasz Wojniłowicz <lukasz.wojnilowicz@gmail.com>\n"
 "Language-Team: Polish <kde-i18n-doc@kde.org>\n"
@@ -17,16 +17,6 @@ msgstr ""
 "Plural-Forms: nplurals=3; plural=(n==1 ? 0 : n%10>=2 && n%10<=4 && (n%100<10 "
 "|| n%100>=20) ? 1 : 2);\n"
 "X-Generator: Lokalize 22.03.70\n"
-
-#, kde-format
-msgctxt "NAME OF TRANSLATORS"
-msgid "Your names"
-msgstr "Łukasz Wojniłowicz"
-
-#, kde-format
-msgctxt "EMAIL OF TRANSLATORS"
-msgid "Your emails"
-msgstr "lukasz.wojnilowicz@gmail.com"
 
 #: package/contents/ui/languages.qml:20
 #, kde-format
@@ -99,15 +89,19 @@ msgstr "Wstaw kropkę, po dwukrotnym naciśnięciu klawisza spacji"
 msgid "Configure Languages"
 msgstr "Ustawienia języków"
 
-#: virtualkeyboard.cpp:37
-#, kde-format
-msgid "Virtual Keyboard"
-msgstr "Klawiatura ekranowa"
+#~ msgctxt "NAME OF TRANSLATORS"
+#~ msgid "Your names"
+#~ msgstr "Łukasz Wojniłowicz"
 
-#: virtualkeyboard.cpp:38
-#, kde-format
-msgid "Bhushan Shah"
-msgstr "Bhushan Shah"
+#~ msgctxt "EMAIL OF TRANSLATORS"
+#~ msgid "Your emails"
+#~ msgstr "lukasz.wojnilowicz@gmail.com"
+
+#~ msgid "Virtual Keyboard"
+#~ msgstr "Klawiatura ekranowa"
+
+#~ msgid "Bhushan Shah"
+#~ msgstr "Bhushan Shah"
 
 #~ msgid "Test keyboard:"
 #~ msgstr "Próba klawiatury:"

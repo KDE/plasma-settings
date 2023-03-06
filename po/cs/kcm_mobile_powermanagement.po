@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-settings\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2022-11-16 00:49+0000\n"
+"POT-Creation-Date: 2023-03-06 00:49+0000\n"
 "PO-Revision-Date: 2023-01-06 14:59+0100\n"
 "Last-Translator: Vit Pelcak <vit@pelcak.org>\n"
 "Language-Team: Czech <kde-i18n-doc@kde.org>\n"
@@ -17,65 +17,40 @@ msgstr ""
 "Plural-Forms: nplurals=3; plural=(n==1) ? 0 : (n>=2 && n<=4) ? 1 : 2;\n"
 "X-Generator: Lokalize 22.12.0\n"
 
-#, kde-format
-msgctxt "NAME OF TRANSLATORS"
-msgid "Your names"
-msgstr "Vít Pelčák"
-
-#, kde-format
-msgctxt "EMAIL OF TRANSLATORS"
-msgid "Your emails"
-msgstr "vit@pelcak.org"
-
-#: mobilepower.cpp:28
+#: mobilepower.cpp:27
 #, kde-format
 msgid "30 sec"
 msgstr "30 sec"
 
-#: mobilepower.cpp:29
+#: mobilepower.cpp:28
 #, kde-format
 msgid "1 min"
 msgstr "1 min"
 
-#: mobilepower.cpp:30
+#: mobilepower.cpp:29
 #, kde-format
 msgid "2 min"
 msgstr "2 min"
 
-#: mobilepower.cpp:31
+#: mobilepower.cpp:30
 #, kde-format
 msgid "5 min"
 msgstr "5 min"
 
-#: mobilepower.cpp:32
+#: mobilepower.cpp:31
 #, kde-format
 msgid "10 min"
 msgstr "10 min"
 
-#: mobilepower.cpp:33
+#: mobilepower.cpp:32
 #, kde-format
 msgid "15 min"
 msgstr "15 min"
 
-#: mobilepower.cpp:34
+#: mobilepower.cpp:33
 #, kde-format
 msgid "Never"
 msgstr "Nikdy"
-
-#: mobilepower.cpp:58
-#, kde-format
-msgid "Energy Settings"
-msgstr "Nastavení energie"
-
-#: mobilepower.cpp:59
-#, kde-format
-msgid "Tomaz Canabrava"
-msgstr "Tomaz Canabrava"
-
-#: mobilepower.cpp:60
-#, kde-format
-msgid "Devin Lin"
-msgstr "Devin Lin"
 
 #: package/contents/ui/BatteryPage.qml:26
 #, kde-format
@@ -306,3 +281,20 @@ msgstr "Vypnout monitor po"
 msgctxt "Part of a sentence like 'Suspend device after 5 minutes'"
 msgid "Suspend device after"
 msgstr "Uspat zařízení po"
+
+#~ msgctxt "NAME OF TRANSLATORS"
+#~ msgid "Your names"
+#~ msgstr "Vít Pelčák"
+
+#~ msgctxt "EMAIL OF TRANSLATORS"
+#~ msgid "Your emails"
+#~ msgstr "vit@pelcak.org"
+
+#~ msgid "Energy Settings"
+#~ msgstr "Nastavení energie"
+
+#~ msgid "Tomaz Canabrava"
+#~ msgstr "Tomaz Canabrava"
+
+#~ msgid "Devin Lin"
+#~ msgstr "Devin Lin"

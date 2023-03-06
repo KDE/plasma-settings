@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-settings\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2022-07-07 00:47+0000\n"
+"POT-Creation-Date: 2023-03-06 00:49+0000\n"
 "PO-Revision-Date: 2022-12-28 02:19+0200\n"
 "Last-Translator: Moo <<>>\n"
 "Language-Team: none\n"
@@ -18,16 +18,6 @@ msgstr ""
 "Plural-Forms: nplurals=4; plural=(n==1 ? 0 : n%10>=2 && (n%100<10 || n"
 "%100>=20) ? 1 : n%10==0 || (n%100>10 && n%100<20) ? 2 : 3);\n"
 "X-Generator: Poedit 3.2.2\n"
-
-#, kde-format
-msgctxt "NAME OF TRANSLATORS"
-msgid "Your names"
-msgstr "Moo"
-
-#, kde-format
-msgctxt "EMAIL OF TRANSLATORS"
-msgid "Your emails"
-msgstr "<>"
 
 #: package/contents/ui/DatePicker.qml:121
 #, kde-format
@@ -157,27 +147,17 @@ msgstr "Pasirinkti laiką"
 msgid "Pick Date"
 msgstr "Pasirinkti datą"
 
-#: timesettings.cpp:45
-#, kde-format
-msgid "Date and Time"
-msgstr "Data ir laikas"
-
-#: timesettings.cpp:46
-#, kde-format
-msgid "Sebastian Kügler"
-msgstr "Sebastian Kügler"
-
-#: timesettings.cpp:151
+#: timesettings.cpp:147
 #, kde-format
 msgid "Unable to change NTP settings"
 msgstr "Nepavyko pakeisti NTP nuostatų"
 
-#: timesettings.cpp:167
+#: timesettings.cpp:163
 #, kde-format
 msgid "Unable to set current time"
 msgstr "Nepavyko nustatyti dabartinio laiko"
 
-#: timesettings.cpp:190
+#: timesettings.cpp:186
 #, kde-format
 msgid "Unable to set timezone"
 msgstr "Nepavyko nustatyti laiko juostos"
@@ -3072,6 +3052,20 @@ msgstr "Indijos vandenynas"
 msgctxt "This is a continent/area associated with a particular timezone"
 msgid "Pacific"
 msgstr "Ramusis vandenynas"
+
+#~ msgctxt "NAME OF TRANSLATORS"
+#~ msgid "Your names"
+#~ msgstr "Moo"
+
+#~ msgctxt "EMAIL OF TRANSLATORS"
+#~ msgid "Your emails"
+#~ msgstr "<>"
+
+#~ msgid "Date and Time"
+#~ msgstr "Data ir laikas"
+
+#~ msgid "Sebastian Kügler"
+#~ msgstr "Sebastian Kügler"
 
 #~ msgid "Use 24-hour clock:"
 #~ msgstr "Naudoti 24 val. laikrodį:"

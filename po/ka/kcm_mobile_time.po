@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-settings\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2022-07-07 00:47+0000\n"
+"POT-Creation-Date: 2023-03-06 00:49+0000\n"
 "PO-Revision-Date: 2022-08-20 08:15+0200\n"
 "Last-Translator: Temuri Doghonadze <temuri.doghonadze@gmail.com>\n"
 "Language-Team: Georgian <kde-i18n-doc@kde.org>\n"
@@ -17,16 +17,6 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 "X-Generator: Poedit 3.1.1\n"
-
-#, kde-format
-msgctxt "NAME OF TRANSLATORS"
-msgid "Your names"
-msgstr "Temuri Doghonadze"
-
-#, kde-format
-msgctxt "EMAIL OF TRANSLATORS"
-msgid "Your emails"
-msgstr "Temuri.doghonadze@gmail.com"
 
 #: package/contents/ui/DatePicker.qml:121
 #, kde-format
@@ -156,27 +146,17 @@ msgstr "დროის არჩევა"
 msgid "Pick Date"
 msgstr "თარიღის არჩევა"
 
-#: timesettings.cpp:45
-#, kde-format
-msgid "Date and Time"
-msgstr "თარიღი და დრო"
-
-#: timesettings.cpp:46
-#, kde-format
-msgid "Sebastian Kügler"
-msgstr "სებასტიან კუგლერი"
-
-#: timesettings.cpp:151
+#: timesettings.cpp:147
 #, kde-format
 msgid "Unable to change NTP settings"
 msgstr "NTP-ის პარამეტრების შეცვლა შეუძლებელია"
 
-#: timesettings.cpp:167
+#: timesettings.cpp:163
 #, kde-format
 msgid "Unable to set current time"
 msgstr "მიმდინარე დროის მიღება შეუძლებელია"
 
-#: timesettings.cpp:190
+#: timesettings.cpp:186
 #, kde-format
 msgid "Unable to set timezone"
 msgstr "დროის სარტყლის მიღების შეცდომა"
@@ -3071,6 +3051,20 @@ msgstr "ინდური"
 msgctxt "This is a continent/area associated with a particular timezone"
 msgid "Pacific"
 msgstr "წყნარი ოკეანე"
+
+#~ msgctxt "NAME OF TRANSLATORS"
+#~ msgid "Your names"
+#~ msgstr "Temuri Doghonadze"
+
+#~ msgctxt "EMAIL OF TRANSLATORS"
+#~ msgid "Your emails"
+#~ msgstr "Temuri.doghonadze@gmail.com"
+
+#~ msgid "Date and Time"
+#~ msgstr "თარიღი და დრო"
+
+#~ msgid "Sebastian Kügler"
+#~ msgstr "სებასტიან კუგლერი"
 
 #~ msgid "Use 24-hour clock:"
 #~ msgstr "24-სთ-იან საათი:"

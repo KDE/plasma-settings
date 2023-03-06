@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-settings\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2022-11-16 00:49+0000\n"
+"POT-Creation-Date: 2023-03-06 00:49+0000\n"
 "PO-Revision-Date: 2022-10-03 15:32+0200\n"
 "Last-Translator: Shinjo Park <kde@peremen.name>\n"
 "Language-Team: Korean <kde-i18n-doc@kde.org>\n"
@@ -17,65 +17,40 @@ msgstr ""
 "Plural-Forms: nplurals=1; plural=0;\n"
 "X-Generator: Lokalize 21.12.3\n"
 
-#, kde-format
-msgctxt "NAME OF TRANSLATORS"
-msgid "Your names"
-msgstr "박신조"
-
-#, kde-format
-msgctxt "EMAIL OF TRANSLATORS"
-msgid "Your emails"
-msgstr "kde@peremen.name"
-
-#: mobilepower.cpp:28
+#: mobilepower.cpp:27
 #, kde-format
 msgid "30 sec"
 msgstr "30초"
 
-#: mobilepower.cpp:29
+#: mobilepower.cpp:28
 #, kde-format
 msgid "1 min"
 msgstr "1분"
 
-#: mobilepower.cpp:30
+#: mobilepower.cpp:29
 #, kde-format
 msgid "2 min"
 msgstr "2분"
 
-#: mobilepower.cpp:31
+#: mobilepower.cpp:30
 #, kde-format
 msgid "5 min"
 msgstr "5분"
 
-#: mobilepower.cpp:32
+#: mobilepower.cpp:31
 #, kde-format
 msgid "10 min"
 msgstr "10분"
 
-#: mobilepower.cpp:33
+#: mobilepower.cpp:32
 #, kde-format
 msgid "15 min"
 msgstr "15분"
 
-#: mobilepower.cpp:34
+#: mobilepower.cpp:33
 #, kde-format
 msgid "Never"
 msgstr "하지 않음"
-
-#: mobilepower.cpp:58
-#, kde-format
-msgid "Energy Settings"
-msgstr "에너지 설정"
-
-#: mobilepower.cpp:59
-#, kde-format
-msgid "Tomaz Canabrava"
-msgstr "Tomaz Canabrava"
-
-#: mobilepower.cpp:60
-#, kde-format
-msgid "Devin Lin"
-msgstr "Devin Lin"
 
 #: package/contents/ui/BatteryPage.qml:26
 #, kde-format
@@ -306,6 +281,23 @@ msgstr "다음 시간 후 화면 끄기"
 msgctxt "Part of a sentence like 'Suspend device after 5 minutes'"
 msgid "Suspend device after"
 msgstr "다음 시간 후 절전 모드 진입"
+
+#~ msgctxt "NAME OF TRANSLATORS"
+#~ msgid "Your names"
+#~ msgstr "박신조"
+
+#~ msgctxt "EMAIL OF TRANSLATORS"
+#~ msgid "Your emails"
+#~ msgstr "kde@peremen.name"
+
+#~ msgid "Energy Settings"
+#~ msgstr "에너지 설정"
+
+#~ msgid "Tomaz Canabrava"
+#~ msgstr "Tomaz Canabrava"
+
+#~ msgid "Devin Lin"
+#~ msgstr "Devin Lin"
 
 #~ msgctxt "Part of a sentence like 'Dim Display after 5 minutes'"
 #~ msgid "Dim Display"
