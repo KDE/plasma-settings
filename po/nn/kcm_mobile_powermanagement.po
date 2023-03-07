@@ -5,7 +5,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-settings\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2022-11-16 00:49+0000\n"
+"POT-Creation-Date: 2023-03-06 00:49+0000\n"
 "PO-Revision-Date: 2023-01-15 13:04+0100\n"
 "Last-Translator: Karl Ove Hufthammer <karl@huftis.org>\n"
 "Language-Team: Norwegian Nynorsk <l10n-no@lister.huftis.org>\n"
@@ -19,65 +19,40 @@ msgstr ""
 "X-Accelerator-Marker: &\n"
 "X-Text-Markup: kde4\n"
 
-#, kde-format
-msgctxt "NAME OF TRANSLATORS"
-msgid "Your names"
-msgstr "Karl Ove Hufthammer"
-
-#, kde-format
-msgctxt "EMAIL OF TRANSLATORS"
-msgid "Your emails"
-msgstr "karl@huftis.org"
-
-#: mobilepower.cpp:28
+#: mobilepower.cpp:27
 #, kde-format
 msgid "30 sec"
 msgstr "30 sekund"
 
-#: mobilepower.cpp:29
+#: mobilepower.cpp:28
 #, kde-format
 msgid "1 min"
 msgstr "1 minutt"
 
-#: mobilepower.cpp:30
+#: mobilepower.cpp:29
 #, kde-format
 msgid "2 min"
 msgstr "2 minutt"
 
-#: mobilepower.cpp:31
+#: mobilepower.cpp:30
 #, kde-format
 msgid "5 min"
 msgstr "5 minutt"
 
-#: mobilepower.cpp:32
+#: mobilepower.cpp:31
 #, kde-format
 msgid "10 min"
 msgstr "10 minutt"
 
-#: mobilepower.cpp:33
+#: mobilepower.cpp:32
 #, kde-format
 msgid "15 min"
 msgstr "15 minutt"
 
-#: mobilepower.cpp:34
+#: mobilepower.cpp:33
 #, kde-format
 msgid "Never"
 msgstr "Aldri"
-
-#: mobilepower.cpp:58
-#, kde-format
-msgid "Energy Settings"
-msgstr "Strauminnstillingar"
-
-#: mobilepower.cpp:59
-#, kde-format
-msgid "Tomaz Canabrava"
-msgstr "Tomaz Canabrava"
-
-#: mobilepower.cpp:60
-#, kde-format
-msgid "Devin Lin"
-msgstr "Devin Lin"
 
 #: package/contents/ui/BatteryPage.qml:26
 #, kde-format
