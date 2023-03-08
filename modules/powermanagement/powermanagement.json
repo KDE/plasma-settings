@@ -3,7 +3,7 @@
     "KPlugin": {
         "Description": "Configure power management settings",
         "Description[az]": "Enerji sərfiyyatı ayarlarını tənzimlə",
-        "Description[ca@valencia]": "Configuració dels paràmetres de gestió d'energia",
+        "Description[ca@valencia]": "Configureu els paràmetres de gestió de l'energia",
         "Description[ca]": "Configuració dels paràmetres de gestió d'energia",
         "Description[cs]": "Konfigurace nastavení správy napájení",
         "Description[en_GB]": "Configure power management settings",
