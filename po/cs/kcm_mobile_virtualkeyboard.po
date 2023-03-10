@@ -86,17 +86,3 @@ msgstr "Vložit tečku, pokud je mezerník stisknut dvakrát"
 #, kde-format
 msgid "Configure Languages"
 msgstr "Nastavit jazyky"
-
-#~ msgctxt "NAME OF TRANSLATORS"
-#~ msgid "Your names"
-#~ msgstr "Vít Pelčák"
-
-#~ msgctxt "EMAIL OF TRANSLATORS"
-#~ msgid "Your emails"
-#~ msgstr "vit@pelcak.org"
-
-#~ msgid "Virtual Keyboard"
-#~ msgstr "Virtuální klávesnice"
-
-#~ msgid "Bhushan Shah"
-#~ msgstr "Bhushan Shah"

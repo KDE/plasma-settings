@@ -999,20 +999,3 @@ msgstr ""
 #, kde-format
 msgid "Error sending the PUK: %1"
 msgstr ""
-
-#~ msgctxt "NAME OF TRANSLATORS"
-#~ msgid "Your names"
-#~ msgstr "Vít Pelčák"
-
-#~ msgctxt "EMAIL OF TRANSLATORS"
-#~ msgid "Your emails"
-#~ msgstr "vit@pelcak.org"
-
-#~ msgid "Cellular Networks"
-#~ msgstr "Mobilní sítě"
-
-#~ msgid "Devin Lin"
-#~ msgstr "Devin Lin"
-
-#~ msgid "Martin Kacej"
-#~ msgstr "Martin Kacej"
