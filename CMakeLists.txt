@@ -35,30 +35,19 @@ find_package(KF5KirigamiAddons 0.6 REQUIRED)
 
 find_package(KF5 ${KF5_MIN_VERSION} REQUIRED COMPONENTS
     CoreAddons
-    Solid
     Config
-    Auth
     DBusAddons
     I18n
     Plasma
     Service
     Declarative
-    KIO
-    ModemManagerQt
-    NetworkManagerQt
 )
-
-find_package(PkgConfig REQUIRED)
-
-pkg_check_modules(GOBJECT gobject-2.0 REQUIRED IMPORTED_TARGET)
-pkg_check_modules(GIO gio-2.0 REQUIRED IMPORTED_TARGET)
 
 ecm_find_qmlmodule(org.kde.kcm 1.0)
 
 add_definitions(-DQT_DISABLE_DEPRECATED_BEFORE=0x060000)
 
 add_subdirectory(src)
-add_subdirectory(modules)
 
 ki18n_install(po)
 
