@@ -15,10 +15,10 @@ target_link_libraries(plasma-settings
     Qt::Quick
     Qt::Gui
     Qt::Widgets
-    KF5::Package
-    KF5::DBusAddons
-    KF5::QuickAddons
-    KF5::I18n
+    KF6::Package
+    KF6::DBusAddons
+    KF6::QuickAddons
+    KF6::I18n
 )
 
 install(TARGETS plasma-settings ${KDE_INSTALL_TARGETS_DEFAULT_ARGS})
