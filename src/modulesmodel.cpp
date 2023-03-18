@@ -74,7 +74,7 @@ QVariant ModulesModel::data(const QModelIndex &index, int role) const
     }
     case KcmRole: {
         if (!d.kcm) {
-            d.kcm = KPluginFactory::instantiatePlugin<KQuickAddons::ConfigModule>(d.plugin, const_cast<ModulesModel *>(this)).plugin;
+            d.kcm = KQuickConfigModuleLoader::loadModule(d.plugin, const_cast<ModulesModel *>(this)).plugin;
         }
 
         return QVariant::fromValue(d.kcm.data());

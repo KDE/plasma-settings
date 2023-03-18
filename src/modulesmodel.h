@@ -12,11 +12,11 @@
 
 #include <KPackage/Package>
 #include <KPluginMetaData>
-#include <KQuickAddons/ConfigModule>
+#include <KQuickConfigModule>
 
 struct Data {
     KPluginMetaData plugin;
-    QPointer<KQuickAddons::ConfigModule> kcm;
+    QPointer<KQuickConfigModule> kcm;
     bool operator<(const Data &other) const
     {
         return plugin.name() < other.plugin.name();

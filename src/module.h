@@ -7,18 +7,18 @@
 
 #pragma once
 
-#include <KQuickAddons/ConfigModule>
+#include <KQuickConfigModule>
 #include <QObject>
 
 class Module : public QObject
 {
     Q_OBJECT
-    Q_PROPERTY(KQuickAddons::ConfigModule *kcm READ kcm NOTIFY kcmChanged)
+    Q_PROPERTY(KQuickConfigModule *kcm READ kcm NOTIFY kcmChanged)
     Q_PROPERTY(QString path READ path WRITE setPath NOTIFY pathChanged)
     Q_PROPERTY(QString name READ name WRITE setPath NOTIFY nameChanged)
 
 public:
-    KQuickAddons::ConfigModule *kcm() const;
+    KQuickConfigModule *kcm() const;
     QString path() const;
     void setPath(const QString &name);
 
@@ -33,6 +33,6 @@ Q_SIGNALS:
     void nameChanged();
 
 private:
-    KQuickAddons::ConfigModule *m_kcm = nullptr;
+    KQuickConfigModule *m_kcm = nullptr;
     QString m_path;
 };

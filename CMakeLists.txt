@@ -41,6 +41,7 @@ find_package(KF6 ${KF6_MIN_VERSION} REQUIRED COMPONENTS
     Plasma
     Service
     Declarative
+    KCMUtils
 )
 
 ecm_find_qmlmodule(org.kde.kcm 1.0)

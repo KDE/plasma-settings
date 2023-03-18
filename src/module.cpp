@@ -9,7 +9,7 @@
 
 #include <KPluginFactory>
 
-KQuickAddons::ConfigModule *Module::kcm() const
+KQuickConfigModule *Module::kcm() const
 {
     return m_kcm;
 }
@@ -42,7 +42,7 @@ void Module::setPath(const QString &path)
         m_path = kcmMetaData.fileName();
         Q_EMIT pathChanged();
 
-        m_kcm = KPluginFactory::instantiatePlugin<KQuickAddons::ConfigModule>(kcmMetaData, this).plugin;
+        m_kcm = KQuickConfigModuleLoader::loadModule(kcmMetaData, this).plugin;
         Q_EMIT kcmChanged();
     } else {
         qWarning() << "Unknown module" << path << "requested";
