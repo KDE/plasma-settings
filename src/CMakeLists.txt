@@ -17,7 +17,6 @@ target_link_libraries(plasma-settings
     Qt::Widgets
     KF6::Package
     KF6::DBusAddons
-    KF6::Declarative
     KF6::KCMUtilsQuick
     KF6::I18n
 )

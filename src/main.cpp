@@ -33,7 +33,6 @@
 
 #include <KPackage/Package>
 #include <KPackage/PackageLoader>
-#include <kdeclarative/qmlobjectsharedengine.h>
 
 int main(int argc, char **argv)
 {
