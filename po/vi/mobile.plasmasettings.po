@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-settings\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2022-07-14 00:48+0000\n"
+"POT-Creation-Date: 2023-03-22 00:49+0000\n"
 "PO-Revision-Date: 2021-12-23 11:38+0100\n"
 "Last-Translator: Phu Hung Nguyen <phu.nguyen@kdemail.net>\n"
 "Language-Team: Vietnamese <kde-l10n-vi@kde.org>\n"
@@ -17,43 +17,43 @@ msgstr ""
 "Plural-Forms: nplurals=1; plural=0;\n"
 "X-Generator: Lokalize 20.12.2\n"
 
-#: src/main.cpp:46 src/qml/ModulesListPage.qml:18
+#: src/main.cpp:45 src/qml/ModulesListPage.qml:18
 #: src/qml/ModulesListPage.qml:141 src/qml/Sidebar.qml:41
 #, kde-format
 msgid "Settings"
 msgstr "Thiết lập"
 
-#: src/main.cpp:48
+#: src/main.cpp:47
 #, kde-format
 msgid "Touch-friendly settings application."
 msgstr "Ứng dụng \"Thiết lập\" phù hợp với thiết bị cảm ứng."
 
-#: src/main.cpp:50
+#: src/main.cpp:49
 #, kde-format
 msgid "Copyright 2011-2015, Sebastian Kügler"
 msgstr "Bản quyền 2011-2015, Sebastian Kügler"
 
-#: src/main.cpp:51
+#: src/main.cpp:50
 #, kde-format
 msgid "Sebastian Kügler"
 msgstr "Sebastian Kügler"
 
-#: src/main.cpp:51 src/main.cpp:52
+#: src/main.cpp:50 src/main.cpp:51
 #, kde-format
 msgid "Maintainer"
 msgstr "Bảo trì viên"
 
-#: src/main.cpp:52
+#: src/main.cpp:51
 #, kde-format
 msgid "Marco Martin"
 msgstr "Marco Martin"
 
-#: src/main.cpp:60
+#: src/main.cpp:59
 #, kde-format
 msgid "List available settings modules"
 msgstr "Liệt kê các khối thiết lập hiện có"
 
-#: src/main.cpp:63
+#: src/main.cpp:62
 #, kde-format
 msgid ""
 "Limit to modules suitable for <formfactor>, e.g. handset, tablet, "
@@ -62,37 +62,37 @@ msgstr ""
 "Giới hạn trong các khối phù hợp cho <loại_thiết_bị>, có thể là handset, "
 "tablet, mediacenter, desktop, test, all (mặc định là handset)"
 
-#: src/main.cpp:64
+#: src/main.cpp:63
 #, kde-format
 msgid "formfactor"
 msgstr "loại_thiết_bị"
 
-#: src/main.cpp:65
+#: src/main.cpp:64
 #, kde-format
 msgid "Settings module to open"
 msgstr "Khối thiết lập để mở"
 
-#: src/main.cpp:65
+#: src/main.cpp:64
 #, kde-format
 msgid "modulename"
 msgstr "tên_khối"
 
-#: src/main.cpp:66
+#: src/main.cpp:65
 #, kde-format
 msgid "Only show a single module, requires --module"
 msgstr "Chỉ hiện một khối duy nhất, yêu cầu có --module"
 
-#: src/main.cpp:67
+#: src/main.cpp:66
 #, kde-format
 msgid "Start window fullscreen"
 msgstr "Mở cửa sổ ở dạng toàn màn hình"
 
-#: src/main.cpp:68
+#: src/main.cpp:67
 #, kde-format
 msgid "Package to use for the UI (default org.kde.mobile.settings)"
 msgstr "Gói để dùng cho giao diện (mặc định là org.kde.mobile.settings)"
 
-#: src/main.cpp:68
+#: src/main.cpp:67
 #, kde-format
 msgid "packagename"
 msgstr "tên_gói"
