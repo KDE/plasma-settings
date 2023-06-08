@@ -15,7 +15,6 @@ target_link_libraries(plasma-settings
     Qt::Quick
     Qt::Gui
     Qt::Widgets
-    KF6::Package
     KF6::DBusAddons
     KF6::KCMUtilsQuick
     KF6::I18n

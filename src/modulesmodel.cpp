@@ -11,7 +11,6 @@
 #include <QSet>
 
 #include <KJsonUtils>
-#include <KPackage/PackageLoader>
 #include <KPluginFactory>
 #include <KRuntimePlatform>
 

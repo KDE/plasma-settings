@@ -38,12 +38,9 @@ find_package(KF6 ${KF6_MIN_VERSION} REQUIRED COMPONENTS
     Config
     DBusAddons
     I18n
-    Plasma
     Service
     KCMUtils
 )
-
-ecm_find_qmlmodule(org.kde.kcm 1.0)
 
 add_definitions(-DQT_DISABLE_DEPRECATED_BEFORE=0x060000)
 

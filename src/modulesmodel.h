@@ -10,7 +10,6 @@
 #include <QAbstractListModel>
 #include <QVector>
 
-#include <KPackage/Package>
 #include <KPluginMetaData>
 #include <KQuickConfigModule>
 

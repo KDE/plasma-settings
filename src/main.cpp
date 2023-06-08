@@ -28,11 +28,7 @@
 #include <KAboutData>
 #include <KLocalizedContext>
 #include <KLocalizedString>
-#include <KPackage/PackageLoader>
 #include <KPluginMetaData>
-
-#include <KPackage/Package>
-#include <KPackage/PackageLoader>
 
 int main(int argc, char **argv)
 {
@@ -84,7 +80,8 @@ int main(int argc, char **argv)
 
         auto formfactor = parser.value(formfactorOption);
 
-        const auto plugins = KPackage::PackageLoader::self()->listPackages(QString(), "kpackage/kcms/");
+        const auto plugins = KPluginMetaData::findPlugins("kcms")
+            << KPluginMetaData::findPlugins("plasma/kcms") << KPluginMetaData::findPlugins("plasma/kcms/systemsettings");
         for (const auto &plugin : plugins) {
             if (seen.contains(plugin.pluginId())) {
                 continue;
