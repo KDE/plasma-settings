@@ -25,10 +25,7 @@ Kirigami.Page {
     bottomPadding: 0
     
     flickable: internalPage.flickable
-    actions: [
-        internalPage.actions.main,
-        internalPage.contextualActions
-    ]
+    actions: internalPage.actions
 
     onInternalPageChanged: {
         internalPage.parent = contentItem;
