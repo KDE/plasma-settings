@@ -41,7 +41,7 @@ QString SoftwareInfo::qtVersion() const
 
 QString SoftwareInfo::plasmaVersion() const
 {
-    const QStringList &filePaths = QStandardPaths::locateAll(QStandardPaths::GenericDataLocation, QStringLiteral("wayland-sessions/plasma.desktop"));
+    const QStringList &filePaths = QStandardPaths::locateAll(QStandardPaths::GenericDataLocation, QStringLiteral("wayland-sessions/plasma-mobile.desktop"));
 
     if (filePaths.length() < 1) {
         return QString();
