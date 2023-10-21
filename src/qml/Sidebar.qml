@@ -14,8 +14,9 @@ import org.kde.plasma.settings 0.1
 Kirigami.OverlayDrawer {
     id: drawer
     modal: false
-    width: 300
     height: applicationWindow().height
+    width: 300
+    handleVisible: false
 
     property alias model: listView.model
 
@@ -29,9 +30,11 @@ Kirigami.OverlayDrawer {
 
     contentItem: ColumnLayout {
         spacing: 0
+
         QQC2.ToolBar {
             Layout.fillWidth: true
             implicitHeight: applicationWindow().pageStack.globalToolBar.preferredHeight
+            visible: drawer.visible
 
             Item {
                 anchors.fill: parent
@@ -65,7 +68,6 @@ Kirigami.OverlayDrawer {
 
         HeaderSearchBar {
             Layout.fillWidth: true
-            Layout.preferredHeight: show ? height : 0
 
             model: drawer.model
             show: searchButton.checked

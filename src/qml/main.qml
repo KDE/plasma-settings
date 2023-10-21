@@ -28,6 +28,13 @@ Kirigami.ApplicationWindow {
         id: contextDrawer
     }
 
+    globalDrawer: Sidebar {
+        model: proxyModel
+        modal: !rootItem.isWidescreen
+        visible: rootItem.isWidescreen
+        onVisibleChanged: drawerOpen = !visible
+    }
+
     readonly property real widescreenThreshold: 720
     property bool isWidescreen: width >= widescreenThreshold
     onIsWidescreenChanged: changeNav(isWidescreen);
@@ -35,16 +42,12 @@ Kirigami.ApplicationWindow {
     // change between sidebar and single page listview
     function changeNav(toWidescreen) {
         if (SettingsApp.singleModule) return;
-        
+
         if (toWidescreen) {
-            // load sidebars
-            sidebarLoader.active = true;
-            globalDrawer = sidebarLoader.item;
-            
             // remove the listview page, and restore all other pages
             listViewPageLoader.active = false;
             if (pageStack.currentItem == defaultPage) return;
-            
+
             if (pageStack.depth == 0) {
                 pageStack.push(defaultPage);
             } else {
@@ -56,17 +59,13 @@ Kirigami.ApplicationWindow {
                 }
             }
         } else {
-            // unload sidebar
-            sidebarLoader.active = false;
-            globalDrawer = null;
-            
             // insert listview page in beginning
             listViewPageLoader.active = true;
             while (pageStack.depth > 0) {
                 pageStack.pop()
             }
             pageStack.push(listViewPageLoader.item);
-            
+
             if (module.name) {
                 openModule(module.name);
             }
@@ -77,13 +76,6 @@ Kirigami.ApplicationWindow {
         id: listViewPageLoader
         active: false
         sourceComponent: ModulesListPage {
-            model: proxyModel
-        }
-    }
-    Loader {
-        id: sidebarLoader
-        active: false
-        sourceComponent: Sidebar {
             model: proxyModel
         }
     }
@@ -100,10 +92,10 @@ Kirigami.ApplicationWindow {
     
     // if module is specified to be opened, load it
     Component.onCompleted: {
-        changeNav(isWidescreen)
         if (SettingsApp.startModule.length > 0) {
             openModule(SettingsApp.startModule)
         }
+        changeNav(isWidescreen)
     }
 
     Connections {

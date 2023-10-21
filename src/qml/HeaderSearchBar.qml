@@ -25,7 +25,8 @@ Controls.Control {
 
     background: Rectangle { color: Kirigami.Theme.backgroundColor }
 
-    height: opacity !== 0 ? implicitHeight : 0
+    Layout.preferredHeight: height
+    height: show ? implicitHeight : 0
     opacity: show ? 1 : 0
 
     Behavior on height {
