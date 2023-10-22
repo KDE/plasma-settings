@@ -4,11 +4,11 @@
  * SPDX-License-Identifier: GPL-2.0-or-later
 */
 
-import QtQuick 2.15
-import QtQuick.Layouts 1.2
-import QtQuick.Controls 2.15 as Controls
-import org.kde.kirigami 2.19 as Kirigami
-import org.kde.kirigamiaddons.labs.mobileform 0.1 as MobileForm
+import QtQuick
+import QtQuick.Layouts
+import QtQuick.Controls as Controls
+import org.kde.kirigami as Kirigami
+import org.kde.kirigamiaddons.formcard 1 as FormCard
 
 import org.kde.plasma.settings 0.1
 
@@ -31,20 +31,21 @@ Kirigami.ScrollablePage {
         id: settingsModuleDelegate
         
         Column {
-            width: cardColumn.width
+            Layout.fillWidth: true
             
-            MobileForm.FormDelegateSeparator {
+            FormCard.FormDelegateSeparator {
                 anchors.left: parent.left
                 anchors.right: parent.right
                 anchors.leftMargin: Kirigami.Units.largeSpacing
                 anchors.rightMargin: Kirigami.Units.largeSpacing
                 visible: model.index !== 0
-                above: cardColumn.children[model.index]
+                above: settingsCard.children[model.index]
                 below: delegateItem
             }
             
-            MobileForm.AbstractFormDelegate {
+            FormCard.AbstractFormDelegate {
                 id: delegateItem
+                width: parent.width
                 property string name: model.name
                 property string description: model.description
                 property string iconName: model.iconName ? model.iconName : "question"
@@ -54,7 +55,8 @@ Kirigami.ScrollablePage {
                     applicationWindow().openModule(model.id);
                 }
                 
-                width: cardColumn.width
+                // width: cardColumn.width
+
                 contentItem: RowLayout {
                     Kirigami.Icon {
                         source: delegateItem.iconName
@@ -105,46 +107,35 @@ Kirigami.ScrollablePage {
         width: settingsRoot.width
         
         // search bar
-        MobileForm.FormCard {
+        FormCard.FormCard {
             Layout.fillWidth: true
             Layout.topMargin: Kirigami.Units.largeSpacing
             
-            contentItem: ColumnLayout {
-                spacing: 0
-                
-                MobileForm.AbstractFormDelegate {
-                    Layout.fillWidth: true
-                    background: Item {}
-                    
-                    contentItem: RowLayout {
-                        Kirigami.SearchField {
-                            id: searchField
-                            Layout.fillWidth: true
-                            autoAccept: true
-                            onAccepted: settingsRoot.model.filterString = searchField.text
-                        }
+            FormCard.AbstractFormDelegate {
+                Layout.fillWidth: true
+                background: Item {}
+
+                contentItem: RowLayout {
+                    Kirigami.SearchField {
+                        id: searchField
+                        Layout.fillWidth: true
+                        autoAccept: true
+                        onAccepted: settingsRoot.model.filterString = searchField.text
                     }
                 }
             }
         }
+
+        FormCard.FormHeader {
+            title: i18n("Settings")
+        }
         
         // settings categories
-        MobileForm.FormCard {
-            Layout.fillWidth: true
-            Layout.topMargin: Kirigami.Units.largeSpacing
-            
-            contentItem: ColumnLayout {
-                id: cardColumn
-                spacing: 0
-                
-                MobileForm.FormCardHeader {
-                    title: i18n("Settings")
-                }
-                
-                Repeater {
-                    id: repeater
-                    delegate: settingsModuleDelegate
-                }
+        FormCard.FormCard {
+            id: settingsCard
+            Repeater {
+                id: repeater
+                delegate: settingsModuleDelegate
             }
         }
     }
