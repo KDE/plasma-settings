@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-settings\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-06-10 00:49+0000\n"
+"POT-Creation-Date: 2023-10-22 00:44+0000\n"
 "PO-Revision-Date: 2019-11-21 01:38+0200\n"
 "Last-Translator: Marek Laane <qiilaq69@gmail.com>\n"
 "Language-Team: Estonian <kde-et@lists.linux.ee>\n"
@@ -18,7 +18,7 @@ msgstr ""
 "X-Generator: Lokalize 19.08.1\n"
 
 #: src/main.cpp:41 src/qml/ModulesListPage.qml:18
-#: src/qml/ModulesListPage.qml:141 src/qml/Sidebar.qml:41
+#: src/qml/ModulesListPage.qml:141 src/qml/Sidebar.qml:44
 #, kde-format
 msgid "Settings"
 msgstr "Seadistused"
@@ -108,7 +108,7 @@ msgstr "Seadistused"
 msgid "Open a configuration page from the sidebar."
 msgstr ""
 
-#: src/qml/Sidebar.qml:52
+#: src/qml/Sidebar.qml:55
 #, kde-format
 msgid "Search"
 msgstr ""

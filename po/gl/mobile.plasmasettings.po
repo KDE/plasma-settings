@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-settings\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-06-10 00:49+0000\n"
+"POT-Creation-Date: 2023-10-22 00:44+0000\n"
 "PO-Revision-Date: 2023-04-30 15:43+0200\n"
 "Last-Translator: Adrián Chaves (Gallaecio) <adrian@chaves.io>\n"
 "Language-Team: Galician <proxecto@trasno.gal>\n"
@@ -18,7 +18,7 @@ msgstr ""
 "X-Generator: Lokalize 23.04.0\n"
 
 #: src/main.cpp:41 src/qml/ModulesListPage.qml:18
-#: src/qml/ModulesListPage.qml:141 src/qml/Sidebar.qml:41
+#: src/qml/ModulesListPage.qml:141 src/qml/Sidebar.qml:44
 #, kde-format
 msgid "Settings"
 msgstr "Configuración"
@@ -109,7 +109,7 @@ msgstr "Configuración do sistema"
 msgid "Open a configuration page from the sidebar."
 msgstr "Abra unha páxina de configuración desde a barra lateral."
 
-#: src/qml/Sidebar.qml:52
+#: src/qml/Sidebar.qml:55
 #, kde-format
 msgid "Search"
 msgstr "Buscar"

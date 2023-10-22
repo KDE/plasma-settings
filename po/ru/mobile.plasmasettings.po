@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-settings\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-06-10 00:49+0000\n"
+"POT-Creation-Date: 2023-10-22 00:44+0000\n"
 "PO-Revision-Date: 2023-01-19 16:28+0300\n"
 "Last-Translator: Olesya Gerasimenko <translation-team@basealt.ru>\n"
 "Language-Team: Basealt Translation Team\n"
@@ -21,7 +21,7 @@ msgstr ""
 "X-Generator: Lokalize 22.08.3\n"
 
 #: src/main.cpp:41 src/qml/ModulesListPage.qml:18
-#: src/qml/ModulesListPage.qml:141 src/qml/Sidebar.qml:41
+#: src/qml/ModulesListPage.qml:141 src/qml/Sidebar.qml:44
 #, kde-format
 msgid "Settings"
 msgstr "Параметры"
@@ -114,7 +114,7 @@ msgstr "Параметры системы"
 msgid "Open a configuration page from the sidebar."
 msgstr "Откройте страницу настройки с боковой панели."
 
-#: src/qml/Sidebar.qml:52
+#: src/qml/Sidebar.qml:55
 #, kde-format
 msgid "Search"
 msgstr "Поиск"
