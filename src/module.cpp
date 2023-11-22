@@ -31,10 +31,6 @@ void Module::setPath(const QString &path)
         // From the command line or DBus we usually get only the plugin id
         if (KPluginMetaData data(QStringLiteral("plasma/kcms/systemsettings/") + path); data.isValid()) {
             kcmMetaData = data;
-        } else if (KPluginMetaData data(QStringLiteral("kcms/") + path); data.isValid()) {
-            // Also check the old "kcms" namespace
-            // TODO KF6 remove this branch of the if statement
-            kcmMetaData = data;
         }
     }
 
@@ -44,7 +40,18 @@ void Module::setPath(const QString &path)
 
         m_kcm = KQuickConfigModuleLoader::loadModule(kcmMetaData, this).plugin;
         Q_EMIT kcmChanged();
+        Q_EMIT nameChanged();
+
+        m_valid = true;
+        Q_EMIT validChanged();
     } else {
         qWarning() << "Unknown module" << path << "requested";
+        m_valid = false;
+        Q_EMIT validChanged();
     }
+}
+
+bool Module::valid()
+{
+    return m_valid;
 }

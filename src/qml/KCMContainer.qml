@@ -15,6 +15,7 @@ Kirigami.Page {
     id: container
     property QtObject kcm
     property Item internalPage
+    property bool suppressDeletion: false
     
     title: internalPage.title
     
@@ -64,7 +65,7 @@ Kirigami.Page {
                 if (kcm.needsSave) {
                     kcm.save()
                 }
-                if (page == container) {
+                if (page == container && !container.suppressDeletion) {
                     page.destroy();
                 }
             }

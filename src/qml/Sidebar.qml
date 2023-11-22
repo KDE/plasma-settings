@@ -18,6 +18,10 @@ Kirigami.OverlayDrawer {
     width: 300
     handleVisible: false
 
+    edge: Qt.application.layoutDirection === Qt.RightToLeft ? Qt.RightEdge : Qt.LeftEdge
+    parent: QQC2.Overlay.overlay
+    x: 0
+
     property alias model: listView.model
 
     Kirigami.Theme.colorSet: Kirigami.Theme.Window

@@ -31,6 +31,7 @@ Kirigami.ScrollablePage {
         id: settingsModuleDelegate
         
         Column {
+            id: column
             Layout.fillWidth: true
             
             FormCard.FormDelegateSeparator {
@@ -39,7 +40,7 @@ Kirigami.ScrollablePage {
                 anchors.leftMargin: Kirigami.Units.largeSpacing
                 anchors.rightMargin: Kirigami.Units.largeSpacing
                 visible: model.index !== 0
-                above: settingsCard.children[model.index]
+                above: column.parent.visibleChildren[model.index] ? column.parent.visibleChildren[model.index] : null
                 below: delegateItem
             }
             
@@ -133,6 +134,7 @@ Kirigami.ScrollablePage {
         // settings categories
         FormCard.FormCard {
             id: settingsCard
+
             Repeater {
                 id: repeater
                 delegate: settingsModuleDelegate
