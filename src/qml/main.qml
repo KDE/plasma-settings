@@ -117,9 +117,7 @@ Kirigami.ApplicationWindow {
             loadedKCMPage = kcmContainer.createObject(pageStack, {"kcm": module.kcm, "internalPage": module.kcm.mainUi});
             pageStack.push(loadedKCMPage);
             currentModuleName = module.name;
-        }
-        
-        if (isWidescreen) {
+        } else if (isWidescreen) {
             pageStack.push(defaultPage);
         }
     }
