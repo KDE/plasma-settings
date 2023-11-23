@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-settings\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-11-05 12:37+0000\n"
+"POT-Creation-Date: 2023-11-23 00:43+0000\n"
 "PO-Revision-Date: 2021-12-24 07:32+0100\n"
 "Last-Translator: Matjaž Jeran <matjaz.jeran@amis.net>\n"
 "Language-Team: Slovenian <lugos-slo@lugos.si>\n"
@@ -19,7 +19,7 @@ msgstr ""
 "%100==4 ? 3 : 0);\n"
 
 #: src/main.cpp:41 src/qml/ModulesListPage.qml:18
-#: src/qml/ModulesListPage.qml:130 src/qml/Sidebar.qml:44
+#: src/qml/ModulesListPage.qml:131 src/qml/Sidebar.qml:48
 #, kde-format
 msgid "Settings"
 msgstr "Nastavitve"
@@ -109,7 +109,7 @@ msgstr "Nastavitve sistema"
 msgid "Open a configuration page from the sidebar."
 msgstr "Odpri nastavitveno stran iz stranske vrstice."
 
-#: src/qml/Sidebar.qml:55
+#: src/qml/Sidebar.qml:59
 #, kde-format
 msgid "Search"
 msgstr "Išči"
