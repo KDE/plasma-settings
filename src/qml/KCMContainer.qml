@@ -41,10 +41,25 @@ Kirigami.Page {
     }
 
     Component.onCompleted: {
-        kcm.load()
+        // setting a binding seems to not work, add them manually
+        for (let action of internalPage.actions) {
+            actions.push(action);
+        }
+        if (kcm.load !== undefined) {
+            kcm.load();
+        }
     }
 
     data: [
+        Connections {
+            target: internalPage
+            function onActionsChanged() {
+                root.actions.clear();
+                for (let action of internalPage.actions) {
+                    root.actions.push(action);
+                }
+            }
+        },
         Connections {
             target: kcm
             function onPagePushed(page) {
