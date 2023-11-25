@@ -16,5 +16,5 @@ Dependencies:
     'frameworks/kio': '@latest-kf6'
     'frameworks/networkmanager-qt': '@latest-kf6'
     'frameworks/modemmanager-qt': '@latest-kf6'
-    'plasma/plasma-framework': '@same'
+    'plasma/libplasma': '@same'
     'libraries/kirigami-addons': '@latest-kf6'
