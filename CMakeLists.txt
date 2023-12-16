@@ -48,6 +48,7 @@ add_subdirectory(src)
 
 ki18n_install(po)
 
+install(FILES org.kde.mobile.plasmasettings.svg DESTINATION ${KDE_INSTALL_FULL_ICONDIR}/hicolor/scalable/apps/)
 install(FILES org.kde.mobile.plasmasettings.desktop DESTINATION ${KDE_INSTALL_APPDIR})
 
 file(GLOB_RECURSE ALL_CLANG_FORMAT_SOURCE_FILES *.cpp *.h)

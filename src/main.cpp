@@ -37,7 +37,7 @@ int main(int argc, char **argv)
     KLocalizedString::setApplicationDomain("mobile.plasma-settings");
 
     // About data
-    KAboutData aboutData("mobile.plasmasettings",
+    KAboutData aboutData("org.kde.mobile.plasmasettings",
                          i18n("Settings"),
                          QStringLiteral(PLASMA_SETTINGS_VERSION_STRING),
                          i18n("Touch-friendly settings application."),

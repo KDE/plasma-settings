@@ -21,7 +21,7 @@ Kirigami.Page {
             Layout.alignment: Qt.AlignCenter
             implicitWidth: Kirigami.Units.iconSizes.enormous
             implicitHeight: Kirigami.Units.iconSizes.enormous
-            source: "applications-system"
+            source: "org.kde.mobile.plasmasettings"
         }
         Kirigami.Heading {
             Layout.alignment: Qt.AlignCenter
