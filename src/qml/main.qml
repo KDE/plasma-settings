@@ -18,7 +18,13 @@ Kirigami.ApplicationWindow {
     pageStack.defaultColumnWidth: Kirigami.Units.gridUnit * 35
     pageStack.globalToolBar.style: Kirigami.ApplicationHeaderStyle.ToolBar
     pageStack.globalToolBar.showNavigationButtons: Kirigami.ApplicationHeaderStyle.ShowBackButton;
-    pageStack.popHiddenPages: true
+
+    // HACK: popHiddenPages seems to popup the kcm module at launch, will need to fix in Kirigami
+    Timer {
+        interval: 200
+        running: true
+        onTriggered: root.pageStack.popHiddenPages = true;
+    }
 
     property alias currentModule: module
     property string currentModuleName
@@ -77,18 +83,6 @@ Kirigami.ApplicationWindow {
             }
         }
     }
-
-    // HACK: there seems to be a race condition that causes the start
-    //       module page to be popped immediately at app start in non-widescreen mode...
-    Timer {
-        id: startModuleTimer
-        running: false
-        interval: 200
-        repeat: false
-        onTriggered: {
-            openModule(SettingsApp.startModule);
-        }
-    }
     
     Loader {
         id: listViewPageLoader
@@ -124,10 +118,11 @@ Kirigami.ApplicationWindow {
     
     // if module is specified to be opened, load it
     Component.onCompleted: {
-        if (SettingsApp.startModule.length > 0) {
-            startModuleTimer.restart();
-        }
         changeNav(isWidescreen);
+
+        if (SettingsApp.startModule.length > 0) {
+            openModule(SettingsApp.startModule);
+        }
     }
 
     Connections {
