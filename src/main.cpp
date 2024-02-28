@@ -30,6 +30,8 @@
 #include <KLocalizedString>
 #include <KPluginMetaData>
 
+using namespace Qt::Literals::StringLiterals;
+
 int main(int argc, char **argv)
 {
     QApplication app(argc, argv);
@@ -37,18 +39,18 @@ int main(int argc, char **argv)
     KLocalizedString::setApplicationDomain("mobile.plasma-settings");
 
     // About data
-    KAboutData aboutData("org.kde.mobile.plasmasettings",
+    KAboutData aboutData(u"org.kde.mobile.plasmasettings"_s,
                          i18n("Settings"),
                          QStringLiteral(PLASMA_SETTINGS_VERSION_STRING),
                          i18n("Touch-friendly settings application."),
                          KAboutLicense::GPL,
                          i18n("Copyright 2011-2015, Sebastian Kügler"));
-    aboutData.addAuthor(i18n("Sebastian Kügler"), i18n("Maintainer"), "sebas@kde.org");
-    aboutData.addAuthor(i18n("Marco Martin"), i18n("Maintainer"), "mart@kde.org");
-    aboutData.setDesktopFileName("org.kde.mobile.plasmasettings");
+    aboutData.addAuthor(i18n("Sebastian Kügler"), i18n("Maintainer"), u"sebas@kde.org"_s);
+    aboutData.addAuthor(i18n("Marco Martin"), i18n("Maintainer"), u"mart@kde.org"_s);
+    aboutData.setDesktopFileName(u"org.kde.mobile.plasmasettings"_s);
     KAboutData::setApplicationData(aboutData);
 
-    QApplication::setWindowIcon(QIcon::fromTheme("preferences-system"));
+    QApplication::setWindowIcon(QIcon::fromTheme(u"preferences-system"_s));
 
     QCommandLineParser parser;
 
@@ -80,8 +82,8 @@ int main(int argc, char **argv)
 
         auto formfactor = parser.value(formfactorOption);
 
-        const auto plugins = KPluginMetaData::findPlugins("kcms")
-            << KPluginMetaData::findPlugins("plasma/kcms") << KPluginMetaData::findPlugins("plasma/kcms/systemsettings");
+        const auto plugins = KPluginMetaData::findPlugins(u"kcms"_s)
+            << KPluginMetaData::findPlugins(u"plasma/kcms"_s) << KPluginMetaData::findPlugins(u"plasma/kcms/systemsettings"_s);
         for (const auto &plugin : plugins) {
             if (seen.contains(plugin.pluginId())) {
                 continue;
@@ -103,8 +105,8 @@ int main(int argc, char **argv)
             // qDebug() << "Formafactors: " << formFactors;
         }
 
-        const auto kcmPlugin = KPluginMetaData::findPlugins("kcms")
-            << KPluginMetaData::findPlugins("plasma/kcms") << KPluginMetaData::findPlugins("plasma/kcms/systemsettings");
+        const auto kcmPlugin = KPluginMetaData::findPlugins(u"kcms"_s)
+            << KPluginMetaData::findPlugins(u"plasma/kcms"_s) << KPluginMetaData::findPlugins(u"plasma/kcms/systemsettings"_s);
         for (const auto &plugin : kcmPlugin) {
             if (seen.contains(plugin.pluginId())) {
                 continue;

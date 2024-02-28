@@ -16,12 +16,14 @@
 
 #include <QDebug>
 
+using namespace Qt::Literals::StringLiterals;
+
 ModulesModel::ModulesModel(QObject *parent)
     : QAbstractListModel(parent)
 {
     qDebug() << "Current platform is " << KRuntimePlatform::runtimePlatform();
-    const auto kcms = KPluginMetaData::findPlugins("kcms")
-        << KPluginMetaData::findPlugins("plasma/kcms") << KPluginMetaData::findPlugins("plasma/kcms/systemsettings");
+    const auto kcms = KPluginMetaData::findPlugins(u"kcms"_s)
+        << KPluginMetaData::findPlugins(u"plasma/kcms"_s) << KPluginMetaData::findPlugins(u"plasma/kcms/systemsettings"_s);
     for (const KPluginMetaData &pluginMetaData : kcms) {
         bool isCurrentPlatform = false;
         if (KRuntimePlatform::runtimePlatform().isEmpty()) {

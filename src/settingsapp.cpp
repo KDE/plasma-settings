@@ -16,6 +16,8 @@
 
 #include <KLocalizedString>
 
+using namespace Qt::Literals::StringLiterals;
+
 SettingsApp::SettingsApp(QCommandLineParser &parser, QObject *parent)
     : QObject(parent)
     , m_parser(&parser)
@@ -27,15 +29,15 @@ SettingsApp::~SettingsApp() = default;
 
 void SettingsApp::setupKDBus()
 {
-    QCoreApplication::setOrganizationDomain("kde.org");
+    QCoreApplication::setOrganizationDomain(u"kde.org"_s);
     KDBusService *service = new KDBusService(KDBusService::Unique, this);
 
     QObject::connect(service, &KDBusService::activateRequested, this, [this](const QStringList &arguments, const QString & /*workingDirectory*/) {
         qDebug() << "activateRequested" << arguments;
         m_parser->parse(arguments);
 
-        if (m_parser->isSet("module")) {
-            const QString module = m_parser->value("module");
+        if (m_parser->isSet(u"module"_s)) {
+            const QString module = m_parser->value(u"module"_s);
             qDebug() << "Loading module:" << module;
             Q_EMIT moduleRequested(module);
         }

@@ -1,6 +1,6 @@
 cmake_minimum_required(VERSION 3.16)
 
-set(PROJECT_VERSION "23.01")
+set(PROJECT_VERSION "24.02")
 project(plasma-settings VERSION ${PROJECT_VERSION})
 
 include(FeatureSummary)
@@ -8,9 +8,9 @@ include(FeatureSummary)
 set(CMAKE_CXX_STANDARD 17)
 set(CMAKE_CXX_STANDARD_REQUIRED ON)
 
-set (QT_MIN_VERSION "6.4.0")
-set (KF6_MIN_VERSION "5.240.0")
-set(KDE_COMPILERSETTINGS_LEVEL "5.82")
+set (QT_MIN_VERSION "6.6.0")
+set (KF6_MIN_VERSION "6.0.0")
+set(KDE_COMPILERSETTINGS_LEVEL "6.0.0")
 
 find_package(ECM ${KF6_MIN_VERSION} REQUIRED NO_MODULE)
 
@@ -31,7 +31,7 @@ ecm_setup_version(${PROJECT_VERSION}
 )
 
 find_package(Qt6 ${QT_MIN_VERSION} REQUIRED NO_MODULE COMPONENTS Core Quick Test Gui Widgets)
-find_package(KF6KirigamiAddons 0.6 REQUIRED)
+find_package(KF6KirigamiAddons 1.0 REQUIRED)
 
 find_package(KF6 ${KF6_MIN_VERSION} REQUIRED COMPONENTS
     CoreAddons
