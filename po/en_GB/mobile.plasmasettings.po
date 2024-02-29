@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-settings\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-11-23 00:43+0000\n"
+"POT-Creation-Date: 2024-02-29 00:39+0000\n"
 "PO-Revision-Date: 2022-01-01 15:24+0000\n"
 "Last-Translator: Steve Allewell <steve.allewell@gmail.com>\n"
 "Language-Team: British English <kde-l10n-en_gb@kde.org>\n"
@@ -17,43 +17,43 @@ msgstr ""
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
 "X-Generator: Lokalize 21.12.0\n"
 
-#: src/main.cpp:41 src/qml/ModulesListPage.qml:18
+#: src/main.cpp:43 src/qml/ModulesListPage.qml:18
 #: src/qml/ModulesListPage.qml:131 src/qml/Sidebar.qml:48
 #, kde-format
 msgid "Settings"
 msgstr "Settings"
 
-#: src/main.cpp:43
+#: src/main.cpp:45
 #, kde-format
 msgid "Touch-friendly settings application."
 msgstr "Touch-friendly settings application."
 
-#: src/main.cpp:45
+#: src/main.cpp:47
 #, kde-format
 msgid "Copyright 2011-2015, Sebastian Kügler"
 msgstr "Copyright 2011-2015, Sebastian Kügler"
 
-#: src/main.cpp:46
+#: src/main.cpp:48
 #, kde-format
 msgid "Sebastian Kügler"
 msgstr "Sebastian Kügler"
 
-#: src/main.cpp:46 src/main.cpp:47
+#: src/main.cpp:48 src/main.cpp:49
 #, kde-format
 msgid "Maintainer"
 msgstr "Maintainer"
 
-#: src/main.cpp:47
+#: src/main.cpp:49
 #, kde-format
 msgid "Marco Martin"
 msgstr "Marco Martin"
 
-#: src/main.cpp:55
+#: src/main.cpp:57
 #, kde-format
 msgid "List available settings modules"
 msgstr "List available settings modules"
 
-#: src/main.cpp:58
+#: src/main.cpp:60
 #, kde-format
 msgid ""
 "Limit to modules suitable for <formfactor>, e.g. handset, tablet, "
@@ -62,37 +62,37 @@ msgstr ""
 "Limit to modules suitable for <formfactor>, e.g. handset, tablet, "
 "mediacenter, desktop, test, all (default handset)"
 
-#: src/main.cpp:59
+#: src/main.cpp:61
 #, kde-format
 msgid "formfactor"
 msgstr "formfactor"
 
-#: src/main.cpp:60
+#: src/main.cpp:62
 #, kde-format
 msgid "Settings module to open"
 msgstr "Settings module to open"
 
-#: src/main.cpp:60
+#: src/main.cpp:62
 #, kde-format
 msgid "modulename"
 msgstr "modulename"
 
-#: src/main.cpp:61
+#: src/main.cpp:63
 #, kde-format
 msgid "Only show a single module, requires --module"
 msgstr "Only show a single module, requires --module"
 
-#: src/main.cpp:62
+#: src/main.cpp:64
 #, kde-format
 msgid "Start window fullscreen"
 msgstr "Start window fullscreen"
 
-#: src/main.cpp:63
+#: src/main.cpp:65
 #, kde-format
 msgid "Package to use for the UI (default org.kde.mobile.settings)"
 msgstr "Package to use for the UI (default org.kde.mobile.settings)"
 
-#: src/main.cpp:63
+#: src/main.cpp:65
 #, kde-format
 msgid "packagename"
 msgstr "packagename"

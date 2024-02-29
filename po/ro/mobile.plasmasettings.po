@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-settings\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-11-23 00:43+0000\n"
+"POT-Creation-Date: 2024-02-29 00:39+0000\n"
 "PO-Revision-Date: 2022-05-05 12:56+0100\n"
 "Last-Translator: Sergiu Bivol <sergiu@cip.md>\n"
 "Language-Team: Romanian <kde-i18n-ro@kde.org>\n"
@@ -18,43 +18,43 @@ msgstr ""
 "20)) ? 1 : 2;\n"
 "X-Generator: Lokalize 21.12.3\n"
 
-#: src/main.cpp:41 src/qml/ModulesListPage.qml:18
+#: src/main.cpp:43 src/qml/ModulesListPage.qml:18
 #: src/qml/ModulesListPage.qml:131 src/qml/Sidebar.qml:48
 #, kde-format
 msgid "Settings"
 msgstr "Configurări"
 
-#: src/main.cpp:43
+#: src/main.cpp:45
 #, kde-format
 msgid "Touch-friendly settings application."
 msgstr "Aplicație de configurare prietenoasă la atingere"
 
-#: src/main.cpp:45
+#: src/main.cpp:47
 #, kde-format
 msgid "Copyright 2011-2015, Sebastian Kügler"
 msgstr "Drept de autor 2011-2015, Sebastian Kügler"
 
-#: src/main.cpp:46
+#: src/main.cpp:48
 #, kde-format
 msgid "Sebastian Kügler"
 msgstr "Sebastian Kügler"
 
-#: src/main.cpp:46 src/main.cpp:47
+#: src/main.cpp:48 src/main.cpp:49
 #, kde-format
 msgid "Maintainer"
 msgstr "Responsabil"
 
-#: src/main.cpp:47
+#: src/main.cpp:49
 #, kde-format
 msgid "Marco Martin"
 msgstr "Marco Martin"
 
-#: src/main.cpp:55
+#: src/main.cpp:57
 #, kde-format
 msgid "List available settings modules"
 msgstr "Enumeră modulele de configurare disponibile"
 
-#: src/main.cpp:58
+#: src/main.cpp:60
 #, kde-format
 msgid ""
 "Limit to modules suitable for <formfactor>, e.g. handset, tablet, "
@@ -63,38 +63,38 @@ msgstr ""
 "Limitează la modulele potrivite pentru <factor_de_formă>, cum ar fi telefon, "
 "tabletă, centru multimedia, birou, test, toate (implicit e telefon)"
 
-#: src/main.cpp:59
+#: src/main.cpp:61
 #, kde-format
 msgid "formfactor"
 msgstr "factor_de_formă"
 
-#: src/main.cpp:60
+#: src/main.cpp:62
 #, kde-format
 msgid "Settings module to open"
 msgstr "Modulul de configurare de deschis"
 
-#: src/main.cpp:60
+#: src/main.cpp:62
 #, kde-format
 msgid "modulename"
 msgstr "denumire_modul"
 
-#: src/main.cpp:61
+#: src/main.cpp:63
 #, kde-format
 msgid "Only show a single module, requires --module"
 msgstr "Arată un singur modul, necesită --module"
 
-#: src/main.cpp:62
+#: src/main.cpp:64
 #, kde-format
 msgid "Start window fullscreen"
 msgstr "Pornește fereastra pe tot ecranul"
 
-#: src/main.cpp:63
+#: src/main.cpp:65
 #, kde-format
 msgid "Package to use for the UI (default org.kde.mobile.settings)"
 msgstr ""
 "Pachetul de folosit pentru interfață (implicit e org.kde.mobile.settings)"
 
-#: src/main.cpp:63
+#: src/main.cpp:65
 #, kde-format
 msgid "packagename"
 msgstr "denumire_pachet"

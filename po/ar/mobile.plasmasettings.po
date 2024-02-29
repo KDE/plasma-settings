@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-settings\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-11-23 00:43+0000\n"
+"POT-Creation-Date: 2024-02-29 00:39+0000\n"
 "PO-Revision-Date: 2023-08-19 15:38+0400\n"
 "Last-Translator: Zayed Al-Saidi <zayed.alsaidi@gmail.com>\n"
 "Language-Team: \n"
@@ -18,43 +18,43 @@ msgstr ""
 "&& n%100<=10 ? 3 : n%100>=11 && n%100<=99 ? 4 : 5;\n"
 "X-Generator: Lokalize 21.12.3\n"
 
-#: src/main.cpp:41 src/qml/ModulesListPage.qml:18
+#: src/main.cpp:43 src/qml/ModulesListPage.qml:18
 #: src/qml/ModulesListPage.qml:131 src/qml/Sidebar.qml:48
 #, kde-format
 msgid "Settings"
 msgstr "إعدادات"
 
-#: src/main.cpp:43
+#: src/main.cpp:45
 #, kde-format
 msgid "Touch-friendly settings application."
 msgstr "تطبيق إعدادات متوافق مع اللمس."
 
-#: src/main.cpp:45
+#: src/main.cpp:47
 #, kde-format
 msgid "Copyright 2011-2015, Sebastian Kügler"
 msgstr "الحقوق محفوظة 2011-2015 سابسيتان كوغلر"
 
-#: src/main.cpp:46
+#: src/main.cpp:48
 #, kde-format
 msgid "Sebastian Kügler"
 msgstr "سابستيان كوغلر"
 
-#: src/main.cpp:46 src/main.cpp:47
+#: src/main.cpp:48 src/main.cpp:49
 #, kde-format
 msgid "Maintainer"
 msgstr "المصين"
 
-#: src/main.cpp:47
+#: src/main.cpp:49
 #, kde-format
 msgid "Marco Martin"
 msgstr "ماركو مارتن"
 
-#: src/main.cpp:55
+#: src/main.cpp:57
 #, kde-format
 msgid "List available settings modules"
 msgstr "قائمة وحدات الإعدادات المتوفرة"
 
-#: src/main.cpp:58
+#: src/main.cpp:60
 #, kde-format
 msgid ""
 "Limit to modules suitable for <formfactor>, e.g. handset, tablet, "
@@ -63,37 +63,37 @@ msgstr ""
 "عرض الوحدات المتوافقة مع <formfactor> مثلا هاتف، جهاز لوحي، مركز وسائط، "
 "حاسب، اختبار، الجميع (الافتراضي هاتف)"
 
-#: src/main.cpp:59
+#: src/main.cpp:61
 #, kde-format
 msgid "formfactor"
 msgstr "حجم الجهاز"
 
-#: src/main.cpp:60
+#: src/main.cpp:62
 #, kde-format
 msgid "Settings module to open"
 msgstr "وحدة الإعدادات لفتحها"
 
-#: src/main.cpp:60
+#: src/main.cpp:62
 #, kde-format
 msgid "modulename"
 msgstr "اسم الوحدة"
 
-#: src/main.cpp:61
+#: src/main.cpp:63
 #, kde-format
 msgid "Only show a single module, requires --module"
 msgstr "تعرض وحدة واحدة فقط، يتطلب --module"
 
-#: src/main.cpp:62
+#: src/main.cpp:64
 #, kde-format
 msgid "Start window fullscreen"
 msgstr "بدء نافذة ملء الشاشة"
 
-#: src/main.cpp:63
+#: src/main.cpp:65
 #, kde-format
 msgid "Package to use for the UI (default org.kde.mobile.settings)"
 msgstr "الحزمة المستخدمة لواجهة المستخدم (الافتراضي org.kde.mobile.settings)"
 
-#: src/main.cpp:63
+#: src/main.cpp:65
 #, kde-format
 msgid "packagename"
 msgstr "اسم الحزمة"
