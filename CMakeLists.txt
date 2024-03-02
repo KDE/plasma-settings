@@ -35,10 +35,8 @@ find_package(KF6KirigamiAddons 1.0 REQUIRED)
 
 find_package(KF6 ${KF6_MIN_VERSION} REQUIRED COMPONENTS
     CoreAddons
-    Config
     DBusAddons
     I18n
-    Service
     KCMUtils
 )
 
