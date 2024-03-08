@@ -1,0 +1,113 @@
+# Copyright (C) 2024 This file is copyright:
+# This file is distributed under the same license as the plasma-settings package.
+#
+# SPDX-FileCopyrightText: 2024 Yaron Shahrabani <sh.yaron@gmail.com>
+msgid ""
+msgstr ""
+"Project-Id-Version: plasma-settings\n"
+"Report-Msgid-Bugs-To: https://bugs.kde.org\n"
+"POT-Creation-Date: 2024-02-29 00:39+0000\n"
+"PO-Revision-Date: 2024-03-07 23:11+0200\n"
+"Last-Translator: Yaron Shahrabani <sh.yaron@gmail.com>\n"
+"Language-Team: צוות התרגום של KDE ישראל\n"
+"Language: he\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Generator: Lokalize 23.08.4\n"
+
+#: src/main.cpp:43 src/qml/ModulesListPage.qml:18
+#: src/qml/ModulesListPage.qml:131 src/qml/Sidebar.qml:48
+#, kde-format
+msgid "Settings"
+msgstr "הגדרות"
+
+#: src/main.cpp:45
+#, kde-format
+msgid "Touch-friendly settings application."
+msgstr "יישומון הגדרות ידידותי למגע."
+
+#: src/main.cpp:47
+#, kde-format
+msgid "Copyright 2011-2015, Sebastian Kügler"
+msgstr "כל הזכויות שמורות 2011‏-2015, סבסטיאן קיגלר"
+
+#: src/main.cpp:48
+#, kde-format
+msgid "Sebastian Kügler"
+msgstr "סבסטיאן קיגלר"
+
+#: src/main.cpp:48 src/main.cpp:49
+#, kde-format
+msgid "Maintainer"
+msgstr "מתחזק"
+
+#: src/main.cpp:49
+#, kde-format
+msgid "Marco Martin"
+msgstr "מרקו מרטין"
+
+#: src/main.cpp:57
+#, kde-format
+msgid "List available settings modules"
+msgstr "הצגת מודולי הגדרות זמינים"
+
+#: src/main.cpp:60
+#, kde-format
+msgid ""
+"Limit to modules suitable for <formfactor>, e.g. handset, tablet, "
+"mediacenter, desktop, test, all (default handset)"
+msgstr ""
+"הגבלה למודולים שמתאימים ל<מקדם_צורה>, למשל: מכשיר נייד, מחשב לוח, מרכז מדיה, "
+"מחשב שולחני, בדיקה, הכול (ברירת המחדל היא מכשיר נייד)"
+
+#: src/main.cpp:61
+#, kde-format
+msgid "formfactor"
+msgstr "מקדם_צורה"
+
+#: src/main.cpp:62
+#, kde-format
+msgid "Settings module to open"
+msgstr "מודול הגדרות לפתיחה"
+
+#: src/main.cpp:62
+#, kde-format
+msgid "modulename"
+msgstr "שם_מודול"
+
+#: src/main.cpp:63
+#, kde-format
+msgid "Only show a single module, requires --module"
+msgstr "להציג מודול בודד בלבד, דורש את ‎--module"
+
+#: src/main.cpp:64
+#, kde-format
+msgid "Start window fullscreen"
+msgstr "התחלת החלון במסך מלא"
+
+#: src/main.cpp:65
+#, kde-format
+msgid "Package to use for the UI (default org.kde.mobile.settings)"
+msgstr "חבילה לשימוש לממשק המשתמש (ברירת המחדל היא org.kde.mobile.settings)"
+
+#: src/main.cpp:65
+#, kde-format
+msgid "packagename"
+msgstr "שם_חבילה"
+
+#: src/qml/DefaultPage.qml:29
+#, kde-format
+msgid "System Settings"
+msgstr "הגדרות מערכת"
+
+#: src/qml/DefaultPage.qml:35
+#, kde-format
+msgid "Open a configuration page from the sidebar."
+msgstr "פתיחת עמוד הגדרות מסרגל הצד."
+
+#: src/qml/Sidebar.qml:59
+#, kde-format
+msgid "Search"
+msgstr "חיפוש"
