@@ -1,6 +1,7 @@
 [Desktop Entry]
 Name=Settings
 Name[ar]=الإعدادات
+Name[ast]=Configuración
 Name[az]=Ayarlar
 Name[ca]=Configuració
 Name[ca@valencia]=Configuració
@@ -46,6 +47,7 @@ Name[zh_CN]=设置
 Name[zh_TW]=設定
 GenericName=Settings
 GenericName[ar]=الإعدادات
+GenericName[ast]=Configuración
 GenericName[az]=Ayarlar
 GenericName[ca]=Configuració
 GenericName[ca@valencia]=Configuració
@@ -145,6 +147,7 @@ Categories=Qt;KDE;Settings;
 X-KDE-FormFactors=tablet,handset
 Keywords=Preferences;Settings;
 Keywords[ar]=التفضيلات;الإعدادات
+Keywords[ast]=Preferencies;Preferencia;Opciones;Opción;Configuración;
 Keywords[az]=Preferences;Settings;Parametrlər;Seçimlər;Ayarlar;
 Keywords[ca]=Preferències;Configuració;Arranjament;
 Keywords[ca@valencia]=Preferències;Configuració;
