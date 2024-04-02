@@ -36,7 +36,7 @@ int main(int argc, char **argv)
 {
     QApplication app(argc, argv);
 
-    KLocalizedString::setApplicationDomain("mobile.plasma-settings");
+    KLocalizedString::setApplicationDomain("mobile.plasmasettings");
 
     // About data
     KAboutData aboutData(u"org.kde.mobile.plasmasettings"_s,
