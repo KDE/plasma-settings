@@ -18,6 +18,14 @@ struct Data {
     QPointer<KQuickConfigModule> kcm;
     bool operator<(const Data &other) const
     {
+        // decompose char-by-char to not compare accents
+        for (int i = 0; i < std::min(plugin.name().length(), other.plugin.name().length()); i++) {
+            QString c1 = QString(plugin.name()[i]).normalized(QString::NormalizationForm_D);
+            QString c2 = QString(other.plugin.name()[i]).normalized(QString::NormalizationForm_D);
+            if (c1[0] != c2[0]) {
+                return c1[0] < c2[0];
+            }
+        }
         return plugin.name() < other.plugin.name();
     }
 };
