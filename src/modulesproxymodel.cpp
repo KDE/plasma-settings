@@ -36,7 +36,7 @@ bool ModulesProxyModel::filterAcceptsRow(int sourceRow, const QModelIndex &paren
     QStringList keywords = m_model->data(m_model->index(sourceRow, 0), ModulesModel::KeywordsRole).toStringList();
 
     for (const QString &keyword : keywords) {
-        if (keyword.contains(m_filterString, Qt::CaseInsensitive))
+        if (keyword.normalized(QString::NormalizationForm_D).contains(m_filterString.normalized(QString::NormalizationForm_D), Qt::CaseInsensitive))
             return true;
     }
     return name.contains(m_filterString, Qt::CaseInsensitive) || description.contains(m_filterString, Qt::CaseInsensitive);
