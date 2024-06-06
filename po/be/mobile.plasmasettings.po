@@ -4,7 +4,7 @@ msgstr ""
 "Project-Id-Version: fc57ad16a28d02dea100ceb1c60de14e\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-02-29 00:39+0000\n"
-"PO-Revision-Date: 2024-05-20 21:10\n"
+"PO-Revision-Date: 2024-06-01 05:50\n"
 "Last-Translator: Antikruk <nashtlumach@gmail.com>\n"
 "Language-Team: Belarusian\n"
 "Language: be\n"
@@ -96,7 +96,7 @@ msgstr "Запускаць акно ў поўнаэкранным рэжыме"
 #, kde-format
 msgid "Package to use for the UI (default org.kde.mobile.settings)"
 msgstr ""
-"Пакунак для інтэрфейсу карыстальніка (прадвызначана org.kde.mobile.settings)"
+"Пакет для інтэрфейсу карыстальніка (прадвызначана org.kde.mobile.settings)"
 
 #: src/main.cpp:65
 #, kde-format
