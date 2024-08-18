@@ -1,6 +1,6 @@
 *.kdev4
 .clang-format
-build
+/build*/
 .clangd
 .cache
 compile_commands.json
