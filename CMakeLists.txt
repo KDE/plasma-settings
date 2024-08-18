@@ -24,6 +24,7 @@ include(ECMQMLModules)
 include(ECMSetupVersion)
 include(KDEClangFormat)
 include(KDEGitCommitHooks)
+include(ECMDeprecationSettings)
 
 ecm_setup_version(${PROJECT_VERSION}
     VARIABLE_PREFIX PLASMA_SETTINGS
@@ -40,7 +41,7 @@ find_package(KF6 ${KF6_MIN_VERSION} REQUIRED COMPONENTS
     KCMUtils
 )
 
-add_definitions(-DQT_DISABLE_DEPRECATED_BEFORE=0x060000)
+ecm_set_disabled_deprecation_versions(QT 6.7.2  KF 6.5.0)
 
 add_subdirectory(src)
 
