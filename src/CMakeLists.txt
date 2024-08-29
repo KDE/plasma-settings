@@ -18,6 +18,7 @@ target_link_libraries(plasma-settings
     KF6::DBusAddons
     KF6::KCMUtilsQuick
     KF6::I18n
+    KF6::Crash
 )
 
 install(TARGETS plasma-settings ${KDE_INSTALL_TARGETS_DEFAULT_ARGS})

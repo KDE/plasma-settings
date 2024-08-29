@@ -26,6 +26,7 @@
 
 // Frameworks
 #include <KAboutData>
+#include <KCrash>
 #include <KLocalizedContext>
 #include <KLocalizedString>
 #include <KPluginMetaData>
@@ -49,6 +50,8 @@ int main(int argc, char **argv)
     aboutData.addAuthor(i18n("Marco Martin"), i18n("Maintainer"), u"mart@kde.org"_s);
     aboutData.setDesktopFileName(u"org.kde.mobile.plasmasettings"_s);
     KAboutData::setApplicationData(aboutData);
+
+    KCrash::initialize();
 
     QApplication::setWindowIcon(QIcon::fromTheme(u"preferences-system"_s));
 
