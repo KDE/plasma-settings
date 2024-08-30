@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-settings\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-02-29 00:39+0000\n"
+"POT-Creation-Date: 2024-08-30 00:41+0000\n"
 "PO-Revision-Date: 2022-02-20 21:12+0100\n"
 "Last-Translator: Shinjo Park <kde@peremen.name>\n"
 "Language-Team: Korean <kde-kr@kde.org>\n"
@@ -17,43 +17,43 @@ msgstr ""
 "Plural-Forms: nplurals=1; plural=0;\n"
 "X-Generator: Lokalize 21.08.1\n"
 
-#: src/main.cpp:43 src/qml/ModulesListPage.qml:18
+#: src/main.cpp:44 src/qml/ModulesListPage.qml:18
 #: src/qml/ModulesListPage.qml:131 src/qml/Sidebar.qml:48
 #, kde-format
 msgid "Settings"
 msgstr "설정"
 
-#: src/main.cpp:45
+#: src/main.cpp:46
 #, kde-format
 msgid "Touch-friendly settings application."
 msgstr "터치 친화적 설정 앱입니다."
 
-#: src/main.cpp:47
+#: src/main.cpp:48
 #, kde-format
 msgid "Copyright 2011-2015, Sebastian Kügler"
 msgstr "Copyright 2011-2015, Sebastian Kügler"
 
-#: src/main.cpp:48
+#: src/main.cpp:49
 #, kde-format
 msgid "Sebastian Kügler"
 msgstr "Sebastian Kügler"
 
-#: src/main.cpp:48 src/main.cpp:49
+#: src/main.cpp:49 src/main.cpp:50
 #, kde-format
 msgid "Maintainer"
 msgstr "관리자"
 
-#: src/main.cpp:49
+#: src/main.cpp:50
 #, kde-format
 msgid "Marco Martin"
 msgstr "Marco Martin"
 
-#: src/main.cpp:57
+#: src/main.cpp:60
 #, kde-format
 msgid "List available settings modules"
 msgstr "사용 가능한 설정 모듈 표시"
 
-#: src/main.cpp:60
+#: src/main.cpp:63
 #, kde-format
 msgid ""
 "Limit to modules suitable for <formfactor>, e.g. handset, tablet, "
@@ -62,37 +62,37 @@ msgstr ""
 "<formfactor>에 맞는 모듈만 표시. 예: handset, tablet, mediacenter, desktop, "
 "test, all(기본값: handset)"
 
-#: src/main.cpp:61
+#: src/main.cpp:64
 #, kde-format
 msgid "formfactor"
 msgstr "formfactor"
 
-#: src/main.cpp:62
+#: src/main.cpp:65
 #, kde-format
 msgid "Settings module to open"
 msgstr "열 설정 모듈"
 
-#: src/main.cpp:62
+#: src/main.cpp:65
 #, kde-format
 msgid "modulename"
 msgstr "modulename"
 
-#: src/main.cpp:63
+#: src/main.cpp:66
 #, kde-format
 msgid "Only show a single module, requires --module"
 msgstr "단일 모듈만 표시합니다. --module 옵션이 필요함"
 
-#: src/main.cpp:64
+#: src/main.cpp:67
 #, kde-format
 msgid "Start window fullscreen"
 msgstr "전체 화면으로 창 열기"
 
-#: src/main.cpp:65
+#: src/main.cpp:68
 #, kde-format
 msgid "Package to use for the UI (default org.kde.mobile.settings)"
 msgstr "UI에 사용할 패키지(기본값: org.kde.mobile.settings)"
 
-#: src/main.cpp:65
+#: src/main.cpp:68
 #, kde-format
 msgid "packagename"
 msgstr "packagename"

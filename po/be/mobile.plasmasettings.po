@@ -3,7 +3,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: fc57ad16a28d02dea100ceb1c60de14e\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-02-29 00:39+0000\n"
+"POT-Creation-Date: 2024-08-30 00:41+0000\n"
 "PO-Revision-Date: 2024-06-01 05:50\n"
 "Last-Translator: Antikruk <nashtlumach@gmail.com>\n"
 "Language-Team: Belarusian\n"
@@ -22,43 +22,43 @@ msgstr ""
 "plasmasettings.po\n"
 "X-Crowdin-File-ID: 17900\n"
 
-#: src/main.cpp:43 src/qml/ModulesListPage.qml:18
+#: src/main.cpp:44 src/qml/ModulesListPage.qml:18
 #: src/qml/ModulesListPage.qml:131 src/qml/Sidebar.qml:48
 #, kde-format
 msgid "Settings"
 msgstr "Налады"
 
-#: src/main.cpp:45
+#: src/main.cpp:46
 #, kde-format
 msgid "Touch-friendly settings application."
 msgstr "Праграма наладжвання, прыдатная для сэнсарных экранаў."
 
-#: src/main.cpp:47
+#: src/main.cpp:48
 #, kde-format
 msgid "Copyright 2011-2015, Sebastian Kügler"
 msgstr "Аўтарскія правы 2011-2015, Sebastian Kügler"
 
-#: src/main.cpp:48
+#: src/main.cpp:49
 #, kde-format
 msgid "Sebastian Kügler"
 msgstr "Sebastian Kügler"
 
-#: src/main.cpp:48 src/main.cpp:49
+#: src/main.cpp:49 src/main.cpp:50
 #, kde-format
 msgid "Maintainer"
 msgstr "Суправаджальнік"
 
-#: src/main.cpp:49
+#: src/main.cpp:50
 #, kde-format
 msgid "Marco Martin"
 msgstr "Marco Martin"
 
-#: src/main.cpp:57
+#: src/main.cpp:60
 #, kde-format
 msgid "List available settings modules"
 msgstr "Спіс даступных модуляў налад"
 
-#: src/main.cpp:60
+#: src/main.cpp:63
 #, kde-format
 msgid ""
 "Limit to modules suitable for <formfactor>, e.g. handset, tablet, "
@@ -67,38 +67,38 @@ msgstr ""
 "Абмежавана модулямі, прыдатнымі для <formfactor>, напр. тэлефон, планшэт, "
 "медыяцэнтр, працоўны стол, тэст, усё (прадвызначана гарнітура)"
 
-#: src/main.cpp:61
+#: src/main.cpp:64
 #, kde-format
 msgid "formfactor"
 msgstr "formfactor"
 
-#: src/main.cpp:62
+#: src/main.cpp:65
 #, kde-format
 msgid "Settings module to open"
 msgstr "Модуль налад для адкрыцця"
 
-#: src/main.cpp:62
+#: src/main.cpp:65
 #, kde-format
 msgid "modulename"
 msgstr "modulename"
 
-#: src/main.cpp:63
+#: src/main.cpp:66
 #, kde-format
 msgid "Only show a single module, requires --module"
 msgstr "Паказаць толькі адзін модуль, патрэбна --module"
 
-#: src/main.cpp:64
+#: src/main.cpp:67
 #, kde-format
 msgid "Start window fullscreen"
 msgstr "Запускаць акно ў поўнаэкранным рэжыме"
 
-#: src/main.cpp:65
+#: src/main.cpp:68
 #, kde-format
 msgid "Package to use for the UI (default org.kde.mobile.settings)"
 msgstr ""
 "Пакет для інтэрфейсу карыстальніка (прадвызначана org.kde.mobile.settings)"
 
-#: src/main.cpp:65
+#: src/main.cpp:68
 #, kde-format
 msgid "packagename"
 msgstr "packagename"

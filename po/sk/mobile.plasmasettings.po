@@ -5,7 +5,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: mobile.plasmasettings\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-02-29 00:39+0000\n"
+"POT-Creation-Date: 2024-08-30 00:41+0000\n"
 "PO-Revision-Date: 2022-01-07 15:11+0100\n"
 "Last-Translator: Matej Mrenica <matejm98mthw@gmail.com>\n"
 "Language-Team: Slovak <kde-i18n-doc@kde.org>\n"
@@ -16,43 +16,43 @@ msgstr ""
 "X-Generator: Lokalize 21.12.1\n"
 "Plural-Forms: nplurals=3; plural=(n==1) ? 0 : (n>=2 && n<=4) ? 1 : 2;\n"
 
-#: src/main.cpp:43 src/qml/ModulesListPage.qml:18
+#: src/main.cpp:44 src/qml/ModulesListPage.qml:18
 #: src/qml/ModulesListPage.qml:131 src/qml/Sidebar.qml:48
 #, kde-format
 msgid "Settings"
 msgstr "Nastavenia"
 
-#: src/main.cpp:45
+#: src/main.cpp:46
 #, kde-format
 msgid "Touch-friendly settings application."
 msgstr "Dotyková aplikácia nastavení."
 
-#: src/main.cpp:47
+#: src/main.cpp:48
 #, kde-format
 msgid "Copyright 2011-2015, Sebastian Kügler"
 msgstr "Copyright 2011-2015, Sebastian Kügler"
 
-#: src/main.cpp:48
+#: src/main.cpp:49
 #, kde-format
 msgid "Sebastian Kügler"
 msgstr "Sebastian Kügler"
 
-#: src/main.cpp:48 src/main.cpp:49
+#: src/main.cpp:49 src/main.cpp:50
 #, kde-format
 msgid "Maintainer"
 msgstr "Správca"
 
-#: src/main.cpp:49
+#: src/main.cpp:50
 #, kde-format
 msgid "Marco Martin"
 msgstr "Marco Martin"
 
-#: src/main.cpp:57
+#: src/main.cpp:60
 #, kde-format
 msgid "List available settings modules"
 msgstr "Zoznam dostupných modulov nastavení"
 
-#: src/main.cpp:60
+#: src/main.cpp:63
 #, kde-format
 msgid ""
 "Limit to modules suitable for <formfactor>, e.g. handset, tablet, "
@@ -61,39 +61,39 @@ msgstr ""
 "Limit na moduly vhodné pre <formfactor>, napr. slúchadlo, tablet,"
 "mediacentrum, desktop, test, všetko (predvolene slúchadlo)"
 
-#: src/main.cpp:61
+#: src/main.cpp:64
 #, kde-format
 msgid "formfactor"
 msgstr "formfactor"
 
-#: src/main.cpp:62
+#: src/main.cpp:65
 #, kde-format
 msgid "Settings module to open"
 msgstr "Modul nastavení na otvorenie"
 
-#: src/main.cpp:62
+#: src/main.cpp:65
 #, kde-format
 msgid "modulename"
 msgstr "modulename"
 
-#: src/main.cpp:63
+#: src/main.cpp:66
 #, kde-format
 msgid "Only show a single module, requires --module"
 msgstr "Zobraziť iba jeden modul, vyžaduje --module"
 
-#: src/main.cpp:64
+#: src/main.cpp:67
 #, kde-format
 msgid "Start window fullscreen"
 msgstr "Spustiť okno na celú obrazovku"
 
-#: src/main.cpp:65
+#: src/main.cpp:68
 #, kde-format
 msgid "Package to use for the UI (default org.kde.mobile.settings)"
 msgstr ""
 "Balík na použitie pre používateľské rozhranie (predvolené org.kde.mobile."
 "settings)"
 
-#: src/main.cpp:65
+#: src/main.cpp:68
 #, kde-format
 msgid "packagename"
 msgstr "packagename"
