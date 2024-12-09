@@ -1,9 +1,9 @@
 set(plasma-settings_SRCS
     main.cpp
-    settingsapp.cpp
-    modulesmodel.cpp
-    modulesproxymodel.cpp
-    module.cpp
+    settingsapp.cpp settingsapp.h
+    modulesmodel.cpp modulesmodel.h
+    modulesproxymodel.cpp modulesproxymodel.h
+    module.cpp module.h
     resources.qrc
 )
 
