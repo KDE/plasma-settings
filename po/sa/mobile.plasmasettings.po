@@ -1,0 +1,112 @@
+# Sanskrit translations for plasma-settings package.
+# Copyright (C) 2024 This file is copyright:
+# This file is distributed under the same license as the plasma-settings package.
+# Kali <EMAIL@ADDRESS>, 2024.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: plasma-settings\n"
+"Report-Msgid-Bugs-To: https://bugs.kde.org\n"
+"POT-Creation-Date: 2024-08-30 00:41+0000\n"
+"PO-Revision-Date: 2024-12-13 19:09+0530\n"
+"Last-Translator: Kali <EMAIL@ADDRESS>\n"
+"Language-Team: Sanskrit\n"
+"Language: sa\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: src/main.cpp:44 src/qml/ModulesListPage.qml:18
+#: src/qml/ModulesListPage.qml:131 src/qml/Sidebar.qml:48
+#, kde-format
+msgid "Settings"
+msgstr "सेटिंग्स्"
+
+#: src/main.cpp:46
+#, kde-format
+msgid "Touch-friendly settings application."
+msgstr "स्पर्श-अनुकूल-सेटिंग्स् अनुप्रयोगः।"
+
+#: src/main.cpp:48
+#, kde-format
+msgid "Copyright 2011-2015, Sebastian Kügler"
+msgstr "प्रतिलिपि अधिकार 2011-2015, सेबास्टियन कुग्लर"
+
+#: src/main.cpp:49
+#, kde-format
+msgid "Sebastian Kügler"
+msgstr "सेबास्टियन कुग्लर"
+
+#: src/main.cpp:49 src/main.cpp:50
+#, kde-format
+msgid "Maintainer"
+msgstr "परिपालकः"
+
+#: src/main.cpp:50
+#, kde-format
+msgid "Marco Martin"
+msgstr "मार्को मार्टिन्"
+
+#: src/main.cpp:60
+#, kde-format
+msgid "List available settings modules"
+msgstr "उपलब्धानि सेटिंग्स् मॉड्यूल्स् सूचीबद्धं कुर्वन्तु"
+
+#: src/main.cpp:63
+#, kde-format
+msgid ""
+"Limit to modules suitable for <formfactor>, e.g. handset, tablet, "
+"mediacenter, desktop, test, all (default handset)"
+msgstr ""
+"<formfactor> कृते उपयुक्तानां मॉड्यूलानां सीमा, उदा. हस्तसेट्, टैब्लेट्, मीडियासेन्टर, "
+"डेस्कटॉप्, परीक्षणम्, सर्वं (पूर्वनिर्धारितं हस्तसेट्)"
+
+#: src/main.cpp:64
+#, kde-format
+msgid "formfactor"
+msgstr "रूपकारक"
+
+#: src/main.cpp:65
+#, kde-format
+msgid "Settings module to open"
+msgstr "सेटिंग्स् मॉड्यूल् उद्घाटयितुं"
+
+#: src/main.cpp:65
+#, kde-format
+msgid "modulename"
+msgstr "modulename"
+
+#: src/main.cpp:66
+#, kde-format
+msgid "Only show a single module, requires --module"
+msgstr "केवलं एकं मॉड्यूल् दर्शयतु, --module आवश्यकम्"
+
+#: src/main.cpp:67
+#, kde-format
+msgid "Start window fullscreen"
+msgstr "विण्डो पूर्णपर्दे आरभत"
+
+#: src/main.cpp:68
+#, kde-format
+msgid "Package to use for the UI (default org.kde.mobile.settings)"
+msgstr "UI कृते उपयोक्तुं संकुलं (पूर्वनिर्धारितं org.kde.mobile.settings)"
+
+#: src/main.cpp:68
+#, kde-format
+msgid "packagename"
+msgstr "संकुलनाम"
+
+#: src/qml/DefaultPage.qml:29
+#, kde-format
+msgid "System Settings"
+msgstr "सिस्टम् सेटिंग्स्"
+
+#: src/qml/DefaultPage.qml:35
+#, kde-format
+msgid "Open a configuration page from the sidebar."
+msgstr "पार्श्वपट्टिकातः विन्यासपृष्ठं उद्घाटयन्तु ।"
+
+#: src/qml/Sidebar.qml:59
+#, kde-format
+msgid "Search"
+msgstr "अन्वेषण"
