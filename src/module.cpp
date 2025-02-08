@@ -51,7 +51,18 @@ void Module::setPath(const QString &path)
     }
 }
 
-bool Module::valid()
+bool Module::valid() const
 {
     return m_valid;
+}
+
+bool Module::isInSubCategory() const
+{
+    return m_isInSubCategory;
+}
+
+void Module::setIsInSubCategory(bool isInSubCategory)
+{
+    m_isInSubCategory = isInSubCategory;
+    Q_EMIT isInSubCategoryChanged();
 }

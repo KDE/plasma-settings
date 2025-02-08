@@ -40,7 +40,7 @@ int main(int argc, char **argv)
     KLocalizedString::setApplicationDomain("mobile.plasmasettings");
 
     // About data
-    KAboutData aboutData(u"org.kde.mobile.plasmasettings"_s,
+    KAboutData aboutData(u"plasma-settings"_s,
                          i18n("Settings"),
                          QStringLiteral(PLASMA_SETTINGS_VERSION_STRING),
                          i18n("Touch-friendly settings application."),
@@ -136,17 +136,16 @@ int main(int argc, char **argv)
         return 0;
     }
 
-    auto *settingsApp = new SettingsApp(parser);
-    settingsApp->setStartModule(module);
-    settingsApp->setSingleModule(singleModule);
+    auto *settingsApp = new SettingsApp(parser, module, singleModule, &app);
 
-    qmlRegisterType<ModulesProxyModel>("org.kde.plasma.settings", 0, 1, "ModulesProxyModel");
     qmlRegisterType<Module>("org.kde.plasma.settings", 0, 1, "Module");
     qmlRegisterSingletonInstance<SettingsApp>("org.kde.plasma.settings", 0, 1, "SettingsApp", settingsApp);
 
     QQmlApplicationEngine engine;
     engine.rootContext()->setContextObject(new KLocalizedContext(&engine));
     engine.load(QUrl(QStringLiteral("qrc:/qml/main.qml")));
+
+    app.setWindowIcon(QIcon::fromTheme(QStringLiteral("org.kde.mobile.plasmasettings")));
 
     return app.exec();
 }

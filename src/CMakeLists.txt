@@ -4,6 +4,7 @@ set(plasma-settings_SRCS
     modulesmodel.cpp modulesmodel.h
     modulesproxymodel.cpp modulesproxymodel.h
     module.cpp module.h
+    menuitem.cpp menuitem.h
     resources.qrc
 )
 
@@ -19,6 +20,9 @@ target_link_libraries(plasma-settings
     KF6::KCMUtilsQuick
     KF6::I18n
     KF6::Crash
+    KF6::Service
+    KF6::ItemViews
+    KF6::ItemModels
 )
 
 install(TARGETS plasma-settings ${KDE_INSTALL_TARGETS_DEFAULT_ARGS})

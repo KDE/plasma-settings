@@ -22,8 +22,6 @@ Kirigami.OverlayDrawer {
     parent: QQC2.Overlay.overlay
     x: 0
 
-    property alias model: listView.model
-
     Kirigami.Theme.colorSet: Kirigami.Theme.Window
     Kirigami.Theme.inherit: false
 
@@ -32,84 +30,50 @@ Kirigami.OverlayDrawer {
     topPadding: 0
     bottomPadding: 0
 
-    contentItem: ColumnLayout {
-        spacing: 0
+    function goToMainPage() {
+        pageRow.currentIndex = 0;
+    }
+    function goToSubCategoryPage() {
+        if (pageRow.depth == 1) {
+            pageRow.push(subCategoryPage);
+        }
+        pageRow.currentIndex = 1;
+    }
 
-        QQC2.ToolBar {
-            Layout.fillWidth: true
-            implicitHeight: applicationWindow().pageStack.globalToolBar.preferredHeight
-            visible: drawer.visible
+    contentItem: Kirigami.PageRow {
+        id: pageRow
 
-            Item {
-                anchors.fill: parent
+        height: drawer.height
+        width: drawer.width
+        initialPage: mainPage
 
-                Kirigami.Heading {
-                    level: 1
-                    text: i18n("Settings")
-                    anchors.left: parent.left
-                    anchors.leftMargin: Kirigami.Units.largeSpacing + Kirigami.Units.smallSpacing
-                    anchors.verticalCenter: parent.verticalCenter
+        SidebarCategoriesPage {
+            id: mainPage
+            focus: true
+
+            onDelegateClicked: (index, pluginId, isCategory) => {
+                const pageInView = pluginId === applicationWindow().currentModuleName;
+
+                if (!pageInView || isCategory) {
+                    applicationWindow().openModule(index);
                 }
 
-                QQC2.ToolButton {
-                    id: searchButton
-                    anchors.right: parent.right
-                    anchors.verticalCenter: parent.verticalCenter
-
-                    text: i18n("Search")
-                    icon.name: "search"
-                    checkable: true
-
-                    onCheckedChanged: {
-                        if (!checked) {
-                            drawer.model.filterString = "";
-                        }
+                if (isCategory) {
+                    if (pageRow.depth == 1) {
+                        pageRow.push(subCategoryPage);
+                    } else {
+                        pageRow.currentIndex = 1;
                     }
                 }
-
             }
         }
 
-        HeaderSearchBar {
-            Layout.fillWidth: true
+        SidebarSubCategoryPage {
+            id: subCategoryPage
 
-            model: drawer.model
-            show: searchButton.checked
-        }
-
-        QQC2.ScrollView {
-            id: scrollView
-            Layout.fillHeight: true
-            Layout.fillWidth: true
-            z: -1
-
-            property real scrollBarWidth: QQC2.ScrollBar.vertical.width
-            QQC2.ScrollBar.horizontal.visible: false
-
-            ListView {
-                id: listView
-                spacing: Kirigami.Units.smallSpacing
-                topMargin: Kirigami.Units.smallSpacing
-                bottomMargin: Kirigami.Units.smallSpacing
-
-                delegate: SidebarButton {
-                    width: listView.width - Kirigami.Units.smallSpacing * 2
-                    height: Kirigami.Units.gridUnit * 2
-                    x: Kirigami.Units.smallSpacing
-
-                    property bool pageInView: model.id === applicationWindow().currentModuleName
-
-                    text: model.name
-                    icon.name: model.iconName
-                    checked: pageInView
-
-                    onClicked: {
-                        if (!pageInView) {
-                            applicationWindow().openModule(model.id);
-                        }
-                        checked = Qt.binding(function() { return pageInView; });
-                    }
-                }
+            onPopPage: {
+                // Don't pop, just change the page index
+                pageRow.currentIndex = 0;
             }
         }
     }

@@ -40,10 +40,14 @@ find_package(KF6 ${KF6_MIN_VERSION} REQUIRED COMPONENTS
     I18n
     KCMUtils
     Crash
+    Service
+    ItemViews
+    ItemModels
 )
 
 ecm_set_disabled_deprecation_versions(QT 6.7.2  KF 6.5.0)
 
+add_subdirectory(categories)
 add_subdirectory(src)
 
 ki18n_install(po)

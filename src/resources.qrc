@@ -5,14 +5,16 @@
 
 <RCC>
     <qresource prefix="/">
-        
+
+        <file>qml/AboutKDEPage.qml</file>
+        <file>qml/AboutPage.qml</file>
         <file>qml/main.qml</file>
         <file>qml/DefaultPage.qml</file>
-        <file>qml/HeaderSearchBar.qml</file>
         <file>qml/KCMContainer.qml</file>
-        <file>qml/ModulesListPage.qml</file>
         <file>qml/Sidebar.qml</file>
-        <file>qml/SidebarButton.qml</file>
+        <file>qml/SidebarDelegate.qml</file>
+        <file>qml/SidebarCategoriesPage.qml</file>
+        <file>qml/SidebarSubCategoryPage.qml</file>
 
     </qresource>
 </RCC>
