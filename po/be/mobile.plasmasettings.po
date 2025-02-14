@@ -3,7 +3,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: fc57ad16a28d02dea100ceb1c60de14e\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-08-30 00:41+0000\n"
+"POT-Creation-Date: 2025-02-14 00:45+0000\n"
 "PO-Revision-Date: 2024-06-01 05:50\n"
 "Last-Translator: Antikruk <nashtlumach@gmail.com>\n"
 "Language-Team: Belarusian\n"
@@ -22,8 +22,7 @@ msgstr ""
 "plasmasettings.po\n"
 "X-Crowdin-File-ID: 17900\n"
 
-#: src/main.cpp:44 src/qml/ModulesListPage.qml:18
-#: src/qml/ModulesListPage.qml:131 src/qml/Sidebar.qml:48
+#: src/main.cpp:44
 #, kde-format
 msgid "Settings"
 msgstr "Налады"
@@ -113,7 +112,10 @@ msgstr "Налады сістэмы"
 msgid "Open a configuration page from the sidebar."
 msgstr "Адкрыйце старонку канфігурацыі з бакавой панэлі."
 
-#: src/qml/Sidebar.qml:59
+#: src/qml/SidebarCategoriesPage.qml:50
 #, kde-format
-msgid "Search"
-msgstr "Пошук"
+msgid "Show menu"
+msgstr ""
+
+#~ msgid "Search"
+#~ msgstr "Пошук"

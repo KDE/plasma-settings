@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-settings\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-08-30 00:41+0000\n"
+"POT-Creation-Date: 2025-02-14 00:45+0000\n"
 "PO-Revision-Date: 2021-12-23 09:41+0100\n"
 "Last-Translator: Josep M. Ferrer <txemaq@gmail.com>\n"
 "Language-Team: Catalan <kde-i18n-ca@kde.org>\n"
@@ -21,8 +21,7 @@ msgstr ""
 "X-Accelerator-Marker: &\n"
 "X-Generator: Lokalize 20.12.0\n"
 
-#: src/main.cpp:44 src/qml/ModulesListPage.qml:18
-#: src/qml/ModulesListPage.qml:131 src/qml/Sidebar.qml:48
+#: src/main.cpp:44
 #, kde-format
 msgid "Settings"
 msgstr "Configuració"
@@ -111,10 +110,13 @@ msgstr "Arranjament del sistema"
 msgid "Open a configuration page from the sidebar."
 msgstr "Obre una pàgina de configuració des de la barra lateral."
 
-#: src/qml/Sidebar.qml:59
+#: src/qml/SidebarCategoriesPage.qml:50
 #, kde-format
-msgid "Search"
-msgstr "Cerca"
+msgid "Show menu"
+msgstr ""
+
+#~ msgid "Search"
+#~ msgstr "Cerca"
 
 #~ msgid "Plasma Mobile Settings"
 #~ msgstr "Configuració del Plasma Mobile"

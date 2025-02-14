@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-settings\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-08-30 00:41+0000\n"
+"POT-Creation-Date: 2025-02-14 00:45+0000\n"
 "PO-Revision-Date: 2021-12-23 16:03+0100\n"
 "Last-Translator: Kristof Kiszel <ulysses@fsf.hu>\n"
 "Language-Team: Hungarian <kde-l10n-hu@kde.org>\n"
@@ -18,8 +18,7 @@ msgstr ""
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 "X-Generator: Lokalize 21.12.0\n"
 
-#: src/main.cpp:44 src/qml/ModulesListPage.qml:18
-#: src/qml/ModulesListPage.qml:131 src/qml/Sidebar.qml:48
+#: src/main.cpp:44
 #, kde-format
 msgid "Settings"
 msgstr "Beállítások"
@@ -110,7 +109,10 @@ msgstr "Rendszerbeállítások"
 msgid "Open a configuration page from the sidebar."
 msgstr "Beállítóoldal megnyitása az oldalsávról."
 
-#: src/qml/Sidebar.qml:59
+#: src/qml/SidebarCategoriesPage.qml:50
 #, kde-format
-msgid "Search"
-msgstr "Keresés"
+msgid "Show menu"
+msgstr ""
+
+#~ msgid "Search"
+#~ msgstr "Keresés"

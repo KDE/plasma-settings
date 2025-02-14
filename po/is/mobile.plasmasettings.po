@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-settings\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-08-30 00:41+0000\n"
+"POT-Creation-Date: 2025-02-14 00:45+0000\n"
 "PO-Revision-Date: 2022-10-17 03:07+0000\n"
 "Last-Translator: Guðmundur Erlingsson <gudmundure@gmail.com>\n"
 "Language-Team: Icelandic <kde-i18n-doc@kde.org>\n"
@@ -18,8 +18,7 @@ msgstr ""
 "Plural-Forms: Plural-Forms: nplurals=2; plural=n != 1;\n"
 "X-Generator: Lokalize 22.04.3\n"
 
-#: src/main.cpp:44 src/qml/ModulesListPage.qml:18
-#: src/qml/ModulesListPage.qml:131 src/qml/Sidebar.qml:48
+#: src/main.cpp:44
 #, kde-format
 msgid "Settings"
 msgstr "Stillingar"
@@ -108,7 +107,10 @@ msgstr "Kerfisstillingar"
 msgid "Open a configuration page from the sidebar."
 msgstr "Opna grunnstillingasíðu frá hliðarspjaldinu"
 
-#: src/qml/Sidebar.qml:59
+#: src/qml/SidebarCategoriesPage.qml:50
 #, kde-format
-msgid "Search"
-msgstr "Leita"
+msgid "Show menu"
+msgstr ""
+
+#~ msgid "Search"
+#~ msgstr "Leita"
