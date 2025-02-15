@@ -8,3 +8,14 @@ X-KDE-Weight=10
 Icon=preferences-desktop-mouse
 
 Name=Mouse & Touchpad
+Name[ca]=Ratolí i ratolí tàctil
+Name[es]=Ratón y panel táctil
+Name[he]=עכבר ומשטח מגע
+Name[ia]=Mus & Touchpad
+Name[ka]=თაგუნა &amp; თაჩპედი
+Name[nl]=Muis & touchpad
+Name[sl]=Miška in sledilna ploščica
+Name[sv]=Mus och tryckplatta
+Name[tr]=Fare ve Dokunmatik Yüzey
+Name[uk]=Миша та сенсорний пристрій
+Name[x-test]=xxMouse & Touchpadxx

@@ -6,5 +6,27 @@ X-KDE-Weight=210
 Icon=preferences-desktop-display
 
 Name=Display & Monitor
+Name[ca]=Pantalla i monitor
+Name[es]=Pantalla y monitor
+Name[he]=תצוגה וצגים
+Name[ia]=Monstrator & Monitor
+Name[ka]=ჩვენება & ეკრანი
+Name[nl]=Scherm & monitor
+Name[sl]=Prikaz in monitor
+Name[sv]=Bildskärm
+Name[tr]=Görüntü ve Monitör
+Name[uk]=Показ зображення і монітор
+Name[x-test]=xxDisplay & Monitorxx
 Comment=Display Settings
+Comment[ca]=Configuració de la pantalla
+Comment[es]=Preferencias de la pantalla
+Comment[he]=הגדרות תצוגה
+Comment[ia]=Monstra preferentias
+Comment[ka]=ეკრანის მორგება
+Comment[nl]=Beeldscherminstellingen
+Comment[sl]=Nastavitve prikaza
+Comment[sv]=Skärminställningar
+Comment[tr]=Görüntü Ayarları
+Comment[uk]=Налаштування дисплея
+Comment[x-test]=xxDisplay Settingsxx
 

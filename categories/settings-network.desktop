@@ -6,3 +6,14 @@ X-KDE-Weight=30
 Icon=preferences-system-network-connection
 
 Name=Networking
+Name[ca]=Xarxes
+Name[es]=Redes
+Name[he]=תקשורת
+Name[ia]=Networking (rete)
+Name[ka]=ქსელი
+Name[nl]=Netwerken
+Name[sl]=Omreženje
+Name[sv]=Nätverk
+Name[tr]=Ağ
+Name[uk]=Мережа
+Name[x-test]=xxNetworkingxx

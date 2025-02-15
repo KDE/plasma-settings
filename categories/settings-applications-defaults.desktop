@@ -6,3 +6,14 @@ X-KDE-Weight=10
 Icon=preferences-desktop-default-applications
 
 Name=Default Applications
+Name[ca]=Aplicacions predeterminades
+Name[es]=Aplicaciones predeterminadas
+Name[he]=יישומי ברירת מחדל
+Name[ia]=Applicationes predefinite
+Name[ka]=ნაგულისხმევი აპლიკაციები
+Name[nl]=Standaard toepassingen
+Name[sl]=Privzete aplikacije
+Name[sv]=Standardprogram
+Name[tr]=Öntanımlı Uygulamalar
+Name[uk]=Типові програми
+Name[x-test]=xxDefault Applicationsxx

@@ -6,3 +6,14 @@ X-KDE-Weight=20
 Icon=preferences-desktop-keyboard
 
 Name=Keyboard
+Name[ca]=Teclat
+Name[es]=Teclado
+Name[he]=מקלדת
+Name[ia]=Claviero
+Name[ka]=კლავიატურა
+Name[nl]=Toetsenbord
+Name[sl]=Tipkovnica
+Name[sv]=Tangentbord
+Name[tr]=Klavye
+Name[uk]=Клавіатура
+Name[x-test]=xxKeyboardxx

@@ -4,3 +4,14 @@ X-KDE-Weight=100
 Enabled=false
 
 Name=Hidden
+Name[ca]=Ocult
+Name[es]=Oculto
+Name[he]=מוסתר
+Name[ia]=Celate
+Name[ka]=დამალული
+Name[nl]=Verborgen
+Name[sl]=Skrit
+Name[sv]=Dold
+Name[tr]=Gizli
+Name[uk]=Приховане
+Name[x-test]=xxHiddenxx

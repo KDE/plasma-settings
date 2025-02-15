@@ -6,3 +6,14 @@ X-KDE-Weight=20
 Icon=preferences-security
 
 Name=Application Permissions
+Name[ca]=Permisos de les aplicacions
+Name[es]=Permisos de las aplicaciones
+Name[he]=הרשאות יישומים
+Name[ia]=Permissiones de Application
+Name[ka]=აპლიკაციის წვდომები
+Name[nl]=Rechten van toepassingen
+Name[sl]=Dovoljenja aplikacij
+Name[sv]=Programrättigheter
+Name[tr]=Uygulama İzinleri
+Name[uk]=Права доступу програм
+Name[x-test]=xxApplication Permissionsxx

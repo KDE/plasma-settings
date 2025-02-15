@@ -6,3 +6,14 @@ X-KDE-Weight=20
 Icon=preferences-desktop-search
 
 Name=Search
+Name[ca]=Cerca
+Name[es]=Búsqueda
+Name[he]=חיפוש
+Name[ia]=Cerca
+Name[ka]=ძებნა
+Name[nl]=Zoeken
+Name[sl]=Iskanje
+Name[sv]=Sök
+Name[tr]=Arama
+Name[uk]=Пошук
+Name[x-test]=xxSearchxx

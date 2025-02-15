@@ -6,3 +6,14 @@ X-KDE-Weight=40
 Icon=preferences-desktop-touchscreen
 
 Name=Touchscreen
+Name[ca]=Pantalla tàctil
+Name[es]=Pantalla táctil
+Name[he]=מסך מגע
+Name[ia]=Schermo tactile
+Name[ka]=სენსორული ეკრანი
+Name[nl]=Aanraakscherm
+Name[sl]=Zaslon na dotik
+Name[sv]=Pekskärm
+Name[tr]=Dokunmatik Ekran
+Name[uk]=Сенсорний екран
+Name[x-test]=xxTouchscreenxx
