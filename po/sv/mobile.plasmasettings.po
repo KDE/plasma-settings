@@ -1,13 +1,13 @@
-# Copyright (C) YEAR This file is copyright:
+# Copyright (C) 2025 This file is copyright:
 # This file is distributed under the same license as the plasma-settings package.
 #
-# Stefan Asserhäll <stefan.asserhall@gmail.com>, 2019, 2021.
+# SPDX-FileCopyrightText: 2019, 2021, 2025 Stefan Asserhäll <stefan.asserhall@gmail.com>
 msgid ""
 msgstr ""
 "Project-Id-Version: plasma-settings\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2025-02-14 00:45+0000\n"
-"PO-Revision-Date: 2021-12-27 09:49+0100\n"
+"PO-Revision-Date: 2025-02-14 08:07+0100\n"
 "Last-Translator: Stefan Asserhäll <stefan.asserhall@gmail.com>\n"
 "Language-Team: Swedish <kde-i18n-doc@kde.org>\n"
 "Language: sv\n"
@@ -15,7 +15,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Lokalize 20.08.1\n"
+"X-Generator: Lokalize 24.12.0\n"
 
 #: src/main.cpp:44
 #, kde-format
@@ -110,7 +110,7 @@ msgstr "Öppna en inställningssida från sidoraden."
 #: src/qml/SidebarCategoriesPage.qml:50
 #, kde-format
 msgid "Show menu"
-msgstr ""
+msgstr "Visa meny"
 
 #~ msgid "Search"
 #~ msgstr "Sök"

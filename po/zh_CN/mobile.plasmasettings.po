@@ -111,6 +111,3 @@ msgstr "从侧边栏打开配置页面。"
 #, kde-format
 msgid "Show menu"
 msgstr ""
-
-#~ msgid "Search"
-#~ msgstr "搜索"

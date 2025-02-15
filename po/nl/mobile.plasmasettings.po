@@ -1,13 +1,13 @@
-# Copyright (C) YEAR This file is copyright:
+# Copyright (C) 2025 This file is copyright:
 # This file is distributed under the same license as the plasma-settings package.
 #
-# Freek de Kruijf <freekdekruijf@kde.nl>, 2019, 2021.
+# SPDX-FileCopyrightText: 2019, 2021, 2025 Freek de Kruijf <freekdekruijf@kde.nl>
 msgid ""
 msgstr ""
 "Project-Id-Version: plasma-settings\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2025-02-14 00:45+0000\n"
-"PO-Revision-Date: 2021-12-23 10:34+0100\n"
+"PO-Revision-Date: 2025-02-14 14:06+0100\n"
 "Last-Translator: Freek de Kruijf <freekdekruijf@kde.nl>\n"
 "Language-Team: \n"
 "Language: nl\n"
@@ -15,7 +15,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Lokalize 21.12.0\n"
+"X-Generator: Lokalize 24.12.2\n"
 
 #: src/main.cpp:44
 #, kde-format
@@ -109,7 +109,7 @@ msgstr "Een configuratiepagina openen vanuit de zijbalk."
 #: src/qml/SidebarCategoriesPage.qml:50
 #, kde-format
 msgid "Show menu"
-msgstr ""
+msgstr "Menu tonen"
 
 #~ msgid "Search"
 #~ msgstr "Zoeken"
