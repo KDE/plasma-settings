@@ -107,7 +107,7 @@ msgstr "Otevřít stránku s nastavením z postranní lišty."
 #: src/qml/SidebarCategoriesPage.qml:50
 #, kde-format
 msgid "Show menu"
-msgstr ""
+msgstr "Zobrazovat nabídku"
 
 #~ msgid "Search"
 #~ msgstr "Hledat"

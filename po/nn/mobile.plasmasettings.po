@@ -113,6 +113,3 @@ msgstr "Opna ei oppsettside frå sidestolpen."
 #, kde-format
 msgid "Show menu"
 msgstr ""
-
-#~ msgid "Search"
-#~ msgstr "Søk"
