@@ -5,11 +5,15 @@ Enabled=false
 
 Name=Hidden
 Name[ca]=Ocult
+Name[ca@valencia]=Ocult
+Name[cs]=Skryté
 Name[es]=Oculto
+Name[gl]=Agochada
 Name[he]=מוסתר
 Name[ia]=Celate
 Name[ka]=დამალული
 Name[nl]=Verborgen
+Name[pl]=Ukryte
 Name[sl]=Skrit
 Name[sv]=Dold
 Name[tr]=Gizli

@@ -7,11 +7,15 @@ Icon=preferences-security
 
 Name=Security & Privacy
 Name[ca]=Seguretat i privadesa
+Name[ca@valencia]=Seguretat i privadesa
+Name[cs]=Zabezpečení a soukromí
 Name[es]=Seguridad y privacidad
+Name[gl]=Seguridade e privacidade
 Name[he]=אבטחה ופרטיות
 Name[ia]=Securitate & Confidentialitate
 Name[ka]=უსაფრთხოება & კონფიდენციალობა
 Name[nl]=Beveiliging & privacy
+Name[pl]=Bezpieczeństwo i prywatność
 Name[sl]=Varnost in zasebnost
 Name[sv]=Säkerhet och integritet
 Name[tr]=Güvenlik ve Gizlilik

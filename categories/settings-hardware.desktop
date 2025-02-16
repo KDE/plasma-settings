@@ -7,11 +7,15 @@ Icon=preferences-desktop-peripherals
 
 Name=Connected Devices
 Name[ca]=Dispositius connectats
+Name[ca@valencia]=Dispositius connectats
+Name[cs]=Připojená zařízení
 Name[es]=Dispositivos conectados
+Name[gl]=Dispositivos conectados
 Name[he]=התקנים מחוברים
 Name[ia]=Dispositivos connectite
 Name[ka]=მიერთებული მოწყობილობები
 Name[nl]=Verbonden apparaten
+Name[pl]=Podłączone urządzenia
 Name[sl]=Priklopljene naprave
 Name[sv]=Anslutna enheter
 Name[tr]=Bağlı Aygıtlar

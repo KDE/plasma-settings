@@ -7,11 +7,15 @@ Icon=preferences-desktop-mouse
 
 Name=Input & Output
 Name[ca]=Entrada i sortida
+Name[ca@valencia]=Entrada i eixida
+Name[cs]=Vstup a výstup
 Name[es]=Entrada y salida
+Name[gl]=Entrada e saída
 Name[he]=קלט ופלט
 Name[ia]=Ingresso & Egresso
 Name[ka]=შეტანა & გამოტანა
 Name[nl]=Invoer & uitvoer
+Name[pl]=Wejście i wyjście
 Name[sl]=Vhod in izhod
 Name[sv]=In- och utmatning
 Name[tr]=Giriş ve Çıkış

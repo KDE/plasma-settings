@@ -7,11 +7,15 @@ Icon=applications-all
 
 Name=Apps & Windows
 Name[ca]=Aplicacions i finestres
+Name[ca@valencia]=Aplicacions i finestres
+Name[cs]=Aplikace a okna
 Name[es]=Aplicaciones y ventanas
+Name[gl]=Aplicacións e xanelas
 Name[he]=יישומים וחלונות
 Name[ia]=Apps & Fenestras
 Name[ka]=აპები & ფანჯრები
 Name[nl]=Toepassingen & vensters
+Name[pl]=Aplikacje i okna
 Name[sl]=Aplikacije in okna
 Name[sv]=Program och fönster
 Name[tr]=Uygulamalar ve Pencereler

@@ -7,11 +7,15 @@ Icon=preferences-desktop-search
 
 Name=Search
 Name[ca]=Cerca
+Name[ca@valencia]=Busca
+Name[cs]=Hledat
 Name[es]=Búsqueda
+Name[gl]=Busca
 Name[he]=חיפוש
 Name[ia]=Cerca
 Name[ka]=ძებნა
 Name[nl]=Zoeken
+Name[pl]=Poszukaj
 Name[sl]=Iskanje
 Name[sv]=Sök
 Name[tr]=Arama

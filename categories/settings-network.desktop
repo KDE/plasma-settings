@@ -7,11 +7,15 @@ Icon=preferences-system-network-connection
 
 Name=Networking
 Name[ca]=Xarxes
+Name[ca@valencia]=Xarxes
+Name[cs]=Síťové nástroje
 Name[es]=Redes
+Name[gl]=Rede
 Name[he]=תקשורת
 Name[ia]=Networking (rete)
 Name[ka]=ქსელი
 Name[nl]=Netwerken
+Name[pl]=Sieć
 Name[sl]=Omreženje
 Name[sv]=Nätverk
 Name[tr]=Ağ

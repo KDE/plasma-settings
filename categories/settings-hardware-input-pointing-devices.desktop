@@ -9,11 +9,15 @@ Icon=preferences-desktop-mouse
 
 Name=Mouse & Touchpad
 Name[ca]=Ratolí i ratolí tàctil
+Name[ca@valencia]=Ratolí i ratolí tàctil
+Name[cs]=Myš a touchpad
 Name[es]=Ratón y panel táctil
+Name[gl]=Rato e área táctil
 Name[he]=עכבר ומשטח מגע
 Name[ia]=Mus & Touchpad
 Name[ka]=თაგუნა &amp; თაჩპედი
 Name[nl]=Muis & touchpad
+Name[pl]=Mysz i gładzik
 Name[sl]=Miška in sledilna ploščica
 Name[sv]=Mus och tryckplatta
 Name[tr]=Fare ve Dokunmatik Yüzey

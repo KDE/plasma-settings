@@ -7,11 +7,15 @@ Icon=preferences-desktop-locale
 
 Name=Language & Time
 Name[ca]=Idioma i hora
+Name[ca@valencia]=Idioma i hora
+Name[cs]=Jazyk a čas
 Name[es]=Idioma y hora
+Name[gl]=Idioma e hora
 Name[he]=שפה ושעון
 Name[ia]=Linguage & Tempore
 Name[ka]=ენა & დრო
 Name[nl]=Taal & tijd
+Name[pl]=Język i czas
 Name[sl]=Jezik in čas
 Name[sv]=Språk och tid
 Name[tr]=Dil ve Zaman

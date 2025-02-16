@@ -7,11 +7,15 @@ Icon=preferences-desktop-touchscreen
 
 Name=Touchscreen
 Name[ca]=Pantalla tàctil
+Name[ca@valencia]=Pantalla tàctil
+Name[cs]=Dotyková obrazovka
 Name[es]=Pantalla táctil
+Name[gl]=Pantalla táctil
 Name[he]=מסך מגע
 Name[ia]=Schermo tactile
 Name[ka]=სენსორული ეკრანი
 Name[nl]=Aanraakscherm
+Name[pl]=Ekran dotykowy
 Name[sl]=Zaslon na dotik
 Name[sv]=Pekskärm
 Name[tr]=Dokunmatik Ekran

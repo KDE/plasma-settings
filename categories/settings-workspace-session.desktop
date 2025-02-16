@@ -7,11 +7,15 @@ Icon=preferences-system-login
 
 Name=Session
 Name[ca]=Sessió
+Name[ca@valencia]=Sessió
+Name[cs]=Sezení
 Name[es]=Sesión
+Name[gl]=Sesión
 Name[he]=הפעלה
 Name[ia]=Session
 Name[ka]=სესია
 Name[nl]=Sessie
+Name[pl]=Posiedzenie
 Name[sl]=Seja
 Name[sv]=Session
 Name[tr]=Oturum

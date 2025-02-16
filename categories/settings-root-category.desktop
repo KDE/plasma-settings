@@ -7,11 +7,15 @@ X-KDE-Weight=1
 
 Name=Root
 Name[ca]=Arrel
+Name[ca@valencia]=Arrel
+Name[cs]=Root
 Name[es]=Root
+Name[gl]=Raíz
 Name[he]=הרשאות על
 Name[ia]=Radice
 Name[ka]=Root
 Name[nl]=Hoofdmap
+Name[pl]=Katalog główny
 Name[sl]=Koren
 Name[sv]=Systemadministratör
 Name[tr]=Kök

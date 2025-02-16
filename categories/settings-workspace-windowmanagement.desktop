@@ -7,11 +7,15 @@ Icon=preferences-system-windows
 
 Name=Window Management
 Name[ca]=Gestió de les finestres
+Name[ca@valencia]=Gestioneu les finestres
+Name[cs]=Správa oken
 Name[es]=Gestión de ventanas
+Name[gl]=Xestión das xanelas
 Name[he]=ניהול חלונות
 Name[ia]=Gestion de Fenestra
 Name[ka]=ფანჯრების მართვა
 Name[nl]=Vensterbeheer
+Name[pl]=Zarządzanie oknami
 Name[sl]=Upravljanje oken
 Name[sv]=Fönsterhantering
 Name[tr]=Pencere Yönetimi

@@ -7,11 +7,15 @@ Icon=preferences-desktop-user
 
 Name=Personalization
 Name[ca]=Personalització
+Name[ca@valencia]=Personalització
+Name[cs]=Přizpůsobení
 Name[es]=Personalización
+Name[gl]=Personalización
 Name[he]=התאמה אישית
 Name[ia]=Adaptation personal
 Name[ka]=პერსონალიზაცია
 Name[nl]=Persoonlijke instellingen
+Name[pl]=Dostosowywanie
 Name[sl]=Personalizacija
 Name[sv]=Anpassning
 Name[tr]=Kişiselleştirme

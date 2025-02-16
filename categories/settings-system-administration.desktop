@@ -7,11 +7,15 @@ Icon=preferences-system
 
 Name=System
 Name[ca]=Sistema
+Name[ca@valencia]=Sistema
+Name[cs]=Systém
 Name[es]=Sistema
+Name[gl]=Sistema
 Name[he]=מערכת
 Name[ia]=Systema
 Name[ka]=სისტემა
 Name[nl]=Systeem
+Name[pl]=System
 Name[sl]=Sistem
 Name[sv]=System
 Name[tr]=Sistem
