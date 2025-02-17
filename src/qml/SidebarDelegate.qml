@@ -12,6 +12,9 @@ import org.kde.kirigami as Kirigami
 Controls.ItemDelegate {
     id: root
 
+    // Avoids annoying hover feedback being left behind when scrolling with touch
+    hoverEnabled: !Kirigami.Settings.isMobile
+
     property bool showArrow: false
 
     readonly property bool selected: delegate.highlighted || delegate.pressed
