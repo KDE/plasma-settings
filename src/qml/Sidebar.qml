@@ -30,10 +30,11 @@ Kirigami.OverlayDrawer {
     topPadding: 0
     bottomPadding: 0
 
-    function goToMainPage() {
+    function goToMainPage(): void {
         pageRow.currentIndex = 0;
     }
-    function goToSubCategoryPage() {
+
+    function goToSubCategoryPage(): void {
         if (pageRow.depth == 1) {
             pageRow.push(subCategoryPage);
         }
