@@ -8,8 +8,9 @@ import QtQuick
 import QtQuick.Controls as Controls
 import QtQuick.Layouts
 import org.kde.kirigami as Kirigami
+import org.kde.kirigamiaddons.delegates as Delegates
 
-Controls.ItemDelegate {
+Delegates.RoundedItemDelegate {
     id: root
 
     // Avoids annoying hover feedback being left behind when scrolling with touch
@@ -17,34 +18,33 @@ Controls.ItemDelegate {
 
     property bool showArrow: false
 
-    readonly property bool selected: delegate.highlighted || delegate.pressed
-
-    width: ListView.view?.width ?? 0
-
-    Accessible.name: text
-    Accessible.onPressAction: clicked()
-
-    padding: Kirigami.Settings.isMobile ? Kirigami.Units.largeSpacing : Kirigami.Units.mediumSpacing
-    topInset: Kirigami.Units.smallSpacing / 2
-    bottomInset: Kirigami.Units.smallSpacing / 2
+    padding: Kirigami.Settings.tabletMode ? Kirigami.Units.largeSpacing : Kirigami.Units.mediumSpacing
+    spacing: Kirigami.Settings.tabletMode ? Kirigami.Units.largeSpacing * 2 : Kirigami.Units.mediumSpacing
 
     contentItem: RowLayout {
-        spacing: Kirigami.Units.gridUnit
+        spacing: root.spacing
 
         Kirigami.Icon {
-            Layout.leftMargin: Kirigami.Units.largeSpacing
-            implicitHeight: Kirigami.Units.iconSizes.smallMedium
-            implicitWidth: Kirigami.Units.iconSizes.smallMedium
+            implicitWidth: root.icon.width
+            implicitHeight: root.icon.height
+            source: root.icon.name ?? "question"
+
+            Accessible.ignored: true
+
+            Layout.leftMargin: Kirigami.Settings.tabletMode ? Kirigami.Units.smallSpacing : 0
             Layout.alignment: Qt.AlignLeft | Qt.AlignVCenter
-            source: root.icon.name ? root.icon.name : "question"
         }
 
         Controls.Label {
             id: label
-            Layout.fillWidth: true
-            Layout.alignment: Qt.AlignVCenter
+
             text: root.text
             opacity: root.display !== Controls.AbstractButton.TextOnly ? 1 : 0
+
+            Accessible.ignored: true
+
+            Layout.fillWidth: true
+            Layout.alignment: Qt.AlignVCenter
 
             Behavior on opacity {
                 NumberAnimation {
@@ -55,14 +55,13 @@ Controls.ItemDelegate {
         }
 
         Kirigami.Icon {
-            Layout.rightMargin: Kirigami.Units.largeSpacing
+            opacity: delegate.showArrow ? 0.7 : 0.0
+            source: LayoutMirroring.enabled ? "go-next-symbolic-rtl" : "go-next-symbolic"
+
+            Layout.rightMargin: Kirigami.Units.smallSpacing
             Layout.alignment: Qt.AlignVCenter
             Layout.preferredWidth: Kirigami.Units.iconSizes.small
             Layout.preferredHeight: Kirigami.Units.iconSizes.small
-
-            opacity: delegate.showArrow ? 0.7 : 0.0
-            source: LayoutMirroring.enabled ? "go-next-symbolic-rtl" : "go-next-symbolic"
-            selected: delegate.selected
         }
     }
 }
