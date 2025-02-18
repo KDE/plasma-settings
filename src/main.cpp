@@ -45,9 +45,10 @@ int main(int argc, char **argv)
                          QStringLiteral(PLASMA_SETTINGS_VERSION_STRING),
                          i18n("Touch-friendly settings application."),
                          KAboutLicense::GPL,
-                         i18n("Copyright 2011-2025"));
-    aboutData.addAuthor(i18n("Sebastian Kügler"), i18n("Maintainer"), u"sebas@kde.org"_s);
-    aboutData.addAuthor(i18n("Marco Martin"), i18n("Maintainer"), u"mart@kde.org"_s);
+                         i18n("Copyright 2011-2015, Sebastian Kügler"));
+    aboutData.addAuthor(i18n("Devin Lin"), i18n("Maintainer"), u"espidev@gmail.com"_s);
+    aboutData.addAuthor(i18n("Sebastian Kügler"), i18n("Previous Maintainer"), u"sebas@kde.org"_s);
+    aboutData.addAuthor(i18n("Marco Martin"), i18n("Previous Maintainer"), u"mart@kde.org"_s);
     aboutData.setDesktopFileName(u"org.kde.mobile.plasmasettings"_s);
     KAboutData::setApplicationData(aboutData);
 
