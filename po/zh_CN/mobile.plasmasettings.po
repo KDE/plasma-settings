@@ -110,4 +110,4 @@ msgstr "从侧边栏打开配置页面。"
 #: src/qml/SidebarCategoriesPage.qml:50
 #, kde-format
 msgid "Show menu"
-msgstr ""
+msgstr "显示菜单"
