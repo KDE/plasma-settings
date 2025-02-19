@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-settings\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-02-14 00:45+0000\n"
+"POT-Creation-Date: 2025-02-19 00:43+0000\n"
 "PO-Revision-Date: 2025-02-14 08:07+0100\n"
 "Last-Translator: Stefan Asserhäll <stefan.asserhall@gmail.com>\n"
 "Language-Team: Swedish <kde-i18n-doc@kde.org>\n"
@@ -28,8 +28,9 @@ msgid "Touch-friendly settings application."
 msgstr "Pekvänligt inställningsprogram."
 
 #: src/main.cpp:48
-#, kde-format
-msgid "Copyright 2011-2015, Sebastian Kügler"
+#, fuzzy, kde-format
+#| msgid "Copyright 2011-2015, Sebastian Kügler"
+msgid "Copyright 2011-2025"
 msgstr "Copyright 2011-2015, Sebastian Kügler"
 
 #: src/main.cpp:49

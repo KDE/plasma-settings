@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-settings\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-02-14 00:45+0000\n"
+"POT-Creation-Date: 2025-02-19 00:43+0000\n"
 "PO-Revision-Date: 2019-10-20 16:34-0700\n"
 "Last-Translator: Japanese KDE translation team <kde-jp@kde.org>\n"
 "Language-Team: Japanese <kde-jp@kde.org>\n"
@@ -26,7 +26,7 @@ msgstr ""
 
 #: src/main.cpp:48
 #, kde-format
-msgid "Copyright 2011-2015, Sebastian Kügler"
+msgid "Copyright 2011-2025"
 msgstr ""
 
 #: src/main.cpp:49

@@ -3,7 +3,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: fc57ad16a28d02dea100ceb1c60de14e\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-02-14 00:45+0000\n"
+"POT-Creation-Date: 2025-02-19 00:43+0000\n"
 "PO-Revision-Date: 2024-06-01 05:50\n"
 "Last-Translator: Antikruk <nashtlumach@gmail.com>\n"
 "Language-Team: Belarusian\n"
@@ -33,8 +33,9 @@ msgid "Touch-friendly settings application."
 msgstr "Праграма наладжвання, прыдатная для сэнсарных экранаў."
 
 #: src/main.cpp:48
-#, kde-format
-msgid "Copyright 2011-2015, Sebastian Kügler"
+#, fuzzy, kde-format
+#| msgid "Copyright 2011-2015, Sebastian Kügler"
+msgid "Copyright 2011-2025"
 msgstr "Аўтарскія правы 2011-2015, Sebastian Kügler"
 
 #: src/main.cpp:49
