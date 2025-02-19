@@ -20,11 +20,13 @@ set(CMAKE_MODULE_PATH ${ECM_MODULE_PATH})
 include(KDEInstallDirs)
 include(KDECMakeSettings)
 include(KDECompilerSettings)
-include(ECMQMLModules)
-include(ECMSetupVersion)
 include(KDEClangFormat)
 include(KDEGitCommitHooks)
+
+include(ECMQMLModules)
+include(ECMSetupVersion)
 include(ECMDeprecationSettings)
+include(ECMQmlModule)
 
 ecm_setup_version(${PROJECT_VERSION}
     VARIABLE_PREFIX PLASMA_SETTINGS

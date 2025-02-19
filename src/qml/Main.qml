@@ -10,7 +10,7 @@ import QtQuick
 import QtQuick.Controls as Controls
 import org.kde.kirigami as Kirigami
 
-import org.kde.plasma.settings 0.1
+import org.kde.plasma.settings
 
 Kirigami.ApplicationWindow {
     id: root

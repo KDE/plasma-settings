@@ -18,6 +18,7 @@
 
 #include <KDescendantsProxyModel>
 #include <KSelectionProxyModel>
+#include <qqmlintegration.h>
 
 #include "module.h"
 #include "modulesmodel.h"
@@ -28,6 +29,9 @@ class SubcategoryModel;
 class SettingsApp : public QObject
 {
     Q_OBJECT
+    QML_ELEMENT
+    QML_SINGLETON
+
     Q_PROPERTY(QString startModule MEMBER m_startModule CONSTANT)
     Q_PROPERTY(bool singleModule MEMBER m_singleModule CONSTANT)
 
@@ -43,8 +47,10 @@ class SettingsApp : public QObject
     Q_PROPERTY(Module *activeModule READ activeModule NOTIFY activeModuleChanged)
 
 public:
-    explicit SettingsApp(QCommandLineParser &parser, QString startModule, bool singleModule, QObject *parent = nullptr);
+    explicit SettingsApp(QObject *parent = nullptr);
     ~SettingsApp() override;
+
+    void init(QCommandLineParser &parser, QString startModule, bool singleModule);
 
     void loadModuleById(QString id);
     Q_INVOKABLE void loadModule(const QModelIndex &activeModule, const QStringList &args = QStringList());

@@ -5,11 +5,11 @@
     SPDX-License-Identifier: GPL-2.0-or-later
 */
 
-import QtQuick 2.6
-import QtQuick.Controls 2.2 as Controls
-import org.kde.kirigami 2.5 as Kirigami
+import QtQuick
+import QtQuick.Controls as Controls
+import org.kde.kirigami as Kirigami
 
-import org.kde.plasma.settings 0.1
+import org.kde.plasma.settings
 
 Kirigami.Page {
     id: container

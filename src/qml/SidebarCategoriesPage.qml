@@ -4,12 +4,12 @@
  * SPDX-License-Identifier: GPL-2.0-or-later
  */
 
-import QtQuick 2.15
-import QtQuick.Layouts 1.3
-import QtQuick.Controls 2.15 as QQC2
-import org.kde.kirigami 2.11 as Kirigami
+import QtQuick
+import QtQuick.Layouts
+import QtQuick.Controls as QQC2
+import org.kde.kirigami as Kirigami
 
-import org.kde.plasma.settings 0.1
+import org.kde.plasma.settings
 
 Kirigami.ScrollablePage {
     id: root
@@ -64,12 +64,12 @@ Kirigami.ScrollablePage {
                     QQC2.MenuItem {
                         text: i18n('About Plasma Settings')
                         icon.name: 'org.kde.mobile.plasmasettings'
-                        onTriggered: applicationWindow().pageStack.push('qrc:/qml/AboutPage.qml')
+                        onTriggered: applicationWindow().pageStack.push(Qt.createComponent("org.kde.kirigamiaddons.formcard", "AboutPage"))
                     }
                     QQC2.MenuItem {
                         text: i18n('About KDE')
                         icon.name: 'kde'
-                        onTriggered: applicationWindow().pageStack.push('qrc:/qml/AboutKDEPage.qml')
+                        onTriggered: applicationWindow().pageStack.push(Qt.createComponent("org.kde.kirigamiaddons.formcard", "AboutKDEPage"))
                     }
                 }
             }

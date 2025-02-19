@@ -137,14 +137,11 @@ int main(int argc, char **argv)
         return 0;
     }
 
-    auto *settingsApp = new SettingsApp(parser, module, singleModule, &app);
-
-    qmlRegisterType<Module>("org.kde.plasma.settings", 0, 1, "Module");
-    qmlRegisterSingletonInstance<SettingsApp>("org.kde.plasma.settings", 0, 1, "SettingsApp", settingsApp);
-
     QQmlApplicationEngine engine;
     engine.rootContext()->setContextObject(new KLocalizedContext(&engine));
-    engine.load(QUrl(QStringLiteral("qrc:/qml/main.qml")));
+    const auto settingsApp = engine.singletonInstance<SettingsApp *>("org.kde.plasma.settings", "SettingsApp");
+    settingsApp->init(parser, module, singleModule);
+    engine.loadFromModule("org.kde.plasma.settings", "Main");
 
     app.setWindowIcon(QIcon::fromTheme(QStringLiteral("org.kde.mobile.plasmasettings")));
 

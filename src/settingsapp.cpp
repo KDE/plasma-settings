@@ -18,13 +18,18 @@
 
 using namespace Qt::Literals::StringLiterals;
 
-SettingsApp::SettingsApp(QCommandLineParser &parser, QString startModule, bool singleModule, QObject *parent)
+SettingsApp::SettingsApp(QObject *parent)
     : QObject(parent)
-    , m_parser(&parser)
-    , m_startModule{startModule}
-    , m_singleModule{singleModule}
     , m_activeModule{new Module{}}
 {
+}
+
+void SettingsApp::init(QCommandLineParser &parser, QString startModule, bool singleModule)
+{
+    m_parser = &parser;
+    m_startModule = startModule;
+    m_singleModule = singleModule;
+
     setupKDBus();
 
     m_model = new ModulesModel(this);
