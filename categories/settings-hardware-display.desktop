@@ -25,6 +25,7 @@ Name[tr]=Görüntü ve Monitör
 Name[uk]=Показ зображення і монітор
 Name[x-test]=xxDisplay & Monitorxx
 Name[zh_CN]=显示和监视器
+Name[zh_TW]=顯示與螢幕
 Comment=Display Settings
 Comment[ca]=Configuració de la pantalla
 Comment[ca@valencia]=Configureu la pantalla
@@ -45,4 +46,5 @@ Comment[tr]=Görüntü Ayarları
 Comment[uk]=Налаштування дисплея
 Comment[x-test]=xxDisplay Settingsxx
 Comment[zh_CN]=显示设置
+Comment[zh_TW]=顯示器設定
 
