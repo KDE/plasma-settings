@@ -57,7 +57,7 @@ Kirigami.ApplicationWindow {
             // go to correct sidebar page
             if (SettingsApp.activeModule.isInSubCategory) {
                 sidebarLoader.item.goToSubCategoryPage();
-            } else {
+            } else if (sidebarLoader.item) {
                 sidebarLoader.item.goToMainPage();
             }
 
