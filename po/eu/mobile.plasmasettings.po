@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-settings\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-02-19 00:43+0000\n"
+"POT-Creation-Date: 2025-02-20 00:43+0000\n"
 "PO-Revision-Date: 2022-08-11 13:49+0200\n"
 "Last-Translator: Iñigo Salvador Azurmendi <xalba@ni.eus>\n"
 "Language-Team: Basque <kde-i18n-eu@kde.org>\n"
@@ -31,32 +31,42 @@ msgid "Touch-friendly settings application."
 msgstr "Ukimenarekiko lagunkoiak diren ezarpenen aplikazioa."
 
 #: src/main.cpp:48
-#, fuzzy, kde-format
-#| msgid "Copyright 2011-2015, Sebastian Kügler"
-msgid "Copyright 2011-2025"
-msgstr "Copyright 2011-2015, Sebastian Kügler"
+#, kde-format
+msgid "© 2011-2015 KDE Community"
+msgstr ""
 
 #: src/main.cpp:49
 #, kde-format
-msgid "Sebastian Kügler"
-msgstr "Sebastian Kügler"
+msgid "Devin Lin"
+msgstr ""
 
-#: src/main.cpp:49 src/main.cpp:50
+#: src/main.cpp:49
 #, kde-format
 msgid "Maintainer"
 msgstr "Mantentzailea"
 
 #: src/main.cpp:50
 #, kde-format
+msgid "Sebastian Kügler"
+msgstr "Sebastian Kügler"
+
+#: src/main.cpp:50 src/main.cpp:51
+#, fuzzy, kde-format
+#| msgid "Maintainer"
+msgid "Previous Maintainer"
+msgstr "Mantentzailea"
+
+#: src/main.cpp:51
+#, kde-format
 msgid "Marco Martin"
 msgstr "Marco Martin"
 
-#: src/main.cpp:60
+#: src/main.cpp:61
 #, kde-format
 msgid "List available settings modules"
 msgstr "Ezarpen modulu erabilgarriak zererndatzen ditu"
 
-#: src/main.cpp:63
+#: src/main.cpp:64
 #, kde-format
 msgid ""
 "Limit to modules suitable for <formfactor>, e.g. handset, tablet, "
@@ -66,39 +76,39 @@ msgstr ""
 "tableta, multimedia zentroa, mahaigainekoa, proba, denak (lehenetsia eskuko "
 "gailua)"
 
-#: src/main.cpp:64
+#: src/main.cpp:65
 #, kde-format
 msgid "formfactor"
 msgstr "forma faktorea"
 
-#: src/main.cpp:65
+#: src/main.cpp:66
 #, kde-format
 msgid "Settings module to open"
 msgstr "Ireki beharreko ezarpen modulua"
 
-#: src/main.cpp:65
+#: src/main.cpp:66
 #, kde-format
 msgid "modulename"
 msgstr "mouduluizena"
 
-#: src/main.cpp:66
+#: src/main.cpp:67
 #, kde-format
 msgid "Only show a single module, requires --module"
 msgstr "Erakutsi soilik modulu bakarra, beharrezkoa da  --module"
 
-#: src/main.cpp:67
+#: src/main.cpp:68
 #, kde-format
 msgid "Start window fullscreen"
 msgstr "Abiatu leihoa pantaila-betean"
 
-#: src/main.cpp:68
+#: src/main.cpp:69
 #, kde-format
 msgid "Package to use for the UI (default org.kde.mobile.settings)"
 msgstr ""
 "Erabiltzaile-interfazerako erabili beharreko paketea (lehenetsia org.kde."
 "mobile.settings)"
 
-#: src/main.cpp:68
+#: src/main.cpp:69
 #, kde-format
 msgid "packagename"
 msgstr "paketeizena"
@@ -117,6 +127,11 @@ msgstr "Ireki konfiguratzeko orri bat alboko-barratik."
 #, kde-format
 msgid "Show menu"
 msgstr ""
+
+#, fuzzy
+#~| msgid "Copyright 2011-2015, Sebastian Kügler"
+#~ msgid "Copyright 2011-2025"
+#~ msgstr "Copyright 2011-2015, Sebastian Kügler"
 
 #~ msgid "Search"
 #~ msgstr "Bilatu"

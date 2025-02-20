@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-settings\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-02-19 00:43+0000\n"
+"POT-Creation-Date: 2025-02-20 00:43+0000\n"
 "PO-Revision-Date: 2022-09-27 18:12+0700\n"
 "Last-Translator: Wantoyèk <wantoyek@gmail.com>\n"
 "Language-Team: Indonesian <kde-i18n-doc@kde.org>\n"
@@ -28,32 +28,42 @@ msgid "Touch-friendly settings application."
 msgstr "Aplikasi pengaturan sentuh secara mudah"
 
 #: src/main.cpp:48
-#, fuzzy, kde-format
-#| msgid "Copyright 2011-2015, Sebastian Kügler"
-msgid "Copyright 2011-2025"
-msgstr "Hak Cipta 2011-2015, Sebastian Kügler"
+#, kde-format
+msgid "© 2011-2015 KDE Community"
+msgstr ""
 
 #: src/main.cpp:49
 #, kde-format
-msgid "Sebastian Kügler"
-msgstr "Sebastian Kügler"
+msgid "Devin Lin"
+msgstr ""
 
-#: src/main.cpp:49 src/main.cpp:50
+#: src/main.cpp:49
 #, kde-format
 msgid "Maintainer"
 msgstr "Perawat"
 
 #: src/main.cpp:50
 #, kde-format
+msgid "Sebastian Kügler"
+msgstr "Sebastian Kügler"
+
+#: src/main.cpp:50 src/main.cpp:51
+#, fuzzy, kde-format
+#| msgid "Maintainer"
+msgid "Previous Maintainer"
+msgstr "Perawat"
+
+#: src/main.cpp:51
+#, kde-format
 msgid "Marco Martin"
 msgstr "Marco Martin"
 
-#: src/main.cpp:60
+#: src/main.cpp:61
 #, kde-format
 msgid "List available settings modules"
 msgstr "Daftar modul-modul pengaturan yang tersedia"
 
-#: src/main.cpp:63
+#: src/main.cpp:64
 #, kde-format
 msgid ""
 "Limit to modules suitable for <formfactor>, e.g. handset, tablet, "
@@ -62,37 +72,37 @@ msgstr ""
 "Batas untuk modul-modul yang sesuai untuk <faktor pembentuk>, mis. handset, "
 "tablet, mediacenter, desktop, uji, semua (handset default)"
 
-#: src/main.cpp:64
+#: src/main.cpp:65
 #, kde-format
 msgid "formfactor"
 msgstr "faktor pembentuk"
 
-#: src/main.cpp:65
+#: src/main.cpp:66
 #, kde-format
 msgid "Settings module to open"
 msgstr "Modul pengaturan untuk buka"
 
-#: src/main.cpp:65
+#: src/main.cpp:66
 #, kde-format
 msgid "modulename"
 msgstr "nama modul"
 
-#: src/main.cpp:66
+#: src/main.cpp:67
 #, kde-format
 msgid "Only show a single module, requires --module"
 msgstr "Tampilkan hanya modul tunggal, memerlukan --module"
 
-#: src/main.cpp:67
+#: src/main.cpp:68
 #, kde-format
 msgid "Start window fullscreen"
 msgstr "Mulaikan jendela layar penuh"
 
-#: src/main.cpp:68
+#: src/main.cpp:69
 #, kde-format
 msgid "Package to use for the UI (default org.kde.mobile.settings)"
 msgstr "Paket yang mau digunakan UI (default-nya org.kde.mobile.settings)"
 
-#: src/main.cpp:68
+#: src/main.cpp:69
 #, kde-format
 msgid "packagename"
 msgstr "nama paket"
@@ -111,6 +121,11 @@ msgstr "Buka halaman konfigurasi dari bilah sisi."
 #, kde-format
 msgid "Show menu"
 msgstr ""
+
+#, fuzzy
+#~| msgid "Copyright 2011-2015, Sebastian Kügler"
+#~ msgid "Copyright 2011-2025"
+#~ msgstr "Hak Cipta 2011-2015, Sebastian Kügler"
 
 #~ msgid "Search"
 #~ msgstr "Cari"

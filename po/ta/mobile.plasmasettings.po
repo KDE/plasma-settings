@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-settings\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-02-19 00:43+0000\n"
+"POT-Creation-Date: 2025-02-20 00:43+0000\n"
 "PO-Revision-Date: 2021-10-31 17:44+0530\n"
 "Last-Translator: Kishore G <kishore96@gmail.com>\n"
 "Language-Team: Tamil <kde-i18n-doc@kde.org>\n"
@@ -30,67 +30,78 @@ msgstr "தொடுமுறையில் இயக்கக்கூடி�
 
 #: src/main.cpp:48
 #, kde-format
-msgid "Copyright 2011-2025"
+msgid "© 2011-2015 KDE Community"
 msgstr ""
 
 #: src/main.cpp:49
 #, kde-format
-msgid "Sebastian Kügler"
+msgid "Devin Lin"
 msgstr ""
 
-#: src/main.cpp:49 src/main.cpp:50
+#: src/main.cpp:49
 #, kde-format
 msgid "Maintainer"
 msgstr "பராமரிப்பாளர்"
 
 #: src/main.cpp:50
 #, kde-format
+msgid "Sebastian Kügler"
+msgstr ""
+
+#: src/main.cpp:50 src/main.cpp:51
+#, fuzzy, kde-format
+#| msgid "Maintainer"
+msgid "Previous Maintainer"
+msgstr "பராமரிப்பாளர்"
+
+#: src/main.cpp:51
+#, kde-format
 msgid "Marco Martin"
 msgstr ""
 
-#: src/main.cpp:60
+#: src/main.cpp:61
 #, kde-format
 msgid "List available settings modules"
 msgstr "பயன்படுத்தக்கூடிய அமைப்புக் கூறுகளை பட்டியலிடும்"
 
-#: src/main.cpp:63
+#: src/main.cpp:64
 #, kde-format
 msgid ""
 "Limit to modules suitable for <formfactor>, e.g. handset, tablet, "
 "mediacenter, desktop, test, all (default handset)"
 msgstr ""
 
-#: src/main.cpp:64
+#: src/main.cpp:65
 #, kde-format
 msgid "formfactor"
 msgstr ""
 
-#: src/main.cpp:65
+#: src/main.cpp:66
 #, kde-format
 msgid "Settings module to open"
 msgstr "திறக்கவேண்டிய அமைப்புக் கூறு"
 
-#: src/main.cpp:65
+#: src/main.cpp:66
 #, kde-format
 msgid "modulename"
 msgstr ""
 
-#: src/main.cpp:66
+#: src/main.cpp:67
 #, kde-format
 msgid "Only show a single module, requires --module"
 msgstr ""
 
-#: src/main.cpp:67
+#: src/main.cpp:68
 #, kde-format
 msgid "Start window fullscreen"
 msgstr "சாளரத்தை முழுதிரையில் துவக்கு"
 
-#: src/main.cpp:68
+#: src/main.cpp:69
 #, kde-format
 msgid "Package to use for the UI (default org.kde.mobile.settings)"
 msgstr ""
 
-#: src/main.cpp:68
+#: src/main.cpp:69
 #, kde-format
 msgid "packagename"
 msgstr ""

@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-settings\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-02-19 00:43+0000\n"
+"POT-Creation-Date: 2025-02-20 00:43+0000\n"
 "PO-Revision-Date: 2024-12-15 17:36+0530\n"
 "Last-Translator: Kali <EMAIL@ADDRESS>\n"
 "Language-Team: Hindi <fedora-trans-hi@redhat.com>\n"
@@ -28,32 +28,42 @@ msgid "Touch-friendly settings application."
 msgstr "स्पर्श-अनुकूल सेटिंग्स अनुप्रयोग."
 
 #: src/main.cpp:48
-#, fuzzy, kde-format
-#| msgid "Copyright 2011-2015, Sebastian Kügler"
-msgid "Copyright 2011-2025"
-msgstr "कॉपीराइट 2011-2015, सेबेस्टियन कुग्लर"
+#, kde-format
+msgid "© 2011-2015 KDE Community"
+msgstr ""
 
 #: src/main.cpp:49
 #, kde-format
-msgid "Sebastian Kügler"
-msgstr "सेबस्टियन कुग्लर"
+msgid "Devin Lin"
+msgstr ""
 
-#: src/main.cpp:49 src/main.cpp:50
+#: src/main.cpp:49
 #, kde-format
 msgid "Maintainer"
 msgstr "मेंटेनर"
 
 #: src/main.cpp:50
 #, kde-format
+msgid "Sebastian Kügler"
+msgstr "सेबस्टियन कुग्लर"
+
+#: src/main.cpp:50 src/main.cpp:51
+#, fuzzy, kde-format
+#| msgid "Maintainer"
+msgid "Previous Maintainer"
+msgstr "मेंटेनर"
+
+#: src/main.cpp:51
+#, kde-format
 msgid "Marco Martin"
 msgstr "मार्को मार्टिन"
 
-#: src/main.cpp:60
+#: src/main.cpp:61
 #, kde-format
 msgid "List available settings modules"
 msgstr "उपलब्ध सेटिंग मॉड्यूल की सूची बनाएं"
 
-#: src/main.cpp:63
+#: src/main.cpp:64
 #, kde-format
 msgid ""
 "Limit to modules suitable for <formfactor>, e.g. handset, tablet, "
@@ -62,37 +72,37 @@ msgstr ""
 "<formfactor> के लिए उपयुक्त मॉड्यूल तक सीमित करें, जैसे हैंडसेट, टैबलेट, मीडियासेंटर, "
 "डेस्कटॉप, टेस्ट, सभी (डिफ़ॉल्ट हैंडसेट)"
 
-#: src/main.cpp:64
+#: src/main.cpp:65
 #, kde-format
 msgid "formfactor"
 msgstr "बनाने का कारक"
 
-#: src/main.cpp:65
+#: src/main.cpp:66
 #, kde-format
 msgid "Settings module to open"
 msgstr "सेटिंग मॉड्यूल खोलने के लिए"
 
-#: src/main.cpp:65
+#: src/main.cpp:66
 #, kde-format
 msgid "modulename"
 msgstr "मोड्यूल का नाम"
 
-#: src/main.cpp:66
+#: src/main.cpp:67
 #, kde-format
 msgid "Only show a single module, requires --module"
 msgstr "केवल एक मॉड्यूल दिखाएं, --module की आवश्यकता है"
 
-#: src/main.cpp:67
+#: src/main.cpp:68
 #, kde-format
 msgid "Start window fullscreen"
 msgstr "विंडो पूर्णस्क्रीन प्रारंभ करें"
 
-#: src/main.cpp:68
+#: src/main.cpp:69
 #, kde-format
 msgid "Package to use for the UI (default org.kde.mobile.settings)"
 msgstr "UI के लिए उपयोग हेतु पैकेज (डिफ़ॉल्ट org.kde.mobile.settings)"
 
-#: src/main.cpp:68
+#: src/main.cpp:69
 #, kde-format
 msgid "packagename"
 msgstr "पैकेजनाम"
@@ -111,6 +121,11 @@ msgstr "साइडबार से कॉन्फ़िगरेशन पृ
 #, kde-format
 msgid "Show menu"
 msgstr ""
+
+#, fuzzy
+#~| msgid "Copyright 2011-2015, Sebastian Kügler"
+#~ msgid "Copyright 2011-2025"
+#~ msgstr "कॉपीराइट 2011-2015, सेबेस्टियन कुग्लर"
 
 #~ msgid "Search"
 #~ msgstr "खोज"
