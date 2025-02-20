@@ -80,14 +80,19 @@ int main(int argc, char **argv)
     aboutData.processCommandLine(&parser);
 
     if (parser.isSet(listOption)) {
-        int nameWidth = 24;
         QSet<QString> seen;
         std::cout << std::setfill('.');
 
-        auto formfactor = parser.value(formfactorOption);
+        const auto formfactor = parser.value(formfactorOption);
 
         const auto plugins = KPluginMetaData::findPlugins(u"kcms"_s)
             << KPluginMetaData::findPlugins(u"plasma/kcms"_s) << KPluginMetaData::findPlugins(u"plasma/kcms/systemsettings"_s);
+
+        const auto longest = std::ranges::max_element(plugins, [](const auto &left, const auto &right) {
+            return left.pluginId().length() < right.pluginId().length();
+        });
+        const int nameWidth = longest->pluginId().length();
+
         for (const auto &plugin : plugins) {
             if (seen.contains(plugin.pluginId())) {
                 continue;
@@ -97,33 +102,11 @@ int main(int argc, char **argv)
             if (!formfactor.isEmpty() && !plugin.formFactors().contains(formfactor) && formfactor != QStringLiteral("all")) {
                 continue;
             }
-            const int len = plugin.pluginId().length();
-            if (len > nameWidth) {
-                nameWidth = len;
-            }
-
             seen << plugin.pluginId();
             std::cout << plugin.pluginId().toLocal8Bit().data() << ' ' << std::setw(nameWidth - plugin.pluginId().length() + 2) << '.' << ' '
                       << plugin.description().toLocal8Bit().data() << std::endl;
 
             // qDebug() << "Formafactors: " << formFactors;
-        }
-
-        const auto kcmPlugin = KPluginMetaData::findPlugins(u"kcms"_s)
-            << KPluginMetaData::findPlugins(u"plasma/kcms"_s) << KPluginMetaData::findPlugins(u"plasma/kcms/systemsettings"_s);
-        for (const auto &plugin : kcmPlugin) {
-            if (seen.contains(plugin.pluginId())) {
-                continue;
-            }
-            if (!formfactor.isEmpty() && !plugin.formFactors().contains(formfactor) && formfactor != QStringLiteral("all")) {
-                continue;
-            }
-            const int len = plugin.pluginId().length();
-            if (len > nameWidth) {
-                nameWidth = len;
-            }
-            std::cout << plugin.pluginId().toLocal8Bit().data() << ' ' << std::setw(nameWidth - plugin.pluginId().length() + 2) << '.' << ' '
-                      << plugin.description().toLocal8Bit().data() << std::endl;
         }
 
         return 0;

@@ -5,7 +5,7 @@ project(plasma-settings VERSION ${PROJECT_VERSION})
 
 include(FeatureSummary)
 
-set(CMAKE_CXX_STANDARD 17)
+set(CMAKE_CXX_STANDARD 20)
 set(CMAKE_CXX_STANDARD_REQUIRED ON)
 
 set (QT_MIN_VERSION "6.6.0")
