@@ -56,6 +56,7 @@ ki18n_install(po)
 
 install(FILES org.kde.mobile.plasmasettings.svg DESTINATION ${KDE_INSTALL_FULL_ICONDIR}/hicolor/scalable/apps/)
 install(FILES org.kde.mobile.plasmasettings.desktop DESTINATION ${KDE_INSTALL_APPDIR})
+install(FILES org.kde.mobile.plasmasettings.metainfo.xml DESTINATION ${KDE_INSTALL_METAINFODIR})
 
 file(GLOB_RECURSE ALL_CLANG_FORMAT_SOURCE_FILES *.cpp *.h)
 kde_clang_format(${ALL_CLANG_FORMAT_SOURCE_FILES})
