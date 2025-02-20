@@ -27,6 +27,7 @@ target_include_directories(plasma-settings PRIVATE ${CMAKE_BINARY_DIR})
 
 target_link_libraries(plasma-settings PRIVATE
     Qt::Quick
+    Qt::QuickControls2
     Qt::Gui
     Qt::Widgets
     KF6::DBusAddons
@@ -36,6 +37,7 @@ target_link_libraries(plasma-settings PRIVATE
     KF6::Service
     KF6::ItemViews
     KF6::ItemModels
+    KF6::I18nQml
 )
 
 install(TARGETS plasma-settings ${KDE_INSTALL_TARGETS_DEFAULT_ARGS})

@@ -23,11 +23,12 @@
 #include <QIcon>
 #include <QQmlApplicationEngine>
 #include <QQmlContext>
+#include <QQuickStyle>
 
 // Frameworks
 #include <KAboutData>
 #include <KCrash>
-#include <KLocalizedContext>
+#include <KLocalizedQmlContext>
 #include <KLocalizedString>
 #include <KPluginMetaData>
 
@@ -36,6 +37,10 @@ using namespace Qt::Literals::StringLiterals;
 int main(int argc, char **argv)
 {
     QApplication app(argc, argv);
+    // Default to org.kde.desktop style unless the user forces another style
+    if (qEnvironmentVariableIsEmpty("QT_QUICK_CONTROLS_STYLE")) {
+        QQuickStyle::setStyle(QStringLiteral("org.kde.desktop"));
+    }
 
     KLocalizedString::setApplicationDomain("mobile.plasmasettings");
 
@@ -121,7 +126,7 @@ int main(int argc, char **argv)
     }
 
     QQmlApplicationEngine engine;
-    engine.rootContext()->setContextObject(new KLocalizedContext(&engine));
+    KLocalization::setupLocalizedContext(&engine);
     const auto settingsApp = engine.singletonInstance<SettingsApp *>("org.kde.plasma.settings", "SettingsApp");
     settingsApp->init(parser, module, singleModule);
     engine.loadFromModule("org.kde.plasma.settings", "Main");

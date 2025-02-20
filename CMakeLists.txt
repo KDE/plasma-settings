@@ -33,7 +33,7 @@ ecm_setup_version(${PROJECT_VERSION}
     VERSION_HEADER ${CMAKE_CURRENT_BINARY_DIR}/version.h
 )
 
-find_package(Qt6 ${QT_MIN_VERSION} REQUIRED NO_MODULE COMPONENTS Core Quick Test Gui Widgets)
+find_package(Qt6 ${QT_MIN_VERSION} REQUIRED NO_MODULE COMPONENTS Core Quick Test Gui Widgets QuickControls2)
 find_package(KF6KirigamiAddons 1.0 REQUIRED)
 
 find_package(KF6 ${KF6_MIN_VERSION} REQUIRED COMPONENTS
