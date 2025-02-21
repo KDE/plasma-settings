@@ -6,6 +6,7 @@ X-KDE-Weight=20
 Icon=preferences-desktop-search
 
 Name=Search
+Name[ar]=ابحث
 Name[ca]=Cerca
 Name[ca@valencia]=Busca
 Name[cs]=Hledat
@@ -16,6 +17,7 @@ Name[gl]=Busca
 Name[he]=חיפוש
 Name[ia]=Cerca
 Name[ka]=ძებნა
+Name[lv]=Meklēšana
 Name[nl]=Zoeken
 Name[pl]=Poszukaj
 Name[sl]=Iskanje

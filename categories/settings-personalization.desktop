@@ -6,6 +6,7 @@ X-KDE-Weight=65
 Icon=preferences-desktop-user
 
 Name=Personalization
+Name[ar]=التخصيص
 Name[ca]=Personalització
 Name[ca@valencia]=Personalització
 Name[cs]=Přizpůsobení
@@ -16,6 +17,7 @@ Name[gl]=Personalización
 Name[he]=התאמה אישית
 Name[ia]=Adaptation personal
 Name[ka]=პერსონალიზაცია
+Name[lv]=Personalizācija
 Name[nl]=Persoonlijke instellingen
 Name[pl]=Dostosowywanie
 Name[sl]=Personalizacija

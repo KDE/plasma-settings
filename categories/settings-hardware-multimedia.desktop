@@ -6,6 +6,7 @@ X-KDE-Weight=60
 Icon=preferences-desktop-multimedia
 
 Name=Multimedia
+Name[ar]=الوسائط المتعدّدة
 Name[ca]=Multimèdia
 Name[ca@valencia]=Multimèdia
 Name[cs]=Multimédia
@@ -16,6 +17,7 @@ Name[gl]=Multimedia
 Name[he]=מולטימדיה
 Name[ia]=Multimedia
 Name[ka]=მულტიმედია
+Name[lv]=Multivide
 Name[nl]=Multimedia
 Name[pl]=Multimedia
 Name[sl]=Večpredstavnost

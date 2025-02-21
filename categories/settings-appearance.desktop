@@ -6,6 +6,7 @@ X-KDE-Weight=40
 Icon=preferences-desktop-theme-global
 
 Name=Appearance & Style
+Name[ar]=المظهر و النمط
 Name[ca]=Aparença i estil
 Name[ca@valencia]=Aparença i estil
 Name[cs]=Vzhled a styl
@@ -16,6 +17,7 @@ Name[gl]=Aparencia e estilo
 Name[he]=מראה וסגנון
 Name[ia]=Apparentia & Stilo
 Name[ka]=გარეგნობა & სტილი
+Name[lv]=Izskats un stils
 Name[nl]=Uiterlijk & stijl
 Name[pl]=Wygląd
 Name[sl]=Videz in slog

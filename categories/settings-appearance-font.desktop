@@ -6,6 +6,7 @@ X-KDE-Weight=30
 Icon=preferences-desktop-font
 
 Name=Text & Fonts
+Name[ar]=النص والخطوط
 Name[ca]=Text i lletres
 Name[ca@valencia]=Text i lletres
 Name[cs]=Text a písmo
@@ -16,6 +17,7 @@ Name[gl]=Texto e fontes
 Name[he]=כתב וגופנים
 Name[ia]=Texto e Fonts
 Name[ka]=ტექსტი & ფონტები
+Name[lv]=Teksts un fonti
 Name[nl]=Tekst & lettertypen
 Name[pl]=Tekst i czcionki
 Name[sl]=Besedilo in pisave

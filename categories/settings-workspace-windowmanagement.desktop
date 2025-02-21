@@ -6,6 +6,7 @@ X-KDE-Weight=30
 Icon=preferences-system-windows
 
 Name=Window Management
+Name[ar]=إدارة النّوافذ
 Name[ca]=Gestió de les finestres
 Name[ca@valencia]=Gestioneu les finestres
 Name[cs]=Správa oken
@@ -16,6 +17,7 @@ Name[gl]=Xestión das xanelas
 Name[he]=ניהול חלונות
 Name[ia]=Gestion de Fenestra
 Name[ka]=ფანჯრების მართვა
+Name[lv]=Logu pārvaldība
 Name[nl]=Vensterbeheer
 Name[pl]=Zarządzanie oknami
 Name[sl]=Upravljanje oken

@@ -6,6 +6,7 @@ X-KDE-Weight=10
 Icon=preferences-desktop-mouse
 
 Name=Input & Output
+Name[ar]=وحدات الإدخال والإخراج
 Name[ca]=Entrada i sortida
 Name[ca@valencia]=Entrada i eixida
 Name[cs]=Vstup a výstup
@@ -16,6 +17,7 @@ Name[gl]=Entrada e saída
 Name[he]=קלט ופלט
 Name[ia]=Ingresso & Egresso
 Name[ka]=შეტანა & გამოტანა
+Name[lv]=Ievade un izvade
 Name[nl]=Invoer & uitvoer
 Name[pl]=Wejście i wyjście
 Name[sl]=Vhod in izhod

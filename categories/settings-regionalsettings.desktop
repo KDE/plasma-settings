@@ -6,6 +6,7 @@ X-KDE-Weight=80
 Icon=preferences-desktop-locale
 
 Name=Language & Time
+Name[ar]=اللغة والوقت
 Name[ca]=Idioma i hora
 Name[ca@valencia]=Idioma i hora
 Name[cs]=Jazyk a čas
@@ -16,6 +17,7 @@ Name[gl]=Idioma e hora
 Name[he]=שפה ושעון
 Name[ia]=Linguage & Tempore
 Name[ka]=ენა & დრო
+Name[lv]=Valoda un laiks
 Name[nl]=Taal & tijd
 Name[pl]=Język i czas
 Name[sl]=Jezik in čas

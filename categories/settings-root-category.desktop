@@ -6,6 +6,7 @@ X-KDE-System-Settings-Parent-Category=
 X-KDE-Weight=1
 
 Name=Root
+Name[ar]=الجذر
 Name[ca]=Arrel
 Name[ca@valencia]=Arrel
 Name[cs]=Root
@@ -16,6 +17,7 @@ Name[gl]=Raíz
 Name[he]=הרשאות על
 Name[ia]=Radice
 Name[ka]=Root
+Name[lv]=Sakne
 Name[nl]=Hoofdmap
 Name[pl]=Katalog główny
 Name[sl]=Koren

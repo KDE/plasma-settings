@@ -6,6 +6,7 @@ X-KDE-Weight=30
 Icon=preferences-system-disks
 
 Name=Disks & Cameras
+Name[ar]=الأقراص والكاميرات
 Name[ca]=Discs i càmeres
 Name[ca@valencia]=Discs i càmeres
 Name[cs]=Disky a kamery
@@ -16,6 +17,7 @@ Name[gl]=Discos e cámaras
 Name[he]=כוננים ומצלמות
 Name[ia]=Discos & Cameras
 Name[ka]=დისკები & კამერები
+Name[lv]=Diski un kameras
 Name[nl]=Schijven & camera's
 Name[pl]=Dyski i kamery
 Name[sl]=Diski in kamere

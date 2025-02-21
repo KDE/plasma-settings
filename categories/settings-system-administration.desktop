@@ -6,6 +6,7 @@ X-KDE-Weight=100
 Icon=preferences-system
 
 Name=System
+Name[ar]=النظام
 Name[ca]=Sistema
 Name[ca@valencia]=Sistema
 Name[cs]=Systém
@@ -16,6 +17,7 @@ Name[gl]=Sistema
 Name[he]=מערכת
 Name[ia]=Systema
 Name[ka]=სისტემა
+Name[lv]=Sistēma
 Name[nl]=Systeem
 Name[pl]=System
 Name[sl]=Sistem
