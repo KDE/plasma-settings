@@ -1,69 +1,70 @@
-# Copyright (C) YEAR This file is copyright:
+# Copyright (C) 2025 This file is copyright:
 # This file is distributed under the same license as the plasma-settings package.
+# SPDX-FileCopyrightText: 2023, 2025 Zayed Al-Saidi <zayed.alsaidi@gmail.com>
 #
-# Zayed Al-Saidi <zayed.alsaidi@gmail.com>, 2023.
 msgid ""
 msgstr ""
 "Project-Id-Version: plasma-settings\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-02-20 00:43+0000\n"
-"PO-Revision-Date: 2023-08-19 15:38+0400\n"
+"POT-Creation-Date: 2025-02-21 00:43+0000\n"
+"PO-Revision-Date: 2025-02-20 10:48+0400\n"
 "Last-Translator: Zayed Al-Saidi <zayed.alsaidi@gmail.com>\n"
-"Language-Team: \n"
+"Language-Team: ar\n"
 "Language: ar\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=6; plural=n==0 ? 0 : n==1 ? 1 : n==2 ? 2 : n%100>=3 "
 "&& n%100<=10 ? 3 : n%100>=11 && n%100<=99 ? 4 : 5;\n"
+"X-Generator: Lokalize 23.08.5\n"
 
-#: src/main.cpp:44
+#: src/main.cpp:49
 #, kde-format
 msgid "Settings"
 msgstr "إعدادات"
 
-#: src/main.cpp:46
+#: src/main.cpp:51
 #, kde-format
 msgid "Touch-friendly settings application."
 msgstr "تطبيق إعدادات متوافق مع اللمس."
 
-#: src/main.cpp:48
+#: src/main.cpp:53
 #, kde-format
 msgid "© 2011-2015 KDE Community"
 msgstr ""
 
-#: src/main.cpp:49
+#: src/main.cpp:54
 #, kde-format
 msgid "Devin Lin"
 msgstr ""
 
-#: src/main.cpp:49
+#: src/main.cpp:54
 #, kde-format
 msgid "Maintainer"
 msgstr "المصين"
 
-#: src/main.cpp:50
+#: src/main.cpp:55
 #, kde-format
 msgid "Sebastian Kügler"
 msgstr "سابستيان كوغلر"
 
-#: src/main.cpp:50 src/main.cpp:51
+#: src/main.cpp:55 src/main.cpp:56
 #, fuzzy, kde-format
 #| msgid "Maintainer"
 msgid "Previous Maintainer"
 msgstr "المصين"
 
-#: src/main.cpp:51
+#: src/main.cpp:56
 #, kde-format
 msgid "Marco Martin"
 msgstr "ماركو مارتن"
 
-#: src/main.cpp:61
+#: src/main.cpp:66
 #, kde-format
 msgid "List available settings modules"
 msgstr "قائمة وحدات الإعدادات المتوفرة"
 
-#: src/main.cpp:64
+#: src/main.cpp:69
 #, kde-format
 msgid ""
 "Limit to modules suitable for <formfactor>, e.g. handset, tablet, "
@@ -72,37 +73,37 @@ msgstr ""
 "عرض الوحدات المتوافقة مع <formfactor> مثلا هاتف، جهاز لوحي، مركز وسائط، "
 "حاسب، اختبار، الجميع (الافتراضي هاتف)"
 
-#: src/main.cpp:65
+#: src/main.cpp:70
 #, kde-format
 msgid "formfactor"
 msgstr "حجم الجهاز"
 
-#: src/main.cpp:66
+#: src/main.cpp:71
 #, kde-format
 msgid "Settings module to open"
 msgstr "وحدة الإعدادات لفتحها"
 
-#: src/main.cpp:66
+#: src/main.cpp:71
 #, kde-format
 msgid "modulename"
 msgstr "اسم الوحدة"
 
-#: src/main.cpp:67
+#: src/main.cpp:72
 #, kde-format
 msgid "Only show a single module, requires --module"
 msgstr "تعرض وحدة واحدة فقط، يتطلب --module"
 
-#: src/main.cpp:68
+#: src/main.cpp:73
 #, kde-format
 msgid "Start window fullscreen"
 msgstr "بدء نافذة ملء الشاشة"
 
-#: src/main.cpp:69
+#: src/main.cpp:74
 #, kde-format
 msgid "Package to use for the UI (default org.kde.mobile.settings)"
 msgstr "الحزمة المستخدمة لواجهة المستخدم (الافتراضي org.kde.mobile.settings)"
 
-#: src/main.cpp:69
+#: src/main.cpp:74
 #, kde-format
 msgid "packagename"
 msgstr "اسم الحزمة"
@@ -120,7 +121,7 @@ msgstr "افتح صفحة الإعداد من الشريط الجانبي."
 #: src/qml/SidebarCategoriesPage.qml:50
 #, kde-format
 msgid "Show menu"
-msgstr ""
+msgstr "أظهر القائمة"
 
 #, fuzzy
 #~| msgid "Copyright 2011-2015, Sebastian Kügler"

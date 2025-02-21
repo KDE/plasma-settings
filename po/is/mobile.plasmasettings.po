@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-settings\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-02-20 00:43+0000\n"
+"POT-Creation-Date: 2025-02-21 00:43+0000\n"
 "PO-Revision-Date: 2022-10-17 03:07+0000\n"
 "Last-Translator: Guðmundur Erlingsson <gudmundure@gmail.com>\n"
 "Language-Team: Icelandic <kde-i18n-doc@kde.org>\n"
@@ -18,53 +18,53 @@ msgstr ""
 "Plural-Forms: Plural-Forms: nplurals=2; plural=n != 1;\n"
 "X-Generator: Lokalize 22.04.3\n"
 
-#: src/main.cpp:44
+#: src/main.cpp:49
 #, kde-format
 msgid "Settings"
 msgstr "Stillingar"
 
-#: src/main.cpp:46
+#: src/main.cpp:51
 #, kde-format
 msgid "Touch-friendly settings application."
 msgstr "Stillingaforrit sem hentar fyrir snertiskjái"
 
-#: src/main.cpp:48
+#: src/main.cpp:53
 #, kde-format
 msgid "© 2011-2015 KDE Community"
 msgstr ""
 
-#: src/main.cpp:49
+#: src/main.cpp:54
 #, kde-format
 msgid "Devin Lin"
 msgstr ""
 
-#: src/main.cpp:49
+#: src/main.cpp:54
 #, kde-format
 msgid "Maintainer"
 msgstr "Umsjónarmaður"
 
-#: src/main.cpp:50
+#: src/main.cpp:55
 #, kde-format
 msgid "Sebastian Kügler"
 msgstr "Sebastian Kügler"
 
-#: src/main.cpp:50 src/main.cpp:51
+#: src/main.cpp:55 src/main.cpp:56
 #, fuzzy, kde-format
 #| msgid "Maintainer"
 msgid "Previous Maintainer"
 msgstr "Umsjónarmaður"
 
-#: src/main.cpp:51
+#: src/main.cpp:56
 #, kde-format
 msgid "Marco Martin"
 msgstr "Marco Martin"
 
-#: src/main.cpp:61
+#: src/main.cpp:66
 #, kde-format
 msgid "List available settings modules"
 msgstr "Birta lista yfir tiltækar stillingaeiningar"
 
-#: src/main.cpp:64
+#: src/main.cpp:69
 #, kde-format
 msgid ""
 "Limit to modules suitable for <formfactor>, e.g. handset, tablet, "
@@ -73,37 +73,37 @@ msgstr ""
 "Takmarka við einingar sem henta fyrir <formfactor>, þ.e. síma,  "
 "spjaldtölvur, mediacenter, skjáborð, próf, allt (sími sjálfgefið)"
 
-#: src/main.cpp:65
+#: src/main.cpp:70
 #, kde-format
 msgid "formfactor"
 msgstr "formfactor"
 
-#: src/main.cpp:66
+#: src/main.cpp:71
 #, kde-format
 msgid "Settings module to open"
 msgstr "Stillingaeining sem á að opna"
 
-#: src/main.cpp:66
+#: src/main.cpp:71
 #, kde-format
 msgid "modulename"
 msgstr "heiti einingar"
 
-#: src/main.cpp:67
+#: src/main.cpp:72
 #, kde-format
 msgid "Only show a single module, requires --module"
 msgstr "Sýna aðeins staka einingu, krefst --module"
 
-#: src/main.cpp:68
+#: src/main.cpp:73
 #, kde-format
 msgid "Start window fullscreen"
 msgstr "Byrja með gluggann á öllum skjánum"
 
-#: src/main.cpp:69
+#: src/main.cpp:74
 #, kde-format
 msgid "Package to use for the UI (default org.kde.mobile.settings)"
 msgstr "Pakki sem á að nota fyrir viðmót (sjálfgefið org.kde.mobile.settings)"
 
-#: src/main.cpp:69
+#: src/main.cpp:74
 #, kde-format
 msgid "packagename"
 msgstr "pakkaheiti"

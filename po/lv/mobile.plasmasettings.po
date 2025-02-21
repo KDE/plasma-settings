@@ -1,14 +1,14 @@
 # Copyright (C) 2024 This file is copyright:
 # This file is distributed under the same license as the plasma-settings package.
 #
-# SPDX-FileCopyrightText: 2024 Toms Trasūns <toms.trasuns@posteo.net>
+# SPDX-FileCopyrightText: 2024, 2025 Toms Trasūns <toms.trasuns@posteo.net>
 msgid ""
 msgstr ""
 "Project-Id-Version: plasma-settings\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-02-20 00:43+0000\n"
-"PO-Revision-Date: 2024-02-29 12:39+0200\n"
-"Last-Translator: Toms Trasūns <toms.trasuns@posteo.net>\n"
+"POT-Creation-Date: 2025-02-21 00:43+0000\n"
+"PO-Revision-Date: 2025-02-19 14:41+0200\n"
+"Last-Translator: Toms Trasuns <toms.trasuns@posteo.net>\n"
 "Language-Team: Latvian <kde-i18n-doc@kde.org>\n"
 "Language: lv\n"
 "MIME-Version: 1.0\n"
@@ -16,55 +16,55 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n != 0 ? 1 : "
 "2);\n"
-"X-Generator: Lokalize 23.08.5\n"
+"X-Generator: Lokalize 24.12.2\n"
 
-#: src/main.cpp:44
+#: src/main.cpp:49
 #, kde-format
 msgid "Settings"
 msgstr "Iestatījumi"
 
-#: src/main.cpp:46
+#: src/main.cpp:51
 #, kde-format
 msgid "Touch-friendly settings application."
 msgstr "Skārienekrāniem draudzīga iestatījumu programma."
 
-#: src/main.cpp:48
+#: src/main.cpp:53
 #, kde-format
 msgid "© 2011-2015 KDE Community"
 msgstr ""
 
-#: src/main.cpp:49
+#: src/main.cpp:54
 #, kde-format
 msgid "Devin Lin"
 msgstr ""
 
-#: src/main.cpp:49
+#: src/main.cpp:54
 #, kde-format
 msgid "Maintainer"
 msgstr "Uzturētājs"
 
-#: src/main.cpp:50
+#: src/main.cpp:55
 #, kde-format
 msgid "Sebastian Kügler"
 msgstr "Sebastian Kügler"
 
-#: src/main.cpp:50 src/main.cpp:51
+#: src/main.cpp:55 src/main.cpp:56
 #, fuzzy, kde-format
 #| msgid "Maintainer"
 msgid "Previous Maintainer"
 msgstr "Uzturētājs"
 
-#: src/main.cpp:51
+#: src/main.cpp:56
 #, kde-format
 msgid "Marco Martin"
 msgstr "Marco Martin"
 
-#: src/main.cpp:61
+#: src/main.cpp:66
 #, kde-format
 msgid "List available settings modules"
 msgstr "Parādīt pieejamos iestatījumu moduļus"
 
-#: src/main.cpp:64
+#: src/main.cpp:69
 #, kde-format
 msgid ""
 "Limit to modules suitable for <formfactor>, e.g. handset, tablet, "
@@ -74,38 +74,38 @@ msgstr ""
 "(„handset“), planšete („tablet“), multivides centrs („mediacenter“), dators "
 "(„desktop“), testa („test“), visi („all“) (noklusējums ir tālrunis)"
 
-#: src/main.cpp:65
+#: src/main.cpp:70
 #, kde-format
 msgid "formfactor"
 msgstr "formas faktors"
 
-#: src/main.cpp:66
+#: src/main.cpp:71
 #, kde-format
 msgid "Settings module to open"
 msgstr "Atveramais iestatījumu modulis"
 
-#: src/main.cpp:66
+#: src/main.cpp:71
 #, kde-format
 msgid "modulename"
 msgstr "moduļa nosaukums"
 
-#: src/main.cpp:67
+#: src/main.cpp:72
 #, kde-format
 msgid "Only show a single module, requires --module"
 msgstr "Parādīt tikai atsevišķu moduli, nepieciešamas „--module“"
 
-#: src/main.cpp:68
+#: src/main.cpp:73
 #, kde-format
 msgid "Start window fullscreen"
 msgstr "Sākt ar pilnekrāna logu"
 
-#: src/main.cpp:69
+#: src/main.cpp:74
 #, kde-format
 msgid "Package to use for the UI (default org.kde.mobile.settings)"
 msgstr ""
 "Saskarnei izmantojamā pakotne (noklusējums ir „org.kde.mobile.settings“)"
 
-#: src/main.cpp:69
+#: src/main.cpp:74
 #, kde-format
 msgid "packagename"
 msgstr "pakotnes nosaukums"
@@ -123,12 +123,11 @@ msgstr "Atvērt konfigurācijas lapu sānu joslā."
 #: src/qml/SidebarCategoriesPage.qml:50
 #, kde-format
 msgid "Show menu"
-msgstr ""
+msgstr "Rādīt izvēlni"
 
-#, fuzzy
 #~| msgid "Copyright 2011-2015, Sebastian Kügler"
 #~ msgid "Copyright 2011-2025"
-#~ msgstr "Autortiesības 2011—2015, Sebastian Kügler"
+#~ msgstr "Autortiesības 2011—2025"
 
 #~ msgid "Search"
 #~ msgstr "Meklēt"

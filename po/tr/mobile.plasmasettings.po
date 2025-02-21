@@ -7,8 +7,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-settings\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-02-20 00:43+0000\n"
-"PO-Revision-Date: 2025-02-19 11:09+0300\n"
+"POT-Creation-Date: 2025-02-21 00:43+0000\n"
+"PO-Revision-Date: 2025-02-20 09:20+0300\n"
 "Last-Translator: Emir SARI <emir_sari@icloud.com>\n"
 "Language-Team: Turkish <kde-l10n-tr@kde.org>\n"
 "Language: tr\n"
@@ -18,53 +18,52 @@ msgstr ""
 "Plural-Forms: nplurals=2; plural=(n > 1);\n"
 "X-Generator: Lokalize 25.03.70\n"
 
-#: src/main.cpp:44
+#: src/main.cpp:49
 #, kde-format
 msgid "Settings"
 msgstr "Ayarlar"
 
-#: src/main.cpp:46
+#: src/main.cpp:51
 #, kde-format
 msgid "Touch-friendly settings application."
 msgstr "Dokunmatik ekran dostu ayarlar uygulaması."
 
-#: src/main.cpp:48
+#: src/main.cpp:53
 #, kde-format
 msgid "© 2011-2015 KDE Community"
-msgstr ""
+msgstr "© 2011–2015 KDE Topluluğu"
 
-#: src/main.cpp:49
+#: src/main.cpp:54
 #, kde-format
 msgid "Devin Lin"
-msgstr ""
+msgstr "Devin Lin"
 
-#: src/main.cpp:49
+#: src/main.cpp:54
 #, kde-format
 msgid "Maintainer"
-msgstr "Projeyi Sürdüren"
+msgstr "Bakımcı"
 
-#: src/main.cpp:50
+#: src/main.cpp:55
 #, kde-format
 msgid "Sebastian Kügler"
 msgstr "Sebastian Kügler"
 
-#: src/main.cpp:50 src/main.cpp:51
-#, fuzzy, kde-format
-#| msgid "Maintainer"
+#: src/main.cpp:55 src/main.cpp:56
+#, kde-format
 msgid "Previous Maintainer"
-msgstr "Projeyi Sürdüren"
+msgstr "Önceki bakımcı"
 
-#: src/main.cpp:51
+#: src/main.cpp:56
 #, kde-format
 msgid "Marco Martin"
 msgstr "Marco Martin"
 
-#: src/main.cpp:61
+#: src/main.cpp:66
 #, kde-format
 msgid "List available settings modules"
 msgstr "Kullanılabilir ayarlar modüllerini listele"
 
-#: src/main.cpp:64
+#: src/main.cpp:69
 #, kde-format
 msgid ""
 "Limit to modules suitable for <formfactor>, e.g. handset, tablet, "
@@ -73,38 +72,38 @@ msgstr ""
 "Yalnızca <biçim faktörü> için uygun modülleri listele; örn. el ünitesi, "
 "tablet, ortam merkezi, masaüstü, sınama, tümü (öntanımlı: el ünitesi)"
 
-#: src/main.cpp:65
+#: src/main.cpp:70
 #, kde-format
 msgid "formfactor"
 msgstr "biçim faktörü"
 
-#: src/main.cpp:66
+#: src/main.cpp:71
 #, kde-format
 msgid "Settings module to open"
 msgstr "Açılacak ayarlar modülü"
 
-#: src/main.cpp:66
+#: src/main.cpp:71
 #, kde-format
 msgid "modulename"
 msgstr "modül adı"
 
-#: src/main.cpp:67
+#: src/main.cpp:72
 #, kde-format
 msgid "Only show a single module, requires --module"
 msgstr "Yalnızca tek bir modül göster, --module gerektirir"
 
-#: src/main.cpp:68
+#: src/main.cpp:73
 #, kde-format
 msgid "Start window fullscreen"
 msgstr "Pencereyi tam ekran olarak başlat"
 
-#: src/main.cpp:69
+#: src/main.cpp:74
 #, kde-format
 msgid "Package to use for the UI (default org.kde.mobile.settings)"
 msgstr ""
 "Grafik arabirim için kullanılacak paket (öntanımlı: org.kde.mobile.settings)"
 
-#: src/main.cpp:69
+#: src/main.cpp:74
 #, kde-format
 msgid "packagename"
 msgstr "paket adı"
