@@ -19,10 +19,31 @@
     <name translate="no">KDE</name>
   </developer>
   <name>Plasma Settings</name>
+  <name xml:lang="ca">Arranjament del Plasma</name>
+  <name xml:lang="nl">Plasma-instellingen</name>
+  <name xml:lang="sl">Nastavitve Plasme</name>
+  <name xml:lang="sv">Plasma-inställningar</name>
+  <name xml:lang="tr">Plasma Ayarları</name>
+  <name xml:lang="uk">Параметри Плазми</name>
+  <name xml:lang="x-test">xxPlasma Settingsxx</name>
   <summary>Configuration tools for your phone</summary>
+  <summary xml:lang="ca">Eines de configuració per al telèfon</summary>
+  <summary xml:lang="nl">Configuratiehulpmiddelen voor uw telefoon</summary>
+  <summary xml:lang="sl">Orodja za konfiguracijo telefona</summary>
+  <summary xml:lang="sv">Inställningsverktyg för din telefon</summary>
+  <summary xml:lang="tr">Telefonunuz için yapılandırma araçları</summary>
+  <summary xml:lang="uk">Інструменти для налаштовування вашого телефону</summary>
+  <summary xml:lang="x-test">xxConfiguration tools for your phonexx</summary>
   <icon type="stock">preferences-system</icon>
   <description>
     <p>Plasma Settings allows you to configure and tweak your KDE Plasma mobile to make it better meet your needs.</p>
+    <p xml:lang="ca">L'Arranjament del Plasma permet configurar i ajustar el vostre Plasma mòbil de KDE perquè satisfaci millor les vostres necessitats.</p>
+    <p xml:lang="nl">Plasma-instellingen bieden u het configureren en aanpassen van uw KDE Plasma mobiel om beter aan uw behoeften tegemoet te komen.</p>
+    <p xml:lang="sl">Nastavitve Plasme vam omogočajo, da konfigurirate in prilagodite svoj mobilni telefon KDE Plasmanaj bolje ustreza vašim potrebam.</p>
+    <p xml:lang="sv">Plasmas inställningar låter dig anpassa och justera en KDE Plasma-mobil så att den bättre uppfyller dina behov.</p>
+    <p xml:lang="tr">Plasma Ayarları, Plasma Cep’in gereksinimlerinize daha iyi karşılık vermesini sağlamak için onu yapılandırmanıza ve ayarlamanıza izin verir.</p>
+    <p xml:lang="uk">За допомогою програми «Параметри Плазми» ви можете налаштувати та скоригувати поведінку вашої мобільної Плазми так, щоб вона відповідала вашим уподобанням.</p>
+    <p xml:lang="x-test">xxPlasma Settings allows you to configure and tweak your KDE Plasma mobile to make it better meet your needs.xx</p>
   </description>
   <url type="bugtracker">https://bugs.kde.org/enter_bug.cgi?product=plasma-mobile-settings</url>
   <url type="homepage">https://plasma-mobile.org/</url>
