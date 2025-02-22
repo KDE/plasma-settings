@@ -49,10 +49,9 @@ msgid "Sebastian Kügler"
 msgstr "Sebastian Kügler"
 
 #: src/main.cpp:55 src/main.cpp:56
-#, fuzzy, kde-format
-#| msgid "Maintainer"
+#, kde-format
 msgid "Previous Maintainer"
-msgstr "维护人员"
+msgstr ""
 
 #: src/main.cpp:56
 #, kde-format
@@ -122,8 +121,3 @@ msgstr "从侧边栏打开配置页面。"
 #, kde-format
 msgid "Show menu"
 msgstr "显示菜单"
-
-#, fuzzy
-#~| msgid "Copyright 2011-2015, Sebastian Kügler"
-#~ msgid "Copyright 2011-2025"
-#~ msgstr "Copyright 2011-2015, Sebastian Kügler"
