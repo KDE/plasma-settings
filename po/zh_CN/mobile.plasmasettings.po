@@ -31,12 +31,12 @@ msgstr "对触摸友好的设置应用。"
 #: src/main.cpp:53
 #, kde-format
 msgid "© 2011-2015 KDE Community"
-msgstr ""
+msgstr "© 2011-2015 KDE Community"
 
 #: src/main.cpp:54
 #, kde-format
 msgid "Devin Lin"
-msgstr ""
+msgstr "Devin Lin"
 
 #: src/main.cpp:54
 #, kde-format
@@ -51,7 +51,7 @@ msgstr "Sebastian Kügler"
 #: src/main.cpp:55 src/main.cpp:56
 #, kde-format
 msgid "Previous Maintainer"
-msgstr ""
+msgstr "前任维护者"
 
 #: src/main.cpp:56
 #, kde-format

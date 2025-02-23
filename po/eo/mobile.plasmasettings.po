@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: plasma-settings\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2025-02-21 00:43+0000\n"
-"PO-Revision-Date: 2024-01-02 19:50+0100\n"
+"PO-Revision-Date: 2025-02-22 21:54+0100\n"
 "Last-Translator: Oliver Kellogg <olivermkellogg@gmail.com>\n"
 "Language-Team: Esperanto <kde-i18n-eo@kde.org>\n"
 "Language: eo\n"
@@ -30,12 +30,12 @@ msgstr "Tuŝ-afabla agord-aplikaĵo"
 #: src/main.cpp:53
 #, kde-format
 msgid "© 2011-2015 KDE Community"
-msgstr ""
+msgstr "© 2011-2015 KDE-Komunumo"
 
 #: src/main.cpp:54
 #, kde-format
 msgid "Devin Lin"
-msgstr ""
+msgstr "Devin Lin"
 
 #: src/main.cpp:54
 #, kde-format
@@ -48,10 +48,9 @@ msgid "Sebastian Kügler"
 msgstr "Sebastian Kügler"
 
 #: src/main.cpp:55 src/main.cpp:56
-#, fuzzy, kde-format
-#| msgid "Maintainer"
+#, kde-format
 msgid "Previous Maintainer"
-msgstr "Prizorganto"
+msgstr "Antaŭa Prizorganto"
 
 #: src/main.cpp:56
 #, kde-format
@@ -120,12 +119,4 @@ msgstr "Malfermi agordpaĝon el la flankbreto."
 #: src/qml/SidebarCategoriesPage.qml:50
 #, kde-format
 msgid "Show menu"
-msgstr ""
-
-#, fuzzy
-#~| msgid "Copyright 2011-2015, Sebastian Kügler"
-#~ msgid "Copyright 2011-2025"
-#~ msgstr "Kopirajto 2011-2015, Sebastian Kügler"
-
-#~ msgid "Search"
-#~ msgstr "Serĉi"
+msgstr "Montri menuon"
