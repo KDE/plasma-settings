@@ -23,6 +23,7 @@
   <name xml:lang="ca">Arranjament del Plasma</name>
   <name xml:lang="es">Preferencias de Plasma</name>
   <name xml:lang="fr">Configuration de Plasma</name>
+  <name xml:lang="gl">Configuración de Plasma</name>
   <name xml:lang="he">הגדרות פלזמה</name>
   <name xml:lang="ka">Plasma-ის მორგება</name>
   <name xml:lang="nl">Plasma-instellingen</name>
@@ -38,6 +39,7 @@
   <summary xml:lang="ca">Eines de configuració per al telèfon</summary>
   <summary xml:lang="es">Herramientas de configuración para su teléfono</summary>
   <summary xml:lang="fr">Outils de configuration pour votre téléphone</summary>
+  <summary xml:lang="gl">Ferramentas para configurar o teléfono.</summary>
   <summary xml:lang="he">כלי הגדרה לטלפון שלך</summary>
   <summary xml:lang="ka">მორგების ხელსაწყოები თქვენი ტელეფონისთვის</summary>
   <summary xml:lang="nl">Configuratiehulpmiddelen voor uw telefoon</summary>
@@ -55,6 +57,7 @@
     <p xml:lang="ca">L'Arranjament del Plasma permet configurar i ajustar el vostre Plasma mòbil de KDE perquè satisfaci millor les vostres necessitats.</p>
     <p xml:lang="es">Preferencias de Plasma le permite configurar y afinar su móvil con KDE Plasma para que se ajuste mejor a sus necesidades.</p>
     <p xml:lang="fr">Les paramètres de Plasma vous permettent de configurer et de régler votre téléphone mobile sous KDE Plasma pour le rendre mieux adapté à vos besoins.</p>
+    <p xml:lang="gl">A configuración de Plasma permítelle configurar o KDE Plasma móbil para adaptalo ás súas necesidades.</p>
     <p xml:lang="he">הגדרות פלזמה מאפשרות לך להגדיר ולשפר את פלזמה לניידים מבית KDE כדי שיתאים טוב יותר לצרכים שלך.</p>
     <p xml:lang="ka">Plasma-ის მორგება საშუალებას გაძლევთ, მოირგოთ და შეცვალოთ თქვენი KDE Plasma-ის მობილური ინტერფეისი, რომ მან უკეთ დააკმაყოფილოს თქვენი საჭიროებები.</p>
     <p xml:lang="nl">Plasma-instellingen bieden u het configureren en aanpassen van uw KDE Plasma mobiel om beter aan uw behoeften tegemoet te komen.</p>
