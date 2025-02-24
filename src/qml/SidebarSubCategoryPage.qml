@@ -30,38 +30,36 @@ Kirigami.ScrollablePage {
         Layout.fillWidth: true
         implicitHeight: applicationWindow().pageStack.globalToolBar.preferredHeight
 
-        Item {
-            anchors.fill: parent
+        QQC2.ToolButton {
+            id: backButton
 
-            QQC2.ToolButton {
-                id: backButton
+            anchors.left: parent.left
+            anchors.top: parent.top
+            anchors.bottom: parent.bottom
+            anchors.right: parent.right
 
-                anchors.left: parent.left
-                anchors.top: parent.top
-                anchors.bottom: parent.bottom
-                anchors.right: parent.right
+            padding: 0
 
-                contentItem: RowLayout {
-                    Kirigami.Icon {
-                        source: 'go-previous'
-                        implicitWidth: Kirigami.Units.iconSizes.smallMedium
-                        implicitHeight: Kirigami.Units.iconSizes.smallMedium
-                        Layout.alignment: Qt.AlignVCenter
-                        Layout.leftMargin: Kirigami.Units.largeSpacing
-                        Layout.rightMargin: Kirigami.Units.largeSpacing
-                    }
-                    Kirigami.Heading {
-                        level: 1
-                        text: root.title
-                        elide: Text.ElideRight
-                        Layout.alignment: Qt.AlignVCenter
-                        Layout.fillWidth: true
-                    }
+            contentItem: RowLayout {
+                Kirigami.Icon {
+                    source: 'go-previous'
+                    implicitWidth: Kirigami.Units.iconSizes.smallMedium
+                    implicitHeight: Kirigami.Units.iconSizes.smallMedium
+                    Layout.alignment: Qt.AlignVCenter
+                    Layout.leftMargin: Kirigami.Units.largeSpacing
+                    Layout.rightMargin: Kirigami.Units.largeSpacing
                 }
-
-                onClicked: {
-                    root.popPage();
+                Kirigami.Heading {
+                    level: 1
+                    text: root.title
+                    elide: Text.ElideRight
+                    Layout.alignment: Qt.AlignVCenter
+                    Layout.fillWidth: true
                 }
+            }
+
+            onClicked: {
+                root.popPage();
             }
         }
     }
