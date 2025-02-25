@@ -7,7 +7,7 @@ msgstr ""
 "Project-Id-Version: plasma-settings\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2025-02-21 00:43+0000\n"
-"PO-Revision-Date: 2025-02-14 17:16+0100\n"
+"PO-Revision-Date: 2025-02-24 16:20+0100\n"
 "Last-Translator: giovanni <g.sora@tiscali.it>\n"
 "Language-Team: Interlingua <kde-i18n-doc@kde.org>\n"
 "Language: ia\n"
@@ -30,12 +30,12 @@ msgstr "Application de preferentias amicabile de tactil."
 #: src/main.cpp:53
 #, kde-format
 msgid "© 2011-2015 KDE Community"
-msgstr ""
+msgstr "© 2011-2015 Communitate de KDE"
 
 #: src/main.cpp:54
 #, kde-format
 msgid "Devin Lin"
-msgstr ""
+msgstr "Devin Lin"
 
 #: src/main.cpp:54
 #, kde-format
@@ -48,10 +48,9 @@ msgid "Sebastian Kügler"
 msgstr "Sebastian Kügler"
 
 #: src/main.cpp:55 src/main.cpp:56
-#, fuzzy, kde-format
-#| msgid "Maintainer"
+#, kde-format
 msgid "Previous Maintainer"
-msgstr "Mantenitor"
+msgstr "Previe mantenitor"
 
 #: src/main.cpp:56
 #, kde-format
