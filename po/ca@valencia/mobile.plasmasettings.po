@@ -10,7 +10,7 @@ msgstr ""
 "Project-Id-Version: plasma-settings\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2025-02-21 00:43+0000\n"
-"PO-Revision-Date: 2025-02-14 10:24+0100\n"
+"PO-Revision-Date: 2025-02-20 09:55+0100\n"
 "Last-Translator: Josep M. Ferrer <txemaq@gmail.com>\n"
 "Language-Team: Catalan <kde-i18n-ca@kde.org>\n"
 "Language: ca@valencia\n"
@@ -34,12 +34,12 @@ msgstr "Aplicació de configuració tàctil."
 #: src/main.cpp:53
 #, kde-format
 msgid "© 2011-2015 KDE Community"
-msgstr ""
+msgstr "© 2011-2015 Comunitat KDE"
 
 #: src/main.cpp:54
 #, kde-format
 msgid "Devin Lin"
-msgstr ""
+msgstr "Devin Lin"
 
 #: src/main.cpp:54
 #, kde-format
@@ -52,10 +52,9 @@ msgid "Sebastian Kügler"
 msgstr "Sebastian Kügler"
 
 #: src/main.cpp:55 src/main.cpp:56
-#, fuzzy, kde-format
-#| msgid "Maintainer"
+#, kde-format
 msgid "Previous Maintainer"
-msgstr "Mantenidor"
+msgstr "Mantenidor anterior"
 
 #: src/main.cpp:56
 #, kde-format
@@ -127,8 +126,3 @@ msgstr "Obri una pàgina de configuració des de la barra lateral."
 #, kde-format
 msgid "Show menu"
 msgstr "Mostra el menú"
-
-#, fuzzy
-#~| msgid "Copyright 2011-2015, Sebastian Kügler"
-#~ msgid "Copyright 2011-2025"
-#~ msgstr "Copyright 2011-2015, Sebastian Kügler"
