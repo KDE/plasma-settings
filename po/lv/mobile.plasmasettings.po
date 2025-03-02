@@ -7,7 +7,7 @@ msgstr ""
 "Project-Id-Version: plasma-settings\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2025-02-21 00:43+0000\n"
-"PO-Revision-Date: 2025-02-19 14:41+0200\n"
+"PO-Revision-Date: 2025-02-28 15:24+0200\n"
 "Last-Translator: Toms Trasuns <toms.trasuns@posteo.net>\n"
 "Language-Team: Latvian <kde-i18n-doc@kde.org>\n"
 "Language: lv\n"
@@ -31,12 +31,12 @@ msgstr "Skārienekrāniem draudzīga iestatījumu programma."
 #: src/main.cpp:53
 #, kde-format
 msgid "© 2011-2015 KDE Community"
-msgstr ""
+msgstr "© 2011—2015 KDE kopiena"
 
 #: src/main.cpp:54
 #, kde-format
 msgid "Devin Lin"
-msgstr ""
+msgstr "Devin Lin"
 
 #: src/main.cpp:54
 #, kde-format
@@ -49,10 +49,9 @@ msgid "Sebastian Kügler"
 msgstr "Sebastian Kügler"
 
 #: src/main.cpp:55 src/main.cpp:56
-#, fuzzy, kde-format
-#| msgid "Maintainer"
+#, kde-format
 msgid "Previous Maintainer"
-msgstr "Uzturētājs"
+msgstr "Iepriekšējais uzturētājs"
 
 #: src/main.cpp:56
 #, kde-format
