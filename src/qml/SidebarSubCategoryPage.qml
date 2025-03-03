@@ -15,6 +15,7 @@ Kirigami.ScrollablePage {
     id: root
     globalToolBarStyle: Kirigami.ApplicationHeaderStyle.None
     title: SettingsApp.subCategoryModel.title
+    titleDelegate: null
 
     Kirigami.Theme.colorSet: Kirigami.Theme.View
     Kirigami.Theme.inherit: false
@@ -28,7 +29,7 @@ Kirigami.ScrollablePage {
 
     header: QQC2.ToolBar {
         Layout.fillWidth: true
-        implicitHeight: applicationWindow().pageStack.globalToolBar.preferredHeight
+        // implicitHeight: applicationWindow().pageStack.globalToolBar.preferredHeight
 
         QQC2.ToolButton {
             id: backButton

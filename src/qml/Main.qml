@@ -12,7 +12,7 @@ import org.kde.kirigami as Kirigami
 
 import org.kde.plasma.settings
 
-Kirigami.ApplicationWindow {
+Kirigami.AbstractApplicationWindow {
     id: root
 
     readonly property var currentModule: SettingsApp.activeModule
@@ -33,9 +33,7 @@ Kirigami.ApplicationWindow {
         return SettingsApp.activeModule.isInSubCategory ? 2 : 1;
     }
 
-    pageStack.defaultColumnWidth: Kirigami.Units.gridUnit * 35
-    pageStack.globalToolBar.style: Kirigami.ApplicationHeaderStyle.ToolBar
-    pageStack.globalToolBar.showNavigationButtons: Kirigami.ApplicationHeaderStyle.ShowBackButton;
+    pageStack: PageStack {}
 
     // initialize context drawer
     contextDrawer: Kirigami.ContextDrawer {
@@ -75,9 +73,7 @@ Kirigami.ApplicationWindow {
             }
 
             // pop all pages
-            while (pageStack.depth > 0) {
-                pageStack.pop()
-            }
+            pageStack.clear();
 
             if (root.loadedKCMPage) {
                 root.loadedKCMPage.suppressDeletion = false;
@@ -122,15 +118,11 @@ Kirigami.ApplicationWindow {
         active: listViewPageLoader.active
 
         function pushSubCategoryPage() {
-            if (applicationWindow().pageStack.items.includes(narrowSubCategoryPageLoader.item)) {
-                applicationWindow().pageStack.currentIndex = 1;
-            } else {
-                applicationWindow().pageStack.push(item);
-            }
+            applicationWindow().pageStack.push(item);
         }
 
         sourceComponent: SidebarSubCategoryPage {
-            onPopPage: applicationWindow().pageStack.currentIndex = 0;
+            onPopPage: applicationWindow().pageStack.pop()
         }
     }
 
@@ -151,7 +143,11 @@ Kirigami.ApplicationWindow {
 
     function clearKCMPages() {
         while (pageStack.depth > root.popKCMDepth()) {
-            pageStack.pop();
+            if (pageStack.depth === 1) {
+                pageStack.clear();
+            } else {
+                pageStack.pop();
+            }
         }
     }
 
