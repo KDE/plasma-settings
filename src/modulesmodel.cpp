@@ -26,38 +26,55 @@ using namespace Qt::Literals::StringLiterals;
 
 ModulesModel::ModulesModel(QObject *parent)
     : QAbstractListModel(parent)
-    , m_rootModule{new MenuItem{true, nullptr}}
+    , m_rootModule{nullptr}
 {
     qDebug() << "Current platform is " << KRuntimePlatform::runtimePlatform();
-    auto kcms = KPluginMetaData::findPlugins(u"kcms"_s)
-        << KPluginMetaData::findPlugins(u"plasma/kcms"_s) << KPluginMetaData::findPlugins(u"plasma/kcms/systemsettings"_s);
+    initModules();
+}
 
-    QList<KPluginMetaData> filteredKcms;
-    // Filter to if kcm belongs to the current platform
-    for (const KPluginMetaData &pluginMetaData : kcms) {
-        bool isCurrentPlatform = false;
+void ModulesModel::initModules()
+{
+    MenuItem *oldRootModule = m_rootModule;
+    m_rootModule = new MenuItem{true, nullptr};
 
-        if (KRuntimePlatform::runtimePlatform().isEmpty()) {
-            isCurrentPlatform = true;
-        } else {
-            const auto platforms = KRuntimePlatform::runtimePlatform();
-            for (const QString &platform : platforms) {
-                if (pluginMetaData.formFactors().contains(platform)) {
-                    qDebug() << "Platform for " << pluginMetaData.name() << " is " << pluginMetaData.formFactors();
-                    isCurrentPlatform = true;
-                }
+    // Filter to whether the kcm belongs to the current platform (unless m_ignorePlatforms = true)
+    auto filter = [this](const KPluginMetaData &data) {
+        if (m_ignorePlatforms) {
+            return true;
+        }
+
+        auto kRuntimePlatforms = KRuntimePlatform::runtimePlatform();
+
+        // HACK: currently on desktop no form factors are specified
+        if (kRuntimePlatforms.empty()) {
+            kRuntimePlatforms.append(QStringLiteral("desktop"));
+        }
+
+        // Filter out if the form factor does not match the current runtime platform.
+        // If the KCM defines "all" or has no defined form factor, don't filter.
+        for (const auto &formFactor : data.formFactors()) {
+            if (formFactor == QStringLiteral("all")) {
+                return true;
+            }
+            if (kRuntimePlatforms.contains(formFactor)) {
+                return true;
             }
         }
+        return data.formFactors().empty();
+    };
 
-        if (isCurrentPlatform) {
-            filteredKcms.append(pluginMetaData);
-        }
-    }
+    QList<KPluginMetaData> kcms = KPluginMetaData::findPlugins(u"kcms"_s, filter);
+    kcms << KPluginMetaData::findPlugins(u"plasma/kcms"_s, filter);
+    kcms << KPluginMetaData::findPlugins(u"plasma/kcms/systemsettings"_s, filter);
 
     const QStringList dirs = QStandardPaths::locateAll(QStandardPaths::AppDataLocation, QStringLiteral("categories"), QStandardPaths::LocateDirectory);
     QStringList categories = KFileUtils::findAllUniqueFiles(dirs, QStringList(QStringLiteral("*.desktop")));
 
-    initMenuList(m_rootModule, filteredKcms, categories);
+    initMenuList(m_rootModule, kcms, categories);
+
+    if (oldRootModule) {
+        delete oldRootModule;
+    }
 }
 
 void ModulesModel::initMenuList(MenuItem *parent, const QList<KPluginMetaData> &kcms, const QStringList &categories)
@@ -282,6 +299,28 @@ void ModulesModel::addException(MenuItem *exception)
 void ModulesModel::removeException(MenuItem *exception)
 {
     m_exceptions.removeAll(exception);
+}
+
+void ModulesModel::reset()
+{
+    beginResetModel();
+    initModules();
+
+    // Have top level KCMs be shown, not just categories (which are their parent)
+    for (MenuItem *child : m_rootModule->children()) {
+        addException(child);
+    }
+    endResetModel();
+}
+
+bool ModulesModel::ignorePlatforms() const
+{
+    return m_ignorePlatforms;
+}
+
+void ModulesModel::setIgnorePlatforms(bool ignorePlatforms)
+{
+    m_ignorePlatforms = ignorePlatforms;
 }
 
 MenuItem *ModulesModel::rootItem() const

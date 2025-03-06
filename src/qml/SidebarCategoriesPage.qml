@@ -61,6 +61,19 @@ Kirigami.ScrollablePage {
                 QQC2.Menu {
                     id: menu
                     y: parent.height
+
+                    QQC2.MenuItem {
+                        text: i18n('Show Modules for All Platforms')
+                        icon.name: 'show-all-effects'
+                        checkable: true
+                        onTriggered: {
+                            SettingsApp.showAllModules = checked;
+                        }
+
+                        Binding on checked {
+                            value: SettingsApp.showAllModules
+                        }
+                    }
                     QQC2.MenuItem {
                         text: i18n('About Plasma Settings')
                         icon.name: 'org.kde.mobile.plasmasettings'

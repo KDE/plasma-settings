@@ -33,10 +33,7 @@ void SettingsApp::init(QCommandLineParser &parser, QString startModule, bool sin
     setupKDBus();
 
     m_model = new ModulesModel(this);
-    // Have top level KCMs be shown, not just categories (which are their parent)
-    for (MenuItem *child : m_model->rootItem()->children()) {
-        m_model->addException(child);
-    }
+    m_model->reset();
 
     m_categoryModel = new ModulesProxyModel(this);
     m_categoryModel->setCategorizedModel(true);
@@ -92,6 +89,17 @@ void SettingsApp::setFilterString(QString filterString)
     m_filterString = filterString;
     m_searchModel->setFilterString(m_filterString);
     Q_EMIT filterStringChanged();
+}
+
+bool SettingsApp::showAllModules() const
+{
+    return m_model->ignorePlatforms();
+}
+
+void SettingsApp::setShowAllModules(bool showAllModules)
+{
+    m_model->setIgnorePlatforms(showAllModules);
+    m_model->reset();
 }
 
 ModulesProxyModel *SettingsApp::categoryModel()

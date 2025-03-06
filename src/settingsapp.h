@@ -36,6 +36,7 @@ class SettingsApp : public QObject
     Q_PROPERTY(bool singleModule MEMBER m_singleModule CONSTANT)
 
     Q_PROPERTY(QString filterString READ filterString WRITE setFilterString NOTIFY filterStringChanged)
+    Q_PROPERTY(bool showAllModules READ showAllModules WRITE setShowAllModules NOTIFY showAllModulesChanged)
 
     Q_PROPERTY(ModulesProxyModel *categoryModel READ categoryModel CONSTANT)
     Q_PROPERTY(SubcategoryModel *subCategoryModel READ subCategoryModel CONSTANT)
@@ -58,6 +59,9 @@ public:
     QString filterString() const;
     void setFilterString(QString filterString);
 
+    bool showAllModules() const;
+    void setShowAllModules(bool showAllModules);
+
     ModulesProxyModel *categoryModel();
     SubcategoryModel *subCategoryModel();
     ModulesProxyModel *searchModel();
@@ -72,6 +76,7 @@ Q_SIGNALS:
     void activateRequested();
 
     void filterStringChanged();
+    void showAllModulesChanged();
     void startModuleChanged();
     void singleModuleChanged();
 
@@ -92,6 +97,7 @@ private:
     Module *m_activeModule{nullptr};
 
     QString m_filterString;
+    bool m_showAllModules{false};
 
     int m_activeCategoryRow{0};
     int m_activeSearchRow{0};

@@ -60,12 +60,18 @@ public:
     MenuItem *rootItem() const;
     QList<MenuItem *> childrenList(MenuItem *parent) const;
 
+    void reset();
+
+    bool ignorePlatforms() const;
+    void setIgnorePlatforms(bool ignorePlatforms);
+
 private:
+    void initModules();
     void initMenuList(MenuItem *parent, const QList<KPluginMetaData> &kcms, const QStringList &categories);
 
     MenuItem *parentItem(MenuItem *child) const;
 
     MenuItem *m_rootModule{nullptr};
     QList<MenuItem *> m_exceptions;
-    // QVector<MenuItem> m_plugins;
+    bool m_ignorePlatforms{false};
 };
