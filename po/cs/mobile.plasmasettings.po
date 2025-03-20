@@ -35,7 +35,7 @@ msgstr ""
 #: src/main.cpp:54
 #, kde-format
 msgid "Devin Lin"
-msgstr ""
+msgstr "Devin Lin"
 
 #: src/main.cpp:54
 #, kde-format
@@ -48,10 +48,9 @@ msgid "Sebastian Kügler"
 msgstr "Sebastian Kügler"
 
 #: src/main.cpp:55 src/main.cpp:56
-#, fuzzy, kde-format
-#| msgid "Maintainer"
+#, kde-format
 msgid "Previous Maintainer"
-msgstr "Správce"
+msgstr "Předchozí správce"
 
 #: src/main.cpp:56
 #, kde-format
