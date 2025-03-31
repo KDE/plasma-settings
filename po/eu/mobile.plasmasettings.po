@@ -1,16 +1,16 @@
 # Translation for mobile.plasmasettings.po to Euskara/Basque (eu).
-# Copyright (C) 2020-2022, This file is copyright:
+# Copyright (C) 2020-2025 This file is copyright:
 # This file is distributed under the same license as the plasma-settings package.
-# KDE euskaratzeko proiektuko arduraduna <xalba@ni.eus>.
+# SPDX-FileCopyrightText: 2025 KDE euskaratzeko proiektuko arduraduna <xalba@ni.eus>
 #
 # Translators:
-# Iñigo Salvador Azurmendi <xalba@ni.eus>, 2020, 2022.
+# Iñigo Salvador Azurmendi <xalba@ni.eus>, 2020, 2022, 2025.
 msgid ""
 msgstr ""
 "Project-Id-Version: plasma-settings\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2025-02-21 00:43+0000\n"
-"PO-Revision-Date: 2022-08-11 13:49+0200\n"
+"PO-Revision-Date: 2025-03-30 14:29+0200\n"
 "Last-Translator: Iñigo Salvador Azurmendi <xalba@ni.eus>\n"
 "Language-Team: Basque <kde-i18n-eu@kde.org>\n"
 "Language: eu\n"
@@ -18,7 +18,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"X-Generator: Lokalize 22.04.3\n"
+"X-Generator: Lokalize 24.12.3\n"
 
 #: src/main.cpp:49
 #, kde-format
@@ -33,12 +33,12 @@ msgstr "Ukimenarekiko lagunkoiak diren ezarpenen aplikazioa."
 #: src/main.cpp:53
 #, kde-format
 msgid "© 2011-2015 KDE Community"
-msgstr ""
+msgstr "© 2011-2015 KDE komunitatea"
 
 #: src/main.cpp:54
 #, kde-format
 msgid "Devin Lin"
-msgstr ""
+msgstr "Devin Lin"
 
 #: src/main.cpp:54
 #, kde-format
@@ -51,10 +51,9 @@ msgid "Sebastian Kügler"
 msgstr "Sebastian Kügler"
 
 #: src/main.cpp:55 src/main.cpp:56
-#, fuzzy, kde-format
-#| msgid "Maintainer"
+#, kde-format
 msgid "Previous Maintainer"
-msgstr "Mantentzailea"
+msgstr "Aurreko mantentzailea"
 
 #: src/main.cpp:56
 #, kde-format
@@ -126,7 +125,7 @@ msgstr "Ireki konfiguratzeko orri bat alboko-barratik."
 #: src/qml/SidebarCategoriesPage.qml:50
 #, kde-format
 msgid "Show menu"
-msgstr ""
+msgstr "Erakutsi menua"
 
 #, fuzzy
 #~| msgid "Copyright 2011-2015, Sebastian Kügler"
