@@ -51,7 +51,6 @@ msgstr "Sebastian Kügler"
 
 #: src/main.cpp:55 src/main.cpp:56
 #, fuzzy, kde-format
-#| msgid "Maintainer"
 msgid "Previous Maintainer"
 msgstr "Vedlikehaldar"
 
