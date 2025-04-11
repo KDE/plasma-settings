@@ -89,24 +89,22 @@ Kirigami.ScrollablePage {
         }
     }
 
-    // Bind active index of listview
-    Binding {
-        target: listView
-        property: "currentIndex"
-        value: applicationWindow().isWidescreen
-                    ? ((SettingsApp.filterString.length > 0) ? SettingsApp.activeSearchRow : SettingsApp.activeCategoryRow)
-                    : -1 // Don't need active indexes when page takes up the whole screen
-    }
-
     ListView {
         id: listView
         reuseItems: true
         model: (SettingsApp.filterString.length > 0) ? SettingsApp.searchModel : SettingsApp.categoryModel
 
         activeFocusOnTab: true
-        keyNavigationWraps: true
-
         Accessible.role: Accessible.List
+
+        // Bind active index of listview
+        Binding {
+            target: listView
+            property: "currentIndex"
+            value: applicationWindow().isWidescreen
+                        ? ((SettingsApp.filterString.length > 0) ? SettingsApp.activeSearchRow : SettingsApp.activeCategoryRow)
+                        : -1 // Don't need active indexes when page takes up the whole screen
+        }
 
         section {
             property: "categoryDisplayRole"

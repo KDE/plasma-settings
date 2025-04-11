@@ -64,22 +64,21 @@ Kirigami.ScrollablePage {
         }
     }
 
-    // Bind active index of listview
-    Binding {
-        target: listView
-        property: "currentIndex"
-        // Don't need active indexes when page takes up the whole screen
-        value: applicationWindow().isWidescreen ? SettingsApp.activeSubCategoryRow : -1
-    }
-
     ListView {
         id: listView
         model: SettingsApp.subCategoryModel
 
         activeFocusOnTab: true
-        keyNavigationWraps: true
 
         Accessible.role: Accessible.List
+
+        // Bind active index of listview
+        Binding {
+            target: listView
+            property: "currentIndex"
+            // Don't need active indexes when page takes up the whole screen
+            value: applicationWindow().isWidescreen ? SettingsApp.activeSubCategoryRow : -1
+        }
 
         delegate: SidebarDelegate {
             id: delegate
