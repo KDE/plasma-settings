@@ -118,11 +118,3 @@ msgstr "Otevřít stránku s nastavením z postranní lišty."
 #, kde-format
 msgid "Show menu"
 msgstr "Zobrazovat nabídku"
-
-#, fuzzy
-#~| msgid "Copyright 2011-2015, Sebastian Kügler"
-#~ msgid "Copyright 2011-2025"
-#~ msgstr "Autorská práva 2011-2015, Sebastian Kügler"
-
-#~ msgid "Search"
-#~ msgstr "Hledat"
