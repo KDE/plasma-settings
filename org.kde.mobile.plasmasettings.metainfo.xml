@@ -20,6 +20,7 @@
   </developer>
   <name>Plasma Settings</name>
   <name xml:lang="ar">إعدادات بلازما</name>
+  <name xml:lang="az">Plasma ayarları</name>
   <name xml:lang="ca">Arranjament del Plasma</name>
   <name xml:lang="ca-valencia">Configureu Plasma</name>
   <name xml:lang="cs">Nastavení Plasma</name>
@@ -47,6 +48,7 @@
   <name xml:lang="zh-TW">Plasma 設定</name>
   <summary>Configuration tools for your phone</summary>
   <summary xml:lang="ar">أدوات ضبط لهاتفك</summary>
+  <summary xml:lang="az">Telefonunuz üçün tənzimləmə alətləri</summary>
   <summary xml:lang="ca">Eines de configuració per al telèfon</summary>
   <summary xml:lang="ca-valencia">Eines de configuració per al telèfon</summary>
   <summary xml:lang="cs">Konfigurační nástroje pro váš telefon</summary>
@@ -76,6 +78,7 @@
   <description>
     <p>Plasma Settings allows you to configure and tweak your KDE Plasma mobile to make it better meet your needs.</p>
     <p xml:lang="ar">تسمح لك إعدادات بلازما بضبط وتعديل بلازما الجوال كي تلبي احتياجاتك بشكل أفضل.</p>
+    <p xml:lang="az">Plasma ayarları ehtiyaclarınızı daha yaxşı qarşılamaq üçün KDE Plasma mobilinizi tənzimləməyə və ayarlamağa imkan verir.</p>
     <p xml:lang="ca">L'Arranjament del Plasma permet configurar i ajustar el vostre Plasma mòbil de KDE perquè satisfaci millor les vostres necessitats.</p>
     <p xml:lang="ca-valencia">Configuració de Plasma permet configurar i ajustar el vostre Plasma mòbil de KDE perquè satisfaça millor les vostres necessitats.</p>
     <p xml:lang="es">Preferencias de Plasma le permite configurar y afinar su móvil con KDE Plasma para que se ajuste mejor a sus necesidades.</p>
