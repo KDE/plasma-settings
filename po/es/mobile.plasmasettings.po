@@ -1,15 +1,15 @@
 # Spanish translations for mobile.plasmasettings.po package.
-# Copyright (C) 2019 This file is copyright:
+# Copyright (C) 2019-2025 This file is copyright:
 # This file is distributed under the same license as the plasma-settings package.
-#
 # Automatically generated, 2019.
+#
 # SPDX-FileCopyrightText: 2019, 2021, 2025 Eloy Cuadra <ecuadra@eloihr.net>
 msgid ""
 msgstr ""
-"Project-Id-Version: mobile\n"
+"Project-Id-Version: mobile.plasmasettings\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2025-02-21 00:43+0000\n"
-"PO-Revision-Date: 2025-02-21 00:06+0100\n"
+"PO-Revision-Date: 2025-06-04 19:25+0100\n"
 "Last-Translator: Eloy Cuadra <ecuadra@eloihr.net>\n"
 "Language-Team: Spanish <kde-l10n-es@kde.org>\n"
 "Language: es\n"
@@ -124,13 +124,3 @@ msgstr "Abrir una página de configuración desde la barra lateral."
 #, kde-format
 msgid "Show menu"
 msgstr "Mostrar el menú"
-
-#~| msgid "Copyright 2011-2015, Sebastian Kügler"
-#~ msgid "Copyright 2011-2025"
-#~ msgstr "Copyright 2011-2025"
-
-#~ msgid "Search"
-#~ msgstr "Buscar"
-
-#~ msgid "Plasma Mobile Settings"
-#~ msgstr "Preferencias de Plasma Mobile"
