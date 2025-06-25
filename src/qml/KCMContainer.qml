@@ -6,8 +6,10 @@
 */
 
 import QtQuick
+import QtQuick.Layouts
 import QtQuick.Controls as Controls
 import org.kde.kirigami as Kirigami
+import org.kde.kcmutils as KCM
 
 import org.kde.plasma.settings
 
@@ -16,6 +18,11 @@ Kirigami.Page {
     property QtObject kcm
     property Item internalPage
     property bool suppressDeletion: false
+
+    property bool kcmSupportsInstantApply: false
+    property bool kcmNeedsSave: false
+
+    signal applyClicked()
     
     title: internalPage.title
     
@@ -47,6 +54,7 @@ Kirigami.Page {
         }
         if (kcm.load !== undefined) {
             kcm.load();
+            container.kcmSupportsInstantApply =  Qt.binding(() => kcm.supportsInstantApply);
         }
     }
 
@@ -69,7 +77,8 @@ Kirigami.Page {
                 pageStack.pop();
             }
             function onNeedsSaveChanged () {
-                if (kcm.needsSave) {
+                container.kcmNeedsSave = kcm.needsSave;
+                if (kcm.supportsInstantApply && kcm.needsSave) {
                     kcm.save()
                 }
             }
@@ -77,7 +86,7 @@ Kirigami.Page {
         Connections {
             target: pageStack
             function onPageRemoved(page) {
-                if (kcm.needsSave) {
+                if (kcm.supportsInstantApply && kcm.needsSave) {
                     kcm.save()
                 }
                 if (page == container && !container.suppressDeletion) {
@@ -95,4 +104,43 @@ Kirigami.Page {
             }
         }
     ]
+
+    Component {
+        id: buttonToolbarComponent
+        Controls.ToolBar {
+            visible: !container.kcmSupportsInstantApply
+            position: Controls.ToolBar.Footer
+            RowLayout {
+                anchors.fill: parent
+                Controls.Button {
+                    text: i18nc("kcm button", "Reset")
+                    icon.name: "edit-undo"
+                    visible: kcm.buttons & KCM.ConfigModule.Apply
+                    enabled: container.kcmNeedsSave
+                    onClicked: kcm.load()
+                }
+                Controls.Button {
+                    text: i18nc("kcm button", "Defaults")
+                    icon.name: "kt-restore-defaults"
+                    visible: kcm.defaultsIndicatorsVisible && (kcm.buttons & KCM.ConfigModule.Default)
+                    enabled: container.kcmNeedsSave
+                    onClicked: kcm.defaults()
+                }
+                Item {
+                    Layout.fillWidth: true
+                }
+                Controls.Button {
+                    text: i18nc("kcm button", "Apply")
+                    icon.name: "dialog-ok-apply"
+                    visible: !container.kcmSupportsInstantApply && (kcm.buttons & KCM.ConfigModule.Apply)
+                    enabled: container.kcmNeedsSave
+                    onClicked: kcm.save()
+                }
+            }
+        }
+    }
+
+    footer: Loader {
+        sourceComponent: kcm.supportsInstantApply ? undefined : buttonToolbarComponent
+    }
 }
