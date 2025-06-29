@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-settings\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-02-21 00:43+0000\n"
+"POT-Creation-Date: 2025-06-29 00:45+0000\n"
 "PO-Revision-Date: 2022-05-05 12:56+0100\n"
 "Last-Translator: Sergiu Bivol <sergiu@cip.md>\n"
 "Language-Team: Romanian <kde-i18n-ro@kde.org>\n"
@@ -118,6 +118,24 @@ msgstr "Configurări de sistem"
 #, kde-format
 msgid "Open a configuration page from the sidebar."
 msgstr "Deschide o pagină de configurări din bara laterală."
+
+#: src/qml/KCMContainer.qml:116
+#, kde-format
+msgctxt "kcm button"
+msgid "Reset"
+msgstr ""
+
+#: src/qml/KCMContainer.qml:123
+#, kde-format
+msgctxt "kcm button"
+msgid "Defaults"
+msgstr ""
+
+#: src/qml/KCMContainer.qml:133
+#, kde-format
+msgctxt "kcm button"
+msgid "Apply"
+msgstr ""
 
 #: src/qml/SidebarCategoriesPage.qml:50
 #, kde-format

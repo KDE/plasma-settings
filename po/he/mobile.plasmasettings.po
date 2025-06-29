@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-settings\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-02-21 00:43+0000\n"
+"POT-Creation-Date: 2025-06-29 00:45+0000\n"
 "PO-Revision-Date: 2025-02-22 21:44+0200\n"
 "Last-Translator: Yaron Shahrabani <sh.yaron@gmail.com>\n"
 "Language-Team: צוות התרגום של KDE ישראל\n"
@@ -116,6 +116,24 @@ msgstr "הגדרות מערכת"
 #, kde-format
 msgid "Open a configuration page from the sidebar."
 msgstr "פתיחת עמוד הגדרות מסרגל הצד."
+
+#: src/qml/KCMContainer.qml:116
+#, kde-format
+msgctxt "kcm button"
+msgid "Reset"
+msgstr ""
+
+#: src/qml/KCMContainer.qml:123
+#, kde-format
+msgctxt "kcm button"
+msgid "Defaults"
+msgstr ""
+
+#: src/qml/KCMContainer.qml:133
+#, kde-format
+msgctxt "kcm button"
+msgid "Apply"
+msgstr ""
 
 #: src/qml/SidebarCategoriesPage.qml:50
 #, kde-format
