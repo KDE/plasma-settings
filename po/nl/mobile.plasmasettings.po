@@ -7,7 +7,7 @@ msgstr ""
 "Project-Id-Version: plasma-settings\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2025-06-29 00:45+0000\n"
-"PO-Revision-Date: 2025-02-20 10:33+0100\n"
+"PO-Revision-Date: 2025-06-29 17:29+0200\n"
 "Last-Translator: Freek de Kruijf <freekdekruijf@kde.nl>\n"
 "Language-Team: \n"
 "Language: nl\n"
@@ -15,7 +15,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Lokalize 24.12.2\n"
+"X-Generator: Lokalize 25.04.2\n"
 
 #: src/main.cpp:49
 #, kde-format
@@ -120,19 +120,19 @@ msgstr "Een configuratiepagina openen vanuit de zijbalk."
 #, kde-format
 msgctxt "kcm button"
 msgid "Reset"
-msgstr ""
+msgstr "Reset"
 
 #: src/qml/KCMContainer.qml:123
 #, kde-format
 msgctxt "kcm button"
 msgid "Defaults"
-msgstr ""
+msgstr "Standaarden"
 
 #: src/qml/KCMContainer.qml:133
 #, kde-format
 msgctxt "kcm button"
 msgid "Apply"
-msgstr ""
+msgstr "Toepassen"
 
 #: src/qml/SidebarCategoriesPage.qml:50
 #, kde-format

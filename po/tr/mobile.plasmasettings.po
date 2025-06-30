@@ -8,15 +8,15 @@ msgstr ""
 "Project-Id-Version: plasma-settings\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2025-06-29 00:45+0000\n"
-"PO-Revision-Date: 2025-02-20 09:20+0300\n"
-"Last-Translator: Emir SARI <emir_sari@icloud.com>\n"
+"PO-Revision-Date: 2025-06-29 08:52+0300\n"
+"Last-Translator: Emir SARI <emir_sari@îcloud.com>\n"
 "Language-Team: Turkish <kde-l10n-tr@kde.org>\n"
 "Language: tr\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n > 1);\n"
-"X-Generator: Lokalize 25.03.70\n"
+"X-Generator: Lokalize 25.04.2\n"
 
 #: src/main.cpp:49
 #, kde-format
@@ -90,7 +90,7 @@ msgstr "modül adı"
 #: src/main.cpp:72
 #, kde-format
 msgid "Only show a single module, requires --module"
-msgstr "Yalnızca tek bir modül göster, --module gerektirir"
+msgstr "Yalnızca tek bir modül göster; --module gerektirir"
 
 #: src/main.cpp:73
 #, kde-format
@@ -122,19 +122,19 @@ msgstr "Kenar çubuğundan bir yapılandırma sayfası açın."
 #, kde-format
 msgctxt "kcm button"
 msgid "Reset"
-msgstr ""
+msgstr "Sıfırla"
 
 #: src/qml/KCMContainer.qml:123
 #, kde-format
 msgctxt "kcm button"
 msgid "Defaults"
-msgstr ""
+msgstr "Öntanımlılar"
 
 #: src/qml/KCMContainer.qml:133
 #, kde-format
 msgctxt "kcm button"
 msgid "Apply"
-msgstr ""
+msgstr "Uygula"
 
 #: src/qml/SidebarCategoriesPage.qml:50
 #, kde-format
