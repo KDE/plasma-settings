@@ -23,14 +23,14 @@ Kirigami.Page {
     property bool kcmNeedsSave: false
 
     signal applyClicked()
-    
+
     title: internalPage.title
-    
+
     topPadding: 0
     leftPadding: 0
     rightPadding: 0
     bottomPadding: 0
-    
+
     flickable: internalPage.flickable
     actions: [
         internalPage.actions.main,
