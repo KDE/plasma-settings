@@ -7,7 +7,7 @@ msgstr ""
 "Project-Id-Version: plasma-settings\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2025-06-29 00:45+0000\n"
-"PO-Revision-Date: 2025-02-20 20:27+0100\n"
+"PO-Revision-Date: 2025-06-30 19:20+0200\n"
 "Last-Translator: Stefan Asserhäll <stefan.asserhall@gmail.com>\n"
 "Language-Team: Swedish <kde-i18n-doc@kde.org>\n"
 "Language: sv\n"
@@ -15,7 +15,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Lokalize 24.12.0\n"
+"X-Generator: Lokalize 25.04.1\n"
 
 #: src/main.cpp:49
 #, kde-format
@@ -121,19 +121,19 @@ msgstr "Öppna en inställningssida från sidoraden."
 #, kde-format
 msgctxt "kcm button"
 msgid "Reset"
-msgstr ""
+msgstr "Återställ"
 
 #: src/qml/KCMContainer.qml:123
 #, kde-format
 msgctxt "kcm button"
 msgid "Defaults"
-msgstr ""
+msgstr "Förval"
 
 #: src/qml/KCMContainer.qml:133
 #, kde-format
 msgctxt "kcm button"
 msgid "Apply"
-msgstr ""
+msgstr "Verkställ"
 
 #: src/qml/SidebarCategoriesPage.qml:50
 #, kde-format
