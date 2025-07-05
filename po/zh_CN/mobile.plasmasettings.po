@@ -121,19 +121,19 @@ msgstr "从侧边栏打开配置页面。"
 #, kde-format
 msgctxt "kcm button"
 msgid "Reset"
-msgstr ""
+msgstr "重置"
 
 #: src/qml/KCMContainer.qml:123
 #, kde-format
 msgctxt "kcm button"
 msgid "Defaults"
-msgstr ""
+msgstr "默认"
 
 #: src/qml/KCMContainer.qml:133
 #, kde-format
 msgctxt "kcm button"
 msgid "Apply"
-msgstr ""
+msgstr "应用"
 
 #: src/qml/SidebarCategoriesPage.qml:50
 #, kde-format
