@@ -1,20 +1,20 @@
+# SPDX-FileCopyrightText: 2021, 2023, 2025 Alois Spitzbart <spitz234@hotmail.com>
 # Burkhard Lück <lueck@hube-lueck.de>, 2020, 2021.
-# Alois Spitzbart <spitz234@hotmail.com>, 2021.
 # Frederik Schwarzer <schwarzer@kde.org>, 2022.
 msgid ""
 msgstr ""
 "Project-Id-Version: mobile.plasmasettings\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2025-06-29 00:45+0000\n"
-"PO-Revision-Date: 2022-07-02 12:52+0200\n"
-"Last-Translator: Frederik Schwarzer <schwarzer@kde.org>\n"
+"PO-Revision-Date: 2025-06-29 22:12+0200\n"
+"Last-Translator: Alois Spitzbart <spitz234@hotmail.com>\n"
 "Language-Team: German <kde-i18n-de@kde.org>\n"
 "Language: de\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"X-Generator: Lokalize 22.04.1\n"
+"X-Generator: Lokalize 25.04.2\n"
 
 #: src/main.cpp:49
 #, kde-format
@@ -29,12 +29,12 @@ msgstr "Anwendung für Einstellungen auf Touch-Geräten."
 #: src/main.cpp:53
 #, kde-format
 msgid "© 2011-2015 KDE Community"
-msgstr ""
+msgstr "© 2011–2015 KDE-Gemeinschaft"
 
 #: src/main.cpp:54
 #, kde-format
 msgid "Devin Lin"
-msgstr ""
+msgstr "Devin Lin"
 
 #: src/main.cpp:54
 #, kde-format
@@ -47,10 +47,9 @@ msgid "Sebastian Kügler"
 msgstr "Sebastian Kügler"
 
 #: src/main.cpp:55 src/main.cpp:56
-#, fuzzy, kde-format
-#| msgid "Maintainer"
+#, kde-format
 msgid "Previous Maintainer"
-msgstr "Betreuer"
+msgstr "Ehemaliger Betreuer"
 
 #: src/main.cpp:56
 #, kde-format
@@ -68,6 +67,9 @@ msgid ""
 "Limit to modules suitable for <formfactor>, e.g. handset, tablet, "
 "mediacenter, desktop, test, all (default handset)"
 msgstr ""
+"Auf Module beschränken, die für <formfactor> geeignet sind, z. B. "
+"Mobiltelefon, Tablet, Mediencenter, Desktop, Test, alle (standardmäßig "
+"Mobiltelefon)"
 
 #: src/main.cpp:70
 #, kde-format
@@ -114,7 +116,7 @@ msgstr "Systemeinstellungen"
 #: src/qml/DefaultPage.qml:35
 #, kde-format
 msgid "Open a configuration page from the sidebar."
-msgstr ""
+msgstr "Öffnen Sie eine Konfigurationsseite in der Seitenleiste."
 
 #: src/qml/KCMContainer.qml:116
 #, kde-format
@@ -137,7 +139,7 @@ msgstr ""
 #: src/qml/SidebarCategoriesPage.qml:50
 #, kde-format
 msgid "Show menu"
-msgstr ""
+msgstr "Menü anzeigen"
 
 #, fuzzy
 #~| msgid "Copyright 2011-2015, Sebastian Kügler"
