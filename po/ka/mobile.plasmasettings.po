@@ -100,7 +100,7 @@ msgstr "ფანჯრის მთელ ეკრანზე ჩვენე
 #: src/main.cpp:74
 #, kde-format
 msgid "Package to use for the UI (default org.kde.mobile.settings)"
-msgstr "UI-სთვის გამოყენებული პაკეტი (ნაგულისხმები: org.kde.module.settings)"
+msgstr "UI-სთვის გამოყენებული პაკეტი (ნაგულისხმევი: org.kde.module.settings)"
 
 #: src/main.cpp:74
 #, kde-format
