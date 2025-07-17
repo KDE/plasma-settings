@@ -41,6 +41,9 @@ Kirigami.ScrollablePage {
                 autoAccept: true
                 placeholderText: i18n('Search…')
                 onAccepted: SettingsApp.filterString = searchField.text
+
+                Kirigami.Theme.inherit: false
+                Kirigami.Theme.colorSet: Kirigami.Theme.View
             }
 
             QQC2.ToolButton {
