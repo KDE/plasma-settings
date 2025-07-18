@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-settings\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-06-29 00:45+0000\n"
+"POT-Creation-Date: 2025-07-18 00:44+0000\n"
 "PO-Revision-Date: 2024-02-07 21:42-0600\n"
 "Last-Translator: A S Alam <aalam@punlinux.org>\n"
 "Language-Team: Punjabi <kde-i18n-doc@kde.org>\n"
@@ -133,7 +133,7 @@ msgctxt "kcm button"
 msgid "Apply"
 msgstr ""
 
-#: src/qml/SidebarCategoriesPage.qml:50
+#: src/qml/SidebarCategoriesPage.qml:53
 #, kde-format
 msgid "Show menu"
 msgstr ""

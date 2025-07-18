@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kdeorg\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-06-29 00:45+0000\n"
+"POT-Creation-Date: 2025-07-18 00:44+0000\n"
 "PO-Revision-Date: 2024-04-22 15:59\n"
 "Last-Translator: \n"
 "Language-Team: Chinese Simplified\n"
@@ -135,7 +135,7 @@ msgctxt "kcm button"
 msgid "Apply"
 msgstr "应用"
 
-#: src/qml/SidebarCategoriesPage.qml:50
+#: src/qml/SidebarCategoriesPage.qml:53
 #, kde-format
 msgid "Show menu"
 msgstr "显示菜单"

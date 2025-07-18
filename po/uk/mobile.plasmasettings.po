@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: mobile.plasmasettings\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-06-29 00:45+0000\n"
+"POT-Creation-Date: 2025-07-18 00:44+0000\n"
 "PO-Revision-Date: 2025-06-29 11:24+0300\n"
 "Last-Translator: Yuri Chornoivan <yurchor@ukr.net>\n"
 "Language-Team: Ukrainian <trans-uk@lists.fedoraproject.org>\n"
@@ -140,7 +140,7 @@ msgctxt "kcm button"
 msgid "Apply"
 msgstr "Застосувати"
 
-#: src/qml/SidebarCategoriesPage.qml:50
+#: src/qml/SidebarCategoriesPage.qml:53
 #, kde-format
 msgid "Show menu"
 msgstr "Показати меню"
