@@ -7,7 +7,7 @@ msgstr ""
 "Project-Id-Version: plasma-settings\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2025-07-18 00:44+0000\n"
-"PO-Revision-Date: 2025-04-07 00:25+0200\n"
+"PO-Revision-Date: 2025-07-20 01:21+0200\n"
 "Last-Translator: Shinjo Park <kde@peremen.name>\n"
 "Language-Team: Korean <kde-kr@kde.org>\n"
 "Language: ko\n"
@@ -15,7 +15,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
-"X-Generator: Lokalize 23.08.5\n"
+"X-Generator: Lokalize 24.12.3\n"
 
 #: src/main.cpp:49
 #, kde-format
@@ -120,19 +120,19 @@ msgstr "사이드바에서 설정 페이지를 엽니다."
 #, kde-format
 msgctxt "kcm button"
 msgid "Reset"
-msgstr ""
+msgstr "초기화"
 
 #: src/qml/KCMContainer.qml:123
 #, kde-format
 msgctxt "kcm button"
 msgid "Defaults"
-msgstr ""
+msgstr "기본값"
 
 #: src/qml/KCMContainer.qml:133
 #, kde-format
 msgctxt "kcm button"
 msgid "Apply"
-msgstr ""
+msgstr "적용"
 
 #: src/qml/SidebarCategoriesPage.qml:53
 #, kde-format
