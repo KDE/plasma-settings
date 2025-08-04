@@ -10,7 +10,7 @@ msgstr ""
 "Project-Id-Version: plasma-settings\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2025-07-18 00:44+0000\n"
-"PO-Revision-Date: 2025-04-16 02:19-0300\n"
+"PO-Revision-Date: 2025-08-03 01:49-0300\n"
 "Last-Translator: Guilherme Marçal Silva <guimarcalsilva@gmail.com>\n"
 "Language-Team: Brazilian Portuguese <kde-i18n-pt_BR@kde.org>\n"
 "Language: pt_BR\n"
@@ -18,7 +18,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n > 1);\n"
-"X-Generator: Lokalize 24.12.3\n"
+"X-Generator: Lokalize 25.04.3\n"
 
 #: src/main.cpp:49
 #, kde-format
@@ -123,19 +123,19 @@ msgstr "Abrir a página de configuração a partir da barra lateral."
 #, kde-format
 msgctxt "kcm button"
 msgid "Reset"
-msgstr ""
+msgstr "Redefinir"
 
 #: src/qml/KCMContainer.qml:123
 #, kde-format
 msgctxt "kcm button"
 msgid "Defaults"
-msgstr ""
+msgstr "Padrões"
 
 #: src/qml/KCMContainer.qml:133
 #, kde-format
 msgctxt "kcm button"
 msgid "Apply"
-msgstr ""
+msgstr "Aplicar"
 
 #: src/qml/SidebarCategoriesPage.qml:53
 #, kde-format
