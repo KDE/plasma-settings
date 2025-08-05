@@ -70,7 +70,7 @@ msgid ""
 "mediacenter, desktop, test, all (default handset)"
 msgstr ""
 "عرض الوحدات المتوافقة مع <formfactor> مثلا هاتف، جهاز لوحي، مركز وسائط، "
-"حاسب، اختبار، الجميع (الافتراضي هاتف)"
+"حاسب، اختبار، الجميع (المبدئي هاتف)"
 
 #: src/main.cpp:70
 #, kde-format
@@ -100,7 +100,7 @@ msgstr "بدء نافذة ملء الشاشة"
 #: src/main.cpp:74
 #, kde-format
 msgid "Package to use for the UI (default org.kde.mobile.settings)"
-msgstr "الحزمة المستخدمة لواجهة المستخدم (الافتراضي org.kde.mobile.settings)"
+msgstr "الحزمة المستخدمة لواجهة المستخدم (المبدئي org.kde.mobile.settings)"
 
 #: src/main.cpp:74
 #, kde-format
