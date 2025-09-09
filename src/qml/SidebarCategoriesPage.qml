@@ -39,7 +39,7 @@ Kirigami.ScrollablePage {
                 id: searchField
                 Layout.fillWidth: true
                 autoAccept: true
-                placeholderText: i18n('Search…')
+                placeholderText: i18n("Search…")
                 onAccepted: SettingsApp.filterString = searchField.text
 
                 Kirigami.Theme.inherit: false
@@ -66,7 +66,7 @@ Kirigami.ScrollablePage {
                     y: parent.height
 
                     QQC2.MenuItem {
-                        text: i18n('Show Modules for All Platforms')
+                        text: i18n("Show Modules for All Platforms")
                         icon.name: 'show-all-effects'
                         checkable: true
                         onTriggered: {
@@ -78,12 +78,12 @@ Kirigami.ScrollablePage {
                         }
                     }
                     QQC2.MenuItem {
-                        text: i18n('About Plasma Settings')
+                        text: i18n("About Plasma Settings")
                         icon.name: 'org.kde.mobile.plasmasettings'
                         onTriggered: applicationWindow().pageStack.push(Qt.createComponent("org.kde.kirigamiaddons.formcard", "AboutPage"))
                     }
                     QQC2.MenuItem {
-                        text: i18n('About KDE')
+                        text: i18n("About KDE")
                         icon.name: 'kde'
                         onTriggered: applicationWindow().pageStack.push(Qt.createComponent("org.kde.kirigamiaddons.formcard", "AboutKDEPage"))
                     }
