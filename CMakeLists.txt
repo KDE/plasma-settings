@@ -1,3 +1,6 @@
+# SPDX-FileCopyrightText: 2025 Carl Schwan <carlschwan@kde.org>
+# SPDX-License-Identifier: BSD-2-Clause
+
 cmake_minimum_required(VERSION 3.16)
 
 set(PROJECT_VERSION "25.07.0")

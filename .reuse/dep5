@@ -1,0 +1,9 @@
+
+Format: https://www.debian.org/doc/packaging-manuals/copyright-format/1.0/
+Upstream-Name: plasma-settings
+Upstream-Contact: Devin Lin <devin@kde.org>
+Source: https://invent.kde.org/plasma-mobile/plasma-settings!
+
+Files: *.desktop *.json
+Copyright: Plasma-Mobile contributors
+License: GPL-2.0-or-later

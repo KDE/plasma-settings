@@ -1,3 +1,8 @@
+<!--
+- SPDX-FileCopyrightText: None
+- SPDX-License-Identifier: CC0-1.0
+-->
+
 # Plasma Settings
 
 Settings application for Plasma Mobile.
