@@ -21,6 +21,9 @@ qt_target_qml_sources(plasma-settings
         qml/SidebarDelegate.qml
         qml/SidebarSubCategoryPage.qml
         qml/Main.qml
+        qml/components/PageContainer.qml
+        qml/components/PageHeader.qml
+        qml/components/PageStack.qml
 )
 
 target_include_directories(plasma-settings PRIVATE ${CMAKE_BINARY_DIR})

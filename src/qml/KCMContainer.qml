@@ -17,7 +17,6 @@ Kirigami.Page {
     id: container
     property QtObject kcm
     property Item internalPage
-    property bool suppressDeletion: false
 
     property bool kcmSupportsInstantApply: false
     property bool kcmNeedsSave: false
@@ -52,7 +51,7 @@ Kirigami.Page {
         for (let action of internalPage.actions) {
             actions.push(action);
         }
-        if (kcm.load !== undefined) {
+        if (kcm && kcm.load !== undefined) {
             kcm.load();
             container.kcmSupportsInstantApply =  Qt.binding(() => kcm.supportsInstantApply);
         }
@@ -71,35 +70,17 @@ Kirigami.Page {
         Connections {
             target: kcm
             function onPagePushed(page) {
-                pageStack.push(kcmContainer.createObject(pageStack, {"internalPage": page}));
+                // When pushing kcm subpage, ensure it's created by pageStack so that the page stack handles deletion/cleanup.
+                applicationWindow().pageStack.push(kcmContainer,
+                    {"kcm": SettingsApp.activeModule.kcm, "internalPage": page});
             }
             function onPageRemoved() {
-                pageStack.pop();
+                applicationWindow().pageStack.pop();
             }
-            function onNeedsSaveChanged () {
+            function onNeedsSaveChanged() {
                 container.kcmNeedsSave = kcm.needsSave;
                 if (kcm.supportsInstantApply && kcm.needsSave) {
                     kcm.save()
-                }
-            }
-        },
-        Connections {
-            target: pageStack
-            function onPageRemoved(page) {
-                if (kcm.supportsInstantApply && kcm.needsSave) {
-                    kcm.save()
-                }
-                if (page == container && !container.suppressDeletion) {
-                    page.destroy();
-                }
-            }
-        },
-        Connections {
-            target: kcm
-            function onCurrentIndexChanged(index) {
-                const index_with_offset = index + 1;
-                if (index_with_offset !== pageStack.currentIndex) {
-                    pageStack.currentIndex = index_with_offset;
                 }
             }
         }
@@ -115,14 +96,14 @@ Kirigami.Page {
                 Controls.Button {
                     text: i18nc("kcm button", "Reset")
                     icon.name: "edit-undo"
-                    visible: kcm.buttons & KCM.ConfigModule.Apply
+                    visible: kcm && (kcm.buttons & KCM.ConfigModule.Apply)
                     enabled: container.kcmNeedsSave
                     onClicked: kcm.load()
                 }
                 Controls.Button {
                     text: i18nc("kcm button", "Defaults")
                     icon.name: "kt-restore-defaults"
-                    visible: kcm.defaultsIndicatorsVisible && (kcm.buttons & KCM.ConfigModule.Default)
+                    visible: kcm && kcm.defaultsIndicatorsVisible && (kcm.buttons & KCM.ConfigModule.Default)
                     enabled: container.kcmNeedsSave
                     onClicked: kcm.defaults()
                 }
@@ -132,7 +113,7 @@ Kirigami.Page {
                 Controls.Button {
                     text: i18nc("kcm button", "Apply")
                     icon.name: "dialog-ok-apply"
-                    visible: !container.kcmSupportsInstantApply && (kcm.buttons & KCM.ConfigModule.Apply)
+                    visible: !container.kcmSupportsInstantApply && kcm && (kcm.buttons & KCM.ConfigModule.Apply)
                     enabled: container.kcmNeedsSave
                     onClicked: kcm.save()
                 }
@@ -141,6 +122,6 @@ Kirigami.Page {
     }
 
     footer: Loader {
-        sourceComponent: kcm.supportsInstantApply ? undefined : buttonToolbarComponent
+        sourceComponent: kcm && kcm.supportsInstantApply ? undefined : buttonToolbarComponent
     }
 }

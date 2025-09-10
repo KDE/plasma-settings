@@ -13,7 +13,7 @@ import org.kde.plasma.settings
 
 Kirigami.ScrollablePage {
     id: root
-    globalToolBarStyle: Kirigami.ApplicationHeaderStyle.None
+    titleDelegate: null
 
     Kirigami.Theme.colorSet: Kirigami.Theme.View
     Kirigami.Theme.inherit: false
@@ -29,11 +29,16 @@ Kirigami.ScrollablePage {
 
     header: QQC2.ToolBar {
         Layout.fillWidth: true
-        implicitHeight: applicationWindow().pageStack.globalToolBar.preferredHeight
+        position: QQC2.ToolBar.Header
 
         RowLayout {
             spacing: Kirigami.Units.smallSpacing
             anchors.fill: parent
+
+            Item {
+                id: heightMetrics
+                implicitHeight: applicationWindow().pageHeaderTextHeight
+            }
 
             Kirigami.SearchField {
                 id: searchField

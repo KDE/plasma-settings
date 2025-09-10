@@ -7,12 +7,13 @@
 */
 
 import QtQuick
-import QtQuick.Controls as Controls
+import QtQuick.Controls as QQC2
 import org.kde.kirigami as Kirigami
 
 import org.kde.plasma.settings
+import "components"
 
-Kirigami.ApplicationWindow {
+Kirigami.AbstractApplicationWindow {
     id: root
 
     readonly property var currentModule: SettingsApp.activeModule
@@ -33,9 +34,7 @@ Kirigami.ApplicationWindow {
         return SettingsApp.activeModule.isInSubCategory ? 2 : 1;
     }
 
-    pageStack.defaultColumnWidth: Kirigami.Units.gridUnit * 35
-    pageStack.globalToolBar.style: Kirigami.ApplicationHeaderStyle.ToolBar
-    pageStack.globalToolBar.showNavigationButtons: Kirigami.ApplicationHeaderStyle.ShowBackButton;
+    pageStack: PageStack {}
 
     // initialize context drawer
     contextDrawer: Kirigami.ContextDrawer {
@@ -50,9 +49,16 @@ Kirigami.ApplicationWindow {
             sidebarLoader.active = true;
             root.globalDrawer = sidebarLoader.item;
 
-            // remove the listview page, and restore all other pages
+            // pop all pages
+            pageStack.clear();
+
+            // remove the listview page
             listViewPageLoader.active = false;
-            if (pageStack.currentItem == defaultPage) return;
+
+            // restore the kcm page
+            if (SettingsApp.activeModule.name && root.loadedKCMPage) {
+                pageStack.push(root.loadedKCMPage, null, QQC2.StackView.Immediate);
+            }
 
             // go to correct sidebar page
             if (SettingsApp.activeModule.isInSubCategory) {
@@ -63,43 +69,32 @@ Kirigami.ApplicationWindow {
 
             // push default page if no kcm is loaded
             if (pageStack.depth == 0) {
-                pageStack.push(defaultPage);
+                pageStack.push(defaultPage, QQC2.StackView.Immediate);
             }
         } else {
             sidebarLoader.active = false;
             root.globalDrawer = null;
 
-            // prevent kcm page from getting deleted when popped
-            if (root.loadedKCMPage) {
-                root.loadedKCMPage.suppressDeletion = true;
-            }
-
             // pop all pages
-            while (pageStack.depth > 0) {
-                pageStack.pop()
-            }
-
-            if (root.loadedKCMPage) {
-                root.loadedKCMPage.suppressDeletion = false;
-            }
+            pageStack.clear();
 
             // insert listview page at beginning
             listViewPageLoader.active = true;
-            pageStack.push(listViewPageLoader.item);
+            pageStack.push(listViewPageLoader.item, null, QQC2.StackView.Immediate);
 
             // insert subcategory page if necessary
             if (SettingsApp.activeModule.isInSubCategory) {
-                narrowSubCategoryPageLoader.pushSubCategoryPage();
+                pageStack.push(narrowSubCategoryPageLoader.item, null, QQC2.StackView.Immediate);
             }
 
             // restore the kcm page
             if (SettingsApp.activeModule.name && root.loadedKCMPage) {
-                root.pageStack.push(root.loadedKCMPage);
+                pageStack.push(root.loadedKCMPage, null, QQC2.StackView.Immediate);
             }
         }
     }
 
-    // Narrow mode (sidebar becomes a page)
+    // ListView categories page (when in narrow mode, not sidebar)
     Loader {
         id: listViewPageLoader
         active: false
@@ -109,7 +104,7 @@ Kirigami.ApplicationWindow {
                 if (isCategory) {
                     // Load module, but don't show page
                     SettingsApp.loadModule(index);
-                    narrowSubCategoryPageLoader.pushSubCategoryPage();
+                    applicationWindow().pageStack.push(narrowSubCategoryPageLoader.item);
                 } else {
                     applicationWindow().openModule(index);
                 }
@@ -117,24 +112,17 @@ Kirigami.ApplicationWindow {
         }
     }
 
+    // ListView subcategories page (when in narrow mode, not sidebar)
     Loader {
         id: narrowSubCategoryPageLoader
         active: listViewPageLoader.active
 
-        function pushSubCategoryPage() {
-            if (applicationWindow().pageStack.items.includes(narrowSubCategoryPageLoader.item)) {
-                applicationWindow().pageStack.currentIndex = 1;
-            } else {
-                applicationWindow().pageStack.push(item);
-            }
-        }
-
         sourceComponent: SidebarSubCategoryPage {
-            onPopPage: applicationWindow().pageStack.currentIndex = 0;
+            onPopPage: applicationWindow().pageStack.pop()
         }
     }
 
-    // Widescreen mode
+    // Sidebar for when in widescreen mode
     Loader {
         id: sidebarLoader
         active: false
@@ -151,7 +139,11 @@ Kirigami.ApplicationWindow {
 
     function clearKCMPages() {
         while (pageStack.depth > root.popKCMDepth()) {
-            pageStack.pop();
+            if (pageStack.depth === 1) {
+                pageStack.clear();
+            } else {
+                pageStack.pop();
+            }
         }
     }
 
@@ -163,7 +155,10 @@ Kirigami.ApplicationWindow {
                 if (root.isWidescreen) {
                     sidebarLoader.item.goToSubCategoryPage();
                 } else {
-                    narrowSubCategoryPageLoader.pushSubCategoryPage();
+                    // Only push subcategory page if it isn't on the stack
+                    if (pageStack.depth < root.popKCMDepth()) {
+                        pageStack.push(narrowSubCategoryPageLoader.item, null, QQC2.StackView.Immediate);
+                    }
                 }
             } else {
                 if (root.isWidescreen) {
@@ -172,8 +167,13 @@ Kirigami.ApplicationWindow {
             }
         }
 
-        // only add the page if it is valid
+        // Only add the kcm page if it is valid
         if (SettingsApp.activeModule.valid) {
+            // Destroy old kcm page
+            if (loadedKCMPage) {
+                loadedKCMPage.destroy();
+            }
+
             loadedKCMPage = kcmContainer.createObject(
                 pageStack,
                 {"kcm": SettingsApp.activeModule.kcm, "internalPage": SettingsApp.activeModule.kcm.mainUi}
@@ -208,6 +208,21 @@ Kirigami.ApplicationWindow {
             applicationWindow().hide();
             applicationWindow().show();
             applicationWindow().requestActivate();
+        }
+    }
+
+    readonly property real pageHeaderTextHeight: pageHeaderTextMetrics.height
+
+    QQC2.Control {
+        id: pageHeaderTextMetrics
+        padding: 0
+        visible: false
+        contentItem: Kirigami.Heading {
+            id: textMetrics
+            text: 'Text' // placeholder
+            maximumLineCount: 1
+            elide: Text.ElideRight
+            textFormat: Text.PlainText
         }
     }
 
