@@ -18,8 +18,10 @@ Delegates.RoundedItemDelegate {
 
     property bool showArrow: false
 
-    padding: Kirigami.Settings.tabletMode ? Kirigami.Units.largeSpacing : Kirigami.Units.mediumSpacing
-    spacing: Kirigami.Settings.tabletMode ? Kirigami.Units.largeSpacing * 2 : Kirigami.Units.mediumSpacing
+    padding: Kirigami.Units.largeSpacing
+    spacing: Kirigami.Units.largeSpacing * 2
+    icon.width: Kirigami.Units.iconSizes.smallMedium
+    icon.height: Kirigami.Units.iconSizes.smallMedium
 
     contentItem: RowLayout {
         spacing: root.spacing
@@ -31,7 +33,7 @@ Delegates.RoundedItemDelegate {
 
             Accessible.ignored: true
 
-            Layout.leftMargin: Kirigami.Settings.tabletMode ? Kirigami.Units.smallSpacing : 0
+            Layout.leftMargin: Kirigami.Units.smallSpacing
             Layout.alignment: Qt.AlignLeft | Qt.AlignVCenter
         }
 
