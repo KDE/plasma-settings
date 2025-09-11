@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-settings\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-07-18 00:44+0000\n"
+"POT-Creation-Date: 2025-09-11 00:44+0000\n"
 "PO-Revision-Date: 2025-06-29 15:14+0200\n"
 "Last-Translator: Paolo Zamponi <feus73@gmail.com>\n"
 "Language-Team: Italian <kde-i18n-it@kde.org>\n"
@@ -108,6 +108,11 @@ msgstr ""
 msgid "packagename"
 msgstr "nome pacchetto"
 
+#: src/qml/components/PageHeader.qml:42
+#, kde-format
+msgid "Navigate Back"
+msgstr ""
+
 #: src/qml/DefaultPage.qml:29
 #, kde-format
 msgid "System Settings"
@@ -118,36 +123,52 @@ msgstr "Impostazioni di sistema"
 msgid "Open a configuration page from the sidebar."
 msgstr "Apri una pagina di configurazione dalla barra laterale."
 
-#: src/qml/KCMContainer.qml:116
+#: src/qml/KCMContainer.qml:97
 #, kde-format
 msgctxt "kcm button"
 msgid "Reset"
 msgstr "Ripristina"
 
-#: src/qml/KCMContainer.qml:123
+#: src/qml/KCMContainer.qml:104
 #, kde-format
 msgctxt "kcm button"
 msgid "Defaults"
 msgstr "Valori predefiniti"
 
-#: src/qml/KCMContainer.qml:133
+#: src/qml/KCMContainer.qml:114
 #, kde-format
 msgctxt "kcm button"
 msgid "Apply"
 msgstr "Applica"
 
-#: src/qml/SidebarCategoriesPage.qml:53
+#: src/qml/SidebarCategoriesPage.qml:47
+#, fuzzy, kde-format
+#| msgid "Search"
+msgid "Search…"
+msgstr "Cerca"
+
+#: src/qml/SidebarCategoriesPage.qml:58
 #, kde-format
 msgid "Show menu"
 msgstr "Mostra il menu"
+
+#: src/qml/SidebarCategoriesPage.qml:74
+#, kde-format
+msgid "Show Modules for All Platforms"
+msgstr ""
+
+#: src/qml/SidebarCategoriesPage.qml:86
+#, fuzzy, kde-format
+#| msgid "Plasma Mobile Settings"
+msgid "About Plasma Settings"
+msgstr "Impostazioni di Plasma Mobile"
+
+#: src/qml/SidebarCategoriesPage.qml:91
+#, kde-format
+msgid "About KDE"
+msgstr ""
 
 #, fuzzy
 #~| msgid "Copyright 2011-2015, Sebastian Kügler"
 #~ msgid "Copyright 2011-2025"
 #~ msgstr "Copyright 2011-2015, Sebastian Kügler"
-
-#~ msgid "Search"
-#~ msgstr "Cerca"
-
-#~ msgid "Plasma Mobile Settings"
-#~ msgstr "Impostazioni di Plasma Mobile"

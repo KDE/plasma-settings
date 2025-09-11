@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-settings\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-07-18 00:44+0000\n"
+"POT-Creation-Date: 2025-09-11 00:44+0000\n"
 "PO-Revision-Date: 2025-06-29 09:31+0300\n"
 "Last-Translator: Yaron Shahrabani <sh.yaron@gmail.com>\n"
 "Language-Team: צוות התרגום של KDE ישראל\n"
@@ -107,6 +107,11 @@ msgstr "חבילה לשימוש לממשק המשתמש (ברירת המחדל �
 msgid "packagename"
 msgstr "שם_חבילה"
 
+#: src/qml/components/PageHeader.qml:42
+#, kde-format
+msgid "Navigate Back"
+msgstr ""
+
 #: src/qml/DefaultPage.qml:29
 #, kde-format
 msgid "System Settings"
@@ -117,33 +122,52 @@ msgstr "הגדרות מערכת"
 msgid "Open a configuration page from the sidebar."
 msgstr "פתיחת עמוד הגדרות מסרגל הצד."
 
-#: src/qml/KCMContainer.qml:116
+#: src/qml/KCMContainer.qml:97
 #, kde-format
 msgctxt "kcm button"
 msgid "Reset"
 msgstr "איפוס"
 
-#: src/qml/KCMContainer.qml:123
+#: src/qml/KCMContainer.qml:104
 #, kde-format
 msgctxt "kcm button"
 msgid "Defaults"
 msgstr "ברירות מחדל"
 
-#: src/qml/KCMContainer.qml:133
+#: src/qml/KCMContainer.qml:114
 #, kde-format
 msgctxt "kcm button"
 msgid "Apply"
 msgstr "החלה"
 
-#: src/qml/SidebarCategoriesPage.qml:53
+#: src/qml/SidebarCategoriesPage.qml:47
+#, fuzzy, kde-format
+#| msgid "Search"
+msgid "Search…"
+msgstr "חיפוש"
+
+#: src/qml/SidebarCategoriesPage.qml:58
 #, kde-format
 msgid "Show menu"
 msgstr "הצגת תפריט"
+
+#: src/qml/SidebarCategoriesPage.qml:74
+#, kde-format
+msgid "Show Modules for All Platforms"
+msgstr ""
+
+#: src/qml/SidebarCategoriesPage.qml:86
+#, fuzzy, kde-format
+#| msgid "System Settings"
+msgid "About Plasma Settings"
+msgstr "הגדרות מערכת"
+
+#: src/qml/SidebarCategoriesPage.qml:91
+#, kde-format
+msgid "About KDE"
+msgstr ""
 
 #, fuzzy
 #~| msgid "Copyright 2011-2015, Sebastian Kügler"
 #~ msgid "Copyright 2011-2025"
 #~ msgstr "כל הזכויות שמורות 2011‏-2015, סבסטיאן קיגלר"
-
-#~ msgid "Search"
-#~ msgstr "חיפוש"

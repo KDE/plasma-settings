@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-settings\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-07-18 00:44+0000\n"
+"POT-Creation-Date: 2025-09-11 00:44+0000\n"
 "PO-Revision-Date: 2022-01-01 15:24+0000\n"
 "Last-Translator: Steve Allewell <steve.allewell@gmail.com>\n"
 "Language-Team: British English <kde-l10n-en_gb@kde.org>\n"
@@ -107,6 +107,11 @@ msgstr "Package to use for the UI (default org.kde.mobile.settings)"
 msgid "packagename"
 msgstr "packagename"
 
+#: src/qml/components/PageHeader.qml:42
+#, kde-format
+msgid "Navigate Back"
+msgstr ""
+
 #: src/qml/DefaultPage.qml:29
 #, kde-format
 msgid "System Settings"
@@ -117,36 +122,52 @@ msgstr "System Settings"
 msgid "Open a configuration page from the sidebar."
 msgstr "Open a configuration page from the sidebar."
 
-#: src/qml/KCMContainer.qml:116
+#: src/qml/KCMContainer.qml:97
 #, kde-format
 msgctxt "kcm button"
 msgid "Reset"
 msgstr ""
 
-#: src/qml/KCMContainer.qml:123
+#: src/qml/KCMContainer.qml:104
 #, kde-format
 msgctxt "kcm button"
 msgid "Defaults"
 msgstr ""
 
-#: src/qml/KCMContainer.qml:133
+#: src/qml/KCMContainer.qml:114
 #, kde-format
 msgctxt "kcm button"
 msgid "Apply"
 msgstr ""
 
-#: src/qml/SidebarCategoriesPage.qml:53
+#: src/qml/SidebarCategoriesPage.qml:47
+#, fuzzy, kde-format
+#| msgid "Search"
+msgid "Search…"
+msgstr "Search"
+
+#: src/qml/SidebarCategoriesPage.qml:58
 #, kde-format
 msgid "Show menu"
+msgstr ""
+
+#: src/qml/SidebarCategoriesPage.qml:74
+#, kde-format
+msgid "Show Modules for All Platforms"
+msgstr ""
+
+#: src/qml/SidebarCategoriesPage.qml:86
+#, fuzzy, kde-format
+#| msgid "Plasma Mobile Settings"
+msgid "About Plasma Settings"
+msgstr "Plasma Mobile Settings"
+
+#: src/qml/SidebarCategoriesPage.qml:91
+#, kde-format
+msgid "About KDE"
 msgstr ""
 
 #, fuzzy
 #~| msgid "Copyright 2011-2015, Sebastian Kügler"
 #~ msgid "Copyright 2011-2025"
 #~ msgstr "Copyright 2011-2015, Sebastian Kügler"
-
-#~ msgid "Search"
-#~ msgstr "Search"
-
-#~ msgid "Plasma Mobile Settings"
-#~ msgstr "Plasma Mobile Settings"

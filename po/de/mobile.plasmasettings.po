@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: mobile.plasmasettings\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-07-18 00:44+0000\n"
+"POT-Creation-Date: 2025-09-11 00:44+0000\n"
 "PO-Revision-Date: 2025-07-10 14:23+0200\n"
 "Last-Translator: Philipp Kiemle <l10n@prly.mozmail.com>\n"
 "Language-Team: German <kde-i18n-de@kde.org>\n"
@@ -109,6 +109,11 @@ msgstr ""
 msgid "packagename"
 msgstr "Paketname"
 
+#: src/qml/components/PageHeader.qml:42
+#, kde-format
+msgid "Navigate Back"
+msgstr ""
+
 #: src/qml/DefaultPage.qml:29
 #, kde-format
 msgid "System Settings"
@@ -119,33 +124,52 @@ msgstr "Systemeinstellungen"
 msgid "Open a configuration page from the sidebar."
 msgstr "Öffnen Sie eine Konfigurationsseite in der Seitenleiste."
 
-#: src/qml/KCMContainer.qml:116
+#: src/qml/KCMContainer.qml:97
 #, kde-format
 msgctxt "kcm button"
 msgid "Reset"
 msgstr "Zurücksetzen"
 
-#: src/qml/KCMContainer.qml:123
+#: src/qml/KCMContainer.qml:104
 #, kde-format
 msgctxt "kcm button"
 msgid "Defaults"
 msgstr "Voreinstellungen"
 
-#: src/qml/KCMContainer.qml:133
+#: src/qml/KCMContainer.qml:114
 #, kde-format
 msgctxt "kcm button"
 msgid "Apply"
 msgstr "Anwenden"
 
-#: src/qml/SidebarCategoriesPage.qml:53
+#: src/qml/SidebarCategoriesPage.qml:47
+#, fuzzy, kde-format
+#| msgid "Search"
+msgid "Search…"
+msgstr "Suchen"
+
+#: src/qml/SidebarCategoriesPage.qml:58
 #, kde-format
 msgid "Show menu"
 msgstr "Menü anzeigen"
+
+#: src/qml/SidebarCategoriesPage.qml:74
+#, kde-format
+msgid "Show Modules for All Platforms"
+msgstr ""
+
+#: src/qml/SidebarCategoriesPage.qml:86
+#, fuzzy, kde-format
+#| msgid "System Settings"
+msgid "About Plasma Settings"
+msgstr "Systemeinstellungen"
+
+#: src/qml/SidebarCategoriesPage.qml:91
+#, kde-format
+msgid "About KDE"
+msgstr ""
 
 #, fuzzy
 #~| msgid "Copyright 2011-2015, Sebastian Kügler"
 #~ msgid "Copyright 2011-2025"
 #~ msgstr "Copyright 2011-2015, Sebastian Kügler"
-
-#~ msgid "Search"
-#~ msgstr "Suchen"
