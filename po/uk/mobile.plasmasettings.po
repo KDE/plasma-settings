@@ -9,7 +9,7 @@ msgstr ""
 "Project-Id-Version: mobile.plasmasettings\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2025-09-11 00:44+0000\n"
-"PO-Revision-Date: 2025-06-29 11:24+0300\n"
+"PO-Revision-Date: 2025-09-11 09:03+0300\n"
 "Last-Translator: Yuri Chornoivan <yurchor@ukr.net>\n"
 "Language-Team: Ukrainian <trans-uk@lists.fedoraproject.org>\n"
 "Language: uk\n"
@@ -115,7 +115,7 @@ msgstr "назва_пакунка"
 #: src/qml/components/PageHeader.qml:42
 #, kde-format
 msgid "Navigate Back"
-msgstr ""
+msgstr "Перейти назад"
 
 #: src/qml/DefaultPage.qml:29
 #, kde-format
@@ -146,10 +146,9 @@ msgid "Apply"
 msgstr "Застосувати"
 
 #: src/qml/SidebarCategoriesPage.qml:47
-#, fuzzy, kde-format
-#| msgid "Search"
+#, kde-format
 msgid "Search…"
-msgstr "Пошук"
+msgstr "Шукати…"
 
 #: src/qml/SidebarCategoriesPage.qml:58
 #, kde-format
@@ -159,18 +158,17 @@ msgstr "Показати меню"
 #: src/qml/SidebarCategoriesPage.qml:74
 #, kde-format
 msgid "Show Modules for All Platforms"
-msgstr ""
+msgstr "Показувати модулі для усіх платформ"
 
 #: src/qml/SidebarCategoriesPage.qml:86
-#, fuzzy, kde-format
-#| msgid "Plasma Mobile Settings"
+#, kde-format
 msgid "About Plasma Settings"
-msgstr "Параметри мобільної Плазми"
+msgstr "Про «Параметри Плазми»"
 
 #: src/qml/SidebarCategoriesPage.qml:91
 #, kde-format
 msgid "About KDE"
-msgstr ""
+msgstr "Про KDE"
 
 #~| msgid "Copyright 2011-2015, Sebastian Kügler"
 #~ msgid "Copyright 2011-2025"

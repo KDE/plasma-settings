@@ -7,7 +7,7 @@ msgstr ""
 "Project-Id-Version: plasma-settings\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2025-09-11 00:44+0000\n"
-"PO-Revision-Date: 2025-06-29 07:20+0200\n"
+"PO-Revision-Date: 2025-09-11 06:43+0200\n"
 "Last-Translator: Matjaž Jeran <matjaz.jeran@amis.net>\n"
 "Language-Team: Slovenian <lugos-slo@lugos.si>\n"
 "Language: sl\n"
@@ -16,7 +16,7 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=4; plural=(n%100==1 ? 1 : n%100==2 ? 2 : n%100==3 || n"
 "%100==4 ? 3 : 0);\n"
-"X-Generator: Poedit 3.6\n"
+"X-Generator: Poedit 3.7\n"
 
 #: src/main.cpp:49
 #, kde-format
@@ -111,7 +111,7 @@ msgstr "ime paketa"
 #: src/qml/components/PageHeader.qml:42
 #, kde-format
 msgid "Navigate Back"
-msgstr ""
+msgstr "Krmari nazaj"
 
 #: src/qml/DefaultPage.qml:29
 #, kde-format
@@ -142,10 +142,9 @@ msgid "Apply"
 msgstr "Uveljavi"
 
 #: src/qml/SidebarCategoriesPage.qml:47
-#, fuzzy, kde-format
-#| msgid "Search"
+#, kde-format
 msgid "Search…"
-msgstr "Išči"
+msgstr "Išči…"
 
 #: src/qml/SidebarCategoriesPage.qml:58
 #, kde-format
@@ -155,18 +154,17 @@ msgstr "Prikaži meni"
 #: src/qml/SidebarCategoriesPage.qml:74
 #, kde-format
 msgid "Show Modules for All Platforms"
-msgstr ""
+msgstr "Prikaži module za vse platforme"
 
 #: src/qml/SidebarCategoriesPage.qml:86
-#, fuzzy, kde-format
-#| msgid "Plasma Mobile Settings"
+#, kde-format
 msgid "About Plasma Settings"
-msgstr "Plasma Mobile Settings"
+msgstr "O Plasma Settings"
 
 #: src/qml/SidebarCategoriesPage.qml:91
 #, kde-format
 msgid "About KDE"
-msgstr ""
+msgstr "O KDE"
 
 #~ msgid "Copyright 2011-2025"
 #~ msgstr "Copyright 2011-2015"

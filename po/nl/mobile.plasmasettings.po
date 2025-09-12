@@ -7,7 +7,7 @@ msgstr ""
 "Project-Id-Version: plasma-settings\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2025-09-11 00:44+0000\n"
-"PO-Revision-Date: 2025-06-29 17:29+0200\n"
+"PO-Revision-Date: 2025-09-11 17:44+0200\n"
 "Last-Translator: Freek de Kruijf <freekdekruijf@kde.nl>\n"
 "Language-Team: \n"
 "Language: nl\n"
@@ -15,7 +15,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Lokalize 25.04.2\n"
+"X-Generator: Lokalize 25.08.0\n"
 
 #: src/main.cpp:49
 #, kde-format
@@ -109,7 +109,7 @@ msgstr "pakketnaam"
 #: src/qml/components/PageHeader.qml:42
 #, kde-format
 msgid "Navigate Back"
-msgstr ""
+msgstr "Naar achteren navigeren"
 
 #: src/qml/DefaultPage.qml:29
 #, kde-format
@@ -140,10 +140,9 @@ msgid "Apply"
 msgstr "Toepassen"
 
 #: src/qml/SidebarCategoriesPage.qml:47
-#, fuzzy, kde-format
-#| msgid "Search"
+#, kde-format
 msgid "Search…"
-msgstr "Zoeken"
+msgstr "Zoeken…"
 
 #: src/qml/SidebarCategoriesPage.qml:58
 #, kde-format
@@ -153,18 +152,17 @@ msgstr "Menu tonen"
 #: src/qml/SidebarCategoriesPage.qml:74
 #, kde-format
 msgid "Show Modules for All Platforms"
-msgstr ""
+msgstr "Modules voor alle platforms tonen"
 
 #: src/qml/SidebarCategoriesPage.qml:86
-#, fuzzy, kde-format
-#| msgid "Plasma Mobile Settings"
+#, kde-format
 msgid "About Plasma Settings"
-msgstr "Instellingen Plasma mobiel"
+msgstr "Informatie over Instellingen voor Plasma"
 
 #: src/qml/SidebarCategoriesPage.qml:91
 #, kde-format
 msgid "About KDE"
-msgstr ""
+msgstr "Info over KDE"
 
 #~| msgid "Copyright 2011-2015, Sebastian Kügler"
 #~ msgid "Copyright 2011-2025"

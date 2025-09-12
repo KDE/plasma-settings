@@ -3,14 +3,14 @@
 # This file is distributed under the license LGPL version 2.1 or
 # version 3 or later versions approved by the membership of KDE e.V.
 #
-# Josep M. Ferrer <txemaq@gmail.com>, 2019, 2021, 2025.
+# SPDX-FileCopyrightText: 2019, 2021, 2025 Josep M. Ferrer <txemaq@gmail.com>
 # Antoni Bella Pérez <antonibella5@yahoo.com>, 2019, 2020.
 msgid ""
 msgstr ""
 "Project-Id-Version: plasma-settings\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2025-09-11 00:44+0000\n"
-"PO-Revision-Date: 2025-06-29 09:04+0200\n"
+"PO-Revision-Date: 2025-09-11 10:10+0200\n"
 "Last-Translator: Josep M. Ferrer <txemaq@gmail.com>\n"
 "Language-Team: Catalan <kde-i18n-ca@kde.org>\n"
 "Language: ca\n"
@@ -19,7 +19,7 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
 "X-Accelerator-Marker: &\n"
-"X-Generator: Lokalize 22.12.3\n"
+"X-Generator: Lokalize 25.08.0\n"
 
 #: src/main.cpp:49
 #, kde-format
@@ -113,7 +113,7 @@ msgstr "nomdelpaquet"
 #: src/qml/components/PageHeader.qml:42
 #, kde-format
 msgid "Navigate Back"
-msgstr ""
+msgstr "Navega enrere"
 
 #: src/qml/DefaultPage.qml:29
 #, kde-format
@@ -146,7 +146,7 @@ msgstr "Aplica"
 #: src/qml/SidebarCategoriesPage.qml:47
 #, kde-format
 msgid "Search…"
-msgstr ""
+msgstr "Cerca…"
 
 #: src/qml/SidebarCategoriesPage.qml:58
 #, kde-format
@@ -156,15 +156,14 @@ msgstr "Mostra el menú"
 #: src/qml/SidebarCategoriesPage.qml:74
 #, kde-format
 msgid "Show Modules for All Platforms"
-msgstr ""
+msgstr "Mostra els mòduls de totes les plataformes"
 
 #: src/qml/SidebarCategoriesPage.qml:86
-#, fuzzy, kde-format
-#| msgid "System Settings"
+#, kde-format
 msgid "About Plasma Settings"
-msgstr "Arranjament del sistema"
+msgstr "Quant a l'arranjament del Plasma"
 
 #: src/qml/SidebarCategoriesPage.qml:91
 #, kde-format
 msgid "About KDE"
-msgstr ""
+msgstr "Quant a KDE"

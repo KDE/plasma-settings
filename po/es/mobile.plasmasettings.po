@@ -9,7 +9,7 @@ msgstr ""
 "Project-Id-Version: mobile.plasmasettings\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2025-09-11 00:44+0000\n"
-"PO-Revision-Date: 2025-06-29 13:31+0100\n"
+"PO-Revision-Date: 2025-09-11 12:02+0100\n"
 "Last-Translator: Eloy Cuadra <ecuadra@eloihr.net>\n"
 "Language-Team: Spanish <kde-l10n-es@kde.org>\n"
 "Language: es\n"
@@ -17,7 +17,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Lokalize 25.04.2\n"
+"X-Generator: Lokalize 25.08.0\n"
 
 #: src/main.cpp:49
 #, kde-format
@@ -113,7 +113,7 @@ msgstr "nombredepaquete"
 #: src/qml/components/PageHeader.qml:42
 #, kde-format
 msgid "Navigate Back"
-msgstr ""
+msgstr "Volver"
 
 #: src/qml/DefaultPage.qml:29
 #, kde-format
@@ -146,7 +146,7 @@ msgstr "Aplicar"
 #: src/qml/SidebarCategoriesPage.qml:47
 #, kde-format
 msgid "Search…"
-msgstr ""
+msgstr "Buscar…"
 
 #: src/qml/SidebarCategoriesPage.qml:58
 #, kde-format
@@ -156,15 +156,14 @@ msgstr "Mostrar el menú"
 #: src/qml/SidebarCategoriesPage.qml:74
 #, kde-format
 msgid "Show Modules for All Platforms"
-msgstr ""
+msgstr "Mostrar módulos de todas las plataformas"
 
 #: src/qml/SidebarCategoriesPage.qml:86
-#, fuzzy, kde-format
-#| msgid "System Settings"
+#, kde-format
 msgid "About Plasma Settings"
-msgstr "Preferencias del sistema"
+msgstr "Acerca de las preferencias de Plasma"
 
 #: src/qml/SidebarCategoriesPage.qml:91
 #, kde-format
 msgid "About KDE"
-msgstr ""
+msgstr "Acerca de KDE"
