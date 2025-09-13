@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: plasma-settings\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2025-09-11 00:44+0000\n"
-"PO-Revision-Date: 2025-06-29 08:52+0300\n"
+"PO-Revision-Date: 2025-09-12 10:14+0300\n"
 "Last-Translator: Emir SARI <emir_sari@îcloud.com>\n"
 "Language-Team: Turkish <kde-l10n-tr@kde.org>\n"
 "Language: tr\n"
@@ -16,7 +16,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n > 1);\n"
-"X-Generator: Lokalize 25.04.2\n"
+"X-Generator: Lokalize 25.08.0\n"
 
 #: src/main.cpp:49
 #, kde-format
@@ -111,7 +111,7 @@ msgstr "paket adı"
 #: src/qml/components/PageHeader.qml:42
 #, kde-format
 msgid "Navigate Back"
-msgstr ""
+msgstr "Geri Dön"
 
 #: src/qml/DefaultPage.qml:29
 #, kde-format
@@ -142,10 +142,9 @@ msgid "Apply"
 msgstr "Uygula"
 
 #: src/qml/SidebarCategoriesPage.qml:47
-#, fuzzy, kde-format
-#| msgid "Search"
+#, kde-format
 msgid "Search…"
-msgstr "Arama"
+msgstr "Ara…"
 
 #: src/qml/SidebarCategoriesPage.qml:58
 #, kde-format
@@ -155,18 +154,17 @@ msgstr "Menüyü göster"
 #: src/qml/SidebarCategoriesPage.qml:74
 #, kde-format
 msgid "Show Modules for All Platforms"
-msgstr ""
+msgstr "Tüm Platformlar için Olan Modülleri Göster"
 
 #: src/qml/SidebarCategoriesPage.qml:86
-#, fuzzy, kde-format
-#| msgid "System Settings"
+#, kde-format
 msgid "About Plasma Settings"
-msgstr "Sistem Ayarları"
+msgstr "Plasma Ayarları Hakkında"
 
 #: src/qml/SidebarCategoriesPage.qml:91
 #, kde-format
 msgid "About KDE"
-msgstr ""
+msgstr "KDE Hakkında"
 
 #~| msgid "Copyright 2011-2015, Sebastian Kügler"
 #~ msgid "Copyright 2011-2025"
