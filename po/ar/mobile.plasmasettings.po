@@ -7,7 +7,7 @@ msgstr ""
 "Project-Id-Version: plasma-settings\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2025-09-11 00:44+0000\n"
-"PO-Revision-Date: 2025-07-03 09:57+0400\n"
+"PO-Revision-Date: 2025-09-15 13:02+0400\n"
 "Last-Translator: Zayed Al-Saidi <zayed.alsaidi@gmail.com>\n"
 "Language-Team: ar\n"
 "Language: ar\n"
@@ -110,7 +110,7 @@ msgstr "اسم الحزمة"
 #: src/qml/components/PageHeader.qml:42
 #, kde-format
 msgid "Navigate Back"
-msgstr ""
+msgstr "تنقّل للخلف"
 
 #: src/qml/DefaultPage.qml:29
 #, kde-format
@@ -141,10 +141,9 @@ msgid "Apply"
 msgstr "طبّق"
 
 #: src/qml/SidebarCategoriesPage.qml:47
-#, fuzzy, kde-format
-#| msgid "Search"
+#, kde-format
 msgid "Search…"
-msgstr "ابحث"
+msgstr "ابحث…"
 
 #: src/qml/SidebarCategoriesPage.qml:58
 #, kde-format
@@ -154,18 +153,17 @@ msgstr "أظهر القائمة"
 #: src/qml/SidebarCategoriesPage.qml:74
 #, kde-format
 msgid "Show Modules for All Platforms"
-msgstr ""
+msgstr "اعرض الوحدات النمطية لجميع الأنظمة"
 
 #: src/qml/SidebarCategoriesPage.qml:86
-#, fuzzy, kde-format
-#| msgid "System Settings"
+#, kde-format
 msgid "About Plasma Settings"
-msgstr "إعدادات النّظام"
+msgstr "عن إعدادات النّظام"
 
 #: src/qml/SidebarCategoriesPage.qml:91
 #, kde-format
 msgid "About KDE"
-msgstr ""
+msgstr "حول كِيدِي"
 
 #, fuzzy
 #~| msgid "Copyright 2011-2015, Sebastian Kügler"

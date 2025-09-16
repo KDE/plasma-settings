@@ -1,13 +1,13 @@
 # Copyright (C) 2024 This file is copyright:
 # This file is distributed under the same license as the plasma-settings package.
 #
-# SPDX-FileCopyrightText: 2020, 2021, 2022, 2024 A S Alam <aalam.yellow@gmail.com>
+# SPDX-FileCopyrightText: 2020, 2021, 2022, 2024, 2025 A S Alam <aalam.yellow@gmail.com>
 msgid ""
 msgstr ""
 "Project-Id-Version: plasma-settings\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2025-09-11 00:44+0000\n"
-"PO-Revision-Date: 2024-02-07 21:42-0600\n"
+"PO-Revision-Date: 2025-09-15 10:12-0500\n"
 "Last-Translator: A S Alam <aalam@punlinux.org>\n"
 "Language-Team: Punjabi <kde-i18n-doc@kde.org>\n"
 "Language: pa\n"
@@ -15,7 +15,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Lokalize 23.08.4\n"
+"X-Generator: Lokalize 25.08.0\n"
 
 #: src/main.cpp:49
 #, kde-format
@@ -30,7 +30,7 @@ msgstr "ਟੱਚ ਅਨੁਕੂਲ ਸੈਟਿੰਗਾਂ ਦੀ ਐਪਲ�
 #: src/main.cpp:53
 #, kde-format
 msgid "© 2011-2015 KDE Community"
-msgstr ""
+msgstr "© 2011-2015, KDE ਕਮਿਊਨਟੀ"
 
 #: src/main.cpp:54
 #, kde-format
@@ -48,10 +48,9 @@ msgid "Sebastian Kügler"
 msgstr "Sebastian Kügler"
 
 #: src/main.cpp:55 src/main.cpp:56
-#, fuzzy, kde-format
-#| msgid "Maintainer"
+#, kde-format
 msgid "Previous Maintainer"
-msgstr "ਪਰਬੰਧਕ"
+msgstr "ਪੁਰਾਣਾ ਪਰਬੰਧਕ"
 
 #: src/main.cpp:56
 #, kde-format
@@ -108,7 +107,7 @@ msgstr "ਪੈਕੇਜ ਦਾ ਨਾਂ"
 #: src/qml/components/PageHeader.qml:42
 #, kde-format
 msgid "Navigate Back"
-msgstr ""
+msgstr "ਪਿੱਛੇ ਜਾਓ"
 
 #: src/qml/DefaultPage.qml:29
 #, kde-format
@@ -124,46 +123,44 @@ msgstr "ਬਾਹੀ ਤੋਂ ਸੰਰਚਨਾ ਸਫ਼ਾ ਖੋਲ੍ਹ�
 #, kde-format
 msgctxt "kcm button"
 msgid "Reset"
-msgstr ""
+msgstr "ਮੁੜ-ਸੈੱਟ"
 
 #: src/qml/KCMContainer.qml:104
 #, kde-format
 msgctxt "kcm button"
 msgid "Defaults"
-msgstr ""
+msgstr "ਮੂਲ"
 
 #: src/qml/KCMContainer.qml:114
 #, kde-format
 msgctxt "kcm button"
 msgid "Apply"
-msgstr ""
+msgstr "ਲਾਗੂ ਕਰੋ"
 
 #: src/qml/SidebarCategoriesPage.qml:47
-#, fuzzy, kde-format
-#| msgid "Search"
+#, kde-format
 msgid "Search…"
-msgstr "ਖੋਜੋ"
+msgstr "…ਖੋਜੋ"
 
 #: src/qml/SidebarCategoriesPage.qml:58
 #, kde-format
 msgid "Show menu"
-msgstr ""
+msgstr "ਮੇਨੂ ਨੂੰ ਵੇਖਾਓ"
 
 #: src/qml/SidebarCategoriesPage.qml:74
 #, kde-format
 msgid "Show Modules for All Platforms"
-msgstr ""
+msgstr "ਸਾਰੇ ਪਲੇਟਫਾਰਮਨਾਂ ਲਈ ਮੋਡੀਊਲ ਵੇਖਾਓ"
 
 #: src/qml/SidebarCategoriesPage.qml:86
-#, fuzzy, kde-format
-#| msgid "System Settings"
+#, kde-format
 msgid "About Plasma Settings"
-msgstr "ਸਿਸਟਮ ਸੈਟਿੰਗਾਂ"
+msgstr "ਪਲਾਜ਼ਮਾ ਸੈਟਿੰਗਾਂ ਬਾਰੇ"
 
 #: src/qml/SidebarCategoriesPage.qml:91
 #, kde-format
 msgid "About KDE"
-msgstr ""
+msgstr "KDE ਬਾਰੇ"
 
 #, fuzzy
 #~| msgid "Copyright 2011-2015, Sebastian Kügler"
