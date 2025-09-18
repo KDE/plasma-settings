@@ -7,7 +7,7 @@ msgstr ""
 "Project-Id-Version: plasma-settings\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2025-09-11 00:44+0000\n"
-"PO-Revision-Date: 2025-06-29 09:31+0300\n"
+"PO-Revision-Date: 2025-09-17 11:42+0300\n"
 "Last-Translator: Yaron Shahrabani <sh.yaron@gmail.com>\n"
 "Language-Team: צוות התרגום של KDE ישראל\n"
 "Language: he\n"
@@ -16,7 +16,7 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=4; plural=(n == 1) ? 0 : ((n == 2) ? 1 : ((n > 10 && "
 "n % 10 == 0) ? 2 : 3));\n"
-"X-Generator: Lokalize 25.04.2\n"
+"X-Generator: Lokalize 25.08.0\n"
 
 #: src/main.cpp:49
 #, kde-format
@@ -110,7 +110,7 @@ msgstr "שם_חבילה"
 #: src/qml/components/PageHeader.qml:42
 #, kde-format
 msgid "Navigate Back"
-msgstr ""
+msgstr "ניווט אחורה"
 
 #: src/qml/DefaultPage.qml:29
 #, kde-format
@@ -141,10 +141,9 @@ msgid "Apply"
 msgstr "החלה"
 
 #: src/qml/SidebarCategoriesPage.qml:47
-#, fuzzy, kde-format
-#| msgid "Search"
+#, kde-format
 msgid "Search…"
-msgstr "חיפוש"
+msgstr "חיפוש…"
 
 #: src/qml/SidebarCategoriesPage.qml:58
 #, kde-format
@@ -154,18 +153,17 @@ msgstr "הצגת תפריט"
 #: src/qml/SidebarCategoriesPage.qml:74
 #, kde-format
 msgid "Show Modules for All Platforms"
-msgstr ""
+msgstr "הצגת מודולים לכל הפלטפורמות"
 
 #: src/qml/SidebarCategoriesPage.qml:86
-#, fuzzy, kde-format
-#| msgid "System Settings"
+#, kde-format
 msgid "About Plasma Settings"
-msgstr "הגדרות מערכת"
+msgstr "על הגדרות פלזמה"
 
 #: src/qml/SidebarCategoriesPage.qml:91
 #, kde-format
 msgid "About KDE"
-msgstr ""
+msgstr "על KDE"
 
 #, fuzzy
 #~| msgid "Copyright 2011-2015, Sebastian Kügler"
