@@ -7,7 +7,7 @@ msgstr ""
 "Project-Id-Version: plasma-settings\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2025-09-11 00:44+0000\n"
-"PO-Revision-Date: 2025-07-13 19:13+0300\n"
+"PO-Revision-Date: 2025-09-12 16:26+0300\n"
 "Last-Translator: Tommi Nieminen <translator@legisign.org>\n"
 "Language-Team: Finnish <kde-i18n-doc@kde.org>\n"
 "Language: fi\n"
@@ -15,7 +15,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"X-Generator: Lokalize 23.08.5\n"
+"X-Generator: Lokalize 25.04.0\n"
 
 #: src/main.cpp:49
 #, kde-format
@@ -111,7 +111,7 @@ msgstr "paketinnimi"
 #: src/qml/components/PageHeader.qml:42
 #, kde-format
 msgid "Navigate Back"
-msgstr ""
+msgstr "Palaa takaisin"
 
 #: src/qml/DefaultPage.qml:29
 #, kde-format
@@ -142,10 +142,9 @@ msgid "Apply"
 msgstr "Käytä"
 
 #: src/qml/SidebarCategoriesPage.qml:47
-#, fuzzy, kde-format
-#| msgid "Search"
+#, kde-format
 msgid "Search…"
-msgstr "Etsi"
+msgstr "Etsi…"
 
 #: src/qml/SidebarCategoriesPage.qml:58
 #, kde-format
@@ -155,18 +154,17 @@ msgstr "Näytä valikko"
 #: src/qml/SidebarCategoriesPage.qml:74
 #, kde-format
 msgid "Show Modules for All Platforms"
-msgstr ""
+msgstr "Näytä kaikkien alustojen moduulit"
 
 #: src/qml/SidebarCategoriesPage.qml:86
-#, fuzzy, kde-format
-#| msgid "Plasma Mobile Settings"
+#, kde-format
 msgid "About Plasma Settings"
-msgstr "Plasma Mobilen asetukset"
+msgstr "Tietoa Plasman asetuksista"
 
 #: src/qml/SidebarCategoriesPage.qml:91
 #, kde-format
 msgid "About KDE"
-msgstr ""
+msgstr "Tietoa KDE:stä"
 
 #, fuzzy
 #~| msgid "Copyright 2011-2015, Sebastian Kügler"
