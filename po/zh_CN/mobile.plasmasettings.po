@@ -110,7 +110,7 @@ msgstr "packagename"
 #: src/qml/components/PageHeader.qml:42
 #, kde-format
 msgid "Navigate Back"
-msgstr ""
+msgstr "后退"
 
 #: src/qml/DefaultPage.qml:29
 #, kde-format
@@ -143,7 +143,7 @@ msgstr "应用"
 #: src/qml/SidebarCategoriesPage.qml:47
 #, kde-format
 msgid "Search…"
-msgstr ""
+msgstr "搜索…"
 
 #: src/qml/SidebarCategoriesPage.qml:58
 #, kde-format
@@ -153,15 +153,14 @@ msgstr "显示菜单"
 #: src/qml/SidebarCategoriesPage.qml:74
 #, kde-format
 msgid "Show Modules for All Platforms"
-msgstr ""
+msgstr "显示所有平台的模块"
 
 #: src/qml/SidebarCategoriesPage.qml:86
-#, fuzzy, kde-format
-#| msgid "System Settings"
+#, kde-format
 msgid "About Plasma Settings"
-msgstr "系统设置"
+msgstr "关于 Plasma 设置"
 
 #: src/qml/SidebarCategoriesPage.qml:91
 #, kde-format
 msgid "About KDE"
-msgstr ""
+msgstr "关于 KDE"
