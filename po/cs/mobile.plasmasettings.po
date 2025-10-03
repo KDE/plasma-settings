@@ -140,7 +140,7 @@ msgstr ""
 #: src/qml/SidebarCategoriesPage.qml:47
 #, kde-format
 msgid "Search…"
-msgstr ""
+msgstr "Hledat…"
 
 #: src/qml/SidebarCategoriesPage.qml:58
 #, kde-format
@@ -153,12 +153,11 @@ msgid "Show Modules for All Platforms"
 msgstr ""
 
 #: src/qml/SidebarCategoriesPage.qml:86
-#, fuzzy, kde-format
-#| msgid "System Settings"
+#, kde-format
 msgid "About Plasma Settings"
-msgstr "Nastavení systému"
+msgstr ""
 
 #: src/qml/SidebarCategoriesPage.qml:91
 #, kde-format
 msgid "About KDE"
-msgstr ""
+msgstr "O prostředí KDE"
