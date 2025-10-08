@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: plasma-settings\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2025-09-11 00:44+0000\n"
-"PO-Revision-Date: 2025-04-21 18:29+0400\n"
+"PO-Revision-Date: 2025-10-08 03:06+0400\n"
 "Last-Translator: linux <xxmn77@gmail.com>\n"
 "Language-Team: Azerbaijani <kde-i18n-doc@kde.org>\n"
 "Language: az\n"
@@ -16,7 +16,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"X-Generator: Lokalize 25.04.0\n"
+"X-Generator: Lokalize 25.08.1\n"
 
 #: src/main.cpp:49
 #, kde-format
@@ -114,7 +114,7 @@ msgstr "paket_adı"
 #: src/qml/components/PageHeader.qml:42
 #, kde-format
 msgid "Navigate Back"
-msgstr ""
+msgstr "Geriyə hərəkət"
 
 #: src/qml/DefaultPage.qml:29
 #, kde-format
@@ -130,25 +130,24 @@ msgstr "Yan paneldən tənzimləmə səhifəsini açın."
 #, kde-format
 msgctxt "kcm button"
 msgid "Reset"
-msgstr ""
+msgstr "Sifirlamaq"
 
 #: src/qml/KCMContainer.qml:104
 #, kde-format
 msgctxt "kcm button"
 msgid "Defaults"
-msgstr ""
+msgstr "İlkin ayarlar"
 
 #: src/qml/KCMContainer.qml:114
 #, kde-format
 msgctxt "kcm button"
 msgid "Apply"
-msgstr ""
+msgstr "Tətbiq etmək"
 
 #: src/qml/SidebarCategoriesPage.qml:47
-#, fuzzy, kde-format
-#| msgid "Search"
+#, kde-format
 msgid "Search…"
-msgstr "Axtarış"
+msgstr "Axtarış…"
 
 #: src/qml/SidebarCategoriesPage.qml:58
 #, kde-format
@@ -158,18 +157,17 @@ msgstr "Menyunu göstərmək"
 #: src/qml/SidebarCategoriesPage.qml:74
 #, kde-format
 msgid "Show Modules for All Platforms"
-msgstr ""
+msgstr "Bütün platformalar üçün modulları göstərmək"
 
 #: src/qml/SidebarCategoriesPage.qml:86
-#, fuzzy, kde-format
-#| msgid "Plasma Mobile Settings"
+#, kde-format
 msgid "About Plasma Settings"
-msgstr "Plasma Mobil Ayarları"
+msgstr "Plasma ayarları haqqında"
 
 #: src/qml/SidebarCategoriesPage.qml:91
 #, kde-format
 msgid "About KDE"
-msgstr ""
+msgstr "KDE haqqında"
 
 #, fuzzy
 #~| msgid "Copyright 2011-2015, Sebastian Kügler"
