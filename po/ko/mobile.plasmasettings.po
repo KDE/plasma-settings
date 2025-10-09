@@ -7,7 +7,7 @@ msgstr ""
 "Project-Id-Version: plasma-settings\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2025-09-11 00:44+0000\n"
-"PO-Revision-Date: 2025-07-20 01:21+0200\n"
+"PO-Revision-Date: 2025-10-09 01:24+0200\n"
 "Last-Translator: Shinjo Park <kde@peremen.name>\n"
 "Language-Team: Korean <kde-kr@kde.org>\n"
 "Language: ko\n"
@@ -109,7 +109,7 @@ msgstr "packagename"
 #: src/qml/components/PageHeader.qml:42
 #, kde-format
 msgid "Navigate Back"
-msgstr ""
+msgstr "이전 탐색"
 
 #: src/qml/DefaultPage.qml:29
 #, kde-format
@@ -140,10 +140,9 @@ msgid "Apply"
 msgstr "적용"
 
 #: src/qml/SidebarCategoriesPage.qml:47
-#, fuzzy, kde-format
-#| msgid "Search"
+#, kde-format
 msgid "Search…"
-msgstr "검색"
+msgstr "검색…"
 
 #: src/qml/SidebarCategoriesPage.qml:58
 #, kde-format
@@ -153,18 +152,17 @@ msgstr "메뉴 표시"
 #: src/qml/SidebarCategoriesPage.qml:74
 #, kde-format
 msgid "Show Modules for All Platforms"
-msgstr ""
+msgstr "모든 플랫폼용 모듈 표시"
 
 #: src/qml/SidebarCategoriesPage.qml:86
-#, fuzzy, kde-format
-#| msgid "Plasma Mobile Settings"
+#, kde-format
 msgid "About Plasma Settings"
-msgstr "Plasma 모바일 설정"
+msgstr "Plasma 설정 정보"
 
 #: src/qml/SidebarCategoriesPage.qml:91
 #, kde-format
 msgid "About KDE"
-msgstr ""
+msgstr "KDE 정보"
 
 #, fuzzy
 #~| msgid "Copyright 2011-2015, Sebastian Kügler"
