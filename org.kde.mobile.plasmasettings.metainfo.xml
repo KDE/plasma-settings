@@ -32,6 +32,7 @@
   <name xml:lang="gl">Configuración de Plasma</name>
   <name xml:lang="he">הגדרות פלזמה</name>
   <name xml:lang="ia">Preferentias de Plasma</name>
+  <name xml:lang="is">Stillingar Plasma</name>
   <name xml:lang="it">Impostazioni di Plasma</name>
   <name xml:lang="ka">Plasma-ის მორგება</name>
   <name xml:lang="ko">Plasma 설정</name>
@@ -62,6 +63,7 @@
   <summary xml:lang="gl">Ferramentas para configurar o teléfono</summary>
   <summary xml:lang="he">כלי הגדרה לטלפון שלך</summary>
   <summary xml:lang="ia">Instrumentos de configuration per tu telephono</summary>
+  <summary xml:lang="is">Stillingatól fyrir símann þinn</summary>
   <summary xml:lang="it">Strumenti di configurazione per il tuo telefono</summary>
   <summary xml:lang="ka">მორგების ხელსაწყოები თქვენი ტელეფონისთვის</summary>
   <summary xml:lang="ko">내 휴대폰 설정 도구</summary>
@@ -93,6 +95,7 @@
     <p xml:lang="gl">A configuración de Plasma permítelle configurar o KDE Plasma móbil para adaptalo ás súas necesidades.</p>
     <p xml:lang="he">הגדרות פלזמה מאפשרות לך להגדיר ולשפר את פלזמה לניידים מבית KDE כדי שיתאים טוב יותר לצרכים שלך.</p>
     <p xml:lang="ia">Preferentias de Plasma  te pemitte configurar e pinciar tu mobile de Plasma KDE pro facer que illo satisface meliormente tu necessitates.</p>
+    <p xml:lang="is">Plasma-stillingar gera þér kleift að stilla og aðlaga KDE Plasma símann þinn eins og þér hentar best.</p>
     <p xml:lang="it">Impostazioni Plasma ti consente di configurare e modificare il tuo dispositivo mobile Plasma di KDE per adattarlo al meglio alle tue esigenze.</p>
     <p xml:lang="ka">Plasma-ის მორგება საშუალებას გაძლევთ, მოირგოთ და შეცვალოთ თქვენი KDE Plasma-ის მობილური ინტერფეისი, რომ მან უკეთ დააკმაყოფილოს თქვენი საჭიროებები.</p>
     <p xml:lang="ko">Plasma 설정을 사용하여 KDE Plasma 모바일을 사용자에게 맞게 설정할 수 있습니다.</p>
