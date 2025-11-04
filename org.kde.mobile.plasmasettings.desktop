@@ -156,7 +156,6 @@ X-KDE-PluginInfo-Website=https://plasma-mobile.org
 X-DBUS-StartupType=Unique
 X-DBUS-ServiceName=org.kde.mobile.plasmasettings
 Categories=Qt;KDE;Settings;
-X-KDE-FormFactors=tablet,handset
 Keywords=Preferences;Settings;
 Keywords[ar]=التفضيلات;الإعدادات;تفضيلات;إعدادات;
 Keywords[ast]=Preferencies;Preferencia;Opciones;Opción;Configuración;
