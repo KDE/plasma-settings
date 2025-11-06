@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: mobile.plasmasettings\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-09-11 00:44+0000\n"
+"POT-Creation-Date: 2025-11-06 15:23+0000\n"
 "PO-Revision-Date: 2025-07-10 14:23+0200\n"
 "Last-Translator: Philipp Kiemle <l10n@prly.mozmail.com>\n"
 "Language-Team: German <kde-i18n-de@kde.org>\n"
@@ -28,8 +28,9 @@ msgid "Touch-friendly settings application."
 msgstr "Anwendung für Einstellungen auf Touch-Geräten."
 
 #: src/main.cpp:53
-#, kde-format
-msgid "© 2011-2015 KDE Community"
+#, fuzzy, kde-format
+#| msgid "© 2011-2015 KDE Community"
+msgid "© 2011-2025 KDE Community"
 msgstr "© 2011–2015 KDE-Gemeinschaft"
 
 #: src/main.cpp:54

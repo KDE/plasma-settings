@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kdeorg\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-09-11 00:44+0000\n"
+"POT-Creation-Date: 2025-11-06 15:23+0000\n"
 "PO-Revision-Date: 2024-04-22 15:59\n"
 "Last-Translator: \n"
 "Language-Team: Chinese Simplified\n"
@@ -29,8 +29,9 @@ msgid "Touch-friendly settings application."
 msgstr "对触摸友好的设置应用。"
 
 #: src/main.cpp:53
-#, kde-format
-msgid "© 2011-2015 KDE Community"
+#, fuzzy, kde-format
+#| msgid "© 2011-2015 KDE Community"
+msgid "© 2011-2025 KDE Community"
 msgstr "© 2011-2015 KDE Community"
 
 #: src/main.cpp:54

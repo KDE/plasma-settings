@@ -5,7 +5,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-settings\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-09-11 00:44+0000\n"
+"POT-Creation-Date: 2025-11-06 15:23+0000\n"
 "PO-Revision-Date: 2022-07-02 13:13+0200\n"
 "Last-Translator: Karl Ove Hufthammer <karl@huftis.org>\n"
 "Language-Team: Norwegian Nynorsk <l10n-no@lister.huftis.org>\n"
@@ -31,7 +31,7 @@ msgstr "Trykksjermvennleg innstillingsprogram."
 
 #: src/main.cpp:53
 #, kde-format
-msgid "© 2011-2015 KDE Community"
+msgid "© 2011-2025 KDE Community"
 msgstr ""
 
 #: src/main.cpp:54

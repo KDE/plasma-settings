@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-settings\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-09-11 00:44+0000\n"
+"POT-Creation-Date: 2025-11-06 15:23+0000\n"
 "PO-Revision-Date: 2021-12-23 11:38+0100\n"
 "Last-Translator: Phu Hung Nguyen <phu.nguyen@kdemail.net>\n"
 "Language-Team: Vietnamese <kde-l10n-vi@kde.org>\n"
@@ -29,7 +29,7 @@ msgstr "Ứng dụng \"Thiết lập\" phù hợp với thiết bị cảm ứng
 
 #: src/main.cpp:53
 #, kde-format
-msgid "© 2011-2015 KDE Community"
+msgid "© 2011-2025 KDE Community"
 msgstr ""
 
 #: src/main.cpp:54

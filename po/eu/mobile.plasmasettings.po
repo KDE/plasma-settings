@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-settings\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-09-11 00:44+0000\n"
+"POT-Creation-Date: 2025-11-06 15:23+0000\n"
 "PO-Revision-Date: 2025-09-11 21:13+0200\n"
 "Last-Translator: Iñigo Salvador Azurmendi <xalba@ni.eus>\n"
 "Language-Team: Basque <kde-i18n-eu@kde.org>\n"
@@ -31,8 +31,9 @@ msgid "Touch-friendly settings application."
 msgstr "Ukimenarekiko lagunkoiak diren ezarpenen aplikazioa."
 
 #: src/main.cpp:53
-#, kde-format
-msgid "© 2011-2015 KDE Community"
+#, fuzzy, kde-format
+#| msgid "© 2011-2015 KDE Community"
+msgid "© 2011-2025 KDE Community"
 msgstr "© 2011-2015 KDE komunitatea"
 
 #: src/main.cpp:54
