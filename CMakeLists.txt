@@ -3,7 +3,7 @@
 
 cmake_minimum_required(VERSION 3.16)
 
-set(PROJECT_VERSION "25.07.0")
+set(PROJECT_VERSION "25.11.0")
 project(plasma-settings VERSION ${PROJECT_VERSION})
 
 include(FeatureSummary)

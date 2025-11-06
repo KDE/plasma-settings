@@ -50,7 +50,7 @@ int main(int argc, char **argv)
                          QStringLiteral(PLASMA_SETTINGS_VERSION_STRING),
                          i18n("Touch-friendly settings application."),
                          KAboutLicense::GPL,
-                         i18n("© 2011-2015 KDE Community"));
+                         i18n("© 2011-2025 KDE Community"));
     aboutData.addAuthor(i18n("Devin Lin"), i18n("Maintainer"), u"espidev@gmail.com"_s);
     aboutData.addAuthor(i18n("Sebastian Kügler"), i18n("Previous Maintainer"), u"sebas@kde.org"_s);
     aboutData.addAuthor(i18n("Marco Martin"), i18n("Previous Maintainer"), u"mart@kde.org"_s);
