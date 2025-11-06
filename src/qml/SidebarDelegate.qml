@@ -18,8 +18,8 @@ Delegates.RoundedItemDelegate {
 
     property bool showArrow: false
 
-    padding: Kirigami.Units.largeSpacing
-    spacing: Kirigami.Units.largeSpacing * 2
+    padding: Kirigami.Settings.isMobile ? (Kirigami.Units.largeSpacing + Kirigami.Units.smallSpacing) : Kirigami.Units.largeSpacing
+    spacing: Kirigami.Settings.isMobile ? Kirigami.Units.gridUnit : Kirigami.Units.largeSpacing
     icon.width: Kirigami.Units.iconSizes.smallMedium
     icon.height: Kirigami.Units.iconSizes.smallMedium
 
