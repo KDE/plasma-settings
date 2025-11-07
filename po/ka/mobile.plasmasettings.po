@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: plasma-settings\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2025-11-06 15:23+0000\n"
-"PO-Revision-Date: 2025-09-11 03:48+0200\n"
+"PO-Revision-Date: 2025-11-06 20:35+0100\n"
 "Last-Translator: Temuri Doghonadze <temuri.doghonadze@gmail.com>\n"
 "Language-Team: Georgian <kde-i18n-doc@kde.org>\n"
 "Language: ka\n"
@@ -16,7 +16,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"X-Generator: Poedit 3.7\n"
+"X-Generator: Poedit 3.8\n"
 
 #: src/main.cpp:49
 #, kde-format
@@ -29,10 +29,9 @@ msgid "Touch-friendly settings application."
 msgstr "მორგების  სენსორულ ეკრანთან თავსებადი აპლიკაცია."
 
 #: src/main.cpp:53
-#, fuzzy, kde-format
-#| msgid "© 2011-2015 KDE Community"
+#, kde-format
 msgid "© 2011-2025 KDE Community"
-msgstr "© 2011-2015 KDE-ის საზოგადოება"
+msgstr "© 2011-2025 KDE-ის საზოგადოება"
 
 #: src/main.cpp:54
 #, kde-format
