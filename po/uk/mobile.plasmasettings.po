@@ -9,7 +9,7 @@ msgstr ""
 "Project-Id-Version: mobile.plasmasettings\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2025-11-06 15:23+0000\n"
-"PO-Revision-Date: 2025-09-11 09:03+0300\n"
+"PO-Revision-Date: 2025-11-07 11:58+0200\n"
 "Last-Translator: Yuri Chornoivan <yurchor@ukr.net>\n"
 "Language-Team: Ukrainian <trans-uk@lists.fedoraproject.org>\n"
 "Language: uk\n"
@@ -31,10 +31,9 @@ msgid "Touch-friendly settings application."
 msgstr "Програма керування параметрами із сенсорним інтерфейсом."
 
 #: src/main.cpp:53
-#, fuzzy, kde-format
-#| msgid "© 2011-2015 KDE Community"
+#, kde-format
 msgid "© 2011-2025 KDE Community"
-msgstr "© Спільнота KDE, 2011–2015"
+msgstr "© Спільнота KDE, 2011–2025"
 
 #: src/main.cpp:54
 #, kde-format

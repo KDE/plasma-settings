@@ -7,7 +7,7 @@ msgstr ""
 "Project-Id-Version: plasma-settings\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2025-11-06 15:23+0000\n"
-"PO-Revision-Date: 2025-09-11 06:43+0200\n"
+"PO-Revision-Date: 2025-11-07 10:43+0100\n"
 "Last-Translator: Matjaž Jeran <matjaz.jeran@amis.net>\n"
 "Language-Team: Slovenian <lugos-slo@lugos.si>\n"
 "Language: sl\n"
@@ -16,7 +16,7 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=4; plural=(n%100==1 ? 1 : n%100==2 ? 2 : n%100==3 || n"
 "%100==4 ? 3 : 0);\n"
-"X-Generator: Poedit 3.7\n"
+"X-Generator: Poedit 3.8\n"
 
 #: src/main.cpp:49
 #, kde-format
@@ -29,10 +29,9 @@ msgid "Touch-friendly settings application."
 msgstr "Dotikom prijazen program za nastavitve."
 
 #: src/main.cpp:53
-#, fuzzy, kde-format
-#| msgid "© 2011-2015 KDE Community"
+#, kde-format
 msgid "© 2011-2025 KDE Community"
-msgstr "© 2011-2015 Skupnost KDE"
+msgstr "© 2011-2025 Skupnost KDE"
 
 #: src/main.cpp:54
 #, kde-format
