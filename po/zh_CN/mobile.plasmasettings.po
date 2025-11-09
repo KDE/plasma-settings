@@ -29,10 +29,9 @@ msgid "Touch-friendly settings application."
 msgstr "对触摸友好的设置应用。"
 
 #: src/main.cpp:53
-#, fuzzy, kde-format
-#| msgid "© 2011-2015 KDE Community"
+#, kde-format
 msgid "© 2011-2025 KDE Community"
-msgstr "© 2011-2015 KDE Community"
+msgstr "© 2011-2025 KDE Community"
 
 #: src/main.cpp:54
 #, kde-format
