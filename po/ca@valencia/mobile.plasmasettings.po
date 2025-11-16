@@ -10,7 +10,7 @@ msgstr ""
 "Project-Id-Version: plasma-settings\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2025-11-06 15:23+0000\n"
-"PO-Revision-Date: 2025-09-11 10:10+0200\n"
+"PO-Revision-Date: 2025-11-06 18:04+0100\n"
 "Last-Translator: Josep M. Ferrer <txemaq@gmail.com>\n"
 "Language-Team: Catalan <kde-i18n-ca@kde.org>\n"
 "Language: ca@valencia\n"
@@ -19,7 +19,7 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
 "X-Accelerator-Marker: &\n"
-"X-Generator: Lokalize 25.08.0\n"
+"X-Generator: Lokalize 25.04.0\n"
 
 #: src/main.cpp:49
 #, kde-format
@@ -32,10 +32,9 @@ msgid "Touch-friendly settings application."
 msgstr "Aplicació de configuració tàctil."
 
 #: src/main.cpp:53
-#, fuzzy, kde-format
-#| msgid "© 2011-2015 KDE Community"
+#, kde-format
 msgid "© 2011-2025 KDE Community"
-msgstr "© 2011-2015 Comunitat KDE"
+msgstr "© 2011-2025 Comunitat KDE"
 
 #: src/main.cpp:54
 #, kde-format
