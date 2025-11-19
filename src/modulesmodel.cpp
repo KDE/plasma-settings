@@ -14,6 +14,7 @@
 #include <QSet>
 #include <QStandardPaths>
 
+#include <KAuthorized>
 #include <KCategorizedSortFilterProxyModel>
 #include <KConfigGroup>
 #include <KDesktopFile>
@@ -37,8 +38,14 @@ void ModulesModel::initModules()
     MenuItem *oldRootModule = m_rootModule;
     m_rootModule = new MenuItem{true, nullptr};
 
-    // Filter to whether the kcm belongs to the current platform (unless m_ignorePlatforms = true)
+    // Filter to whether the kcm belongs to the current platform (unless m_ignorePlatforms = true),
+    // also respect kiosk / KAuthorize restrictions and filter out "forbidden" allowed modules
     auto filter = [this](const KPluginMetaData &data) {
+
+        if (!KAuthorized::authorizeControlModule(data.pluginId())) {
+            return false;
+        }
+
         if (m_ignorePlatforms) {
             return true;
         }
