@@ -178,6 +178,8 @@ Kirigami.AbstractApplicationWindow {
                 pageStack,
                 {"kcm": SettingsApp.activeModule.kcm, "internalPage": SettingsApp.activeModule.kcm.mainUi}
             );
+            loadedKCMPage.loadKCM();
+
             pageStack.push(loadedKCMPage);
         } else if (isWidescreen) {
             pageStack.push(defaultPage);

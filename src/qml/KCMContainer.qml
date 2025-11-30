@@ -13,6 +13,7 @@ import org.kde.kcmutils as KCM
 
 import org.kde.plasma.settings
 
+// Container for every KCM page
 Kirigami.Page {
     id: container
     property QtObject kcm
@@ -31,10 +32,14 @@ Kirigami.Page {
     bottomPadding: 0
 
     flickable: internalPage.flickable
-    actions: [
-        internalPage.actions.main,
-        internalPage.contextualActions
-    ]
+
+    // Called once by initial kcm load (and not further pages in the KCM added to the stack)
+    function loadKCM() {
+        if (kcm && kcm.load !== undefined) {
+            kcm.load();
+            container.kcmSupportsInstantApply =  Qt.binding(() => kcm.supportsInstantApply);
+        }
+    }
 
     onInternalPageChanged: {
         internalPage.parent = contentItem;
@@ -50,10 +55,6 @@ Kirigami.Page {
         // setting a binding seems to not work, add them manually
         for (let action of internalPage.actions) {
             actions.push(action);
-        }
-        if (kcm && kcm.load !== undefined) {
-            kcm.load();
-            container.kcmSupportsInstantApply =  Qt.binding(() => kcm.supportsInstantApply);
         }
     }
 
