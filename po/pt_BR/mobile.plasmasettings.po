@@ -11,7 +11,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-settings\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-11-17 11:54+0000\n"
+"POT-Creation-Date: 2025-12-02 00:44+0000\n"
 "PO-Revision-Date: 2025-11-08 21:10-0300\n"
 "Last-Translator: Guilherme Marçal Silva <guimarcalsilva@gmail.com>\n"
 "Language-Team: Brazilian Portuguese <kde-i18n-pt_BR@kde.org>\n"
@@ -126,19 +126,19 @@ msgstr "Configurações do sistema"
 msgid "Open a configuration page from the sidebar."
 msgstr "Abrir a página de configuração a partir da barra lateral."
 
-#: src/qml/KCMContainer.qml:97
+#: src/qml/KCMContainer.qml:98
 #, kde-format
 msgctxt "kcm button"
 msgid "Reset"
 msgstr "Redefinir"
 
-#: src/qml/KCMContainer.qml:104
+#: src/qml/KCMContainer.qml:105
 #, kde-format
 msgctxt "kcm button"
 msgid "Defaults"
 msgstr "Padrões"
 
-#: src/qml/KCMContainer.qml:114
+#: src/qml/KCMContainer.qml:115
 #, kde-format
 msgctxt "kcm button"
 msgid "Apply"

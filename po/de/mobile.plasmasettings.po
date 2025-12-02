@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: mobile.plasmasettings\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-11-17 11:54+0000\n"
+"POT-Creation-Date: 2025-12-02 00:44+0000\n"
 "PO-Revision-Date: 2025-07-10 14:23+0200\n"
 "Last-Translator: Philipp Kiemle <l10n.daphipz@fastmail.de>\n"
 "Language-Team: German <kde-i18n-de@kde.org>\n"
@@ -125,19 +125,19 @@ msgstr "Systemeinstellungen"
 msgid "Open a configuration page from the sidebar."
 msgstr "Öffnen Sie eine Konfigurationsseite in der Seitenleiste."
 
-#: src/qml/KCMContainer.qml:97
+#: src/qml/KCMContainer.qml:98
 #, kde-format
 msgctxt "kcm button"
 msgid "Reset"
 msgstr "Zurücksetzen"
 
-#: src/qml/KCMContainer.qml:104
+#: src/qml/KCMContainer.qml:105
 #, kde-format
 msgctxt "kcm button"
 msgid "Defaults"
 msgstr "Voreinstellungen"
 
-#: src/qml/KCMContainer.qml:114
+#: src/qml/KCMContainer.qml:115
 #, kde-format
 msgctxt "kcm button"
 msgid "Apply"

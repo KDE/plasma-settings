@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-settings\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-11-17 11:54+0000\n"
+"POT-Creation-Date: 2025-12-02 00:44+0000\n"
 "PO-Revision-Date: 2025-10-27 10:35+0200\n"
 "Last-Translator: Alexander Yavorskiy <kekcuha@gmail.com>\n"
 "Language-Team: Russian <kde-russian@lists.kde.ru>\n"
@@ -129,19 +129,19 @@ msgstr "Параметры системы"
 msgid "Open a configuration page from the sidebar."
 msgstr "Откройте страницу настройки с боковой панели."
 
-#: src/qml/KCMContainer.qml:97
+#: src/qml/KCMContainer.qml:98
 #, kde-format
 msgctxt "kcm button"
 msgid "Reset"
 msgstr "Сброс"
 
-#: src/qml/KCMContainer.qml:104
+#: src/qml/KCMContainer.qml:105
 #, kde-format
 msgctxt "kcm button"
 msgid "Defaults"
 msgstr "По умолчанию"
 
-#: src/qml/KCMContainer.qml:114
+#: src/qml/KCMContainer.qml:115
 #, kde-format
 msgctxt "kcm button"
 msgid "Apply"

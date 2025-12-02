@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-settings\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-11-17 11:54+0000\n"
+"POT-Creation-Date: 2025-12-02 00:44+0000\n"
 "PO-Revision-Date: 2025-09-24 16:29+0300\n"
 "Last-Translator: Toms Trasuns <toms.trasuns@posteo.net>\n"
 "Language-Team: Latvian <kde-i18n-doc@kde.org>\n"
@@ -125,19 +125,19 @@ msgstr "Sistēmas iestatījumi"
 msgid "Open a configuration page from the sidebar."
 msgstr "Atvērt konfigurācijas lapu sānu joslā."
 
-#: src/qml/KCMContainer.qml:97
+#: src/qml/KCMContainer.qml:98
 #, kde-format
 msgctxt "kcm button"
 msgid "Reset"
 msgstr "Atiestatīt"
 
-#: src/qml/KCMContainer.qml:104
+#: src/qml/KCMContainer.qml:105
 #, kde-format
 msgctxt "kcm button"
 msgid "Defaults"
 msgstr "Noklusējumi"
 
-#: src/qml/KCMContainer.qml:114
+#: src/qml/KCMContainer.qml:115
 #, kde-format
 msgctxt "kcm button"
 msgid "Apply"
