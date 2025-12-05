@@ -112,7 +112,7 @@ Kirigami.ScrollablePage {
         model: (SettingsApp.filterString.length > 0) ? SettingsApp.searchModel : SettingsApp.categoryModel
 
         activeFocusOnTab: true
-        keyNavigationWraps: true
+        boundsBehavior: Flickable.StopAtBounds
 
         Accessible.role: Accessible.List
 
