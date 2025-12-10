@@ -7,7 +7,7 @@ msgstr ""
 "Project-Id-Version: plasma-settings\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2025-12-02 00:44+0000\n"
-"PO-Revision-Date: 2025-10-02 09:39+0200\n"
+"PO-Revision-Date: 2025-12-05 10:23+0100\n"
 "Last-Translator: Vit Pelcak <vit@pelcak.org>\n"
 "Language-Team: Czech <kde-i18n-doc@kde.org>\n"
 "Language: cs\n"
@@ -15,7 +15,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=3; plural=(n==1) ? 0 : (n>=2 && n<=4) ? 1 : 2;\n"
-"X-Generator: Lokalize 25.08.1\n"
+"X-Generator: Lokalize 25.08.3\n"
 
 #: src/main.cpp:49
 #, kde-format
@@ -30,7 +30,7 @@ msgstr ""
 #: src/main.cpp:53
 #, kde-format
 msgid "© 2011-2025 KDE Community"
-msgstr ""
+msgstr "© 2011-2025 Komunita KDE"
 
 #: src/main.cpp:54
 #, kde-format
@@ -150,12 +150,12 @@ msgstr "Zobrazovat nabídku"
 #: src/qml/SidebarCategoriesPage.qml:74
 #, kde-format
 msgid "Show Modules for All Platforms"
-msgstr ""
+msgstr "Zobrazovat moduly všech platforem"
 
 #: src/qml/SidebarCategoriesPage.qml:86
 #, kde-format
 msgid "About Plasma Settings"
-msgstr ""
+msgstr "O nastavení Plasma"
 
 #: src/qml/SidebarCategoriesPage.qml:91
 #, kde-format
