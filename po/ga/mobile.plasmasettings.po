@@ -1,27 +1,27 @@
-# SOME DESCRIPTIVE TITLE.
-# Copyright (C) YEAR This file is copyright:
+# Copyright (C) 2026 This file is copyright:
 # This file is distributed under the same license as the plasma-settings package.
-# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+# SPDX-FileCopyrightText: 2026 Charlotte <altronic25@protonmail.com>
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: plasma-settings\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2025-12-02 00:44+0000\n"
-"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
-"Language-Team: Irish Gaelic <kde-i18n-doc@kde.org>\n"
+"PO-Revision-Date: 2026-01-01 16:07+0000\n"
+"Last-Translator: Charlotte <altronic25@protonmail.com>\n"
+"Language-Team: Irish\n"
 "Language: ga\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=5; plural=n==1 ? 0 : n==2 ? 1 : n<7 ? 2 : n < 11 ? "
 "3 : 4\n"
+"X-Generator: Lokalize 25.12.0\n"
 
 #: src/main.cpp:49
 #, kde-format
 msgid "Settings"
-msgstr ""
+msgstr "Socruithe"
 
 #: src/main.cpp:51
 #, kde-format
@@ -31,12 +31,12 @@ msgstr ""
 #: src/main.cpp:53
 #, kde-format
 msgid "© 2011-2025 KDE Community"
-msgstr ""
+msgstr "© 2011-2025 Pobal KDE"
 
 #: src/main.cpp:54
 #, kde-format
 msgid "Devin Lin"
-msgstr ""
+msgstr "Devin Lin"
 
 #: src/main.cpp:54
 #, kde-format
@@ -46,7 +46,7 @@ msgstr ""
 #: src/main.cpp:55
 #, kde-format
 msgid "Sebastian Kügler"
-msgstr ""
+msgstr "Sebastian Kügler"
 
 #: src/main.cpp:55 src/main.cpp:56
 #, kde-format
@@ -56,7 +56,7 @@ msgstr ""
 #: src/main.cpp:56
 #, kde-format
 msgid "Marco Martin"
-msgstr ""
+msgstr "Marco Martin"
 
 #: src/main.cpp:66
 #, kde-format
@@ -73,7 +73,7 @@ msgstr ""
 #: src/main.cpp:70
 #, kde-format
 msgid "formfactor"
-msgstr ""
+msgstr "formfactor"
 
 #: src/main.cpp:71
 #, kde-format
@@ -83,7 +83,7 @@ msgstr ""
 #: src/main.cpp:71
 #, kde-format
 msgid "modulename"
-msgstr ""
+msgstr "modulename"
 
 #: src/main.cpp:72
 #, kde-format
@@ -113,7 +113,7 @@ msgstr ""
 #: src/qml/DefaultPage.qml:29
 #, kde-format
 msgid "System Settings"
-msgstr ""
+msgstr "Socruithe Córais"
 
 #: src/qml/DefaultPage.qml:35
 #, kde-format
@@ -141,7 +141,7 @@ msgstr ""
 #: src/qml/SidebarCategoriesPage.qml:47
 #, kde-format
 msgid "Search…"
-msgstr ""
+msgstr "Cuardaigh..."
 
 #: src/qml/SidebarCategoriesPage.qml:58
 #, kde-format
