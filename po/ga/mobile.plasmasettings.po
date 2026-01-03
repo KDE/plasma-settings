@@ -7,7 +7,7 @@ msgstr ""
 "Project-Id-Version: plasma-settings\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2025-12-02 00:44+0000\n"
-"PO-Revision-Date: 2026-01-01 16:07+0000\n"
+"PO-Revision-Date: 2026-01-01 18:38+0000\n"
 "Last-Translator: Charlotte <altronic25@protonmail.com>\n"
 "Language-Team: Irish\n"
 "Language: ga\n"
@@ -16,7 +16,6 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=5; plural=n==1 ? 0 : n==2 ? 1 : n<7 ? 2 : n < 11 ? "
 "3 : 4\n"
-"X-Generator: Lokalize 25.12.0\n"
 
 #: src/main.cpp:49
 #, kde-format
@@ -71,7 +70,8 @@ msgid ""
 msgstr ""
 
 #: src/main.cpp:70
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "formfactor"
 msgid "formfactor"
 msgstr "formfactor"
 
@@ -81,7 +81,8 @@ msgid "Settings module to open"
 msgstr ""
 
 #: src/main.cpp:71
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "modulename"
 msgid "modulename"
 msgstr "modulename"
 
