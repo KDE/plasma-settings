@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: plasma-settings\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2025-12-02 00:44+0000\n"
-"PO-Revision-Date: 2022-11-16 22:13+0200\n"
+"PO-Revision-Date: 2026-01-15 18:43+0200\n"
 "Last-Translator: Moo <<>>\n"
 "Language-Team: none\n"
 "Language: lt\n"
@@ -17,7 +17,7 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=4; plural=(n==1 ? 0 : n%10>=2 && (n%100<10 || n"
 "%100>=20) ? 1 : n%10==0 || (n%100>10 && n%100<20) ? 2 : 3);\n"
-"X-Generator: Poedit 3.2.1\n"
+"X-Generator: Poedit 3.8\n"
 
 #: src/main.cpp:49
 #, kde-format
@@ -27,17 +27,17 @@ msgstr "Nuostatos"
 #: src/main.cpp:51
 #, kde-format
 msgid "Touch-friendly settings application."
-msgstr ""
+msgstr "Lietimui patogi nuostatų programa."
 
 #: src/main.cpp:53
 #, kde-format
 msgid "© 2011-2025 KDE Community"
-msgstr ""
+msgstr "© 2011–2025 KDE bendruomenė"
 
 #: src/main.cpp:54
 #, kde-format
 msgid "Devin Lin"
-msgstr ""
+msgstr "Devin Lin"
 
 #: src/main.cpp:54
 #, kde-format
@@ -50,10 +50,9 @@ msgid "Sebastian Kügler"
 msgstr "Sebastian Kügler"
 
 #: src/main.cpp:55 src/main.cpp:56
-#, fuzzy, kde-format
-#| msgid "Maintainer"
+#, kde-format
 msgid "Previous Maintainer"
-msgstr "Prižiūrėtojas"
+msgstr "Ankstesnis prižiūrėtojas"
 
 #: src/main.cpp:56
 #, kde-format
@@ -71,6 +70,10 @@ msgid ""
 "Limit to modules suitable for <formfactor>, e.g. handset, tablet, "
 "mediacenter, desktop, test, all (default handset)"
 msgstr ""
+"Apriboti iki modulių, tinkamų <formfactor> reikšmei, pvz., handset "
+"(ragelis), tablet (planšetė), mediacenter (medijos centras), desktop "
+"(stalinis kompiuteris), test (išbandymas), all (visi) (pagal numatymą "
+"headset)"
 
 #: src/main.cpp:70
 #, kde-format
@@ -112,7 +115,7 @@ msgstr "paketopavadinimas"
 #: src/qml/components/PageHeader.qml:42
 #, kde-format
 msgid "Navigate Back"
-msgstr ""
+msgstr "Naršyti atgal"
 
 #: src/qml/DefaultPage.qml:29
 #, kde-format
@@ -122,52 +125,50 @@ msgstr "Sistemos nuostatos"
 #: src/qml/DefaultPage.qml:35
 #, kde-format
 msgid "Open a configuration page from the sidebar."
-msgstr ""
+msgstr "Atverti konfigūracijos puslapį iš šoninės juostos."
 
 #: src/qml/KCMContainer.qml:98
 #, kde-format
 msgctxt "kcm button"
 msgid "Reset"
-msgstr ""
+msgstr "Atstatyti"
 
 #: src/qml/KCMContainer.qml:105
 #, kde-format
 msgctxt "kcm button"
 msgid "Defaults"
-msgstr ""
+msgstr "Numatytosios nuostatos"
 
 #: src/qml/KCMContainer.qml:115
 #, kde-format
 msgctxt "kcm button"
 msgid "Apply"
-msgstr ""
+msgstr "Taikyti"
 
 #: src/qml/SidebarCategoriesPage.qml:47
-#, fuzzy, kde-format
-#| msgid "Search"
+#, kde-format
 msgid "Search…"
-msgstr "Paieška"
+msgstr "Ieškoti…"
 
 #: src/qml/SidebarCategoriesPage.qml:58
 #, kde-format
 msgid "Show menu"
-msgstr ""
+msgstr "Rodyti meniu"
 
 #: src/qml/SidebarCategoriesPage.qml:74
 #, kde-format
 msgid "Show Modules for All Platforms"
-msgstr ""
+msgstr "Rodyti visų platformų modulius"
 
 #: src/qml/SidebarCategoriesPage.qml:86
-#, fuzzy, kde-format
-#| msgid "Plasma Mobile Settings"
+#, kde-format
 msgid "About Plasma Settings"
-msgstr "Plasma Mobile nuostatos"
+msgstr "Apie Plasma nuostatas"
 
 #: src/qml/SidebarCategoriesPage.qml:91
 #, kde-format
 msgid "About KDE"
-msgstr ""
+msgstr "Apie KDE"
 
 #, fuzzy
 #~| msgid "Copyright 2011-2015, Sebastian Kügler"
