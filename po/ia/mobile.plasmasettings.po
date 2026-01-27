@@ -1,13 +1,13 @@
 # Copyright (C) 2025 This file is copyright:
 # This file is distributed under the same license as the plasma-settings package.
 #
-# SPDX-FileCopyrightText: 2020, 2021, 2025 giovanni <g.sora@tiscali.it>
+# SPDX-FileCopyrightText: 2020, 2021, 2025, 2026 giovanni <g.sora@tiscali.it>
 msgid ""
 msgstr ""
 "Project-Id-Version: plasma-settings\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2025-12-02 00:44+0000\n"
-"PO-Revision-Date: 2025-02-24 16:20+0100\n"
+"PO-Revision-Date: 2026-01-26 16:27+0100\n"
 "Last-Translator: giovanni <g.sora@tiscali.it>\n"
 "Language-Team: Interlingua <kde-i18n-doc@kde.org>\n"
 "Language: ia\n"
@@ -28,10 +28,9 @@ msgid "Touch-friendly settings application."
 msgstr "Application de preferentias amicabile de tactil."
 
 #: src/main.cpp:53
-#, fuzzy, kde-format
-#| msgid "© 2011-2015 KDE Community"
+#, kde-format
 msgid "© 2011-2025 KDE Community"
-msgstr "© 2011-2015 Communitate de KDE"
+msgstr "© 2011-2025 Communitate de KDE"
 
 #: src/main.cpp:54
 #, kde-format
@@ -110,7 +109,7 @@ msgstr "nomine de pacchetto"
 #: src/qml/components/PageHeader.qml:42
 #, kde-format
 msgid "Navigate Back"
-msgstr ""
+msgstr "Navigation de retro"
 
 #: src/qml/DefaultPage.qml:29
 #, kde-format
@@ -126,25 +125,24 @@ msgstr "Aperi un psgins de configuratiomab le barra lateral."
 #, kde-format
 msgctxt "kcm button"
 msgid "Reset"
-msgstr ""
+msgstr "Reinitialisa"
 
 #: src/qml/KCMContainer.qml:105
 #, kde-format
 msgctxt "kcm button"
 msgid "Defaults"
-msgstr ""
+msgstr "Predefinite"
 
 #: src/qml/KCMContainer.qml:115
 #, kde-format
 msgctxt "kcm button"
 msgid "Apply"
-msgstr ""
+msgstr "Applica"
 
 #: src/qml/SidebarCategoriesPage.qml:47
-#, fuzzy, kde-format
-#| msgid "Search"
+#, kde-format
 msgid "Search…"
-msgstr "Cerca"
+msgstr "Cerca…"
 
 #: src/qml/SidebarCategoriesPage.qml:58
 #, kde-format
@@ -154,18 +152,17 @@ msgstr "Monstra menu"
 #: src/qml/SidebarCategoriesPage.qml:74
 #, kde-format
 msgid "Show Modules for All Platforms"
-msgstr ""
+msgstr "Monstra Modulos per omne platteformas"
 
 #: src/qml/SidebarCategoriesPage.qml:86
-#, fuzzy, kde-format
-#| msgid "Plasma Mobile Settings"
+#, kde-format
 msgid "About Plasma Settings"
-msgstr "Preferentias de Plasma Mobile"
+msgstr "Re Preferentias de Plasma"
 
 #: src/qml/SidebarCategoriesPage.qml:91
 #, kde-format
 msgid "About KDE"
-msgstr ""
+msgstr "A proposito de KDE"
 
 #, fuzzy
 #~| msgid "Copyright 2011-2015, Sebastian Kügler"
