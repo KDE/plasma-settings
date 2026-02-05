@@ -1,16 +1,15 @@
-# SOME DESCRIPTIVE TITLE.
-# Copyright (C) YEAR This file is copyright:
+# Copyright (C) 2026 This file is copyright:
 # This file is distributed under the same license as the plasma-settings package.
-# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
 #
+# SPDX-FileCopyrightText: 2026 César A. P. Cláudio <cesarapclaudio@gmail.com>
 msgid ""
 msgstr ""
 "Project-Id-Version: plasma-settings\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2025-12-02 00:44+0000\n"
-"PO-Revision-Date: 2022-03-28 01:52+0100\n"
-"Last-Translator: José Nuno Coelho Pires <zepires@gmail.com>\n"
-"Language-Team: Portuguese <kde-i18n-pt@kde.org>\n"
+"PO-Revision-Date: 2026-02-04 00:36+0000\n"
+"Last-Translator: César A. P. Cláudio <cesarapclaudio@gmail.com>\n"
+"Language-Team: pt\n"
 "Language: pt\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -18,31 +17,32 @@ msgstr ""
 "X-POFile-SpellExtra: all tablet handset desktop mediacenter Kügler test\n"
 "X-POFile-SpellExtra: Sebastian\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Generator: Lokalize 25.12.1\n"
 
 #: src/main.cpp:49
 #, kde-format
 msgid "Settings"
-msgstr "Configuração"
+msgstr "Definições"
 
 #: src/main.cpp:51
 #, kde-format
 msgid "Touch-friendly settings application."
-msgstr "Aplicação de configuração com suporte táctil."
+msgstr "Aplicação de definições otimizada para toque."
 
 #: src/main.cpp:53
 #, kde-format
 msgid "© 2011-2025 KDE Community"
-msgstr ""
+msgstr "© 2011-2025 Comunidade KDE"
 
 #: src/main.cpp:54
 #, kde-format
 msgid "Devin Lin"
-msgstr ""
+msgstr "Devin Lin"
 
 #: src/main.cpp:54
 #, kde-format
 msgid "Maintainer"
-msgstr "Manutenção"
+msgstr "Responsável de manutenção"
 
 #: src/main.cpp:55
 #, kde-format
@@ -50,10 +50,9 @@ msgid "Sebastian Kügler"
 msgstr "Sebastian Kügler"
 
 #: src/main.cpp:55 src/main.cpp:56
-#, fuzzy, kde-format
-#| msgid "Maintainer"
+#, kde-format
 msgid "Previous Maintainer"
-msgstr "Manutenção"
+msgstr "Anterior responsável de manutenção"
 
 #: src/main.cpp:56
 #, kde-format
@@ -63,7 +62,7 @@ msgstr "Marco Martin"
 #: src/main.cpp:66
 #, kde-format
 msgid "List available settings modules"
-msgstr "Lista os módulos de configuração disponíveis"
+msgstr "Listar módulos de definições disponíveis"
 
 #: src/main.cpp:69
 #, kde-format
@@ -71,8 +70,8 @@ msgid ""
 "Limit to modules suitable for <formfactor>, e.g. handset, tablet, "
 "mediacenter, desktop, test, all (default handset)"
 msgstr ""
-"Limitar aos módulos adequados ao <formato>, p.ex. handset, tablet, "
-"mediacenter, desktop, test, all (por omissão 'handset')"
+"Limitar a módulos adequados para <formfactor>, por exemplo: telemóvel, "
+"tablet, centro multimédia, computador, teste, todos (predefinição: telemóvel)"
 
 #: src/main.cpp:70
 #, kde-format
@@ -82,7 +81,7 @@ msgstr "formato"
 #: src/main.cpp:71
 #, kde-format
 msgid "Settings module to open"
-msgstr "Módulo de configuração a abrir"
+msgstr "Módulo de definições a abrir"
 
 #: src/main.cpp:71
 #, kde-format
@@ -92,17 +91,18 @@ msgstr "nome-módulo"
 #: src/main.cpp:72
 #, kde-format
 msgid "Only show a single module, requires --module"
-msgstr "Mostrar apenas um único módulo; obriga ao --module"
+msgstr "Mostrar apenas um módulo; requer --module"
 
 #: src/main.cpp:73
 #, kde-format
 msgid "Start window fullscreen"
-msgstr "Iniciar a janela com ecrã completo"
+msgstr "Iniciar janela em ecrã inteiro"
 
 #: src/main.cpp:74
 #, kde-format
 msgid "Package to use for the UI (default org.kde.mobile.settings)"
-msgstr "Pacote a usar para a interface (por omissão org.kde.mobile.settings)"
+msgstr ""
+"Pacote a utilizar para a interface (por omissão org.kde.mobile.settings)"
 
 #: src/main.cpp:74
 #, kde-format
@@ -112,62 +112,60 @@ msgstr "nome-pacote"
 #: src/qml/components/PageHeader.qml:42
 #, kde-format
 msgid "Navigate Back"
-msgstr ""
+msgstr "Recuar"
 
 #: src/qml/DefaultPage.qml:29
 #, kde-format
 msgid "System Settings"
-msgstr "Configuração do Sistema"
+msgstr "Definições do Sistema"
 
 #: src/qml/DefaultPage.qml:35
 #, kde-format
 msgid "Open a configuration page from the sidebar."
-msgstr "Abrir uma página de configuração da barra lateral."
+msgstr "Abra uma página de definições a partir da barra lateral."
 
 #: src/qml/KCMContainer.qml:98
 #, kde-format
 msgctxt "kcm button"
 msgid "Reset"
-msgstr ""
+msgstr "Repor"
 
 #: src/qml/KCMContainer.qml:105
 #, kde-format
 msgctxt "kcm button"
 msgid "Defaults"
-msgstr ""
+msgstr "Predefinições"
 
 #: src/qml/KCMContainer.qml:115
 #, kde-format
 msgctxt "kcm button"
 msgid "Apply"
-msgstr ""
+msgstr "Aplicar"
 
 #: src/qml/SidebarCategoriesPage.qml:47
-#, fuzzy, kde-format
-#| msgid "Search"
+#, kde-format
 msgid "Search…"
-msgstr "Procurar"
+msgstr "Pesquisar..."
 
 #: src/qml/SidebarCategoriesPage.qml:58
 #, kde-format
 msgid "Show menu"
-msgstr ""
+msgstr "Mostrar menu"
 
 #: src/qml/SidebarCategoriesPage.qml:74
 #, kde-format
 msgid "Show Modules for All Platforms"
-msgstr ""
+msgstr "Mostra módulos para todas as plataformas"
 
 #: src/qml/SidebarCategoriesPage.qml:86
-#, fuzzy, kde-format
-#| msgid "System Settings"
+#, kde-format
 msgid "About Plasma Settings"
-msgstr "Configuração do Sistema"
+msgstr "Sobre as Definições do Sistema"
 
 #: src/qml/SidebarCategoriesPage.qml:91
 #, kde-format
 msgid "About KDE"
-msgstr ""
+msgstr "Sobre o KDE"
 
 #, fuzzy
 #~| msgid "Copyright 2011-2015, Sebastian Kügler"
