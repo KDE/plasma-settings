@@ -16,6 +16,7 @@ qt_target_qml_sources(plasma-settings
     QML_FILES
         qml/DefaultPage.qml
         qml/KCMContainer.qml
+        qml/KCMPageContainer.qml
         qml/Sidebar.qml
         qml/SidebarCategoriesPage.qml
         qml/SidebarDelegate.qml
