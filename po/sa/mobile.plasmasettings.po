@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-settings\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-12-02 00:44+0000\n"
+"POT-Creation-Date: 2026-02-14 00:46+0000\n"
 "PO-Revision-Date: 2024-12-13 19:09+0530\n"
 "Last-Translator: Kali <EMAIL@ADDRESS>\n"
 "Language-Team: Sanskrit <kde-i18n-doc@kde.org>\n"
@@ -122,19 +122,19 @@ msgstr "सिस्टम् सेटिंग्स्"
 msgid "Open a configuration page from the sidebar."
 msgstr "पार्श्वपट्टिकातः विन्यासपृष्ठं उद्घाटयन्तु ।"
 
-#: src/qml/KCMContainer.qml:98
+#: src/qml/KCMPageContainer.qml:73
 #, kde-format
 msgctxt "kcm button"
 msgid "Reset"
 msgstr ""
 
-#: src/qml/KCMContainer.qml:105
+#: src/qml/KCMPageContainer.qml:80
 #, kde-format
 msgctxt "kcm button"
 msgid "Defaults"
 msgstr ""
 
-#: src/qml/KCMContainer.qml:115
+#: src/qml/KCMPageContainer.qml:90
 #, kde-format
 msgctxt "kcm button"
 msgid "Apply"

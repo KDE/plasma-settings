@@ -3,7 +3,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-settings\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-12-02 00:44+0000\n"
+"POT-Creation-Date: 2026-02-14 00:46+0000\n"
 "PO-Revision-Date: 2025-04-03 20:27+0700\n"
 "Last-Translator: Diskette Guy <diskette@dailitation.xyz>\n"
 "Language-Team: Thai <kde-i18n-doc@kde.org>\n"
@@ -119,19 +119,19 @@ msgstr "การตั้งค่าระบบ"
 msgid "Open a configuration page from the sidebar."
 msgstr "เปิดหน้าการกำหนดค่าจากแถปด้านข้าง"
 
-#: src/qml/KCMContainer.qml:98
+#: src/qml/KCMPageContainer.qml:73
 #, kde-format
 msgctxt "kcm button"
 msgid "Reset"
 msgstr ""
 
-#: src/qml/KCMContainer.qml:105
+#: src/qml/KCMPageContainer.qml:80
 #, kde-format
 msgctxt "kcm button"
 msgid "Defaults"
 msgstr ""
 
-#: src/qml/KCMContainer.qml:115
+#: src/qml/KCMPageContainer.qml:90
 #, kde-format
 msgctxt "kcm button"
 msgid "Apply"
