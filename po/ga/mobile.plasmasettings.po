@@ -70,10 +70,9 @@ msgid ""
 msgstr ""
 
 #: src/main.cpp:70
-#, fuzzy, kde-format
-#| msgid "formfactor"
+#, kde-format
 msgid "formfactor"
-msgstr "formfactor"
+msgstr ""
 
 #: src/main.cpp:71
 #, kde-format
@@ -81,10 +80,9 @@ msgid "Settings module to open"
 msgstr ""
 
 #: src/main.cpp:71
-#, fuzzy, kde-format
-#| msgid "modulename"
+#, kde-format
 msgid "modulename"
-msgstr "modulename"
+msgstr ""
 
 #: src/main.cpp:72
 #, kde-format
