@@ -3,8 +3,12 @@
 
 cmake_minimum_required(VERSION 3.16)
 
-set(PROJECT_VERSION "26.02.0")
-project(plasma-settings VERSION ${PROJECT_VERSION})
+# KDE Application Version, managed by release script
+set (RELEASE_SERVICE_VERSION_MAJOR "26")
+set (RELEASE_SERVICE_VERSION_MINOR "03")
+set (RELEASE_SERVICE_VERSION_MICRO "70")
+set (RELEASE_SERVICE_VERSION "${RELEASE_SERVICE_VERSION_MAJOR}.${RELEASE_SERVICE_VERSION_MINOR}.${RELEASE_SERVICE_VERSION_MICRO}")
+project(plasma-settings VERSION ${RELEASE_SERVICE_VERSION})
 
 include(FeatureSummary)
 
@@ -31,7 +35,7 @@ include(ECMSetupVersion)
 include(ECMDeprecationSettings)
 include(ECMQmlModule)
 
-ecm_setup_version(${PROJECT_VERSION}
+ecm_setup_version(${RELEASE_SERVICE_VERSION}
     VARIABLE_PREFIX PLASMA_SETTINGS
     VERSION_HEADER ${CMAKE_CURRENT_BINARY_DIR}/version.h
 )
