@@ -160,7 +160,7 @@ void ModulesModel::initMenuList(MenuItem *parent, const QList<KPluginMetaData> &
 
 QVariant ModulesModel::data(const QModelIndex &index, int role) const
 {
-    if (!index.isValid() || index.row() < 0 || index.row() >= rowCount()) {
+    if (!index.isValid()) {
         return {};
     }
 
@@ -306,19 +306,15 @@ QModelIndex ModulesModel::parent(const QModelIndex &index) const
 
 QList<MenuItem *> ModulesModel::childrenList(MenuItem *parent) const
 {
-    QList<MenuItem *> children = parent->children();
-    for (MenuItem *child : children) {
+    QList<MenuItem *> result;
+    for (MenuItem *child : std::as_const(parent->children())) {
         if (m_exceptions.contains(child)) {
-            children.removeOne(child);
-            children.append(child->children());
+            result.append(child->children());
+        } else {
+            result.append(child);
         }
     }
-    if (!m_ignorePlatforms) {
-        children.removeIf([](MenuItem *child) {
-            return child->moduleData() && !child->moduleData()->isRelevant();
-        });
-    }
-    return children;
+    return result;
 }
 
 MenuItem *ModulesModel::parentItem(MenuItem *child) const
