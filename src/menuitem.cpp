@@ -22,6 +22,8 @@
 #include <KJsonUtils>
 #include <KPluginFactory>
 
+#include <memory>
+
 static bool childIsLessThan(MenuItem *left, MenuItem *right)
 {
     return left->weight() < right->weight();
@@ -60,6 +62,7 @@ public:
     bool isSystemsettingsRootCategory = false;
     bool isExternalAppModule = false;
     KPluginMetaData metaData;
+    std::unique_ptr<KCModuleData> moduleData;
 };
 
 MenuItem::MenuItem(bool isMenu, MenuItem *itsParent)
@@ -217,11 +220,20 @@ void MenuItem::setMetaData(const KPluginMetaData &data)
     d->id = data.pluginId();
     d->systemsettingsCategoryModule = data.value(QStringLiteral("X-KDE-System-Settings-Category-Module"));
     d->isExternalAppModule = data.value(QStringLiteral("IsExternalApp"), false);
+
+    if (data.value(QStringLiteral("X-KDE-System-Settings-Uses-ModuleData"), false)) {
+        d->moduleData.reset(loadModuleData(data));
+    }
 }
 
 KPluginMetaData MenuItem::metaData()
 {
     return d->metaData;
+}
+
+KCModuleData *MenuItem::moduleData() const
+{
+    return d->moduleData.get();
 }
 
 bool MenuItem::showDefaultIndicator() const

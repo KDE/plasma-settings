@@ -10,11 +10,13 @@
 #include "modulesmodel.h"
 
 #include <QDebug>
+#include <QGuiApplication>
 #include <QQuickItem>
 #include <QSet>
 #include <QStandardPaths>
 
 #include <KAuthorized>
+#include <KCModuleData>
 #include <KCategorizedSortFilterProxyModel>
 #include <KConfigGroup>
 #include <KDesktopFile>
@@ -46,9 +48,30 @@ void ModulesModel::initModules()
             return false;
         }
 
+        // Filter out KCMs that don't support the current Qt platform (e.g. X11-only or Wayland-only)
+        const auto supportedPlatforms = data.value(QStringLiteral("X-KDE-OnlyShowOnQtPlatforms"), QStringList());
+        if (!supportedPlatforms.isEmpty()) {
+            const auto platformMatches = [](const QString &platform) {
+                return qGuiApp->platformName().startsWith(platform);
+            };
+            if (std::none_of(supportedPlatforms.begin(), supportedPlatforms.end(), platformMatches)) {
+                return false;
+            }
+        }
+
         if (m_ignorePlatforms) {
             return true;
         }
+
+        // Check if KCM is self-reported to be relevant
+        if (auto factory = KPluginFactory::loadFactory(data).plugin) {
+            auto moduleData = factory->create<KCModuleData>();
+            if (moduleData && !moduleData->isRelevant()) {
+                return false;
+            }
+        }
+
+        // Check platform
 
         auto kRuntimePlatforms = KRuntimePlatform::runtimePlatform();
 
@@ -78,6 +101,7 @@ void ModulesModel::initModules()
     QStringList categories = KFileUtils::findAllUniqueFiles(dirs, QStringList(QStringLiteral("*.desktop")));
 
     initMenuList(m_rootModule, kcms, categories);
+    connectSignals(m_rootModule);
 
     if (oldRootModule) {
         delete oldRootModule;
@@ -190,6 +214,8 @@ QVariant ModulesModel::data(const QModelIndex &index, int role) const
         return mi->menu();
     case IsKCMRole:
         return mi->isLibrary();
+    case IsRelevantRole:
+        return !mi->moduleData() || mi->moduleData()->isRelevant();
     }
 
     return {};
@@ -220,6 +246,7 @@ QHash<int, QByteArray> ModulesModel::roleNames() const
     names[IdRole] = "pluginId";
     names[IsCategoryRole] = "isCategory";
     names[IsKCMRole] = "isKCM";
+    names[IsRelevantRole] = "isRelevant";
     return names;
 }
 
@@ -283,6 +310,11 @@ QList<MenuItem *> ModulesModel::childrenList(MenuItem *parent) const
             children.append(child->children());
         }
     }
+    if (!m_ignorePlatforms) {
+        children.removeIf([](MenuItem *child) {
+            return child->moduleData() && !child->moduleData()->isRelevant();
+        });
+    }
     return children;
 }
 
@@ -333,4 +365,20 @@ void ModulesModel::setIgnorePlatforms(bool ignorePlatforms)
 MenuItem *ModulesModel::rootItem() const
 {
     return m_rootModule;
+}
+
+void ModulesModel::connectSignals(MenuItem *item)
+{
+    if (item->menu()) {
+        const auto children = item->children();
+        for (auto *child : children) {
+            connectSignals(child);
+        }
+    } else {
+        if (auto *moduleData = item->moduleData()) {
+            connect(moduleData, &KCModuleData::relevantChanged, this, [this] {
+                reset();
+            });
+        }
+    }
 }
