@@ -10,6 +10,7 @@
 #include <QAbstractListModel>
 #include <QVector>
 
+#include <KCModuleData>
 #include <KPluginMetaData>
 #include <KQuickConfigModule>
 
@@ -28,6 +29,7 @@ public:
         IdRole = Qt::UserRole + 2,
         IsCategoryRole,
         IsKCMRole,
+        IsRelevantRole,
 
         /**
          * Role used to request the keywords to filter the items when searching.
@@ -68,6 +70,7 @@ public:
 private:
     void initModules();
     void initMenuList(MenuItem *parent, const QList<KPluginMetaData> &kcms, const QStringList &categories);
+    void connectSignals(MenuItem *item);
 
     MenuItem *parentItem(MenuItem *child) const;
 

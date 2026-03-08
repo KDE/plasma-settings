@@ -11,6 +11,7 @@
 
 #include <KService>
 
+class KCModuleData;
 class QString;
 class KDesktopFile;
 class KPluginMetaData;
@@ -165,6 +166,8 @@ public:
     void setMetaData(const KPluginMetaData &data);
 
     KPluginMetaData metaData();
+
+    KCModuleData *moduleData() const;
 
     MenuItem *descendantForModule(const QString &moduleName);
 
