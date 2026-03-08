@@ -43,7 +43,6 @@
   <name xml:lang="pl">Ustawienia Plazmy</name>
   <name xml:lang="pt-BR">Configurações do Plasma</name>
   <name xml:lang="ro">Configurări Plasma</name>
-  <name xml:lang="ru">Параметры Plasma</name>
   <name xml:lang="sl">Nastavitve Plasme</name>
   <name xml:lang="sv">Plasma-inställningar</name>
   <name xml:lang="th">การตั้งค่า Plasma</name>
@@ -76,7 +75,6 @@
   <summary xml:lang="pl">Narzędzia ustawień dla twojego telefonu</summary>
   <summary xml:lang="pt-BR">Ferramentas de configuração para seu smartfone</summary>
   <summary xml:lang="ro">Unelte de configurare pentru telefon</summary>
-  <summary xml:lang="ru">Инструменты для настройки телефона</summary>
   <summary xml:lang="sl">Orodja za konfiguracijo telefona</summary>
   <summary xml:lang="sv">Inställningsverktyg för din telefon</summary>
   <summary xml:lang="th">เครื่องมือตั้งค่าสำหรับโทรศัพท์ของคุณ</summary>
@@ -110,7 +108,6 @@
     <p xml:lang="pl">Ustawienia Plazmy umożliwiają dostosowanie twojej Przenośnej Plazma od KDE, tak aby lepiej spełniał twoje potrzeby.</p>
     <p xml:lang="pt-BR">As Configurações do Plasma permitem que você configure e ajuste seu KDE Plasma Mobile para que ele atenda melhor às suas necessidades.</p>
     <p xml:lang="ro">Configurări Plasma vă permite să personalizați mobilul Plasma KDE pentru a-l face potrivit nevoilor dumneavoastră.</p>
-    <p xml:lang="ru">Приложение «Параметры Plasma» позволяет настроить рабочую среду Plasma для мобильных устройств для удобного использования.</p>
     <p xml:lang="sl">Nastavitve Plasme vam omogočajo, da konfigurirate in prilagodite svoj mobilni telefon KDE Plasmanaj bolje ustreza vašim potrebam.</p>
     <p xml:lang="sv">Plasmas inställningar låter dig anpassa och justera en KDE Plasma-mobil så att den bättre uppfyller dina behov.</p>
     <p xml:lang="th">การตั้งค่า Plasma สามารถตั้งค่าและปรับแต่ง KDE Plasma mobile เพื่อให้ทำให้สะดวกสะบายกับการต้องการของคุณมากขึ้น</p>
