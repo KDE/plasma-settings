@@ -74,10 +74,11 @@ void ModulesModel::initModules()
         // Check platform
 
         auto kRuntimePlatforms = KRuntimePlatform::runtimePlatform();
+        auto kDesktopPlatform = QStringLiteral("desktop");
 
         // HACK: currently on desktop no form factors are specified
         if (kRuntimePlatforms.empty()) {
-            kRuntimePlatforms.append(QStringLiteral("desktop"));
+            kRuntimePlatforms.append(kDesktopPlatform);
         }
 
         // Filter out if the form factor does not match the current runtime platform.
@@ -90,7 +91,9 @@ void ModulesModel::initModules()
                 return true;
             }
         }
-        return data.formFactors().empty();
+
+        // Filter out KCM if form factors is empty (unless we are on desktop, for compatibility purposes)
+        return kRuntimePlatforms.contains(kDesktopPlatform) && data.formFactors().empty();
     };
 
     QList<KPluginMetaData> kcms = KPluginMetaData::findPlugins(u"kcms"_s, filter);
