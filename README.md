@@ -7,7 +7,17 @@
 
 Settings application for Plasma Mobile.
 
-It only supports QML based KCMs.
+It only supports QML based KCMs (settings modules).
+
+## Running
+
+The application filters KCMs by the current platform environment variable:
+
+```bash
+PLASMA_PLATFORM=handset plasma-settings # For KCMs relevant to Plasma Mobile
+```
+
+By default, the platform is `desktop`.
 
 ## Build and run from source
 
