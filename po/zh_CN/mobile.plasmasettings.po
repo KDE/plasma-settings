@@ -14,9 +14,9 @@ msgstr ""
 "X-Crowdin-Project: kdeorg\n"
 "X-Crowdin-Project-ID: 269464\n"
 "X-Crowdin-Language: zh-CN\n"
-"X-Crowdin-File: /kf6-trunk/messages/plasma-settings/mobile.plasmasettings."
+"X-Crowdin-File: /kf6-stable/messages/plasma-settings/mobile.plasmasettings."
 "pot\n"
-"X-Crowdin-File-ID: 49408\n"
+"X-Crowdin-File-ID: 60068\n"
 
 #: src/main.cpp:49
 #, kde-format
