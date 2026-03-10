@@ -24,6 +24,8 @@ class Module : public QObject
     Q_PROPERTY(bool isInSubCategory READ isInSubCategory NOTIFY isInSubCategoryChanged)
 
 public:
+    explicit Module(QObject *parent = nullptr);
+
     KQuickConfigModule *kcm() const;
     QString path() const;
     void setPath(const QString &name);

@@ -9,6 +9,11 @@
 
 #include <KPluginFactory>
 
+Module::Module(QObject *parent)
+    : QObject(parent)
+{
+}
+
 KQuickConfigModule *Module::kcm() const
 {
     return m_kcm;

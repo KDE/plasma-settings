@@ -20,7 +20,7 @@ using namespace Qt::Literals::StringLiterals;
 
 SettingsApp::SettingsApp(QObject *parent)
     : QObject(parent)
-    , m_activeModule{new Module{}}
+    , m_activeModule{new Module{this}}
 {
 }
 
