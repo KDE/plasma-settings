@@ -39,16 +39,13 @@ Item {
         // TODO support pushing multiple pages?
 
         let pageItem = __initItem(item, properties);
-        if (pageItem instanceof Kirigami.Page) {
-            // Wrap Kirigami pages in PageContainer
-            // StackView manages deleting the item
-            return stackView.push(pageContainer, {
-                'page': pageItem,
-                'autoDestroyPage': !(item instanceof Kirigami.Page)
-            }, operation);
-        } else {
-            return stackView.push(pageItem, properties, operation);
-        }
+
+        // Wrap pages in PageContainer
+        // StackView manages deleting the item
+        return stackView.push(pageContainer, {
+            'page': pageItem,
+            'autoDestroyPage': !(item instanceof Kirigami.Page)
+        }, operation);
     }
 
     function replace(target, item, properties, operation) {
