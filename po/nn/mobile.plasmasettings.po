@@ -1,12 +1,11 @@
 # Translation of mobile.plasmasettings to Norwegian Nynorsk
 #
-# Karl Ove Hufthammer <karl@huftis.org>, 2020, 2022.
 msgid ""
 msgstr ""
 "Project-Id-Version: plasma-settings\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-02-14 00:46+0000\n"
-"PO-Revision-Date: 2022-07-02 13:13+0200\n"
+"PO-Revision-Date: 2026-04-18 15:33+0200\n"
 "Last-Translator: Karl Ove Hufthammer <karl@huftis.org>\n"
 "Language-Team: Norwegian Nynorsk <l10n-no@lister.huftis.org>\n"
 "Language: nn\n"
@@ -14,7 +13,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Lokalize 22.04.2\n"
+"X-Generator: Lokalize 25.12.3\n"
 "X-Environment: kde\n"
 "X-Accelerator-Marker: &\n"
 "X-Text-Markup: kde4\n"
@@ -32,12 +31,12 @@ msgstr "Trykksjermvennleg innstillingsprogram."
 #: src/main.cpp:53
 #, kde-format
 msgid "© 2011-2025 KDE Community"
-msgstr ""
+msgstr "© 2011–2025 KDE-fellesskapet"
 
 #: src/main.cpp:54
 #, kde-format
 msgid "Devin Lin"
-msgstr ""
+msgstr "Devin Lin"
 
 #: src/main.cpp:54
 #, kde-format
@@ -50,9 +49,9 @@ msgid "Sebastian Kügler"
 msgstr "Sebastian Kügler"
 
 #: src/main.cpp:55 src/main.cpp:56
-#, fuzzy, kde-format
+#, kde-format
 msgid "Previous Maintainer"
-msgstr "Vedlikehaldar"
+msgstr "Tidlegare vedlikehaldar"
 
 #: src/main.cpp:56
 #, kde-format
@@ -112,7 +111,7 @@ msgstr "pakkenamn"
 #: src/qml/components/PageHeader.qml:42
 #, kde-format
 msgid "Navigate Back"
-msgstr ""
+msgstr "Naviger tilbake"
 
 #: src/qml/DefaultPage.qml:29
 #, kde-format
@@ -128,42 +127,41 @@ msgstr "Opna ei oppsettside frå sidestolpen."
 #, kde-format
 msgctxt "kcm button"
 msgid "Reset"
-msgstr ""
+msgstr "Tilbakestill"
 
 #: src/qml/KCMPageContainer.qml:80
 #, kde-format
 msgctxt "kcm button"
 msgid "Defaults"
-msgstr ""
+msgstr "Standard"
 
 #: src/qml/KCMPageContainer.qml:90
 #, kde-format
 msgctxt "kcm button"
 msgid "Apply"
-msgstr ""
+msgstr "Bruk"
 
 #: src/qml/SidebarCategoriesPage.qml:47
 #, kde-format
 msgid "Search…"
-msgstr ""
+msgstr "Søk …"
 
 #: src/qml/SidebarCategoriesPage.qml:58
 #, kde-format
 msgid "Show menu"
-msgstr ""
+msgstr "Vis menylinje"
 
 #: src/qml/SidebarCategoriesPage.qml:74
 #, kde-format
 msgid "Show Modules for All Platforms"
-msgstr ""
+msgstr "Vis modular for alle plattformer"
 
 #: src/qml/SidebarCategoriesPage.qml:86
-#, fuzzy, kde-format
-#| msgid "System Settings"
+#, kde-format
 msgid "About Plasma Settings"
-msgstr "Systemoppsett"
+msgstr "Om Plasma-innstillingar"
 
 #: src/qml/SidebarCategoriesPage.qml:91
 #, kde-format
 msgid "About KDE"
-msgstr ""
+msgstr "Om KDE"
