@@ -39,6 +39,7 @@
   <name xml:lang="lt">Plasma nuostatos</name>
   <name xml:lang="lv">„Plasma“ iestatījumi</name>
   <name xml:lang="nl">Plasma-instellingen</name>
+  <name xml:lang="nn">Plasma-innstillingar</name>
   <name xml:lang="pa">ਪਲਾਜ਼ਮਾ ਸੈਟਿੰਗਾਂ</name>
   <name xml:lang="pl">Ustawienia Plazmy</name>
   <name xml:lang="pt-BR">Configurações do Plasma</name>
@@ -73,6 +74,7 @@
   <summary xml:lang="lt">Jūsų telefono konfigūravimo įrankiai</summary>
   <summary xml:lang="lv">Tālruņa konfigurācijas rīki</summary>
   <summary xml:lang="nl">Configuratiehulpmiddelen voor uw telefoon</summary>
+  <summary xml:lang="nn">Oppsettverktøy for telefonen</summary>
   <summary xml:lang="pa">ਆਪਣੇ ਫ਼ੋਨ ਲਈ ਸੰਰਚਨਾ ਟੂਲ</summary>
   <summary xml:lang="pl">Narzędzia ustawień dla twojego telefonu</summary>
   <summary xml:lang="pt-BR">Ferramentas de configuração para seu smartfone</summary>
@@ -109,6 +111,7 @@
     <p xml:lang="lt">Plasma nuostatos jums leidžia konfigūruoti ir derinti KDE Plasma mobiliąją sąsają taip, kad ji geriau patenkintų jūsų poreikius.</p>
     <p xml:lang="lv">„Plasma“ iestatījumu programma ļauj konfigurēt un pielāgot jūsu vajadzībām „KDE Plasma“ mobilo ierīci.</p>
     <p xml:lang="nl">Plasma-instellingen bieden u het configureren en aanpassen van uw KDE Plasma mobiel om beter aan uw behoeften tegemoet te komen.</p>
+    <p xml:lang="nn">Med Plasma-innstillingane kan du setja opp og skreddarsy KDE Plasma-mobilen etter eigne ønskjer og behov.</p>
     <p xml:lang="pa">ਪਲਾਜ਼ਮਾ ਸੈਟਿੰਗਾਂ ਤੁਹਾਨੂੰ ਆਪਣੇ KDE ਪਲਾਜ਼ਮਾ ਮੋਬਾਈਲ ਨੂੰ ਤੁਹਾਡੀਆਂ ਲੋੜਾਂ ਨੂੰ ਪੂਰਾ ਕਰਨ ਵਾਸਤੇ ਸੰਰਚਨਾ ਅਤੇ ਸੋਧਾਂ ਕਰਨ ਲਈ ਸਹਾਇਕ ਹੈ।</p>
     <p xml:lang="pl">Ustawienia Plazmy umożliwiają dostosowanie twojej Przenośnej Plazma od KDE, tak aby lepiej spełniał twoje potrzeby.</p>
     <p xml:lang="pt-BR">As Configurações do Plasma permitem que você configure e ajuste seu KDE Plasma Mobile para que ele atenda melhor às suas necessidades.</p>
