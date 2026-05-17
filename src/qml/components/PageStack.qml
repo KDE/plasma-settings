@@ -44,23 +44,19 @@ Item {
         // StackView manages deleting the item
         return stackView.push(pageContainer, {
             'page': pageItem,
-            'autoDestroyPage': !(item instanceof Kirigami.Page)
+            'autoDestroyPage': !(item instanceof Item)
         }, operation);
     }
 
     function replace(target, item, properties, operation) {
         let pageItem = __initItem(item, properties);
 
-        if (pageItem instanceof Kirigami.Page) {
-            // Wrap Kirigami pages in PageContainer
-            // StackView manages deleting the item
-            return stackView.replace(target, pageContainer, {
-                'page': pageItem,
-                'autoDestroyPage': !(item instanceof Kirigami.Page)
-            }, operation);
-        } else {
-            return stackView.replace(target, __initItem(item, properties), properties, operation);
-        }
+        // Wrap pages in PageContainer
+        // StackView manages deleting the item
+        return stackView.replace(target, pageContainer, {
+            'page': pageItem,
+            'autoDestroyPage': !(item instanceof Item)
+        }, operation);
     }
 
     function __initItem(item, properties) {
