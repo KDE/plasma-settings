@@ -1,14 +1,14 @@
-# Copyright (C) YEAR This file is copyright:
+# Copyright (C) 2026 This file is copyright:
 # This file is distributed under the same license as the plasma-settings package.
 #
 # Kristóf Kiszel <kiszel.kristof@gmail.com>, 2021.
-# Kristof Kiszel <ulysses@fsf.hu>, 2021.
+# SPDX-FileCopyrightText: 2021, 2026 Kristof Kiszel <ulysses@fsf.hu>
 msgid ""
 msgstr ""
 "Project-Id-Version: plasma-settings\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-02-14 00:46+0000\n"
-"PO-Revision-Date: 2021-12-23 16:03+0100\n"
+"PO-Revision-Date: 2026-05-26 22:51+0200\n"
 "Last-Translator: Kristof Kiszel <ulysses@fsf.hu>\n"
 "Language-Team: Hungarian <kde-l10n-hu@kde.org>\n"
 "Language: hu\n"
@@ -16,7 +16,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"X-Generator: Lokalize 21.12.0\n"
+"X-Generator: Lokalize 26.04.1\n"
 
 #: src/main.cpp:49
 #, kde-format
@@ -31,12 +31,12 @@ msgstr "Érintőképernyő-barát beállítóalkalmazás."
 #: src/main.cpp:53
 #, kde-format
 msgid "© 2011-2025 KDE Community"
-msgstr ""
+msgstr "© A KDE közösség, 2011-2025."
 
 #: src/main.cpp:54
 #, kde-format
 msgid "Devin Lin"
-msgstr ""
+msgstr "Devin Lin"
 
 #: src/main.cpp:54
 #, kde-format
@@ -49,10 +49,9 @@ msgid "Sebastian Kügler"
 msgstr "Sebastian Kügler"
 
 #: src/main.cpp:55 src/main.cpp:56
-#, fuzzy, kde-format
-#| msgid "Maintainer"
+#, kde-format
 msgid "Previous Maintainer"
-msgstr "Karbantartó"
+msgstr "Korábbi karbantartó"
 
 #: src/main.cpp:56
 #, kde-format
@@ -113,7 +112,7 @@ msgstr "csomagnév"
 #: src/qml/components/PageHeader.qml:42
 #, kde-format
 msgid "Navigate Back"
-msgstr ""
+msgstr "Navigálás vissza"
 
 #: src/qml/DefaultPage.qml:29
 #, kde-format
@@ -129,46 +128,44 @@ msgstr "Beállítóoldal megnyitása az oldalsávról."
 #, kde-format
 msgctxt "kcm button"
 msgid "Reset"
-msgstr ""
+msgstr "Visszaállítás"
 
 #: src/qml/KCMPageContainer.qml:80
 #, kde-format
 msgctxt "kcm button"
 msgid "Defaults"
-msgstr ""
+msgstr "Alapértelmezések"
 
 #: src/qml/KCMPageContainer.qml:90
 #, kde-format
 msgctxt "kcm button"
 msgid "Apply"
-msgstr ""
+msgstr "Alkalmaz"
 
 #: src/qml/SidebarCategoriesPage.qml:47
-#, fuzzy, kde-format
-#| msgid "Search"
+#, kde-format
 msgid "Search…"
-msgstr "Keresés"
+msgstr "Keresés…"
 
 #: src/qml/SidebarCategoriesPage.qml:58
 #, kde-format
 msgid "Show menu"
-msgstr ""
+msgstr "Menü megjelenítése"
 
 #: src/qml/SidebarCategoriesPage.qml:74
 #, kde-format
 msgid "Show Modules for All Platforms"
-msgstr ""
+msgstr "Modulok megjelenítése minden platformhoz"
 
 #: src/qml/SidebarCategoriesPage.qml:86
-#, fuzzy, kde-format
-#| msgid "System Settings"
+#, kde-format
 msgid "About Plasma Settings"
-msgstr "Rendszerbeállítások"
+msgstr "A Plasma Beállítások névjegye"
 
 #: src/qml/SidebarCategoriesPage.qml:91
 #, kde-format
 msgid "About KDE"
-msgstr ""
+msgstr "A KDE névjegye"
 
 #, fuzzy
 #~| msgid "Copyright 2011-2015, Sebastian Kügler"
