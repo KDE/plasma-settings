@@ -24,6 +24,7 @@
 #include <QQmlApplicationEngine>
 #include <QQmlContext>
 #include <QQuickStyle>
+#include <QTimer>
 
 // Frameworks
 #include <KAboutData>
@@ -72,6 +73,8 @@ int main(int argc, char **argv)
     const QCommandLineOption singleModuleOption({QStringLiteral("s"), QStringLiteral("singleModule")}, i18n("Only show a single module, requires --module"));
     const QCommandLineOption fullscreenOption({QStringLiteral("f"), QStringLiteral("fullscreen")}, i18n("Start window fullscreen"));
     const QCommandLineOption layoutOption(QStringLiteral("layout"), i18n("Package to use for the UI (default org.kde.mobile.settings)"), i18n("packagename"));
+    QCommandLineOption selfTestOption(QStringLiteral("self-test"));
+    selfTestOption.setFlags(QCommandLineOption::HiddenFromHelp);
 
     parser.addOption(listOption);
     parser.addOption(formfactorOption);
@@ -79,6 +82,7 @@ int main(int argc, char **argv)
     parser.addOption(singleModuleOption);
     parser.addOption(fullscreenOption);
     parser.addOption(layoutOption);
+    parser.addOption(selfTestOption);
     aboutData.setupCommandLine(&parser);
 
     parser.process(app);
@@ -132,6 +136,14 @@ int main(int argc, char **argv)
     engine.loadFromModule("org.kde.plasma.settings", "Main");
 
     app.setWindowIcon(QIcon::fromTheme(QStringLiteral("org.kde.mobile.plasmasettings")));
+
+    if (engine.rootObjects().isEmpty()) {
+        return -1;
+    }
+
+    if (parser.isSet(selfTestOption)) {
+        QTimer::singleShot(std::chrono::milliseconds(250), &app, &QCoreApplication::quit);
+    }
 
     return app.exec();
 }

@@ -45,3 +45,5 @@ target_link_libraries(plasma-settings PRIVATE
 )
 
 install(TARGETS plasma-settings ${KDE_INSTALL_TARGETS_DEFAULT_ARGS})
+
+add_test(NAME smoketest COMMAND plasma-settings --self-test)
