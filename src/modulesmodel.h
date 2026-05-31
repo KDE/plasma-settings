@@ -74,7 +74,7 @@ private:
 
     MenuItem *parentItem(MenuItem *child) const;
 
-    MenuItem *m_rootModule{nullptr};
+    std::unique_ptr<MenuItem> m_rootModule;
     QList<MenuItem *> m_exceptions;
     bool m_ignorePlatforms{false};
 };

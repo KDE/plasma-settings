@@ -29,7 +29,6 @@ using namespace Qt::Literals::StringLiterals;
 
 ModulesModel::ModulesModel(QObject *parent)
     : QAbstractListModel(parent)
-    , m_rootModule{nullptr}
 {
     qDebug() << "Current platform is " << KRuntimePlatform::runtimePlatform();
     initModules();
@@ -37,8 +36,7 @@ ModulesModel::ModulesModel(QObject *parent)
 
 void ModulesModel::initModules()
 {
-    MenuItem *oldRootModule = m_rootModule;
-    m_rootModule = new MenuItem{true, nullptr};
+    m_rootModule = std::make_unique<MenuItem>(true, nullptr);
 
     // Filter to whether the kcm belongs to the current platform (unless m_ignorePlatforms = true),
     // also respect kiosk / KAuthorize restrictions and filter out "forbidden" allowed modules
@@ -103,12 +101,8 @@ void ModulesModel::initModules()
     const QStringList dirs = QStandardPaths::locateAll(QStandardPaths::AppDataLocation, QStringLiteral("categories"), QStandardPaths::LocateDirectory);
     QStringList categories = KFileUtils::findAllUniqueFiles(dirs, QStringList(QStringLiteral("*.desktop")));
 
-    initMenuList(m_rootModule, kcms, categories);
-    connectSignals(m_rootModule);
-
-    if (oldRootModule) {
-        delete oldRootModule;
-    }
+    initMenuList(m_rootModule.get(), kcms, categories);
+    connectSignals(m_rootModule.get());
 }
 
 void ModulesModel::initMenuList(MenuItem *parent, const QList<KPluginMetaData> &kcms, const QStringList &categories)
@@ -235,7 +229,7 @@ int ModulesModel::rowCount(const QModelIndex &parent) const
     if (parent.isValid()) {
         mi = static_cast<MenuItem *>(parent.internalPointer());
     } else {
-        mi = m_rootModule;
+        mi = m_rootModule.get();
     }
     return childrenList(mi).count();
 }
@@ -270,7 +264,7 @@ QModelIndex ModulesModel::index(int row, int column, const QModelIndex &parent) 
 
     MenuItem *parentItem;
     if (!parent.isValid()) {
-        parentItem = m_rootModule;
+        parentItem = m_rootModule.get();
     } else {
         parentItem = static_cast<MenuItem *>(parent.internalPointer());
     }
@@ -298,7 +292,7 @@ QModelIndex ModulesModel::parent(const QModelIndex &index) const
         childRow = childrenList(grandParent).indexOf(parent);
     }
 
-    if (parent == m_rootModule) {
+    if (parent == m_rootModule.get()) {
         return {};
     }
     return createIndex(childRow, 0, parent);
@@ -328,7 +322,7 @@ MenuItem *ModulesModel::parentItem(MenuItem *child) const
 
 void ModulesModel::addException(MenuItem *exception)
 {
-    if (exception == m_rootModule) {
+    if (exception == m_rootModule.get()) {
         return;
     }
     m_exceptions.append(exception);
@@ -363,7 +357,7 @@ void ModulesModel::setIgnorePlatforms(bool ignorePlatforms)
 
 MenuItem *ModulesModel::rootItem() const
 {
-    return m_rootModule;
+    return m_rootModule.get();
 }
 
 void ModulesModel::connectSignals(MenuItem *item)
