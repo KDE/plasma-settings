@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-settings\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-02-14 00:46+0000\n"
+"POT-Creation-Date: 2026-06-01 00:46+0000\n"
 "PO-Revision-Date: 2026-01-15 18:43+0200\n"
 "Last-Translator: Moo <<>>\n"
 "Language-Team: none\n"
@@ -19,52 +19,52 @@ msgstr ""
 "%100>=20) ? 1 : n%10==0 || (n%100>10 && n%100<20) ? 2 : 3);\n"
 "X-Generator: Poedit 3.8\n"
 
-#: src/main.cpp:49
+#: src/main.cpp:50
 #, kde-format
 msgid "Settings"
 msgstr "Nuostatos"
 
-#: src/main.cpp:51
+#: src/main.cpp:52
 #, kde-format
 msgid "Touch-friendly settings application."
 msgstr "Lietimui patogi nuostatų programa."
 
-#: src/main.cpp:53
+#: src/main.cpp:54
 #, kde-format
 msgid "© 2011-2025 KDE Community"
 msgstr "© 2011–2025 KDE bendruomenė"
 
-#: src/main.cpp:54
+#: src/main.cpp:55
 #, kde-format
 msgid "Devin Lin"
 msgstr "Devin Lin"
 
-#: src/main.cpp:54
+#: src/main.cpp:55
 #, kde-format
 msgid "Maintainer"
 msgstr "Prižiūrėtojas"
 
-#: src/main.cpp:55
+#: src/main.cpp:56
 #, kde-format
 msgid "Sebastian Kügler"
 msgstr "Sebastian Kügler"
 
-#: src/main.cpp:55 src/main.cpp:56
+#: src/main.cpp:56 src/main.cpp:57
 #, kde-format
 msgid "Previous Maintainer"
 msgstr "Ankstesnis prižiūrėtojas"
 
-#: src/main.cpp:56
+#: src/main.cpp:57
 #, kde-format
 msgid "Marco Martin"
 msgstr "Marco Martin"
 
-#: src/main.cpp:66
+#: src/main.cpp:67
 #, kde-format
 msgid "List available settings modules"
 msgstr "Išvardyti prieinamus nuostatų modulius"
 
-#: src/main.cpp:69
+#: src/main.cpp:70
 #, kde-format
 msgid ""
 "Limit to modules suitable for <formfactor>, e.g. handset, tablet, "
@@ -75,39 +75,39 @@ msgstr ""
 "(stalinis kompiuteris), test (išbandymas), all (visi) (pagal numatymą "
 "headset)"
 
-#: src/main.cpp:70
+#: src/main.cpp:71
 #, kde-format
 msgid "formfactor"
 msgstr "formfactor"
 
-#: src/main.cpp:71
+#: src/main.cpp:72
 #, kde-format
 msgid "Settings module to open"
 msgstr "Nuostatų modulis, kurį atverti"
 
-#: src/main.cpp:71
+#: src/main.cpp:72
 #, kde-format
 msgid "modulename"
 msgstr "moduliopavadinimas"
 
-#: src/main.cpp:72
+#: src/main.cpp:73
 #, kde-format
 msgid "Only show a single module, requires --module"
 msgstr "Rodyti tik vieną modulį, reikalauja --module"
 
-#: src/main.cpp:73
+#: src/main.cpp:74
 #, kde-format
 msgid "Start window fullscreen"
 msgstr "Paleisti langą visame ekrane"
 
-#: src/main.cpp:74
+#: src/main.cpp:75
 #, kde-format
 msgid "Package to use for the UI (default org.kde.mobile.settings)"
 msgstr ""
 "Paketas, kurį naudoti naudotojo sąsajai (pagal numatymą org.kde.mobile."
 "settings)"
 
-#: src/main.cpp:74
+#: src/main.cpp:75
 #, kde-format
 msgid "packagename"
 msgstr "paketopavadinimas"

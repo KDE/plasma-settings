@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-settings\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-02-14 00:46+0000\n"
+"POT-Creation-Date: 2026-06-01 00:46+0000\n"
 "PO-Revision-Date: 2025-11-07 08:37+0200\n"
 "Last-Translator: Yaron Shahrabani <sh.yaron@gmail.com>\n"
 "Language-Team: צוות התרגום של KDE ישראל\n"
@@ -18,52 +18,52 @@ msgstr ""
 "n % 10 == 0) ? 2 : 3));\n"
 "X-Generator: Lokalize 25.08.2\n"
 
-#: src/main.cpp:49
+#: src/main.cpp:50
 #, kde-format
 msgid "Settings"
 msgstr "הגדרות"
 
-#: src/main.cpp:51
+#: src/main.cpp:52
 #, kde-format
 msgid "Touch-friendly settings application."
 msgstr "יישומון הגדרות ידידותי למגע."
 
-#: src/main.cpp:53
+#: src/main.cpp:54
 #, kde-format
 msgid "© 2011-2025 KDE Community"
 msgstr "© 2011‏-2025 קהילת KDE"
 
-#: src/main.cpp:54
+#: src/main.cpp:55
 #, kde-format
 msgid "Devin Lin"
 msgstr "דווין לין"
 
-#: src/main.cpp:54
+#: src/main.cpp:55
 #, kde-format
 msgid "Maintainer"
 msgstr "מתחזק"
 
-#: src/main.cpp:55
+#: src/main.cpp:56
 #, kde-format
 msgid "Sebastian Kügler"
 msgstr "סבסטיאן קיגלר"
 
-#: src/main.cpp:55 src/main.cpp:56
+#: src/main.cpp:56 src/main.cpp:57
 #, kde-format
 msgid "Previous Maintainer"
 msgstr "מתחזק קודם"
 
-#: src/main.cpp:56
+#: src/main.cpp:57
 #, kde-format
 msgid "Marco Martin"
 msgstr "מרקו מרטין"
 
-#: src/main.cpp:66
+#: src/main.cpp:67
 #, kde-format
 msgid "List available settings modules"
 msgstr "הצגת מודולי הגדרות זמינים"
 
-#: src/main.cpp:69
+#: src/main.cpp:70
 #, kde-format
 msgid ""
 "Limit to modules suitable for <formfactor>, e.g. handset, tablet, "
@@ -72,37 +72,37 @@ msgstr ""
 "הגבלה למודולים שמתאימים ל<מקדם_צורה>, למשל: מכשיר נייד, מחשב לוח, מרכז מדיה, "
 "מחשב שולחני, בדיקה, הכול (ברירת המחדל היא מכשיר נייד)"
 
-#: src/main.cpp:70
+#: src/main.cpp:71
 #, kde-format
 msgid "formfactor"
 msgstr "מקדם_צורה"
 
-#: src/main.cpp:71
+#: src/main.cpp:72
 #, kde-format
 msgid "Settings module to open"
 msgstr "מודול הגדרות לפתיחה"
 
-#: src/main.cpp:71
+#: src/main.cpp:72
 #, kde-format
 msgid "modulename"
 msgstr "שם_מודול"
 
-#: src/main.cpp:72
+#: src/main.cpp:73
 #, kde-format
 msgid "Only show a single module, requires --module"
 msgstr "להציג מודול בודד בלבד, דורש את ‎--module"
 
-#: src/main.cpp:73
+#: src/main.cpp:74
 #, kde-format
 msgid "Start window fullscreen"
 msgstr "התחלת החלון במסך מלא"
 
-#: src/main.cpp:74
+#: src/main.cpp:75
 #, kde-format
 msgid "Package to use for the UI (default org.kde.mobile.settings)"
 msgstr "חבילה לשימוש לממשק המשתמש (ברירת המחדל היא org.kde.mobile.settings)"
 
-#: src/main.cpp:74
+#: src/main.cpp:75
 #, kde-format
 msgid "packagename"
 msgstr "שם_חבילה"
