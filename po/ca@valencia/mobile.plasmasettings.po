@@ -34,7 +34,7 @@ msgstr "Aplicació de configuració tàctil."
 #: src/main.cpp:54
 #, kde-format
 msgid "© 2011-2025 KDE Community"
-msgstr "© 2011-2025 Comunitat KDE"
+msgstr "© 2011-2025 La comunitat KDE"
 
 #: src/main.cpp:55
 #, kde-format
