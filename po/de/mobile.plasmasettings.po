@@ -68,7 +68,7 @@ msgid ""
 "Limit to modules suitable for <formfactor>, e.g. handset, tablet, "
 "mediacenter, desktop, test, all (default handset)"
 msgstr ""
-"Auf Module beschränken, die für <formfactor> geeignet sind, z. B. "
+"Auf Module beschränken, die für <formfactor> geeignet sind, z. B. "
 "Mobiltelefon, Tablet, Mediencenter, Desktop, Test, alle (standardmäßig "
 "Mobiltelefon)"
 
