@@ -41,6 +41,7 @@ Delegates.RoundedItemDelegate {
             id: label
 
             text: root.text
+            elide: Text.ElideRight
             opacity: root.display !== Controls.AbstractButton.TextOnly ? 1 : 0
 
             Accessible.ignored: true
