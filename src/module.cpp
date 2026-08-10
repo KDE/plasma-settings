@@ -43,6 +43,9 @@ void Module::setPath(const QString &path)
         m_path = kcmMetaData.fileName();
         Q_EMIT pathChanged();
 
+        m_title = kcmMetaData.name();
+        Q_EMIT titleChanged();
+
         m_kcm = KQuickConfigModuleLoader::loadModule(kcmMetaData, this).plugin;
         Q_EMIT kcmChanged();
         Q_EMIT nameChanged();

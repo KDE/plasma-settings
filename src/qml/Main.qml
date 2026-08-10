@@ -16,6 +16,8 @@ import "components"
 Kirigami.AbstractApplicationWindow {
     id: root
 
+    title: SettingsApp.activeModule.title
+
     readonly property var currentModule: SettingsApp.activeModule
     readonly property string currentModuleName: SettingsApp.activeModule.name
 

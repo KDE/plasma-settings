@@ -20,6 +20,7 @@ class Module : public QObject
     Q_PROPERTY(KQuickConfigModule *kcm READ kcm NOTIFY kcmChanged)
     Q_PROPERTY(QString path READ path WRITE setPath NOTIFY pathChanged)
     Q_PROPERTY(QString name READ name WRITE setPath NOTIFY nameChanged)
+    Q_PROPERTY(QString title READ title NOTIFY titleChanged)
     Q_PROPERTY(bool valid READ valid NOTIFY validChanged)
     Q_PROPERTY(bool isInSubCategory READ isInSubCategory NOTIFY isInSubCategoryChanged)
 
@@ -29,6 +30,11 @@ public:
     KQuickConfigModule *kcm() const;
     QString path() const;
     void setPath(const QString &name);
+
+    QString title() const
+    {
+        return m_title;
+    }
 
     QString name() const
     {
@@ -42,6 +48,7 @@ public:
 Q_SIGNALS:
     void kcmChanged();
     void pathChanged();
+    void titleChanged();
     void nameChanged();
     void validChanged();
     void isInSubCategoryChanged();
@@ -49,6 +56,7 @@ Q_SIGNALS:
 private:
     KQuickConfigModule *m_kcm{nullptr};
     QString m_path;
+    QString m_title;
 
     bool m_valid{false};
     bool m_isInSubCategory{false};
