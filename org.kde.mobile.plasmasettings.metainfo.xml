@@ -88,6 +88,7 @@
   <summary xml:lang="sv">Inställningsverktyg för din telefon</summary>
   <summary xml:lang="th">เครื่องมือตั้งค่าสำหรับโทรศัพท์ของคุณ</summary>
   <summary xml:lang="tr">Telefonunuz için yapılandırma araçları</summary>
+  <summary xml:lang="ug">تېلېفوننىڭ سەپلىمە قورالى</summary>
   <summary xml:lang="uk">Інструменти для налаштовування вашого телефону</summary>
   <summary xml:lang="zh-CN">手机配置工具</summary>
   <summary xml:lang="zh-TW">提供給您手機的配置工具</summary>
@@ -126,6 +127,7 @@
     <p xml:lang="sv">Plasmas inställningar låter dig anpassa och justera en KDE Plasma-mobil så att den bättre uppfyller dina behov.</p>
     <p xml:lang="th">การตั้งค่า Plasma สามารถตั้งค่าและปรับแต่ง KDE Plasma mobile เพื่อให้ทำให้สะดวกสะบายกับการต้องการของคุณมากขึ้น</p>
     <p xml:lang="tr">Plasma Ayarları, Plasma Cep’in gereksinimlerinize daha iyi karşılık vermesini sağlamak için onu yapılandırmanıza ve ayarlamanıza izin verir.</p>
+    <p xml:lang="ug">Plasma تەڭشىكى KDE Plasma يانفون مۇھىتىنى ئېھتىياجىڭىز بويىچە سەپلەپ ۋە تەڭشىشىڭىزگە يول قويىدۇ.</p>
     <p xml:lang="uk">За допомогою програми «Параметри Плазми» ви можете налаштувати та скоригувати поведінку вашої мобільної Плазми так, щоб вона відповідала вашим уподобанням.</p>
     <p xml:lang="zh-CN">Plasma 设置工具让您可以按需配置和调整 KDE Plasma 手机环境。</p>
     <p xml:lang="zh-TW">《Plasma 設定》讓您調整您的 KDE Plasma 行動設定值，讓它能更符合您的需求。</p>
