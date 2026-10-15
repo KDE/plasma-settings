@@ -140,7 +140,7 @@ Module *SettingsApp::activeModule()
 void SettingsApp::loadModuleById(QString id)
 {
     QModelIndex index;
-    int subCategoryIndex = -1;
+    QModelIndex subCategoryIndex;
 
     // Find start module in model
     for (int i = 0; i < m_categoryModel->rowCount(); ++i) {
@@ -156,12 +156,11 @@ void SettingsApp::loadModuleById(QString id)
             break;
         } else if (mi->menu()) {
             // If it's a category, loop over subcategory kcms
-            auto children = m_model->childrenList(mi);
-
-            for (int j = 0; j < children.size(); ++j) {
-                if (children[j]->id() == id) {
+            for (int j = 0; j < m_categoryModel->rowCount(tempIndex); ++j) {
+                auto childIndex = m_categoryModel->index(j, 0, tempIndex);
+                if (childIndex.data(ModulesModel::IdRole).toString() == id) {
                     index = tempIndex;
-                    subCategoryIndex = j;
+                    subCategoryIndex = childIndex;
                     break;
                 }
             }
@@ -178,8 +177,8 @@ void SettingsApp::loadModuleById(QString id)
         loadModule(index);
 
         // If it's a subcategory, load the kcm
-        if (subCategoryIndex != -1) {
-            loadModule(m_subCategoryModel->index(subCategoryIndex, 0));
+        if (subCategoryIndex.isValid()) {
+            loadModule(m_subCategoryModel->mapFromSource(subCategoryIndex));
             Q_EMIT subCategoryRequested();
         }
     } else {
