@@ -48,6 +48,10 @@
   <name xml:lang="ru">Параметры Plasma</name>
   <name xml:lang="sk">Nastavenia Plasma</name>
   <name xml:lang="sl">Nastavitve Plasme</name>
+  <name xml:lang="sr">Поставке Плазме</name>
+  <name xml:lang="sr-Latn">Postavke Plasme</name>
+  <name xml:lang="sr-ijekavian">Поставке Плазме</name>
+  <name xml:lang="sr-ijekavianlatin">Postavke Plasme</name>
   <name xml:lang="sv">Plasma-inställningar</name>
   <name xml:lang="th">การตั้งค่า Plasma</name>
   <name xml:lang="tr">Plasma Ayarları</name>
@@ -85,6 +89,10 @@
   <summary xml:lang="ru">Инструменты для настройки телефона</summary>
   <summary xml:lang="sk">Konfiguračné nástroje pre váš telefón</summary>
   <summary xml:lang="sl">Orodja za konfiguracijo telefona</summary>
+  <summary xml:lang="sr">Алатке за поставу вашег телефона</summary>
+  <summary xml:lang="sr-Latn">Alatke za postavu vašeg telefona</summary>
+  <summary xml:lang="sr-ijekavian">Алатке за поставу вашег телефона</summary>
+  <summary xml:lang="sr-ijekavianlatin">Alatke za postavu vašeg telefona</summary>
   <summary xml:lang="sv">Inställningsverktyg för din telefon</summary>
   <summary xml:lang="th">เครื่องมือตั้งค่าสำหรับโทรศัพท์ของคุณ</summary>
   <summary xml:lang="tr">Telefonunuz için yapılandırma araçları</summary>
@@ -124,6 +132,10 @@
     <p xml:lang="ru">Приложение «Параметры Plasma» позволяет настроить рабочую среду Plasma для мобильных устройств для удобного использования.</p>
     <p xml:lang="sk">Nastavenia Plasma vám umožňujú konfigurovať a prispôsobiť KDE Plasma Mobile tak, aby lepšie vyhovovalo vašim potrebám.</p>
     <p xml:lang="sl">Nastavitve Plasme vam omogočajo, da konfigurirate in prilagodite svoj mobilni telefon KDE Plasmanaj bolje ustreza vašim potrebam.</p>
+    <p xml:lang="sr">Поставке Плазме омогућавају да подесите и дотерате своју мобилну КДЕ Плазму тако да боље одговара вашим потребама.</p>
+    <p xml:lang="sr-Latn">Postavke Plasme omogućavaju da podesite i doterate svoju mobilnu KDE Plasmu tako da bolje odgovara vašim potrebama.</p>
+    <p xml:lang="sr-ijekavian">Поставке Плазме омогућавају да подесите и дотјерате своју мобилну КДЕ Плазму тако да боље одговара вашим потребама.</p>
+    <p xml:lang="sr-ijekavianlatin">Postavke Plasme omogućavaju da podesite i dotjerate svoju mobilnu KDE Plasmu tako da bolje odgovara vašim potrebama.</p>
     <p xml:lang="sv">Plasmas inställningar låter dig anpassa och justera en KDE Plasma-mobil så att den bättre uppfyller dina behov.</p>
     <p xml:lang="th">การตั้งค่า Plasma สามารถตั้งค่าและปรับแต่ง KDE Plasma mobile เพื่อให้ทำให้สะดวกสะบายกับการต้องการของคุณมากขึ้น</p>
     <p xml:lang="tr">Plasma Ayarları, Plasma Cep’in gereksinimlerinize daha iyi karşılık vermesini sağlamak için onu yapılandırmanıza ve ayarlamanıza izin verir.</p>
