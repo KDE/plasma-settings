@@ -1,0 +1,168 @@
+# Copyright (C) 2026 This file is copyright:
+# This file is distributed under the same license as the plasma-settings package.
+#
+# SPDX-FileCopyrightText: 2026 Mincho Kondarev <mkondarev@yahoo.de>
+msgid ""
+msgstr ""
+"Project-Id-Version: plasma-settings\n"
+"Report-Msgid-Bugs-To: https://bugs.kde.org\n"
+"POT-Creation-Date: 2026-06-01 00:46+0000\n"
+"PO-Revision-Date: 2026-11-22 19:20+0100\n"
+"Last-Translator: Mincho Kondarev <mkondarev@yahoo.de>\n"
+"Language-Team: Bulgarian <kde-i18n-doc@kde.org>\n"
+"Language: bg_BG\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Generator: Lokalize 26.08.3\n"
+
+#: src/main.cpp:50
+#, kde-format
+msgid "Settings"
+msgstr "Настройки"
+
+#: src/main.cpp:52
+#, kde-format
+msgid "Touch-friendly settings application."
+msgstr "Приложение за настройки, оптимизирано за сензорен екран."
+
+#: src/main.cpp:54
+#, kde-format
+msgid "© 2011-2025 KDE Community"
+msgstr "© 2011-2025 KDE Community"
+
+#: src/main.cpp:55
+#, kde-format
+msgid "Devin Lin"
+msgstr "Devin Lin"
+
+#: src/main.cpp:55
+#, kde-format
+msgid "Maintainer"
+msgstr "Поддръжка"
+
+#: src/main.cpp:56
+#, kde-format
+msgid "Sebastian Kügler"
+msgstr "Sebastian Kügler"
+
+#: src/main.cpp:56 src/main.cpp:57
+#, kde-format
+msgid "Previous Maintainer"
+msgstr "Предишен поддържащ"
+
+#: src/main.cpp:57
+#, kde-format
+msgid "Marco Martin"
+msgstr "Marco Martin"
+
+#: src/main.cpp:67
+#, kde-format
+msgid "List available settings modules"
+msgstr "Списък с наличните модули за настройки"
+
+#: src/main.cpp:70
+#, kde-format
+msgid ""
+"Limit to modules suitable for <formfactor>, e.g. handset, tablet, "
+"mediacenter, desktop, test, all (default handset)"
+msgstr ""
+"Ограничаване до модули, подходящи за <formfactor>, напр. мобилно устройство, "
+"таблет, медия център, настолен компютър, тест, всички (по подразбиране "
+"мобилно устройство)"
+
+#: src/main.cpp:71
+#, kde-format
+msgid "formfactor"
+msgstr "формфактор"
+
+#: src/main.cpp:72
+#, kde-format
+msgid "Settings module to open"
+msgstr "Модул за настройки за отваряне"
+
+#: src/main.cpp:72
+#, kde-format
+msgid "modulename"
+msgstr "Име на модула"
+
+#: src/main.cpp:73
+#, kde-format
+msgid "Only show a single module, requires --module"
+msgstr "Показване само на един модул, изисква --module"
+
+#: src/main.cpp:74
+#, kde-format
+msgid "Start window fullscreen"
+msgstr "Стартиране на прозореца на цял екран"
+
+#: src/main.cpp:75
+#, kde-format
+msgid "Package to use for the UI (default org.kde.mobile.settings)"
+msgstr ""
+"Пакет за използване в потребителския интерфейс (по подразбиране org.kde."
+"mobile.settings)"
+
+#: src/main.cpp:75
+#, kde-format
+msgid "packagename"
+msgstr "име на пакета"
+
+#: src/qml/components/PageHeader.qml:42
+#, kde-format
+msgid "Navigate Back"
+msgstr "Назад"
+
+#: src/qml/DefaultPage.qml:29
+#, kde-format
+msgid "System Settings"
+msgstr "Системни настройки"
+
+#: src/qml/DefaultPage.qml:35
+#, kde-format
+msgid "Open a configuration page from the sidebar."
+msgstr "Отваряне на страница за конфигурация от страничната лента."
+
+#: src/qml/KCMPageContainer.qml:73
+#, kde-format
+msgctxt "kcm button"
+msgid "Reset"
+msgstr "Нулиране"
+
+#: src/qml/KCMPageContainer.qml:80
+#, kde-format
+msgctxt "kcm button"
+msgid "Defaults"
+msgstr "Стандартни стойности"
+
+#: src/qml/KCMPageContainer.qml:90
+#, kde-format
+msgctxt "kcm button"
+msgid "Apply"
+msgstr "Прилагане"
+
+#: src/qml/SidebarCategoriesPage.qml:47
+#, kde-format
+msgid "Search…"
+msgstr "Търсене…"
+
+#: src/qml/SidebarCategoriesPage.qml:58
+#, kde-format
+msgid "Show menu"
+msgstr "Показване на менюто"
+
+#: src/qml/SidebarCategoriesPage.qml:74
+#, kde-format
+msgid "Show Modules for All Platforms"
+msgstr "Показване на модули за всички платформи"
+
+#: src/qml/SidebarCategoriesPage.qml:86
+#, kde-format
+msgid "About Plasma Settings"
+msgstr "Относно настройките на Plasma"
+
+#: src/qml/SidebarCategoriesPage.qml:91
+#, kde-format
+msgid "About KDE"
+msgstr "Относно KDE"
