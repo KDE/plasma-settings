@@ -2,21 +2,21 @@
 # This file is distributed under the same license as the plasma-settings package.
 #
 # Volkan Gezer <volkangezer@gmail.com>, 2022.
-# SPDX-FileCopyrightText: 2025 Emir SARI <emir_sari@icloud.com>
+# SPDX-FileCopyrightText: 2025-2026 Emir SARI <emir_sari@icloud.com>
 msgid ""
 msgstr ""
 "Project-Id-Version: plasma-settings\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-06-01 00:46+0000\n"
-"PO-Revision-Date: 2025-11-07 19:58+0300\n"
-"Last-Translator: Emir SARI <emir_sari@îcloud.com>\n"
+"PO-Revision-Date: 2026-11-23 18:16+0300\n"
+"Last-Translator: Emir SARI <emir_sari@icloud.com>\n"
 "Language-Team: Turkish <kde-l10n-tr@kde.org>\n"
 "Language: tr\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n > 1);\n"
-"X-Generator: Lokalize 25.08.2\n"
+"X-Generator: Lokalize 26.08.2\n"
 
 #: src/main.cpp:50
 #, kde-format
@@ -70,7 +70,7 @@ msgid ""
 "mediacenter, desktop, test, all (default handset)"
 msgstr ""
 "Yalnızca <biçim faktörü> için uygun modülleri listele; örn. el ünitesi, "
-"tablet, ortam merkezi, masaüstü, sınama, tümü (öntanımlı: el ünitesi)"
+"tablet, ortam merkezi, masaüstü, sınama, tümü (varsayılan: el ünitesi)"
 
 #: src/main.cpp:71
 #, kde-format
@@ -101,7 +101,7 @@ msgstr "Pencereyi tam ekran olarak başlat"
 #, kde-format
 msgid "Package to use for the UI (default org.kde.mobile.settings)"
 msgstr ""
-"Grafik arabirim için kullanılacak paket (öntanımlı: org.kde.mobile.settings)"
+"Grafik arabirim için kullanılacak paket (varsayılan: org.kde.mobile.settings)"
 
 #: src/main.cpp:75
 #, kde-format
@@ -133,7 +133,7 @@ msgstr "Sıfırla"
 #, kde-format
 msgctxt "kcm button"
 msgid "Defaults"
-msgstr "Öntanımlılar"
+msgstr "Varsayılanlar"
 
 #: src/qml/KCMPageContainer.qml:90
 #, kde-format
